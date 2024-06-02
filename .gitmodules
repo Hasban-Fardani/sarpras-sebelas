@@ -1,0 +1,3 @@
+[submodule "frontend-vuetify"]
+	path = frontend-vuetify
+	url = https://github.com/Hasban-Fardani/sarpras-ui-vuetify.git

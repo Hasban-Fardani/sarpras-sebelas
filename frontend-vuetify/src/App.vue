@@ -1,7 +1,10 @@
-<script setup lang="ts">
-</script>
-
 <template>
-
-  <RouterView />
+  <VNoSsr>
+    <RouterView />
+  </VNoSsr>
 </template>
+<style>
+.v-main {
+  min-height: 100vh;
+}
+</style>

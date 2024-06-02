@@ -1,9 +1,9 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
-  appId: 'com.saprasSebelas.app',
-  appName: 'sarpras-sebelas',
-  webDir: 'dist'
-};
+  appId: 'com.sarpras.app',
+  appName: 'Sarana Prasarana',
+  webDir: './dist'
+}
 
-export default config;
+export default config

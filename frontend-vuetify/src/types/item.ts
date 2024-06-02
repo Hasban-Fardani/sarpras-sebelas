@@ -1,8 +1,24 @@
 type Item = {
-  id: Number
-  nama: String
-  stok: Number
-  harga: Number
+  id: number
+  gambar?: string
+  nama: string
+  kategori_id?: number
+  kategori?: {
+    id: number
+    nama: string
+  }
+  stok?: number
+  satuan?: 'buah' | 'unit'
+  harga?: number
+  updated_at?: string
 }
 
-export type { Item }
+type CreateItem = {
+  nama: string
+  kategori_id: number
+  stok: number
+  harga: number
+  gambar: File
+}
+
+export type { Item, CreateItem }
