@@ -4,6 +4,6 @@
 [submodule "sarpras-backend"]
 	path = backend
 	url = https://github.com/Hasban-Fardani/sarpras-backend.git
-[submodule "sarpras-shadcn"]
-	path = frontend-shadcn-ui
-	url = https://github.com/Hasban-Fardani/sarpras-ui-shadcn-vue.git
+[submodule "sarpras-backend"]
+	path = backend
+	url = https://github.com/Hasban-Fardani/sarpras-backend.git
