@@ -4,3 +4,6 @@
 [submodule "frontend-vuetify"]
 	path = frontend-vuetify
 	url = https://github.com/Hasban-Fardani/sarpras-ui-vuetify.git
+[submodule "frontend-shadcn"]
+	path = frontend-shadcn
+	url = https://github.com/Hasban-Fardani/sarpras-shadcn-vue.git
