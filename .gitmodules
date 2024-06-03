@@ -1,9 +1,6 @@
+[submodule "sarpras-backend"]
+	path = backend
+	url = https://github.com/Hasban-Fardani/sarpras-backend.git
 [submodule "frontend-vuetify"]
 	path = frontend-vuetify
 	url = https://github.com/Hasban-Fardani/sarpras-ui-vuetify.git
-[submodule "sarpras-backend"]
-	path = backend
-	url = https://github.com/Hasban-Fardani/sarpras-backend.git
-[submodule "sarpras-backend"]
-	path = backend
-	url = https://github.com/Hasban-Fardani/sarpras-backend.git
