@@ -18,9 +18,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -28,13 +29,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: 'P:K/Ec'
+        example: "'$cjA"
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: 'P:K/Ec'
+      path: "'$cjA"
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -51,7 +52,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -69,9 +73,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -79,13 +84,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: (WI
+        example: '=)['
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: (WI
+      path: '=)['
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -93,8 +98,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 404
+        content: '{"message":"Not Found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -102,7 +107,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null

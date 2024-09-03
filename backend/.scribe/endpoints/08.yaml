@@ -16,9 +16,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -30,8 +31,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get suppliers","current_page":1,"data":[{"id":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"},{"id":"S0002","name":"Supplier 2","address":"Address 2","phone":"08123456790","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"},{"id":"S0003","name":"Supplier 3","address":"Address 3","phone":"08123456791","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"},{"id":"S0004","name":"Supplier 4","address":"Address 4","phone":"08123456792","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"},{"id":"S0005","name":"Supplier 5","address":"Address 5","phone":"08123456793","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/supplier?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/supplier?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/supplier?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/supplier","per_page":10,"prev_page_url":null,"to":5,"total":5}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -39,7 +40,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -57,9 +61,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -71,7 +76,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: duahfyknyn
+        example: lktisttypdzcvngzp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -80,7 +85,7 @@ endpoints:
         name: address
         description: validation.max.
         required: false
-        example: bmmgnfolegbbqovojekqxv
+        example: zbedwnuurhusuf
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -89,19 +94,22 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: uwfgj
+        example: wznacwmo
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: duahfyknyn
-      address: bmmgnfolegbbqovojekqxv
-      phone: uwfgj
+      name: lktisttypdzcvngzp
+      address: zbedwnuurhusuf
+      phone: wznacwmo
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -119,9 +127,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display the specified resource.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -143,8 +152,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get supplier","data":{"id":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -152,7 +161,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -171,9 +183,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update the specified resource in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -195,7 +208,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: ilyvkhrhwy
+        example: uvtbhqf
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -204,7 +217,7 @@ endpoints:
         name: address
         description: validation.max.
         required: false
-        example: ujsiskhrigeealbcwlrcwyafg
+        example: nodmeemknxrpauqkdfu
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -213,19 +226,22 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: fxkejjxdcepcwnoslyamvxnfv
+        example: aqfhnctfzgvnxkbbmcshcexr
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: ilyvkhrhwy
-      address: ujsiskhrigeealbcwlrcwyafg
-      phone: fxkejjxdcepcwnoslyamvxnfv
+      name: uvtbhqf
+      address: nodmeemknxrpauqkdfu
+      phone: aqfhnctfzgvnxkbbmcshcexr
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -243,9 +259,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -267,7 +284,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null

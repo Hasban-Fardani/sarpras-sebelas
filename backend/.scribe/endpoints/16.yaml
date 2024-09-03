@@ -16,9 +16,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -26,13 +27,13 @@ endpoints:
         name: request
         description: 'The request.'
         required: true
-        example: et
+        example: hic
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: et
+      request: hic
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -40,7 +41,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -58,9 +62,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -68,13 +73,13 @@ endpoints:
         name: request
         description: 'The request.'
         required: true
-        example: eveniet
+        example: quos
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: eveniet
+      request: quos
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -82,7 +87,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null

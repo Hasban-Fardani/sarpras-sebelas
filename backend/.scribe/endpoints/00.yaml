@@ -12,9 +12,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -31,11 +32,14 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlNITEdZUFU5blZZMDU5NjBhd2R0eGc9PSIsInZhbHVlIjoidExXL0F0WGlScjFYQTNTbXlPaWNRbHd4UmtxWlFJZXc4bDJwb0hXTTdoSjQ3RWRnMXhEQjBVbEdNK1E5elNhL2dFcjVXUTYzdnl6QWRHOVVQZHpqbUE1TFJmRk9lRkwvQlVXOGlDREwyWGxjWEZQdmlleXhIamxzTFhKK1BKaXQiLCJtYWMiOiI5NTVlOGYzM2M0YjFkZTg1NmE4NWUxODk5NDkxN2ZjNjg3NzRjYTk0ZmU1OTUyOWU0YmJmMzNjMDAxMmI0MDhkIiwidGFnIjoiIn0%3D; expires=Tue, 03 Sep 2024 07:09:28 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InUydzl6QVpSTzhCM3RxN2xJVEtLVkE9PSIsInZhbHVlIjoiWHFMVVRTR0pxdjY2Q0pGT05YUGgva1VuaHFPdk1ySkFGcWdIblBPY1ZWNGxyUUFhRnV3OGQyMmQ3eXVZL0lMMFdDRW9xSm1hMWNCd3ZLTEV6MlM5VHZNSG93blN4TGFpZWZYTXY0eXp0SWErODhBY1lURFArMHJZVG41UHl4ckwiLCJtYWMiOiIyNzJmNDgwOTNmOWQ5Mjk3MzdkM2RhNWFmZTdjNzVkMjFiMTczMjU0NzFkNmM3NWJlNjQ3MDU4M2RiODViMzhiIiwidGFnIjoiIn0%3D; expires=Tue, 03 Sep 2024 07:09:28 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; DB3pQo4I2OwjVxBjfr3GtAB4Q8vBr3iNnGQbw4KM=eyJpdiI6InJDSWk0b21YaUdmU1hodXhvWnpuRmc9PSIsInZhbHVlIjoiRUQ1TlFXankxa2w0bXMxcElmY25aSnVWSGRFKzNSa2lmYUJWZXExQXFqMWh4WU1TZmxER0lhaWxHditzd1lNVmp6VTh3ZWI5amFwd0tqWFRWWjFSTHRNQ21qR0tVRlJoTzgrQmJPbE13K05rSGEvQzJicnBJU0ovUzRmcnVhSmNJVVNma3F0M05jdTc0QldLVmhrbUZMTmJUWGhYNG11L0JsOG1mSTFDR1FlQk1iZ25QNi9lYmN6Skl3d091TmxzZ3VSTG1MSWVka2ZDQ1djWWpFRmpCR3EwM3VlUkw2YkEvOTlPS0xYNitNL0FYb29lbkg4ZFJpSklGenUyMFczVzFaaVdwRHZ0TlpoVzVVZmtKQ1Z6NjRDM2w1UTJvK1dNVW9vYTJuUEM0c2xWREJRQTg5ZmdEMjA5bjRObkxjY0wyc3lCd1ZnV01qY3BUTjdMVnE3eSs1VUFtNWtWczFHNS9PczZFZVpMZStyZzhVc3FUN09VNFErVGpWa0F6SzhieWxEckFyYm1TTWk5SW1iWVFONDdpUT09IiwibWFjIjoiNDExNDY5MGQ1NWY2NmU0OTVlNzc5MjZkNDY2ODY3NWQ4YzM0ODk5NDFmZmQzZjc0NzI3MmE3ZTU1YWYzODBiNyIsInRhZyI6IiJ9; expires=Tue, 03 Sep 2024 07:09:28 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IklLT2hoaU15anNQbkNwcFl1VVpwUEE9PSIsInZhbHVlIjoiYVJFanZXUUdwaUowUEJxQTFBelNWam9MdktmL1A5Vy9iS2hMcVppaE5SdUt2OUs5bUZJOTFlY293K1V3N3JaemxGSVhqaFFLaFNUTzc0aDVFL2U2eHg0SDZEeVNmU21YODhLZHcrUmgzNVdvTnMxNGdGQ2hVN0JObUNramE5bDYiLCJtYWMiOiJiNjFmMmRkYjZjZWQwM2MwMzRhMTIzNTg3YTk3ODFmNjhhNzVmZTYwODQ1YTg4NmVjODA3ZTFiN2NhNmY0NmI4IiwidGFnIjoiIn0%3D; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Ik0xZFpsUHRZVURPZWJNVytabVczOUE9PSIsInZhbHVlIjoiUE94c3dzdGZJRlpFZ3lZNTlxaGxzdWJmam5KR1lOQmU4K1NXb3h0ZFc2bHQyMFJ0WU54cDg0N296RVlyN0RiWXpCUzlWNTlac3VWaUtvVFNTK254REp6cjMvbG4rWDlYSEhYZlY4L3ZSUUJGKzAzbHBJUDlHTDhQNEE4WVZvVnQiLCJtYWMiOiI3OGJiZjY0N2E3MDhhZmJmZjRjN2Y1ZjMyYjExZTdjYzZiZjk0NjZmOGY1NTg2ZjcyNzI5OGI5ZGYzZGFiZDllIiwidGFnIjoiIn0%3D; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; hrUzZSl4dq8zylzcRnILqsL307cQb3FR95pIkG8r=eyJpdiI6InZyWFViUjZMMFk1K2xmVk9nMmhJYmc9PSIsInZhbHVlIjoiU1FiOW9pbmFnajk3bHBIQXJOdEZGTU9JM2xwaEFGdEw4cVZqUEZFS3pUT3NYVnVycjh1STNoZm9FNVQybytHZzdXa3I1aE1hakQrT1lhNDAzMTI5RmsvQUlGME5rcWQwYlE4S3hWM3Rqc3BaUDRiZ2FaUTRZZGliSUxkS0tJRk55cGRxd2tMWGlnb2Fka0N6cHNXUFBvcDFpTUgySS95SUlWYml5Q2FpcmNGbTlPVDh2ZERxN3ovUVRHNFNWY1lOQ09yVC9wSUJVSlZqSDBrNWxLQ3BYeVR1S2J5aU51Wm1tSTVFZTY4UW9zVFQwcFdWcEJKSEdYZk5sWjFLM3RjUFp2RG84OTJ1QjYrOXV3MmtSaDZaMEQzMWFQb1ZVSG04dHcxSm5OTThuWW5FaW1RZk4xYlNkVjJYSms0TVpBcGgxak8wSElzU1UycjhrbkIrYTFLK20vM3ZwM2l3VmdxR3JyaFFYNHRad1FWa1ZTL2lTbnQ1Zi8vQTNPaVBQSnhLcTJIaDF5SDZ2dUxPWHkxZlVUaENTdz09IiwibWFjIjoiZGIxNWE2OTRlZDdhMDNhOTg0NWE1NjRkNGEwNjU3MTc3YzE4MDBiYWQ1ODE5NWVmYzQwNDUwZTM0ZmZkZmU4YiIsInRhZyI6IiJ9; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -51,9 +55,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -74,7 +79,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -90,9 +98,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -104,16 +113,19 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '1'
         headers:
+          content-type: 'text/html; charset=UTF-8'
           cache-control: 'no-cache, private'
-          content-type: application/json
           vary: Origin
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null

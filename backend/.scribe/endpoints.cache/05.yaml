@@ -18,9 +18,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -32,8 +33,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get all employees","current_page":1,"data":[{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197412311994031005,"name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197806311994031003,"name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198012311994031002,"name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198212311994031004,"name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/employees","per_page":10,"prev_page_url":null,"to":5,"total":5}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -41,7 +42,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -59,9 +63,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -73,7 +78,7 @@ endpoints:
         name: id
         description: validation.max.
         required: false
-        example: bmckqtmariyokhnihmjbvkk
+        example: giocoaotkcdqudlexon
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -82,7 +87,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: explicabo
+        example: optio
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -91,7 +96,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: omnis
+        example: dolorum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -100,7 +105,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: ipsa
+        example: inventore
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -109,21 +114,24 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: hadley.abernathy@example.net
+        example: walter.graham@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      id: bmckqtmariyokhnihmjbvkk
-      name: explicabo
-      position: omnis
-      phone: ipsa
-      email: hadley.abernathy@example.net
+      id: giocoaotkcdqudlexon
+      name: optio
+      position: dolorum
+      phone: inventore
+      email: walter.graham@example.org
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -141,9 +149,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display the specified resource.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -165,8 +174,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get employee","data":{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -174,7 +183,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -193,9 +205,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update the specified resource in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -217,7 +230,7 @@ endpoints:
         name: id
         description: validation.max.
         required: false
-        example: kukxmvfvbexbmklvxchgxnsex
+        example: uys
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -226,7 +239,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: excepturi
+        example: at
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -235,7 +248,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: labore
+        example: molestias
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -244,7 +257,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: tenetur
+        example: odit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -253,21 +266,24 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: theo14@example.com
+        example: konopelski.marie@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      id: kukxmvfvbexbmklvxchgxnsex
-      name: excepturi
-      position: labore
-      phone: tenetur
-      email: theo14@example.com
+      id: uys
+      name: at
+      position: molestias
+      phone: odit
+      email: konopelski.marie@example.net
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -285,9 +301,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -309,7 +326,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null

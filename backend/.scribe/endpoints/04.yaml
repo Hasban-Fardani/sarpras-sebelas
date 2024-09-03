@@ -16,9 +16,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -30,8 +31,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get users","current_page":1,"data":[{"id":197412311994031001,"username":"pengawas","role":"pengawas","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","employee":{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":197412311994031005,"username":"zim_zim","role":"unit","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","employee":{"id":197412311994031005,"name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":197806311994031003,"username":"admin","role":"admin","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","employee":{"id":197806311994031003,"name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":198212311994031004,"username":"ani_nuraeni","role":"unit","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","employee":{"id":198212311994031004,"name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}],"first_page_url":"http:\/\/localhost:8000\/users?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/users?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/users?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/users","per_page":10,"prev_page_url":null,"to":4,"total":4}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -39,7 +40,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -57,9 +61,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -71,7 +76,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: xejjumpknulyffarpldo
+        example: xirlqrcxpzdzlhzowxwxcud
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -80,7 +85,7 @@ endpoints:
         name: id
         description: validation.max.
         required: true
-        example: xysknptxyyexfgxz
+        example: ff
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -89,7 +94,7 @@ endpoints:
         name: username
         description: validation.max.
         required: true
-        example: b
+        example: zlmglrygarvsqdufuhtgb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -98,7 +103,7 @@ endpoints:
         name: email
         description: 'validation.email validation.max.'
         required: true
-        example: lveum@example.org
+        example: rowena.schinner@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -107,7 +112,7 @@ endpoints:
         name: password
         description: validation.min.
         required: true
-        example: psWO)oLzFX->UaU
+        example: 'z_qW6lU/UN;yi$i&h'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -116,7 +121,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: pengawas
+        example: unit
         type: string
         enumValues:
           - admin
@@ -125,16 +130,19 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: xejjumpknulyffarpldo
-      id: xysknptxyyexfgxz
-      username: b
-      email: lveum@example.org
-      password: psWO)oLzFX->UaU
-      role: pengawas
+      name: xirlqrcxpzdzlhzowxwxcud
+      id: ff
+      username: zlmglrygarvsqdufuhtgb
+      email: rowena.schinner@example.org
+      password: 'z_qW6lU/UN;yi$i&h'
+      role: unit
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -152,9 +160,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display the specified resource.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -176,8 +185,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get user","data":{"id":197412311994031001,"username":"pengawas","role":"pengawas","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -185,7 +194,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -204,9 +216,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update the specified resource in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -228,7 +241,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: sstvfzxgabxvnxqciorww
+        example: lw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -237,7 +250,7 @@ endpoints:
         name: id
         description: validation.max.
         required: true
-        example: imootdxdeabyl
+        example: qevpwfbqsqsooziwryyua
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -246,7 +259,7 @@ endpoints:
         name: username
         description: validation.max.
         required: true
-        example: gzdgzmgtezxpneabeznuv
+        example: sy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -255,7 +268,7 @@ endpoints:
         name: email
         description: 'validation.email validation.max.'
         required: true
-        example: kvandervort@example.com
+        example: purdy.melany@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -264,7 +277,7 @@ endpoints:
         name: password
         description: validation.min.
         required: true
-        example: 'Dj!aY*Lz0%e9b?BVjWe'
+        example: Py$e!<yJ
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -282,16 +295,19 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: sstvfzxgabxvnxqciorww
-      id: imootdxdeabyl
-      username: gzdgzmgtezxpneabeznuv
-      email: kvandervort@example.com
-      password: 'Dj!aY*Lz0%e9b?BVjWe'
+      name: lw
+      id: qevpwfbqsqsooziwryyua
+      username: sy
+      email: purdy.melany@example.net
+      password: Py$e!<yJ
       role: admin
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -309,9 +325,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -333,7 +350,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null

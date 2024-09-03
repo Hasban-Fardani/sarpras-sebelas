@@ -16,9 +16,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -40,8 +41,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get all submission item details","current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/submission\/SM-001\/detail?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/submission\/SM-001\/detail?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/submission\/SM-001\/detail?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/submission\/SM-001\/detail","per_page":10,"prev_page_url":null,"to":null,"total":0}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -49,7 +50,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -67,9 +71,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -91,7 +96,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: voluptate
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -100,18 +105,21 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: quas
+        example: dolorum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: voluptate
-      qty: quas
+      item_id: aut
+      qty: dolorum
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -130,9 +138,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update the specified resource in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -149,14 +158,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: molestiae
+        example: assumenda
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       submission_id: SM-001
-      id: molestiae
+      id: assumenda
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -164,7 +173,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 4
+        example: 14
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -173,7 +182,7 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 18
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -182,19 +191,22 @@ endpoints:
         name: qty_acc
         description: ''
         required: true
-        example: 1
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 4
-      qty: 18
-      qty_acc: 1
+      item_id: 14
+      qty: 4
+      qty_acc: 9
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -212,9 +224,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -231,14 +244,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: qui
+        example: vitae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       submission_id: SM-001
-      id: qui
+      id: vitae
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -246,7 +259,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
