@@ -16,9 +16,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display list item with pagination'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -30,8 +31,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get all items","current_page":1,"data":[{"id":"I-001","image":"http:\/\/localhost:8000\/storage\/images\/pulpen-ae7.jpeg","name":"Pulpen AE7","unit":"pcs","stock":10,"min_stock":5,"price":2000,"category_id":"ATK","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","category":{"id":"ATK","name":"Alat Tulis Kantor"}},{"id":"I-002","image":"http:\/\/localhost:8000\/storage\/images\/buku-sidu-38.jpeg","name":"Buku Sidu 38 Lembar","unit":"pcs","stock":10,"min_stock":5,"price":4000,"category_id":"ATK","created_at":"2024-09-03T04:29:19.000000Z","updated_at":"2024-09-03T04:29:19.000000Z","category":{"id":"ATK","name":"Alat Tulis Kantor"}},{"id":"I-003","image":"http:\/\/localhost:8000\/storage\/images\/kertas-sidu-a4.jpeg","name":"Kertas Sidu A4","unit":"rim","stock":10,"min_stock":5,"price":15000,"category_id":"ATK","created_at":"2024-09-03T04:29:19.000000Z","updated_at":"2024-09-03T04:29:19.000000Z","category":{"id":"ATK","name":"Alat Tulis Kantor"}},{"id":"I-004","image":"http:\/\/localhost:8000\/storage\/images\/pulpen-joyko-gp-265.jpeg","name":"Pulpen Joyko GP 265","unit":"pcs","stock":10,"min_stock":5,"price":2000,"category_id":"ATK","created_at":"2024-09-03T04:29:19.000000Z","updated_at":"2024-09-03T04:29:19.000000Z","category":{"id":"ATK","name":"Alat Tulis Kantor"}},{"id":"I-005","image":"http:\/\/localhost:8000\/storage\/images\/spidol-snowman-boardmarker.jpeg","name":"Spidol Snowman Boardmarker","unit":"pcs","stock":10,"min_stock":5,"price":8000,"category_id":"ATK","created_at":"2024-09-03T04:29:19.000000Z","updated_at":"2024-09-03T04:29:19.000000Z","category":{"id":"ATK","name":"Alat Tulis Kantor"}}],"first_page_url":"http:\/\/localhost:8000\/item?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/item?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/item?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/item","per_page":10,"prev_page_url":null,"to":5,"total":5}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -39,7 +40,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -57,9 +61,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Store a newly item in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
@@ -80,7 +85,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: zjuaslwqkegwakvoxx
+        example: oxnliklqmasajqojsrbgitzy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -89,7 +94,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: true
-        example: vy
+        example: jwlqyhodpblfzm
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -98,7 +103,7 @@ endpoints:
         name: stock
         description: ''
         required: true
-        example: 5
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -107,7 +112,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 14
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -116,7 +121,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: quam
+        example: occaecati
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -125,23 +130,26 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 2
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: zjuaslwqkegwakvoxx
-      unit: vy
-      stock: 5
-      min_stock: 14
-      category_id: quam
-      price: 2
+      name: oxnliklqmasajqojsrbgitzy
+      unit: jwlqyhodpblfzm
+      stock: 6
+      min_stock: 12
+      category_id: occaecati
+      price: 6
     fileParameters:
       image: null
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -159,9 +167,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Display the specified item.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -183,8 +192,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Not Authorized"}'
+        status: 200
+        content: '{"message":"success get item","data":{"id":"I-001","image":"\/images\/pulpen-ae7.jpeg","name":"Pulpen AE7","unit":"pcs","stock":10,"min_stock":5,"price":2000,"category_id":"ATK","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -192,7 +201,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -211,9 +223,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update the specified item in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
@@ -244,7 +257,7 @@ endpoints:
         name: name
         description: validation.max.
         required: false
-        example: wafcfouctk
+        example: fajni
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -253,7 +266,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: false
-        example: gysxd
+        example: resbomvjxvbcjvyw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -262,7 +275,7 @@ endpoints:
         name: stock
         description: ''
         required: false
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -271,7 +284,7 @@ endpoints:
         name: min_stock
         description: ''
         required: false
-        example: 9
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -280,7 +293,7 @@ endpoints:
         name: category_id
         description: ''
         required: false
-        example: in
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -289,23 +302,26 @@ endpoints:
         name: price
         description: ''
         required: false
-        example: 4
+        example: 14
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: wafcfouctk
-      unit: gysxd
-      stock: 5
-      min_stock: 9
-      category_id: in
-      price: 4
+      name: fajni
+      unit: resbomvjxvbcjvyw
+      stock: 1
+      min_stock: 19
+      category_id: qui
+      price: 14
     fileParameters:
       image: null
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
@@ -323,9 +339,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Remove the specified item from storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -347,7 +364,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
     controller: null
     method: null
     route: null
