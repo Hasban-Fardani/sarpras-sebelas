@@ -8,6 +8,11 @@ use App\Models\Supplier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group Supplier Management
+ *
+ * API endpoints for managing suppliers
+ */
 class SupplierController extends Controller
 {
     /**

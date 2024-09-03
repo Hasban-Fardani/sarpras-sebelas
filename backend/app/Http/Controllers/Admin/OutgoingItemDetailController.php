@@ -9,6 +9,11 @@ use App\Models\ItemOutDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group Outgoing Item Detail
+ *
+ * Manage outgoing item detail
+ */
 class OutgoingItemDetailController extends Controller
 {
     /**

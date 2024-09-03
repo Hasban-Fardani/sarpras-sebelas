@@ -8,6 +8,11 @@ use App\Models\SubmissionItemDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group Submission Item Detail Management
+ *
+ * API endpoints for managing submission item detail
+ */
 class SubmissionItemDetailController extends Controller
 {
     /**

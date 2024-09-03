@@ -7,6 +7,11 @@ use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
 use Illuminate\Http\Request;
 
+/**
+ * @group Employee Management
+ *
+ * API endpoints for managing employees
+ */
 class EmployeeController extends Controller
 {
     /**

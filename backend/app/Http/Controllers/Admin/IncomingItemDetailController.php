@@ -9,18 +9,23 @@ use App\Models\IncomingItemDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group Incoming Item Detail Management
+ *
+ * API endpoints for managing Incoming Item Detail
+ */
 class IncomingItemDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, IncomingItem $IncomingItem)
+    public function index(Request $request, IncomingItem $incomingItem)
     {
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
         $data = IncomingItemDetail::with(['item:id,name'])
-            ->where('incoming_item_id', $IncomingItem->id)
+            ->where('incoming_item_id', $incomingItem->id)
             ->paginate($perPage, ['*'], 'page', $page);
 
         return response()->json([
@@ -32,7 +37,7 @@ class IncomingItemDetailController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, IncomingItem $IncomingItem)
+    public function store(Request $request, IncomingItem $incomingItem)
     {
         // validate
         $validator = Validator::make($request->all(), [
@@ -49,32 +54,32 @@ class IncomingItemDetailController extends Controller
         }
 
         // check if item exist in item in
-        $IncomingItemDetail = $IncomingItem->details()->where('item_id', $request->item_id)->first();
-        if ($IncomingItemDetail) {
-            $IncomingItemDetail->update([
-                'qty' => $IncomingItemDetail->qty + $request->qty
+        $incomingItemDetail = $incomingItem->details()->where('item_id', $request->item_id)->first();
+        if ($incomingItemDetail) {
+            $incomingItemDetail->update([
+                'qty' => $incomingItemDetail->qty + $request->qty
             ]);
             return response()->json([
                 'message' => 'success update item in detail',
-                'data' => $IncomingItem->details
+                'data' => $incomingItem->details
             ]);
         }
 
-        $IncomingItem->details()->create($validator->validated());
+        $incomingItem->details()->create($validator->validated());
 
         // add item stock
         Item::where('id', $request->item_id)->increment('stock', $request->qty);
 
         return response()->json([
             'message' => 'success add item in detail',
-            'data' => $IncomingItem->details
+            'data' => $incomingItem->details
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, IncomingItem $IncomingItem, string $idDetails)
+    public function update(Request $request, IncomingItem $incomingItem, string $idDetails)
     {
         // validate
         $validator = Validator::make($request->all(), [
@@ -90,24 +95,24 @@ class IncomingItemDetailController extends Controller
             ], 422);
         }
 
-        $IncomingItemDetail = IncomingItemDetail::find($idDetails);
-        $IncomingItemDetail->update($request->all());
+        $incomingItemDetail = IncomingItemDetail::find($idDetails);
+        $incomingItemDetail->update($request->all());
         return response()->json([
             'message' => 'success update item in detail',
-            'data' => $IncomingItemDetail
+            'data' => $incomingItemDetail
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(IncomingItem $IncomingItem, string $idDetails)
+    public function destroy(IncomingItem $incomingItem, string $idDetails)
     {
-        $IncomingItemDetail = IncomingItemDetail::find($idDetails);
-        $IncomingItemDetail->delete();
+        $incomingItemDetail = IncomingItemDetail::find($idDetails);
+        $incomingItemDetail->delete();
         return response()->json([
             'message' => 'success delete item in detail',
-            'data' => $IncomingItem->details
+            'data' => $incomingItem->details
         ]);
     }
 }

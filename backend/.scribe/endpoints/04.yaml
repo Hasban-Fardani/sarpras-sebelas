@@ -1,0 +1,340 @@
+name: 'User Management'
+description: |-
+
+  API endpoints for managing users
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: users
+    metadata:
+      groupName: 'User Management'
+      groupDescription: |-
+
+        API endpoints for managing users
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: users
+    metadata:
+      groupName: 'User Management'
+      groupDescription: |-
+
+        API endpoints for managing users
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: validation.max.
+        required: true
+        example: xejjumpknulyffarpldo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: validation.max.
+        required: true
+        example: xysknptxyyexfgxz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      username:
+        name: username
+        description: validation.max.
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'validation.email validation.max.'
+        required: true
+        example: lveum@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: validation.min.
+        required: true
+        example: psWO)oLzFX->UaU
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      role:
+        name: role
+        description: ''
+        required: true
+        example: pengawas
+        type: string
+        enumValues:
+          - admin
+          - unit
+          - pengawas
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: xejjumpknulyffarpldo
+      id: xysknptxyyexfgxz
+      username: b
+      email: lveum@example.org
+      password: psWO)oLzFX->UaU
+      role: pengawas
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'users/{username}'
+    metadata:
+      groupName: 'User Management'
+      groupDescription: |-
+
+        API endpoints for managing users
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: pengawas
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      username: pengawas
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'users/{username}'
+    metadata:
+      groupName: 'User Management'
+      groupDescription: |-
+
+        API endpoints for managing users
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: pengawas
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      username: pengawas
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: validation.max.
+        required: true
+        example: sstvfzxgabxvnxqciorww
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: validation.max.
+        required: true
+        example: imootdxdeabyl
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      username:
+        name: username
+        description: validation.max.
+        required: true
+        example: gzdgzmgtezxpneabeznuv
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'validation.email validation.max.'
+        required: true
+        example: kvandervort@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: validation.min.
+        required: true
+        example: 'Dj!aY*Lz0%e9b?BVjWe'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      role:
+        name: role
+        description: ''
+        required: true
+        example: admin
+        type: string
+        enumValues:
+          - admin
+          - unit
+          - pengawas
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: sstvfzxgabxvnxqciorww
+      id: imootdxdeabyl
+      username: gzdgzmgtezxpneabeznuv
+      email: kvandervort@example.com
+      password: 'Dj!aY*Lz0%e9b?BVjWe'
+      role: admin
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'users/{username}'
+    metadata:
+      groupName: 'User Management'
+      groupDescription: |-
+
+        API endpoints for managing users
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: pengawas
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      username: pengawas
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

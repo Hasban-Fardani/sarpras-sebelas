@@ -1,0 +1,89 @@
+name: 'Supervisor - Submission Check'
+description: |-
+
+  API endpoints for submission check
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: 'submission/{submission_id}/accept'
+    metadata:
+      groupName: 'Supervisor - Submission Check'
+      groupDescription: |-
+
+        API endpoints for submission check
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      submission_id:
+        name: submission_id
+        description: 'The ID of the submission.'
+        required: true
+        example: SM-001
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      submission_id: SM-001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'submission/{submission_id}/decline'
+    metadata:
+      groupName: 'Supervisor - Submission Check'
+      groupDescription: |-
+
+        API endpoints for submission check
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      submission_id:
+        name: submission_id
+        description: 'The ID of the submission.'
+        required: true
+        example: SM-001
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      submission_id: SM-001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

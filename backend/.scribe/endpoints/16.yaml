@@ -1,0 +1,89 @@
+name: 'Supervisor - Request Check'
+description: |-
+
+  API endpoints for request check
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: 'request/{request}/accept'
+    metadata:
+      groupName: 'Supervisor - Request Check'
+      groupDescription: |-
+
+        API endpoints for request check
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      request:
+        name: request
+        description: 'The request.'
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      request: et
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'request/{request}/decline'
+    metadata:
+      groupName: 'Supervisor - Request Check'
+      groupDescription: |-
+
+        API endpoints for request check
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      request:
+        name: request
+        description: 'The request.'
+        required: true
+        example: eveniet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      request: eveniet
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

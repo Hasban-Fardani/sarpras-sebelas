@@ -7,6 +7,360 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /dashboard/counts:
+    get:
+      summary: ''
+      operationId: getDashboardCounts
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Admin Dashboard'
+      security: []
+  /dashboard/stats/request:
+    get:
+      summary: ''
+      operationId: getDashboardStatsRequest
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Admin Dashboard'
+      security: []
+  /dashboard/stats/item:
+    get:
+      summary: ''
+      operationId: getDashboardStatsItem
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Admin Dashboard'
+      security: []
+  /auth/login:
+    post:
+      summary: 'Login endpoint'
+      operationId: loginEndpoint
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: ''
+                  example: password123
+                id:
+                  type: string
+                  description: ''
+                  example: '2121021210'
+              required:
+                - password
+                - id
+      security: []
+  /auth/logout:
+    post:
+      summary: ''
+      operationId: postAuthLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Auth
+      security: []
+  /category:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Category Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Category Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must contain only letters, numbers, dashes and underscores.'
+                  example: zwr-mxj_k
+              required:
+                - name
+      security: []
+  '/category/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Category Management'
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Category Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: eos
+              required:
+                - name
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Category Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: ATK
+        required: true
+        schema:
+          type: string
+  /employees:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Employee Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Employee Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: validation.max.
+                  example: bmckqtmariyokhnihmjbvkk
+                name:
+                  type: string
+                  description: ''
+                  example: explicabo
+                position:
+                  type: string
+                  description: ''
+                  example: omnis
+                phone:
+                  type: string
+                  description: ''
+                  example: ipsa
+                email:
+                  type: string
+                  description: ''
+                  example: hadley.abernathy@example.net
+              required:
+                - name
+                - position
+                - phone
+                - email
+      security: []
+  '/employees/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Employee Management'
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Employee Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: validation.max.
+                  example: kukxmvfvbexbmklvxchgxnsex
+                name:
+                  type: string
+                  description: ''
+                  example: excepturi
+                position:
+                  type: string
+                  description: ''
+                  example: labore
+                phone:
+                  type: string
+                  description: ''
+                  example: tenetur
+                email:
+                  type: string
+                  description: ''
+                  example: theo14@example.com
+              required:
+                - name
+                - position
+                - phone
+                - email
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Employee Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the employee.'
+        example: 197412311994031001
+        required: true
+        schema:
+          type: integer
   /sanctum/csrf-cookie:
     get:
       summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
@@ -45,48 +399,63 @@ paths:
       tags:
         - Endpoints
       security: []
-  /auth/login:
-    post:
-      summary: 'Login endpoint'
-      operationId: loginEndpoint
+  /auth/check:
+    get:
+      summary: ''
+      operationId: getAuthCheck
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
       tags:
         - Endpoints
-      requestBody:
+      security: []
+  '/public/{path}':
+    get:
+      summary: ''
+      operationId: getPublicPath
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Found'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Found'
+      tags:
+        - 'File Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: path
+        description: ''
+        example: 'P:K/Ec'
         required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                password:
-                  type: string
-                  description: ''
-                  example: password123
-                nip:
-                  type: string
-                  description: ''
-                  example: '2121021210'
-              required:
-                - password
-                - nip
-      security: []
-  /auth/logout:
-    post:
-      summary: ''
-      operationId: postAuthLogout
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-  /admin/dashboard/counts:
+        schema:
+          type: string
+  '/private/{path}':
     get:
       summary: ''
-      operationId: getAdminDashboardCounts
+      operationId: getPrivatePath
       description: ''
       parameters: []
       responses:
@@ -103,53 +472,18 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'File Management'
       security: []
-  /admin/dashboard/stats/request:
-    get:
-      summary: ''
-      operationId: getAdminDashboardStatsRequest
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-  /admin/dashboard/stats/item:
-    get:
-      summary: ''
-      operationId: getAdminDashboardStatsItem
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-  /category:
+    parameters:
+      -
+        in: path
+        name: path
+        description: ''
+        example: (WI
+        required: true
+        schema:
+          type: string
+  '/incoming-item/{incoming_item_id}/detail':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -169,7 +503,7 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'Incoming Item Detail Management'
       security: []
     post:
       summary: 'Store a newly created resource in storage.'
@@ -178,7 +512,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Incoming Item Detail Management'
       requestBody:
         required: true
         content:
@@ -186,14 +520,143 @@ paths:
             schema:
               type: object
               properties:
-                name:
+                item_id:
+                  type: integer
+                  description: ''
+                  example: 9
+                qty:
+                  type: integer
+                  description: ''
+                  example: 17
+              required:
+                - item_id
+                - qty
+      security: []
+    parameters:
+      -
+        in: path
+        name: incoming_item_id
+        description: 'The ID of the incoming item.'
+        example: INV-001
+        required: true
+        schema:
+          type: string
+  '/incoming-item/{incoming_item_id}/detail/{id}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Incoming Item Detail Management'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: integer
+                  description: ''
+                  example: 10
+                qty:
+                  type: integer
+                  description: ''
+                  example: 18
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Incoming Item Detail Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: incoming_item_id
+        description: 'The ID of the incoming item.'
+        example: INV-001
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the detail.'
+        example: INV-001
+        required: true
+        schema:
+          type: string
+  /incoming-item:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Incoming Item Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Incoming Item Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                supplier_id:
                   type: string
                   description: ''
-                  example: atque
+                  example: ut
+                items:
+                  type: array
+                  description: ''
+                  example:
+                    - []
+                  items:
+                    type: object
+                    properties:
+                      item_id:
+                        type: string
+                        description: ''
+                        example: omnis
+                      qty:
+                        type: integer
+                        description: ''
+                        example: 16
+                    required:
+                      - item_id
+                      - qty
               required:
-                - name
+                - supplier_id
+                - items
       security: []
-  '/category/{id}':
+  '/incoming-item/{id}':
     get:
       summary: 'Display the specified resource.'
       operationId: displayTheSpecifiedResource
@@ -213,29 +676,7 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: qui
-              required:
-                - name
+        - 'Incoming Item Management'
       security: []
     delete:
       summary: 'Remove the specified resource from storage.'
@@ -244,21 +685,21 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Incoming Item Management'
       security: []
     parameters:
       -
         in: path
         name: id
-        description: 'The ID of the category.'
-        example: 1
+        description: 'The ID of the incoming item.'
+        example: INV-001
         required: true
         schema:
-          type: integer
+          type: string
   /item:
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Display list item with pagination'
+      operationId: displayListItemWithPagination
       description: ''
       parameters: []
       responses:
@@ -275,64 +716,63 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'Item Management'
       security: []
     post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
+      summary: 'Store a newly item in storage.'
+      operationId: storeANewlyItemInStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Item Management'
       requestBody:
         required: true
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file.'
                 name:
                   type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: gx
-                merk:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: zdubyxkjpdqesvxxy
+                  description: validation.max.
+                  example: zjuaslwqkegwakvoxx
                 unit:
                   type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: hecewoupl
+                  description: validation.max.
+                  example: vy
                 stock:
                   type: integer
-                  description: satuan.
-                  example: 19
+                  description: ''
+                  example: 5
                 min_stock:
                   type: integer
                   description: ''
-                  example: 13
-                category_code:
-                  type: integer
+                  example: 14
+                category_id:
+                  type: string
                   description: ''
-                  example: 6
+                  example: quam
                 price:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 2
               required:
                 - name
-                - merk
                 - unit
                 - stock
                 - min_stock
-                - category_code
+                - category_id
                 - price
       security: []
   '/item/{id}':
     get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
+      summary: 'Display the specified item.'
+      operationId: displayTheSpecifiedItem
       description: ''
       parameters: []
       responses:
@@ -349,542 +789,606 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'Item Management'
       security: []
     put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
+      summary: 'Update the specified item in storage.'
+      operationId: updateTheSpecifiedItemInStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Item Management'
       requestBody:
-        required: true
+        required: false
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file.'
                 name:
                   type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: pzhxkkdpdnrcvpwqq
-                merk:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: lqelsoruaoxzreprqqevlhxem
+                  description: validation.max.
+                  example: wafcfouctk
                 unit:
                   type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: sseh
+                  description: validation.max.
+                  example: gysxd
                 stock:
                   type: integer
-                  description: satuan.
-                  example: 15
+                  description: ''
+                  example: 5
                 min_stock:
                   type: integer
                   description: ''
-                  example: 19
-                category_code:
-                  type: integer
+                  example: 9
+                category_id:
+                  type: string
                   description: ''
-                  example: 20
+                  example: in
                 price:
                   type: integer
                   description: ''
-                  example: 20
-              required:
-                - name
-                - merk
-                - unit
-                - stock
-                - min_stock
-                - category_code
-                - price
+                  example: 4
       security: []
     delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
+      summary: 'Remove the specified item from storage.'
+      operationId: removeTheSpecifiedItemFromStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Item Management'
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the item.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  /item-in:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                supplier_code:
-                  type: integer
-                  description: ''
-                  example: 5
-                items:
-                  type: array
-                  description: ''
-                  example:
-                    - []
-                  items:
-                    type: object
-                    properties:
-                      item_code:
-                        type: integer
-                        description: ''
-                        example: 4
-                      qty:
-                        type: integer
-                        description: ''
-                        example: 5
-                    required:
-                      - item_code
-                      - qty
-              required:
-                - supplier_code
-                - items
-      security: []
-  '/item-in/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the item in.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/item-in/{item_in_code}/detail':
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_code:
-                  type: integer
-                  description: ''
-                  example: 8
-                qty:
-                  type: integer
-                  description: ''
-                  example: 16
-              required:
-                - item_code
-                - qty
-      security: []
-    parameters:
-      -
-        in: path
-        name: item_in_code
-        description: 'The ID of the item in.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/item-in/{item_in_code}/detail/{id}':
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_code:
-                  type: integer
-                  description: ''
-                  example: 7
-                qty:
-                  type: integer
-                  description: ''
-                  example: 11
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: item_in_code
-        description: 'The ID of the item in.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: id
-        description: 'The ID of the detail.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  /item-out:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                division_code:
-                  type: integer
-                  description: ''
-                  example: 3
-                items:
-                  type: array
-                  description: ''
-                  example:
-                    - []
-                  items:
-                    type: object
-                    properties:
-                      item_code:
-                        type: integer
-                        description: ''
-                        example: 18
-                      qty:
-                        type: integer
-                        description: ''
-                        example: 7
-                    required:
-                      - item_code
-                      - qty
-              required:
-                - division_code
-                - items
-      security: []
-  '/item-out/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the item out.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/item-out/{item_out_code}/detail':
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_code:
-                  type: integer
-                  description: ''
-                  example: 11
-                qty:
-                  type: integer
-                  description: ''
-                  example: 19
-              required:
-                - item_code
-                - qty
-      security: []
-    parameters:
-      -
-        in: path
-        name: item_out_code
-        description: 'The ID of the item out.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/item-out/{item_out_code}/detail/{id}':
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_code:
-                  type: integer
-                  description: ''
-                  example: 12
-                qty:
-                  type: integer
-                  description: ''
-                  example: 20
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: item_out_code
-        description: 'The ID of the item out.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: id
-        description: 'The ID of the detail.'
-        example: id
+        example: I-001
         required: true
         schema:
           type: string
-  '/submission/{submission_code}/accept':
+  '/outgoing-item/{outgoing_item_id}/detail':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Outgoing Item Detail'
+      security: []
     post:
-      summary: ''
-      operationId: postSubmissionSubmission_codeAccept
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Outgoing Item Detail'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: integer
+                  description: ''
+                  example: 17
+                qty:
+                  type: integer
+                  description: ''
+                  example: 1
+              required:
+                - item_id
+                - qty
       security: []
     parameters:
       -
         in: path
-        name: submission_code
-        description: 'The ID of the submission.'
-        example: 1
+        name: outgoing_item_id
+        description: 'The ID of the outgoing item.'
+        example: OTK-001
         required: true
         schema:
-          type: integer
-  '/submission/{submission_code}/decline':
-    post:
-      summary: ''
-      operationId: postSubmissionSubmission_codeDecline
+          type: string
+  '/outgoing-item/{outgoing_item_id}/detail/{id}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Outgoing Item Detail'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                qty:
+                  type: integer
+                  description: ''
+                  example: 9
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Outgoing Item Detail'
       security: []
     parameters:
       -
         in: path
-        name: submission_code
-        description: 'The ID of the submission.'
-        example: 1
+        name: outgoing_item_id
+        description: 'The ID of the outgoing item.'
+        example: OTK-001
         required: true
         schema:
-          type: integer
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the detail.'
+        example: sapiente
+        required: true
+        schema:
+          type: string
+  /outgoing-item:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Outgoing Item Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Outgoing Item Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                division_id:
+                  type: integer
+                  description: ''
+                  example: 16
+                items:
+                  type: array
+                  description: ''
+                  example:
+                    - []
+                  items:
+                    type: object
+                    properties:
+                      item_id:
+                        type: integer
+                        description: ''
+                        example: 19
+                      qty:
+                        type: integer
+                        description: ''
+                        example: 12
+                    required:
+                      - item_id
+                      - qty
+              required:
+                - division_id
+                - items
+      security: []
+  '/outgoing-item/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Outgoing Item Management'
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Outgoing Item Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the outgoing item.'
+        example: OTK-001
+        required: true
+        schema:
+          type: string
+  '/request-item/{request_item_id}/detail':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Request Item Detail Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Request Item Detail Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: string
+                  description: ''
+                  example: unde
+                qty:
+                  type: string
+                  description: ''
+                  example: voluptatem
+              required:
+                - item_id
+                - qty
+      security: []
+    parameters:
+      -
+        in: path
+        name: request_item_id
+        description: 'The ID of the request item.'
+        example: RQ-001
+        required: true
+        schema:
+          type: string
+  '/request-item/{request_item_id}/detail/{requestItemDetail}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Request Item Detail Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: integer
+                  description: ''
+                  example: 4
+                qty:
+                  type: integer
+                  description: ''
+                  example: 17
+                qty_acc:
+                  type: integer
+                  description: ''
+                  example: 6
+              required:
+                - item_id
+                - qty
+                - qty_acc
+      security: []
+    parameters:
+      -
+        in: path
+        name: request_item_id
+        description: 'The ID of the request item.'
+        example: RQ-001
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: requestItemDetail
+        description: ''
+        example: nisi
+        required: true
+        schema:
+          type: string
+  '/request-item/{request_item_id}/detail/{requestItemDetail_id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Request Item Detail Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: request_item_id
+        description: 'The ID of the request item.'
+        example: RQ-001
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: requestItemDetail_id
+        description: 'The ID of the requestItemDetail.'
+        example: in
+        required: true
+        schema:
+          type: string
+  /request-item:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Request Item Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Request Item Management'
+      security: []
+  '/request-item/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Request Item Management'
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Request Item Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the request item.'
+        example: RQ-001
+        required: true
+        schema:
+          type: string
+  '/submission/{submission_id}/detail':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'Submission Item Detail Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Submission Item Detail Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: string
+                  description: ''
+                  example: voluptate
+                qty:
+                  type: string
+                  description: ''
+                  example: quas
+              required:
+                - item_id
+                - qty
+      security: []
+    parameters:
+      -
+        in: path
+        name: submission_id
+        description: 'The ID of the submission.'
+        example: SM-001
+        required: true
+        schema:
+          type: string
+  '/submission/{submission_id}/detail/{id}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Submission Item Detail Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: integer
+                  description: ''
+                  example: 4
+                qty:
+                  type: integer
+                  description: ''
+                  example: 18
+                qty_acc:
+                  type: integer
+                  description: ''
+                  example: 1
+              required:
+                - item_id
+                - qty
+                - qty_acc
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Submission Item Detail Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: submission_id
+        description: 'The ID of the submission.'
+        example: SM-001
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the detail.'
+        example: molestiae
+        required: true
+        schema:
+          type: string
   /submission:
     get:
       summary: 'Display a listing of the resource.'
@@ -905,7 +1409,7 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'Submission Item Management'
       security: []
     post:
       summary: 'Store a newly created resource in storage.'
@@ -914,7 +1418,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Submission Item Management'
       requestBody:
         required: true
         content:
@@ -930,16 +1434,16 @@ paths:
                   items:
                     type: object
                     properties:
-                      item_code:
+                      item_id:
                         type: integer
                         description: ''
-                        example: 14
+                        example: 11
                       qty:
                         type: integer
                         description: ''
-                        example: 3
+                        example: 10
                     required:
-                      - item_code
+                      - item_id
                       - qty
               required:
                 - items
@@ -964,7 +1468,7 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'Submission Item Management'
       security: []
     delete:
       summary: 'Remove the specified resource from storage.'
@@ -973,131 +1477,14 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Submission Item Management'
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the submission.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/submission/{submission_code}/detail':
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Authorized'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Authorized'
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_code:
-                  type: string
-                  description: ''
-                  example: quos
-                qty:
-                  type: string
-                  description: ''
-                  example: et
-              required:
-                - item_code
-                - qty
-      security: []
-    parameters:
-      -
-        in: path
-        name: submission_code
-        description: 'The ID of the submission.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/submission/{submission_code}/detail/{id}':
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_code:
-                  type: integer
-                  description: ''
-                  example: 5
-                qty:
-                  type: integer
-                  description: ''
-                  example: 2
-                qty_acc:
-                  type: integer
-                  description: ''
-                  example: 6
-              required:
-                - item_code
-                - qty
-                - qty_acc
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: submission_code
-        description: 'The ID of the submission.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: id
-        description: 'The ID of the detail.'
-        example: nulla
+        example: SM-001
         required: true
         schema:
           type: string
@@ -1109,14 +1496,14 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Supervisor - Request Check'
       security: []
     parameters:
       -
         in: path
         name: request
         description: 'The request.'
-        example: fugiat
+        example: et
         required: true
         schema:
           type: string
@@ -1128,18 +1515,56 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Supervisor - Request Check'
       security: []
     parameters:
       -
         in: path
         name: request
         description: 'The request.'
-        example: natus
+        example: eveniet
         required: true
         schema:
           type: string
-  /request-item:
+  '/submission/{submission_id}/accept':
+    post:
+      summary: ''
+      operationId: postSubmissionSubmission_idAccept
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Supervisor - Submission Check'
+      security: []
+    parameters:
+      -
+        in: path
+        name: submission_id
+        description: 'The ID of the submission.'
+        example: SM-001
+        required: true
+        schema:
+          type: string
+  '/submission/{submission_id}/decline':
+    post:
+      summary: ''
+      operationId: postSubmissionSubmission_idDecline
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Supervisor - Submission Check'
+      security: []
+    parameters:
+      -
+        in: path
+        name: submission_id
+        description: 'The ID of the submission.'
+        example: SM-001
+        required: true
+        schema:
+          type: string
+  /supplier:
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -1159,7 +1584,7 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'Supplier Management'
       security: []
     post:
       summary: 'Store a newly created resource in storage.'
@@ -1168,7 +1593,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Supplier Management'
       requestBody:
         required: true
         content:
@@ -1176,29 +1601,22 @@ paths:
             schema:
               type: object
               properties:
-                items:
-                  type: array
-                  description: ''
-                  example:
-                    - []
-                  items:
-                    type: object
-                    properties:
-                      item_code:
-                        type: integer
-                        description: ''
-                        example: 13
-                      qty:
-                        type: integer
-                        description: ''
-                        example: 6
-                    required:
-                      - item_code
-                      - qty
+                name:
+                  type: string
+                  description: validation.max.
+                  example: duahfyknyn
+                address:
+                  type: string
+                  description: validation.max.
+                  example: bmmgnfolegbbqovojekqxv
+                phone:
+                  type: string
+                  description: validation.max.
+                  example: uwfgj
               required:
-                - items
+                - name
       security: []
-  '/request-item/{id}':
+  '/supplier/{id}':
     get:
       summary: 'Display the specified resource.'
       operationId: displayTheSpecifiedResource
@@ -1218,7 +1636,37 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'Supplier Management'
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Supplier Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: validation.max.
+                  example: ilyvkhrhwy
+                address:
+                  type: string
+                  description: validation.max.
+                  example: ujsiskhrigeealbcwlrcwyafg
+                phone:
+                  type: string
+                  description: validation.max.
+                  example: fxkejjxdcepcwnoslyamvxnfv
+              required:
+                - name
       security: []
     delete:
       summary: 'Remove the specified resource from storage.'
@@ -1227,18 +1675,18 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Supplier Management'
       security: []
     parameters:
       -
         in: path
         name: id
-        description: 'The ID of the request item.'
-        example: 1
+        description: 'The ID of the supplier.'
+        example: S0001
         required: true
         schema:
-          type: integer
-  '/request-item/{request_item_code}/detail':
+          type: string
+  /users:
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -1258,7 +1706,7 @@ paths:
                     type: string
                     example: 'Not Authorized'
       tags:
-        - Endpoints
+        - 'User Management'
       security: []
     post:
       summary: 'Store a newly created resource in storage.'
@@ -1267,7 +1715,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'User Management'
       requestBody:
         required: true
         content:
@@ -1275,28 +1723,64 @@ paths:
             schema:
               type: object
               properties:
-                item_code:
+                name:
+                  type: string
+                  description: validation.max.
+                  example: xejjumpknulyffarpldo
+                id:
+                  type: string
+                  description: validation.max.
+                  example: xysknptxyyexfgxz
+                username:
+                  type: string
+                  description: validation.max.
+                  example: b
+                email:
+                  type: string
+                  description: 'validation.email validation.max.'
+                  example: lveum@example.org
+                password:
+                  type: string
+                  description: validation.min.
+                  example: psWO)oLzFX->UaU
+                role:
                   type: string
                   description: ''
-                  example: aut
-                qty:
-                  type: string
-                  description: ''
-                  example: aliquam
+                  example: pengawas
+                  enum:
+                    - admin
+                    - unit
+                    - pengawas
               required:
-                - item_code
-                - qty
+                - name
+                - id
+                - username
+                - email
+                - password
+                - role
       security: []
-    parameters:
-      -
-        in: path
-        name: request_item_code
-        description: 'The ID of the request item.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/request-item/{request_item_code}/detail/{requestItemDetail}':
+  '/users/{username}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - 'User Management'
+      security: []
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -1304,7 +1788,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'User Management'
       requestBody:
         required: true
         content:
@@ -1312,41 +1796,42 @@ paths:
             schema:
               type: object
               properties:
-                item_code:
-                  type: integer
+                name:
+                  type: string
+                  description: validation.max.
+                  example: sstvfzxgabxvnxqciorww
+                id:
+                  type: string
+                  description: validation.max.
+                  example: imootdxdeabyl
+                username:
+                  type: string
+                  description: validation.max.
+                  example: gzdgzmgtezxpneabeznuv
+                email:
+                  type: string
+                  description: 'validation.email validation.max.'
+                  example: kvandervort@example.com
+                password:
+                  type: string
+                  description: validation.min.
+                  example: 'Dj!aY*Lz0%e9b?BVjWe'
+                role:
+                  type: string
                   description: ''
-                  example: 13
-                qty:
-                  type: integer
-                  description: ''
-                  example: 5
-                qty_acc:
-                  type: integer
-                  description: ''
-                  example: 7
+                  example: admin
+                  enum:
+                    - admin
+                    - unit
+                    - pengawas
               required:
-                - item_code
-                - qty
-                - qty_acc
+                - name
+                - id
+                - username
+                - email
+                - password
+                - role
       security: []
-    parameters:
-      -
-        in: path
-        name: request_item_code
-        description: 'The ID of the request item.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: requestItemDetail
-        description: ''
-        example: vitae
-        required: true
-        schema:
-          type: string
-  '/request-item/{request_item_code}/detail/{requestItemDetail_code}':
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -1354,26 +1839,81 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'User Management'
       security: []
     parameters:
       -
         in: path
-        name: request_item_code
-        description: 'The ID of the request item.'
-        example: 1
+        name: username
+        description: ''
+        example: pengawas
         required: true
         schema:
-          type: integer
-      -
-        in: path
-        name: requestItemDetail_code
-        description: 'The ID of the requestItemDetail.'
-        example: 1
-        required: true
-        schema:
-          type: integer
+          type: string
 tags:
+  -
+    name: 'Admin Dashboard'
+    description: "\nAPI endpoints for admin dashboard"
+  -
+    name: Auth
+    description: "\nAPI endpoints for login"
+  -
+    name: 'Category Management'
+    description: "\nAPI endpoints for managing categories"
+  -
+    name: 'Employee Management'
+    description: "\nAPI endpoints for managing employees"
   -
     name: Endpoints
     description: ''
+  -
+    name: 'File Management'
+    description: "\nAPI endpoints for get files from R2"
+  -
+    name: 'Incoming Item Detail Management'
+    description: "\nAPI endpoints for managing Incoming Item Detail"
+  -
+    name: 'Incoming Item Management'
+    description: "\nAPI endpoints for managing incoming item"
+  -
+    name: 'Item Management'
+    description: "\nAPI endpoints for managing items"
+  -
+    name: 'Outgoing Item Detail'
+    description: "\nManage outgoing item detail"
+  -
+    name: 'Outgoing Item Management'
+    description: "\nAPI endpoints for managing outgoing item"
+  -
+    name: 'Request Item Detail Management'
+    description: "\nAPI endpoints for managing request item detail"
+  -
+    name: 'Request Item Management'
+    description: "\nAPI endpoints for managing request item"
+  -
+    name: 'Submission Item Detail Management'
+    description: "\nAPI endpoints for managing submission item detail"
+  -
+    name: 'Submission Item Management'
+    description: "\nAPI endpoints for managing submission item"
+  -
+    name: 'Supervisor - Request Check'
+    description: "\nAPI endpoints for request check"
+  -
+    name: 'Supervisor - Submission Check'
+    description: "\nAPI endpoints for submission check"
+  -
+    name: 'Supplier Management'
+    description: "\nAPI endpoints for managing suppliers"
+  -
+    name: 'User Management'
+    description: "\nAPI endpoints for managing users"
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []

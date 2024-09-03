@@ -1,0 +1,354 @@
+name: 'Item Management'
+description: |-
+
+  API endpoints for managing items
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: item
+    metadata:
+      groupName: 'Item Management'
+      groupDescription: |-
+
+        API endpoints for managing items
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display list item with pagination'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: item
+    metadata:
+      groupName: 'Item Management'
+      groupDescription: |-
+
+        API endpoints for managing items
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly item in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      image:
+        name: image
+        description: 'Must be a file.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      name:
+        name: name
+        description: validation.max.
+        required: true
+        example: zjuaslwqkegwakvoxx
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit:
+        name: unit
+        description: validation.max.
+        required: true
+        example: vy
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      stock:
+        name: stock
+        description: ''
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      min_stock:
+        name: min_stock
+        description: ''
+        required: true
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      category_id:
+        name: category_id
+        description: ''
+        required: true
+        example: quam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: zjuaslwqkegwakvoxx
+      unit: vy
+      stock: 5
+      min_stock: 14
+      category_id: quam
+      price: 2
+    fileParameters:
+      image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'item/{id}'
+    metadata:
+      groupName: 'Item Management'
+      groupDescription: |-
+
+        API endpoints for managing items
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified item.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the item.'
+        required: true
+        example: I-001
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: I-001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'item/{id}'
+    metadata:
+      groupName: 'Item Management'
+      groupDescription: |-
+
+        API endpoints for managing items
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified item in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the item.'
+        required: true
+        example: I-001
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: I-001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      image:
+        name: image
+        description: 'Must be a file.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      name:
+        name: name
+        description: validation.max.
+        required: false
+        example: wafcfouctk
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit:
+        name: unit
+        description: validation.max.
+        required: false
+        example: gysxd
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      stock:
+        name: stock
+        description: ''
+        required: false
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      min_stock:
+        name: min_stock
+        description: ''
+        required: false
+        example: 9
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      category_id:
+        name: category_id
+        description: ''
+        required: false
+        example: in
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: false
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: wafcfouctk
+      unit: gysxd
+      stock: 5
+      min_stock: 9
+      category_id: in
+      price: 4
+    fileParameters:
+      image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'item/{id}'
+    metadata:
+      groupName: 'Item Management'
+      groupDescription: |-
+
+        API endpoints for managing items
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified item from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the item.'
+        required: true
+        example: I-001
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: I-001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

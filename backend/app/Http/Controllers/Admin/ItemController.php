@@ -9,6 +9,11 @@ use App\Models\Item;
 use App\Services\FileService;
 use Illuminate\Http\Request;
 
+/**
+ * @group Item Management
+ *
+ * API endpoints for managing items
+ */
 class ItemController extends Controller
 {
     /**

@@ -5,6 +5,11 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+/**
+ * @group Auth
+ *
+ * API endpoints for logout
+ */
 class LogoutController extends Controller
 {
     public function __invoke(Request $request)

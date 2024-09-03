@@ -1,0 +1,89 @@
+name: Auth
+description: |-
+
+  API endpoints for login
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: auth/login
+    metadata:
+      groupName: Auth
+      groupDescription: |-
+
+        API endpoints for login
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Login endpoint'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: ''
+        required: true
+        example: password123
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      id:
+        name: id
+        description: ''
+        required: true
+        example: '2121021210'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanBodyParameters:
+      password: password123
+      id: '2121021210'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: auth/logout
+    metadata:
+      groupName: Auth
+      groupDescription: |-
+
+        API endpoints for logout
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

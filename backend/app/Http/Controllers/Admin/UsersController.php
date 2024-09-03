@@ -8,6 +8,11 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group User Management
+ *
+ * API endpoints for managing users
+ */
 class UsersController extends Controller
 {
     /**

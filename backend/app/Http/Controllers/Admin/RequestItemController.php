@@ -8,6 +8,11 @@ use App\Models\RequestItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group Request Item Management
+ *
+ * API endpoints for managing request item
+ */
 class RequestItemController extends Controller
 {
     /**

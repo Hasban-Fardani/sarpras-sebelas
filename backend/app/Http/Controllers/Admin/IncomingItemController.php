@@ -9,6 +9,11 @@ use App\Models\IncomingItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * @group Incoming Item Management
+ *
+ * API endpoints for managing incoming item
+ */
 class IncomingItemController extends Controller
 {
     /**
@@ -62,8 +67,8 @@ class IncomingItemController extends Controller
             'total_items' => count($validatedData['items']),
         ];
 
-        $IncomingItem = IncomingItem::create($data);
-        $IncomingItem->details()->createMany($validatedData['items']);
+        $incomingItem = IncomingItem::create($data);
+        $incomingItem->details()->createMany($validatedData['items']);
 
         // update stock
         $item_ids = array_column($validatedData['items'], 'item_id');
@@ -78,29 +83,29 @@ class IncomingItemController extends Controller
 
         return response()->json([
             'message' => 'success create item-in and updated stock',
-            'data' => $IncomingItem
+            'data' => $incomingItem
         ]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(IncomingItem $IncomingItem)
+    public function show(IncomingItem $incomingItem)
     {
         return response()->json([
             'message' => 'success get item-in',
-            'data' => $IncomingItem->load(['employee:id,name', 'supplier:id,name', 'details'])
+            'data' => $incomingItem->load(['employee:id,name', 'supplier:id,name', 'details'])
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(IncomingItem $IncomingItem)
+    public function destroy(IncomingItem $incomingItem)
     {
         // update stock
-        $item_ids = array_column($IncomingItem->details->toArray(), 'item_id');
-        $qtys = array_column($IncomingItem->details->toArray(), 'qty');
+        $item_ids = array_column($incomingItem->details->toArray(), 'item_id');
+        $qtys = array_column($incomingItem->details->toArray(), 'qty');
         
         // Create the SQL query dynamically
         $sql = "UPDATE items SET stock = stock - ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
@@ -108,7 +113,7 @@ class IncomingItemController extends Controller
         // Execute the SQL query
         DB::statement($sql);
 
-        $IncomingItem->delete();
+        $incomingItem->delete();
         return response()->json([
             'message' => 'success delete item-in',
         ]);

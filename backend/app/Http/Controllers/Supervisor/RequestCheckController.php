@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\RequestItem;
 use Illuminate\Http\Request;
 
+/**
+ * @group Supervisor - Request Check
+ *
+ * API endpoints for request check
+ */
 class RequestCheckController extends Controller
 {
     public function __construct()

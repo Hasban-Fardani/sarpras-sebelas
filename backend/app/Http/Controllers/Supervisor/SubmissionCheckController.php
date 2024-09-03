@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\SubmissionItem;
 use Illuminate\Http\Request;
 
+/**
+ * @group Supervisor - Submission Check
+ *
+ * API endpoints for submission check
+ */
 class SubmissionCheckController extends Controller
 {
     public function __construct()

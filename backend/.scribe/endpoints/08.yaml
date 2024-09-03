@@ -1,0 +1,274 @@
+name: 'Supplier Management'
+description: |-
+
+  API endpoints for managing suppliers
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: supplier
+    metadata:
+      groupName: 'Supplier Management'
+      groupDescription: |-
+
+        API endpoints for managing suppliers
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: supplier
+    metadata:
+      groupName: 'Supplier Management'
+      groupDescription: |-
+
+        API endpoints for managing suppliers
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: validation.max.
+        required: true
+        example: duahfyknyn
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      address:
+        name: address
+        description: validation.max.
+        required: false
+        example: bmmgnfolegbbqovojekqxv
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone:
+        name: phone
+        description: validation.max.
+        required: false
+        example: uwfgj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: duahfyknyn
+      address: bmmgnfolegbbqovojekqxv
+      phone: uwfgj
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'supplier/{id}'
+    metadata:
+      groupName: 'Supplier Management'
+      groupDescription: |-
+
+        API endpoints for managing suppliers
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the supplier.'
+        required: true
+        example: S0001
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: S0001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'supplier/{id}'
+    metadata:
+      groupName: 'Supplier Management'
+      groupDescription: |-
+
+        API endpoints for managing suppliers
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the supplier.'
+        required: true
+        example: S0001
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: S0001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: validation.max.
+        required: true
+        example: ilyvkhrhwy
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      address:
+        name: address
+        description: validation.max.
+        required: false
+        example: ujsiskhrigeealbcwlrcwyafg
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone:
+        name: phone
+        description: validation.max.
+        required: false
+        example: fxkejjxdcepcwnoslyamvxnfv
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: ilyvkhrhwy
+      address: ujsiskhrigeealbcwlrcwyafg
+      phone: fxkejjxdcepcwnoslyamvxnfv
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'supplier/{id}'
+    metadata:
+      groupName: 'Supplier Management'
+      groupDescription: |-
+
+        API endpoints for managing suppliers
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the supplier.'
+        required: true
+        example: S0001
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: S0001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

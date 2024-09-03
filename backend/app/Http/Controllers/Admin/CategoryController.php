@@ -7,6 +7,11 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group Category Management
+ *
+ * API endpoints for managing categories
+ */
 class CategoryController extends Controller
 {
     /**
@@ -54,7 +59,7 @@ class CategoryController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'message' => 'invalid fields',
-                'errors' => $validator->errors() 
+                'errors' => $validator->errors()
             ], 422);
         }
 
@@ -95,7 +100,7 @@ class CategoryController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'message' => 'invalid fields',
-                'errors' => $validator->errors() 
+                'errors' => $validator->errors()
             ], 422);
         }
 

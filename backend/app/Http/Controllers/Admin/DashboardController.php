@@ -11,6 +11,11 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * @group Admin Dashboard
+ *
+ * API endpoints for admin dashboard
+ */
 class DashboardController extends Controller
 {
     public function getCounts()
