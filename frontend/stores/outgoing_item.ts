@@ -1,10 +1,10 @@
 import { defineStore } from "pinia";
 import { useApiUrl } from "~/composables/url";
-import type { Item } from "~/types/item";
+import type { OutgoingItem } from "~/types/outgoing_items";
 import type { PaginatedResponse } from "~/types/pagination";
 
-export const useItemStore = defineStore('item', () => {
-    const data = ref<Item[]>([])
+export const useOutgoingItemStore = defineStore('itemRequest', () => {
+    const data = ref<OutgoingItem[]>([])
     const onLoading = ref(false)
     const error = ref()
 
@@ -17,7 +17,7 @@ export const useItemStore = defineStore('item', () => {
 
     async function fetch() {
         const url = useApiUrl(
-            '/item', 
+            '/outgoing-item', 
             page.value, perPage.value, search.value, 
             sortBy.value.map(s => s.toLowerCase()), 
             sortDir.value.map(s => s.toLowerCase())
@@ -25,7 +25,7 @@ export const useItemStore = defineStore('item', () => {
 
         onLoading.value = true
         try {
-            const { data: dataReponse } = await useFetch<PaginatedResponse<Item>>(url)
+            const { data: dataReponse } = await useFetch<PaginatedResponse<OutgoingItem>>(url)
             data.value = dataReponse.value?.data ?? []
         } catch (e) {
             error.value = "Something went wrong"
