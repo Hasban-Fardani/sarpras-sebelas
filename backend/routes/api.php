@@ -34,8 +34,8 @@ Route::get('/public/{path}', FileController::class)->where('path', '.*');
 Route::prefix('/auth')->group(function () {
     Route::post('/login', LoginController::class);
     Route::middleware('auth:sanctum')->post('/logout', LogoutController::class);
-    Route::get('/check', function () {
-        return auth()->check();
+    Route::get('/user', function () {
+        return auth()->user();
     })->middleware('auth:sanctum');
 });
 
@@ -48,9 +48,10 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/stats/item', [DashboardController::class, 'getStatsItem']);
     });
 
-
-    Route::apiResource('users', UsersController::class);
+    Route::post('/employee/{employee}/assign', [EmployeeController::class, 'assign']);
+    Route::post('/employee/{employee}/unassign', [EmployeeController::class, 'unassign']);
     Route::apiResource('employees', EmployeeController::class);
+    Route::apiResource('users', UsersController::class);
 
     Route::apiResource('category', CategoryController::class);
 

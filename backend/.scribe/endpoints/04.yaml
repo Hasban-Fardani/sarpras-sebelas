@@ -1,17 +1,142 @@
-name: 'User Management'
+name: 'Employee Management'
 description: |-
 
-  API endpoints for managing users
+  API endpoints for managing employees
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: users
+      - POST
+    uri: 'employee/{employee_id}/assign'
     metadata:
-      groupName: 'User Management'
+      groupName: 'Employee Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing employees
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Make user account from employee'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      employee_id:
+        name: employee_id
+        description: 'The ID of the employee.'
+        required: true
+        example: 197412311994031001
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      employee_id: 197412311994031001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: ''
+        required: true
+        example: rem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      role:
+        name: role
+        description: ''
+        required: true
+        example: unit
+        type: string
+        enumValues:
+          - admin
+          - pengawas
+          - unit
+        exampleWasSpecified: false
+        custom: []
+      username:
+        name: username
+        description: ''
+        required: true
+        example: pariatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      password: rem
+      role: unit
+      username: pariatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'employee/{employee_id}/unassign'
+    metadata:
+      groupName: 'Employee Management'
+      groupDescription: |-
+
+        API endpoints for managing employees
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete user account'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      employee_id:
+        name: employee_id
+        description: 'The ID of the employee.'
+        required: true
+        example: 197412311994031001
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      employee_id: 197412311994031001
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: employees
+    metadata:
+      groupName: 'Employee Management'
+      groupDescription: |-
+
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
@@ -32,7 +157,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get users","current_page":1,"data":[{"id":197412311994031001,"username":"pengawas","role":"pengawas","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","employee":{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":197412311994031005,"username":"zim_zim","role":"unit","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","employee":{"id":197412311994031005,"name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":197806311994031003,"username":"admin","role":"admin","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","employee":{"id":197806311994031003,"name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":198212311994031004,"username":"ani_nuraeni","role":"unit","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z","employee":{"id":198212311994031004,"name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}],"first_page_url":"http:\/\/localhost:8000\/users?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/users?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/users?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/users","per_page":10,"prev_page_url":null,"to":4,"total":4}'
+        content: '{"message":"success get all employees","current_page":1,"data":[{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197412311994031005,"name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197806311994031003,"name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198012311994031002,"name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198212311994031004,"name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/employees","per_page":10,"prev_page_url":null,"to":5,"total":5}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -51,12 +176,12 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: users
+    uri: employees
     metadata:
-      groupName: 'User Management'
+      groupName: 'Employee Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
@@ -72,70 +197,57 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: validation.max.
-        required: true
-        example: xirlqrcxpzdzlhzowxwxcud
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
       id:
         name: id
         description: validation.max.
-        required: true
-        example: ff
+        required: false
+        example: tztlefllgszx
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      username:
-        name: username
-        description: validation.max.
+      name:
+        name: name
+        description: ''
         required: true
-        example: zlmglrygarvsqdufuhtgb
+        example: tempore
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      position:
+        name: position
+        description: ''
+        required: true
+        example: eveniet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: blanditiis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       email:
         name: email
-        description: 'validation.email validation.max.'
-        required: true
-        example: rowena.schinner@example.org
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      password:
-        name: password
-        description: validation.min.
-        required: true
-        example: 'z_qW6lU/UN;yi$i&h'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      role:
-        name: role
         description: ''
         required: true
-        example: unit
+        example: rogahn.eliezer@example.net
         type: string
-        enumValues:
-          - admin
-          - unit
-          - pengawas
+        enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: xirlqrcxpzdzlhzowxwxcud
-      id: ff
-      username: zlmglrygarvsqdufuhtgb
-      email: rowena.schinner@example.org
-      password: 'z_qW6lU/UN;yi$i&h'
-      role: unit
+      id: tztlefllgszx
+      name: tempore
+      position: eveniet
+      phone: blanditiis
+      email: rogahn.eliezer@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -150,12 +262,12 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'users/{username}'
+    uri: 'employees/{id}'
     metadata:
-      groupName: 'User Management'
+      groupName: 'Employee Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Display the specified resource.'
@@ -167,17 +279,17 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      username:
-        name: username
-        description: ''
+      id:
+        name: id
+        description: 'The ID of the employee.'
         required: true
-        example: pengawas
-        type: string
+        example: 197412311994031001
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      username: pengawas
+      id: 197412311994031001
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -186,7 +298,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get user","data":{"id":197412311994031001,"username":"pengawas","role":"pengawas","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}}'
+        content: '{"message":"success get employee","data":{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -206,12 +318,12 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'users/{username}'
+    uri: 'employees/{id}'
     metadata:
-      groupName: 'User Management'
+      groupName: 'Employee Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Update the specified resource in storage.'
@@ -223,84 +335,71 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      username:
-        name: username
-        description: ''
+      id:
+        name: id
+        description: 'The ID of the employee.'
         required: true
-        example: pengawas
-        type: string
+        example: 197412311994031001
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      username: pengawas
+      id: 197412311994031001
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: validation.max.
-        required: true
-        example: lw
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
       id:
         name: id
         description: validation.max.
-        required: true
-        example: qevpwfbqsqsooziwryyua
+        required: false
+        example: jaevrtnudidmolpycni
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      username:
-        name: username
-        description: validation.max.
+      name:
+        name: name
+        description: ''
         required: true
-        example: sy
+        example: alias
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      position:
+        name: position
+        description: ''
+        required: true
+        example: officiis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: assumenda
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       email:
         name: email
-        description: 'validation.email validation.max.'
-        required: true
-        example: purdy.melany@example.net
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      password:
-        name: password
-        description: validation.min.
-        required: true
-        example: Py$e!<yJ
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      role:
-        name: role
         description: ''
         required: true
-        example: admin
+        example: alarkin@example.net
         type: string
-        enumValues:
-          - admin
-          - unit
-          - pengawas
+        enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: lw
-      id: qevpwfbqsqsooziwryyua
-      username: sy
-      email: purdy.melany@example.net
-      password: Py$e!<yJ
-      role: admin
+      id: jaevrtnudidmolpycni
+      name: alias
+      position: officiis
+      phone: assumenda
+      email: alarkin@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -315,12 +414,12 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'users/{username}'
+    uri: 'employees/{id}'
     metadata:
-      groupName: 'User Management'
+      groupName: 'Employee Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
@@ -332,17 +431,17 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      username:
-        name: username
-        description: ''
+      id:
+        name: id
+        description: 'The ID of the employee.'
         required: true
-        example: pengawas
-        type: string
+        example: 197412311994031001
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      username: pengawas
+      id: 197412311994031001
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

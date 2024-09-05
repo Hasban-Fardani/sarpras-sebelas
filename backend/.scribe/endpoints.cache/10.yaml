@@ -638,7 +638,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 19
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -647,14 +647,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 8
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 19
-      qty: 8
+      item_id: 1
+      qty: 15
     fileParameters: []
     responses: []
     responseFields: []
@@ -715,7 +715,7 @@ endpoints:
         name: item_id
         description: ''
         required: false
-        example: 17
+        example: 18
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -724,14 +724,14 @@ endpoints:
         name: qty
         description: ''
         required: false
-        example: 17
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 17
-      qty: 17
+      item_id: 18
+      qty: 20
     fileParameters: []
     responses: []
     responseFields: []

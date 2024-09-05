@@ -122,7 +122,13 @@
                     <a href="#employee-management">Employee Management</a>
                 </li>
                                     <ul id="tocify-subheader-employee-management" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="employee-management-GETemployees">
+                                                    <li class="tocify-item level-2" data-unique="employee-management-POSTemployee--employee_id--assign">
+                                <a href="#employee-management-POSTemployee--employee_id--assign">Make user account from employee</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="employee-management-POSTemployee--employee_id--unassign">
+                                <a href="#employee-management-POSTemployee--employee_id--unassign">Delete user account</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="employee-management-GETemployees">
                                 <a href="#employee-management-GETemployees">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="employee-management-POSTemployees">
@@ -136,22 +142,6 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="employee-management-DELETEemployees--id-">
                                 <a href="#employee-management-DELETEemployees--id-">Remove the specified resource from storage.</a>
-                            </li>
-                                                                        </ul>
-                            </ul>
-                    <ul id="tocify-header-endpoints" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
-                </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETsanctum-csrf-cookie">
-                                <a href="#endpoints-GETsanctum-csrf-cookie">Return an empty response simply to trigger the storage of the CSRF cookie in the browser.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GET-">
-                                <a href="#endpoints-GET-">GET /</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETauth-check">
-                                <a href="#endpoints-GETauth-check">GET auth/check</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -225,6 +215,22 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="item-management-DELETEitem--id-">
                                 <a href="#item-management-DELETEitem--id-">Remove the specified item from storage.</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-other-endpoints" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="other-endpoints">
+                    <a href="#other-endpoints">Other Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-other-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="other-endpoints-GETsanctum-csrf-cookie">
+                                <a href="#other-endpoints-GETsanctum-csrf-cookie">Return an empty response simply to trigger the storage of the CSRF cookie in the browser.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="other-endpoints-GET-">
+                                <a href="#other-endpoints-GET-">GET /</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="other-endpoints-GETauth-user">
+                                <a href="#other-endpoints-GETauth-user">GET auth/user</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -421,7 +427,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: September 3, 2024</li>
+        <li>Last updated: September 4, 2024</li>
     </ul>
 </div>
 
@@ -1876,7 +1882,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"qbx-cpo_g\"
+    \"name\": \"zaz-bda_y\"
 }"
 </code></pre></div>
 
@@ -1893,7 +1899,7 @@ const headers = {
 };
 
 let body = {
-    "name": "qbx-cpo_g"
+    "name": "zaz-bda_y"
 };
 
 fetch(url, {
@@ -1993,10 +1999,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTcategory"
-               value="qbx-cpo_g"
+               value="zaz-bda_y"
                data-component="body">
     <br>
-<p>Must contain only letters, numbers, dashes and underscores. Example: <code>qbx-cpo_g</code></p>
+<p>Must contain only letters, numbers, dashes and underscores. Example: <code>zaz-bda_y</code></p>
         </div>
         </form>
 
@@ -2175,7 +2181,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"possimus\"
+    \"name\": \"enim\"
 }"
 </code></pre></div>
 
@@ -2192,7 +2198,7 @@ const headers = {
 };
 
 let body = {
-    "name": "possimus"
+    "name": "enim"
 };
 
 fetch(url, {
@@ -2308,10 +2314,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTcategory--id-"
-               value="possimus"
+               value="enim"
                data-component="body">
     <br>
-<p>Example: <code>possimus</code></p>
+<p>Example: <code>enim</code></p>
         </div>
         </form>
 
@@ -2453,7 +2459,324 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     <p>API endpoints for managing employees</p>
 
-                                <h2 id="employee-management-GETemployees">Display a listing of the resource.</h2>
+                                <h2 id="employee-management-POSTemployee--employee_id--assign">Make user account from employee</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTemployee--employee_id--assign">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/employee/197412311994031001/assign" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"password\": \"rem\",
+    \"role\": \"unit\",
+    \"username\": \"pariatur\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/employee/197412311994031001/assign"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "password": "rem",
+    "role": "unit",
+    "username": "pariatur"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTemployee--employee_id--assign">
+</span>
+<span id="execution-results-POSTemployee--employee_id--assign" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTemployee--employee_id--assign"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTemployee--employee_id--assign"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTemployee--employee_id--assign" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTemployee--employee_id--assign">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTemployee--employee_id--assign" data-method="POST"
+      data-path="employee/{employee_id}/assign"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTemployee--employee_id--assign', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTemployee--employee_id--assign"
+                    onclick="tryItOut('POSTemployee--employee_id--assign');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTemployee--employee_id--assign"
+                    onclick="cancelTryOut('POSTemployee--employee_id--assign');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTemployee--employee_id--assign"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>employee/{employee_id}/assign</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTemployee--employee_id--assign"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTemployee--employee_id--assign"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTemployee--employee_id--assign"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>employee_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="employee_id"                data-endpoint="POSTemployee--employee_id--assign"
+               value="197412311994031001"
+               data-component="url">
+    <br>
+<p>The ID of the employee. Example: <code>197412311994031001</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTemployee--employee_id--assign"
+               value="rem"
+               data-component="body">
+    <br>
+<p>Example: <code>rem</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>role</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="role"                data-endpoint="POSTemployee--employee_id--assign"
+               value="unit"
+               data-component="body">
+    <br>
+<p>Example: <code>unit</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>admin</code></li> <li><code>pengawas</code></li> <li><code>unit</code></li></ul>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>username</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="username"                data-endpoint="POSTemployee--employee_id--assign"
+               value="pariatur"
+               data-component="body">
+    <br>
+<p>Example: <code>pariatur</code></p>
+        </div>
+        </form>
+
+                    <h2 id="employee-management-POSTemployee--employee_id--unassign">Delete user account</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTemployee--employee_id--unassign">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/employee/197412311994031001/unassign" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/employee/197412311994031001/unassign"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTemployee--employee_id--unassign">
+</span>
+<span id="execution-results-POSTemployee--employee_id--unassign" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTemployee--employee_id--unassign"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTemployee--employee_id--unassign"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTemployee--employee_id--unassign" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTemployee--employee_id--unassign">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTemployee--employee_id--unassign" data-method="POST"
+      data-path="employee/{employee_id}/unassign"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTemployee--employee_id--unassign', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTemployee--employee_id--unassign"
+                    onclick="tryItOut('POSTemployee--employee_id--unassign');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTemployee--employee_id--unassign"
+                    onclick="cancelTryOut('POSTemployee--employee_id--unassign');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTemployee--employee_id--unassign"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>employee/{employee_id}/unassign</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTemployee--employee_id--unassign"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTemployee--employee_id--unassign"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTemployee--employee_id--unassign"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>employee_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="employee_id"                data-endpoint="POSTemployee--employee_id--unassign"
+               value="197412311994031001"
+               data-component="url">
+    <br>
+<p>The ID of the employee. Example: <code>197412311994031001</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="employee-management-GETemployees">Display a listing of the resource.</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2690,11 +3013,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"id\": \"giocoaotkcdqudlexon\",
-    \"name\": \"optio\",
-    \"position\": \"dolorum\",
-    \"phone\": \"inventore\",
-    \"email\": \"walter.graham@example.org\"
+    \"id\": \"tztlefllgszx\",
+    \"name\": \"tempore\",
+    \"position\": \"eveniet\",
+    \"phone\": \"blanditiis\",
+    \"email\": \"rogahn.eliezer@example.net\"
 }"
 </code></pre></div>
 
@@ -2711,11 +3034,11 @@ const headers = {
 };
 
 let body = {
-    "id": "giocoaotkcdqudlexon",
-    "name": "optio",
-    "position": "dolorum",
-    "phone": "inventore",
-    "email": "walter.graham@example.org"
+    "id": "tztlefllgszx",
+    "name": "tempore",
+    "position": "eveniet",
+    "phone": "blanditiis",
+    "email": "rogahn.eliezer@example.net"
 };
 
 fetch(url, {
@@ -2815,10 +3138,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="POSTemployees"
-               value="giocoaotkcdqudlexon"
+               value="tztlefllgszx"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>giocoaotkcdqudlexon</code></p>
+<p>validation.max. Example: <code>tztlefllgszx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -2826,10 +3149,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTemployees"
-               value="optio"
+               value="tempore"
                data-component="body">
     <br>
-<p>Example: <code>optio</code></p>
+<p>Example: <code>tempore</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>position</code></b>&nbsp;&nbsp;
@@ -2837,10 +3160,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="position"                data-endpoint="POSTemployees"
-               value="dolorum"
+               value="eveniet"
                data-component="body">
     <br>
-<p>Example: <code>dolorum</code></p>
+<p>Example: <code>eveniet</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -2848,10 +3171,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTemployees"
-               value="inventore"
+               value="blanditiis"
                data-component="body">
     <br>
-<p>Example: <code>inventore</code></p>
+<p>Example: <code>blanditiis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -2859,10 +3182,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTemployees"
-               value="walter.graham@example.org"
+               value="rogahn.eliezer@example.net"
                data-component="body">
     <br>
-<p>Example: <code>walter.graham@example.org</code></p>
+<p>Example: <code>rogahn.eliezer@example.net</code></p>
         </div>
         </form>
 
@@ -3045,11 +3368,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"id\": \"uys\",
-    \"name\": \"at\",
-    \"position\": \"molestias\",
-    \"phone\": \"odit\",
-    \"email\": \"konopelski.marie@example.net\"
+    \"id\": \"jaevrtnudidmolpycni\",
+    \"name\": \"alias\",
+    \"position\": \"officiis\",
+    \"phone\": \"assumenda\",
+    \"email\": \"alarkin@example.net\"
 }"
 </code></pre></div>
 
@@ -3066,11 +3389,11 @@ const headers = {
 };
 
 let body = {
-    "id": "uys",
-    "name": "at",
-    "position": "molestias",
-    "phone": "odit",
-    "email": "konopelski.marie@example.net"
+    "id": "jaevrtnudidmolpycni",
+    "name": "alias",
+    "position": "officiis",
+    "phone": "assumenda",
+    "email": "alarkin@example.net"
 };
 
 fetch(url, {
@@ -3186,10 +3509,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTemployees--id-"
-               value="uys"
+               value="jaevrtnudidmolpycni"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>uys</code></p>
+<p>validation.max. Example: <code>jaevrtnudidmolpycni</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -3197,10 +3520,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTemployees--id-"
-               value="at"
+               value="alias"
                data-component="body">
     <br>
-<p>Example: <code>at</code></p>
+<p>Example: <code>alias</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>position</code></b>&nbsp;&nbsp;
@@ -3208,10 +3531,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="position"                data-endpoint="PUTemployees--id-"
-               value="molestias"
+               value="officiis"
                data-component="body">
     <br>
-<p>Example: <code>molestias</code></p>
+<p>Example: <code>officiis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -3219,10 +3542,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTemployees--id-"
-               value="odit"
+               value="assumenda"
                data-component="body">
     <br>
-<p>Example: <code>odit</code></p>
+<p>Example: <code>assumenda</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -3230,10 +3553,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTemployees--id-"
-               value="konopelski.marie@example.net"
+               value="alarkin@example.net"
                data-component="body">
     <br>
-<p>Example: <code>konopelski.marie@example.net</code></p>
+<p>Example: <code>alarkin@example.net</code></p>
         </div>
         </form>
 
@@ -3371,420 +3694,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                <h1 id="endpoints">Endpoints</h1>
-
-    
-
-                                <h2 id="endpoints-GETsanctum-csrf-cookie">Return an empty response simply to trigger the storage of the CSRF cookie in the browser.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-GETsanctum-csrf-cookie">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/sanctum/csrf-cookie" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/sanctum/csrf-cookie"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETsanctum-csrf-cookie">
-            <blockquote>
-            <p>Example response (204):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-vary: Origin
-set-cookie: XSRF-TOKEN=eyJpdiI6IklLT2hoaU15anNQbkNwcFl1VVpwUEE9PSIsInZhbHVlIjoiYVJFanZXUUdwaUowUEJxQTFBelNWam9MdktmL1A5Vy9iS2hMcVppaE5SdUt2OUs5bUZJOTFlY293K1V3N3JaemxGSVhqaFFLaFNUTzc0aDVFL2U2eHg0SDZEeVNmU21YODhLZHcrUmgzNVdvTnMxNGdGQ2hVN0JObUNramE5bDYiLCJtYWMiOiJiNjFmMmRkYjZjZWQwM2MwMzRhMTIzNTg3YTk3ODFmNjhhNzVmZTYwODQ1YTg4NmVjODA3ZTFiN2NhNmY0NmI4IiwidGFnIjoiIn0%3D; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Ik0xZFpsUHRZVURPZWJNVytabVczOUE9PSIsInZhbHVlIjoiUE94c3dzdGZJRlpFZ3lZNTlxaGxzdWJmam5KR1lOQmU4K1NXb3h0ZFc2bHQyMFJ0WU54cDg0N296RVlyN0RiWXpCUzlWNTlac3VWaUtvVFNTK254REp6cjMvbG4rWDlYSEhYZlY4L3ZSUUJGKzAzbHBJUDlHTDhQNEE4WVZvVnQiLCJtYWMiOiI3OGJiZjY0N2E3MDhhZmJmZjRjN2Y1ZjMyYjExZTdjYzZiZjk0NjZmOGY1NTg2ZjcyNzI5OGI5ZGYzZGFiZDllIiwidGFnIjoiIn0%3D; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; hrUzZSl4dq8zylzcRnILqsL307cQb3FR95pIkG8r=eyJpdiI6InZyWFViUjZMMFk1K2xmVk9nMmhJYmc9PSIsInZhbHVlIjoiU1FiOW9pbmFnajk3bHBIQXJOdEZGTU9JM2xwaEFGdEw4cVZqUEZFS3pUT3NYVnVycjh1STNoZm9FNVQybytHZzdXa3I1aE1hakQrT1lhNDAzMTI5RmsvQUlGME5rcWQwYlE4S3hWM3Rqc3BaUDRiZ2FaUTRZZGliSUxkS0tJRk55cGRxd2tMWGlnb2Fka0N6cHNXUFBvcDFpTUgySS95SUlWYml5Q2FpcmNGbTlPVDh2ZERxN3ovUVRHNFNWY1lOQ09yVC9wSUJVSlZqSDBrNWxLQ3BYeVR1S2J5aU51Wm1tSTVFZTY4UW9zVFQwcFdWcEJKSEdYZk5sWjFLM3RjUFp2RG84OTJ1QjYrOXV3MmtSaDZaMEQzMWFQb1ZVSG04dHcxSm5OTThuWW5FaW1RZk4xYlNkVjJYSms0TVpBcGgxak8wSElzU1UycjhrbkIrYTFLK20vM3ZwM2l3VmdxR3JyaFFYNHRad1FWa1ZTL2lTbnQ1Zi8vQTNPaVBQSnhLcTJIaDF5SDZ2dUxPWHkxZlVUaENTdz09IiwibWFjIjoiZGIxNWE2OTRlZDdhMDNhOTg0NWE1NjRkNGEwNjU3MTc3YzE4MDBiYWQ1ODE5NWVmYzQwNDUwZTM0ZmZkZmU4YiIsInRhZyI6IiJ9; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax
- </code></pre></details>         <pre>
-<code>Empty response</code>
- </pre>
-    </span>
-<span id="execution-results-GETsanctum-csrf-cookie" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETsanctum-csrf-cookie"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETsanctum-csrf-cookie"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETsanctum-csrf-cookie" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETsanctum-csrf-cookie">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETsanctum-csrf-cookie" data-method="GET"
-      data-path="sanctum/csrf-cookie"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETsanctum-csrf-cookie', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETsanctum-csrf-cookie"
-                    onclick="tryItOut('GETsanctum-csrf-cookie');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETsanctum-csrf-cookie"
-                    onclick="cancelTryOut('GETsanctum-csrf-cookie');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETsanctum-csrf-cookie"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>sanctum/csrf-cookie</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETsanctum-csrf-cookie"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETsanctum-csrf-cookie"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETsanctum-csrf-cookie"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GET-">GET /</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-GET-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GET-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-vary: Origin
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;hello, please visit /docs for documentation&quot;,
-    &quot;docs&quot;: &quot;http://localhost:8000/docs&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GET-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GET-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GET-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GET-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GET-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GET-" data-method="GET"
-      data-path="/"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GET-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GET-"
-                    onclick="tryItOut('GET-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GET-"
-                    onclick="cancelTryOut('GET-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GET-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>/</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GET-"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GET-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GET-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETauth-check">GET auth/check</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-GETauth-check">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/auth/check" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/auth/check"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETauth-check">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">content-type: text/html; charset=UTF-8
-cache-control: no-cache, private
-vary: Origin
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">1</code>
- </pre>
-    </span>
-<span id="execution-results-GETauth-check" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETauth-check"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETauth-check"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETauth-check" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETauth-check">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETauth-check" data-method="GET"
-      data-path="auth/check"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETauth-check', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETauth-check"
-                    onclick="tryItOut('GETauth-check');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETauth-check"
-                    onclick="cancelTryOut('GETauth-check');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETauth-check"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>auth/check</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETauth-check"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETauth-check"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETauth-check"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
                 <h1 id="file-management">File Management</h1>
 
     <p>API endpoints for get files from R2</p>
@@ -3803,7 +3712,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/public/&amp;#039;$cjA" \
+    --get "http://localhost:8000/public/" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3811,7 +3720,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/public/&amp;#039;$cjA"
+    "http://localhost:8000/public/"
 );
 
 const headers = {
@@ -3932,10 +3841,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="path"                data-endpoint="GETpublic--path-"
-               value="'$cjA"
+               value=""
                data-component="url">
     <br>
-<p>Example: <code>'$cjA</code></p>
+
             </div>
                     </form>
 
@@ -3953,7 +3862,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/private/=)[" \
+    --get "http://localhost:8000/private/" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3961,7 +3870,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/private/=)["
+    "http://localhost:8000/private/"
 );
 
 const headers = {
@@ -4082,10 +3991,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="path"                data-endpoint="GETprivate--path-"
-               value="=)["
+               value=""
                data-component="url">
     <br>
-<p>Example: <code>=)[</code></p>
+
             </div>
                     </form>
 
@@ -4799,8 +4708,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 19,
-    \"qty\": 8
+    \"item_id\": 1,
+    \"qty\": 15
 }"
 </code></pre></div>
 
@@ -4817,8 +4726,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": 19,
-    "qty": 8
+    "item_id": 1,
+    "qty": 15
 };
 
 fetch(url, {
@@ -4930,10 +4839,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="POSTincoming-item--incoming_item_id--detail"
-               value="19"
+               value="1"
                data-component="body">
     <br>
-<p>Example: <code>19</code></p>
+<p>Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -4941,10 +4850,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="POSTincoming-item--incoming_item_id--detail"
-               value="8"
+               value="15"
                data-component="body">
     <br>
-<p>Example: <code>8</code></p>
+<p>Example: <code>15</code></p>
         </div>
         </form>
 
@@ -4967,8 +4876,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 17,
-    \"qty\": 17
+    \"item_id\": 18,
+    \"qty\": 20
 }"
 </code></pre></div>
 
@@ -4985,8 +4894,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": 17,
-    "qty": 17
+    "item_id": 18,
+    "qty": 20
 };
 
 fetch(url, {
@@ -5113,10 +5022,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="PUTincoming-item--incoming_item_id--detail--id-"
-               value="17"
+               value="18"
                data-component="body">
     <br>
-<p>Example: <code>17</code></p>
+<p>Example: <code>18</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -5124,10 +5033,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="PUTincoming-item--incoming_item_id--detail--id-"
-               value="17"
+               value="20"
                data-component="body">
     <br>
-<p>Example: <code>17</code></p>
+<p>Example: <code>20</code></p>
         </div>
         </form>
 
@@ -5552,11 +5461,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"supplier_id\": \"soluta\",
+    \"supplier_id\": \"consequuntur\",
     \"items\": [
         {
-            \"item_id\": \"accusamus\",
-            \"qty\": 8
+            \"item_id\": \"est\",
+            \"qty\": 18
         }
     ]
 }"
@@ -5575,11 +5484,11 @@ const headers = {
 };
 
 let body = {
-    "supplier_id": "soluta",
+    "supplier_id": "consequuntur",
     "items": [
         {
-            "item_id": "accusamus",
-            "qty": 8
+            "item_id": "est",
+            "qty": 18
         }
     ]
 };
@@ -5681,10 +5590,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="supplier_id"                data-endpoint="POSTincoming-item"
-               value="soluta"
+               value="consequuntur"
                data-component="body">
     <br>
-<p>Example: <code>soluta</code></p>
+<p>Example: <code>consequuntur</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
         <details>
@@ -5701,10 +5610,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="items.0.item_id"                data-endpoint="POSTincoming-item"
-               value="accusamus"
+               value="est"
                data-component="body">
     <br>
-<p>Example: <code>accusamus</code></p>
+<p>Example: <code>est</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -5712,10 +5621,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.qty"                data-endpoint="POSTincoming-item"
-               value="8"
+               value="18"
                data-component="body">
     <br>
-<p>Example: <code>8</code></p>
+<p>Example: <code>18</code></p>
                     </div>
                                     </details>
         </div>
@@ -6840,13 +6749,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=oxnliklqmasajqojsrbgitzy"\
-    --form "unit=jwlqyhodpblfzm"\
-    --form "stock=6"\
-    --form "min_stock=12"\
-    --form "category_id=occaecati"\
-    --form "price=6"\
-    --form "image=@/tmp/phpM4c9jL" </code></pre></div>
+    --form "name=vigjvdldxf"\
+    --form "unit=er"\
+    --form "stock=12"\
+    --form "min_stock=13"\
+    --form "category_id=omnis"\
+    --form "price=5"\
+    --form "image=@/tmp/phpRBQ9HQ" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6861,12 +6770,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'oxnliklqmasajqojsrbgitzy');
-body.append('unit', 'jwlqyhodpblfzm');
-body.append('stock', '6');
-body.append('min_stock', '12');
-body.append('category_id', 'occaecati');
-body.append('price', '6');
+body.append('name', 'vigjvdldxf');
+body.append('unit', 'er');
+body.append('stock', '12');
+body.append('min_stock', '13');
+body.append('category_id', 'omnis');
+body.append('price', '5');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -6969,7 +6878,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Example: <code>/tmp/phpM4c9jL</code></p>
+<p>Must be a file. Example: <code>/tmp/phpRBQ9HQ</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -6977,10 +6886,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTitem"
-               value="oxnliklqmasajqojsrbgitzy"
+               value="vigjvdldxf"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>oxnliklqmasajqojsrbgitzy</code></p>
+<p>validation.max. Example: <code>vigjvdldxf</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit</code></b>&nbsp;&nbsp;
@@ -6988,10 +6897,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="unit"                data-endpoint="POSTitem"
-               value="jwlqyhodpblfzm"
+               value="er"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>jwlqyhodpblfzm</code></p>
+<p>validation.max. Example: <code>er</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>stock</code></b>&nbsp;&nbsp;
@@ -6999,10 +6908,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="stock"                data-endpoint="POSTitem"
-               value="6"
+               value="12"
                data-component="body">
     <br>
-<p>Example: <code>6</code></p>
+<p>Example: <code>12</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>min_stock</code></b>&nbsp;&nbsp;
@@ -7010,10 +6919,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="min_stock"                data-endpoint="POSTitem"
-               value="12"
+               value="13"
                data-component="body">
     <br>
-<p>Example: <code>12</code></p>
+<p>Example: <code>13</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category_id</code></b>&nbsp;&nbsp;
@@ -7021,10 +6930,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="category_id"                data-endpoint="POSTitem"
-               value="occaecati"
+               value="omnis"
                data-component="body">
     <br>
-<p>Example: <code>occaecati</code></p>
+<p>Example: <code>omnis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -7032,10 +6941,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="price"                data-endpoint="POSTitem"
-               value="6"
+               value="5"
                data-component="body">
     <br>
-<p>Example: <code>6</code></p>
+<p>Example: <code>5</code></p>
         </div>
         </form>
 
@@ -7219,13 +7128,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=fajni"\
-    --form "unit=resbomvjxvbcjvyw"\
+    --form "name=jrdpwjcvbnhpgev"\
+    --form "unit=d"\
     --form "stock=1"\
-    --form "min_stock=19"\
-    --form "category_id=qui"\
-    --form "price=14"\
-    --form "image=@/tmp/phpXxcRkA" </code></pre></div>
+    --form "min_stock=18"\
+    --form "category_id=sint"\
+    --form "price=18"\
+    --form "image=@/tmp/phpjXBACx" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7240,12 +7149,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'fajni');
-body.append('unit', 'resbomvjxvbcjvyw');
+body.append('name', 'jrdpwjcvbnhpgev');
+body.append('unit', 'd');
 body.append('stock', '1');
-body.append('min_stock', '19');
-body.append('category_id', 'qui');
-body.append('price', '14');
+body.append('min_stock', '18');
+body.append('category_id', 'sint');
+body.append('price', '18');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -7364,7 +7273,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Example: <code>/tmp/phpXxcRkA</code></p>
+<p>Must be a file. Example: <code>/tmp/phpjXBACx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -7372,10 +7281,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTitem--id-"
-               value="fajni"
+               value="jrdpwjcvbnhpgev"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>fajni</code></p>
+<p>validation.max. Example: <code>jrdpwjcvbnhpgev</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit</code></b>&nbsp;&nbsp;
@@ -7383,10 +7292,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="unit"                data-endpoint="PUTitem--id-"
-               value="resbomvjxvbcjvyw"
+               value="d"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>resbomvjxvbcjvyw</code></p>
+<p>validation.max. Example: <code>d</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>stock</code></b>&nbsp;&nbsp;
@@ -7405,10 +7314,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="min_stock"                data-endpoint="PUTitem--id-"
-               value="19"
+               value="18"
                data-component="body">
     <br>
-<p>Example: <code>19</code></p>
+<p>Example: <code>18</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category_id</code></b>&nbsp;&nbsp;
@@ -7416,10 +7325,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="category_id"                data-endpoint="PUTitem--id-"
-               value="qui"
+               value="sint"
                data-component="body">
     <br>
-<p>Example: <code>qui</code></p>
+<p>Example: <code>sint</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -7427,10 +7336,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="price"                data-endpoint="PUTitem--id-"
-               value="14"
+               value="18"
                data-component="body">
     <br>
-<p>Example: <code>14</code></p>
+<p>Example: <code>18</code></p>
         </div>
         </form>
 
@@ -7567,6 +7476,426 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>The ID of the item. Example: <code>I-001</code></p>
             </div>
                     </form>
+
+                <h1 id="other-endpoints">Other Endpoints</h1>
+
+    
+
+                                <h2 id="other-endpoints-GETsanctum-csrf-cookie">Return an empty response simply to trigger the storage of the CSRF cookie in the browser.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETsanctum-csrf-cookie">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/sanctum/csrf-cookie" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/sanctum/csrf-cookie"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETsanctum-csrf-cookie">
+            <blockquote>
+            <p>Example response (204):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+vary: Origin
+set-cookie: XSRF-TOKEN=eyJpdiI6ImRpSGUzZHhrS01ENUsvaUpTcXlabUE9PSIsInZhbHVlIjoiR0lXS3RNRmkvaXZNNTNLdnRMK3JPL3A2OThmWGJzT1hwejhzUUtvdWpaaFdUbnVDOUEyUEhOcmsreDdTcnlPYWhnS1N3RmJIT3dTN29sbWVCL3V3Ym5qQ1dROFowTGRkOVBBdGdjSkthVWhFdjYvTmJDZURqOFI5amRJMzdOWTgiLCJtYWMiOiI2ZWI5NjZmMWUyZTE0YzczYjk0MDhmNmE3MmYxZjU3MGJhZmUxNzBjMmYzZWE5NDQ3ZTU2ZmQ3OGI1YmJmOTc4IiwidGFnIjoiIn0%3D; expires=Wed, 04 Sep 2024 09:58:30 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InhHeUllMlJ2VVhHaWVJYWMzZ1dKdFE9PSIsInZhbHVlIjoiRFJoL1VnNG1RUEtFOFEwdllhbVVEd3ZRTUdDQ0VJeXkzZXYvVXpmRjdSUjYzcnIyc25sdWtDWm9TYUh0MkRBbUc4TEVDNVRFWXpMa3hYL1ArRllNZWlwWmhQMFNYNGNXNjdyeXJ2MnNocmR5bzFQcWV4K0FjVk9kQkZneUZCM04iLCJtYWMiOiI5NWRiYWE3NGE5MDc4MGY0MzEwZDRhNmMzODUzODBiM2Q4NTRkZmJlMzNlYTE2NjU3NTE3ZGU0OWE3NDk5NWZmIiwidGFnIjoiIn0%3D; expires=Wed, 04 Sep 2024 09:58:30 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; LD0Co20g5w2fhDlG1L90uB7VQhHbFdIvmCBxMgBt=eyJpdiI6IkxyQ3NmOFBDU0VyVHRSdEVNeUhCYWc9PSIsInZhbHVlIjoibDFDZXhQbENvd05KakJIa1FHQ2ZqRjBhVTUxUVh0ajhvR2ZZbU1zVEpYRlFva21tb1kyMVM5R3ZIanhwRmtrcmZuWXhUaU9Nck00dEVjZUs1VWVpWm04T0haSlc3NTFhMFJUc2R5cVlNV1F3bGRLbUtib2xySVExaXVQcUFSNTdFQzV4WkNOMm5iZEhhdWlkS0F3MzlMZHdCQW9xUC9xVndUTTVTRUJRMldnVWRia3RHcFNEYVcwVHZaL1cxaWlkdithUWw2UkIvRmZHdzl6UnpaRzE1TzRlbUJEUUY2bEpuUmFsYWtibFpFdDFGNE9FTWNjV0FycGIwcUlidUd0N3dhMzFmMUlrcWFnVHgraTU5YzQwcjFKZFdSOVJHNnU4UjE1T243eDBvTlByL0pHU2FHNFpMS25PZXJ4M3ljUHJ2UUdmMjNqa21OWlNtdG9acjM0UCtLcENPZmM4L3MxdWg1K0MvTHJpVWwvNXQvZTEvL3RLWGhsNUFhOG1EbDlOenVqb0VDRk9YM3dQREtHRHdteE50dz09IiwibWFjIjoiZDMzMTc5MjE2NDE3NjBhNTU5YTA4NTMzYThiNzc0OWIwODljZjFhYzVjMjZiYjg4Njk4NDU4Y2QyYzc5ODlkNSIsInRhZyI6IiJ9; expires=Wed, 04 Sep 2024 09:58:30 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax
+ </code></pre></details>         <pre>
+<code>Empty response</code>
+ </pre>
+    </span>
+<span id="execution-results-GETsanctum-csrf-cookie" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETsanctum-csrf-cookie"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETsanctum-csrf-cookie"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETsanctum-csrf-cookie" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETsanctum-csrf-cookie">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETsanctum-csrf-cookie" data-method="GET"
+      data-path="sanctum/csrf-cookie"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETsanctum-csrf-cookie', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETsanctum-csrf-cookie"
+                    onclick="tryItOut('GETsanctum-csrf-cookie');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETsanctum-csrf-cookie"
+                    onclick="cancelTryOut('GETsanctum-csrf-cookie');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETsanctum-csrf-cookie"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>sanctum/csrf-cookie</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETsanctum-csrf-cookie"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETsanctum-csrf-cookie"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETsanctum-csrf-cookie"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="other-endpoints-GET-">GET /</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GET-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GET-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;hello, please visit /docs for documentation&quot;,
+    &quot;docs&quot;: &quot;http://localhost:8000/docs&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GET-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GET-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GET-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GET-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GET-" data-method="GET"
+      data-path="/"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GET-"
+                    onclick="tryItOut('GET-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GET-"
+                    onclick="cancelTryOut('GET-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GET-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>/</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GET-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GET-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GET-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="other-endpoints-GETauth-user">GET auth/user</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETauth-user">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/auth/user" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/auth/user"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETauth-user">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;id&quot;: 197806311994031003,
+    &quot;username&quot;: &quot;admin&quot;,
+    &quot;role&quot;: &quot;admin&quot;,
+    &quot;created_at&quot;: &quot;2024-09-03T04:29:18.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2024-09-03T04:29:18.000000Z&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETauth-user" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETauth-user"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETauth-user"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETauth-user" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETauth-user">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETauth-user" data-method="GET"
+      data-path="auth/user"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETauth-user', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETauth-user"
+                    onclick="tryItOut('GETauth-user');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETauth-user"
+                    onclick="cancelTryOut('GETauth-user');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETauth-user"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>auth/user</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETauth-user"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETauth-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETauth-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
 
                 <h1 id="outgoing-item-detail">Outgoing Item Detail</h1>
 
@@ -8229,8 +8558,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 10,
-    \"qty\": 14
+    \"item_id\": 7,
+    \"qty\": 12
 }"
 </code></pre></div>
 
@@ -8247,8 +8576,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": 10,
-    "qty": 14
+    "item_id": 7,
+    "qty": 12
 };
 
 fetch(url, {
@@ -8360,10 +8689,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="POSToutgoing-item--outgoing_item_id--detail"
-               value="10"
+               value="7"
                data-component="body">
     <br>
-<p>Example: <code>10</code></p>
+<p>Example: <code>7</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -8371,10 +8700,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="POSToutgoing-item--outgoing_item_id--detail"
-               value="14"
+               value="12"
                data-component="body">
     <br>
-<p>Example: <code>14</code></p>
+<p>Example: <code>12</code></p>
         </div>
         </form>
 
@@ -8392,20 +8721,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/outgoing-item/OTK-001/detail/velit" \
+    "http://localhost:8000/outgoing-item/OTK-001/detail/voluptas" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 18,
-    \"qty\": 1
+    \"item_id\": 15,
+    \"qty\": 3
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/outgoing-item/OTK-001/detail/velit"
+    "http://localhost:8000/outgoing-item/OTK-001/detail/voluptas"
 );
 
 const headers = {
@@ -8415,8 +8744,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": 18,
-    "qty": 1
+    "item_id": 15,
+    "qty": 3
 };
 
 fetch(url, {
@@ -8531,10 +8860,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUToutgoing-item--outgoing_item_id--detail--id-"
-               value="velit"
+               value="voluptas"
                data-component="url">
     <br>
-<p>The ID of the detail. Example: <code>velit</code></p>
+<p>The ID of the detail. Example: <code>voluptas</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -8543,10 +8872,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="PUToutgoing-item--outgoing_item_id--detail--id-"
-               value="18"
+               value="15"
                data-component="body">
     <br>
-<p>Example: <code>18</code></p>
+<p>Example: <code>15</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -8554,10 +8883,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="PUToutgoing-item--outgoing_item_id--detail--id-"
-               value="1"
+               value="3"
                data-component="body">
     <br>
-<p>Example: <code>1</code></p>
+<p>Example: <code>3</code></p>
         </div>
         </form>
 
@@ -8982,11 +9311,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"division_id\": 11,
+    \"division_id\": 4,
     \"items\": [
         {
-            \"item_id\": 6,
-            \"qty\": 7
+            \"item_id\": 2,
+            \"qty\": 10
         }
     ]
 }"
@@ -9005,11 +9334,11 @@ const headers = {
 };
 
 let body = {
-    "division_id": 11,
+    "division_id": 4,
     "items": [
         {
-            "item_id": 6,
-            "qty": 7
+            "item_id": 2,
+            "qty": 10
         }
     ]
 };
@@ -9111,10 +9440,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="division_id"                data-endpoint="POSToutgoing-item"
-               value="11"
+               value="4"
                data-component="body">
     <br>
-<p>Example: <code>11</code></p>
+<p>Example: <code>4</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
         <details>
@@ -9131,10 +9460,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.item_id"                data-endpoint="POSToutgoing-item"
-               value="6"
+               value="2"
                data-component="body">
     <br>
-<p>Example: <code>6</code></p>
+<p>Example: <code>2</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -9142,10 +9471,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.qty"                data-endpoint="POSToutgoing-item"
-               value="7"
+               value="10"
                data-component="body">
     <br>
-<p>Example: <code>7</code></p>
+<p>Example: <code>10</code></p>
                     </div>
                                     </details>
         </div>
@@ -10696,8 +11025,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": \"sint\",
-    \"qty\": \"voluptatibus\"
+    \"item_id\": \"repudiandae\",
+    \"qty\": \"beatae\"
 }"
 </code></pre></div>
 
@@ -10714,8 +11043,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": "sint",
-    "qty": "voluptatibus"
+    "item_id": "repudiandae",
+    "qty": "beatae"
 };
 
 fetch(url, {
@@ -10827,10 +11156,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="item_id"                data-endpoint="POSTrequest-item--request_item_id--detail"
-               value="sint"
+               value="repudiandae"
                data-component="body">
     <br>
-<p>Example: <code>sint</code></p>
+<p>Example: <code>repudiandae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -10838,10 +11167,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="qty"                data-endpoint="POSTrequest-item--request_item_id--detail"
-               value="voluptatibus"
+               value="beatae"
                data-component="body">
     <br>
-<p>Example: <code>voluptatibus</code></p>
+<p>Example: <code>beatae</code></p>
         </div>
         </form>
 
@@ -10859,21 +11188,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/request-item/RQ-001/detail/unde" \
+    "http://localhost:8000/request-item/RQ-001/detail/aliquid" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"item_id\": 17,
-    \"qty\": 4,
-    \"qty_acc\": 19
+    \"qty\": 8,
+    \"qty_acc\": 15
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/request-item/RQ-001/detail/unde"
+    "http://localhost:8000/request-item/RQ-001/detail/aliquid"
 );
 
 const headers = {
@@ -10884,8 +11213,8 @@ const headers = {
 
 let body = {
     "item_id": 17,
-    "qty": 4,
-    "qty_acc": 19
+    "qty": 8,
+    "qty_acc": 15
 };
 
 fetch(url, {
@@ -11000,10 +11329,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="requestItemDetail"                data-endpoint="PUTrequest-item--request_item_id--detail--requestItemDetail-"
-               value="unde"
+               value="aliquid"
                data-component="url">
     <br>
-<p>Example: <code>unde</code></p>
+<p>Example: <code>aliquid</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -11023,10 +11352,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="PUTrequest-item--request_item_id--detail--requestItemDetail-"
-               value="4"
+               value="8"
                data-component="body">
     <br>
-<p>Example: <code>4</code></p>
+<p>Example: <code>8</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty_acc</code></b>&nbsp;&nbsp;
@@ -11034,10 +11363,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty_acc"                data-endpoint="PUTrequest-item--request_item_id--detail--requestItemDetail-"
-               value="19"
+               value="15"
                data-component="body">
     <br>
-<p>Example: <code>19</code></p>
+<p>Example: <code>15</code></p>
         </div>
         </form>
 
@@ -11055,7 +11384,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/request-item/RQ-001/detail/blanditiis" \
+    "http://localhost:8000/request-item/RQ-001/detail/eos" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -11063,7 +11392,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/request-item/RQ-001/detail/blanditiis"
+    "http://localhost:8000/request-item/RQ-001/detail/eos"
 );
 
 const headers = {
@@ -11179,10 +11508,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="requestItemDetail_id"                data-endpoint="DELETErequest-item--request_item_id--detail--requestItemDetail_id-"
-               value="blanditiis"
+               value="eos"
                data-component="url">
     <br>
-<p>The ID of the requestItemDetail. Example: <code>blanditiis</code></p>
+<p>The ID of the requestItemDetail. Example: <code>eos</code></p>
             </div>
                     </form>
 
@@ -12542,8 +12871,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": \"aut\",
-    \"qty\": \"dolorum\"
+    \"item_id\": \"consequuntur\",
+    \"qty\": \"repellat\"
 }"
 </code></pre></div>
 
@@ -12560,8 +12889,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": "aut",
-    "qty": "dolorum"
+    "item_id": "consequuntur",
+    "qty": "repellat"
 };
 
 fetch(url, {
@@ -12673,10 +13002,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="item_id"                data-endpoint="POSTsubmission--submission_id--detail"
-               value="aut"
+               value="consequuntur"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>consequuntur</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -12684,10 +13013,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="qty"                data-endpoint="POSTsubmission--submission_id--detail"
-               value="dolorum"
+               value="repellat"
                data-component="body">
     <br>
-<p>Example: <code>dolorum</code></p>
+<p>Example: <code>repellat</code></p>
         </div>
         </form>
 
@@ -12705,21 +13034,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/submission/SM-001/detail/assumenda" \
+    "http://localhost:8000/submission/SM-001/detail/sunt" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 14,
+    \"item_id\": 5,
     \"qty\": 4,
-    \"qty_acc\": 9
+    \"qty_acc\": 7
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/submission/SM-001/detail/assumenda"
+    "http://localhost:8000/submission/SM-001/detail/sunt"
 );
 
 const headers = {
@@ -12729,9 +13058,9 @@ const headers = {
 };
 
 let body = {
-    "item_id": 14,
+    "item_id": 5,
     "qty": 4,
-    "qty_acc": 9
+    "qty_acc": 7
 };
 
 fetch(url, {
@@ -12846,10 +13175,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTsubmission--submission_id--detail--id-"
-               value="assumenda"
+               value="sunt"
                data-component="url">
     <br>
-<p>The ID of the detail. Example: <code>assumenda</code></p>
+<p>The ID of the detail. Example: <code>sunt</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -12858,10 +13187,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="PUTsubmission--submission_id--detail--id-"
-               value="14"
+               value="5"
                data-component="body">
     <br>
-<p>Example: <code>14</code></p>
+<p>Example: <code>5</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -12880,10 +13209,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty_acc"                data-endpoint="PUTsubmission--submission_id--detail--id-"
-               value="9"
+               value="7"
                data-component="body">
     <br>
-<p>Example: <code>9</code></p>
+<p>Example: <code>7</code></p>
         </div>
         </form>
 
@@ -12901,7 +13230,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/submission/SM-001/detail/vitae" \
+    "http://localhost:8000/submission/SM-001/detail/est" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -12909,7 +13238,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/submission/SM-001/detail/vitae"
+    "http://localhost:8000/submission/SM-001/detail/est"
 );
 
 const headers = {
@@ -13025,10 +13354,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="DELETEsubmission--submission_id--detail--id-"
-               value="vitae"
+               value="est"
                data-component="url">
     <br>
-<p>The ID of the detail. Example: <code>vitae</code></p>
+<p>The ID of the detail. Example: <code>est</code></p>
             </div>
                     </form>
 
@@ -13297,8 +13626,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"items\": [
         {
-            \"item_id\": 9,
-            \"qty\": 4
+            \"item_id\": 11,
+            \"qty\": 20
         }
     ]
 }"
@@ -13319,8 +13648,8 @@ const headers = {
 let body = {
     "items": [
         {
-            "item_id": 9,
-            "qty": 4
+            "item_id": 11,
+            "qty": 20
         }
     ]
 };
@@ -13431,10 +13760,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.item_id"                data-endpoint="POSTsubmission"
-               value="9"
+               value="11"
                data-component="body">
     <br>
-<p>Example: <code>9</code></p>
+<p>Example: <code>11</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -13442,10 +13771,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.qty"                data-endpoint="POSTsubmission"
-               value="4"
+               value="20"
                data-component="body">
     <br>
-<p>Example: <code>4</code></p>
+<p>Example: <code>20</code></p>
                     </div>
                                     </details>
         </div>
@@ -13766,7 +14095,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/request/hic/accept" \
+    "http://localhost:8000/request/praesentium/accept" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -13774,7 +14103,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/request/hic/accept"
+    "http://localhost:8000/request/praesentium/accept"
 );
 
 const headers = {
@@ -13879,10 +14208,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="request"                data-endpoint="POSTrequest--request--accept"
-               value="hic"
+               value="praesentium"
                data-component="url">
     <br>
-<p>The request. Example: <code>hic</code></p>
+<p>The request. Example: <code>praesentium</code></p>
             </div>
                     </form>
 
@@ -13900,7 +14229,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/request/quos/decline" \
+    "http://localhost:8000/request/doloremque/decline" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -13908,7 +14237,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/request/quos/decline"
+    "http://localhost:8000/request/doloremque/decline"
 );
 
 const headers = {
@@ -14013,10 +14342,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="request"                data-endpoint="POSTrequest--request--decline"
-               value="quos"
+               value="doloremque"
                data-component="url">
     <br>
-<p>The request. Example: <code>quos</code></p>
+<p>The request. Example: <code>doloremque</code></p>
             </div>
                     </form>
 
@@ -14523,9 +14852,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"lktisttypdzcvngzp\",
-    \"address\": \"zbedwnuurhusuf\",
-    \"phone\": \"wznacwmo\"
+    \"name\": \"hyandlliqr\",
+    \"address\": \"ptvbxwzaymmzjjjiyg\",
+    \"phone\": \"pztxjlkpkn\"
 }"
 </code></pre></div>
 
@@ -14542,9 +14871,9 @@ const headers = {
 };
 
 let body = {
-    "name": "lktisttypdzcvngzp",
-    "address": "zbedwnuurhusuf",
-    "phone": "wznacwmo"
+    "name": "hyandlliqr",
+    "address": "ptvbxwzaymmzjjjiyg",
+    "phone": "pztxjlkpkn"
 };
 
 fetch(url, {
@@ -14644,10 +14973,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTsupplier"
-               value="lktisttypdzcvngzp"
+               value="hyandlliqr"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>lktisttypdzcvngzp</code></p>
+<p>validation.max. Example: <code>hyandlliqr</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -14655,10 +14984,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="POSTsupplier"
-               value="zbedwnuurhusuf"
+               value="ptvbxwzaymmzjjjiyg"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>zbedwnuurhusuf</code></p>
+<p>validation.max. Example: <code>ptvbxwzaymmzjjjiyg</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -14666,10 +14995,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTsupplier"
-               value="wznacwmo"
+               value="pztxjlkpkn"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>wznacwmo</code></p>
+<p>validation.max. Example: <code>pztxjlkpkn</code></p>
         </div>
         </form>
 
@@ -14850,9 +15179,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"uvtbhqf\",
-    \"address\": \"nodmeemknxrpauqkdfu\",
-    \"phone\": \"aqfhnctfzgvnxkbbmcshcexr\"
+    \"name\": \"r\",
+    \"address\": \"uahcerpmmdzg\",
+    \"phone\": \"rdxaiesrxpnriuznwsgehtxd\"
 }"
 </code></pre></div>
 
@@ -14869,9 +15198,9 @@ const headers = {
 };
 
 let body = {
-    "name": "uvtbhqf",
-    "address": "nodmeemknxrpauqkdfu",
-    "phone": "aqfhnctfzgvnxkbbmcshcexr"
+    "name": "r",
+    "address": "uahcerpmmdzg",
+    "phone": "rdxaiesrxpnriuznwsgehtxd"
 };
 
 fetch(url, {
@@ -14987,10 +15316,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTsupplier--id-"
-               value="uvtbhqf"
+               value="r"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>uvtbhqf</code></p>
+<p>validation.max. Example: <code>r</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -14998,10 +15327,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="PUTsupplier--id-"
-               value="nodmeemknxrpauqkdfu"
+               value="uahcerpmmdzg"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>nodmeemknxrpauqkdfu</code></p>
+<p>validation.max. Example: <code>uahcerpmmdzg</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -15009,10 +15338,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTsupplier--id-"
-               value="aqfhnctfzgvnxkbbmcshcexr"
+               value="rdxaiesrxpnriuznwsgehtxd"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>aqfhnctfzgvnxkbbmcshcexr</code></p>
+<p>validation.max. Example: <code>rdxaiesrxpnriuznwsgehtxd</code></p>
         </div>
         </form>
 
@@ -15409,12 +15738,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"xirlqrcxpzdzlhzowxwxcud\",
-    \"id\": \"ff\",
-    \"username\": \"zlmglrygarvsqdufuhtgb\",
-    \"email\": \"rowena.schinner@example.org\",
-    \"password\": \"z_qW6lU\\/UN;yi$i&amp;h\",
-    \"role\": \"unit\"
+    \"name\": \"bdoccdx\",
+    \"id\": \"gzcbxphaljjdi\",
+    \"username\": \"rcagfybxtsvimvxupuyzqqns\",
+    \"email\": \"zmonahan@example.com\",
+    \"password\": \"nIv8z4Y22N)\",
+    \"role\": \"admin\"
 }"
 </code></pre></div>
 
@@ -15431,12 +15760,12 @@ const headers = {
 };
 
 let body = {
-    "name": "xirlqrcxpzdzlhzowxwxcud",
-    "id": "ff",
-    "username": "zlmglrygarvsqdufuhtgb",
-    "email": "rowena.schinner@example.org",
-    "password": "z_qW6lU\/UN;yi$i&amp;h",
-    "role": "unit"
+    "name": "bdoccdx",
+    "id": "gzcbxphaljjdi",
+    "username": "rcagfybxtsvimvxupuyzqqns",
+    "email": "zmonahan@example.com",
+    "password": "nIv8z4Y22N)",
+    "role": "admin"
 };
 
 fetch(url, {
@@ -15536,10 +15865,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTusers"
-               value="xirlqrcxpzdzlhzowxwxcud"
+               value="bdoccdx"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>xirlqrcxpzdzlhzowxwxcud</code></p>
+<p>validation.max. Example: <code>bdoccdx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -15547,10 +15876,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="POSTusers"
-               value="ff"
+               value="gzcbxphaljjdi"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>ff</code></p>
+<p>validation.max. Example: <code>gzcbxphaljjdi</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>username</code></b>&nbsp;&nbsp;
@@ -15558,10 +15887,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="POSTusers"
-               value="zlmglrygarvsqdufuhtgb"
+               value="rcagfybxtsvimvxupuyzqqns"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>zlmglrygarvsqdufuhtgb</code></p>
+<p>validation.max. Example: <code>rcagfybxtsvimvxupuyzqqns</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -15569,10 +15898,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTusers"
-               value="rowena.schinner@example.org"
+               value="zmonahan@example.com"
                data-component="body">
     <br>
-<p>validation.email validation.max. Example: <code>rowena.schinner@example.org</code></p>
+<p>validation.email validation.max. Example: <code>zmonahan@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -15580,10 +15909,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTusers"
-               value="z_qW6lU/UN;yi$i&h"
+               value="nIv8z4Y22N)"
                data-component="body">
     <br>
-<p>validation.min. Example: <code>z_qW6lU/UN;yi$i&amp;h</code></p>
+<p>validation.min. Example: <code>nIv8z4Y22N)</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>role</code></b>&nbsp;&nbsp;
@@ -15591,10 +15920,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="role"                data-endpoint="POSTusers"
-               value="unit"
+               value="admin"
                data-component="body">
     <br>
-<p>Example: <code>unit</code></p>
+<p>Example: <code>admin</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>admin</code></li> <li><code>unit</code></li> <li><code>pengawas</code></li></ul>
         </div>
@@ -15776,11 +16105,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"lw\",
-    \"id\": \"qevpwfbqsqsooziwryyua\",
-    \"username\": \"sy\",
-    \"email\": \"purdy.melany@example.net\",
-    \"password\": \"Py$e!&lt;yJ\",
+    \"name\": \"qej\",
+    \"id\": \"icazlpupgevvugjak\",
+    \"username\": \"objqaea\",
+    \"email\": \"vbailey@example.org\",
+    \"password\": \"Ef))k5Yvh}%`x}NF\",
     \"role\": \"admin\"
 }"
 </code></pre></div>
@@ -15798,11 +16127,11 @@ const headers = {
 };
 
 let body = {
-    "name": "lw",
-    "id": "qevpwfbqsqsooziwryyua",
-    "username": "sy",
-    "email": "purdy.melany@example.net",
-    "password": "Py$e!&lt;yJ",
+    "name": "qej",
+    "id": "icazlpupgevvugjak",
+    "username": "objqaea",
+    "email": "vbailey@example.org",
+    "password": "Ef))k5Yvh}%`x}NF",
     "role": "admin"
 };
 
@@ -15919,10 +16248,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTusers--username-"
-               value="lw"
+               value="qej"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>lw</code></p>
+<p>validation.max. Example: <code>qej</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -15930,10 +16259,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTusers--username-"
-               value="qevpwfbqsqsooziwryyua"
+               value="icazlpupgevvugjak"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>qevpwfbqsqsooziwryyua</code></p>
+<p>validation.max. Example: <code>icazlpupgevvugjak</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>username</code></b>&nbsp;&nbsp;
@@ -15941,10 +16270,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="PUTusers--username-"
-               value="sy"
+               value="objqaea"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>sy</code></p>
+<p>validation.max. Example: <code>objqaea</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -15952,10 +16281,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTusers--username-"
-               value="purdy.melany@example.net"
+               value="vbailey@example.org"
                data-component="body">
     <br>
-<p>validation.email validation.max. Example: <code>purdy.melany@example.net</code></p>
+<p>validation.email validation.max. Example: <code>vbailey@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -15963,10 +16292,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="PUTusers--username-"
-               value="Py$e!<yJ"
+               value="Ef))k5Yvh}%`x}NF"
                data-component="body">
     <br>
-<p>validation.min. Example: <code>Py$e!&lt;yJ</code></p>
+<p>validation.min. Example: <code>Ef))k5Yvh}%</code>x}NF`</p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>role</code></b>&nbsp;&nbsp;

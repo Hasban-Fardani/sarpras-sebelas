@@ -98,7 +98,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: aut
+        example: consequuntur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -107,14 +107,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: dolorum
+        example: repellat
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: aut
-      qty: dolorum
+      item_id: consequuntur
+      qty: repellat
     fileParameters: []
     responses: []
     responseFields: []
@@ -160,14 +160,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: assumenda
+        example: sunt
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       submission_id: SM-001
-      id: assumenda
+      id: sunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -175,7 +175,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 14
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -193,15 +193,15 @@ endpoints:
         name: qty_acc
         description: ''
         required: true
-        example: 9
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 14
+      item_id: 5
       qty: 4
-      qty_acc: 9
+      qty_acc: 7
     fileParameters: []
     responses: []
     responseFields: []
@@ -246,14 +246,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: vitae
+        example: est
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       submission_id: SM-001
-      id: vitae
+      id: est
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -76,7 +76,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: lktisttypdzcvngzp
+        example: hyandlliqr
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -85,7 +85,7 @@ endpoints:
         name: address
         description: validation.max.
         required: false
-        example: zbedwnuurhusuf
+        example: ptvbxwzaymmzjjjiyg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -94,15 +94,15 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: wznacwmo
+        example: pztxjlkpkn
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: lktisttypdzcvngzp
-      address: zbedwnuurhusuf
-      phone: wznacwmo
+      name: hyandlliqr
+      address: ptvbxwzaymmzjjjiyg
+      phone: pztxjlkpkn
     fileParameters: []
     responses: []
     responseFields: []
@@ -208,7 +208,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: uvtbhqf
+        example: r
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -217,7 +217,7 @@ endpoints:
         name: address
         description: validation.max.
         required: false
-        example: nodmeemknxrpauqkdfu
+        example: uahcerpmmdzg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -226,15 +226,15 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: aqfhnctfzgvnxkbbmcshcexr
+        example: rdxaiesrxpnriuznwsgehtxd
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: uvtbhqf
-      address: nodmeemknxrpauqkdfu
-      phone: aqfhnctfzgvnxkbbmcshcexr
+      name: r
+      address: uahcerpmmdzg
+      phone: rdxaiesrxpnriuznwsgehtxd
     fileParameters: []
     responses: []
     responseFields: []

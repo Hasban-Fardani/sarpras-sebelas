@@ -24,7 +24,7 @@ class FileService
     {
         if (env('APP_ENV') == 'local') {
             Storage::disk('public')->delete($path);
-        } else if (env('APP_ENV') == 'production') {
+        } elseif (env('APP_ENV') == 'production') {
             Storage::disk('r2')->delete($path);
         }
     }
@@ -33,7 +33,7 @@ class FileService
     {
         if (env('APP_ENV') == 'local') {
             return Storage::disk('public')->url($path);
-        } else if (env('APP_ENV') == 'production') {
+        } elseif (env('APP_ENV') == 'production') {
             return Storage::disk('r2')->url($path);
         }
     }

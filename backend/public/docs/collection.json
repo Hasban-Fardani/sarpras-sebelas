@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "97630ebe-c08c-464c-9380-21f0c772cab7",
+        "_postman_id": "bf90bb86-8f93-4b8b-8189-47ff9cade0a9",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -286,7 +286,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"qbx-cpo_g\"}"
+                            "raw": "{\"name\":\"zaz-bda_y\"}"
                         },
                         "description": ""
                     },
@@ -375,7 +375,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"possimus\"}"
+                            "raw": "{\"name\":\"enim\"}"
                         },
                         "description": ""
                     },
@@ -420,6 +420,75 @@
             "name": "Employee Management",
             "description": "\nAPI endpoints for managing employees",
             "item": [
+                {
+                    "name": "Make user account from employee",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "employee\/:employee_id\/assign",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/employee\/:employee_id\/assign",
+                            "variable": [
+                                {
+                                    "id": "employee_id",
+                                    "key": "employee_id",
+                                    "value": "197412311994031001",
+                                    "description": "The ID of the employee."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"password\":\"rem\",\"role\":\"unit\",\"username\":\"pariatur\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete user account",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "employee\/:employee_id\/unassign",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/employee\/:employee_id\/unassign",
+                            "variable": [
+                                {
+                                    "id": "employee_id",
+                                    "key": "employee_id",
+                                    "value": "197412311994031001",
+                                    "description": "The ID of the employee."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
@@ -487,7 +556,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"id\":\"giocoaotkcdqudlexon\",\"name\":\"optio\",\"position\":\"dolorum\",\"phone\":\"inventore\",\"email\":\"walter.graham@example.org\"}"
+                            "raw": "{\"id\":\"tztlefllgszx\",\"name\":\"tempore\",\"position\":\"eveniet\",\"phone\":\"blanditiis\",\"email\":\"rogahn.eliezer@example.net\"}"
                         },
                         "description": ""
                     },
@@ -576,7 +645,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"id\":\"uys\",\"name\":\"at\",\"position\":\"molestias\",\"phone\":\"odit\",\"email\":\"konopelski.marie@example.net\"}"
+                            "raw": "{\"id\":\"jaevrtnudidmolpycni\",\"name\":\"alias\",\"position\":\"officiis\",\"phone\":\"assumenda\",\"email\":\"alarkin@example.net\"}"
                         },
                         "description": ""
                     },
@@ -618,147 +687,6 @@
             ]
         },
         {
-            "name": "Endpoints",
-            "description": "",
-            "item": [
-                {
-                    "name": "Return an empty response simply to trigger the storage of the CSRF cookie in the browser.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "sanctum\/csrf-cookie",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/sanctum\/csrf-cookie"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                },
-                                {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IklLT2hoaU15anNQbkNwcFl1VVpwUEE9PSIsInZhbHVlIjoiYVJFanZXUUdwaUowUEJxQTFBelNWam9MdktmL1A5Vy9iS2hMcVppaE5SdUt2OUs5bUZJOTFlY293K1V3N3JaemxGSVhqaFFLaFNUTzc0aDVFL2U2eHg0SDZEeVNmU21YODhLZHcrUmgzNVdvTnMxNGdGQ2hVN0JObUNramE5bDYiLCJtYWMiOiJiNjFmMmRkYjZjZWQwM2MwMzRhMTIzNTg3YTk3ODFmNjhhNzVmZTYwODQ1YTg4NmVjODA3ZTFiN2NhNmY0NmI4IiwidGFnIjoiIn0%3D; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Ik0xZFpsUHRZVURPZWJNVytabVczOUE9PSIsInZhbHVlIjoiUE94c3dzdGZJRlpFZ3lZNTlxaGxzdWJmam5KR1lOQmU4K1NXb3h0ZFc2bHQyMFJ0WU54cDg0N296RVlyN0RiWXpCUzlWNTlac3VWaUtvVFNTK254REp6cjMvbG4rWDlYSEhYZlY4L3ZSUUJGKzAzbHBJUDlHTDhQNEE4WVZvVnQiLCJtYWMiOiI3OGJiZjY0N2E3MDhhZmJmZjRjN2Y1ZjMyYjExZTdjYzZiZjk0NjZmOGY1NTg2ZjcyNzI5OGI5ZGYzZGFiZDllIiwidGFnIjoiIn0%3D; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; hrUzZSl4dq8zylzcRnILqsL307cQb3FR95pIkG8r=eyJpdiI6InZyWFViUjZMMFk1K2xmVk9nMmhJYmc9PSIsInZhbHVlIjoiU1FiOW9pbmFnajk3bHBIQXJOdEZGTU9JM2xwaEFGdEw4cVZqUEZFS3pUT3NYVnVycjh1STNoZm9FNVQybytHZzdXa3I1aE1hakQrT1lhNDAzMTI5RmsvQUlGME5rcWQwYlE4S3hWM3Rqc3BaUDRiZ2FaUTRZZGliSUxkS0tJRk55cGRxd2tMWGlnb2Fka0N6cHNXUFBvcDFpTUgySS95SUlWYml5Q2FpcmNGbTlPVDh2ZERxN3ovUVRHNFNWY1lOQ09yVC9wSUJVSlZqSDBrNWxLQ3BYeVR1S2J5aU51Wm1tSTVFZTY4UW9zVFQwcFdWcEJKSEdYZk5sWjFLM3RjUFp2RG84OTJ1QjYrOXV3MmtSaDZaMEQzMWFQb1ZVSG04dHcxSm5OTThuWW5FaW1RZk4xYlNkVjJYSms0TVpBcGgxak8wSElzU1UycjhrbkIrYTFLK20vM3ZwM2l3VmdxR3JyaFFYNHRad1FWa1ZTL2lTbnQ1Zi8vQTNPaVBQSnhLcTJIaDF5SDZ2dUxPWHkxZlVUaENTdz09IiwibWFjIjoiZGIxNWE2OTRlZDdhMDNhOTg0NWE1NjRkNGEwNjU3MTc3YzE4MDBiYWQ1ODE5NWVmYzQwNDUwZTM0ZmZkZmU4YiIsInRhZyI6IiJ9; expires=Tue, 03 Sep 2024 10:06:41 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
-                                }
-                            ],
-                            "code": 204,
-                            "body": "",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET \/",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "\/",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/\/"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"message\":\"hello, please visit \\\/docs for documentation\",\"docs\":\"http:\\\/\\\/localhost:8000\\\/docs\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET auth\/check",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "auth\/check",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/auth\/check"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "1",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "File Management",
             "description": "\nAPI endpoints for get files from R2",
             "item": [
@@ -774,7 +702,7 @@
                                 {
                                     "id": "path",
                                     "key": "path",
-                                    "value": "%27%24cjA",
+                                    "value": "",
                                     "description": ""
                                 }
                             ]
@@ -827,7 +755,7 @@
                                 {
                                     "id": "path",
                                     "key": "path",
-                                    "value": "%3D%29%5B",
+                                    "value": "",
                                     "description": ""
                                 }
                             ]
@@ -957,7 +885,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":19,\"qty\":8}"
+                            "raw": "{\"item_id\":1,\"qty\":15}"
                         },
                         "description": ""
                     },
@@ -999,7 +927,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":17,\"qty\":17}"
+                            "raw": "{\"item_id\":18,\"qty\":20}"
                         },
                         "description": ""
                     },
@@ -1117,7 +1045,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"supplier_id\":\"soluta\",\"items\":[{\"item_id\":\"accusamus\",\"qty\":8}]}"
+                            "raw": "{\"supplier_id\":\"consequuntur\",\"items\":[{\"item_id\":\"est\",\"qty\":18}]}"
                         },
                         "description": ""
                     },
@@ -1285,37 +1213,37 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "oxnliklqmasajqojsrbgitzy",
+                                    "value": "vigjvdldxf",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "unit",
-                                    "value": "jwlqyhodpblfzm",
+                                    "value": "er",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "stock",
-                                    "value": 6,
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "min_stock",
                                     "value": 12,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
+                                    "key": "min_stock",
+                                    "value": 13,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
                                     "key": "category_id",
-                                    "value": "occaecati",
+                                    "value": "omnis",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "price",
-                                    "value": 6,
+                                    "value": 5,
                                     "type": "text",
                                     "description": ""
                                 },
@@ -1416,13 +1344,13 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "fajni",
+                                    "value": "jrdpwjcvbnhpgev",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "unit",
-                                    "value": "resbomvjxvbcjvyw",
+                                    "value": "d",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
@@ -1434,19 +1362,19 @@
                                 },
                                 {
                                     "key": "min_stock",
-                                    "value": 19,
+                                    "value": 18,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "qui",
+                                    "value": "sint",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "price",
-                                    "value": 14,
+                                    "value": 18,
                                     "type": "text",
                                     "description": ""
                                 },
@@ -1498,6 +1426,147 @@
                         "description": ""
                     },
                     "response": []
+                }
+            ]
+        },
+        {
+            "name": "Other Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Return an empty response simply to trigger the storage of the CSRF cookie in the browser.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "sanctum\/csrf-cookie",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/sanctum\/csrf-cookie"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6ImRpSGUzZHhrS01ENUsvaUpTcXlabUE9PSIsInZhbHVlIjoiR0lXS3RNRmkvaXZNNTNLdnRMK3JPL3A2OThmWGJzT1hwejhzUUtvdWpaaFdUbnVDOUEyUEhOcmsreDdTcnlPYWhnS1N3RmJIT3dTN29sbWVCL3V3Ym5qQ1dROFowTGRkOVBBdGdjSkthVWhFdjYvTmJDZURqOFI5amRJMzdOWTgiLCJtYWMiOiI2ZWI5NjZmMWUyZTE0YzczYjk0MDhmNmE3MmYxZjU3MGJhZmUxNzBjMmYzZWE5NDQ3ZTU2ZmQ3OGI1YmJmOTc4IiwidGFnIjoiIn0%3D; expires=Wed, 04 Sep 2024 09:58:30 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InhHeUllMlJ2VVhHaWVJYWMzZ1dKdFE9PSIsInZhbHVlIjoiRFJoL1VnNG1RUEtFOFEwdllhbVVEd3ZRTUdDQ0VJeXkzZXYvVXpmRjdSUjYzcnIyc25sdWtDWm9TYUh0MkRBbUc4TEVDNVRFWXpMa3hYL1ArRllNZWlwWmhQMFNYNGNXNjdyeXJ2MnNocmR5bzFQcWV4K0FjVk9kQkZneUZCM04iLCJtYWMiOiI5NWRiYWE3NGE5MDc4MGY0MzEwZDRhNmMzODUzODBiM2Q4NTRkZmJlMzNlYTE2NjU3NTE3ZGU0OWE3NDk5NWZmIiwidGFnIjoiIn0%3D; expires=Wed, 04 Sep 2024 09:58:30 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; LD0Co20g5w2fhDlG1L90uB7VQhHbFdIvmCBxMgBt=eyJpdiI6IkxyQ3NmOFBDU0VyVHRSdEVNeUhCYWc9PSIsInZhbHVlIjoibDFDZXhQbENvd05KakJIa1FHQ2ZqRjBhVTUxUVh0ajhvR2ZZbU1zVEpYRlFva21tb1kyMVM5R3ZIanhwRmtrcmZuWXhUaU9Nck00dEVjZUs1VWVpWm04T0haSlc3NTFhMFJUc2R5cVlNV1F3bGRLbUtib2xySVExaXVQcUFSNTdFQzV4WkNOMm5iZEhhdWlkS0F3MzlMZHdCQW9xUC9xVndUTTVTRUJRMldnVWRia3RHcFNEYVcwVHZaL1cxaWlkdithUWw2UkIvRmZHdzl6UnpaRzE1TzRlbUJEUUY2bEpuUmFsYWtibFpFdDFGNE9FTWNjV0FycGIwcUlidUd0N3dhMzFmMUlrcWFnVHgraTU5YzQwcjFKZFdSOVJHNnU4UjE1T243eDBvTlByL0pHU2FHNFpMS25PZXJ4M3ljUHJ2UUdmMjNqa21OWlNtdG9acjM0UCtLcENPZmM4L3MxdWg1K0MvTHJpVWwvNXQvZTEvL3RLWGhsNUFhOG1EbDlOenVqb0VDRk9YM3dQREtHRHdteE50dz09IiwibWFjIjoiZDMzMTc5MjE2NDE3NjBhNTU5YTA4NTMzYThiNzc0OWIwODljZjFhYzVjMjZiYjg4Njk4NDU4Y2QyYzc5ODlkNSIsInRhZyI6IiJ9; expires=Wed, 04 Sep 2024 09:58:30 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 204,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET \/",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "\/",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/\/"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"hello, please visit \\\/docs for documentation\",\"docs\":\"http:\\\/\\\/localhost:8000\\\/docs\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET auth\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "auth\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/auth\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":197806311994031003,\"username\":\"admin\",\"role\":\"admin\",\"created_at\":\"2024-09-03T04:29:18.000000Z\",\"updated_at\":\"2024-09-03T04:29:18.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -1588,7 +1657,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":10,\"qty\":14}"
+                            "raw": "{\"item_id\":7,\"qty\":12}"
                         },
                         "description": ""
                     },
@@ -1612,7 +1681,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "velit",
+                                    "value": "voluptas",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -1630,7 +1699,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":18,\"qty\":1}"
+                            "raw": "{\"item_id\":15,\"qty\":3}"
                         },
                         "description": ""
                     },
@@ -1748,7 +1817,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"division_id\":11,\"items\":[{\"item_id\":6,\"qty\":7}]}"
+                            "raw": "{\"division_id\":4,\"items\":[{\"item_id\":2,\"qty\":10}]}"
                         },
                         "description": ""
                     },
@@ -1929,7 +1998,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"sint\",\"qty\":\"voluptatibus\"}"
+                            "raw": "{\"item_id\":\"repudiandae\",\"qty\":\"beatae\"}"
                         },
                         "description": ""
                     },
@@ -1953,7 +2022,7 @@
                                 {
                                     "id": "requestItemDetail",
                                     "key": "requestItemDetail",
-                                    "value": "unde",
+                                    "value": "aliquid",
                                     "description": ""
                                 }
                             ]
@@ -1971,7 +2040,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":17,\"qty\":4,\"qty_acc\":19}"
+                            "raw": "{\"item_id\":17,\"qty\":8,\"qty_acc\":15}"
                         },
                         "description": ""
                     },
@@ -1995,7 +2064,7 @@
                                 {
                                     "id": "requestItemDetail_id",
                                     "key": "requestItemDetail_id",
-                                    "value": "blanditiis",
+                                    "value": "eos",
                                     "description": "The ID of the requestItemDetail."
                                 }
                             ]
@@ -2267,7 +2336,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"aut\",\"qty\":\"dolorum\"}"
+                            "raw": "{\"item_id\":\"consequuntur\",\"qty\":\"repellat\"}"
                         },
                         "description": ""
                     },
@@ -2291,7 +2360,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "assumenda",
+                                    "value": "sunt",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -2309,7 +2378,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":14,\"qty\":4,\"qty_acc\":9}"
+                            "raw": "{\"item_id\":5,\"qty\":4,\"qty_acc\":7}"
                         },
                         "description": ""
                     },
@@ -2333,7 +2402,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vitae",
+                                    "value": "est",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -2427,7 +2496,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"items\":[{\"item_id\":9,\"qty\":4}]}"
+                            "raw": "{\"items\":[{\"item_id\":11,\"qty\":20}]}"
                         },
                         "description": ""
                     },
@@ -2537,7 +2606,7 @@
                                 {
                                     "id": "request",
                                     "key": "request",
-                                    "value": "hic",
+                                    "value": "praesentium",
                                     "description": "The request."
                                 }
                             ]
@@ -2570,7 +2639,7 @@
                                 {
                                     "id": "request",
                                     "key": "request",
-                                    "value": "quos",
+                                    "value": "doloremque",
                                     "description": "The request."
                                 }
                             ]
@@ -2736,7 +2805,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"lktisttypdzcvngzp\",\"address\":\"zbedwnuurhusuf\",\"phone\":\"wznacwmo\"}"
+                            "raw": "{\"name\":\"hyandlliqr\",\"address\":\"ptvbxwzaymmzjjjiyg\",\"phone\":\"pztxjlkpkn\"}"
                         },
                         "description": ""
                     },
@@ -2825,7 +2894,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"uvtbhqf\",\"address\":\"nodmeemknxrpauqkdfu\",\"phone\":\"aqfhnctfzgvnxkbbmcshcexr\"}"
+                            "raw": "{\"name\":\"r\",\"address\":\"uahcerpmmdzg\",\"phone\":\"rdxaiesrxpnriuznwsgehtxd\"}"
                         },
                         "description": ""
                     },
@@ -2937,7 +3006,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"xirlqrcxpzdzlhzowxwxcud\",\"id\":\"ff\",\"username\":\"zlmglrygarvsqdufuhtgb\",\"email\":\"rowena.schinner@example.org\",\"password\":\"z_qW6lU\\\/UN;yi$i&h\",\"role\":\"unit\"}"
+                            "raw": "{\"name\":\"bdoccdx\",\"id\":\"gzcbxphaljjdi\",\"username\":\"rcagfybxtsvimvxupuyzqqns\",\"email\":\"zmonahan@example.com\",\"password\":\"nIv8z4Y22N)\",\"role\":\"admin\"}"
                         },
                         "description": ""
                     },
@@ -3026,7 +3095,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"lw\",\"id\":\"qevpwfbqsqsooziwryyua\",\"username\":\"sy\",\"email\":\"purdy.melany@example.net\",\"password\":\"Py$e!<yJ\",\"role\":\"admin\"}"
+                            "raw": "{\"name\":\"qej\",\"id\":\"icazlpupgevvugjak\",\"username\":\"objqaea\",\"email\":\"vbailey@example.org\",\"password\":\"Ef))k5Yvh}%`x}NF\",\"role\":\"admin\"}"
                         },
                         "description": ""
                     },

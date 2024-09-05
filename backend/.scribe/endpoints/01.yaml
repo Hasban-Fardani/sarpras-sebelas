@@ -27,13 +27,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: "'$cjA"
+        example: ''
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: "'$cjA"
+      path: ''
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -82,13 +82,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: '=)['
+        example: ''
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: '=)['
+      path: ''
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -657,7 +657,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: sint
+        example: repudiandae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -666,14 +666,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: voluptatibus
+        example: beatae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: sint
-      qty: voluptatibus
+      item_id: repudiandae
+      qty: beatae
     fileParameters: []
     responses: []
     responseFields: []
@@ -719,14 +719,14 @@ endpoints:
         name: requestItemDetail
         description: ''
         required: true
-        example: unde
+        example: aliquid
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       request_item_id: RQ-001
-      requestItemDetail: unde
+      requestItemDetail: aliquid
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -743,7 +743,7 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 4
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -752,15 +752,15 @@ endpoints:
         name: qty_acc
         description: ''
         required: true
-        example: 19
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
       item_id: 17
-      qty: 4
-      qty_acc: 19
+      qty: 8
+      qty_acc: 15
     fileParameters: []
     responses: []
     responseFields: []
@@ -805,14 +805,14 @@ endpoints:
         name: requestItemDetail_id
         description: 'The ID of the requestItemDetail.'
         required: true
-        example: blanditiis
+        example: eos
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       request_item_id: RQ-001
-      requestItemDetail_id: blanditiis
+      requestItemDetail_id: eos
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

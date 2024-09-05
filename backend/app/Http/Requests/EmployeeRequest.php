@@ -11,7 +11,7 @@ class EmployeeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,7 @@ class EmployeeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id' => 'string|max:255',
+            'nip' => 'required|string|max:255',
             'name' => 'required|string',
             'position' => 'required|string',
             'phone' => 'required|string',

@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * @group Employee Management
@@ -51,7 +55,8 @@ class EmployeeController extends Controller
     public function store(EmployeeRequest $request)
     {
         $data = $request->validated();
-
+        $data['id'] = $data['nip'];
+        unset($data['nip']);
         $employee = Employee::create($data);
 
         return response()->json([
@@ -93,6 +98,48 @@ class EmployeeController extends Controller
         $employee->delete();
         return response()->json([
             'message' => 'success delete employee'
+        ]);
+    }
+
+    /**
+     * Make user account from employee
+     */
+    public function assign(Request $request, Employee $employee)
+    {
+        $validator = Validator::make($request->all(), [
+            'password' => 'required',
+            'role' => 'required|in:admin,pengawas,unit',
+            'username' => 'required|unique:users,username',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'invalid request',
+                'error' => $validator->errors()
+            ]);
+        }
+
+        $data = $validator->validated();
+        $data['id'] = $employee->id;
+        $user = User::create($data);
+
+        Log::info('create user ' . $user->username . ' from employee ' . $employee);
+
+        return response()->json([
+            'message' => 'success assign user to employee',
+        ]);
+    }
+
+    /**
+     * Delete user account
+     */
+    public function unassign(Employee $employee)
+    {
+        $user = User::where('id', $employee->id);
+        $user->delete();
+
+        return response()->json([
+            'message' => 'succes delete account',
         ]);
     }
 }
