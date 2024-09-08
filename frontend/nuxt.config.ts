@@ -1,22 +1,31 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
+
   modules: [
-    "nuxt-auth-sanctum",
     "@nuxt/image",
     "@nuxt/fonts",
-    "@nuxt/ui",
-    "@pinia/nuxt"
+    "@pinia/nuxt",
+    "@nuxtjs/tailwindcss",
+    "nuxt-auth-sanctum",
+    './modules/shadcn.ts',
   ],
+
   runtimeConfig: {
     public: {
-      apiBase: process.env.API_BASE_URL || 'http://localhost:8000/',
+      apiBase: process.env.BASE_API_URL ?? 'http://localhost:8000/',
     }
   },
+
   sanctum: {
+    baseUrl: process.env.BASE_API_URL ?? 'http://localhost:8000/',
     endpoints: {
-      user: '/me'
-    }
-  }
+      user: '/auth/user'
+    },
+    globalMiddleware: {
+      enabled: false
+    },
+  },
+
+  compatibilityDate: "2024-09-08",
 });

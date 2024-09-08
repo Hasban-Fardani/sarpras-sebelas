@@ -13,14 +13,22 @@
     "@capacitor/preferences": "^6.0.2",
     "@nuxt/fonts": "^0.7.2",
     "@nuxt/image": "^1.8.0",
-    "@nuxt/ui": "^2.18.4",
+    "@nuxtjs/tailwindcss": "^6.12.1",
     "@pinia/nuxt": "^0.5.4",
-    "nuxt": "^3.13.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.439.0",
+    "nuxt": "^3.13.1",
     "nuxt-auth-sanctum": "^0.4.10",
     "pinia": "^2.2.2",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul-vue": "^0.2.0",
+    "vee-validate": "^4.13.2",
     "vue": "latest"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3"
+    "@biomejs/biome": "1.8.3",
+    "typescript": "^5.5.4"
   }
 }
