@@ -3,6 +3,4 @@ definePageMeta({
   layout: 'admin',
 })
 </script>
-<template>
-  <TableItemComponent/>
-</template>
+<template></template>

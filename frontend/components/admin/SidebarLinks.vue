@@ -15,7 +15,7 @@ const sidebarActiveClass = "flex items-center gap-3 rounded-lg bg-muted px-3 py-
     <UsersIcon class="h-4 w-4" />
     Akun & Pegawai
   </NuxtLink>
-  <NuxtLink to="/admin/laporan" :class="sidebarClass" :active-class="sidebarActiveClass">
+  <NuxtLink to="/admin/report" :class="sidebarClass" :active-class="sidebarActiveClass">
     <LineChartIcon class="h-4 w-4" />
     Analytics
   </NuxtLink>
