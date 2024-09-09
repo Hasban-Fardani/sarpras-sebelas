@@ -1,3 +1,16 @@
+import type { NuxtApp } from "#app";
+
+interface TokenStorage {
+    /**
+     * Function to load a token from the storage.
+     */
+    get: (app: NuxtApp) => Promise<string | undefined>;
+    /**
+     * Function to save a token to the storage.
+     */
+    set: (app: NuxtApp, token?: string) => Promise<void>;
+}
+
 // LocalStorage example for Laravel Authentication token
 const tokenStorageKey = 'sanctum.storage.token';
 const localTokenStorage: TokenStorage = {
@@ -6,7 +19,8 @@ const localTokenStorage: TokenStorage = {
             return undefined;
         }
 
-        return window.localStorage.getItem(tokenStorageKey) ?? undefined;
+        console.log("GET token", localStorage.getItem(tokenStorageKey));
+        return localStorage.getItem(tokenStorageKey) ?? undefined;
     },
 
     set: async (app: NuxtApp, token?: string) => {
@@ -15,11 +29,12 @@ const localTokenStorage: TokenStorage = {
         }
 
         if (!token) {
-            window.localStorage.removeItem(tokenStorageKey);
+            localStorage.removeItem(tokenStorageKey);
             return;
         }
 
-        window.localStorage.setItem(tokenStorageKey, token);
+        console.log("SET token", token);
+        localStorage.setItem(tokenStorageKey, token);
     },
 };
 

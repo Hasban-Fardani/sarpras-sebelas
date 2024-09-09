@@ -8,22 +8,45 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/tailwindcss",
     "nuxt-auth-sanctum",
-    './modules/shadcn.ts',
+    "./modules/shadcn.ts",
+    "./modules/lucide-icon.ts",
   ],
+
+  // generate custom auto import
+  imports: {
+    imports: [
+      {
+        from: "vee-validate",
+        name: "useForm",
+        as: "useForm",
+      },
+    ],
+  },
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.BASE_API_URL ?? 'http://localhost:8000/',
-    }
+      apiBase: process.env.BASE_API_URL ?? "http://localhost:8000/",
+    },
+  },
+
+  image: {
+    format: ["webp"],
+    quality: 85,
   },
 
   sanctum: {
-    baseUrl: process.env.BASE_API_URL ?? 'http://localhost:8000/',
+    mode: "token",
+    baseUrl: process.env.BASE_API_URL ?? "http://localhost:8000/",
     endpoints: {
-      user: '/auth/user'
+      user: "/auth/user",
+      login: "/auth/login",
+      logout: "/auth/logout",
+    },
+    redirect: {
+      onGuestOnly: "/",
     },
     globalMiddleware: {
-      enabled: false
+      enabled: false,
     },
   },
 
