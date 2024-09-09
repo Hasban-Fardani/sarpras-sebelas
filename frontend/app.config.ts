@@ -19,7 +19,6 @@ const localTokenStorage: TokenStorage = {
             return undefined;
         }
 
-        console.log("GET token", localStorage.getItem(tokenStorageKey));
         return localStorage.getItem(tokenStorageKey) ?? undefined;
     },
 
@@ -33,7 +32,6 @@ const localTokenStorage: TokenStorage = {
             return;
         }
 
-        console.log("SET token", token);
         localStorage.setItem(tokenStorageKey, token);
     },
 };

@@ -22,5 +22,17 @@ onMounted(async () => {
 })
 </script>
 <template>
-  user: {{ user }}
+  <div class="flex gap-2 justify-center items-center w-screen h-screen">
+    <NuxtLink to="/admin/login" class="px-4 py-2 bg-slate-500 border text-white rounded">
+      Login Admin
+    </NuxtLink> 
+  
+    <NuxtLink to="/division/login" class="px-4 py-2 bg-slate-500 border text-white rounded">
+      Login Unit Kerja
+    </NuxtLink> 
+  
+    <NuxtLink to="/supervisor/login" class="px-4 py-2 bg-slate-500 border text-white rounded">
+      Login Kepala Sekolah
+    </NuxtLink> 
+  </div>
 </template>

@@ -1,12 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  experimental: {
+    watcher: "chokidar",
+  },
 
   modules: [
     "@nuxt/image",
     "@nuxt/fonts",
     "@pinia/nuxt",
     "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
     "nuxt-auth-sanctum",
     "./modules/shadcn.ts",
     "./modules/lucide-icon.ts",
@@ -47,6 +51,17 @@ export default defineNuxtConfig({
     },
     globalMiddleware: {
       enabled: false,
+    },
+  },
+
+  tailwindcss: {
+    config: {
+      content: [
+        "./components/**/*.vue",
+        "./layouts/**/*.vue",
+        "./pages/**/*.vue",
+        "./composables/**/*.{js,ts}",
+      ],
     },
   },
 

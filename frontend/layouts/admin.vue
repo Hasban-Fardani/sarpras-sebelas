@@ -10,7 +10,7 @@ onMounted(async () => {
 })
 
 definePageMeta({
-    middleware: ['sanctum:auth'],
+  middleware: ['sanctum:auth'],
 });
 </script>
 
@@ -19,185 +19,43 @@ definePageMeta({
     <div class="hidden border-r bg-muted/40 md:block">
       <div class="flex h-full max-h-screen flex-col gap-2">
         <div class="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
-          <a href="/" class="flex items-center gap-2 font-semibold">
-            <Package2Icon class="h-6 w-6" />
-            <span class="">Acme Inc</span>
-          </a>
-          <SButton variant="outline" size="icon" class="ml-auto h-8 w-8">
-            <BellIcon class="h-4 w-4" />
-            <span class="sr-only">Toggle notifications</span>
-          </SButton>
+          <Brand />
         </div>
+        <!-- Sidebar on desktop -->
         <div class="flex-1">
-          <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
-            <a
-              href="/"
-              class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-            >
-              <HomeIcon class="h-4 w-4" />
-              Dashboard
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-            >
-              <ShoppingCartIcon class="h-4 w-4" />
-              Orders
-              <Badge class="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                6
-              </Badge>
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
-            >
-              <PackageIcon class="h-4 w-4" />
-              Products
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-            >
-              <UsersIcon class="h-4 w-4" />
-              Customers
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-            >
-              <LineChartIcon class="h-4 w-4" />
-              Analytics
-            </a>
+          <nav class="grid items-start px-2 text-sm font-medium lg:px-4" aria-label="Sidebar">
+            <AdminSidebarLinks />
           </nav>
         </div>
         <div class="mt-auto p-4">
-          <SCard>
-            <SCardHeader class="p-2 pt-0 md:p-4">
-              <SCardTitle>Upgrade to Pro</SCardTitle>
-              <SCardDescription>
-                Unlock all features and get unlimited access to our support
-                team.
-              </SCardDescription>
-            </SCardHeader>
-            <SCardContent class="p-2 pt-0 md:p-4 md:pt-0">
-              <SButton size="sm" class="w-full">
-                Upgrade
-              </SButton>
-            </SCardContent>
-          </SCard>
         </div>
       </div>
     </div>
     <div class="flex flex-col">
       <header class="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
+        <!-- Sidebar on mobile -->
         <SSheet>
           <SSheetTrigger as-child>
-            <SButton
-              variant="outline"
-              size="icon"
-              class="shrink-0 md:hidden"
-            >
+            <SButton variant="outline" size="icon" class="shrink-0 md:hidden">
               <MenuIcon class="h-5 w-5" />
               <span class="sr-only">Toggle navigation menu</span>
             </SButton>
           </SSheetTrigger>
           <SSheetContent side="left" class="flex flex-col">
-            <nav class="grid gap-2 text-lg font-medium">
-              <a
-                href="#"
-                class="flex items-center gap-2 text-lg font-semibold"
-              >
-                <Package2Icon class="h-6 w-6" />
-                <span class="sr-only">Acme Inc</span>
-              </a>
-              <a
-                href="#"
-                class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <HomeIcon class="h-5 w-5" />
-                Dashboard
-              </a>
-              <a
-                href="#"
-                class="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
-              >
-                <ShoppingCartIcon class="h-5 w-5" />
-                Orders
-                <Badge class="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                  6
-                </Badge>
-              </a>
-              <a
-                href="#"
-                class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <PackageIcon class="h-5 w-5" />
-                Products
-              </a>
-              <a
-                href="#"
-                class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <UsersIcon class="h-5 w-5" />
-                Customers
-              </a>
-              <a
-                href="#"
-                class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <LineChartIcon class="h-5 w-5" />
-                Analytics
-              </a>
+            <nav class="grid gap-2 text-lg font-medium" aria-label="Sidebar">
+              <Brand />
+              <AdminSidebarLinks />
             </nav>
-            <div class="mt-auto">
-              <SCard>
-                <SCardHeader>
-                  <SCardTitle>Upgrade to Pro</SCardTitle>
-                  <SCardDescription>
-                    Unlock all features and get unlimited access to our
-                    support team.
-                  </SCardDescription>
-                </SCardHeader>
-                <SCardContent>
-                  <SButton size="sm" class="w-full">
-                    Upgrade
-                  </SButton>
-                </SCardContent>
-              </SCard>
-            </div>
+            <div class="mt-auto"></div>
           </SSheetContent>
         </SSheet>
-        <div class="w-full flex-1">
-          <form>
-            <div class="relative">
-              <SearchIcon class="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <SInput
-                type="search"
-                placeholder="Search products..."
-                class="w-full appearance-none bg-background pl-8 shadow-none md:w-2/3 lg:w-1/3"
-              />
-            </div>
-          </form>
-        </div>
-        <SDropdownMenu>
-          <SDropdownMenuTrigger as-child>
-            <SButton variant="secondary" size="icon" class="rounded-full">
-              <CircleUserIcon class="h-5 w-5" />
-              <span class="sr-only">Toggle user menu</span>
-            </SButton>
-          </SDropdownMenuTrigger>
-          <SDropdownMenuContent align="end">
-            <SDropdownMenuLabel>My Account</SDropdownMenuLabel>
-            <SDropdownMenuSeparator />
-            <SDropdownMenuItem>Settings</SDropdownMenuItem>
-            <SDropdownMenuItem>Support</SDropdownMenuItem>
-            <SDropdownMenuSeparator />
-            <SDropdownMenuItem>Logout</SDropdownMenuItem>
-          </SDropdownMenuContent>
-        </SDropdownMenu>
+        <div class="flex-1"></div>
+        <AdminNotification />
+        <UserDropdown />
       </header>
-      <main class="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
-        <slot/>
+      <main class="flex flex-1 flex-col gap-2 p-4 lg:px-6">
+        <AdminBreadcrumb />
+        <slot />
       </main>
     </div>
   </div>
