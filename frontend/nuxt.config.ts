@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.BASE_API_URL ?? "http://localhost:8000/",
+      apiBase: process.env.BASE_API_URL ?? "http://localhost:8000",
     },
   },
 
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
 
   sanctum: {
     mode: "token",
-    baseUrl: process.env.BASE_API_URL ?? "http://localhost:8000/",
+    baseUrl: process.env.BASE_API_URL ?? "http://localhost:8000",
     endpoints: {
       user: "/auth/user",
       login: "/auth/login",

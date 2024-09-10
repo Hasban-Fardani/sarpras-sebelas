@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { useApiUrl } from "~/composables/url";
+import { useApiUrl, useApiResourceUrl } from "~/composables/url";
 import type { Item } from "~/types/item";
 import type { PaginatedResponse } from "~/types/pagination";
 
@@ -10,23 +10,32 @@ export const useItemStore = defineStore('item', () => {
 
     // filters
     const search = ref('')
-    const sortBy = ref(['name'])
-    const sortDir = ref(['asc'])
+    const sortBy = ref()
+    const sortDir = ref()
     const perPage = ref(10)
     const page = ref(1)
 
     async function fetch() {
-        const url = useApiUrl(
-            '/item', 
+        const url = useApiResourceUrl(
+            'item', 
             page.value, perPage.value, search.value, 
-            sortBy.value.map(s => s.toLowerCase()), 
-            sortDir.value.map(s => s.toLowerCase())
+            sortBy.value, 
+            sortDir.value
         )
 
         onLoading.value = true
+        const token = useLocalStorage('sanctum.storage.token', '')
         try {
-            const { data: dataReponse } = await useFetch<PaginatedResponse<Item>>(url)
+            const { data: dataReponse, status, refresh } = await useFetch<PaginatedResponse<Item>>(url, {
+                headers: {
+                    Authorization: `Bearer ${token.value}`
+                }
+            })
+            
             data.value = dataReponse.value?.data ?? []
+
+            console.log("status: ", status.value, "data on fetch: ", data.value)
+            return refresh
         } catch (e) {
             error.value = "Something went wrong"
         } finally {
@@ -34,6 +43,40 @@ export const useItemStore = defineStore('item', () => {
         }
     }
 
+    async function update(item: Item) {
+        const url = `${useApiUrl()}/item/${item.id}`;
+        const token = useLocalStorage('sanctum.storage.token', '');
+        try {
+            await useFetch(url, {
+                method: 'PUT',
+                headers: {
+                    Authorization: `Bearer ${token.value}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(item),
+            });
+            await fetch(); // Refresh data after update
+        } catch (e) {
+            error.value = "Failed to update item";
+        }
+    }
+
+    
+    async function destroy(id: number) {
+        const url = `${useApiUrl()}/item//${id}`
+        const token = useLocalStorage('sanctum.storage.token', '');
+        try {
+            await useFetch(url, {
+                method: 'DELETE',
+                headers: {
+                    Authorization: `Bearer ${token.value}`,
+                },
+            });
+            await fetch();
+        } catch (e) {
+            error.value = "Failed to delete item";
+        }
+    }
     return {
         data,
         onLoading,
@@ -44,5 +87,7 @@ export const useItemStore = defineStore('item', () => {
         perPage,
         page,
         fetch,
+        update,
+        destroy
     }
 })
