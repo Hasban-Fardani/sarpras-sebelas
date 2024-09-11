@@ -4,7 +4,7 @@ import type { UserLogin } from '~/types/user';
 const { user, refreshIdentity } = useSanctumAuth<UserLogin>()
 
 onMounted(async () => {
-  if (!user.value) {
+  if (!user.value && process.server) {
     await refreshIdentity()
   }
 

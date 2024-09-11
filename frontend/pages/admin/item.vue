@@ -4,14 +4,16 @@ definePageMeta({
 })
 
 const itemStore = useItemStore()
-const data = itemStore.data
+const data = computed(() => itemStore.data)
+const onLoading = computed(() => itemStore.onLoading)
 
-onBeforeMount(async () => {
-  await itemStore.fetch()
-  console.log("DATA: ", data);
+onMounted(async () => {
+  if (!data.value.length && !onLoading.value) {
+    await itemStore.fetch()
+  }
 })
 
 </script>
 <template>
-  <TableItemComponent :data="data" />
+  <TableItemComponent :onLoading="onLoading" :data="data" />
 </template>

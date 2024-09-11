@@ -1,122 +1,66 @@
-<script setup>
-import { ref, onMounted } from 'vue';
-import { useItemStore } from '~/stores/item';
+<script setup lang="ts">
+import { FlexRender } from '@tanstack/vue-table'
+import { createTable } from './table'
+import { columns } from './column'
+import type { Item } from '~/types/item'
 
-const store = useItemStore();
-const items = ref([]);
-const columns = ref([
-  { Header: 'Code', accessor: 'id', sortable: true },
-  { Header: 'Nama', accessor: 'name', sortable: true },
-  { Header: 'Kategori', accessor: 'category.name', sortable: true },
-  { Header: 'Satuan', accessor: 'unit', sortable: true },
-  { Header: 'Harga', accessor: 'price', sortable: true },
-  { Header: 'Stok', accessor: 'stock', sortable: true },
-]);
+import Footer from './Footer.vue'
+import Toolbar from './Toolbar.vue'
 
-const page = ref(1);
-const totalPages = ref(1);
-const isEditModalOpen = ref(false);
-const isDeleteModalOpen = ref(false);
-const editItem = ref({});
-const itemToDelete = ref(null);
-const sortBy = ref('name');
-const sortDir = ref('asc');
+type PropsTable = {
+  data: Item[]
+  onLoading: boolean
+}
 
-const fetchData = async () => {
-  await store.fetch();
-  items.value = store.data;
-  totalPages.value = Math.ceil(store.total / store.perPage);
-};
-
-const handleSort = (column) => {
-  if (columns.value.find(col => col.accessor === column).sortable !== false) {
-    sortBy.value = column;
-    sortDir.value = sortDir.value === 'asc' ? 'desc' : 'asc'; // Toggle sort direction
-    fetchData(); // Fetch data with new sort parameters
-  }
-};
-
-const getValue = (item, accessor) => {
-  return accessor.split('.').reduce((o, key) => o?.[key], item);
-};
-
-const openEditModal = (item) => {
-  editItem.value = { ...item };
-  isEditModalOpen.value = true;
-};
-
-const closeEditModal = () => {
-  isEditModalOpen.value = false;
-};
-
-const updateItem = async () => {
-  await store.update(editItem.value);
-  closeEditModal();
-  fetchData();
-};
-
-const openDeleteModal = (item) => {
-  itemToDelete.value = item;
-  isDeleteModalOpen.value = true;
-};
-
-const closeDeleteModal = () => {
-  isDeleteModalOpen.value = false;
-};
-
-const deleteItem = async () => {
-  await store.destroy(itemToDelete.value.id);
-  closeDeleteModal();
-  fetchData();
-};
-
-onMounted(() => {
-  fetchData();
-});
+const props = defineProps<PropsTable>();
+const table = computed(() => createTable(props.data)) 
 </script>
+
 <template>
-  <STable>
-    <STableHeader>
-      <STableRow>
-        <STableHead v-for="column in columns" :key="column.accessor" @click="handleSort(column.accessor)"
-          :class="{ 'cursor-pointer': column.sortable }">
-          {{ column.Header }}
-          <span v-if="sortBy === column.accessor">
-            {{ sortDir === 'asc' ? '↑' : '↓' }}
-          </span>
-        </STableHead>
-        <STableHead>Aksi</STableHead>
-      </STableRow>
-    </STableHeader>
-    <STableBody>
-      <STableRow v-for="item in items" :key="item.id">
-        <STableCell v-for="column in columns" :key="column.accessor">
-          {{ getValue(item, column.accessor) }}
-        </STableCell>
-        <STableCell>
-          <SButton @click="openEditModal(item)">Edit</SButton>
-          <SButton @click="openDeleteModal(item)">Delete</SButton>
-        </STableCell>
-      </STableRow>
-    </STableBody>
-  </STable>
-  <Pagination :currentPage="page" :totalPages="totalPages" @pageChange="fetchData" />
-  <SButton @click="fetchData">Load Data</SButton>
+  <div class="w-full">
+    <Toolbar :table="table" />
+    <div class="rounded-md border">
+      <STable>
+        <STableHeader>
+          <STableRow v-for="headerGroup in table.getHeaderGroups()" :key="headerGroup.id">
+            <STableHead v-for="header in headerGroup.headers" :key="header.id">
+              <FlexRender v-if="!header.isPlaceholder" :render="header.column.columnDef.header"
+                :props="header.getContext()" />
+            </STableHead>
+          </STableRow>
+        </STableHeader>
+        <STableBody>
+          <template v-if="table.getRowModel().rows?.length">
+            <template v-for="row in table.getRowModel().rows" :key="row.id">
+              <STableRow :data-state="row.getIsSelected() && 'selected'">
+                <STableCell v-for="cell in row.getVisibleCells()" :key="cell.id">
+                  <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
+                </STableCell>
+              </STableRow>
+              <STableRow v-if="row.getIsExpanded()">
+                <STableCell :colspan="row.getAllCells().length">
+                  {{ JSON.stringify(row.original) }}
+                </STableCell>
+              </STableRow>
+            </template>
+          </template>
 
-  <!-- Modal Edit -->
-  <SDialog v-if="isEditModalOpen" @close="closeEditModal">
-    <form @submit.prevent="updateItem">
-      <input v-model="editItem.name" placeholder="Name" />
-      <input v-model="editItem.price" placeholder="Price" />
-      <SButton type="submit">Update</SButton>
-    </form>
-  </SDialog>
+          <STableRow v-else-if="props.onLoading">
+            <STableCell :colspan="columns.length" class="h-24 text-center">
+              <div class=" flex justify-center items-center">
+                <div class="animate-spin rounded-full h-10 w-10 border-b-3 border-gray-800"></div>
+              </div>
+            </STableCell>
+          </STableRow>
 
-  <!-- Modal Delete Confirmation -->
-  <SDialog v-if="isDeleteModalOpen" @close="closeDeleteModal">
-    <p>Are you sure you want to delete this item?</p>
-    <SButton @click="deleteItem">Yes</SButton>
-    <SButton @click="closeDeleteModal">No</SButton>
-  </SDialog>
+          <STableRow v-else>
+            <STableCell :colspan="columns.length" class="h-24 text-center">
+              Tidak ada data.
+            </STableCell>
+          </STableRow>
+        </STableBody>
+      </STable>
+    </div>
+    <Footer :table="table" />
+  </div>
 </template>
-
