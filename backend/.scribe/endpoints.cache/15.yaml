@@ -98,7 +98,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: consequuntur
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -107,14 +107,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: repellat
+        example: fuga
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: consequuntur
-      qty: repellat
+      item_id: consequatur
+      qty: fuga
     fileParameters: []
     responses: []
     responseFields: []
@@ -160,14 +160,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: sunt
+        example: quisquam
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       submission_id: SM-001
-      id: sunt
+      id: quisquam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -175,7 +175,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 5
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -184,7 +184,7 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 4
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -193,15 +193,15 @@ endpoints:
         name: qty_acc
         description: ''
         required: true
-        example: 7
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 5
-      qty: 4
-      qty_acc: 7
+      item_id: 15
+      qty: 1
+      qty_acc: 9
     fileParameters: []
     responses: []
     responseFields: []
@@ -246,14 +246,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: est
+        example: id
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       submission_id: SM-001
-      id: est
+      id: id
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

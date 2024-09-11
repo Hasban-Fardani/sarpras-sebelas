@@ -27,13 +27,13 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 197412311994031001
+        example: 1234567891011
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      employee_id: 197412311994031001
+      employee_id: 1234567891011
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -41,7 +41,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: rem
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -62,15 +62,15 @@ endpoints:
         name: username
         description: ''
         required: true
-        example: pariatur
+        example: sit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      password: rem
+      password: quis
       role: unit
-      username: pariatur
+      username: sit
     fileParameters: []
     responses: []
     responseFields: []
@@ -106,13 +106,13 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 197412311994031001
+        example: 1234567891011
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      employee_id: 197412311994031001
+      employee_id: 1234567891011
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -157,7 +157,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get all employees","current_page":1,"data":[{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197412311994031005,"name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197806311994031003,"name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198012311994031002,"name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198212311994031004,"name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/employees","per_page":10,"prev_page_url":null,"to":5,"total":5}'
+        content: '{"message":"success get all employees","current_page":1,"data":[{"id":1234567891011,"name":"Parwanton","position":"Wakasek Kesiswaan","phone":"0812132","email":"par@localhost.test","email_verified_at":null,"created_at":"2024-09-05T04:58:36.000000Z","updated_at":"2024-09-05T04:58:36.000000Z"},{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197412311994031005,"name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197806311994031003,"name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198012311994031002,"name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198212311994031004,"name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/employees","per_page":10,"prev_page_url":null,"to":6,"total":6}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -197,11 +197,11 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      id:
-        name: id
+      nip:
+        name: nip
         description: validation.max.
-        required: false
-        example: tztlefllgszx
+        required: true
+        example: dptqayzoednwpcnhayu
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -210,7 +210,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: tempore
+        example: exercitationem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -219,7 +219,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: eveniet
+        example: laborum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -228,7 +228,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: blanditiis
+        example: vitae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -237,17 +237,17 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: rogahn.eliezer@example.net
+        example: jast.kathlyn@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      id: tztlefllgszx
-      name: tempore
-      position: eveniet
-      phone: blanditiis
-      email: rogahn.eliezer@example.net
+      nip: dptqayzoednwpcnhayu
+      name: exercitationem
+      position: laborum
+      phone: vitae
+      email: jast.kathlyn@example.org
     fileParameters: []
     responses: []
     responseFields: []
@@ -283,13 +283,13 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 197412311994031001
+        example: 1234567891011
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 197412311994031001
+      id: 1234567891011
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -298,7 +298,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get employee","data":{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}'
+        content: '{"message":"success get employee","data":{"id":1234567891011,"name":"Parwanton","position":"Wakasek Kesiswaan","phone":"0812132","email":"par@localhost.test","email_verified_at":null,"created_at":"2024-09-05T04:58:36.000000Z","updated_at":"2024-09-05T04:58:36.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -339,21 +339,21 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 197412311994031001
+        example: 1234567891011
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 197412311994031001
+      id: 1234567891011
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      id:
-        name: id
+      nip:
+        name: nip
         description: validation.max.
-        required: false
-        example: jaevrtnudidmolpycni
+        required: true
+        example: iohryiksilvtfywegq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -362,7 +362,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: alias
+        example: minima
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -371,7 +371,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: officiis
+        example: magni
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -380,7 +380,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: assumenda
+        example: sit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -389,17 +389,17 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: alarkin@example.net
+        example: fermin.mertz@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      id: jaevrtnudidmolpycni
-      name: alias
-      position: officiis
-      phone: assumenda
-      email: alarkin@example.net
+      nip: iohryiksilvtfywegq
+      name: minima
+      position: magni
+      phone: sit
+      email: fermin.mertz@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -435,13 +435,13 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 197412311994031001
+        example: 1234567891011
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 197412311994031001
+      id: 1234567891011
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

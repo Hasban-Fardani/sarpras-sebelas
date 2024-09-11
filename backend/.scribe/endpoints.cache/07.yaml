@@ -87,7 +87,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: vigjvdldxf
+        example: fzln
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +96,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: true
-        example: er
+        example: bkmeeioearuzlvexnqylj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -105,7 +105,7 @@ endpoints:
         name: stock
         description: ''
         required: true
-        example: 12
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -114,7 +114,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 13
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -123,7 +123,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: omnis
+        example: blanditiis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -132,18 +132,18 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 5
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: vigjvdldxf
-      unit: er
-      stock: 12
-      min_stock: 13
-      category_id: omnis
-      price: 5
+      name: fzln
+      unit: bkmeeioearuzlvexnqylj
+      stock: 11
+      min_stock: 3
+      category_id: blanditiis
+      price: 4
     fileParameters:
       image: null
     responses: []
@@ -259,7 +259,7 @@ endpoints:
         name: name
         description: validation.max.
         required: false
-        example: jrdpwjcvbnhpgev
+        example: ihwqmlhvur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -268,7 +268,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: false
-        example: d
+        example: yfwwjrslceccb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -277,7 +277,7 @@ endpoints:
         name: stock
         description: ''
         required: false
-        example: 1
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -286,7 +286,7 @@ endpoints:
         name: min_stock
         description: ''
         required: false
-        example: 18
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -295,7 +295,7 @@ endpoints:
         name: category_id
         description: ''
         required: false
-        example: sint
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -304,18 +304,18 @@ endpoints:
         name: price
         description: ''
         required: false
-        example: 18
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: jrdpwjcvbnhpgev
-      unit: d
-      stock: 1
-      min_stock: 18
-      category_id: sint
-      price: 18
+      name: ihwqmlhvur
+      unit: yfwwjrslceccb
+      stock: 13
+      min_stock: 7
+      category_id: voluptatem
+      price: 3
     fileParameters:
       image: null
     responses: []

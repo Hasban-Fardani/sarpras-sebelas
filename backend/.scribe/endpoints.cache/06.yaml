@@ -78,13 +78,13 @@ endpoints:
         name: name
         description: 'Must contain only letters, numbers, dashes and underscores.'
         required: true
-        example: zaz-bda_y
+        example: qch-xpu_r
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: zaz-bda_y
+      name: qch-xpu_r
     fileParameters: []
     responses: []
     responseFields: []
@@ -190,13 +190,13 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: enim
+        example: cumque
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: enim
+      name: cumque
     fileParameters: []
     responses: []
     responseFields: []

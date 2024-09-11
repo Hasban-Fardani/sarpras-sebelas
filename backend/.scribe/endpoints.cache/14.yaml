@@ -88,7 +88,7 @@ endpoints:
         name: 'items[].item_id'
         description: ''
         required: true
-        example: 11
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -105,7 +105,7 @@ endpoints:
     cleanBodyParameters:
       items:
         -
-          item_id: 11
+          item_id: 4
           qty: 20
     fileParameters: []
     responses: []

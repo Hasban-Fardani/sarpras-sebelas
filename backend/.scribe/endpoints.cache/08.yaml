@@ -78,7 +78,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: hyandlliqr
+        example: ifp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -87,7 +87,7 @@ endpoints:
         name: address
         description: validation.max.
         required: false
-        example: ptvbxwzaymmzjjjiyg
+        example: lbcaub
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,15 +96,15 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: pztxjlkpkn
+        example: fwvbezkzmgc
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: hyandlliqr
-      address: ptvbxwzaymmzjjjiyg
-      phone: pztxjlkpkn
+      name: ifp
+      address: lbcaub
+      phone: fwvbezkzmgc
     fileParameters: []
     responses: []
     responseFields: []
@@ -210,7 +210,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: r
+        example: qayclacyfyyiy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -219,7 +219,7 @@ endpoints:
         name: address
         description: validation.max.
         required: false
-        example: uahcerpmmdzg
+        example: eatyjabojayxgorzfx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -228,15 +228,15 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: rdxaiesrxpnriuznwsgehtxd
+        example: jhnaxaemo
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: r
-      address: uahcerpmmdzg
-      phone: rdxaiesrxpnriuznwsgehtxd
+      name: qayclacyfyyiy
+      address: eatyjabojayxgorzfx
+      phone: jhnaxaemo
     fileParameters: []
     responses: []
     responseFields: []

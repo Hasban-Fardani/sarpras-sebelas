@@ -29,13 +29,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: ''
+        example: '*Y:12q'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: ''
+      path: '*Y:12q'
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
