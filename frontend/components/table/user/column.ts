@@ -16,7 +16,6 @@ export const columns: ColumnDef<Item>[] = [
   },
   {
     accessorKey: 'name',
-
     header: ({ column }) => {
       return h(Button, {
         variant: 'ghost',

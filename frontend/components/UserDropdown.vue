@@ -1,5 +1,17 @@
 <script setup lang="ts">
 const { logout } = useSanctumAuth()
+
+const doLogout = async () => {
+  logout().catch(async () => {
+    await showToast({title: 'Anda sudah logout', description: 'tidak bisa logout, anda tidak terauthentikasi'})
+    
+    useLocalStorage('sanctum.storage.token', null)
+    
+    location.reload()
+    
+    navigateTo('/admin/login')
+  })
+}
 </script>
 <template>
   <SDropdownMenu>
@@ -13,7 +25,7 @@ const { logout } = useSanctumAuth()
       <SDropdownMenuSeparator />
       <SDropdownMenuItem>Settings</SDropdownMenuItem>
       <SDropdownMenuSeparator />
-      <SDropdownMenuItem class="cursor-pointer" @click="logout">Logout</SDropdownMenuItem>
+      <SDropdownMenuItem class="cursor-pointer" @click="doLogout">Logout</SDropdownMenuItem>
     </SDropdownMenuContent>
   </SDropdownMenu>
 </template>

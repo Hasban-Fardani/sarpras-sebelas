@@ -1,9 +1,6 @@
 import { useToast, type ToastProps } from "~/components/ui/toast";
 
-type StringOrVNode =
-  | string
-  | VNode
-  | (() => VNode)
+type StringOrVNode = string | VNode | (() => VNode);
 
 type ToasterToast = ToastProps & {
   id: string;
@@ -15,12 +12,14 @@ type ToasterToast = ToastProps & {
 type Toast = Omit<ToasterToast, "id">;
 
 export const showToast = (props: Toast, dismissTime = 2000) => {
-  const { toast } = useToast();
-  const t = toast(props);
-
-  if (dismissTime > 0) {
+  return new Promise(() => {
+    const { toast } = useToast();
+    const t = toast(props);
+  
+    if (dismissTime > 0) {
       setTimeout(() => {
         t.dismiss();
       }, 2000);
-  }
+    }
+  })
 };

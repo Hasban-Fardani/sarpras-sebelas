@@ -7,6 +7,7 @@ const sidebarActiveClass = "flex items-center gap-3 rounded-lg bg-muted px-3 py-
     <HomeIcon class="h-4 w-4" />
     Dashboard
   </NuxtLink>
+  
   <NuxtLink to="/admin/item" :class="sidebarClass" :active-class="sidebarActiveClass">
     <PackageIcon class="h-4 w-4" />
     Barang

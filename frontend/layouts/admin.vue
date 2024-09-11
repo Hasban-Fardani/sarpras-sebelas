@@ -7,6 +7,14 @@ onMounted(async () => {
   if (!user.value && process.server) {
     await refreshIdentity()
   }
+
+  if (!user.value || useLocalStorage('sanctum.storage.token', null) == null) {
+    localStorage.removeItem('sanctum.storage.token')
+    await showToast({title: 'Anda tidak login'})
+    navigateTo('/admin/login')
+  }
+
+  console.log('admiinn')
 })
 
 definePageMeta({

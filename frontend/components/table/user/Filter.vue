@@ -7,16 +7,12 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-
-const onUpdate = ($event: string | number) => {
-  props.table.getColumn('name')?.setFilterValue($event)
-}
 </script>
 <template>
   <div class="flex gap-2 items-center py-4">
     <SInput class="max-w-sm" placeholder="Filter emails..."
       :model-value="table.getColumn('name')?.getFilterValue() as string"
-      @update:model-value="onUpdate" />
+      @update:model-value=" table.getColumn('name')?.setFilterValue($event)" />
     <SDropdownMenu>
       <SDropdownMenuTrigger as-child>
         <SButton variant="outline" class="ml-auto">

@@ -15,6 +15,7 @@ const { user, login, refreshIdentity } = useSanctumAuth()
 const onSubmit = form.handleSubmit(async (values) => {
   try {
     await login(values)
+    navigateTo('/redirect')
   } catch (error) {
     showToast({
       title: 'Gagal Login',
@@ -31,7 +32,7 @@ onMounted(async () => {
   }
 
   if (user.value) {
-    navigateTo('/')
+    navigateTo('/redirect')
   }
 })
 </script>

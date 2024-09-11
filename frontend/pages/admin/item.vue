@@ -15,5 +15,14 @@ onMounted(async () => {
 
 </script>
 <template>
+  <div class="w-full flex justify-between">
+    <h2 class="text-3xl font-bold">Barang</h2>
+    <div>
+      <SButton>
+        <PlusIcon />
+        Tambah
+      </SButton>
+    </div>
+  </div>
   <TableItemComponent :onLoading="onLoading" :data="data" />
 </template>
