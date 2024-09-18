@@ -29,10 +29,6 @@ jobs:
     - name: Install Composer dependencies
       run: cd ./backend && composer install --no-progress --prefer-dist --no-dev --optimize-autoloader
 
-    # Step 4: Generate Laravel Application Key
-    - name: Generate Laravel application key
-      run: cd ./backend && php artisan key:generate
-
     # Step 5: Build front-end assets
     - name: Install Bun.js and Build Assets
       uses: oven-sh/setup-bun@v2
