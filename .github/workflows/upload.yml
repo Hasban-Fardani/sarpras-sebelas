@@ -21,7 +21,7 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1'  # Laravel 11 biasanya membutuhkan PHP 8.x
+        php-version: '8.3' 
         extensions: mbstring, mysql, pdo, tokenizer, xml, ctype, fileinfo, json, bcmath, curl
         ini-values: post_max_size=256M, upload_max_filesize=256M, memory_limit=512M
 
@@ -33,7 +33,7 @@ jobs:
     - name: Generate Laravel application key
       run: cd ./backend && php artisan key:generate
 
-    # Step 5: Build front-end assets (jika menggunakan Laravel Mix)
+    # Step 5: Build front-end assets
     - name: Install Bun.js and Build Assets
       uses: oven-sh/setup-bun@v2
     - run: cd ./backend && npm install && npm run build
