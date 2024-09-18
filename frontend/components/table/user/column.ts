@@ -1,101 +1,69 @@
-import type { ColumnDef } from "@tanstack/vue-table"
-import { ArrowUpDown } from "lucide-vue-next"
-import { Button } from "~/components/ui/button"
-import type { Category } from "~/types/category"
-import type { Item } from "~/types/item"
+import type { ColumnDef } from "@tanstack/vue-table";
+import { ArrowUpDown } from "lucide-vue-next";
+import { Button } from "~/components/ui/button";
+import type { User } from "~/types/user";
 
-import DeleteAction from './DeleteAction.vue'
-import EditAction from './EditAction.vue'
+import DeleteAction from "./DeleteAction.vue";
+import EditAction from "./EditAction.vue";
+import type { Employee } from "~/types/employee";
 
-export const columns: ColumnDef<Item>[] = [
+export const columns: ColumnDef<User>[] = [
   {
-    accessorKey: 'image',
-    header: 'Gambar',
-    cell: ({ row }) => h('img', { src: row.getValue('image'), class: 'w-10 h-10' }),
-    enableSorting: false,
-  },
-  {
-    accessorKey: 'name',
+    accessorKey: "employee.name",
     header: ({ column }) => {
-      return h(Button, {
-        variant: 'ghost',
-        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
-      }, () => ['Nama', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
-    },
-    cell: ({ row }) => h('div', { class: '' }, row.getValue('name')),
-    enableSorting: true,
-  },
-
-  {
-    accessorKey: 'category',
-    header: ({ column }) => {
-      return h(Button, {
-        variant: 'ghost',
-        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
-      }, () => ['Kategori', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
-    },
-    cell: ({ row }) => h('div', { class: 'lowercase' }, row.getValue<Category>('category').name),
-  },
-  {
-    accessorKey: 'stock',
-    header: ({ column }) => {
-      return h(Button, {
-        variant: 'ghost',
-        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
-      }, () => ['Stok / Min.Stok', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
-    },
-    cell: ({ row }) => h('div', { class: 'text-center' }, [
-      h('span', row.getValue('stock')),
-      h('span', ' / '),
-      h('span', row.getValue('min_stock')),
-    ]),
-    enableSorting: true,
-  },
-  {
-    accessorKey: 'min_stock',
-    header: '',
-    cell: ''
-  },
-  {
-    accessorKey: 'unit',
-    header: 'Satuan',
-    cell: ({ row }) => h('div', row.getValue('unit')),
-    enableSorting: false,
-  },
-  {
-    accessorKey: 'price',
-    header: ({ column }) => {
-      return h(Button, {
-        variant: 'ghost',
-        onClick: () => {
-          const itemStore = useItemStore()
-          itemStore.sortBy = column.id
-          itemStore.sortDir = column.getIsSorted() === 'asc' ? 'desc' : 'asc'
-          itemStore.fetch();
-          // column.toggleSorting(column.getIsSorted() === 'asc')
+      return h(
+        Button,
+        {
+          variant: "ghost",
+          onClick: () => column.toggleSorting(column.getIsSorted() === "asc"),
         },
-      }, () => ['Harga', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+        () => ["Nama", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })]
+      );
     },
-    cell: ({ row }) => {
-      const amount = Number.parseFloat(row.getValue('price'))
 
-      // Format the price as a rupiah
-      const formatted = new Intl.NumberFormat('id-ID', {
-        style: 'currency',
-        currency: 'IDR',
-      }).format(amount)
+    cell: ({ row }) => h("div", { class: "" }, row.getValue<Employee>("employee").name),
+    enableSorting: true,
+  },
 
-      return h('div', { class: 'text-right font-medium' }, formatted)
+  {
+    accessorKey: "employee.email",
+    header: ({ column }) => {
+      return h(
+        Button,
+        {
+          variant: "ghost",
+          onClick: () => column.toggleSorting(column.getIsSorted() === "asc"),
+        },
+        () => ["Email", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })]
+      );
     },
+    cell: ({ row }) =>
+      h("div", {}, row.getValue<Employee>("employee").email),
   },
   {
-    accessorKey: 'id',
-    header: () => h('div', { class: 'text-center' }, 'Aksi'),
+    accessorKey: "role",
+    header: ({ column }) => {
+      return h(
+        Button,
+        {
+          variant: "ghost",
+          onClick: () => column.toggleSorting(column.getIsSorted() === "asc"),
+        },
+        () => ["Role", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })]
+      );
+    },
+    cell: ({ row }) =>
+      h("div", { class: "text-center" }, row.getValue("role")),
+    enableSorting: true,
+  },
+  {
+    accessorKey: "id",
+    header: () => h("div", { class: "text-center" }, "Aksi"),
     cell: ({ row }) => {
-      return h('div', { class: 'flex justify-end space-x-2' }, [
+      return h("div", { class: "flex justify-end space-x-2" }, [
         h(EditAction),
-        h(DeleteAction, { id: row.getValue('id'), name: row.getValue('name') }),
-      ])
-    }
-  }
-]
+        h(DeleteAction, { id: row.getValue("id"), name: row.getValue("name") }),
+      ]);
+    },
+  },
+];

@@ -2,18 +2,18 @@
 import { FlexRender } from '@tanstack/vue-table'
 import { createTable } from './table'
 import { columns } from './column'
-import type { Item } from '~/types/item'
+import type { User } from '~/types/user'
 
 import Footer from './Footer.vue'
 import Toolbar from './Toolbar.vue'
 
 type PropsTable = {
-  data: Item[]
+  data: User[]
   onLoading: boolean
 }
 
 const props = defineProps<PropsTable>();
-const table = computed(() => createTable(props.data)) 
+const table = computed(() => createTable(props.data))
 </script>
 
 <template>

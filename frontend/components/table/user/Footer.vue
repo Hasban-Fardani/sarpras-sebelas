@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { Table } from '@tanstack/vue-table';
-import type { Item } from '~/types/item';
+import type { User } from '~/types/user';
 
 type Props = {
-  table: Table<Item>
+  table: Table<User>
 }
 
 const props = defineProps<Props>();

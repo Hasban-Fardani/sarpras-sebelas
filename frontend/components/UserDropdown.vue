@@ -2,15 +2,9 @@
 const { logout } = useSanctumAuth()
 
 const doLogout = async () => {
-  logout().catch(async () => {
-    await showToast({title: 'Anda sudah logout', description: 'tidak bisa logout, anda tidak terauthentikasi'})
-    
-    useLocalStorage('sanctum.storage.token', null)
-    
-    location.reload()
-    
-    navigateTo('/admin/login')
-  })
+  await logout()
+  useLocalStorage('sanctum.storage.token', null)
+  return  navigateTo('/admin/login')
 }
 </script>
 <template>

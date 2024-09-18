@@ -27,18 +27,16 @@ jobs:
 
     # Step 3: Install Composer dependencies
     - name: Install Composer dependencies
-      run: composer install --no-progress --prefer-dist --no-dev --optimize-autoloader
+      run: cd ./backend && composer install --no-progress --prefer-dist --no-dev --optimize-autoloader
 
     # Step 4: Generate Laravel Application Key
     - name: Generate Laravel application key
-      run: php artisan key:generate
+      run: cd ./backend && php artisan key:generate
 
     # Step 5: Build front-end assets (jika menggunakan Laravel Mix)
-    - name: Install Node.js and Build Assets
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-    - run: npm install && npm run build
+    - name: Install Bun.js and Build Assets
+      uses: oven-sh/setup-bun@v2
+    - run: cd ./backend && npm install && npm run build
 
     # Step 7: Upload build hasil ke aaPanel menggunakan FTP
     - name: Deploy to aaPanel via FTP

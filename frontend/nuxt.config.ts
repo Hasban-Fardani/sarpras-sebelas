@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  // devtools: { enabled: true },
   experimental: {
     watcher: "chokidar",
   },
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.BASE_API_URL ?? "http://localhost:8000",
+      apiBase: process.env.BASE_API_URL ?? "https://api.sarpras.hasbanfardani.my.id",
     },
   },
 
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
 
   sanctum: {
     mode: "token",
-    baseUrl: process.env.BASE_API_URL ?? "http://localhost:8000",
+    baseUrl: process.env.BASE_API_URL ?? "https://api.sarpras.hasbanfardani.my.id",
     endpoints: {
       user: "/auth/user",
       login: "/auth/login",

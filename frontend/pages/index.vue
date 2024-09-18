@@ -9,7 +9,7 @@ onMounted(async () => {
   }
 
   if (user.value) {
-    navigateTo('/redirect')
+    return navigateTo('/redirect')
   }
 })
 </script>

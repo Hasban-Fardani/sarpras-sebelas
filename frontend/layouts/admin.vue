@@ -3,20 +3,6 @@ import type { UserLogin } from '~/types/user';
 
 const { user, refreshIdentity } = useSanctumAuth<UserLogin>()
 
-onMounted(async () => {
-  if (!user.value && process.server) {
-    await refreshIdentity()
-  }
-
-  if (!user.value || useLocalStorage('sanctum.storage.token', null) == null) {
-    localStorage.removeItem('sanctum.storage.token')
-    await showToast({title: 'Anda tidak login'})
-    navigateTo('/admin/login')
-  }
-
-  console.log('admiinn')
-})
-
 definePageMeta({
   middleware: ['sanctum:auth'],
 });
@@ -24,9 +10,9 @@ definePageMeta({
 
 <template>
   <div class="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-    <div class="hidden border-r bg-muted/40 md:block">
+    <div class="hidden border-r bg-white text-black md:block">
       <div class="flex h-full max-h-screen flex-col gap-2">
-        <div class="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
+        <div class="flex h-14 items-center border-none px-4 lg:h-[60px] lg:px-6">
           <Brand />
         </div>
         <!-- Sidebar on desktop -->
@@ -40,7 +26,7 @@ definePageMeta({
       </div>
     </div>
     <div class="flex flex-col">
-      <header class="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
+      <header class="flex h-14 items-center gap-4 border-b bg-white text-black px-4 lg:h-[60px] lg:px-6">
         <!-- Sidebar on mobile -->
         <SSheet>
           <SSheetTrigger as-child>
@@ -61,7 +47,7 @@ definePageMeta({
         <AdminNotification />
         <UserDropdown />
       </header>
-      <main class="flex flex-1 flex-col gap-2 p-4 lg:px-6">
+      <main class="flex flex-1 flex-col gap-2 p-4 lg:px-6 bg-gray-100">
         <AdminBreadcrumb />
         <slot />
       </main>

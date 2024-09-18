@@ -15,7 +15,7 @@ onMounted(async () => {
 </script>
 <template>
   <div class="w-full flex justify-between">
-    <h2 class="text-3xl font-bold">Barang</h2>
+    <h2 class="text-3xl font-bold">Barang Keluar</h2>
     <div class="flex">
       <SDialog>
         <SDialogTrigger as-child>
@@ -24,7 +24,7 @@ onMounted(async () => {
             Tambah
           </SButton>
         </SDialogTrigger>
-        <LazySDialogContent class="sm:max-w-[425px]">
+        <SDialogContent class="sm:max-w-[425px]">
           <SDialogHeader>
             <SDialogTitle>Tambah Barang</SDialogTitle>
             <SDialogDescription>
@@ -32,14 +32,10 @@ onMounted(async () => {
             </SDialogDescription>
           </SDialogHeader>
           
-          <LazyFormCreateItem />
-        </LazySDialogContent>
+          <FormCreateItem />
+        </SDialogContent>
       </SDialog>
     </div>
   </div>
-  <SCard>
-    <SCardContent>
-      <TableItemComponent :onLoading="onLoading" :data="data" />
-    </SCardContent>
-  </SCard>
+  <TableItemComponent :onLoading="onLoading" :data="data" />
 </template>

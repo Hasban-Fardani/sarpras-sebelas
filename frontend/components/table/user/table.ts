@@ -15,7 +15,7 @@ import {
 
 import { columns } from "./column";
 import { valueUpdater } from "~/lib/utils";
-import type { Item } from "~/types/item";
+import type { User } from "~/types/user";
 
 const sorting = ref<SortingState>([]);
 const columnFilters = ref<ColumnFiltersState>([]);
@@ -23,7 +23,7 @@ const columnVisibility = ref<VisibilityState>({});
 const rowSelection = ref({});
 const expanded = ref<ExpandedState>({});
 
-export const createTable = (data: Item[]) => {
+export const createTable = (data: User[]) => {
   return useVueTable({
     data: data,
     columns,

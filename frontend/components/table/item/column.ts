@@ -53,11 +53,6 @@ export const columns: ColumnDef<Item>[] = [
     enableSorting: true,
   },
   {
-    accessorKey: 'min_stock',
-    header: '',
-    cell: ''
-  },
-  {
     accessorKey: 'unit',
     header: 'Satuan',
     cell: ({ row }) => h('div', row.getValue('unit')),
@@ -88,6 +83,12 @@ export const columns: ColumnDef<Item>[] = [
 
       return h('div', { class: 'text-right font-medium' }, formatted)
     },
+  },
+  {
+    accessorKey: 'min_stock',
+    header: () => h('span', {class: 'hidden'}),
+    cell: () => h('span', {class: 'hidden'}),
+    enableHiding: true,
   },
   {
     accessorKey: 'id',
