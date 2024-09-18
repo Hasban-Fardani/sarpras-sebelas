@@ -19,7 +19,7 @@ jobs:
 
     # Step 7: Upload build hasil ke aaPanel menggunakan FTP
     - name: Deploy to aaPanel via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.3.5
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ${{ secrets.FTP_SERVER }}     # FTP Server (misalnya: ftp.yourdomain.com)
         username: ${{ secrets.FTP_USERNAME }} # FTP username
