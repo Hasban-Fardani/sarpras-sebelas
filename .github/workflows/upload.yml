@@ -36,6 +36,6 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}     # FTP Server (misalnya: ftp.yourdomain.com)
         username: ${{ secrets.FTP_USERNAME }} # FTP username
         password: ${{ secrets.FTP_PASSWORD }} # FTP password
-        local-dir: ./backend                  # Direktori local project yang akan di-upload
+        local-dir: ./backend/                  # Direktori local project yang akan di-upload
         server-dir: / # Direktori di server tempat Anda mengupload
         protocol: ftp                         # Bisa ftp, ftps, sftp
