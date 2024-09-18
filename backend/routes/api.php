@@ -19,6 +19,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\Supervisor\RequestCheckController;
 use App\Http\Controllers\Supervisor\SubmissionCheckController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 
@@ -35,8 +36,11 @@ Route::prefix('/auth')->group(function () {
     Route::post('/login', LoginController::class);
     Route::middleware('auth:sanctum')->post('/logout', LogoutController::class);
     Route::get('/user', function () {
-        return auth()->user();
+        return Auth::user();
     })->middleware('auth:sanctum');
+    Route::get('/check', function () {
+        return Auth::check();
+    });
 });
 
 Route::middleware('auth:sanctum')->group(function () {

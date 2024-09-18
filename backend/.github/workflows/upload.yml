@@ -1,0 +1,52 @@
+name: Deploy Laravel 11 to aaPanel
+
+on:
+  push:
+    branches:
+      - main  # Trigger ketika ada push ke branch 'main'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Setup PHP and dependencies
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'  # Laravel 11 biasanya membutuhkan PHP 8.x
+        extensions: mbstring, mysql, pdo, tokenizer, xml, ctype, fileinfo, json, bcmath, curl
+        ini-values: post_max_size=256M, upload_max_filesize=256M, memory_limit=512M
+
+    # Step 3: Install Composer dependencies
+    - name: Install Composer dependencies
+      run: composer install --no-progress --prefer-dist --no-dev --optimize-autoloader
+
+    # Step 4: Generate Laravel Application Key
+    - name: Generate Laravel application key
+      run: php artisan key:generate
+
+    # Step 5: Build front-end assets (jika menggunakan Laravel Mix)
+    - name: Install Node.js and Build Assets
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - run: npm install && npm run build
+
+    # Step 7: Upload build hasil ke aaPanel menggunakan FTP
+    - name: Deploy to aaPanel via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}     # FTP Server (misalnya: ftp.yourdomain.com)
+        username: ${{ secrets.FTP_USERNAME }} # FTP username
+        password: ${{ secrets.FTP_PASSWORD }} # FTP password
+        local-dir: ./backend                  # Direktori local project yang akan di-upload
+        server-dir: / # Direktori di server tempat Anda mengupload
+        protocol: ftp                         # Bisa ftp, ftps, sftp
