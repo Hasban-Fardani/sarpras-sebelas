@@ -24,10 +24,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 
 Route::get('/', function () {
-    return [
-        "message" => "hello, please visit /docs for documentation",
-        "docs" =>  URL::to('/docs')
-    ];
+    return "Hi, please visit " . env('APP_URL') . "/docs for documentation";
 });
 
 Route::get('/public/{path}', FileController::class)->where('path', '.*');
