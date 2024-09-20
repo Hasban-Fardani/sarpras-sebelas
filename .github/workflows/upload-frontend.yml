@@ -20,10 +20,10 @@ jobs:
     # Step 2: Install dependencies
     - name: Install dependencies
       uses: oven-sh/setup-bun@v2
-    - run: bun install
+    - run: cd frontend && bun install
 
     # Step 3: Build project
-    - run: bun run generate
+    - run: cd frontend && bun run generate
 
     # Step 4: Upload build hasil ke aaPanel menggunakan FTP
     - name: Deploy to aaPanel via FTP
