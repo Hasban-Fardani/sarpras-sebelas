@@ -14,26 +14,28 @@ export const useIncomingItemStore = defineStore("incomingItem", () => {
   const sortDir = ref("asc");
   const perPage = ref(10);
   const page = ref(1);
-  const url = useApiResourceUrl(
-    "incoming-item",
-    page.value,
-    perPage.value,
-    search.value,
-    sortBy.value,
-    sortDir.value
-  );
+  const url = computed(() =>
+    useApiResourceUrl(
+      "incoming-item",
+      page.value,
+      perPage.value,
+      search.value,
+      sortBy.value,
+      sortDir.value
+    ))
 
   async function fetch() {
     onLoading.value = true;
     const token = useLocalStorage("sanctum.storage.token", "");
     try {
-      const { data: dataReponse } = await $fetch<
-        PaginatedResponse<IncomingItem>
-      >(url, {
-        headers: {
-          Authorization: `Bearer ${token.value}`,
-        },
-      });
+      const { data: dataReponse } = await $fetch<PaginatedResponse<IncomingItem>>(
+        url.value,
+        {
+          headers: {
+            Authorization: `Bearer ${token.value}`,
+          },
+        }
+      );
 
       data.value = dataReponse ?? [];
 

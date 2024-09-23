@@ -3,7 +3,7 @@ definePageMeta({
   layout: 'admin',
 })
 
-const itemStore = useItemStore()
+const itemStore = useItemSubmissionStore()
 const data = computed(() => itemStore.data)
 const onLoading = computed(() => itemStore.onLoading)
 
@@ -15,7 +15,7 @@ onMounted(async () => {
 </script>
 <template>
   <div class="w-full flex justify-between">
-    <h2 class="text-3xl font-bold">Pengajuan Barang</h2>
+    <h2 class="text-3xl font-bold">Pengajuan Pengadaan Barang</h2>
     <div class="flex">
       <SDialog>
         <SDialogTrigger as-child>
@@ -37,5 +37,9 @@ onMounted(async () => {
       </SDialog>
     </div>
   </div>
-  <TableItemComponent :onLoading="onLoading" :data="data" />
+  <SCard class="bg-white mt-4">
+    <SCardContent>
+      <TableSubmissionItemComponent :onLoading="onLoading" :data="data" />
+    </SCardContent>
+  </SCard>  
 </template>

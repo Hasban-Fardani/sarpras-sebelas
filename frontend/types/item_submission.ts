@@ -1,13 +1,13 @@
+import type { Employee } from './employee'
 import type { Item } from './item'
-import type { User } from './user'
 
 interface ItemSubmission {
   id: number
-  id_unit: number
-  unit: User
-  jumlah_ajuan: number
-  status: 'selesai' | 'disetujui' | 'diajukan' | 'ditolak'
-  tanggal: string
+  division_id: number
+  division: Employee
+  total_items: number
+  status: string
+  created_at: string
 }
 
 interface ItemSubmissionDetail {
