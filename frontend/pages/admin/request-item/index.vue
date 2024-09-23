@@ -3,7 +3,7 @@ definePageMeta({
   layout: 'admin',
 })
 
-const itemStore = useItemStore()
+const itemStore = useItemRequestStore()
 const data = computed(() => itemStore.data)
 const onLoading = computed(() => itemStore.onLoading)
 
@@ -37,5 +37,9 @@ onMounted(async () => {
       </SDialog>
     </div>
   </div>
-  <TableItemComponent :onLoading="onLoading" :data="data" />
+  <SCard class="bg-white mt-4">
+    <SCardContent>
+      <TableRequestItemComponent :onLoading="onLoading" :data="data" />
+    </SCardContent>
+  </SCard>
 </template>

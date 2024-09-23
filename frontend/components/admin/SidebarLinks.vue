@@ -30,7 +30,7 @@ const sidebarActiveClass = "flex items-center gap-3 rounded-lg px-3 py-2 bg-prim
 
   <NuxtLink to="/admin/request-item" :class="sidebarClass" :active-class="sidebarActiveClass">
     <PackageIcon class="h-4 w-4" />
-    Pengajuan
+    Permintaan
   </NuxtLink>
 
   <NuxtLink to="/admin/users" :class="sidebarClass" :active-class="sidebarActiveClass">
