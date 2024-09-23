@@ -1,11 +1,11 @@
 import type { Item } from "./item";
 import type { Supplier } from "./supplier";
-import type { User } from "./user";
+import type { Employee } from "./employee";
 
 interface IncomingItem {
   id: number;
-  user_id: number;
-  user?: User;
+  employee_id: number;
+  employee?: Employee;
   supplier_id: number;
   supplier?: Supplier;
   note: string;

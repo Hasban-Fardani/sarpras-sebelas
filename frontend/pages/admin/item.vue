@@ -37,7 +37,7 @@ onMounted(async () => {
       </SDialog>
     </div>
   </div>
-  <SCard>
+  <SCard class="overflow-x-hidden">
     <SCardContent>
       <TableItemComponent :onLoading="onLoading" :data="data" />
     </SCardContent>

@@ -3,13 +3,13 @@ definePageMeta({
   layout: 'admin',
 })
 
-const itemStore = useItemStore()
-const data = computed(() => itemStore.data)
-const onLoading = computed(() => itemStore.onLoading)
+const incomingItemStore = useIncomingItemStore()
+const data = computed(() => incomingItemStore.data)
+const onLoading = computed(() => incomingItemStore.onLoading)
 
 onMounted(async () => {
   if (!data.value.length && !onLoading.value) {
-    await itemStore.fetch()
+    await incomingItemStore.fetch()
   }
 })
 </script>
@@ -39,7 +39,7 @@ onMounted(async () => {
   </div>
   <SCard class="bg-white mt-4">
     <SCardContent>
-      <TableItemComponent :onLoading="onLoading" :data="data" />
+      <TableIncomingItemComponent :onLoading="onLoading" :data="data" />
     </SCardContent>
   </SCard>
 </template>
