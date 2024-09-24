@@ -43,12 +43,13 @@ definePageMeta({
             <div class="mt-auto"></div>
           </SSheetContent>
         </SSheet>
-        <div class="flex-1"></div>
+        <div class="flex-1">
+          <AdminBreadcrumb />
+        </div>
         <AdminNotification />
         <UserDropdown />
       </header>
       <main class="flex flex-1 flex-col gap-2 p-4 lg:px-6 bg-gray-100">
-        <AdminBreadcrumb />
         <slot />
       </main>
     </div>

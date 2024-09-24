@@ -35,7 +35,12 @@ const sidebarActiveClass = "flex items-center gap-3 rounded-lg px-3 py-2 bg-prim
 
   <NuxtLink to="/admin/users" :class="sidebarClass" :active-class="sidebarActiveClass">
     <UsersIcon class="h-4 w-4" />
-    Akun & Pegawai
+    Data Akun
+  </NuxtLink>
+
+  <NuxtLink to="/admin/employee" :class="sidebarClass" :active-class="sidebarActiveClass">
+    <UsersIcon class="h-4 w-4" />
+    Data Pegawai
   </NuxtLink>
 
   <NuxtLink to="/admin/report" :class="sidebarClass" :active-class="sidebarActiveClass">
