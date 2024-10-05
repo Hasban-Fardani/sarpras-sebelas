@@ -9,10 +9,16 @@ class SubmissionItem extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
-    protected $keyType = 'string';
-    protected $autoIncrement = false;
+    protected $guarded = ['id'];
 
+    public function getTotalItemAttribute(){
+        return $this->details->sum('qty');
+    }
+
+    public function getTotalItemAccAttribute(){
+        return $this->details->sum('qty_acc');
+    }
+    
     public function division()
     {
         return $this->belongsTo(Employee::class, 'division_id', 'id');

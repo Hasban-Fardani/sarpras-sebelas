@@ -9,9 +9,7 @@ class IncomingItemDetail extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
-    protected $keyType = 'string';
-    protected $autoIncrement = false;
+    protected $guarded = ['id'];
 
     public function item()
     {

@@ -17,7 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -49,6 +49,6 @@ class User extends Authenticatable
 
     public function employee()
     {
-        return $this->hasOne(Employee::class, 'id', 'id');
+        return $this->hasOne(Employee::class, 'nip', 'nip');
     }
 }

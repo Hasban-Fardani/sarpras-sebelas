@@ -9,9 +9,7 @@ class Item extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
-    protected $keyType = 'string';
-    protected $autoIncrement = false;
+    protected $guarded = ['id'];
 
     // public static function boot()
     // {
@@ -32,11 +30,6 @@ class Item extends Model
     public function hasSufficientStock(int $amount): bool
     {
         return $this->stock >= $amount;
-    }
-
-    public function getKeyName()
-    {
-        return 'id';
     }
     
     public function getRouteKeyName()

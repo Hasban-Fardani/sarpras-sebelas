@@ -9,7 +9,5 @@ class Supplier extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];    
-    protected $keyType = 'string';
-    protected $autoIncrement = false;
+    protected $guarded = ['id'];
 }
