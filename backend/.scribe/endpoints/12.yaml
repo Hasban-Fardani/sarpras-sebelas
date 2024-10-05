@@ -6,7 +6,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'outgoing-item/{outgoing_item_id}/detail'
+    uri: 'admin/outgoing-item/{outgoing_item_id}/detail'
     metadata:
       groupName: 'Outgoing Item Detail'
       groupDescription: |-
@@ -27,13 +27,13 @@ endpoints:
         name: outgoing_item_id
         description: 'The ID of the outgoing item.'
         required: true
-        example: OTK-001
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      outgoing_item_id: OTK-001
+      outgoing_item_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -42,498 +42,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: |-
-          {
-              "message": "Class \"App\\Models\\ItemOutDetail\" not found",
-              "exception": "Error",
-              "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php",
-              "line": 853,
-              "trace": [
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php",
-                      "line": 421,
-                      "function": "newRelatedInstance",
-                      "class": "Illuminate\\Database\\Eloquent\\Model",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/app/Models/OutgoingItem.php",
-                      "line": 28,
-                      "function": "hasMany",
-                      "class": "Illuminate\\Database\\Eloquent\\Model",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Controllers/Admin/OutgoingItemDetailController.php",
-                      "line": 27,
-                      "function": "details",
-                      "class": "App\\Models\\OutgoingItem",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php",
-                      "line": 46,
-                      "function": "index",
-                      "class": "App\\Http\\Controllers\\Admin\\OutgoingItemDetailController",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 260,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\ControllerDispatcher",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 206,
-                      "function": "runController",
-                      "class": "Illuminate\\Routing\\Route",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 808,
-                      "function": "run",
-                      "class": "Illuminate\\Routing\\Route",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 144,
-                      "function": "Illuminate\\Routing\\{closure}",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
-                      "line": 51,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php",
-                      "line": 64,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Auth\\Middleware\\Authenticate",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
-                      "line": 25,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 144,
-                      "function": "Laravel\\Sanctum\\Http\\Middleware\\{closure}",
-                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 119,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
-                      "line": 24,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 119,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 807,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 786,
-                      "function": "runRouteWithinStack",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 750,
-                      "function": "runRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 739,
-                      "function": "dispatchToRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 201,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 144,
-                      "function": "Illuminate\\Foundation\\Http\\{closure}",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Middleware/ForceJsonRequestHeader.php",
-                      "line": 20,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "App\\Http\\Middleware\\ForceJsonRequestHeader",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
-                      "line": 31,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
-                      "line": 51,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php",
-                      "line": 27,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
-                      "line": 110,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
-                      "line": 62,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 57,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 119,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 176,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 145,
-                      "function": "sendRequestThroughRouter",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 310,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 298,
-                      "function": "callLaravelOrLumenRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 91,
-                      "function": "makeApiCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 44,
-                      "function": "makeResponseCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 35,
-                      "function": "makeResponseCallIfConditionsPass",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 237,
-                      "function": "__invoke",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 163,
-                      "function": "iterateThroughStrategies",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 95,
-                      "function": "fetchResponses",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 125,
-                      "function": "processRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 72,
-                      "function": "extractEndpointsInfoFromLaravelApp",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 50,
-                      "function": "extractEndpointsInfoAndWriteToDisk",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
-                      "line": 53,
-                      "function": "get",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 36,
-                      "function": "handle",
-                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 41,
-                      "function": "Illuminate\\Container\\{closure}",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 93,
-                      "function": "unwrapIfClosure",
-                      "class": "Illuminate\\Container\\Util",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 35,
-                      "function": "callBoundMethod",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 690,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 213,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\Container",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Command/Command.php",
-                      "line": 279,
-                      "function": "execute",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 182,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Command\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php",
-                      "line": 1047,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php",
-                      "line": 316,
-                      "function": "doRunCommand",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php",
-                      "line": 167,
-                      "function": "doRun",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
-                      "line": 197,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php",
-                      "line": 1203,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Console\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/hasban/Code/Github/sarpras-sebelas/backend/artisan",
-                      "line": 13,
-                      "function": "handleCommand",
-                      "class": "Illuminate\\Foundation\\Application",
-                      "type": "->"
-                  }
-              ]
-          }
+        content: '{"message":"Internal Server Error"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -544,7 +53,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -552,7 +61,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'outgoing-item/{outgoing_item_id}/detail'
+    uri: 'admin/outgoing-item/{outgoing_item_id}/detail'
     metadata:
       groupName: 'Outgoing Item Detail'
       groupDescription: |-
@@ -573,13 +82,13 @@ endpoints:
         name: outgoing_item_id
         description: 'The ID of the outgoing item.'
         required: true
-        example: OTK-001
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      outgoing_item_id: OTK-001
+      outgoing_item_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -587,7 +96,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -596,21 +105,30 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 9
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 2
-      qty: 9
+      item_id: 3
+      qty: 13
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -619,7 +137,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'outgoing-item/{outgoing_item_id}/detail/{id}'
+    uri: 'admin/outgoing-item/{outgoing_item_id}/detail/{id}'
     metadata:
       groupName: 'Outgoing Item Detail'
       groupDescription: |-
@@ -640,8 +158,8 @@ endpoints:
         name: outgoing_item_id
         description: 'The ID of the outgoing item.'
         required: true
-        example: OTK-001
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
@@ -649,14 +167,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: et
+        example: tempora
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      outgoing_item_id: OTK-001
-      id: et
+      outgoing_item_id: 1
+      id: tempora
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -664,7 +182,7 @@ endpoints:
         name: item_id
         description: ''
         required: false
-        example: 11
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -673,21 +191,30 @@ endpoints:
         name: qty
         description: ''
         required: false
-        example: 14
+        example: 18
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 11
-      qty: 14
+      item_id: 4
+      qty: 18
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -695,7 +222,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'outgoing-item/{outgoing_item_id}/detail/{id}'
+    uri: 'admin/outgoing-item/{outgoing_item_id}/detail/{id}'
     metadata:
       groupName: 'Outgoing Item Detail'
       groupDescription: |-
@@ -716,8 +243,8 @@ endpoints:
         name: outgoing_item_id
         description: 'The ID of the outgoing item.'
         required: true
-        example: OTK-001
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
@@ -725,25 +252,34 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: OTK-001
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      outgoing_item_id: OTK-001
-      id: OTK-001
+      outgoing_item_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null

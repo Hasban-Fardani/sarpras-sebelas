@@ -51,12 +51,21 @@ endpoints:
       password: password123
       id: '2121021210'
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 412
+        content: '{"message":"invalid fields","errors":{"nip":["validation.required"]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -87,12 +96,21 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"logged out"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null

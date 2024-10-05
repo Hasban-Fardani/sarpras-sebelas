@@ -195,7 +195,7 @@ INTRO
         // With API resources and transformers, Scribe tries to generate example models to use in your API responses.
         // By default, Scribe will try the model's factory, and if that fails, try fetching the first from the database.
         // You can reorder or remove strategies here.
-        'models_source' => ['factoryCreate', 'factoryMake', 'databaseFirst'],
+        'models_source' => ['databaseFirst', 'factoryCreate', 'factoryMake'],
     ],
 
     // The strategies Scribe will use to extract information about your routes at each stage.
@@ -241,7 +241,7 @@ INTRO
             Strategies\Responses\UseResponseFileTag::class,
             [
                 Strategies\Responses\ResponseCalls::class,
-                ['only' => ['GET *']]
+                ['exclude' => []]
             ]
         ],
         'responseFields' => [

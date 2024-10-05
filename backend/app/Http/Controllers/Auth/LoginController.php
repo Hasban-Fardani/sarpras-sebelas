@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
@@ -46,10 +47,10 @@ class LoginController extends Controller
 
         // login user
         $data = [
-            'id' => $request->input('nip'),
+            $type => $request->input($type),
             'password' => $request->input('password'),
         ];
-        $login = auth()->attempt($data);
+        $login = Auth::attempt($data);
         
         // check if login failed
         if (!$login) {
@@ -59,7 +60,7 @@ class LoginController extends Controller
         }
 
         // create token
-        $user = auth()->user();
+        $user = Auth::user();
         $token = $user->createToken('accessToken')->plainTextToken;
         
         Log::info("logged in user: {$user}");

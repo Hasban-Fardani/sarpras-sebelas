@@ -8,7 +8,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'employee/{employee_id}/assign'
+    uri: 'admin/employee/{employee_id}/assign'
     metadata:
       groupName: 'Employee Management'
       groupDescription: |-
@@ -29,13 +29,13 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 1234567891011
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      employee_id: 1234567891011
+      employee_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -43,7 +43,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: voluptates
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -52,7 +52,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: unit
+        example: admin
         type: string
         enumValues:
           - admin
@@ -64,22 +64,31 @@ endpoints:
         name: username
         description: ''
         required: true
-        example: at
+        example: dolor
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      password: voluptates
-      role: unit
-      username: at
+      password: ut
+      role: admin
+      username: dolor
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -87,7 +96,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'employee/{employee_id}/unassign'
+    uri: 'admin/employee/{employee_id}/unassign'
     metadata:
       groupName: 'Employee Management'
       groupDescription: |-
@@ -108,24 +117,33 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 1234567891011
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      employee_id: 1234567891011
+      employee_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"succes delete account"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -133,7 +151,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: employees
+    uri: admin/employees
     metadata:
       groupName: 'Employee Management'
       groupDescription: |-
@@ -159,7 +177,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get all employees","current_page":1,"data":[{"id":1234567891011,"name":"Parwanton","position":"Wakasek Kesiswaan","phone":"0812132","email":"par@localhost.test","email_verified_at":null,"created_at":"2024-09-05T04:58:36.000000Z","updated_at":"2024-09-05T04:58:36.000000Z"},{"id":197412311994031001,"name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197412311994031005,"name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":197806311994031003,"name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198012311994031002,"name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":198212311994031004,"name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/employees","per_page":10,"prev_page_url":null,"to":6,"total":6}'
+        content: '{"message":"success get all employees","current_page":1,"data":[{"id":1,"nip":"198012311994031002","name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":2,"nip":"197412311994031001","name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":3,"nip":"197806311994031003","name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":4,"nip":"198212311994031004","name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":5,"nip":"197412311994031005","name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/admin\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/employees","per_page":10,"prev_page_url":null,"to":5,"total":5}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -170,7 +188,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -178,7 +196,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: employees
+    uri: admin/employees
     metadata:
       groupName: 'Employee Management'
       groupDescription: |-
@@ -203,7 +221,7 @@ endpoints:
         name: nip
         description: validation.max.
         required: true
-        example: uujvwidscdprzskvtcl
+        example: pyq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -212,7 +230,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: tempore
+        example: fuga
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -221,7 +239,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: similique
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -230,7 +248,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: numquam
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -239,24 +257,33 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: icrooks@example.net
+        example: windler.destin@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      nip: uujvwidscdprzskvtcl
-      name: tempore
-      position: similique
-      phone: numquam
-      email: icrooks@example.net
+      nip: pyq
+      name: fuga
+      position: quia
+      phone: qui
+      email: windler.destin@example.net
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -264,7 +291,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'employees/{id}'
+    uri: 'admin/employees/{id}'
     metadata:
       groupName: 'Employee Management'
       groupDescription: |-
@@ -285,13 +312,13 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 1234567891011
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1234567891011
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -300,7 +327,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get employee","data":{"id":1234567891011,"name":"Parwanton","position":"Wakasek Kesiswaan","phone":"0812132","email":"par@localhost.test","email_verified_at":null,"created_at":"2024-09-05T04:58:36.000000Z","updated_at":"2024-09-05T04:58:36.000000Z"}}'
+        content: '{"message":"success get employee","data":{"id":1,"nip":"198012311994031002","name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -311,7 +338,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -320,7 +347,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'employees/{id}'
+    uri: 'admin/employees/{id}'
     metadata:
       groupName: 'Employee Management'
       groupDescription: |-
@@ -341,13 +368,13 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 1234567891011
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1234567891011
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -355,7 +382,7 @@ endpoints:
         name: nip
         description: validation.max.
         required: true
-        example: yxmyhwz
+        example: baetaui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -364,7 +391,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: pariatur
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -373,7 +400,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: blanditiis
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -382,7 +409,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: eligendi
+        example: unde
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -391,24 +418,33 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: fschmeler@example.net
+        example: abayer@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      nip: yxmyhwz
-      name: pariatur
-      position: blanditiis
-      phone: eligendi
-      email: fschmeler@example.net
+      nip: baetaui
+      name: rerum
+      position: omnis
+      phone: unde
+      email: abayer@example.net
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success update employee","data":{"id":1,"nip":"baetaui","name":"rerum","position":"omnis","phone":"unde","email":"abayer@example.net","email_verified_at":null,"created_at":null,"updated_at":"2024-10-05T16:49:40.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -416,7 +452,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'employees/{id}'
+    uri: 'admin/employees/{id}'
     metadata:
       groupName: 'Employee Management'
       groupDescription: |-
@@ -437,24 +473,33 @@ endpoints:
         name: id
         description: 'The ID of the employee.'
         required: true
-        example: 1234567891011
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1234567891011
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null

@@ -32,14 +32,14 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InZzWk1MeGUzWVZyQmcwbDkrNUJlWEE9PSIsInZhbHVlIjoiQm0vVDdXQ1c5dFIzdlZ4eVlkNHBUYXdrM1hKVUxpNkF0Uzk0cHBKY2R3OEF0NGhsU2V0LzRWQXdRQWZhOUZSMkFVM0grcWlBZFVqcjZBS2JLUDJQdFEvbDRhOGxWQVhVb25ESUxCQXRnVjZCQmdyMjU3b29lbFZJVmR4Rk81UngiLCJtYWMiOiIxZTZlNDdlNWFhYmJhOWY0N2FjYjUwMDYzMTI0MDhjZmVkYTdlYzU3Y2NkMjI3YTA4MGVjMWI0MjdiYTRiY2RiIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 10:14:29 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IjFFK0IzbkpvM29DRC82SFpxR3c4MGc9PSIsInZhbHVlIjoibUp5UUtpc0NWMkp2V2t6dlRtOVpIK1ovRTJWTU04RFc1anNIRXJnMDNrbG5GU0JvVEorZktqdDBmeFJVM01RdHNadGU2SENTWDF1c0hIbFlGVzQ4WXdvN2M2V21WUjg3NlhGU3VQNTJUeVlZclR0NUVMaXpPV3dKUFNPMCtJSUwiLCJtYWMiOiI2M2VkYzhhMzE2YjNmMTIzYWYzZGY0NTRhZmViNjkyNzA3MTk1NjFhOTgzNTEzYWJkODE1N2E2NjRlYmJiZjI2IiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 10:14:29 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; 7h9dj9zUhWMQsRV9iZQ1hJcB2Kki5KHm2WKGLqhW=eyJpdiI6InJHZGJ3aWNhazMzK1JhZzFKcklYeXc9PSIsInZhbHVlIjoidTZieEwrOWlCbUVUK0NkVklUbEd5OGdHa2d6SFZqZVpMc2pCalFmWWpZOHZ2K09jaS9pR1FBMy84TmExT2EzaFpPNDh3bzVVTTdPakNab20zVlN0QXJLakI1ZzZhMDFWbXRqN282VXhSb0dZTVhJUXNJQnpTOGZqMHAwUVpyQUduS2puRG9wSGF3MFBCS0lHNmFXemd3cjBiZ0VyNXAzUGR4cWZJaWhLdmtFOXNuN2YxUklQZDZUdExpKzRzMng0cXozVFNNUXM5N1JFRHBsWkE5TTRJMVhDOGdKVk9vQTRDMGN0SnNxSW1OMEFhaURKdmxkVjdvY0ZYTkpMdW94NHBxU09ISnRydCs1dHY0VWhZaVFoY2VQMzMwUEoxTnU1b0U4LzhUbnJsRFF3VlpqemliaEs0U0Q5MEJuSTJDTSsrT1FyWGNETktHQXFzUWtPUFhidStZMkJJNHRZckxMalVScUJJdWZCb2hRdGFtQlJ5WW5BN0VxdE1KMW43d3NJN0dDdHVJZndrSzRTWXNiaW8xRHJtdz09IiwibWFjIjoiNjk2MjgxYjljNWM1MDZiY2ZjZDkzMDk0Y2I2NjI1ZDBkNDBlMDZkMmVkMzdjYmQ5ZWJlOTg2M2Q4MzlmMTA0YSIsInRhZyI6IiJ9; expires=Sat, 05 Oct 2024 10:14:29 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ikh2NXlSZ0lKVUtlaXFGYXE4ZHNqTnc9PSIsInZhbHVlIjoiTFhmTFk0TURFNXpHbm52TFJOd3BzbFBSYzZsY05QdWdNa01qUExSZkloeFNIYnhkU1NHYldzR0lmUGQyQXNpb0FLYkpkL3RsNk16NnRNNjBmREdROFAvSHJ2cElPVVNkUzZ4eS9yZWRiVWo5K2pmQnhpUjdRNzd3RjhYUXJSaXoiLCJtYWMiOiI4MGMxMjUxNjk5Y2RkMjgyNGEzYzNlOGRiOGNjOWVkZWY5NmQ1MmMwMjAwZjJkZTE1ZGZkZDc4MDdlZWQxNjUwIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IllhNkRNckR0d0hXTXROUVRYTmhGY1E9PSIsInZhbHVlIjoiKzA0ZE5SellTSkNqMlpDVG15Wjl4RzhnZGUxYXBtK2xCUHlwREVSYzZXSFFTaXhYS0NTUnpXK1ZMS0xiSkhtcXpyR0lOMnhQVThVS3AzV3I1Z2UyOGRkZ2dxRWZiODA4aEI4ZTlYa1gvc1pOYjVYYTVxZWhFc3UxdTY3SFpwVDUiLCJtYWMiOiI5ZGEzN2IxN2E3MWNmNTVmYTcwYmUzYTUxNGRhNGY2MzBhOTU5ZDQ0ZTMxM2Y2ZWYzN2U4Y2RlYjhhZmRlZTFjIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; TjkLuzSbrp6UczZe0dHwFaQYlJwgl0Tp2iuJCC00=eyJpdiI6IkJCbEw3WHdaNFBnUkdYZ1RIN0Q0dGc9PSIsInZhbHVlIjoiUUlwa3pxbjB4UUk4STV6OXFpQXh4dTE2bDh3aFIxTXdzcHF0KzdPKzViNTBqOUs4cSt4VnhBQ2tkeTA0VVk1WEhWZEZZVUc3RnN0RjllVllLSVY0aE5zclFhOEhsMWRsdVNhcEZkSFZUV1J5WTFHVVNSQXhDTlRoYUVpakUxcCsxYkE5a1A2UlBOelhnSmk1VXFDTHRLcXNNVjRVbDVQak5Tbzd3N0dxTFlGdXh4enZhQW9CazN6dXNGTzNoNmJ3UEkreENvMjhKS0ptOFgwZnUybU5lcmk4ZWtuekl6SW1RYTN2Q09nNzh0Uk80UkZhQ2FMSW9ET082cnV2RUxpTlpSWUlpTWp5aWx4d0FudFNNRE5JYkNXT2phUGNCUk5KaUx6OW10blhGZ2N4RnJ3RVJQTGRKdUZDQWpraW5IVlE0WGM0Y3o5dGRZdHlyR3Nob2tuWmpTTjlKNENPOThuekJHcXJpdXhONUhBem5EVkVRcG11bEpQQ1Y1VVE1OE0vSXFwNjBWVVZ5UWdGL0hPV1JUVENtZz09IiwibWFjIjoiMmIzNWM2MWRhMGRkNDk5YzJmNjk0ODAzM2FkYWYzY2FmYWRjY2VjNDFmOGQwMWRlOWU2N2Q4OGM5ZDEwZTMzNyIsInRhZyI6IiJ9; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -71,7 +71,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: 'Hi, please visit http://localhost:8000/docs for documentation'
+        content: "Hi, please visit <a href='http://localhost:8000/docs'>http://localhost:8000/docs </a> for documentation"
         headers:
           content-type: 'text/html; charset=UTF-8'
           cache-control: 'no-cache, private'
@@ -82,7 +82,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -114,7 +114,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"id":197806311994031003,"username":"admin","role":"admin","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}'
+        content: '{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-05T16:29:13.000000Z","updated_at":"2024-10-05T16:29:13.000000Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -125,7 +125,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -168,7 +168,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null

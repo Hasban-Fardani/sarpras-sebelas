@@ -8,7 +8,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: category
+    uri: admin/category
     metadata:
       groupName: 'Category Management'
       groupDescription: |-
@@ -34,7 +34,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get all categories","current_page":1,"data":[{"id":"ATK","name":"Alat Tulis Kantor","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/category?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/category?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/category?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/category","per_page":10,"prev_page_url":null,"to":1,"total":1}'
+        content: '{"message":"success get all categories","current_page":1,"data":[{"id":1,"code":"ATK","name":"Alat Tulis Kantor","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/admin\/category?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/category?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/category?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/category","per_page":10,"prev_page_url":null,"to":1,"total":1}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -45,7 +45,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -53,7 +53,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: category
+    uri: admin/category
     metadata:
       groupName: 'Category Management'
       groupDescription: |-
@@ -78,20 +78,29 @@ endpoints:
         name: name
         description: 'Must contain only letters, numbers, dashes and underscores.'
         required: true
-        example: hub-odd_u
+        example: yod-mam_r
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: hub-odd_u
+      name: yod-mam_r
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -99,7 +108,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'category/{id}'
+    uri: 'admin/category/{id}'
     metadata:
       groupName: 'Category Management'
       groupDescription: |-
@@ -120,13 +129,13 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: ATK
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: ATK
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -135,7 +144,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get category","data":{"id":"ATK","name":"Alat Tulis Kantor","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}}'
+        content: '{"message":"success get category","data":{"id":1,"code":"ATK","name":"Alat Tulis Kantor","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -146,7 +155,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -155,7 +164,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'category/{id}'
+    uri: 'admin/category/{id}'
     metadata:
       groupName: 'Category Management'
       groupDescription: |-
@@ -176,13 +185,13 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: ATK
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: ATK
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -190,20 +199,29 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: voluptas
+        example: odit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: voluptas
+      name: odit
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success update category","data":{"id":1,"code":"ATK","name":"odit","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:49:41.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -211,7 +229,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'category/{id}'
+    uri: 'admin/category/{id}'
     metadata:
       groupName: 'Category Management'
       groupDescription: |-
@@ -232,24 +250,33 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: ATK
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: ATK
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success delete category"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null

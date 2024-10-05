@@ -6,7 +6,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: supplier
+    uri: admin/supplier
     metadata:
       groupName: 'Supplier Management'
       groupDescription: |-
@@ -32,7 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get suppliers","current_page":1,"data":[{"id":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"},{"id":"S0002","name":"Supplier 2","address":"Address 2","phone":"08123456790","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"},{"id":"S0003","name":"Supplier 3","address":"Address 3","phone":"08123456791","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"},{"id":"S0004","name":"Supplier 4","address":"Address 4","phone":"08123456792","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"},{"id":"S0005","name":"Supplier 5","address":"Address 5","phone":"08123456793","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/supplier?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/supplier?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/supplier?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/supplier","per_page":10,"prev_page_url":null,"to":5,"total":5}'
+        content: '{"message":"success get suppliers","current_page":1,"data":[{"id":1,"code":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":2,"code":"S0002","name":"Supplier 2","address":"Address 2","phone":"08123456790","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":3,"code":"S0003","name":"Supplier 3","address":"Address 3","phone":"08123456791","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":4,"code":"S0004","name":"Supplier 4","address":"Address 4","phone":"08123456792","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":5,"code":"S0005","name":"Supplier 5","address":"Address 5","phone":"08123456793","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":6,"code":"SP-7921","name":"CV Santoso Uyainah","address":"Ki. Soekarno Hatta No. 605, Padang 66528, Kalsel","phone":"(+62) 807 398 910","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":7,"code":"SP-5920","name":"PJ Pertiwi","address":"Ki. Kiaracondong No. 720, Jayapura 17530, Sumbar","phone":"0992 6414 801","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":8,"code":"SP-6068","name":"PJ Widodo Tbk","address":"Gg. Yosodipuro No. 741, Administrasi Jakarta Utara 70879, Banten","phone":"(+62) 952 3147 555","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":9,"code":"SP-7459","name":"PJ Widiastuti","address":"Jr. Sutarto No. 499, Kupang 59680, Sumbar","phone":"(+62) 531 5917 7381","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"},{"id":10,"code":"SP-7329","name":"Fa Megantara (Persero) Tbk","address":"Jr. Rajawali No. 869, Tarakan 55783, Babel","phone":"0301 0847 7136","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/admin\/supplier?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/supplier?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/supplier?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/supplier","per_page":10,"prev_page_url":null,"to":10,"total":10}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -51,7 +51,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: supplier
+    uri: admin/supplier
     metadata:
       groupName: 'Supplier Management'
       groupDescription: |-
@@ -76,7 +76,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: z
+        example: ptfhksu
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -85,7 +85,7 @@ endpoints:
         name: address
         description: validation.max.
         required: false
-        example: bwgbsigwxikndexlymlxuavbm
+        example: gsvlmhkvwn
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -94,22 +94,31 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: eomvskqoymegkoykvhsqctx
+        example: lpzafkpgq
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: z
-      address: bwgbsigwxikndexlymlxuavbm
-      phone: eomvskqoymegkoykvhsqctx
+      name: ptfhksu
+      address: gsvlmhkvwn
+      phone: lpzafkpgq
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -117,7 +126,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'supplier/{id}'
+    uri: 'admin/supplier/{id}'
     metadata:
       groupName: 'Supplier Management'
       groupDescription: |-
@@ -138,13 +147,13 @@ endpoints:
         name: id
         description: 'The ID of the supplier.'
         required: true
-        example: S0001
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: S0001
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -153,7 +162,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get supplier","data":{"id":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-09-03T04:29:18.000000Z","updated_at":"2024-09-03T04:29:18.000000Z"}}'
+        content: '{"message":"success get supplier","data":{"id":1,"code":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -164,7 +173,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -173,7 +182,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'supplier/{id}'
+    uri: 'admin/supplier/{id}'
     metadata:
       groupName: 'Supplier Management'
       groupDescription: |-
@@ -194,13 +203,13 @@ endpoints:
         name: id
         description: 'The ID of the supplier.'
         required: true
-        example: S0001
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: S0001
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -208,7 +217,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: haxgpt
+        example: uxgwq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -217,7 +226,7 @@ endpoints:
         name: address
         description: validation.max.
         required: false
-        example: itoqgftjefasqdbz
+        example: uxqa
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -226,22 +235,31 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: xxtgfbyacdon
+        example: ravdfmnrwnbov
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: haxgpt
-      address: itoqgftjefasqdbz
-      phone: xxtgfbyacdon
+      name: uxgwq
+      address: uxqa
+      phone: ravdfmnrwnbov
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success create supplier","data":true}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -249,7 +267,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'supplier/{id}'
+    uri: 'admin/supplier/{id}'
     metadata:
       groupName: 'Supplier Management'
       groupDescription: |-
@@ -270,24 +288,33 @@ endpoints:
         name: id
         description: 'The ID of the supplier.'
         required: true
-        example: S0001
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: S0001
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null

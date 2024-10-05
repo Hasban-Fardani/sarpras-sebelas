@@ -1,17 +1,17 @@
-name: 'Submission Item Detail Management'
+name: 'Request Item Management'
 description: |-
 
-  API endpoints for managing submission item detail
+  API endpoints for managing request item
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'submission/{submission_id}/detail'
+    uri: admin/request-item
     metadata:
-      groupName: 'Submission Item Detail Management'
+      groupName: 'Request Item Management'
       groupDescription: |-
 
-        API endpoints for managing submission item detail
+        API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
@@ -22,18 +22,8 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      submission_id:
-        name: submission_id
-        description: 'The ID of the submission.'
-        required: true
-        example: SM-001
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      submission_id: SM-001
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -42,7 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get all submission item details","current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/submission\/SM-001\/detail?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/submission\/SM-001\/detail?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/submission\/SM-001\/detail?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/submission\/SM-001\/detail","per_page":10,"prev_page_url":null,"to":null,"total":0}'
+        content: '{"message":"success get all request items","current_page":1,"data":[{"id":1,"code":"RQ-001","employee_id":4,"status":"diajukan","note":null,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":2,"code":"RQ-002","employee_id":5,"status":"draf","note":null,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":3,"code":"RQ-003","employee_id":4,"status":"disetujui","note":null,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":4,"code":"RQ-004","employee_id":5,"status":"diajukan","note":null,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":5,"code":"RQ-005","employee_id":4,"status":"disetujui","note":null,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":6,"code":"RI7574","employee_id":5,"status":"disetujui","note":"A at rerum rerum voluptatem suscipit qui veniam ducimus.","created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":7,"code":"RI8858","employee_id":5,"status":"ditolak","note":"Molestiae molestiae quam sapiente adipisci.","created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":8,"code":"RI2891","employee_id":2,"status":"draf","note":"Animi tenetur nulla rerum aspernatur.","created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":2,"name":"Sutarsa"}},{"id":9,"code":"RI1415","employee_id":4,"status":"ditolak","note":"Tempora ratione quos aut ad.","created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":10,"code":"RI8227","employee_id":4,"status":"ditolak","note":"Quis omnis similique autem atque.","created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}}],"first_page_url":"http:\/\/localhost:8000\/admin\/request-item?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/request-item?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/request-item?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/request-item","per_page":10,"prev_page_url":null,"to":10,"total":10}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -53,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -61,12 +51,12 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'submission/{submission_id}/detail'
+    uri: admin/request-item
     metadata:
-      groupName: 'Submission Item Detail Management'
+      groupName: 'Request Item Management'
       groupDescription: |-
 
-        API endpoints for managing submission item detail
+        API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
@@ -77,66 +67,44 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      submission_id:
-        name: submission_id
-        description: 'The ID of the submission.'
-        required: true
-        example: SM-001
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      submission_id: SM-001
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      item_id:
-        name: item_id
-        description: ''
-        required: true
-        example: aperiam
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      qty:
-        name: qty
-        description: ''
-        required: true
-        example: sit
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      item_id: aperiam
-      qty: sit
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
     custom: []
   -
     httpMethods:
-      - PUT
-      - PATCH
-    uri: 'submission/{submission_id}/detail/{id}'
+      - GET
+    uri: 'admin/request-item/{id}'
     metadata:
-      groupName: 'Submission Item Detail Management'
+      groupName: 'Request Item Management'
       groupDescription: |-
 
-        API endpoints for managing submission item detail
+        API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: true
       custom: []
@@ -145,68 +113,37 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
-        description: 'The ID of the submission.'
-        required: true
-        example: SM-001
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
       id:
         name: id
-        description: 'The ID of the detail.'
+        description: 'The ID of the request item.'
         required: true
-        example: deleniti
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: SM-001
-      id: deleniti
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      item_id:
-        name: item_id
-        description: ''
-        required: true
-        example: 14
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      qty:
-        name: qty
-        description: ''
-        required: true
-        example: 3
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      qty_acc:
-        name: qty_acc
-        description: ''
-        required: true
-        example: 14
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      item_id: 14
-      qty: 3
-      qty_acc: 14
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"Internal Server Error"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
@@ -214,12 +151,12 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'submission/{submission_id}/detail/{id}'
+    uri: 'admin/request-item/{id}'
     metadata:
-      groupName: 'Submission Item Detail Management'
+      groupName: 'Request Item Management'
       groupDescription: |-
 
-        API endpoints for managing submission item detail
+        API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
@@ -231,38 +168,37 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
-        description: 'The ID of the submission.'
-        required: true
-        example: SM-001
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
       id:
         name: id
-        description: 'The ID of the detail.'
+        description: 'The ID of the request item.'
         required: true
-        example: aut
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: SM-001
-      id: aut
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success delete request item"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|LoM2AdYqtVHFisASET41cYqqSs5h0aeNwOz5xhoB46fbe5f1'
+      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
     controller: null
     method: null
     route: null
