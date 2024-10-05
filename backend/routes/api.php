@@ -1,30 +1,15 @@
 <?php
 
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\EmployeeController;
-use App\Http\Controllers\Admin\ItemController;
-use App\Http\Controllers\Admin\IncomingItemController;
-use App\Http\Controllers\Admin\IncomingItemDetailController;
-use App\Http\Controllers\Admin\OutgoingItemController;
-use App\Http\Controllers\Admin\OutgoingItemDetailController;
-use App\Http\Controllers\Admin\RequestItemController;
-use App\Http\Controllers\Admin\RequestItemDetailController;
-use App\Http\Controllers\Admin\SubmissionItemController;
-use App\Http\Controllers\Admin\SubmissionItemDetailController;
-use App\Http\Controllers\Admin\SupplierController;
-use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\Admin;
+use App\Http\Controllers\Supervisor;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
-use App\Http\Controllers\FileController;
-use App\Http\Controllers\Supervisor\RequestCheckController;
-use App\Http\Controllers\Supervisor\SubmissionCheckController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\URL;
 
 Route::get('/', function () {
-    return "Hi, please visit " . env('APP_URL') . "/docs for documentation";
+    return "Hi, please visit <a href='" . env('APP_URL') . "/docs'>" . env('APP_URL') . "/docs </a> for documentation";
 });
 
 Route::get('/public/{path}', FileController::class)->where('path', '.*');
@@ -43,45 +28,54 @@ Route::prefix('/auth')->group(function () {
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/private/{path}', FileController::class)->where('path', '.*');
 
-    Route::prefix('/dashboard')->group(function () {
-        Route::get('/counts', [DashboardController::class, 'getCounts']);
-        Route::get('/stats/request', [DashboardController::class, 'getStatsRequest']);
-        Route::get('/stats/item', [DashboardController::class, 'getStatsItem']);
+    Route::prefix('admin')->middleware('can:admin')->group(function () {
+        
+        Route::prefix('/dashboard')->group(function () {
+            Route::get('/counts', [Admin\DashboardController::class, 'getCounts']);
+            Route::get('/stats/request', [Admin\DashboardController::class, 'getStatsRequest']);
+            Route::get('/stats/item', [Admin\DashboardController::class, 'getStatsItem']);
+        });
+    
+        // Users and Employees
+        Route::post('/employee/{employee}/assign', [Admin\EmployeeController::class, 'assign']);
+        Route::post('/employee/{employee}/unassign', [Admin\EmployeeController::class, 'unassign']);
+        Route::apiResource('employees', Admin\EmployeeController::class);
+        Route::apiResource('users', Admin\UsersController::class);
+    
+        // Item Management
+        Route::apiResource('category', Admin\CategoryController::class);
+    
+        Route::apiResource('item', Admin\ItemController::class);
+    
+        Route::apiResource('supplier', Admin\SupplierController::class);
+    
+        // Transactions
+        Route::apiResource('incoming-item', Admin\IncomingItemController::class)
+            ->except('update');
+        Route::apiResource('incoming-item.detail', Admin\IncomingItemDetailController::class)
+            ->except('show');
+    
+        Route::apiResource('outgoing-item', Admin\OutgoingItemController::class)
+            ->except('update');
+        Route::apiResource('outgoing-item.detail', Admin\OutgoingItemDetailController::class)
+            ->except('show');
+    
+        Route::apiResource('submission', Admin\SubmissionItemController::class)
+            ->except('update');
+        Route::apiResource('submission.detail', Admin\SubmissionItemDetailController::class)
+            ->except('show');
+    
+        Route::apiResource('request-item', Admin\RequestItemController::class)
+            ->except('update');
+        Route::apiResource('request-item.detail', Admin\RequestItemDetailController::class)
+            ->except('show')
+            ->parameter('detail', 'requestItemDetail');
     });
 
-    Route::post('/employee/{employee}/assign', [EmployeeController::class, 'assign']);
-    Route::post('/employee/{employee}/unassign', [EmployeeController::class, 'unassign']);
-    Route::apiResource('employees', EmployeeController::class);
-    Route::apiResource('users', UsersController::class);
-
-    Route::apiResource('category', CategoryController::class);
-
-    Route::apiResource('item', ItemController::class);
-
-    Route::apiResource('supplier', SupplierController::class);
-
-    Route::apiResource('incoming-item', IncomingItemController::class)
-        ->except('update');
-    Route::apiResource('incoming-item.detail', IncomingItemDetailController::class)
-        ->except('show');
-
-    Route::apiResource('outgoing-item', OutgoingItemController::class)
-        ->except('update');
-    Route::apiResource('outgoing-item.detail', OutgoingItemDetailController::class)
-        ->except('show');
-
-    Route::post('/submission/{submission}/accept', [SubmissionCheckController::class, 'accept']);
-    Route::post('/submission/{submission}/decline', [SubmissionCheckController::class, 'decline']);
-    Route::apiResource('submission', SubmissionItemController::class)
-        ->except('update');
-    Route::apiResource('submission.detail', SubmissionItemDetailController::class)
-        ->except('show');
-
-    Route::post('/request/{request}/accept', [RequestCheckController::class, 'accept']);
-    Route::post('/request/{request}/decline', [RequestCheckController::class, 'decline']);
-    Route::apiResource('request-item', RequestItemController::class)
-        ->except('update');
-    Route::apiResource('request-item.detail', RequestItemDetailController::class)
-        ->except('show')
-        ->parameter('detail', 'requestItemDetail');
+    Route::prefix('/supervisor')->middleware('can:supervisor')->group(function () {
+        Route::post('/submission/{submission}/accept', [Supervisor\SubmissionCheckController::class, 'accept']);
+        Route::post('/submission/{submission}/decline', [Supervisor\SubmissionCheckController::class, 'decline']);
+        Route::post('/request/{request}/accept', [Supervisor\RequestCheckController::class, 'accept']);
+        Route::post('/request/{request}/decline', [Supervisor\RequestCheckController::class, 'decline']);
+    });
 });

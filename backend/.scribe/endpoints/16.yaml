@@ -27,13 +27,13 @@ endpoints:
         name: request
         description: 'The request.'
         required: true
-        example: velit
+        example: veniam
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: velit
+      request: veniam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -73,13 +73,13 @@ endpoints:
         name: request
         description: 'The request.'
         required: true
-        example: earum
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: earum
+      request: rerum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

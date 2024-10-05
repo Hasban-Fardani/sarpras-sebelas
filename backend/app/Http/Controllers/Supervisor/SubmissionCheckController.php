@@ -15,7 +15,7 @@ class SubmissionCheckController extends Controller
 {
     public function __construct()
     {
-        if (!auth()->user()->can('pengawas')){
+        if (!auth()->user()->can('supervisor')){
             abort(response()->json([
                 'message' => 'unauthorized access',
             ], 403));

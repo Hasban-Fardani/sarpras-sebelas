@@ -587,7 +587,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 6
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -596,14 +596,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 16
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 6
-      qty: 16
+      item_id: 2
+      qty: 9
     fileParameters: []
     responses: []
     responseFields: []
@@ -649,14 +649,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: voluptatem
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       outgoing_item_id: OTK-001
-      id: voluptatem
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -664,7 +664,7 @@ endpoints:
         name: item_id
         description: ''
         required: false
-        example: 3
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -673,14 +673,14 @@ endpoints:
         name: qty
         description: ''
         required: false
-        example: 18
+        example: 14
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 3
-      qty: 18
+      item_id: 11
+      qty: 14
     fileParameters: []
     responses: []
     responseFields: []

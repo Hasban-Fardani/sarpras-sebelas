@@ -85,7 +85,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: fzln
+        example: kfycfljdqclsxth
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -94,7 +94,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: true
-        example: bkmeeioearuzlvexnqylj
+        example: isvsseyataabcvcmoqjtwxe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -103,7 +103,7 @@ endpoints:
         name: stock
         description: ''
         required: true
-        example: 11
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -112,7 +112,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 3
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -121,7 +121,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: blanditiis
+        example: ipsam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -130,18 +130,18 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 4
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: fzln
-      unit: bkmeeioearuzlvexnqylj
-      stock: 11
-      min_stock: 3
-      category_id: blanditiis
-      price: 4
+      name: kfycfljdqclsxth
+      unit: isvsseyataabcvcmoqjtwxe
+      stock: 15
+      min_stock: 13
+      category_id: ipsam
+      price: 13
     fileParameters:
       image: null
     responses: []
@@ -257,7 +257,7 @@ endpoints:
         name: name
         description: validation.max.
         required: false
-        example: ihwqmlhvur
+        example: vwqvlesjfahent
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -266,7 +266,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: false
-        example: yfwwjrslceccb
+        example: cxvtadjkakezdqhhnwevjg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -275,7 +275,7 @@ endpoints:
         name: stock
         description: ''
         required: false
-        example: 13
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -284,7 +284,7 @@ endpoints:
         name: min_stock
         description: ''
         required: false
-        example: 7
+        example: 18
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -293,7 +293,7 @@ endpoints:
         name: category_id
         description: ''
         required: false
-        example: voluptatem
+        example: debitis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -302,18 +302,18 @@ endpoints:
         name: price
         description: ''
         required: false
-        example: 3
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: ihwqmlhvur
-      unit: yfwwjrslceccb
-      stock: 13
-      min_stock: 7
-      category_id: voluptatem
-      price: 3
+      name: vwqvlesjfahent
+      unit: cxvtadjkakezdqhhnwevjg
+      stock: 5
+      min_stock: 18
+      category_id: debitis
+      price: 5
     fileParameters:
       image: null
     responses: []

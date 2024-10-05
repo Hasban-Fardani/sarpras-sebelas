@@ -1216,7 +1216,7 @@ paths:
                 name:
                   type: string
                   description: 'Must contain only letters, numbers, dashes and underscores.'
-                  example: qch-xpu_r
+                  example: hub-odd_u
               required:
                 - name
   '/category/{id}':
@@ -1278,7 +1278,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: cumque
+                  example: voluptas
               required:
                 - name
     delete:
@@ -1317,7 +1317,7 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: quis
+                  example: voluptates
                 role:
                   type: string
                   description: ''
@@ -1329,7 +1329,7 @@ paths:
                 username:
                   type: string
                   description: ''
-                  example: sit
+                  example: at
               required:
                 - password
                 - role
@@ -1623,23 +1623,23 @@ paths:
                 nip:
                   type: string
                   description: validation.max.
-                  example: dptqayzoednwpcnhayu
+                  example: uujvwidscdprzskvtcl
                 name:
                   type: string
                   description: ''
-                  example: exercitationem
+                  example: tempore
                 position:
                   type: string
                   description: ''
-                  example: laborum
+                  example: similique
                 phone:
                   type: string
                   description: ''
-                  example: vitae
+                  example: numquam
                 email:
                   type: string
                   description: ''
-                  example: jast.kathlyn@example.org
+                  example: icrooks@example.net
               required:
                 - nip
                 - name
@@ -1721,23 +1721,23 @@ paths:
                 nip:
                   type: string
                   description: validation.max.
-                  example: iohryiksilvtfywegq
+                  example: yxmyhwz
                 name:
                   type: string
                   description: ''
-                  example: minima
+                  example: pariatur
                 position:
                   type: string
                   description: ''
-                  example: magni
+                  example: blanditiis
                 phone:
                   type: string
                   description: ''
-                  example: sit
+                  example: eligendi
                 email:
                   type: string
                   description: ''
-                  example: fermin.mertz@example.net
+                  example: fschmeler@example.net
               required:
                 - nip
                 - name
@@ -1768,18 +1768,880 @@ paths:
       description: ''
       parameters: []
       responses:
-        404:
+        500:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Not Found'
+                  message: 'Class "League\Flysystem\AwsS3V3\PortableVisibilityConverter" not found'
+                  exception: Error
+                  file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                  line: 240
+                  trace:
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                      line: 152
+                      function: createS3Driver
+                      class: Illuminate\Filesystem\FilesystemManager
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                      line: 120
+                      function: resolve
+                      class: Illuminate\Filesystem\FilesystemManager
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                      line: 83
+                      function: get
+                      class: Illuminate\Filesystem\FilesystemManager
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php
+                      line: 357
+                      function: disk
+                      class: Illuminate\Filesystem\FilesystemManager
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Controllers/FileController.php
+                      line: 17
+                      function: __callStatic
+                      class: Illuminate\Support\Facades\Facade
+                      type: '::'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
+                      line: 46
+                      function: __invoke
+                      class: App\Http\Controllers\FileController
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                      line: 260
+                      function: dispatch
+                      class: Illuminate\Routing\ControllerDispatcher
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                      line: 206
+                      function: runController
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 808
+                      function: run
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 144
+                      function: 'Illuminate\Routing\{closure}'
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                      line: 51
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                      line: 25
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 144
+                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 119
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                      line: 24
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 119
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 807
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 786
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 750
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 739
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 201
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 144
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Middleware/ForceJsonRequestHeader.php
+                      line: 20
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: App\Http\Middleware\ForceJsonRequestHeader
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 51
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 110
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 57
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 119
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 176
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 145
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 310
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 298
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 91
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 44
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 237
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 163
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 125
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 72
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 50
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 53
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 35
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 690
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 213
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Command/Command.php
+                      line: 279
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 182
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php
+                      line: 1047
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php
+                      line: 316
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php
+                      line: 167
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 197
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php
+                      line: 1203
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                    -
+                      file: /home/hasban/Code/Github/sarpras-sebelas/backend/artisan
+                      line: 13
+                      function: handleCommand
+                      class: Illuminate\Foundation\Application
+                      type: '->'
                 properties:
                   message:
                     type: string
-                    example: 'Not Found'
+                    example: 'Class "League\Flysystem\AwsS3V3\PortableVisibilityConverter" not found'
+                  exception:
+                    type: string
+                    example: Error
+                  file:
+                    type: string
+                    example: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                  line:
+                    type: integer
+                    example: 240
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                        line: 152
+                        function: createS3Driver
+                        class: Illuminate\Filesystem\FilesystemManager
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                        line: 120
+                        function: resolve
+                        class: Illuminate\Filesystem\FilesystemManager
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                        line: 83
+                        function: get
+                        class: Illuminate\Filesystem\FilesystemManager
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php
+                        line: 357
+                        function: disk
+                        class: Illuminate\Filesystem\FilesystemManager
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Controllers/FileController.php
+                        line: 17
+                        function: __callStatic
+                        class: Illuminate\Support\Facades\Facade
+                        type: '::'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
+                        line: 46
+                        function: __invoke
+                        class: App\Http\Controllers\FileController
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                        line: 260
+                        function: dispatch
+                        class: Illuminate\Routing\ControllerDispatcher
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                        line: 206
+                        function: runController
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 808
+                        function: run
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 144
+                        function: 'Illuminate\Routing\{closure}'
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                        line: 51
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                        line: 25
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 144
+                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 119
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                        line: 24
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 119
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 807
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 786
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 750
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 739
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 201
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 144
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Middleware/ForceJsonRequestHeader.php
+                        line: 20
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: App\Http\Middleware\ForceJsonRequestHeader
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 51
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 110
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 57
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 119
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 176
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 145
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 310
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 298
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 91
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 44
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 237
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 163
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 125
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 72
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 50
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 53
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 35
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 690
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 213
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Command/Command.php
+                        line: 279
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 182
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php
+                        line: 1047
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php
+                        line: 316
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/symfony/console/Application.php
+                        line: 167
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 197
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php
+                        line: 1203
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                      -
+                        file: /home/hasban/Code/Github/sarpras-sebelas/backend/artisan
+                        line: 13
+                        function: handleCommand
+                        class: Illuminate\Foundation\Application
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: /home/hasban/Code/Github/sarpras-sebelas/backend/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php
+                        line:
+                          type: integer
+                          example: 152
+                        function:
+                          type: string
+                          example: createS3Driver
+                        class:
+                          type: string
+                          example: Illuminate\Filesystem\FilesystemManager
+                        type:
+                          type: string
+                          example: '->'
       tags:
         - 'File Management'
     parameters:
@@ -1787,7 +2649,7 @@ paths:
         in: path
         name: path
         description: ''
-        example: '*Y:12q'
+        example: 6O
         required: true
         schema:
           type: string
@@ -2806,11 +3668,11 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 3
+                  example: 15
                 qty:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 11
               required:
                 - item_id
                 - qty
@@ -2842,11 +3704,11 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 2
                 qty:
                   type: integer
                   description: ''
-                  example: 12
+                  example: 9
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -3181,7 +4043,7 @@ paths:
                 supplier_id:
                   type: string
                   description: ''
-                  example: delectus
+                  example: voluptatem
                 items:
                   type: array
                   description: ''
@@ -3193,11 +4055,11 @@ paths:
                       item_id:
                         type: string
                         description: ''
-                        example: eius
+                        example: ipsa
                       qty:
                         type: integer
                         description: ''
-                        example: 14
+                        example: 12
                     required:
                       - item_id
                       - qty
@@ -4549,27 +5411,27 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: fzln
+                  example: kfycfljdqclsxth
                 unit:
                   type: string
                   description: validation.max.
-                  example: bkmeeioearuzlvexnqylj
+                  example: isvsseyataabcvcmoqjtwxe
                 stock:
                   type: integer
                   description: ''
-                  example: 11
+                  example: 15
                 min_stock:
                   type: integer
                   description: ''
-                  example: 3
+                  example: 13
                 category_id:
                   type: string
                   description: ''
-                  example: blanditiis
+                  example: ipsam
                 price:
                   type: integer
                   description: ''
-                  example: 4
+                  example: 13
               required:
                 - name
                 - unit
@@ -4664,27 +5526,27 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: ihwqmlhvur
+                  example: vwqvlesjfahent
                 unit:
                   type: string
                   description: validation.max.
-                  example: yfwwjrslceccb
+                  example: cxvtadjkakezdqhhnwevjg
                 stock:
                   type: integer
                   description: ''
-                  example: 13
+                  example: 5
                 min_stock:
                   type: integer
                   description: ''
-                  example: 7
+                  example: 18
                 category_id:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: debitis
                 price:
                   type: integer
                   description: ''
-                  example: 3
+                  example: 5
     delete:
       summary: 'Remove the specified item from storage.'
       operationId: removeTheSpecifiedItemFromStorage
@@ -4723,19 +5585,10 @@ paths:
         200:
           description: ''
           content:
-            application/json:
+            text/plain:
               schema:
-                type: object
-                example:
-                  message: 'hello, please visit /docs for documentation'
-                  docs: 'http://localhost:8000/docs'
-                properties:
-                  message:
-                    type: string
-                    example: 'hello, please visit /docs for documentation'
-                  docs:
-                    type: string
-                    example: 'http://localhost:8000/docs'
+                type: string
+                example: 'Hi, please visit http://localhost:8000/docs for documentation'
       tags:
         - 'Other Endpoints'
   /auth/user:
@@ -4773,6 +5626,22 @@ paths:
                   updated_at:
                     type: string
                     example: '2024-09-03T04:29:18.000000Z'
+      tags:
+        - 'Other Endpoints'
+  /auth/check:
+    get:
+      summary: ''
+      operationId: getAuthCheck
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: integer
+                example: 1
       tags:
         - 'Other Endpoints'
   '/outgoing-item/{outgoing_item_id}/detail':
@@ -5676,11 +6545,11 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 6
+                  example: 2
                 qty:
                   type: integer
                   description: ''
-                  example: 16
+                  example: 9
               required:
                 - item_id
                 - qty
@@ -5712,11 +6581,11 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 3
+                  example: 11
                 qty:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 14
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -5738,7 +6607,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the detail.'
-        example: voluptatem
+        example: et
         required: true
         schema:
           type: string
@@ -6051,7 +6920,7 @@ paths:
                 division_id:
                   type: integer
                   description: ''
-                  example: 2
+                  example: 18
                 items:
                   type: array
                   description: ''
@@ -6063,11 +6932,11 @@ paths:
                       item_id:
                         type: integer
                         description: ''
-                        example: 1
+                        example: 12
                       qty:
                         type: integer
                         description: ''
-                        example: 1
+                        example: 13
                     required:
                       - item_id
                       - qty
@@ -8067,11 +8936,11 @@ paths:
                 item_id:
                   type: string
                   description: ''
-                  example: harum
+                  example: modi
                 qty:
                   type: string
                   description: ''
-                  example: eum
+                  example: aut
               required:
                 - item_id
                 - qty
@@ -8103,15 +8972,15 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 2
                 qty:
                   type: integer
                   description: ''
-                  example: 6
+                  example: 2
                 qty_acc:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 8
               required:
                 - item_id
                 - qty
@@ -8129,7 +8998,7 @@ paths:
         in: path
         name: requestItemDetail
         description: ''
-        example: quod
+        example: nesciunt
         required: true
         schema:
           type: string
@@ -8155,7 +9024,7 @@ paths:
         in: path
         name: requestItemDetail_id
         description: 'The ID of the requestItemDetail.'
-        example: in
+        example: blanditiis
         required: true
         schema:
           type: string
@@ -9481,11 +10350,11 @@ paths:
                 item_id:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: aperiam
                 qty:
                   type: string
                   description: ''
-                  example: fuga
+                  example: sit
               required:
                 - item_id
                 - qty
@@ -9517,15 +10386,15 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 14
                 qty:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 3
                 qty_acc:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 14
               required:
                 - item_id
                 - qty
@@ -9551,7 +10420,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the detail.'
-        example: quisquam
+        example: deleniti
         required: true
         schema:
           type: string
@@ -9840,11 +10709,11 @@ paths:
                       item_id:
                         type: integer
                         description: ''
-                        example: 4
+                        example: 11
                       qty:
                         type: integer
                         description: ''
-                        example: 20
+                        example: 1
                     required:
                       - item_id
                       - qty
@@ -9946,7 +10815,7 @@ paths:
         in: path
         name: request
         description: 'The request.'
-        example: velit
+        example: veniam
         required: true
         schema:
           type: string
@@ -9964,7 +10833,7 @@ paths:
         in: path
         name: request
         description: 'The request.'
-        example: earum
+        example: rerum
         required: true
         schema:
           type: string
@@ -10222,15 +11091,15 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: ifp
+                  example: z
                 address:
                   type: string
                   description: validation.max.
-                  example: lbcaub
+                  example: bwgbsigwxikndexlymlxuavbm
                 phone:
                   type: string
                   description: validation.max.
-                  example: fwvbezkzmgc
+                  example: eomvskqoymegkoykvhsqctx
               required:
                 - name
   '/supplier/{id}':
@@ -10300,15 +11169,15 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: qayclacyfyyiy
+                  example: haxgpt
                 address:
                   type: string
                   description: validation.max.
-                  example: eatyjabojayxgorzfx
+                  example: itoqgftjefasqdbz
                 phone:
                   type: string
                   description: validation.max.
-                  example: jhnaxaemo
+                  example: xxtgfbyacdon
               required:
                 - name
     delete:
@@ -10620,27 +11489,27 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: dicxtvvcdllvmcnaianmnp
+                  example: k
                 id:
                   type: string
                   description: validation.max.
-                  example: pxqwyrirmsi
+                  example: jhymgbxqihppbuhogwkk
                 username:
                   type: string
                   description: validation.max.
-                  example: uzw
+                  example: vyajqvvsxpmhyalkefneab
                 email:
                   type: string
                   description: 'validation.email validation.max.'
-                  example: adele71@example.org
+                  example: kuhlman.monica@example.net
                 password:
                   type: string
                   description: validation.min.
-                  example: 'Yp?oYr(x2Za'
+                  example: '"~V\x_i`n{9_)A+6-Rx'
                 role:
                   type: string
                   description: ''
-                  example: unit
+                  example: admin
                   enum:
                     - admin
                     - unit
@@ -10715,23 +11584,23 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: ticgjtomwkhkxod
+                  example: qpfpmglyixfmabryjtmicetfy
                 id:
                   type: string
                   description: validation.max.
-                  example: cglgrojieymxjmstbol
+                  example: jyydbsp
                 username:
                   type: string
                   description: validation.max.
-                  example: bsnehmhgglsqmqiowfzuiyd
+                  example: nezbbhaaznzvqksstxde
                 email:
                   type: string
                   description: 'validation.email validation.max.'
-                  example: shawn42@example.net
+                  example: goldner.janick@example.com
                 password:
                   type: string
                   description: validation.min.
-                  example: "GyMuzNaHla#'r6`n"
+                  example: '?fw8RTVHe!(e=-V'
                 role:
                   type: string
                   description: ''

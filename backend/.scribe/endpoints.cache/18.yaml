@@ -659,7 +659,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: harum
+        example: modi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -668,14 +668,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: eum
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: harum
-      qty: eum
+      item_id: modi
+      qty: aut
     fileParameters: []
     responses: []
     responseFields: []
@@ -721,14 +721,14 @@ endpoints:
         name: requestItemDetail
         description: ''
         required: true
-        example: quod
+        example: nesciunt
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       request_item_id: RQ-001
-      requestItemDetail: quod
+      requestItemDetail: nesciunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -736,7 +736,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 9
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -745,7 +745,7 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 6
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -754,15 +754,15 @@ endpoints:
         name: qty_acc
         description: ''
         required: true
-        example: 5
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 9
-      qty: 6
-      qty_acc: 5
+      item_id: 2
+      qty: 2
+      qty_acc: 8
     fileParameters: []
     responses: []
     responseFields: []
@@ -807,14 +807,14 @@ endpoints:
         name: requestItemDetail_id
         description: 'The ID of the requestItemDetail.'
         required: true
-        example: in
+        example: blanditiis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       request_item_id: RQ-001
-      requestItemDetail_id: in
+      requestItemDetail_id: blanditiis
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

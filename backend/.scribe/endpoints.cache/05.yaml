@@ -78,7 +78,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: dicxtvvcdllvmcnaianmnp
+        example: k
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -87,7 +87,7 @@ endpoints:
         name: id
         description: validation.max.
         required: true
-        example: pxqwyrirmsi
+        example: jhymgbxqihppbuhogwkk
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +96,7 @@ endpoints:
         name: username
         description: validation.max.
         required: true
-        example: uzw
+        example: vyajqvvsxpmhyalkefneab
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -105,7 +105,7 @@ endpoints:
         name: email
         description: 'validation.email validation.max.'
         required: true
-        example: adele71@example.org
+        example: kuhlman.monica@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -114,7 +114,7 @@ endpoints:
         name: password
         description: validation.min.
         required: true
-        example: 'Yp?oYr(x2Za'
+        example: '"~V\x_i`n{9_)A+6-Rx'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -123,7 +123,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: unit
+        example: admin
         type: string
         enumValues:
           - admin
@@ -132,12 +132,12 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: dicxtvvcdllvmcnaianmnp
-      id: pxqwyrirmsi
-      username: uzw
-      email: adele71@example.org
-      password: 'Yp?oYr(x2Za'
-      role: unit
+      name: k
+      id: jhymgbxqihppbuhogwkk
+      username: vyajqvvsxpmhyalkefneab
+      email: kuhlman.monica@example.net
+      password: '"~V\x_i`n{9_)A+6-Rx'
+      role: admin
     fileParameters: []
     responses: []
     responseFields: []
@@ -243,7 +243,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: ticgjtomwkhkxod
+        example: qpfpmglyixfmabryjtmicetfy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -252,7 +252,7 @@ endpoints:
         name: id
         description: validation.max.
         required: true
-        example: cglgrojieymxjmstbol
+        example: jyydbsp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -261,7 +261,7 @@ endpoints:
         name: username
         description: validation.max.
         required: true
-        example: bsnehmhgglsqmqiowfzuiyd
+        example: nezbbhaaznzvqksstxde
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -270,7 +270,7 @@ endpoints:
         name: email
         description: 'validation.email validation.max.'
         required: true
-        example: shawn42@example.net
+        example: goldner.janick@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -279,7 +279,7 @@ endpoints:
         name: password
         description: validation.min.
         required: true
-        example: "GyMuzNaHla#'r6`n"
+        example: '?fw8RTVHe!(e=-V'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -297,11 +297,11 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: ticgjtomwkhkxod
-      id: cglgrojieymxjmstbol
-      username: bsnehmhgglsqmqiowfzuiyd
-      email: shawn42@example.net
-      password: "GyMuzNaHla#'r6`n"
+      name: qpfpmglyixfmabryjtmicetfy
+      id: jyydbsp
+      username: nezbbhaaznzvqksstxde
+      email: goldner.janick@example.com
+      password: '?fw8RTVHe!(e=-V'
       role: unit
     fileParameters: []
     responses: []

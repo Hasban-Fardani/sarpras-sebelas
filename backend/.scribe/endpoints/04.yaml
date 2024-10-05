@@ -41,7 +41,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: quis
+        example: voluptates
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -62,15 +62,15 @@ endpoints:
         name: username
         description: ''
         required: true
-        example: sit
+        example: at
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      password: quis
+      password: voluptates
       role: unit
-      username: sit
+      username: at
     fileParameters: []
     responses: []
     responseFields: []
@@ -201,7 +201,7 @@ endpoints:
         name: nip
         description: validation.max.
         required: true
-        example: dptqayzoednwpcnhayu
+        example: uujvwidscdprzskvtcl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -210,7 +210,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: exercitationem
+        example: tempore
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -219,7 +219,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: laborum
+        example: similique
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -228,7 +228,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: vitae
+        example: numquam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -237,17 +237,17 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: jast.kathlyn@example.org
+        example: icrooks@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      nip: dptqayzoednwpcnhayu
-      name: exercitationem
-      position: laborum
-      phone: vitae
-      email: jast.kathlyn@example.org
+      nip: uujvwidscdprzskvtcl
+      name: tempore
+      position: similique
+      phone: numquam
+      email: icrooks@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -353,7 +353,7 @@ endpoints:
         name: nip
         description: validation.max.
         required: true
-        example: iohryiksilvtfywegq
+        example: yxmyhwz
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -362,7 +362,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: minima
+        example: pariatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -371,7 +371,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: magni
+        example: blanditiis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -380,7 +380,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: sit
+        example: eligendi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -389,17 +389,17 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: fermin.mertz@example.net
+        example: fschmeler@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      nip: iohryiksilvtfywegq
-      name: minima
-      position: magni
-      phone: sit
-      email: fermin.mertz@example.net
+      nip: yxmyhwz
+      name: pariatur
+      position: blanditiis
+      phone: eligendi
+      email: fschmeler@example.net
     fileParameters: []
     responses: []
     responseFields: []

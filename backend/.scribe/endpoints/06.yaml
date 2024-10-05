@@ -76,13 +76,13 @@ endpoints:
         name: name
         description: 'Must contain only letters, numbers, dashes and underscores.'
         required: true
-        example: qch-xpu_r
+        example: hub-odd_u
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: qch-xpu_r
+      name: hub-odd_u
     fileParameters: []
     responses: []
     responseFields: []
@@ -188,13 +188,13 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: cumque
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: cumque
+      name: voluptas
     fileParameters: []
     responses: []
     responseFields: []
