@@ -86,7 +86,7 @@ endpoints:
         name: 'items[].item_id'
         description: ''
         required: true
-        example: 5
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -95,7 +95,7 @@ endpoints:
         name: 'items[].qty'
         description: ''
         required: true
-        example: 15
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -103,8 +103,8 @@ endpoints:
     cleanBodyParameters:
       items:
         -
-          item_id: 5
-          qty: 15
+          item_id: 12
+          qty: 9
     fileParameters: []
     responses:
       -

@@ -96,7 +96,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: architecto
+        example: est
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -105,14 +105,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: quos
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: architecto
-      qty: quos
+      item_id: est
+      qty: et
     fileParameters: []
     responses:
       -
@@ -167,14 +167,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: corrupti
+        example: nostrum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       submission_id: 1
-      id: corrupti
+      id: nostrum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -191,7 +191,7 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 20
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -200,15 +200,15 @@ endpoints:
         name: qty_acc
         description: ''
         required: true
-        example: 2
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
       item_id: 2
-      qty: 20
-      qty_acc: 2
+      qty: 10
+      qty_acc: 5
     fileParameters: []
     responses:
       -

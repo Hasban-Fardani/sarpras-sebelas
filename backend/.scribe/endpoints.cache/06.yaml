@@ -78,18 +78,28 @@ endpoints:
         name: name
         description: 'Must contain only letters, numbers, dashes and underscores.'
         required: true
-        example: yod-mam_r
+        example: ysc-fjy_g
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      code:
+        name: code
+        description: ''
+        required: true
+        example: velit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: yod-mam_r
+      name: ysc-fjy_g
+      code: velit
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 200
+        content: '{"message":"success create new category","data":{"name":"ysc-fjy_g","code":"velit","updated_at":"2024-10-05T16:55:50.000000Z","created_at":"2024-10-05T16:55:50.000000Z","id":3}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -199,18 +209,27 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: odit
+        example: nihil
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      code:
+        name: code
+        description: ''
+        required: false
+        example: null
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: odit
+      name: nihil
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"message":"success update category","data":{"id":1,"code":"ATK","name":"odit","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:49:41.000000Z"}}'
+        content: '{"message":"success update category","data":{"id":1,"code":"ATK","name":"nihil","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:55:50.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

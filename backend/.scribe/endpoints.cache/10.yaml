@@ -98,7 +98,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 19
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -107,19 +107,19 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 14
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 19
-      qty: 14
+      item_id: 11
+      qty: 10
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 200
+        content: '{"message":"success add item in detail","data":[{"id":14,"incoming_item_id":1,"item_id":7,"qty":76,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":23,"incoming_item_id":1,"item_id":10,"qty":49,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":25,"incoming_item_id":1,"item_id":5,"qty":78,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":38,"incoming_item_id":1,"item_id":1,"qty":38,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":40,"incoming_item_id":1,"item_id":8,"qty":72,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":47,"incoming_item_id":1,"item_id":8,"qty":47,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":59,"incoming_item_id":1,"item_id":5,"qty":74,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":86,"incoming_item_id":1,"item_id":3,"qty":100,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":87,"incoming_item_id":1,"item_id":8,"qty":89,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":90,"incoming_item_id":1,"item_id":7,"qty":82,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z"},{"id":103,"incoming_item_id":1,"item_id":11,"qty":10,"created_at":"2024-10-05T16:55:50.000000Z","updated_at":"2024-10-05T16:55:50.000000Z"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -184,7 +184,7 @@ endpoints:
         name: item_id
         description: ''
         required: false
-        example: 4
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -193,19 +193,19 @@ endpoints:
         name: qty
         description: ''
         required: false
-        example: 18
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 4
-      qty: 18
+      item_id: 19
+      qty: 9
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"message":"success update item in detail","data":{"id":1,"incoming_item_id":4,"item_id":4,"qty":18,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:49:41.000000Z"}}'
+        status: 500
+        content: '{"message":"Internal Server Error"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

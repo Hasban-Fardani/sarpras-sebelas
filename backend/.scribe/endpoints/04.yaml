@@ -41,7 +41,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: ut
+        example: suscipit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -50,7 +50,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: admin
+        example: pengawas
         type: string
         enumValues:
           - admin
@@ -62,15 +62,15 @@ endpoints:
         name: username
         description: ''
         required: true
-        example: dolor
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      password: ut
-      role: admin
-      username: dolor
+      password: suscipit
+      role: pengawas
+      username: consequatur
     fileParameters: []
     responses:
       -
@@ -219,7 +219,7 @@ endpoints:
         name: nip
         description: validation.max.
         required: true
-        example: pyq
+        example: xmykt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -228,7 +228,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: fuga
+        example: ducimus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -237,7 +237,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: quia
+        example: temporibus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -246,7 +246,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: qui
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -255,17 +255,17 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: windler.destin@example.net
+        example: jeromy72@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      nip: pyq
-      name: fuga
-      position: quia
-      phone: qui
-      email: windler.destin@example.net
+      nip: xmykt
+      name: ducimus
+      position: temporibus
+      phone: non
+      email: jeromy72@example.org
     fileParameters: []
     responses:
       -
@@ -380,7 +380,7 @@ endpoints:
         name: nip
         description: validation.max.
         required: true
-        example: baetaui
+        example: yg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -389,7 +389,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: rerum
+        example: magni
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -398,7 +398,7 @@ endpoints:
         name: position
         description: ''
         required: true
-        example: omnis
+        example: doloremque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -407,7 +407,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: unde
+        example: fugit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -416,22 +416,22 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: abayer@example.net
+        example: wilhelm65@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      nip: baetaui
-      name: rerum
-      position: omnis
-      phone: unde
-      email: abayer@example.net
+      nip: yg
+      name: magni
+      position: doloremque
+      phone: fugit
+      email: wilhelm65@example.com
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"message":"success update employee","data":{"id":1,"nip":"baetaui","name":"rerum","position":"omnis","phone":"unde","email":"abayer@example.net","email_verified_at":null,"created_at":null,"updated_at":"2024-10-05T16:49:40.000000Z"}}'
+        content: '{"message":"success update employee","data":{"id":1,"nip":"yg","name":"magni","position":"doloremque","phone":"fugit","email":"wilhelm65@example.com","email_verified_at":null,"created_at":null,"updated_at":"2024-10-05T16:55:49.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

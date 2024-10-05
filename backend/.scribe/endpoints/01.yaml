@@ -27,13 +27,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: '8'
+        example: ''
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: '8'
+      path: ''
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -41,8 +41,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 404
+        content: '{"message":"Not Found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -82,13 +82,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: tG
+        example: 6@
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: tG
+      path: 6@
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

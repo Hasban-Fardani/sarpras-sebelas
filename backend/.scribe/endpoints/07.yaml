@@ -85,7 +85,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: kcyjgxt
+        example: z
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -94,7 +94,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: true
-        example: zghf
+        example: pwpqg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -103,7 +103,7 @@ endpoints:
         name: stock
         description: ''
         required: true
-        example: 6
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -112,7 +112,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 1
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -121,7 +121,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: et
+        example: nihil
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -130,18 +130,18 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 8
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: kcyjgxt
-      unit: zghf
-      stock: 6
-      min_stock: 1
-      category_id: et
-      price: 8
+      name: z
+      unit: pwpqg
+      stock: 7
+      min_stock: 11
+      category_id: nihil
+      price: 1
     fileParameters:
       image: null
     responses:
@@ -266,7 +266,7 @@ endpoints:
         name: name
         description: validation.max.
         required: false
-        example: adyydniwkrkrdtuzmn
+        example: zmupconpn
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -275,7 +275,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: false
-        example: e
+        example: oqftaesojwtflgzbegiy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -284,7 +284,7 @@ endpoints:
         name: stock
         description: ''
         required: false
-        example: 19
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -293,7 +293,7 @@ endpoints:
         name: min_stock
         description: ''
         required: false
-        example: 5
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -302,7 +302,7 @@ endpoints:
         name: category_id
         description: ''
         required: false
-        example: iure
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -311,18 +311,18 @@ endpoints:
         name: price
         description: ''
         required: false
-        example: 3
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: adyydniwkrkrdtuzmn
-      unit: e
-      stock: 19
-      min_stock: 5
-      category_id: iure
-      price: 3
+      name: zmupconpn
+      unit: oqftaesojwtflgzbegiy
+      stock: 1
+      min_stock: 4
+      category_id: omnis
+      price: 5
     fileParameters:
       image: null
     responses:

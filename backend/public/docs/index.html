@@ -1393,7 +1393,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"yod-mam_r\"
+    \"name\": \"ysc-fjy_g\",
+    \"code\": \"velit\"
 }"
 </code></pre></div>
 
@@ -1410,7 +1411,8 @@ const headers = {
 };
 
 let body = {
-    "name": "yod-mam_r"
+    "name": "ysc-fjy_g",
+    "code": "velit"
 };
 
 fetch(url, {
@@ -1423,7 +1425,7 @@ fetch(url, {
 
 <span id="example-responses-POSTadmin-category">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1435,7 +1437,14 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Internal Server Error&quot;
+    &quot;message&quot;: &quot;success create new category&quot;,
+    &quot;data&quot;: {
+        &quot;name&quot;: &quot;ysc-fjy_g&quot;,
+        &quot;code&quot;: &quot;velit&quot;,
+        &quot;updated_at&quot;: &quot;2024-10-05T16:55:50.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2024-10-05T16:55:50.000000Z&quot;,
+        &quot;id&quot;: 3
+    }
 }</code>
  </pre>
     </span>
@@ -1526,10 +1535,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTadmin-category"
-               value="yod-mam_r"
+               value="ysc-fjy_g"
                data-component="body">
     <br>
-<p>Must contain only letters, numbers, dashes and underscores. Example: <code>yod-mam_r</code></p>
+<p>Must contain only letters, numbers, dashes and underscores. Example: <code>ysc-fjy_g</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>code</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="code"                data-endpoint="POSTadmin-category"
+               value="velit"
+               data-component="body">
+    <br>
+<p>Example: <code>velit</code></p>
         </div>
         </form>
 
@@ -1709,7 +1729,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"odit\"
+    \"name\": \"nihil\"
 }"
 </code></pre></div>
 
@@ -1726,7 +1746,7 @@ const headers = {
 };
 
 let body = {
-    "name": "odit"
+    "name": "nihil"
 };
 
 fetch(url, {
@@ -1755,9 +1775,9 @@ vary: Origin
     &quot;data&quot;: {
         &quot;id&quot;: 1,
         &quot;code&quot;: &quot;ATK&quot;,
-        &quot;name&quot;: &quot;odit&quot;,
+        &quot;name&quot;: &quot;nihil&quot;,
         &quot;created_at&quot;: &quot;2024-10-05T16:29:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2024-10-05T16:49:41.000000Z&quot;
+        &quot;updated_at&quot;: &quot;2024-10-05T16:55:50.000000Z&quot;
     }
 }</code>
  </pre>
@@ -1865,10 +1885,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTadmin-category--id-"
-               value="odit"
+               value="nihil"
                data-component="body">
     <br>
-<p>Example: <code>odit</code></p>
+<p>Example: <code>nihil</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>code</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="code"                data-endpoint="PUTadmin-category--id-"
+               value=""
+               data-component="body">
+    <br>
+
         </div>
         </form>
 
@@ -2045,9 +2076,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"password\": \"ut\",
-    \"role\": \"admin\",
-    \"username\": \"dolor\"
+    \"password\": \"suscipit\",
+    \"role\": \"pengawas\",
+    \"username\": \"consequatur\"
 }"
 </code></pre></div>
 
@@ -2064,9 +2095,9 @@ const headers = {
 };
 
 let body = {
-    "password": "ut",
-    "role": "admin",
-    "username": "dolor"
+    "password": "suscipit",
+    "role": "pengawas",
+    "username": "consequatur"
 };
 
 fetch(url, {
@@ -2194,10 +2225,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTadmin-employee--employee_id--assign"
-               value="ut"
+               value="suscipit"
                data-component="body">
     <br>
-<p>Example: <code>ut</code></p>
+<p>Example: <code>suscipit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>role</code></b>&nbsp;&nbsp;
@@ -2205,10 +2236,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="role"                data-endpoint="POSTadmin-employee--employee_id--assign"
-               value="admin"
+               value="pengawas"
                data-component="body">
     <br>
-<p>Example: <code>admin</code></p>
+<p>Example: <code>pengawas</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>admin</code></li> <li><code>pengawas</code></li> <li><code>unit</code></li></ul>
         </div>
@@ -2218,10 +2249,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="POSTadmin-employee--employee_id--assign"
-               value="dolor"
+               value="consequatur"
                data-component="body">
     <br>
-<p>Example: <code>dolor</code></p>
+<p>Example: <code>consequatur</code></p>
         </div>
         </form>
 
@@ -2617,11 +2648,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"nip\": \"pyq\",
-    \"name\": \"fuga\",
-    \"position\": \"quia\",
-    \"phone\": \"qui\",
-    \"email\": \"windler.destin@example.net\"
+    \"nip\": \"xmykt\",
+    \"name\": \"ducimus\",
+    \"position\": \"temporibus\",
+    \"phone\": \"non\",
+    \"email\": \"jeromy72@example.org\"
 }"
 </code></pre></div>
 
@@ -2638,11 +2669,11 @@ const headers = {
 };
 
 let body = {
-    "nip": "pyq",
-    "name": "fuga",
-    "position": "quia",
-    "phone": "qui",
-    "email": "windler.destin@example.net"
+    "nip": "xmykt",
+    "name": "ducimus",
+    "position": "temporibus",
+    "phone": "non",
+    "email": "jeromy72@example.org"
 };
 
 fetch(url, {
@@ -2758,10 +2789,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="nip"                data-endpoint="POSTadmin-employees"
-               value="pyq"
+               value="xmykt"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>pyq</code></p>
+<p>validation.max. Example: <code>xmykt</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -2769,10 +2800,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTadmin-employees"
-               value="fuga"
+               value="ducimus"
                data-component="body">
     <br>
-<p>Example: <code>fuga</code></p>
+<p>Example: <code>ducimus</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>position</code></b>&nbsp;&nbsp;
@@ -2780,10 +2811,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="position"                data-endpoint="POSTadmin-employees"
-               value="quia"
+               value="temporibus"
                data-component="body">
     <br>
-<p>Example: <code>quia</code></p>
+<p>Example: <code>temporibus</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -2791,10 +2822,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTadmin-employees"
-               value="qui"
+               value="non"
                data-component="body">
     <br>
-<p>Example: <code>qui</code></p>
+<p>Example: <code>non</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -2802,10 +2833,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTadmin-employees"
-               value="windler.destin@example.net"
+               value="jeromy72@example.org"
                data-component="body">
     <br>
-<p>Example: <code>windler.destin@example.net</code></p>
+<p>Example: <code>jeromy72@example.org</code></p>
         </div>
         </form>
 
@@ -2989,11 +3020,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"nip\": \"baetaui\",
-    \"name\": \"rerum\",
-    \"position\": \"omnis\",
-    \"phone\": \"unde\",
-    \"email\": \"abayer@example.net\"
+    \"nip\": \"yg\",
+    \"name\": \"magni\",
+    \"position\": \"doloremque\",
+    \"phone\": \"fugit\",
+    \"email\": \"wilhelm65@example.com\"
 }"
 </code></pre></div>
 
@@ -3010,11 +3041,11 @@ const headers = {
 };
 
 let body = {
-    "nip": "baetaui",
-    "name": "rerum",
-    "position": "omnis",
-    "phone": "unde",
-    "email": "abayer@example.net"
+    "nip": "yg",
+    "name": "magni",
+    "position": "doloremque",
+    "phone": "fugit",
+    "email": "wilhelm65@example.com"
 };
 
 fetch(url, {
@@ -3042,14 +3073,14 @@ vary: Origin
     &quot;message&quot;: &quot;success update employee&quot;,
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;nip&quot;: &quot;baetaui&quot;,
-        &quot;name&quot;: &quot;rerum&quot;,
-        &quot;position&quot;: &quot;omnis&quot;,
-        &quot;phone&quot;: &quot;unde&quot;,
-        &quot;email&quot;: &quot;abayer@example.net&quot;,
+        &quot;nip&quot;: &quot;yg&quot;,
+        &quot;name&quot;: &quot;magni&quot;,
+        &quot;position&quot;: &quot;doloremque&quot;,
+        &quot;phone&quot;: &quot;fugit&quot;,
+        &quot;email&quot;: &quot;wilhelm65@example.com&quot;,
         &quot;email_verified_at&quot;: null,
         &quot;created_at&quot;: null,
-        &quot;updated_at&quot;: &quot;2024-10-05T16:49:40.000000Z&quot;
+        &quot;updated_at&quot;: &quot;2024-10-05T16:55:49.000000Z&quot;
     }
 }</code>
  </pre>
@@ -3157,10 +3188,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="nip"                data-endpoint="PUTadmin-employees--id-"
-               value="baetaui"
+               value="yg"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>baetaui</code></p>
+<p>validation.max. Example: <code>yg</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -3168,10 +3199,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTadmin-employees--id-"
-               value="rerum"
+               value="magni"
                data-component="body">
     <br>
-<p>Example: <code>rerum</code></p>
+<p>Example: <code>magni</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>position</code></b>&nbsp;&nbsp;
@@ -3179,10 +3210,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="position"                data-endpoint="PUTadmin-employees--id-"
-               value="omnis"
+               value="doloremque"
                data-component="body">
     <br>
-<p>Example: <code>omnis</code></p>
+<p>Example: <code>doloremque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -3190,10 +3221,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTadmin-employees--id-"
-               value="unde"
+               value="fugit"
                data-component="body">
     <br>
-<p>Example: <code>unde</code></p>
+<p>Example: <code>fugit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -3201,10 +3232,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTadmin-employees--id-"
-               value="abayer@example.net"
+               value="wilhelm65@example.com"
                data-component="body">
     <br>
-<p>Example: <code>abayer@example.net</code></p>
+<p>Example: <code>wilhelm65@example.com</code></p>
         </div>
         </form>
 
@@ -3376,7 +3407,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/public/8" \
+    --get "http://localhost:8000/public/" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3384,7 +3415,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/public/8"
+    "http://localhost:8000/public/"
 );
 
 const headers = {
@@ -3402,7 +3433,7 @@ fetch(url, {
 
 <span id="example-responses-GETpublic--path-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -3414,7 +3445,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Internal Server Error&quot;
+    &quot;message&quot;: &quot;Not Found&quot;
 }</code>
  </pre>
     </span>
@@ -3505,10 +3536,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="path"                data-endpoint="GETpublic--path-"
-               value="8"
+               value=""
                data-component="url">
     <br>
-<p>Example: <code>8</code></p>
+
             </div>
                     </form>
 
@@ -3526,7 +3557,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/private/tG" \
+    --get "http://localhost:8000/private/6@" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3534,7 +3565,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/private/tG"
+    "http://localhost:8000/private/6@"
 );
 
 const headers = {
@@ -3655,10 +3686,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="path"                data-endpoint="GETprivate--path-"
-               value="tG"
+               value="6@"
                data-component="url">
     <br>
-<p>Example: <code>tG</code></p>
+<p>Example: <code>6@</code></p>
             </div>
                     </form>
 
@@ -3985,8 +4016,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 19,
-    \"qty\": 14
+    \"item_id\": 11,
+    \"qty\": 10
 }"
 </code></pre></div>
 
@@ -4003,8 +4034,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": 19,
-    "qty": 14
+    "item_id": 11,
+    "qty": 10
 };
 
 fetch(url, {
@@ -4017,7 +4048,7 @@ fetch(url, {
 
 <span id="example-responses-POSTadmin-incoming-item--incoming_item_id--detail">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4029,7 +4060,97 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Internal Server Error&quot;
+    &quot;message&quot;: &quot;success add item in detail&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 14,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 7,
+            &quot;qty&quot;: 76,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 23,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 10,
+            &quot;qty&quot;: 49,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 25,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 5,
+            &quot;qty&quot;: 78,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 38,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 1,
+            &quot;qty&quot;: 38,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 40,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 8,
+            &quot;qty&quot;: 72,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 47,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 8,
+            &quot;qty&quot;: 47,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 59,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 5,
+            &quot;qty&quot;: 74,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 86,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 3,
+            &quot;qty&quot;: 100,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 87,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 8,
+            &quot;qty&quot;: 89,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 90,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 7,
+            &quot;qty&quot;: 82,
+            &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 103,
+            &quot;incoming_item_id&quot;: 1,
+            &quot;item_id&quot;: 11,
+            &quot;qty&quot;: 10,
+            &quot;created_at&quot;: &quot;2024-10-05T16:55:50.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-10-05T16:55:50.000000Z&quot;
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -4132,10 +4253,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="POSTadmin-incoming-item--incoming_item_id--detail"
-               value="19"
+               value="11"
                data-component="body">
     <br>
-<p>Example: <code>19</code></p>
+<p>Example: <code>11</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -4143,10 +4264,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="POSTadmin-incoming-item--incoming_item_id--detail"
-               value="14"
+               value="10"
                data-component="body">
     <br>
-<p>Example: <code>14</code></p>
+<p>Example: <code>10</code></p>
         </div>
         </form>
 
@@ -4169,8 +4290,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 4,
-    \"qty\": 18
+    \"item_id\": 19,
+    \"qty\": 9
 }"
 </code></pre></div>
 
@@ -4187,8 +4308,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": 4,
-    "qty": 18
+    "item_id": 19,
+    "qty": 9
 };
 
 fetch(url, {
@@ -4201,7 +4322,7 @@ fetch(url, {
 
 <span id="example-responses-PUTadmin-incoming-item--incoming_item_id--detail--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (500):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4213,15 +4334,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;success update item in detail&quot;,
-    &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;incoming_item_id&quot;: 4,
-        &quot;item_id&quot;: 4,
-        &quot;qty&quot;: 18,
-        &quot;created_at&quot;: &quot;2024-10-05T16:29:41.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2024-10-05T16:49:41.000000Z&quot;
-    }
+    &quot;message&quot;: &quot;Internal Server Error&quot;
 }</code>
  </pre>
     </span>
@@ -4339,10 +4452,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="PUTadmin-incoming-item--incoming_item_id--detail--id-"
-               value="4"
+               value="19"
                data-component="body">
     <br>
-<p>Example: <code>4</code></p>
+<p>Example: <code>19</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -4350,10 +4463,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="PUTadmin-incoming-item--incoming_item_id--detail--id-"
-               value="18"
+               value="9"
                data-component="body">
     <br>
-<p>Example: <code>18</code></p>
+<p>Example: <code>9</code></p>
         </div>
         </form>
 
@@ -4971,11 +5084,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"supplier_id\": \"itaque\",
+    \"supplier_id\": \"molestiae\",
     \"items\": [
         {
-            \"item_id\": \"at\",
-            \"qty\": 17
+            \"item_id\": \"explicabo\",
+            \"qty\": 13
         }
     ]
 }"
@@ -4994,11 +5107,11 @@ const headers = {
 };
 
 let body = {
-    "supplier_id": "itaque",
+    "supplier_id": "molestiae",
     "items": [
         {
-            "item_id": "at",
-            "qty": 17
+            "item_id": "explicabo",
+            "qty": 13
         }
     ]
 };
@@ -5116,10 +5229,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="supplier_id"                data-endpoint="POSTadmin-incoming-item"
-               value="itaque"
+               value="molestiae"
                data-component="body">
     <br>
-<p>Example: <code>itaque</code></p>
+<p>Example: <code>molestiae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
         <details>
@@ -5136,10 +5249,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="items.0.item_id"                data-endpoint="POSTadmin-incoming-item"
-               value="at"
+               value="explicabo"
                data-component="body">
     <br>
-<p>Example: <code>at</code></p>
+<p>Example: <code>explicabo</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -5147,10 +5260,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.qty"                data-endpoint="POSTadmin-incoming-item"
-               value="17"
+               value="13"
                data-component="body">
     <br>
-<p>Example: <code>17</code></p>
+<p>Example: <code>13</code></p>
                     </div>
                                     </details>
         </div>
@@ -5921,13 +6034,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=kcyjgxt"\
-    --form "unit=zghf"\
-    --form "stock=6"\
-    --form "min_stock=1"\
-    --form "category_id=et"\
-    --form "price=8"\
-    --form "image=@/tmp/phpyJdlwx" </code></pre></div>
+    --form "name=z"\
+    --form "unit=pwpqg"\
+    --form "stock=7"\
+    --form "min_stock=11"\
+    --form "category_id=nihil"\
+    --form "price=1"\
+    --form "image=@/tmp/php62k4Gk" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5942,12 +6055,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'kcyjgxt');
-body.append('unit', 'zghf');
-body.append('stock', '6');
-body.append('min_stock', '1');
-body.append('category_id', 'et');
-body.append('price', '8');
+body.append('name', 'z');
+body.append('unit', 'pwpqg');
+body.append('stock', '7');
+body.append('min_stock', '11');
+body.append('category_id', 'nihil');
+body.append('price', '1');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -6066,7 +6179,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Example: <code>/tmp/phpyJdlwx</code></p>
+<p>Must be a file. Example: <code>/tmp/php62k4Gk</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -6074,10 +6187,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTadmin-item"
-               value="kcyjgxt"
+               value="z"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>kcyjgxt</code></p>
+<p>validation.max. Example: <code>z</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit</code></b>&nbsp;&nbsp;
@@ -6085,10 +6198,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="unit"                data-endpoint="POSTadmin-item"
-               value="zghf"
+               value="pwpqg"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>zghf</code></p>
+<p>validation.max. Example: <code>pwpqg</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>stock</code></b>&nbsp;&nbsp;
@@ -6096,10 +6209,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="stock"                data-endpoint="POSTadmin-item"
-               value="6"
+               value="7"
                data-component="body">
     <br>
-<p>Example: <code>6</code></p>
+<p>Example: <code>7</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>min_stock</code></b>&nbsp;&nbsp;
@@ -6107,10 +6220,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="min_stock"                data-endpoint="POSTadmin-item"
-               value="1"
+               value="11"
                data-component="body">
     <br>
-<p>Example: <code>1</code></p>
+<p>Example: <code>11</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category_id</code></b>&nbsp;&nbsp;
@@ -6118,10 +6231,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="category_id"                data-endpoint="POSTadmin-item"
-               value="et"
+               value="nihil"
                data-component="body">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>nihil</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -6129,10 +6242,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="price"                data-endpoint="POSTadmin-item"
-               value="8"
+               value="1"
                data-component="body">
     <br>
-<p>Example: <code>8</code></p>
+<p>Example: <code>1</code></p>
         </div>
         </form>
 
@@ -6317,13 +6430,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=adyydniwkrkrdtuzmn"\
-    --form "unit=e"\
-    --form "stock=19"\
-    --form "min_stock=5"\
-    --form "category_id=iure"\
-    --form "price=3"\
-    --form "image=@/tmp/phpLswxUo" </code></pre></div>
+    --form "name=zmupconpn"\
+    --form "unit=oqftaesojwtflgzbegiy"\
+    --form "stock=1"\
+    --form "min_stock=4"\
+    --form "category_id=omnis"\
+    --form "price=5"\
+    --form "image=@/tmp/phpavmebU" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6338,12 +6451,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'adyydniwkrkrdtuzmn');
-body.append('unit', 'e');
-body.append('stock', '19');
-body.append('min_stock', '5');
-body.append('category_id', 'iure');
-body.append('price', '3');
+body.append('name', 'zmupconpn');
+body.append('unit', 'oqftaesojwtflgzbegiy');
+body.append('stock', '1');
+body.append('min_stock', '4');
+body.append('category_id', 'omnis');
+body.append('price', '5');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -6478,7 +6591,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Example: <code>/tmp/phpLswxUo</code></p>
+<p>Must be a file. Example: <code>/tmp/phpavmebU</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -6486,10 +6599,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTadmin-item--id-"
-               value="adyydniwkrkrdtuzmn"
+               value="zmupconpn"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>adyydniwkrkrdtuzmn</code></p>
+<p>validation.max. Example: <code>zmupconpn</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit</code></b>&nbsp;&nbsp;
@@ -6497,10 +6610,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="unit"                data-endpoint="PUTadmin-item--id-"
-               value="e"
+               value="oqftaesojwtflgzbegiy"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>e</code></p>
+<p>validation.max. Example: <code>oqftaesojwtflgzbegiy</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>stock</code></b>&nbsp;&nbsp;
@@ -6508,10 +6621,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="stock"                data-endpoint="PUTadmin-item--id-"
-               value="19"
+               value="1"
                data-component="body">
     <br>
-<p>Example: <code>19</code></p>
+<p>Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>min_stock</code></b>&nbsp;&nbsp;
@@ -6519,10 +6632,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="min_stock"                data-endpoint="PUTadmin-item--id-"
-               value="5"
+               value="4"
                data-component="body">
     <br>
-<p>Example: <code>5</code></p>
+<p>Example: <code>4</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category_id</code></b>&nbsp;&nbsp;
@@ -6530,10 +6643,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="category_id"                data-endpoint="PUTadmin-item--id-"
-               value="iure"
+               value="omnis"
                data-component="body">
     <br>
-<p>Example: <code>iure</code></p>
+<p>Example: <code>omnis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -6541,10 +6654,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="price"                data-endpoint="PUTadmin-item--id-"
-               value="3"
+               value="5"
                data-component="body">
     <br>
-<p>Example: <code>3</code></p>
+<p>Example: <code>5</code></p>
         </div>
         </form>
 
@@ -6750,7 +6863,7 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 vary: Origin
-set-cookie: XSRF-TOKEN=eyJpdiI6Ikh2NXlSZ0lKVUtlaXFGYXE4ZHNqTnc9PSIsInZhbHVlIjoiTFhmTFk0TURFNXpHbm52TFJOd3BzbFBSYzZsY05QdWdNa01qUExSZkloeFNIYnhkU1NHYldzR0lmUGQyQXNpb0FLYkpkL3RsNk16NnRNNjBmREdROFAvSHJ2cElPVVNkUzZ4eS9yZWRiVWo5K2pmQnhpUjdRNzd3RjhYUXJSaXoiLCJtYWMiOiI4MGMxMjUxNjk5Y2RkMjgyNGEzYzNlOGRiOGNjOWVkZWY5NmQ1MmMwMjAwZjJkZTE1ZGZkZDc4MDdlZWQxNjUwIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IllhNkRNckR0d0hXTXROUVRYTmhGY1E9PSIsInZhbHVlIjoiKzA0ZE5SellTSkNqMlpDVG15Wjl4RzhnZGUxYXBtK2xCUHlwREVSYzZXSFFTaXhYS0NTUnpXK1ZMS0xiSkhtcXpyR0lOMnhQVThVS3AzV3I1Z2UyOGRkZ2dxRWZiODA4aEI4ZTlYa1gvc1pOYjVYYTVxZWhFc3UxdTY3SFpwVDUiLCJtYWMiOiI5ZGEzN2IxN2E3MWNmNTVmYTcwYmUzYTUxNGRhNGY2MzBhOTU5ZDQ0ZTMxM2Y2ZWYzN2U4Y2RlYjhhZmRlZTFjIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; TjkLuzSbrp6UczZe0dHwFaQYlJwgl0Tp2iuJCC00=eyJpdiI6IkJCbEw3WHdaNFBnUkdYZ1RIN0Q0dGc9PSIsInZhbHVlIjoiUUlwa3pxbjB4UUk4STV6OXFpQXh4dTE2bDh3aFIxTXdzcHF0KzdPKzViNTBqOUs4cSt4VnhBQ2tkeTA0VVk1WEhWZEZZVUc3RnN0RjllVllLSVY0aE5zclFhOEhsMWRsdVNhcEZkSFZUV1J5WTFHVVNSQXhDTlRoYUVpakUxcCsxYkE5a1A2UlBOelhnSmk1VXFDTHRLcXNNVjRVbDVQak5Tbzd3N0dxTFlGdXh4enZhQW9CazN6dXNGTzNoNmJ3UEkreENvMjhKS0ptOFgwZnUybU5lcmk4ZWtuekl6SW1RYTN2Q09nNzh0Uk80UkZhQ2FMSW9ET082cnV2RUxpTlpSWUlpTWp5aWx4d0FudFNNRE5JYkNXT2phUGNCUk5KaUx6OW10blhGZ2N4RnJ3RVJQTGRKdUZDQWpraW5IVlE0WGM0Y3o5dGRZdHlyR3Nob2tuWmpTTjlKNENPOThuekJHcXJpdXhONUhBem5EVkVRcG11bEpQQ1Y1VVE1OE0vSXFwNjBWVVZ5UWdGL0hPV1JUVENtZz09IiwibWFjIjoiMmIzNWM2MWRhMGRkNDk5YzJmNjk0ODAzM2FkYWYzY2FmYWRjY2VjNDFmOGQwMWRlOWU2N2Q4OGM5ZDEwZTMzNyIsInRhZyI6IiJ9; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax
+set-cookie: XSRF-TOKEN=eyJpdiI6IndEKzNxam1xK25uTFdLekRnbWY0Vmc9PSIsInZhbHVlIjoiaU40eUc0QnEzOXk5dzZnb3NGdCthZG1jejZVM1BKbGdJeTlhcnNjaS8xZ1FBSmxrdnRhWTNWczFXSlkxSEt0S0kzcUJ1ME5qQkFXamY3Ly92WEg3aXRJWUZaM3VWNzJwd3lGcFE4cCtxVEFxNklvbzFyUjRFTGpPc090dXV3a3MiLCJtYWMiOiI4Y2MxZDlmYzRiM2I0YjMxYmYxNmU2NTExYTNlZTRmYTE5Y2Q5NWRkM2YyMWYyNzhiYTAyYjZlMDc4ZGNiYTEwIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IkJVbTlxQlFJRW8vdFZDZVI0dUNHQXc9PSIsInZhbHVlIjoiNG8ySmhRLzBZczlFTTZMR3B6SmtXZ1RDZVNNVlVCNXc2N2wwMElMdGllS0hLMURXcFVKYnpEeC9BQU11SFgvM01FMURFb3pSN0lVYkwwRmRUT2xVNXo2WERoUFVEdUVWSUVQdE9tMXJUVjdtLzFoOUtzUUlFR3ZpcklyY3ZQd0UiLCJtYWMiOiI2ZjQ4M2MwMTc0MjNhZjUzZGQ1ZTk5ODUwMzA0YTk4MzQ5OTIyMGE3MDg4MzY3ODlkNGZhMTA1NmJjMDVkNjRkIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; GgWY62EPBmodfwg2DioNNkXJ8fpNi1retUflLSCZ=eyJpdiI6Ii9vKzhySW5WNlphTU90WDM1dVptN2c9PSIsInZhbHVlIjoiNjRBdEFHSFlCR05pUVc1Q0RIUDRKUThscndOaW8vcWlmWHNrWThJUkpXZTJ6VzB6SGR2dDREaUU5b095MVhHRkN4SWFUcDl1bUxwTndLVTNtOTl2S1pSaWx1SnoyWU1lSDZUZ3ovVnlLblNNU0U4ZXgzYUZHb1c2WVUrQm0zNDBEMjF6aFJGMXZQc3pKcFlLc0ZTeXNDOVh6V09iYlRJM0VPQy8xeFRJYkV3cnpWcVFsZWEvSGgrenh4T3lKcjZyazdudEZTdUNuVlVvc2hmbW4vK1lwSVRYT05PRUIxYmRDZVNjK3BucnZoWHFHbDRhT1k0Qitac3ZkUkJRdGJFd0NTakd4RVFMUHBhcU9JVVRrYkdON3VHZzJpbml5dllybkQzR296c3dLTVNNem8zSVhTc3Y1L2ZsSzlEanJna0ZEMFcxSDFvcmVHS21qUFBKZDFPa1Vsa2tGYmkzUURwYU5ySGF6SkxUeFpXMG5UUy8rVC9RUzh2VmhONmkySjREVXNNZmVzS0hIaFh2Ly9rbFhXMHBWdz09IiwibWFjIjoiZDgyYjFjOWVhYTdiZjQ1ZTFhMWIzZDgwMzhlNTU4NWY0OTQzNDE2OTc4YmE1NTAzNDI1OTE5OWY1MGZjZTc0YiIsInRhZyI6IiJ9; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax
  </code></pre></details>         <pre>
 <code>Empty response</code>
  </pre>
@@ -7425,8 +7538,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 3,
-    \"qty\": 13
+    \"item_id\": 8,
+    \"qty\": 15
 }"
 </code></pre></div>
 
@@ -7443,8 +7556,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": 3,
-    "qty": 13
+    "item_id": 8,
+    "qty": 15
 };
 
 fetch(url, {
@@ -7572,10 +7685,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="POSTadmin-outgoing-item--outgoing_item_id--detail"
-               value="3"
+               value="8"
                data-component="body">
     <br>
-<p>Example: <code>3</code></p>
+<p>Example: <code>8</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -7583,10 +7696,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="POSTadmin-outgoing-item--outgoing_item_id--detail"
-               value="13"
+               value="15"
                data-component="body">
     <br>
-<p>Example: <code>13</code></p>
+<p>Example: <code>15</code></p>
         </div>
         </form>
 
@@ -7604,20 +7717,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/admin/outgoing-item/1/detail/tempora" \
+    "http://localhost:8000/admin/outgoing-item/1/detail/odit" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 4,
-    \"qty\": 18
+    \"item_id\": 18,
+    \"qty\": 5
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/admin/outgoing-item/1/detail/tempora"
+    "http://localhost:8000/admin/outgoing-item/1/detail/odit"
 );
 
 const headers = {
@@ -7627,8 +7740,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": 4,
-    "qty": 18
+    "item_id": 18,
+    "qty": 5
 };
 
 fetch(url, {
@@ -7759,10 +7872,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTadmin-outgoing-item--outgoing_item_id--detail--id-"
-               value="tempora"
+               value="odit"
                data-component="url">
     <br>
-<p>The ID of the detail. Example: <code>tempora</code></p>
+<p>The ID of the detail. Example: <code>odit</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -7771,10 +7884,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="PUTadmin-outgoing-item--outgoing_item_id--detail--id-"
-               value="4"
+               value="18"
                data-component="body">
     <br>
-<p>Example: <code>4</code></p>
+<p>Example: <code>18</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -7782,10 +7895,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="PUTadmin-outgoing-item--outgoing_item_id--detail--id-"
-               value="18"
+               value="5"
                data-component="body">
     <br>
-<p>Example: <code>18</code></p>
+<p>Example: <code>5</code></p>
         </div>
         </form>
 
@@ -8311,11 +8424,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"division_id\": 20,
+    \"division_id\": 7,
     \"items\": [
         {
-            \"item_id\": 20,
-            \"qty\": 8
+            \"item_id\": 19,
+            \"qty\": 19
         }
     ]
 }"
@@ -8334,11 +8447,11 @@ const headers = {
 };
 
 let body = {
-    "division_id": 20,
+    "division_id": 7,
     "items": [
         {
-            "item_id": 20,
-            "qty": 8
+            "item_id": 19,
+            "qty": 19
         }
     ]
 };
@@ -8456,10 +8569,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="division_id"                data-endpoint="POSTadmin-outgoing-item"
-               value="20"
+               value="7"
                data-component="body">
     <br>
-<p>Example: <code>20</code></p>
+<p>Example: <code>7</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
         <details>
@@ -8476,10 +8589,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.item_id"                data-endpoint="POSTadmin-outgoing-item"
-               value="20"
+               value="19"
                data-component="body">
     <br>
-<p>Example: <code>20</code></p>
+<p>Example: <code>19</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -8487,10 +8600,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.qty"                data-endpoint="POSTadmin-outgoing-item"
-               value="8"
+               value="19"
                data-component="body">
     <br>
-<p>Example: <code>8</code></p>
+<p>Example: <code>19</code></p>
                     </div>
                                     </details>
         </div>
@@ -8998,8 +9111,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": \"aliquam\",
-    \"qty\": \"ut\"
+    \"item_id\": \"voluptatum\",
+    \"qty\": \"ratione\"
 }"
 </code></pre></div>
 
@@ -9016,8 +9129,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": "aliquam",
-    "qty": "ut"
+    "item_id": "voluptatum",
+    "qty": "ratione"
 };
 
 fetch(url, {
@@ -9145,10 +9258,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="item_id"                data-endpoint="POSTadmin-request-item--request_item_id--detail"
-               value="aliquam"
+               value="voluptatum"
                data-component="body">
     <br>
-<p>Example: <code>aliquam</code></p>
+<p>Example: <code>voluptatum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -9156,10 +9269,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="qty"                data-endpoint="POSTadmin-request-item--request_item_id--detail"
-               value="ut"
+               value="ratione"
                data-component="body">
     <br>
-<p>Example: <code>ut</code></p>
+<p>Example: <code>ratione</code></p>
         </div>
         </form>
 
@@ -9177,21 +9290,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/admin/request-item/1/detail/fugiat" \
+    "http://localhost:8000/admin/request-item/1/detail/eveniet" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": 1,
-    \"qty\": 14,
-    \"qty_acc\": 2
+    \"item_id\": 6,
+    \"qty\": 11,
+    \"qty_acc\": 8
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/admin/request-item/1/detail/fugiat"
+    "http://localhost:8000/admin/request-item/1/detail/eveniet"
 );
 
 const headers = {
@@ -9201,9 +9314,9 @@ const headers = {
 };
 
 let body = {
-    "item_id": 1,
-    "qty": 14,
-    "qty_acc": 2
+    "item_id": 6,
+    "qty": 11,
+    "qty_acc": 8
 };
 
 fetch(url, {
@@ -9334,10 +9447,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="requestItemDetail"                data-endpoint="PUTadmin-request-item--request_item_id--detail--requestItemDetail-"
-               value="fugiat"
+               value="eveniet"
                data-component="url">
     <br>
-<p>Example: <code>fugiat</code></p>
+<p>Example: <code>eveniet</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -9346,10 +9459,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="item_id"                data-endpoint="PUTadmin-request-item--request_item_id--detail--requestItemDetail-"
-               value="1"
+               value="6"
                data-component="body">
     <br>
-<p>Example: <code>1</code></p>
+<p>Example: <code>6</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -9357,10 +9470,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="PUTadmin-request-item--request_item_id--detail--requestItemDetail-"
-               value="14"
+               value="11"
                data-component="body">
     <br>
-<p>Example: <code>14</code></p>
+<p>Example: <code>11</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty_acc</code></b>&nbsp;&nbsp;
@@ -9368,10 +9481,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty_acc"                data-endpoint="PUTadmin-request-item--request_item_id--detail--requestItemDetail-"
-               value="2"
+               value="8"
                data-component="body">
     <br>
-<p>Example: <code>2</code></p>
+<p>Example: <code>8</code></p>
         </div>
         </form>
 
@@ -9389,7 +9502,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/admin/request-item/1/detail/9" \
+    "http://localhost:8000/admin/request-item/1/detail/20" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -9397,7 +9510,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/admin/request-item/1/detail/9"
+    "http://localhost:8000/admin/request-item/1/detail/20"
 );
 
 const headers = {
@@ -9529,10 +9642,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="requestItemDetail_id"                data-endpoint="DELETEadmin-request-item--request_item_id--detail--requestItemDetail_id-"
-               value="9"
+               value="20"
                data-component="url">
     <br>
-<p>The ID of the requestItemDetail. Example: <code>9</code></p>
+<p>The ID of the requestItemDetail. Example: <code>20</code></p>
             </div>
                     </form>
 
@@ -10478,8 +10591,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"item_id\": \"architecto\",
-    \"qty\": \"quos\"
+    \"item_id\": \"est\",
+    \"qty\": \"et\"
 }"
 </code></pre></div>
 
@@ -10496,8 +10609,8 @@ const headers = {
 };
 
 let body = {
-    "item_id": "architecto",
-    "qty": "quos"
+    "item_id": "est",
+    "qty": "et"
 };
 
 fetch(url, {
@@ -10625,10 +10738,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="item_id"                data-endpoint="POSTadmin-submission--submission_id--detail"
-               value="architecto"
+               value="est"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Example: <code>est</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -10636,10 +10749,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="qty"                data-endpoint="POSTadmin-submission--submission_id--detail"
-               value="quos"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>quos</code></p>
+<p>Example: <code>et</code></p>
         </div>
         </form>
 
@@ -10657,21 +10770,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/admin/submission/1/detail/corrupti" \
+    "http://localhost:8000/admin/submission/1/detail/nostrum" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"item_id\": 2,
-    \"qty\": 20,
-    \"qty_acc\": 2
+    \"qty\": 10,
+    \"qty_acc\": 5
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/admin/submission/1/detail/corrupti"
+    "http://localhost:8000/admin/submission/1/detail/nostrum"
 );
 
 const headers = {
@@ -10682,8 +10795,8 @@ const headers = {
 
 let body = {
     "item_id": 2,
-    "qty": 20,
-    "qty_acc": 2
+    "qty": 10,
+    "qty_acc": 5
 };
 
 fetch(url, {
@@ -10814,10 +10927,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTadmin-submission--submission_id--detail--id-"
-               value="corrupti"
+               value="nostrum"
                data-component="url">
     <br>
-<p>The ID of the detail. Example: <code>corrupti</code></p>
+<p>The ID of the detail. Example: <code>nostrum</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -10837,10 +10950,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty"                data-endpoint="PUTadmin-submission--submission_id--detail--id-"
-               value="20"
+               value="10"
                data-component="body">
     <br>
-<p>Example: <code>20</code></p>
+<p>Example: <code>10</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty_acc</code></b>&nbsp;&nbsp;
@@ -10848,10 +10961,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="qty_acc"                data-endpoint="PUTadmin-submission--submission_id--detail--id-"
-               value="2"
+               value="5"
                data-component="body">
     <br>
-<p>Example: <code>2</code></p>
+<p>Example: <code>5</code></p>
         </div>
         </form>
 
@@ -11344,8 +11457,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"items\": [
         {
-            \"item_id\": 5,
-            \"qty\": 15
+            \"item_id\": 12,
+            \"qty\": 9
         }
     ]
 }"
@@ -11366,8 +11479,8 @@ const headers = {
 let body = {
     "items": [
         {
-            "item_id": 5,
-            "qty": 15
+            "item_id": 12,
+            "qty": 9
         }
     ]
 };
@@ -11494,10 +11607,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.item_id"                data-endpoint="POSTadmin-submission"
-               value="5"
+               value="12"
                data-component="body">
     <br>
-<p>Example: <code>5</code></p>
+<p>Example: <code>12</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -11505,10 +11618,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="items.0.qty"                data-endpoint="POSTadmin-submission"
-               value="15"
+               value="9"
                data-component="body">
     <br>
-<p>Example: <code>15</code></p>
+<p>Example: <code>9</code></p>
                     </div>
                                     </details>
         </div>
@@ -11846,7 +11959,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/supervisor/request/voluptas/accept" \
+    "http://localhost:8000/supervisor/request/perspiciatis/accept" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -11854,7 +11967,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/supervisor/request/voluptas/accept"
+    "http://localhost:8000/supervisor/request/perspiciatis/accept"
 );
 
 const headers = {
@@ -11975,10 +12088,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="request"                data-endpoint="POSTsupervisor-request--request--accept"
-               value="voluptas"
+               value="perspiciatis"
                data-component="url">
     <br>
-<p>The request. Example: <code>voluptas</code></p>
+<p>The request. Example: <code>perspiciatis</code></p>
             </div>
                     </form>
 
@@ -11996,7 +12109,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/supervisor/request/aut/decline" \
+    "http://localhost:8000/supervisor/request/perferendis/decline" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -12004,7 +12117,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/supervisor/request/aut/decline"
+    "http://localhost:8000/supervisor/request/perferendis/decline"
 );
 
 const headers = {
@@ -12125,10 +12238,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="request"                data-endpoint="POSTsupervisor-request--request--decline"
-               value="aut"
+               value="perferendis"
                data-component="url">
     <br>
-<p>The request. Example: <code>aut</code></p>
+<p>The request. Example: <code>perferendis</code></p>
             </div>
                     </form>
 
@@ -12717,9 +12830,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"ptfhksu\",
-    \"address\": \"gsvlmhkvwn\",
-    \"phone\": \"lpzafkpgq\"
+    \"name\": \"gpsouqpegftkfdhgobifo\",
+    \"address\": \"dcocbvmkmsodhimkqsgnnklo\",
+    \"phone\": \"wkdvvfyktrhuzetdqd\"
 }"
 </code></pre></div>
 
@@ -12736,9 +12849,9 @@ const headers = {
 };
 
 let body = {
-    "name": "ptfhksu",
-    "address": "gsvlmhkvwn",
-    "phone": "lpzafkpgq"
+    "name": "gpsouqpegftkfdhgobifo",
+    "address": "dcocbvmkmsodhimkqsgnnklo",
+    "phone": "wkdvvfyktrhuzetdqd"
 };
 
 fetch(url, {
@@ -12854,10 +12967,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTadmin-supplier"
-               value="ptfhksu"
+               value="gpsouqpegftkfdhgobifo"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>ptfhksu</code></p>
+<p>validation.max. Example: <code>gpsouqpegftkfdhgobifo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -12865,10 +12978,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="POSTadmin-supplier"
-               value="gsvlmhkvwn"
+               value="dcocbvmkmsodhimkqsgnnklo"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>gsvlmhkvwn</code></p>
+<p>validation.max. Example: <code>dcocbvmkmsodhimkqsgnnklo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -12876,10 +12989,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTadmin-supplier"
-               value="lpzafkpgq"
+               value="wkdvvfyktrhuzetdqd"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>lpzafkpgq</code></p>
+<p>validation.max. Example: <code>wkdvvfyktrhuzetdqd</code></p>
         </div>
         </form>
 
@@ -13061,9 +13174,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"uxgwq\",
-    \"address\": \"uxqa\",
-    \"phone\": \"ravdfmnrwnbov\"
+    \"name\": \"rsxcjdepo\",
+    \"address\": \"zznxfrnhplachzwonxtp\",
+    \"phone\": \"bvlikm\"
 }"
 </code></pre></div>
 
@@ -13080,9 +13193,9 @@ const headers = {
 };
 
 let body = {
-    "name": "uxgwq",
-    "address": "uxqa",
-    "phone": "ravdfmnrwnbov"
+    "name": "rsxcjdepo",
+    "address": "zznxfrnhplachzwonxtp",
+    "phone": "bvlikm"
 };
 
 fetch(url, {
@@ -13215,10 +13328,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTadmin-supplier--id-"
-               value="uxgwq"
+               value="rsxcjdepo"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>uxgwq</code></p>
+<p>validation.max. Example: <code>rsxcjdepo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -13226,10 +13339,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="PUTadmin-supplier--id-"
-               value="uxqa"
+               value="zznxfrnhplachzwonxtp"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>uxqa</code></p>
+<p>validation.max. Example: <code>zznxfrnhplachzwonxtp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -13237,10 +13350,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTadmin-supplier--id-"
-               value="ravdfmnrwnbov"
+               value="bvlikm"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>ravdfmnrwnbov</code></p>
+<p>validation.max. Example: <code>bvlikm</code></p>
         </div>
         </form>
 
@@ -13661,11 +13774,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"uswdsmkazlpfqv\",
-    \"id\": \"owenjbjgsmubbstgbihpzgefb\",
-    \"username\": \"yvmqjurcxdajiad\",
-    \"email\": \"cecelia.mcdermott@example.org\",
-    \"password\": \"2)0S\'z:~C6V|\",
+    \"name\": \"ubyqz\",
+    \"id\": \"p\",
+    \"username\": \"bfyejiwuggfgspqtjdwbkuft\",
+    \"email\": \"glehner@example.com\",
+    \"password\": \",AV+8NbLa\",
     \"role\": \"admin\"
 }"
 </code></pre></div>
@@ -13683,11 +13796,11 @@ const headers = {
 };
 
 let body = {
-    "name": "uswdsmkazlpfqv",
-    "id": "owenjbjgsmubbstgbihpzgefb",
-    "username": "yvmqjurcxdajiad",
-    "email": "cecelia.mcdermott@example.org",
-    "password": "2)0S'z:~C6V|",
+    "name": "ubyqz",
+    "id": "p",
+    "username": "bfyejiwuggfgspqtjdwbkuft",
+    "email": "glehner@example.com",
+    "password": ",AV+8NbLa",
     "role": "admin"
 };
 
@@ -13804,10 +13917,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTadmin-users"
-               value="uswdsmkazlpfqv"
+               value="ubyqz"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>uswdsmkazlpfqv</code></p>
+<p>validation.max. Example: <code>ubyqz</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -13815,10 +13928,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="POSTadmin-users"
-               value="owenjbjgsmubbstgbihpzgefb"
+               value="p"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>owenjbjgsmubbstgbihpzgefb</code></p>
+<p>validation.max. Example: <code>p</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>username</code></b>&nbsp;&nbsp;
@@ -13826,10 +13939,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="POSTadmin-users"
-               value="yvmqjurcxdajiad"
+               value="bfyejiwuggfgspqtjdwbkuft"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>yvmqjurcxdajiad</code></p>
+<p>validation.max. Example: <code>bfyejiwuggfgspqtjdwbkuft</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -13837,10 +13950,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTadmin-users"
-               value="cecelia.mcdermott@example.org"
+               value="glehner@example.com"
                data-component="body">
     <br>
-<p>validation.email validation.max. Example: <code>cecelia.mcdermott@example.org</code></p>
+<p>validation.email validation.max. Example: <code>glehner@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -13848,10 +13961,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTadmin-users"
-               value="2)0S'z:~C6V|"
+               value=",AV+8NbLa"
                data-component="body">
     <br>
-<p>validation.min. Example: <code>2)0S'z:~C6V|</code></p>
+<p>validation.min. Example: <code>,AV+8NbLa</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>role</code></b>&nbsp;&nbsp;
@@ -14045,12 +14158,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"svdtzz\",
-    \"id\": \"hqw\",
-    \"username\": \"emwkktoldmzfoarirfyhqr\",
-    \"email\": \"lgraham@example.com\",
-    \"password\": \"\'lncekVkf\",
-    \"role\": \"pengawas\"
+    \"name\": \"iexyoqelclabqitezwemnzarb\",
+    \"id\": \"uw\",
+    \"username\": \"mpzaodsujan\",
+    \"email\": \"keeley.upton@example.com\",
+    \"password\": \"T|4ECaeRj6}V\'j?$\",
+    \"role\": \"unit\"
 }"
 </code></pre></div>
 
@@ -14067,12 +14180,12 @@ const headers = {
 };
 
 let body = {
-    "name": "svdtzz",
-    "id": "hqw",
-    "username": "emwkktoldmzfoarirfyhqr",
-    "email": "lgraham@example.com",
-    "password": "'lncekVkf",
-    "role": "pengawas"
+    "name": "iexyoqelclabqitezwemnzarb",
+    "id": "uw",
+    "username": "mpzaodsujan",
+    "email": "keeley.upton@example.com",
+    "password": "T|4ECaeRj6}V'j?$",
+    "role": "unit"
 };
 
 fetch(url, {
@@ -14204,10 +14317,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTadmin-users--username-"
-               value="svdtzz"
+               value="iexyoqelclabqitezwemnzarb"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>svdtzz</code></p>
+<p>validation.max. Example: <code>iexyoqelclabqitezwemnzarb</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -14215,10 +14328,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTadmin-users--username-"
-               value="hqw"
+               value="uw"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>hqw</code></p>
+<p>validation.max. Example: <code>uw</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>username</code></b>&nbsp;&nbsp;
@@ -14226,10 +14339,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="PUTadmin-users--username-"
-               value="emwkktoldmzfoarirfyhqr"
+               value="mpzaodsujan"
                data-component="body">
     <br>
-<p>validation.max. Example: <code>emwkktoldmzfoarirfyhqr</code></p>
+<p>validation.max. Example: <code>mpzaodsujan</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -14237,10 +14350,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTadmin-users--username-"
-               value="lgraham@example.com"
+               value="keeley.upton@example.com"
                data-component="body">
     <br>
-<p>validation.email validation.max. Example: <code>lgraham@example.com</code></p>
+<p>validation.email validation.max. Example: <code>keeley.upton@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -14248,10 +14361,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="PUTadmin-users--username-"
-               value="'lncekVkf"
+               value="T|4ECaeRj6}V'j?$"
                data-component="body">
     <br>
-<p>validation.min. Example: <code>'lncekVkf</code></p>
+<p>validation.min. Example: <code>T|4ECaeRj6}V'j?$</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>role</code></b>&nbsp;&nbsp;
@@ -14259,10 +14372,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="role"                data-endpoint="PUTadmin-users--username-"
-               value="pengawas"
+               value="unit"
                data-component="body">
     <br>
-<p>Example: <code>pengawas</code></p>
+<p>Example: <code>unit</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>admin</code></li> <li><code>unit</code></li> <li><code>pengawas</code></li></ul>
         </div>

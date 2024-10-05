@@ -53,6 +53,7 @@ class CategoryController extends Controller
         // validate name, ensure its unique
         $validator = Validator::make($request->all(), [
             'name' => 'required|unique:categories,name|alpha_dash',
+            'code' => 'required|unique:categories,code',
         ]);
 
         // check if validation fails
@@ -64,10 +65,7 @@ class CategoryController extends Controller
         }
 
         // create new category
-        $category = Category::create([
-            'name' => $request->name,
-            'id' => 'C-' . trim($request->name)
-        ]);
+        $category = Category::create($validator->validated());
 
         return response()->json([
             'message' => 'success create new category',
@@ -94,6 +92,7 @@ class CategoryController extends Controller
         // validate name, ensure its unique
         $validator = Validator::make($request->all(), [
             'name' => 'required|unique:categories,name',
+            'code' => 'nullable|unique:categories,code,' . $category->code,
         ]);
 
         // check if validation fails
@@ -105,9 +104,7 @@ class CategoryController extends Controller
         }
 
         // update category
-        $category->update([
-            'name' => $request->name
-        ]);
+        $category->update($validator->validated());
 
         return response()->json([
             'message' => 'success update category',

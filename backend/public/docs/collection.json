@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "62ef1d43-3a8e-4f67-ac43-9f4db6363589",
+        "_postman_id": "13a20617-1142-4a09-a876-13ede4bcb013",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -326,7 +326,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"yod-mam_r\"}"
+                            "raw": "{\"name\":\"ysc-fjy_g\",\"code\":\"velit\"}"
                         },
                         "description": ""
                     },
@@ -346,8 +346,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Internal Server Error\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"ysc-fjy_g\",\"code\":\"velit\",\"updated_at\":\"2024-10-05T16:55:50.000000Z\",\"created_at\":\"2024-10-05T16:55:50.000000Z\",\"id\":3}}",
                             "name": ""
                         }
                     ]
@@ -435,7 +435,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"odit\"}"
+                            "raw": "{\"name\":\"nihil\"}"
                         },
                         "description": ""
                     },
@@ -456,7 +456,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"odit\",\"created_at\":\"2024-10-05T16:29:14.000000Z\",\"updated_at\":\"2024-10-05T16:49:41.000000Z\"}}",
+                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"nihil\",\"created_at\":\"2024-10-05T16:29:14.000000Z\",\"updated_at\":\"2024-10-05T16:55:50.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -550,7 +550,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"ut\",\"role\":\"admin\",\"username\":\"dolor\"}"
+                            "raw": "{\"password\":\"suscipit\",\"role\":\"pengawas\",\"username\":\"consequatur\"}"
                         },
                         "description": ""
                     },
@@ -696,7 +696,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nip\":\"pyq\",\"name\":\"fuga\",\"position\":\"quia\",\"phone\":\"qui\",\"email\":\"windler.destin@example.net\"}"
+                            "raw": "{\"nip\":\"xmykt\",\"name\":\"ducimus\",\"position\":\"temporibus\",\"phone\":\"non\",\"email\":\"jeromy72@example.org\"}"
                         },
                         "description": ""
                     },
@@ -805,7 +805,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nip\":\"baetaui\",\"name\":\"rerum\",\"position\":\"omnis\",\"phone\":\"unde\",\"email\":\"abayer@example.net\"}"
+                            "raw": "{\"nip\":\"yg\",\"name\":\"magni\",\"position\":\"doloremque\",\"phone\":\"fugit\",\"email\":\"wilhelm65@example.com\"}"
                         },
                         "description": ""
                     },
@@ -826,7 +826,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"baetaui\",\"name\":\"rerum\",\"position\":\"omnis\",\"phone\":\"unde\",\"email\":\"abayer@example.net\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-05T16:49:40.000000Z\"}}",
+                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"yg\",\"name\":\"magni\",\"position\":\"doloremque\",\"phone\":\"fugit\",\"email\":\"wilhelm65@example.com\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-05T16:55:49.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -902,7 +902,7 @@
                                 {
                                     "id": "path",
                                     "key": "path",
-                                    "value": "8",
+                                    "value": "",
                                     "description": ""
                                 }
                             ]
@@ -937,8 +937,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Internal Server Error\"}",
+                            "code": 404,
+                            "body": "{\"message\":\"Not Found\"}",
                             "name": ""
                         }
                     ]
@@ -955,7 +955,7 @@
                                 {
                                     "id": "path",
                                     "key": "path",
-                                    "value": "tG",
+                                    "value": "6%40",
                                     "description": ""
                                 }
                             ]
@@ -1085,7 +1085,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":19,\"qty\":14}"
+                            "raw": "{\"item_id\":11,\"qty\":10}"
                         },
                         "description": ""
                     },
@@ -1105,8 +1105,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Internal Server Error\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":14,\"incoming_item_id\":1,\"item_id\":7,\"qty\":76,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":23,\"incoming_item_id\":1,\"item_id\":10,\"qty\":49,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":25,\"incoming_item_id\":1,\"item_id\":5,\"qty\":78,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":38,\"incoming_item_id\":1,\"item_id\":1,\"qty\":38,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":40,\"incoming_item_id\":1,\"item_id\":8,\"qty\":72,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":8,\"qty\":47,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":59,\"incoming_item_id\":1,\"item_id\":5,\"qty\":74,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":3,\"qty\":100,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":87,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":7,\"qty\":82,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":103,\"incoming_item_id\":1,\"item_id\":11,\"qty\":10,\"created_at\":\"2024-10-05T16:55:50.000000Z\",\"updated_at\":\"2024-10-05T16:55:50.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1147,7 +1147,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":4,\"qty\":18}"
+                            "raw": "{\"item_id\":19,\"qty\":9}"
                         },
                         "description": ""
                     },
@@ -1167,8 +1167,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"message\":\"success update item in detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":4,\"qty\":18,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:49:41.000000Z\"}}",
+                            "code": 500,
+                            "body": "{\"message\":\"Internal Server Error\"}",
                             "name": ""
                         }
                     ]
@@ -1305,7 +1305,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"supplier_id\":\"itaque\",\"items\":[{\"item_id\":\"at\",\"qty\":17}]}"
+                            "raw": "{\"supplier_id\":\"molestiae\",\"items\":[{\"item_id\":\"explicabo\",\"qty\":13}]}"
                         },
                         "description": ""
                     },
@@ -1513,37 +1513,37 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "kcyjgxt",
+                                    "value": "z",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "unit",
-                                    "value": "zghf",
+                                    "value": "pwpqg",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "stock",
-                                    "value": 6,
+                                    "value": 7,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "min_stock",
-                                    "value": 1,
+                                    "value": 11,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "et",
+                                    "value": "nihil",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "price",
-                                    "value": 8,
+                                    "value": 1,
                                     "type": "text",
                                     "description": ""
                                 },
@@ -1664,37 +1664,37 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "adyydniwkrkrdtuzmn",
+                                    "value": "zmupconpn",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "unit",
-                                    "value": "e",
+                                    "value": "oqftaesojwtflgzbegiy",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "stock",
-                                    "value": 19,
+                                    "value": 1,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "min_stock",
-                                    "value": 5,
+                                    "value": 4,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "iure",
+                                    "value": "omnis",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "price",
-                                    "value": 3,
+                                    "value": 5,
                                     "type": "text",
                                     "description": ""
                                 },
@@ -1829,7 +1829,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6Ikh2NXlSZ0lKVUtlaXFGYXE4ZHNqTnc9PSIsInZhbHVlIjoiTFhmTFk0TURFNXpHbm52TFJOd3BzbFBSYzZsY05QdWdNa01qUExSZkloeFNIYnhkU1NHYldzR0lmUGQyQXNpb0FLYkpkL3RsNk16NnRNNjBmREdROFAvSHJ2cElPVVNkUzZ4eS9yZWRiVWo5K2pmQnhpUjdRNzd3RjhYUXJSaXoiLCJtYWMiOiI4MGMxMjUxNjk5Y2RkMjgyNGEzYzNlOGRiOGNjOWVkZWY5NmQ1MmMwMjAwZjJkZTE1ZGZkZDc4MDdlZWQxNjUwIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IllhNkRNckR0d0hXTXROUVRYTmhGY1E9PSIsInZhbHVlIjoiKzA0ZE5SellTSkNqMlpDVG15Wjl4RzhnZGUxYXBtK2xCUHlwREVSYzZXSFFTaXhYS0NTUnpXK1ZMS0xiSkhtcXpyR0lOMnhQVThVS3AzV3I1Z2UyOGRkZ2dxRWZiODA4aEI4ZTlYa1gvc1pOYjVYYTVxZWhFc3UxdTY3SFpwVDUiLCJtYWMiOiI5ZGEzN2IxN2E3MWNmNTVmYTcwYmUzYTUxNGRhNGY2MzBhOTU5ZDQ0ZTMxM2Y2ZWYzN2U4Y2RlYjhhZmRlZTFjIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; TjkLuzSbrp6UczZe0dHwFaQYlJwgl0Tp2iuJCC00=eyJpdiI6IkJCbEw3WHdaNFBnUkdYZ1RIN0Q0dGc9PSIsInZhbHVlIjoiUUlwa3pxbjB4UUk4STV6OXFpQXh4dTE2bDh3aFIxTXdzcHF0KzdPKzViNTBqOUs4cSt4VnhBQ2tkeTA0VVk1WEhWZEZZVUc3RnN0RjllVllLSVY0aE5zclFhOEhsMWRsdVNhcEZkSFZUV1J5WTFHVVNSQXhDTlRoYUVpakUxcCsxYkE5a1A2UlBOelhnSmk1VXFDTHRLcXNNVjRVbDVQak5Tbzd3N0dxTFlGdXh4enZhQW9CazN6dXNGTzNoNmJ3UEkreENvMjhKS0ptOFgwZnUybU5lcmk4ZWtuekl6SW1RYTN2Q09nNzh0Uk80UkZhQ2FMSW9ET082cnV2RUxpTlpSWUlpTWp5aWx4d0FudFNNRE5JYkNXT2phUGNCUk5KaUx6OW10blhGZ2N4RnJ3RVJQTGRKdUZDQWpraW5IVlE0WGM0Y3o5dGRZdHlyR3Nob2tuWmpTTjlKNENPOThuekJHcXJpdXhONUhBem5EVkVRcG11bEpQQ1Y1VVE1OE0vSXFwNjBWVVZ5UWdGL0hPV1JUVENtZz09IiwibWFjIjoiMmIzNWM2MWRhMGRkNDk5YzJmNjk0ODAzM2FkYWYzY2FmYWRjY2VjNDFmOGQwMWRlOWU2N2Q4OGM5ZDEwZTMzNyIsInRhZyI6IiJ9; expires=Sat, 05 Oct 2024 18:49:40 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IndEKzNxam1xK25uTFdLekRnbWY0Vmc9PSIsInZhbHVlIjoiaU40eUc0QnEzOXk5dzZnb3NGdCthZG1jejZVM1BKbGdJeTlhcnNjaS8xZ1FBSmxrdnRhWTNWczFXSlkxSEt0S0kzcUJ1ME5qQkFXamY3Ly92WEg3aXRJWUZaM3VWNzJwd3lGcFE4cCtxVEFxNklvbzFyUjRFTGpPc090dXV3a3MiLCJtYWMiOiI4Y2MxZDlmYzRiM2I0YjMxYmYxNmU2NTExYTNlZTRmYTE5Y2Q5NWRkM2YyMWYyNzhiYTAyYjZlMDc4ZGNiYTEwIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IkJVbTlxQlFJRW8vdFZDZVI0dUNHQXc9PSIsInZhbHVlIjoiNG8ySmhRLzBZczlFTTZMR3B6SmtXZ1RDZVNNVlVCNXc2N2wwMElMdGllS0hLMURXcFVKYnpEeC9BQU11SFgvM01FMURFb3pSN0lVYkwwRmRUT2xVNXo2WERoUFVEdUVWSUVQdE9tMXJUVjdtLzFoOUtzUUlFR3ZpcklyY3ZQd0UiLCJtYWMiOiI2ZjQ4M2MwMTc0MjNhZjUzZGQ1ZTk5ODUwMzA0YTk4MzQ5OTIyMGE3MDg4MzY3ODlkNGZhMTA1NmJjMDVkNjRkIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; GgWY62EPBmodfwg2DioNNkXJ8fpNi1retUflLSCZ=eyJpdiI6Ii9vKzhySW5WNlphTU90WDM1dVptN2c9PSIsInZhbHVlIjoiNjRBdEFHSFlCR05pUVc1Q0RIUDRKUThscndOaW8vcWlmWHNrWThJUkpXZTJ6VzB6SGR2dDREaUU5b095MVhHRkN4SWFUcDl1bUxwTndLVTNtOTl2S1pSaWx1SnoyWU1lSDZUZ3ovVnlLblNNU0U4ZXgzYUZHb1c2WVUrQm0zNDBEMjF6aFJGMXZQc3pKcFlLc0ZTeXNDOVh6V09iYlRJM0VPQy8xeFRJYkV3cnpWcVFsZWEvSGgrenh4T3lKcjZyazdudEZTdUNuVlVvc2hmbW4vK1lwSVRYT05PRUIxYmRDZVNjK3BucnZoWHFHbDRhT1k0Qitac3ZkUkJRdGJFd0NTakd4RVFMUHBhcU9JVVRrYkdON3VHZzJpbml5dllybkQzR296c3dLTVNNem8zSVhTc3Y1L2ZsSzlEanJna0ZEMFcxSDFvcmVHS21qUFBKZDFPa1Vsa2tGYmkzUURwYU5ySGF6SkxUeFpXMG5UUy8rVC9RUzh2VmhONmkySjREVXNNZmVzS0hIaFh2Ly9rbFhXMHBWdz09IiwibWFjIjoiZDgyYjFjOWVhYTdiZjQ1ZTFhMWIzZDgwMzhlNTU4NWY0OTQzNDE2OTc4YmE1NTAzNDI1OTE5OWY1MGZjZTc0YiIsInRhZyI6IiJ9; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -2062,7 +2062,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":3,\"qty\":13}"
+                            "raw": "{\"item_id\":8,\"qty\":15}"
                         },
                         "description": ""
                     },
@@ -2106,7 +2106,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "tempora",
+                                    "value": "odit",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -2124,7 +2124,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":4,\"qty\":18}"
+                            "raw": "{\"item_id\":18,\"qty\":5}"
                         },
                         "description": ""
                     },
@@ -2282,7 +2282,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"division_id\":20,\"items\":[{\"item_id\":20,\"qty\":8}]}"
+                            "raw": "{\"division_id\":7,\"items\":[{\"item_id\":19,\"qty\":19}]}"
                         },
                         "description": ""
                     },
@@ -2503,7 +2503,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"aliquam\",\"qty\":\"ut\"}"
+                            "raw": "{\"item_id\":\"voluptatum\",\"qty\":\"ratione\"}"
                         },
                         "description": ""
                     },
@@ -2547,7 +2547,7 @@
                                 {
                                     "id": "requestItemDetail",
                                     "key": "requestItemDetail",
-                                    "value": "fugiat",
+                                    "value": "eveniet",
                                     "description": ""
                                 }
                             ]
@@ -2565,7 +2565,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":1,\"qty\":14,\"qty_acc\":2}"
+                            "raw": "{\"item_id\":6,\"qty\":11,\"qty_acc\":8}"
                         },
                         "description": ""
                     },
@@ -2609,7 +2609,7 @@
                                 {
                                     "id": "requestItemDetail_id",
                                     "key": "requestItemDetail_id",
-                                    "value": "9",
+                                    "value": "20",
                                     "description": "The ID of the requestItemDetail."
                                 }
                             ]
@@ -2941,7 +2941,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"architecto\",\"qty\":\"quos\"}"
+                            "raw": "{\"item_id\":\"est\",\"qty\":\"et\"}"
                         },
                         "description": ""
                     },
@@ -2985,7 +2985,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "corrupti",
+                                    "value": "nostrum",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -3003,7 +3003,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":2,\"qty\":20,\"qty_acc\":2}"
+                            "raw": "{\"item_id\":2,\"qty\":10,\"qty_acc\":5}"
                         },
                         "description": ""
                     },
@@ -3161,7 +3161,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"items\":[{\"item_id\":5,\"qty\":15}]}"
+                            "raw": "{\"items\":[{\"item_id\":12,\"qty\":9}]}"
                         },
                         "description": ""
                     },
@@ -3311,7 +3311,7 @@
                                 {
                                     "id": "request",
                                     "key": "request",
-                                    "value": "voluptas",
+                                    "value": "perspiciatis",
                                     "description": "The request."
                                 }
                             ]
@@ -3364,7 +3364,7 @@
                                 {
                                     "id": "request",
                                     "key": "request",
-                                    "value": "aut",
+                                    "value": "perferendis",
                                     "description": "The request."
                                 }
                             ]
@@ -3590,7 +3590,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ptfhksu\",\"address\":\"gsvlmhkvwn\",\"phone\":\"lpzafkpgq\"}"
+                            "raw": "{\"name\":\"gpsouqpegftkfdhgobifo\",\"address\":\"dcocbvmkmsodhimkqsgnnklo\",\"phone\":\"wkdvvfyktrhuzetdqd\"}"
                         },
                         "description": ""
                     },
@@ -3699,7 +3699,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"uxgwq\",\"address\":\"uxqa\",\"phone\":\"ravdfmnrwnbov\"}"
+                            "raw": "{\"name\":\"rsxcjdepo\",\"address\":\"zznxfrnhplachzwonxtp\",\"phone\":\"bvlikm\"}"
                         },
                         "description": ""
                     },
@@ -3851,7 +3851,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"uswdsmkazlpfqv\",\"id\":\"owenjbjgsmubbstgbihpzgefb\",\"username\":\"yvmqjurcxdajiad\",\"email\":\"cecelia.mcdermott@example.org\",\"password\":\"2)0S'z:~C6V|\",\"role\":\"admin\"}"
+                            "raw": "{\"name\":\"ubyqz\",\"id\":\"p\",\"username\":\"bfyejiwuggfgspqtjdwbkuft\",\"email\":\"glehner@example.com\",\"password\":\",AV+8NbLa\",\"role\":\"admin\"}"
                         },
                         "description": ""
                     },
@@ -3960,7 +3960,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"svdtzz\",\"id\":\"hqw\",\"username\":\"emwkktoldmzfoarirfyhqr\",\"email\":\"lgraham@example.com\",\"password\":\"'lncekVkf\",\"role\":\"pengawas\"}"
+                            "raw": "{\"name\":\"iexyoqelclabqitezwemnzarb\",\"id\":\"uw\",\"username\":\"mpzaodsujan\",\"email\":\"keeley.upton@example.com\",\"password\":\"T|4ECaeRj6}V'j?$\",\"role\":\"unit\"}"
                         },
                         "description": ""
                     },
