@@ -13,8 +13,6 @@ class IncomingItemDetailSeeder extends Seeder
      */
     public function run(): void
     {
-        // IncomingItemDetail::create([
-        //     ''
-        // ]);
+        IncomingItemDetail::factory(100)->create();
     }
 }

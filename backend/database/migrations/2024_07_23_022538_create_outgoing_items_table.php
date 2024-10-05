@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('outgoing_items', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->string('operator_id');
-            $table->string('division_id');
-            $table->integer('total_items')->default(0);
+            $table->id();
+            $table->string('code')->unique();
+            $table->unsignedBigInteger('operator_id');
+            $table->unsignedBigInteger('division_id');
             $table->text('note')->nullable();
 
             $table->foreign('operator_id')->references('id')->on('employees');

@@ -14,38 +14,40 @@ class SupplierSeeder extends Seeder
     public function run(): void
     {
         Supplier::create([
-            'id' => 'S0001',
+            'code' => 'S0001',
             'name' => 'Supplier 1',
             'address' => 'Address 1',
             'phone' => '08123456789',
         ]);
 
         Supplier::create([
-            'id' => 'S0002',
+            'code' => 'S0002',
             'name' => 'Supplier 2',
             'address' => 'Address 2',
             'phone' => '08123456790',
         ]);
 
         Supplier::create([
-            'id' => 'S0003',
+            'code' => 'S0003',
             'name' => 'Supplier 3',
             'address' => 'Address 3',
             'phone' => '08123456791',
         ]);
 
         Supplier::create([
-            'id' => 'S0004',
+            'code' => 'S0004',
             'name' => 'Supplier 4',
             'address' => 'Address 4',
             'phone' => '08123456792',
         ]);
 
         Supplier::create([
-            'id' => 'S0005',
+            'code' => 'S0005',
             'name' => 'Supplier 5',
             'address' => 'Address 5',
             'phone' => '08123456793',
         ]);
+
+        Supplier::factory(5)->create();
     }
 }

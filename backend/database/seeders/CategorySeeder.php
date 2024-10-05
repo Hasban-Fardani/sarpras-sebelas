@@ -13,7 +13,7 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::create([
-            'id' => 'ATK',
+            'code' => 'ATK',
             'name' => 'Alat Tulis Kantor'
         ]);
     }

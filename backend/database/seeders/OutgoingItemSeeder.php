@@ -13,43 +13,40 @@ class OutgoingItemSeeder extends Seeder
     public function run(): void
     {
         OutgoingItem::create([
-           'id' => 'OTK-001',
-           'operator_id' => '197806311994031003',
-           'division_id' => '198212311994031004',
-           'total_items' => 5,
-           'note' => 'Barang keluar untuk keperluan testing' 
+            'code' => 'OUT-001',
+            'operator_id' => 1,
+            'division_id' => 4,
+            'note' => 'Barang keluar untuk keperluan testing'
         ]);
 
         OutgoingItem::create([
-            'id' => 'OTK-002',
-            'operator_id' => '197806311994031003',
-            'division_id' => '198212311994031004',
-            'total_items' => 5,
+            'code' => 'OUT-002',
+            'operator_id' => 1,
+            'division_id' => 5,
             'note' => 'Barang keluar untuk'
         ]);
 
         OutgoingItem::create([
-            'id' => 'OTK-003',
-            'operator_id' => '197806311994031003',
-            'division_id' => '198212311994031004',
-            'total_items' => 5,
+            'code' => 'OUT-003',
+            'operator_id' => 1,
+            'division_id' => 4,
             'note' => 'Barang keluar untuk'
         ]);
 
         OutgoingItem::create([
-            'id' => 'OTK-004',
-            'operator_id' => '197806311994031003',
-            'division_id' => '198212311994031004',
-            'total_items' => 6,
+            'code' => 'OUT-004',
+            'operator_id' => 1,
+            'division_id' => 5,
             'note' => 'Barang keluar untuk'
         ]);
 
         OutgoingItem::create([
-            'id' => 'OTK-005',
-            'operator_id' => '197806311994031003',
-            'division_id' => '198212311994031004',
-            'total_items' => 6,
+            'code' => 'OUT-005',
+            'operator_id' => 1,
+            'division_id' => 4,
             'note' => 'Barang keluar untuk'
         ]);
+
+        OutgoingItem::factory(5)->create();
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\OutgoingItem>
  */
-class OutgoingItemFactory extends Factory
+class OutgoingItemDetailFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,9 @@ class OutgoingItemFactory extends Factory
     public function definition(): array
     {
         return [
-            'code' => 'OUT-' . $this->faker->unique()->numberBetween(1000, 9999),
-            'operator_id' => 1,
-            'division_id' => $this->faker->numberBetween(1, 5),
-            'note' => $this->faker->sentence(),
+            'item_id' => $this->faker->numberBetween(1, 10),
+            'qty' => $this->faker->numberBetween(1, 100),
+            'incoming_item_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

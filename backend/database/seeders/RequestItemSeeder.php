@@ -14,38 +14,35 @@ class RequestItemSeeder extends Seeder
     public function run(): void
     {
         RequestItem::create([
-            'id' => 'RQ-001',
-            'employee_id' => '198212311994031004',
+            'code' => 'RQ-001',
+            'employee_id' => 4,
             'status' => 'diajukan',
-            'total_items' => 5,
         ]);
 
         RequestItem::create([
-            'id' => 'RQ-002',
-            'employee_id' => '197412311994031005',
-            'status' => 'diajukan',
-            'total_items' => 5,
+            'code' => 'RQ-002',
+            'employee_id' => 5,
+            'status' => 'draf',
         ]);
 
         RequestItem::create([
-            'id' => 'RQ-003',
-            'employee_id' => '197412311994031005',
-            'status' => 'diajukan',
-            'total_items' => 5,
+            'code' => 'RQ-003',
+            'employee_id' => 4,
+            'status' => 'disetujui',
         ]);
 
         RequestItem::create([
-            'id' => 'RQ-004',
-            'employee_id' => '198212311994031004',
+            'code' => 'RQ-004',
+            'employee_id' => 5,
             'status' => 'diajukan',
-            'total_items' => 5,
         ]);
 
         RequestItem::create([
-            'id' => 'RQ-005',
-            'employee_id' => '197412311994031005',
-            'status' => 'diajukan',
-            'total_items' => 5,
+            'code' => 'RQ-005',
+            'employee_id' => 4,
+            'status' => 'disetujui',
         ]);
+
+        RequestItem::factory(5)->create();
     }
 }

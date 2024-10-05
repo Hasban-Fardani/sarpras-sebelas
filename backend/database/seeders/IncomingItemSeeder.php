@@ -14,38 +14,40 @@ class IncomingItemSeeder extends Seeder
     public function run(): void
     {
         IncomingItem::create([
-            'id' => 'INV-001',
-            'employee_id' => '198212311994031004',
-            'supplier_id' => 'S0001',
+            'code' => 'INV-001',
+            'employee_id' => 1,
+            'supplier_id' => 1,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
 
         IncomingItem::create([
-            'id' => 'INV-002',
-            'employee_id' => '198212311994031004',
-            'supplier_id' => 'S0002',
+            'code' => 'INV-002',
+            'employee_id' => 1,
+            'supplier_id' => 2,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
 
         IncomingItem::create([
-            'id' => 'INV-003',
-            'employee_id' => '198212311994031004',
-            'supplier_id' => 'S0003',
+            'code' => 'INV-003',
+            'employee_id' => 1,
+            'supplier_id' => 3,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
 
         IncomingItem::create([
-            'id' => 'INV-004',
-            'employee_id' => '198212311994031004',
-            'supplier_id' => 'S0004',
+            'code' => 'INV-004',
+            'employee_id' => 1,
+            'supplier_id' => 4,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
 
         IncomingItem::create([
-            'id' => 'INV-005',
-            'employee_id' => '198212311994031004',
-            'supplier_id' => 'S0005',
+            'code' => 'INV-005',
+            'employee_id' => 1,
+            'supplier_id' => 5,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
+
+        IncomingItem::factory(5)->create();
     }
 }

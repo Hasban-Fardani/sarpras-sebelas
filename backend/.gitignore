@@ -23,3 +23,6 @@ yarn-error.log
 /caddy
 frankenphp
 frankenphp-worker.php
+
+# just for test code
+test.php

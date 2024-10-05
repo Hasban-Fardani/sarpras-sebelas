@@ -45,4 +45,17 @@ return Application::configure(basePath: dirname(__DIR__))
                 'message' => 'Model Not Found',
             ], 404);
         });
+
+        $exceptions->render(function (\Illuminate\Validation\ValidationException $e, Request $request) {
+            return response()->json([
+                'message' => 'Validation Failed',
+                'errors' => $e->errors(),
+            ], 422);
+        });
+        
+        $exceptions->render(function (\Throwable $e, Request $request) {
+            return response()->json([
+                'message' => 'Internal Server Error',
+            ], 500);
+        });
     })->create();

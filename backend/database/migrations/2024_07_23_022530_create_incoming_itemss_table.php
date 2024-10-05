@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('incoming_items', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->string('employee_id');
-            $table->string('supplier_id');
+            $table->id();
+            $table->string('code')->unique();
+            $table->unsignedBigInteger('employee_id');
+            $table->unsignedBigInteger('supplier_id');
             $table->text('note')->nullable();
             $table->integer('total_items')->default(0);
 

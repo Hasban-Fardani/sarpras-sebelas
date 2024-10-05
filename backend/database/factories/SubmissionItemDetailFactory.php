@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\SubmissionItem>
  */
-class SubmissionItemFactory extends Factory
+class SubmissionItemDetailFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,9 @@ class SubmissionItemFactory extends Factory
     public function definition(): array
     {
         return [
-            'code' => 'SI' . $this->faker->unique()->numberBetween(1000, 9999),
-            'division_id' => $this->faker->numberBetween(1, 5),
-            'status' => $this->faker->randomElement(['diajukan', 'disetujui', 'ditolak', 'draf']),
-            'note' => $this->faker->sentence(),
+            'submission_item_id' => $this->faker->numberBetween(1, 10),
+            'item_id' => $this->faker->numberBetween(1, 10),
+            'qty' => $this->faker->numberBetween(1, 100),
         ];
     }
 }
