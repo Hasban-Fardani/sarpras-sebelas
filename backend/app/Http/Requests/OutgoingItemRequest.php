@@ -22,6 +22,7 @@ class OutgoingItemRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'code' => 'string',
             'division_id' => 'required|integer',
             'items' => 'required|array',
             'items.*.item_id' => 'required|integer',

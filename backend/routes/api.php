@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\FileController;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Auth\LoginCheckController;
 use App\Http\Controllers\Supervisor;
@@ -17,14 +16,11 @@ use App\Http\Controllers\SubmissionItemController;
 use App\Http\Controllers\SubmissionItemDetailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return "Hi, please visit <a href='" . env('APP_URL') . "/docs'>" . env('APP_URL') . "/docs </a> for documentation";
 });
-
-Route::get('/public/{path}', FileController::class)->where('path', '.*');
 
 Route::prefix('/auth')->group(function () {
     Route::post('/login', LoginController::class);
@@ -35,8 +31,6 @@ Route::prefix('/auth')->group(function () {
 });
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/private/{path}', FileController::class)->where('path', '.*');
-
     Route::prefix('/dashboard')->group(function () {
         Route::get('/counts', [DashboardController::class, 'getCounts']);
         Route::get('/stats/request', [DashboardController::class, 'getStatsRequest']);

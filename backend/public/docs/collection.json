@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel Sarpras API Documentation",
-        "_postman_id": "b705052e-aa9d-4d4b-bab1-0e02a0a4f808",
+        "_postman_id": "c8279c04-44d2-449d-aa96-e019e3e42ff2",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -193,7 +193,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all categories\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"ATK\",\"name\":\"Alat Tulis Kantor\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/category?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/category?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/category?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/category\",\"per_page\":10,\"prev_page_url\":null,\"to\":1,\"total\":1}",
+                            "body": "{\"message\":\"success get all categories\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"ATK\",\"name\":\"Alat Tulis Kantor\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/category?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/category?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/category?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/category\",\"per_page\":10,\"prev_page_url\":null,\"to\":1,\"total\":1}",
                             "name": ""
                         }
                     ]
@@ -241,7 +241,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T07:06:50.000000Z\",\"created_at\":\"2024-10-06T07:06:50.000000Z\",\"id\":41}}",
+                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\",\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"id\":9}}",
                             "name": ""
                         }
                     ]
@@ -294,7 +294,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"Alat Tulis Kantor\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}}",
+                            "body": "{\"message\":\"success get category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"Alat Tulis Kantor\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -350,7 +350,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T07:06:50.000000Z\"}}",
+                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -623,7 +623,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/2811157af59f66a63fa587edd5147bd78ab49f8369fc1e8aa58ce1a106a0cd50.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T07:06:50.000000Z\",\"created_at\":\"2024-10-06T07:06:50.000000Z\",\"id\":55}}",
+                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/4decd4c5fae9d9485329d5bf0aee27e5aa59efd843bd86a40210a05666cf44f2.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T13:21:32.000000Z\",\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"id\":23}}",
                             "name": ""
                         }
                     ]
@@ -676,7 +676,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get item\",\"data\":{\"id\":1,\"code\":\"I-001\",\"image\":\"\\\/images\\\/pulpen-ae7.jpeg\",\"name\":\"Pulpen AE7\",\"unit\":\"pcs\",\"merk\":\"ae7\",\"type\":\"pulpen\",\"size\":\"0.5mm\",\"stock\":24,\"min_stock\":5,\"price\":2000,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}}",
+                            "body": "{\"message\":\"success get item\",\"data\":{\"id\":1,\"code\":\"I-001\",\"image\":\"\\\/images\\\/pulpen-ae7.jpeg\",\"name\":\"Pulpen AE7\",\"unit\":\"pcs\",\"merk\":\"ae7\",\"type\":\"pulpen\",\"size\":\"0.5mm\",\"stock\":10,\"min_stock\":5,\"price\":2000,\"category_id\":1,\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -803,7 +803,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/2811157af59f66a63fa587edd5147bd78ab49f8369fc1e8aa58ce1a106a0cd50.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T07:06:50.000000Z\"}}",
+                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/4decd4c5fae9d9485329d5bf0aee27e5aa59efd843bd86a40210a05666cf44f2.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -907,7 +907,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all incoming items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"INV-001\",\"employee_id\":1,\"supplier_id\":1,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"}},{\"id\":2,\"code\":\"INV-002\",\"employee_id\":1,\"supplier_id\":2,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":3,\"code\":\"INV-003\",\"employee_id\":1,\"supplier_id\":3,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":3,\"name\":\"Supplier 3\"}},{\"id\":4,\"code\":\"INV-004\",\"employee_id\":1,\"supplier_id\":4,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":4,\"name\":\"Supplier 4\"}},{\"id\":5,\"code\":\"INV-005\",\"employee_id\":1,\"supplier_id\":5,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":5,\"name\":\"Supplier 5\"}},{\"id\":6,\"code\":\"INV-9152\",\"employee_id\":1,\"supplier_id\":2,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":7,\"code\":\"INV-5627\",\"employee_id\":1,\"supplier_id\":1,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"}},{\"id\":8,\"code\":\"INV-6536\",\"employee_id\":1,\"supplier_id\":5,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":5,\"name\":\"Supplier 5\"}},{\"id\":9,\"code\":\"INV-6369\",\"employee_id\":1,\"supplier_id\":2,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":10,\"code\":\"INV-4558\",\"employee_id\":1,\"supplier_id\":9,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":9,\"name\":\"Perum Lestari Tbk\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":12}",
+                            "body": "{\"message\":\"success get all incoming items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"INV-001\",\"employee_id\":1,\"supplier_id\":1,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"}},{\"id\":2,\"code\":\"INV-002\",\"employee_id\":1,\"supplier_id\":2,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":3,\"code\":\"INV-003\",\"employee_id\":1,\"supplier_id\":3,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":3,\"name\":\"Supplier 3\"}},{\"id\":4,\"code\":\"INV-004\",\"employee_id\":1,\"supplier_id\":4,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":4,\"name\":\"Supplier 4\"}},{\"id\":5,\"code\":\"INV-005\",\"employee_id\":1,\"supplier_id\":5,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":5,\"name\":\"Supplier 5\"}},{\"id\":6,\"code\":\"INV-7149\",\"employee_id\":1,\"supplier_id\":4,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":4,\"name\":\"Supplier 4\"}},{\"id\":7,\"code\":\"INV-3818\",\"employee_id\":1,\"supplier_id\":9,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":9,\"name\":\"Perum Gunawan (Persero) Tbk\"}},{\"id\":8,\"code\":\"INV-6609\",\"employee_id\":1,\"supplier_id\":3,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":3,\"name\":\"Supplier 3\"}},{\"id\":9,\"code\":\"INV-9793\",\"employee_id\":1,\"supplier_id\":10,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":10,\"name\":\"UD Farida Mayasari\"}},{\"id\":10,\"code\":\"INV-6594\",\"employee_id\":1,\"supplier_id\":7,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":7,\"name\":\"Yayasan Firgantoro\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
                             "name": ""
                         }
                     ]
@@ -955,7 +955,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-c8ca9ba\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T07:06:50.000000Z\",\"created_at\":\"2024-10-06T07:06:50.000000Z\",\"id\":41}}",
+                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-8d880f5\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T13:21:32.000000Z\",\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"id\":18}}",
                             "name": ""
                         }
                     ]
@@ -1008,7 +1008,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get item-in\",\"data\":{\"id\":1,\"code\":\"INV-001\",\"employee_id\":1,\"supplier_id\":1,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"},\"details\":[{\"id\":4,\"incoming_item_id\":1,\"item_id\":4,\"qty\":25,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":12,\"incoming_item_id\":1,\"item_id\":7,\"qty\":70,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":21,\"incoming_item_id\":1,\"item_id\":6,\"qty\":91,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":26,\"incoming_item_id\":1,\"item_id\":3,\"qty\":12,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":3,\"qty\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":53,\"incoming_item_id\":1,\"item_id\":5,\"qty\":59,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":55,\"incoming_item_id\":1,\"item_id\":2,\"qty\":85,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":56,\"incoming_item_id\":1,\"item_id\":5,\"qty\":42,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":83,\"incoming_item_id\":1,\"item_id\":5,\"qty\":73,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":10,\"qty\":17,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":88,\"incoming_item_id\":1,\"item_id\":6,\"qty\":32,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":6,\"qty\":14,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":99,\"incoming_item_id\":1,\"item_id\":6,\"qty\":96,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"}]}}",
+                            "body": "{\"message\":\"success get item-in\",\"data\":{\"id\":1,\"code\":\"INV-001\",\"employee_id\":1,\"supplier_id\":1,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"},\"details\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"}]}}",
                             "name": ""
                         }
                     ]
@@ -1120,7 +1120,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get incoming item detail\",\"current_page\":1,\"data\":[{\"id\":4,\"incoming_item_id\":1,\"item_id\":4,\"qty\":25,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":4,\"name\":\"Pulpen Joyko GP 265\"}},{\"id\":12,\"incoming_item_id\":1,\"item_id\":7,\"qty\":70,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":7,\"name\":\"et\"}},{\"id\":21,\"incoming_item_id\":1,\"item_id\":6,\"qty\":91,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":6,\"name\":\"quo\"}},{\"id\":26,\"incoming_item_id\":1,\"item_id\":3,\"qty\":12,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":3,\"name\":\"Kertas Sidu A4\"}},{\"id\":47,\"incoming_item_id\":1,\"item_id\":3,\"qty\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":3,\"name\":\"Kertas Sidu A4\"}},{\"id\":53,\"incoming_item_id\":1,\"item_id\":5,\"qty\":59,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":5,\"name\":\"Spidol Snowman Boardmarker\"}},{\"id\":55,\"incoming_item_id\":1,\"item_id\":2,\"qty\":85,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":2,\"name\":\"Buku Sidu 38 Lembar\"}},{\"id\":56,\"incoming_item_id\":1,\"item_id\":5,\"qty\":42,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":5,\"name\":\"Spidol Snowman Boardmarker\"}},{\"id\":83,\"incoming_item_id\":1,\"item_id\":5,\"qty\":73,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":5,\"name\":\"Spidol Snowman Boardmarker\"}},{\"id\":86,\"incoming_item_id\":1,\"item_id\":10,\"qty\":17,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"item\":{\"id\":10,\"name\":\"ut\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":13}",
+                            "body": "{\"message\":\"success get incoming item detail\",\"current_page\":1,\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":4,\"name\":\"Pulpen Joyko GP 265\"}},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":4,\"name\":\"Pulpen Joyko GP 265\"}},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":9,\"name\":\"aperiam\"}},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":4,\"name\":\"Pulpen Joyko GP 265\"}},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":8,\"name\":\"quibusdam\"}},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":10,\"name\":\"dolorem\"}},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":8,\"name\":\"quibusdam\"}},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":2,\"name\":\"Buku Sidu 38 Lembar\"}},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"item\":{\"id\":4,\"name\":\"Pulpen Joyko GP 265\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\\\/1\\\/detail\",\"per_page\":10,\"prev_page_url\":null,\"to\":9,\"total\":9}",
                             "name": ""
                         }
                     ]
@@ -1176,7 +1176,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":[{\"id\":4,\"incoming_item_id\":1,\"item_id\":4,\"qty\":25,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":12,\"incoming_item_id\":1,\"item_id\":7,\"qty\":70,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":21,\"incoming_item_id\":1,\"item_id\":6,\"qty\":97,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T07:06:51.000000Z\"},{\"id\":26,\"incoming_item_id\":1,\"item_id\":3,\"qty\":12,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":3,\"qty\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":53,\"incoming_item_id\":1,\"item_id\":5,\"qty\":59,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":55,\"incoming_item_id\":1,\"item_id\":2,\"qty\":85,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":56,\"incoming_item_id\":1,\"item_id\":5,\"qty\":42,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":83,\"incoming_item_id\":1,\"item_id\":5,\"qty\":73,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":10,\"qty\":17,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":88,\"incoming_item_id\":1,\"item_id\":6,\"qty\":32,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":6,\"qty\":14,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":99,\"incoming_item_id\":1,\"item_id\":6,\"qty\":96,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"}]}",
+                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":116,\"incoming_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1238,7 +1238,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":7,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T07:06:51.000000Z\"}}",
+                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -1297,7 +1297,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success delete incoming item detail\",\"data\":[{\"id\":4,\"incoming_item_id\":1,\"item_id\":4,\"qty\":25,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":12,\"incoming_item_id\":1,\"item_id\":7,\"qty\":70,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":21,\"incoming_item_id\":1,\"item_id\":6,\"qty\":91,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":26,\"incoming_item_id\":1,\"item_id\":3,\"qty\":12,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":3,\"qty\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":53,\"incoming_item_id\":1,\"item_id\":5,\"qty\":59,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":55,\"incoming_item_id\":1,\"item_id\":2,\"qty\":85,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":56,\"incoming_item_id\":1,\"item_id\":5,\"qty\":42,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":83,\"incoming_item_id\":1,\"item_id\":5,\"qty\":73,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":10,\"qty\":17,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":88,\"incoming_item_id\":1,\"item_id\":6,\"qty\":32,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":6,\"qty\":14,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":99,\"incoming_item_id\":1,\"item_id\":6,\"qty\":96,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"}]}",
+                            "body": "{\"message\":\"success delete incoming item detail\",\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1348,7 +1348,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all item-outs\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"OUT-001\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk keperluan testing\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"OUT-002\",\"operator_id\":1,\"division_id\":5,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"OUT-003\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"OUT-004\",\"operator_id\":1,\"division_id\":5,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"OUT-005\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":6,\"code\":\"OUT-3011\",\"operator_id\":1,\"division_id\":2,\"note\":\"Maiores ex dolor dolorem maxime ipsam.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":2,\"name\":\"Sutarsa\"}},{\"id\":7,\"code\":\"OUT-1621\",\"operator_id\":1,\"division_id\":3,\"note\":\"Dignissimos amet aut blanditiis nam autem expedita suscipit.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":8,\"code\":\"OUT-2063\",\"operator_id\":1,\"division_id\":3,\"note\":\"Deserunt at eius ut rerum eum cupiditate ipsum.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":9,\"code\":\"OUT-1652\",\"operator_id\":1,\"division_id\":5,\"note\":\"Nostrum architecto harum exercitationem in nemo.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":10,\"code\":\"OUT-2174\",\"operator_id\":1,\"division_id\":4,\"note\":\"Pariatur nam occaecati distinctio odio placeat exercitationem itaque est.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
+                            "body": "{\"message\":\"success get all outgoing item\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"OUT-001\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk keperluan testing\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"OUT-002\",\"operator_id\":1,\"division_id\":5,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"OUT-003\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"OUT-004\",\"operator_id\":1,\"division_id\":5,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"OUT-005\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":6,\"code\":\"OUT-9749\",\"operator_id\":1,\"division_id\":3,\"note\":\"Enim impedit voluptatem explicabo est porro.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":7,\"code\":\"OUT-2407\",\"operator_id\":1,\"division_id\":3,\"note\":\"Non recusandae ullam dolor voluptas.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":8,\"code\":\"OUT-8241\",\"operator_id\":1,\"division_id\":5,\"note\":\"Id officiis vel et consectetur.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":9,\"code\":\"OUT-2907\",\"operator_id\":1,\"division_id\":1,\"note\":\"Et quia dolore eos ab nulla reiciendis quasi.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":1,\"name\":\"Yani\"}},{\"id\":10,\"code\":\"OUT-4903\",\"operator_id\":1,\"division_id\":3,\"note\":\"Sed aliquam officiis quia.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
                             "name": ""
                         }
                     ]
@@ -1375,7 +1375,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"division_id\":6,\"items\":[{\"item_id\":6,\"qty\":6}]}"
+                            "raw": "{\"code\":\"consequatur\",\"division_id\":3,\"items\":[{\"item_id\":6,\"qty\":6}]}"
                         },
                         "description": ""
                     },
@@ -1395,8 +1395,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success add outgoing item and updated stock\",\"data\":{\"code\":\"consequatur\",\"operator_id\":1,\"division_id\":3,\"updated_at\":\"2024-10-06T13:21:32.000000Z\",\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"id\":18}}",
                             "name": ""
                         }
                     ]
@@ -1448,8 +1448,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success get item-out\",\"data\":{\"operator\":null,\"division\":null,\"details\":[]}}",
                             "name": ""
                         }
                     ]
@@ -1501,8 +1501,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success delete item-out\"}",
                             "name": ""
                         }
                     ]
@@ -1560,8 +1560,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success get outgoing's item detail\",\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item\\\/1\\\/detail?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item\\\/1\\\/detail?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item\\\/1\\\/detail?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item\\\/1\\\/detail\",\"per_page\":10,\"prev_page_url\":null,\"to\":null,\"total\":0}",
                             "name": ""
                         }
                     ]
@@ -1616,8 +1616,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success add outgoing item detail\",\"data\":[{\"id\":7,\"outgoing_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1640,7 +1640,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "consequatur",
+                                    "value": "6",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -1678,8 +1678,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
+                            "code": 404,
+                            "body": "{\"message\":\"Not Found\"}",
                             "name": ""
                         }
                     ]
@@ -1702,7 +1702,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "6",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -1737,8 +1737,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
+                            "code": 404,
+                            "body": "{\"message\":\"Not Found\"}",
                             "name": ""
                         }
                     ]
@@ -1789,7 +1789,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all submission items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"IN-001\",\"division_id\":4,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"IN-002\",\"division_id\":5,\"status\":\"draf\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"IN-003\",\"division_id\":4,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"IN-004\",\"division_id\":5,\"status\":\"ditolak\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"IN-005\",\"division_id\":5,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":6,\"code\":\"IN-006\",\"division_id\":5,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":7,\"code\":\"SI1911\",\"division_id\":1,\"status\":\"diajukan\",\"note\":\"Officia animi aut minima amet veritatis quia enim.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}},{\"id\":8,\"code\":\"SI6446\",\"division_id\":1,\"status\":\"diajukan\",\"note\":\"Eum tempore id nisi dolorem est.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}},{\"id\":9,\"code\":\"SI4833\",\"division_id\":5,\"status\":\"ditolak\",\"note\":\"Iste qui sit id ut.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":10,\"code\":\"SI3940\",\"division_id\":1,\"status\":\"ditolak\",\"note\":\"Eius qui aut aut at aut consequatur.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/submission\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":11}",
+                            "body": "{\"message\":\"success get all submission items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"IN-001\",\"division_id\":4,\"submission_session_id\":1,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"IN-002\",\"division_id\":5,\"submission_session_id\":1,\"status\":\"draf\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"IN-003\",\"division_id\":4,\"submission_session_id\":1,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"IN-004\",\"division_id\":5,\"submission_session_id\":2,\"status\":\"ditolak\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"IN-005\",\"division_id\":5,\"submission_session_id\":2,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":6,\"code\":\"IN-006\",\"division_id\":5,\"submission_session_id\":2,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":7,\"code\":\"SI5444\",\"division_id\":4,\"submission_session_id\":3,\"status\":\"draf\",\"note\":\"Aperiam quia dolor cum.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":8,\"code\":\"SI9435\",\"division_id\":1,\"submission_session_id\":3,\"status\":\"diajukan\",\"note\":\"Fugit nesciunt saepe ducimus et quo voluptatem.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}},{\"id\":9,\"code\":\"SI9389\",\"division_id\":4,\"submission_session_id\":3,\"status\":\"disetujui\",\"note\":\"Eos incidunt eum facilis et.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":10,\"code\":\"SI4774\",\"division_id\":2,\"submission_session_id\":2,\"status\":\"ditolak\",\"note\":\"Ad ut nostrum accusamus reprehenderit et necessitatibus.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":2,\"name\":\"Sutarsa\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/submission\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":11}",
                             "name": ""
                         }
                     ]
@@ -1837,7 +1837,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 13:21:32, 2024-10-06 13:21:32))\"}",
                             "name": ""
                         }
                     ]
@@ -1890,7 +1890,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get submission item\",\"data\":{\"id\":1,\"code\":\"IN-001\",\"division_id\":4,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"},\"details\":[]}}",
+                            "body": "{\"message\":\"success get submission item\",\"data\":{\"id\":1,\"code\":\"IN-001\",\"division_id\":4,\"submission_session_id\":1,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"},\"details\":[]}}",
                             "name": ""
                         }
                     ]
@@ -2058,7 +2058,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 13:21:32, 2024-10-06 13:21:32))\"}",
                             "name": ""
                         }
                     ]
@@ -2230,7 +2230,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all request items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"RQ-001\",\"employee_id\":4,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"RQ-002\",\"employee_id\":5,\"status\":\"draf\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"RQ-003\",\"employee_id\":4,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"RQ-004\",\"employee_id\":5,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"RQ-005\",\"employee_id\":4,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":6,\"code\":\"RI6631\",\"employee_id\":4,\"status\":\"diajukan\",\"note\":\"Et veniam corrupti molestiae vero sit accusantium qui.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":7,\"code\":\"RI3608\",\"employee_id\":4,\"status\":\"ditolak\",\"note\":\"Non est aut quaerat adipisci perferendis sit ab.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":8,\"code\":\"RI7343\",\"employee_id\":5,\"status\":\"diajukan\",\"note\":\"Esse totam aut est facilis id cumque harum repellat.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":9,\"code\":\"RI8247\",\"employee_id\":5,\"status\":\"draf\",\"note\":\"Quibusdam sed ut iure necessitatibus vel officia.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":10,\"code\":\"RI6382\",\"employee_id\":1,\"status\":\"disetujui\",\"note\":\"Perspiciatis similique ut incidunt dolorem possimus saepe.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/request-item?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/request-item?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/request-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/request-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
+                            "body": "{\"message\":\"success get all request items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"RQ-001\",\"employee_id\":4,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"RQ-002\",\"employee_id\":5,\"status\":\"draf\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"RQ-003\",\"employee_id\":4,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"RQ-004\",\"employee_id\":5,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"RQ-005\",\"employee_id\":4,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":6,\"code\":\"RI8839\",\"employee_id\":2,\"status\":\"disetujui\",\"note\":\"Quasi fugiat provident doloribus sed explicabo.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":2,\"name\":\"Sutarsa\"}},{\"id\":7,\"code\":\"RI6951\",\"employee_id\":3,\"status\":\"ditolak\",\"note\":\"Quae atque vel itaque vero est.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":8,\"code\":\"RI1385\",\"employee_id\":5,\"status\":\"diajukan\",\"note\":\"Occaecati aut non ut consequatur.\",\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\",\"employee\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":9,\"code\":\"RI2355\",\"employee_id\":2,\"status\":\"draf\",\"note\":\"Qui optio provident reprehenderit sunt fugit delectus natus beatae.\",\"created_at\":\"2024-10-06T12:51:56.000000Z\",\"updated_at\":\"2024-10-06T12:51:56.000000Z\",\"employee\":{\"id\":2,\"name\":\"Sutarsa\"}},{\"id\":10,\"code\":\"RI9728\",\"employee_id\":4,\"status\":\"disetujui\",\"note\":\"Assumenda molestias aut ab accusamus.\",\"created_at\":\"2024-10-06T12:51:56.000000Z\",\"updated_at\":\"2024-10-06T12:51:56.000000Z\",\"employee\":{\"id\":4,\"name\":\"Ani Nuraeni\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/request-item?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/request-item?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/request-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/request-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
                             "name": ""
                         }
                     ]
@@ -2496,7 +2496,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 13:21:33, 2024-10-06 13:21:33))\"}",
                             "name": ""
                         }
                     ]
@@ -2679,7 +2679,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$NxwqK7GIGPXXM6IXvSKGRuwxQD\\\/bkWkBwp7VYilN9O.MsVhzjUiFy, unit, consequatur, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$RNOcny7ePH\\\/xIYHm7tFZ\\\/OMSSj66IobbiRZw9cq5IMApDKZ4hVUv6, unit, consequatur, 2024-10-06 13:21:33, 2024-10-06 13:21:33))\"}",
                             "name": ""
                         }
                     ]
@@ -2825,7 +2825,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 13:21:33, 2024-10-06 13:21:33))\"}",
                             "name": ""
                         }
                     ]
@@ -2934,7 +2934,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T07:06:51.000000Z\"}}",
+                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T13:21:33.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -3038,7 +3038,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get users\",\"current_page\":1,\"data\":[{\"id\":1,\"nip\":\"197806311994031003\",\"username\":\"admin\",\"role\":\"admin\",\"created_at\":\"2024-10-06T04:04:43.000000Z\",\"updated_at\":\"2024-10-06T04:04:43.000000Z\",\"employee\":{\"id\":3,\"nip\":\"197806311994031003\",\"name\":\"Toni Kusmara\",\"position\":\"Staff Sarana Prasarana\",\"phone\":\"08123456781\",\"email\":\"toni.kusmara@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":2,\"nip\":\"197412311994031001\",\"username\":\"pengawas\",\"role\":\"pengawas\",\"created_at\":\"2024-10-06T04:04:43.000000Z\",\"updated_at\":\"2024-10-06T04:04:43.000000Z\",\"employee\":{\"id\":2,\"nip\":\"197412311994031001\",\"name\":\"Sutarsa\",\"position\":\"Wakil Kepala Sekolah Bidang Sarana Prasarana\",\"phone\":\"08123456789\",\"email\":\"sutarsa@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":3,\"nip\":\"198212311994031004\",\"username\":\"ani_nuraeni\",\"role\":\"unit\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\",\"employee\":{\"id\":4,\"nip\":\"198212311994031004\",\"name\":\"Ani Nuraeni\",\"position\":\"Ketua Progam keahlian RPL\",\"phone\":\"08123456782\",\"email\":\"zim.zim@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":4,\"nip\":\"197412311994031005\",\"username\":\"zim_zim\",\"role\":\"unit\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\",\"employee\":{\"id\":5,\"nip\":\"197412311994031005\",\"name\":\"Zim zim\",\"position\":\"Ketua Progam keahlian DKV\",\"phone\":\"08123456783\",\"email\":\"ani.nuraeni@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users\",\"per_page\":10,\"prev_page_url\":null,\"to\":4,\"total\":4}",
+                            "body": "{\"message\":\"success get users\",\"current_page\":1,\"data\":[{\"id\":1,\"nip\":\"197806311994031003\",\"username\":\"admin\",\"role\":\"admin\",\"created_at\":\"2024-10-06T12:51:42.000000Z\",\"updated_at\":\"2024-10-06T12:51:42.000000Z\",\"employee\":{\"id\":3,\"nip\":\"197806311994031003\",\"name\":\"Toni Kusmara\",\"position\":\"Staff Sarana Prasarana\",\"phone\":\"08123456781\",\"email\":\"toni.kusmara@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":2,\"nip\":\"197412311994031001\",\"username\":\"pengawas\",\"role\":\"pengawas\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":2,\"nip\":\"197412311994031001\",\"name\":\"Sutarsa\",\"position\":\"Wakil Kepala Sekolah Bidang Sarana Prasarana\",\"phone\":\"08123456789\",\"email\":\"sutarsa@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":3,\"nip\":\"198212311994031004\",\"username\":\"ani_nuraeni\",\"role\":\"unit\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":4,\"nip\":\"198212311994031004\",\"name\":\"Ani Nuraeni\",\"position\":\"Ketua Progam keahlian RPL\",\"phone\":\"08123456782\",\"email\":\"zim.zim@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":4,\"nip\":\"197412311994031005\",\"username\":\"zim_zim\",\"role\":\"unit\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":5,\"nip\":\"197412311994031005\",\"name\":\"Zim zim\",\"position\":\"Ketua Progam keahlian DKV\",\"phone\":\"08123456783\",\"email\":\"ani.nuraeni@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users\",\"per_page\":10,\"prev_page_url\":null,\"to\":4,\"total\":4}",
                             "name": ""
                         }
                     ]
@@ -3139,7 +3139,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get user\",\"data\":{\"id\":1,\"nip\":\"197806311994031003\",\"username\":\"admin\",\"role\":\"admin\",\"created_at\":\"2024-10-06T04:04:43.000000Z\",\"updated_at\":\"2024-10-06T04:04:43.000000Z\"}}",
+                            "body": "{\"message\":\"success get user\",\"data\":{\"id\":1,\"nip\":\"197806311994031003\",\"username\":\"admin\",\"role\":\"admin\",\"created_at\":\"2024-10-06T12:51:42.000000Z\",\"updated_at\":\"2024-10-06T12:51:42.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -3299,7 +3299,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get suppliers\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"S0001\",\"name\":\"Supplier 1\",\"address\":\"Address 1\",\"phone\":\"08123456789\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":2,\"code\":\"S0002\",\"name\":\"Supplier 2\",\"address\":\"Address 2\",\"phone\":\"08123456790\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":3,\"code\":\"S0003\",\"name\":\"Supplier 3\",\"address\":\"Address 3\",\"phone\":\"08123456791\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":4,\"code\":\"S0004\",\"name\":\"Supplier 4\",\"address\":\"Address 4\",\"phone\":\"08123456792\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":5,\"code\":\"S0005\",\"name\":\"Supplier 5\",\"address\":\"Address 5\",\"phone\":\"08123456793\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":6,\"code\":\"SP-6228\",\"name\":\"Fa Hutagalung\",\"address\":\"Dk. Bayan No. 198, Surakarta 32363, Kaltim\",\"phone\":\"(+62) 357 6329 5408\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":7,\"code\":\"SP-5258\",\"name\":\"Fa Maryadi Tbk\",\"address\":\"Ds. Achmad Yani No. 10, Bengkulu 62814, NTT\",\"phone\":\"0448 4227 6230\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":8,\"code\":\"SP-5536\",\"name\":\"PD Pradana Mandasari\",\"address\":\"Kpg. K.H. Maskur No. 815, Bima 73177, Maluku\",\"phone\":\"0483 8145 071\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":9,\"code\":\"SP-9740\",\"name\":\"Perum Lestari Tbk\",\"address\":\"Jr. Muwardi No. 189, Pangkal Pinang 57253, Riau\",\"phone\":\"0264 4636 3891\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":10,\"code\":\"SP-9793\",\"name\":\"Perum Namaga Pratiwi\",\"address\":\"Ds. Pelajar Pejuang 45 No. 884, Pekanbaru 58262, Aceh\",\"phone\":\"0881 798 483\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
+                            "body": "{\"message\":\"success get suppliers\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"S0001\",\"name\":\"Supplier 1\",\"address\":\"Address 1\",\"phone\":\"08123456789\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":2,\"code\":\"S0002\",\"name\":\"Supplier 2\",\"address\":\"Address 2\",\"phone\":\"08123456790\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":3,\"code\":\"S0003\",\"name\":\"Supplier 3\",\"address\":\"Address 3\",\"phone\":\"08123456791\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":4,\"code\":\"S0004\",\"name\":\"Supplier 4\",\"address\":\"Address 4\",\"phone\":\"08123456792\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":5,\"code\":\"S0005\",\"name\":\"Supplier 5\",\"address\":\"Address 5\",\"phone\":\"08123456793\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":6,\"code\":\"SP-2879\",\"name\":\"PD Sihombing\",\"address\":\"Jln. Wahid No. 522, Tasikmalaya 12786, Pabar\",\"phone\":\"(+62) 491 4765 878\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":7,\"code\":\"SP-6397\",\"name\":\"Yayasan Firgantoro\",\"address\":\"Ki. Kiaracondong No. 703, Bau-Bau 63643, Sumsel\",\"phone\":\"0579 4860 706\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":8,\"code\":\"SP-9343\",\"name\":\"PT Dongoran Prabowo Tbk\",\"address\":\"Jr. Bara Tambar No. 827, Madiun 52215, Babel\",\"phone\":\"0593 9748 558\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":9,\"code\":\"SP-4301\",\"name\":\"Perum Gunawan (Persero) Tbk\",\"address\":\"Gg. Flora No. 687, Kupang 40913, Maluku\",\"phone\":\"(+62) 268 3351 266\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"},{\"id\":10,\"code\":\"SP-7494\",\"name\":\"UD Farida Mayasari\",\"address\":\"Jln. Raden Saleh No. 687, Sorong 69161, NTT\",\"phone\":\"0289 8113 186\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
                             "name": ""
                         }
                     ]
@@ -3347,7 +3347,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 13:21:33, 2024-10-06 13:21:33))\"}",
                             "name": ""
                         }
                     ]
@@ -3400,7 +3400,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get supplier\",\"data\":{\"id\":1,\"code\":\"S0001\",\"name\":\"Supplier 1\",\"address\":\"Address 1\",\"phone\":\"08123456789\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}}",
+                            "body": "{\"message\":\"success get supplier\",\"data\":{\"id\":1,\"code\":\"S0001\",\"name\":\"Supplier 1\",\"address\":\"Address 1\",\"phone\":\"08123456789\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -3658,118 +3658,6 @@
             ]
         },
         {
-            "name": "File Management",
-            "description": "\nAPI endpoints for get files from R2",
-            "item": [
-                {
-                    "name": "GET public\/{path}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "public\/:path",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/public\/:path",
-                            "variable": [
-                                {
-                                    "id": "path",
-                                    "key": "path",
-                                    "value": "",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"Not Found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET private\/{path}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "private\/:path",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/private\/:path",
-                            "variable": [
-                                {
-                                    "id": "path",
-                                    "key": "path",
-                                    "value": "",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"Not Found\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Other Endpoints",
             "description": "",
             "item": [
@@ -3809,7 +3697,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IklHVFhneGZodG9raE5CMkZvQ3ZmN2c9PSIsInZhbHVlIjoiVzZneEhjSGFmTHpMTWFVWjY4MFluV2g3RGVhcDF5ajVKbGJHeHNyWEU0cFFpYVBiMVdVMWNaN1JFWTgzMEpIak9KKzRHd09rc1kxdVE4c2FxRk5hL3pScXl4NHQ4S2FtcjFvb0hWc0lmY1FjRzZpMndEVmJTY2U0Qk1USmRxckgiLCJtYWMiOiIwNWU5OTcyY2YyNmFhZTNkZjUyMzE1YTI3YTg1ZjJjMzEwZDJjYmYyYmIwOTY5MGQ3YTAxZmJiY2Y4Y2MzYjdkIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IkVEVW5RWjM4S2tzcHRNR1NpeTdOb1E9PSIsInZhbHVlIjoiRVRwVmw3UkltZDZGQWQzVDYwMVFCS2lwSGpOUVFhUnJjc1dIVEhOZFptR1lLVko0UkFRZTRBR0svcTZ0UllyT3M4K3pYK0xkZThDRWkrRDJJUmtJRFpIUGEzOU9JOHhRTWZpWTc3Q1gxK0l2K0dyV1lUM2JYaHYxMGJYV2puM2oiLCJtYWMiOiIxZWFlMWUyYjY4MWI1Zjg0ZTM5ZGFmMjIyYjU4Njk0NDEwNWQzMDAyYWI0MDVlYzY5NmJmMjFjYmI0YmJkZjJjIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; EX3TBnsH9rPyV1IlhzA4ZT0x8GgntIXrogs6bZgv=eyJpdiI6IncyQmNOM3hhZ1hEcklYQ3JraGJkbGc9PSIsInZhbHVlIjoiQVZKaEI0Sm9IU0VIeEEvUHY3KzdDTXV5aHBCNWJLN2YvZm1sbDVyVGVnbzd1ODRKWXJoUDlWSElGZ05hTC9ucHh0SkYzMjlPRkJXN2hWQk5YNFo1K2F4V3VCQXM4V2RwRkZDVm5VUll4M0M0ZVlaVFlxNHRPZmZJRzRqQ0cwL01lVzFpVnI1aUlJeHJiS1JNSFpORC8yWHB5WXdyWlkzNStMUGRUQ0tUdldKVXI2QmtLdmFpQ1pYWm4wWS9odGo5UTAxM0l5ZVdpcXZFNHo2N1Y3V0hvRDRkN25OUFRuZDJGS0pVVVpTbHBYZ1pPc2lrbVFCaHkwQ2x0bnZ5ejJqWnMyNFZETXptZ1lOalFYY01UZkhvNFNuS2M1bEFSQ3NHUk01R2lmeGpsNnozSXN1V01peG9USVpteTRjbWUyR0c5M0NoTE1wcTJxZ0JHRksrU2ZndEJaVDZKZ3gvV1FVQ3k0bWVhN3JPWC9BVGpXbGtQZFZoVU1tUG1sRjl3VTNoTzh4UU9ud3RnV3p0ZGhNbnZIdHl0UT09IiwibWFjIjoiYjUzNjcyOGQ3OWVhZDk3YzE5NjAyM2M4MmU0NTY1MWNjYmU0ZTYyNWNmNzgzY2I3NmM2MzdlZjRlYWEzMjU1MSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IlJVRW9zSytVOVN5VWUveHNLVm9VR3c9PSIsInZhbHVlIjoiZDIzYmtBLzFUK1FodFg5aUlRdmNDOU5FRzgwbnZQNHVwR2lvd2FLQVJMblVlNmZiSXZvYnY0V1pKSU9WR2YyVFFHbDYwakJ6K3JJQVAxK0h3NmNQaWV2K0kxY2Zsem5LdXJhcmZrbW5VQjg5eEJXcjhSTC9mbVBkdVhGTG1NSUYiLCJtYWMiOiI3M2ViMTg5MGFlNjVlMjgxN2QxODcxMjQ1YzgwNzM4MjljNDczMDgzZmVjOGQzZThjNDIwZDA2MzRjNWZjOGVlIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 15:21:32 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Im5YN0tOeng3RlR4UFZxTnNHVGJMcGc9PSIsInZhbHVlIjoiRlh6Z0hxRzFOYUR2T2Z3QVhGTStnc0ZNR04vbCtXQ3ZSSklOa0JYQjRZQzRNRUpocmx1cTlMTVZxSW03VkdWeU82L3hhVmVUZm81M0R0dFJwNUt4OXoxUlhOYnpNWlk0ZGo0VmJEV1gxMU5sak0vL1REb0RJdWt5WW92SWdla20iLCJtYWMiOiJiM2NkMzdiOGJhYjExNjNmOTQ2MGJkNWI5N2FmMzQ0Mjc0NjIxMWI2Mjk4OWY1ODI4OGVkNDE4ODI1ZGU3ODYxIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 15:21:32 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; 2uD2N4NAPTFmk2vvbNHpy0I9tfN5XNBh7rRbThmz=eyJpdiI6IlNnckFQQWVsRGh3c1RQRHNrZDVKanc9PSIsInZhbHVlIjoiZERocm05VTc5NHZmQXFuY0lTc3VaREVkbEhlVGpYUEE2Um5UcEVhTnJmRnkzenVyaWtnekpZMGlVWGJVa2t1OXVUYjNIaWVJb0h3Mm05ZUwxTUI5d1ZBU3ZsYkZweTFQNmxZSVk4OThvdlljT0NRZ2p0YVJJUUVNQ1hPaEw2ZUxsdTdvNXAvUk9PUEY5VXJJd0ZpZmgrNnUvZEE5T0lRMWF3NmNEM3loajMvblJNYkpGODc4RU5oRUtxM3VKWUMzWDFxOEIwdU90eHRpMWZOYUVuRTBrcXhXajU0NExpM3paYjlBNGZjOEpmQ3d5M0ZGejZsd2R4NS91QWFBbW9ReW1TbElvbUhvL01LdEZjdU9EVWJ2NHNwRGYyMnBsL29udiswa0pRZHdSdE5rNW8zYkx5YzBESEFHZ3haaFdQTlJhZmdMYzVkRERWcnhDdEdVR2p1cnNMU0lxK0lDNUJPY2xWdUk2TTZSa0puTVZDbHh4ZWpSNHA1N0Y4dzIvZGhmM3FIZmMzNU0ycUZidElUcWkyRitYdz09IiwibWFjIjoiZjcwNGU3OGFlYzRlNWI5MTQxNTU3YzlhOTZkY2ViNTM0YWQ4MGI1ZGZiOTk0MDU4M2EyNzU1NmVjNmUwMDhmMSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 15:21:32 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,

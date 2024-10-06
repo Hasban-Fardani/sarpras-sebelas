@@ -27,7 +27,7 @@ class OutgoingItem extends Model
 
     public function details()
     {
-        return $this->hasMany(ItemOutDetail::class);
+        return $this->hasMany(OutgoingItemDetail::class);
     }
 
     public function getRouteKeyName()

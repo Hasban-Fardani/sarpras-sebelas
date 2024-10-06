@@ -49,13 +49,15 @@ class OutgoingItemController extends Controller
         $data = $data->paginate($perPage, ['*'], 'page', $page);
 
         return response()->json([
-            'message' => 'success get all item-outs',
+            'message' => 'success get all outgoing item',
             ...$data->toArray()
         ]);
     }
 
     /**
      * Store a newly created resource in storage.
+     * 
+     * @bodyParam division_id int required. The division id. Example: 3
      */
     public function store(OutgoingItemRequest $request)
     {
@@ -65,8 +67,14 @@ class OutgoingItemController extends Controller
         $userNIP = auth()->user()->id;
         $employeeID = Employee::where('id', $userNIP)->first()->id;
         
+        if (!array_key_exists('code', $validatedData)) {
+            $hashes = 'OUT-' . hash('sha256', now());
+            $validatedData['code'] = substr($hashes, 0, 10);
+        }
+
         // directly create a new array with only the needed keys
         $data = [
+            'code' => $validatedData['code'],
             'operator_id' => $employeeID,
             'division_id' => $validatedData['division_id'],
             'total_items' => count($validatedData['items']),
@@ -82,7 +90,7 @@ class OutgoingItemController extends Controller
         if (empty($item_ids)) {
             // Handle the case when there are no items
             return response()->json([
-                'message' => 'success create item-out',
+                'message' => 'success add outgoing item',
                 'data' => $itemOut
             ]);
         }
@@ -98,7 +106,7 @@ class OutgoingItemController extends Controller
         DB::update($sql, $params);
 
         return response()->json([
-            'message' => 'success create item-out and updated stock',
+            'message' => 'success add outgoing item and updated stock',
             'data' => $itemOut
         ]);
     }
@@ -112,14 +120,6 @@ class OutgoingItemController extends Controller
             'message' => 'success get item-out',
             'data' => $itemOut->load(['operator:id,name', 'division:id,name', 'details'])
         ]);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, OutgoingItem $itemOut)
-    {
-        //
     }
 
     /**
@@ -152,7 +152,7 @@ class OutgoingItemController extends Controller
 
         $itemOut->delete();
         return response()->json([
-            'message' => 'success delete item-out',
+            'message' => 'success delete outgoing item and rollback the stock',
         ]);
     }
 }

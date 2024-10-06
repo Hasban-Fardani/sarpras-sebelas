@@ -1,59 +1,84 @@
-name: 'File Management'
+name: '0. Authentication'
 description: |-
 
-  API endpoints for get files from R2
+  API for check if user loged in
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: 'public/{path}'
+      - POST
+    uri: auth/login
     metadata:
-      groupName: 'File Management'
-      groupDescription: |-
-
-        API endpoints for get files from R2
+      groupName: '0. Authentication'
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Login endpoint'
       description: ''
-      authenticated: true
+      authenticated: false
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      path:
-        name: path
-        description: ''
-        required: true
-        example: ''
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      by:
+        name: by
+        description: 'string. nip, username, email. default nip.'
+        required: false
+        example: nip
         type: string
         enumValues: []
-        exampleWasSpecified: false
+        exampleWasSpecified: true
         custom: []
-    cleanUrlParameters:
-      path: ''
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    cleanQueryParameters:
+      by: nip
+    bodyParameters:
+      password:
+        name: password
+        description: string.
+        required: false
+        example: '_y0urStrongPW#'
+        type: required
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      nip:
+        name: nip
+        description: string.
+        required: false
+        example: '197806311574231883'
+        type: required
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanBodyParameters:
+      password: '_y0urStrongPW#'
+      nip: '197806311574231883'
     fileParameters: []
     responses:
       -
-        status: 404
-        content: '{"message":"Not Found"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
+        status: 200
+        content: |-
+          {
+            "message": "login success",
+            "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
+            "user": "admin"
+          }
+        headers: []
+        description: success
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+             "message": "wrong username or password",
+          }
+        headers: []
+        description: 'incorrect credentials'
         custom: []
     responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+    auth: []
     controller: null
     method: null
     route: null
@@ -61,12 +86,12 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'private/{path}'
+    uri: auth/user
     metadata:
-      groupName: 'File Management'
+      groupName: '0. Authentication'
       groupDescription: |-
 
-        API endpoints for get files from R2
+        API for check if user loged in
       subgroup: ''
       subgroupDescription: ''
       title: ''
@@ -77,18 +102,8 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      path:
-        name: path
-        description: ''
-        required: true
-        example: ''
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      path: ''
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -96,8 +111,58 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 404
-        content: '{"message":"Not Found"}'
+        status: 200
+        content: |-
+          {
+            "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
+            "user": {
+              "username": "admin",
+              "nip": "197832411574231883",
+              "role": "admin"
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: auth/logout
+    metadata:
+      groupName: '0. Authentication'
+      groupDescription: |-
+
+        API endpoints for logout
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"logged out"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -108,7 +173,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null

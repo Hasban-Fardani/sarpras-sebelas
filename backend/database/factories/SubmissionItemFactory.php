@@ -21,6 +21,7 @@ class SubmissionItemFactory extends Factory
             'division_id' => $this->faker->numberBetween(1, 5),
             'status' => $this->faker->randomElement(['diajukan', 'disetujui', 'ditolak', 'draf']),
             'note' => $this->faker->sentence(),
+            'submission_session_id' => $this->faker->numberBetween(1, 3)
         ];
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use App\Models\OutgoingItem;
-use App\Models\ItemOutDetail;
+use App\Models\OutgoingItemDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -18,22 +18,22 @@ class OutgoingItemDetailController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, OutgoingItem $itemOut)
+    public function index(Request $request, OutgoingItem $outgoingItem)
     {
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
-        $itemOutDetails = $itemOut->details()->paginate($perPage, ['*'], 'page', $page);
+        $outgoingItemDetails = $outgoingItem->details()->paginate($perPage, ['*'], 'page', $page);
         return response()->json([
-            'message' => 'success get item out detail',
-            ...$itemOutDetails->toArray()
+            'message' => 'success get outgoing\'s item detail',
+            ...$outgoingItemDetails->toArray()
         ]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, OutgoingItem $itemOut)
+    public function store(Request $request, OutgoingItem $outgoingItem)
     {
         // validate
         $validator = Validator::make($request->all(), [
@@ -50,40 +50,34 @@ class OutgoingItemDetailController extends Controller
         }
 
         // check if item exist in item in
-        $itemOutDetail = $itemOut->details()->where('item_id', $request->item_id)->first();
-        if ($itemOutDetail) {
-            $itemOutDetail->update([
-                'qty' => $itemOutDetail->qty + $request->qty
+        $outgoingItemDetail = $outgoingItem->details()->where('item_id', $request->item_id)->first();
+        if ($outgoingItemDetail) {
+            $outgoingItemDetail->update([
+                'qty' => $outgoingItemDetail->qty + $request->qty
             ]);
             return response()->json([
                 'message' => 'success update item in detail',
-                'data' => $itemOut->details
+                'data' => $outgoingItem->details
             ]);
         }
 
-        $itemOut->details()->create($validator->validated());
+        $data = $validator->validated();
+        $data['outgoing_item_id'] = $outgoingItem->id;
+        $outgoingItem->details()->create($validator->validated());
 
         // decrement item stock
         Item::where('id', $request->item_id)->decrement('stock', $request->qty);
 
         return response()->json([
-            'message' => 'success add item in detail',
-            'data' => $itemOut->details
+            'message' => 'success add outgoing item detail',
+            'data' => $outgoingItem->details
         ]);
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $idDetails)
+    public function update(Request $request, OutgoingItemDetail $detail)
     {
         // validate
         $validator = Validator::make($request->all(), [
@@ -99,24 +93,22 @@ class OutgoingItemDetailController extends Controller
             ], 422);
         }
 
-        $itemOutDetail = ItemOutDetail::find($idDetails);
-        $itemOutDetail->update($request->all());
+        $detail->update($request->all());
         return response()->json([
             'message' => 'success update item in detail',
-            'data' => $itemOutDetail
+            'data' => $detail
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OutgoingItem $itemOut, string $idDetails)
+    public function destroy(OutgoingItem $outgoingItem, OutgoingItemDetail $detail)
     {
-        $itemOutDetail = ItemOutDetail::find($idDetails);
-        $itemOutDetail->delete();
+        $detail->delete();
         return response()->json([
             'message' => 'success delete item in detail',
-            'data' => $itemOut->details
+            'data' => $outgoingItem->details
         ]);
     }
 }

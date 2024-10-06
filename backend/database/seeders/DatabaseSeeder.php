@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             IncomingItemSeeder::class,
             IncomingItemDetailSeeder::class,
             OutgoingItemSeeder::class,
+            SubmissionSessionSeeder::class,
             SubmissionItemSeeder::class,
             RequestItemSeeder::class,
         ]);

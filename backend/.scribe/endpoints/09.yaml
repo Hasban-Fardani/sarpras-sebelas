@@ -1,17 +1,17 @@
-name: '6. Outgoing Item Detail'
+name: '7. Submission Item Management'
 description: |-
 
-  Manage outgoing item detail
+  API endpoints for managing submission item
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'outgoing-item/{outgoing_item_id}/detail'
+    uri: submission
     metadata:
-      groupName: '6. Outgoing Item Detail'
+      groupName: '7. Submission Item Management'
       groupDescription: |-
 
-        Manage outgoing item detail
+        API endpoints for managing submission item
       subgroup: ''
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
@@ -22,18 +22,8 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      outgoing_item_id:
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      outgoing_item_id: 1
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -41,8 +31,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Class \"App\\Models\\ItemOutDetail\" not found"}'
+        status: 200
+        content: '{"message":"success get all submission items","current_page":1,"data":[{"id":1,"code":"IN-001","division_id":4,"submission_session_id":1,"status":"diajukan","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":4,"name":"Ani Nuraeni"}},{"id":2,"code":"IN-002","division_id":5,"submission_session_id":1,"status":"draf","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":5,"name":"Zim zim"}},{"id":3,"code":"IN-003","division_id":4,"submission_session_id":1,"status":"disetujui","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":4,"name":"Ani Nuraeni"}},{"id":4,"code":"IN-004","division_id":5,"submission_session_id":2,"status":"ditolak","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":5,"name":"Zim zim"}},{"id":5,"code":"IN-005","division_id":5,"submission_session_id":2,"status":"diajukan","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":5,"name":"Zim zim"}},{"id":6,"code":"IN-006","division_id":5,"submission_session_id":2,"status":"disetujui","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":5,"name":"Zim zim"}},{"id":7,"code":"SI5444","division_id":4,"submission_session_id":3,"status":"draf","note":"Aperiam quia dolor cum.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":4,"name":"Ani Nuraeni"}},{"id":8,"code":"SI9435","division_id":1,"submission_session_id":3,"status":"diajukan","note":"Fugit nesciunt saepe ducimus et quo voluptatem.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":1,"name":"Yani"}},{"id":9,"code":"SI9389","division_id":4,"submission_session_id":3,"status":"disetujui","note":"Eos incidunt eum facilis et.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":4,"name":"Ani Nuraeni"}},{"id":10,"code":"SI4774","division_id":2,"submission_session_id":2,"status":"ditolak","note":"Ad ut nostrum accusamus reprehenderit et necessitatibus.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":2,"name":"Sutarsa"}}],"first_page_url":"http:\/\/localhost:8000\/submission?page=1","from":1,"last_page":2,"last_page_url":"http:\/\/localhost:8000\/submission?page=2","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/submission?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/submission?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/submission?page=2","label":"pagination.next","active":false}],"next_page_url":"http:\/\/localhost:8000\/submission?page=2","path":"http:\/\/localhost:8000\/submission","per_page":10,"prev_page_url":null,"to":10,"total":11}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -53,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
@@ -61,12 +51,12 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'outgoing-item/{outgoing_item_id}/detail'
+    uri: submission
     metadata:
-      groupName: '6. Outgoing Item Detail'
+      groupName: '7. Submission Item Management'
       groupDescription: |-
 
-        Manage outgoing item detail
+        API endpoints for managing submission item
       subgroup: ''
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
@@ -77,23 +67,23 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      outgoing_item_id:
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      outgoing_item_id: 1
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      items:
+        name: items
+        description: ''
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].item_id':
+        name: 'items[].item_id'
         description: ''
         required: true
         example: 6
@@ -101,8 +91,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      qty:
-        name: qty
+      'items[].qty':
+        name: 'items[].qty'
         description: ''
         required: true
         example: 6
@@ -111,13 +101,15 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 6
-      qty: 6
+      items:
+        -
+          item_id: 6
+          qty: 6
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"Class \"App\\Models\\ItemOutDetail\" not found"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''code'' doesn''t have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 13:21:32, 2024-10-06 13:21:32))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -128,24 +120,23 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
     custom: []
   -
     httpMethods:
-      - PUT
-      - PATCH
-    uri: 'outgoing-item/{outgoing_item_id}/detail/{id}'
+      - GET
+    uri: 'submission/{id}'
     metadata:
-      groupName: '6. Outgoing Item Detail'
+      groupName: '7. Submission Item Management'
       groupDescription: |-
 
-        Manage outgoing item detail
+        API endpoints for managing submission item
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: true
       custom: []
@@ -154,56 +145,26 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      outgoing_item_id:
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
+      id:
+        name: id
+        description: 'The ID of the submission.'
         required: true
         example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      id:
-        name: id
-        description: 'The ID of the detail.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
     cleanUrlParameters:
-      outgoing_item_id: 1
-      id: consequatur
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      item_id:
-        name: item_id
-        description: ''
-        required: false
-        example: 6
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      qty:
-        name: qty
-        description: ''
-        required: false
-        example: 6
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      item_id: 6
-      qty: 6
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Class \"App\\Models\\ItemOutDetail\" not found"}'
+        status: 200
+        content: '{"message":"success get submission item","data":{"id":1,"code":"IN-001","division_id":4,"submission_session_id":1,"status":"diajukan","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","division":{"id":4,"name":"Ani Nuraeni"},"details":[]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -214,7 +175,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
@@ -222,12 +183,12 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'outgoing-item/{outgoing_item_id}/detail/{id}'
+    uri: 'submission/{id}'
     metadata:
-      groupName: '6. Outgoing Item Detail'
+      groupName: '7. Submission Item Management'
       groupDescription: |-
 
-        Manage outgoing item detail
+        API endpoints for managing submission item
       subgroup: ''
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
@@ -239,18 +200,9 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      outgoing_item_id:
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
       id:
         name: id
-        description: 'The ID of the detail.'
+        description: 'The ID of the submission.'
         required: true
         example: 1
         type: integer
@@ -258,7 +210,6 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      outgoing_item_id: 1
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -267,8 +218,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Class \"App\\Models\\ItemOutDetail\" not found"}'
+        status: 200
+        content: '{"message":"success delete submission item"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -279,7 +230,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null

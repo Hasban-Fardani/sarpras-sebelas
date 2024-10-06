@@ -1,100 +1,20 @@
-name: '0. Authentication'
+name: 'Dashboard Info'
 description: |-
 
-  API for check if user loged in
+  API endpoints for admin dashboard
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: auth/login
-    metadata:
-      groupName: '0. Authentication'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Login endpoint'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters:
-      by:
-        name: by
-        description: 'string. nip, username, email. default nip.'
-        required: false
-        example: nip
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        custom: []
-    cleanQueryParameters:
-      by: nip
-    bodyParameters:
-      password:
-        name: password
-        description: string.
-        required: false
-        example: '_y0urStrongPW#'
-        type: required
-        enumValues: []
-        exampleWasSpecified: true
-        custom: []
-      nip:
-        name: nip
-        description: string.
-        required: false
-        example: '197806311574231883'
-        type: required
-        enumValues: []
-        exampleWasSpecified: true
-        custom: []
-    cleanBodyParameters:
-      password: '_y0urStrongPW#'
-      nip: '197806311574231883'
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: |-
-          {
-            "message": "login success",
-            "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
-            "user": "admin"
-          }
-        headers: []
-        description: success
-        custom: []
-      -
-        status: 401
-        content: |-
-          {
-             "message": "wrong username or password",
-          }
-        headers: []
-        description: 'incorrect credentials'
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
       - GET
-    uri: auth/user
+    uri: dashboard/counts
     metadata:
-      groupName: '0. Authentication'
+      groupName: 'Dashboard Info'
       groupDescription: |-
 
-        API for check if user loged in
+        API endpoints for admin dashboard
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get counts of items, users and requests + submssions'
       description: ''
       authenticated: true
       custom: []
@@ -112,57 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: |-
-          {
-            "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
-            "user": {
-              "username": "admin",
-              "nip": "197832411574231883",
-              "role": "admin"
-            }
-          }
-        headers: []
-        description: ''
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: auth/logout
-    metadata:
-      groupName: '0. Authentication'
-      groupDescription: |-
-
-        API endpoints for logout
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"message":"logged out"}'
+        content: '{"items":15,"users":4,"requests":10,"submissions":11}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -173,7 +43,97 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: dashboard/stats/request
+    metadata:
+      groupName: 'Dashboard Info'
+      groupDescription: |-
+
+        API endpoints for admin dashboard
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get stats of requests item'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column ''laravel_sarpras_sebelas.request_items.created_at'' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: dashboard/stats/item
+    metadata:
+      groupName: 'Dashboard Info'
+      groupDescription: |-
+
+        API endpoints for admin dashboard
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get stats of items'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"labels":["Alat Tulis Kantor"],"values":[15]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null

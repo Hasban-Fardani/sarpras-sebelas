@@ -1,17 +1,160 @@
-name: '13. Supplier Management'
+name: '11. Employee Management'
 description: |-
 
-  API endpoints for managing suppliers
+  API endpoints for managing employees
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: admin/supplier
+      - POST
+    uri: 'admin/employee/{employee_id}/assign'
     metadata:
-      groupName: '13. Supplier Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
-        API endpoints for managing suppliers
+        API endpoints for managing employees
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Make user account from employee'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      employee_id:
+        name: employee_id
+        description: 'The ID of the employee.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      employee_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      role:
+        name: role
+        description: ''
+        required: true
+        example: unit
+        type: string
+        enumValues:
+          - admin
+          - pengawas
+          - unit
+        exampleWasSpecified: false
+        custom: []
+      username:
+        name: username
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      password: consequatur
+      role: unit
+      username: consequatur
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$RNOcny7ePH\/xIYHm7tFZ\/OMSSj66IobbiRZw9cq5IMApDKZ4hVUv6, unit, consequatur, 2024-10-06 13:21:33, 2024-10-06 13:21:33))"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'admin/employee/{employee_id}/unassign'
+    metadata:
+      groupName: '11. Employee Management'
+      groupDescription: |-
+
+        API endpoints for managing employees
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete user account'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      employee_id:
+        name: employee_id
+        description: 'The ID of the employee.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      employee_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"succes delete account"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: admin/employees
+    metadata:
+      groupName: '11. Employee Management'
+      groupDescription: |-
+
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
@@ -32,7 +175,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get suppliers","current_page":1,"data":[{"id":1,"code":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":2,"code":"S0002","name":"Supplier 2","address":"Address 2","phone":"08123456790","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":3,"code":"S0003","name":"Supplier 3","address":"Address 3","phone":"08123456791","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":4,"code":"S0004","name":"Supplier 4","address":"Address 4","phone":"08123456792","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":5,"code":"S0005","name":"Supplier 5","address":"Address 5","phone":"08123456793","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":6,"code":"SP-6228","name":"Fa Hutagalung","address":"Dk. Bayan No. 198, Surakarta 32363, Kaltim","phone":"(+62) 357 6329 5408","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":7,"code":"SP-5258","name":"Fa Maryadi Tbk","address":"Ds. Achmad Yani No. 10, Bengkulu 62814, NTT","phone":"0448 4227 6230","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":8,"code":"SP-5536","name":"PD Pradana Mandasari","address":"Kpg. K.H. Maskur No. 815, Bima 73177, Maluku","phone":"0483 8145 071","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":9,"code":"SP-9740","name":"Perum Lestari Tbk","address":"Jr. Muwardi No. 189, Pangkal Pinang 57253, Riau","phone":"0264 4636 3891","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"},{"id":10,"code":"SP-9793","name":"Perum Namaga Pratiwi","address":"Ds. Pelajar Pejuang 45 No. 884, Pekanbaru 58262, Aceh","phone":"0881 798 483","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/admin\/supplier?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/supplier?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/supplier?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/supplier","per_page":10,"prev_page_url":null,"to":10,"total":10}'
+        content: '{"message":"success get all employees","current_page":1,"data":[{"id":1,"nip":"198012311994031002","name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":2,"nip":"197412311994031001","name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":3,"nip":"197806311994031003","name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":4,"nip":"198212311994031004","name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":5,"nip":"197412311994031005","name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/admin\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/employees","per_page":10,"prev_page_url":null,"to":5,"total":5}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,7 +186,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
@@ -51,12 +194,12 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: admin/supplier
+    uri: admin/employees
     metadata:
-      groupName: '13. Supplier Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
-        API endpoints for managing suppliers
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
@@ -72,8 +215,8 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
+      nip:
+        name: nip
         description: validation.max.
         required: true
         example: tjqotbhpzwonwlzospqcs
@@ -81,33 +224,53 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      address:
-        name: address
-        description: validation.max.
-        required: false
-        example: nssrciatkmatldznkaapj
+      name:
+        name: name
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      position:
+        name: position
+        description: ''
+        required: true
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       phone:
         name: phone
-        description: validation.max.
-        required: false
-        example: ptdhyldmarwuvlvyfcejz
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: ''
+        required: true
+        example: joy.schultz@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: tjqotbhpzwonwlzospqcs
-      address: nssrciatkmatldznkaapj
-      phone: ptdhyldmarwuvlvyfcejz
+      nip: tjqotbhpzwonwlzospqcs
+      name: consequatur
+      position: consequatur
+      phone: consequatur
+      email: joy.schultz@example.org
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''code'' doesn''t have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 07:06:51, 2024-10-06 07:06:51))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 13:21:33, 2024-10-06 13:21:33))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -118,7 +281,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
@@ -126,12 +289,12 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'admin/supplier/{id}'
+    uri: 'admin/employees/{id}'
     metadata:
-      groupName: '13. Supplier Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
-        API endpoints for managing suppliers
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Display the specified resource.'
@@ -145,7 +308,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the supplier.'
+        description: 'The ID of the employee.'
         required: true
         example: 1
         type: integer
@@ -162,7 +325,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get supplier","data":{"id":1,"code":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"}}'
+        content: '{"message":"success get employee","data":{"id":1,"nip":"198012311994031002","name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -173,7 +336,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
@@ -182,12 +345,12 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'admin/supplier/{id}'
+    uri: 'admin/employees/{id}'
     metadata:
-      groupName: '13. Supplier Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
-        API endpoints for managing suppliers
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Update the specified resource in storage.'
@@ -201,7 +364,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the supplier.'
+        description: 'The ID of the employee.'
         required: true
         example: 1
         type: integer
@@ -213,8 +376,8 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
+      nip:
+        name: nip
         description: validation.max.
         required: true
         example: tjqotbhpzwonwlzospqcs
@@ -222,33 +385,53 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      address:
-        name: address
-        description: validation.max.
-        required: false
-        example: nssrciatkmatldznkaapj
+      name:
+        name: name
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      position:
+        name: position
+        description: ''
+        required: true
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       phone:
         name: phone
-        description: validation.max.
-        required: false
-        example: ptdhyldmarwuvlvyfcejz
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: ''
+        required: true
+        example: joy.schultz@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: tjqotbhpzwonwlzospqcs
-      address: nssrciatkmatldznkaapj
-      phone: ptdhyldmarwuvlvyfcejz
+      nip: tjqotbhpzwonwlzospqcs
+      name: consequatur
+      position: consequatur
+      phone: consequatur
+      email: joy.schultz@example.org
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"message":"success create supplier","data":true}'
+        content: '{"message":"success update employee","data":{"id":1,"nip":"tjqotbhpzwonwlzospqcs","name":"consequatur","position":"consequatur","phone":"consequatur","email":"joy.schultz@example.org","email_verified_at":null,"created_at":null,"updated_at":"2024-10-06T13:21:33.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -259,7 +442,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
@@ -267,12 +450,12 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'admin/supplier/{id}'
+    uri: 'admin/employees/{id}'
     metadata:
-      groupName: '13. Supplier Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
-        API endpoints for managing suppliers
+        API endpoints for managing employees
       subgroup: ''
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
@@ -286,7 +469,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the supplier.'
+        description: 'The ID of the employee.'
         required: true
         example: 1
         type: integer
@@ -303,7 +486,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_supplier_id_foreign` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`id`)) (Connection: mysql, SQL: delete from `suppliers` where `id` = 1)"}'
+        content: '{"message":"SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`)) (Connection: mysql, SQL: delete from `employees` where `id` = 1)"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -314,7 +497,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null

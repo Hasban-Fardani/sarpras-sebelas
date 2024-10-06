@@ -1,20 +1,20 @@
-name: 'Dashboard Info'
+name: '1. Category Management'
 description: |-
 
-  API endpoints for admin dashboard
+  API endpoints for managing categories
 endpoints:
   -
     httpMethods:
       - GET
-    uri: dashboard/counts
+    uri: category
     metadata:
-      groupName: 'Dashboard Info'
+      groupName: '1. Category Management'
       groupDescription: |-
 
-        API endpoints for admin dashboard
+        API endpoints for managing categories
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get counts of items, users and requests + submssions'
+      title: 'Display list of categories.'
       description: ''
       authenticated: true
       custom: []
@@ -32,7 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"items":15,"users":4,"requests":10,"submissions":11}'
+        content: '{"message":"success get all categories","current_page":1,"data":[{"id":1,"code":"ATK","name":"Alat Tulis Kantor","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/category?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/category?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/category?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/category","per_page":10,"prev_page_url":null,"to":1,"total":1}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,23 +43,23 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
     custom: []
   -
     httpMethods:
-      - GET
-    uri: dashboard/stats/request
+      - POST
+    uri: category
     metadata:
-      groupName: 'Dashboard Info'
+      groupName: '1. Category Management'
       groupDescription: |-
 
-        API endpoints for admin dashboard
+        API endpoints for managing categories
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get stats of requests item'
+      title: 'Store a new category in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -71,13 +71,33 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must contain only letters, numbers, dashes and underscores.'
+        required: true
+        example: tjq-otb_h
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      code:
+        name: code
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: tjq-otb_h
+      code: consequatur
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column ''laravel_sarpras_sebelas.request_items.created_at'' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)"}'
+        status: 200
+        content: '{"message":"success create new category","data":{"name":"tjq-otb_h","code":"consequatur","updated_at":"2024-10-06T13:21:32.000000Z","created_at":"2024-10-06T13:21:32.000000Z","id":9}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -88,7 +108,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null
@@ -96,15 +116,15 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: dashboard/stats/item
+    uri: 'category/{id}'
     metadata:
-      groupName: 'Dashboard Info'
+      groupName: '1. Category Management'
       groupDescription: |-
 
-        API endpoints for admin dashboard
+        API endpoints for managing categories
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get stats of items'
+      title: 'Display specific category.'
       description: ''
       authenticated: true
       custom: []
@@ -112,8 +132,18 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -122,7 +152,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"labels":["Alat Tulis Kantor"],"values":[15]}'
+        content: '{"message":"success get category","data":{"id":1,"code":"ATK","name":"Alat Tulis Kantor","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -133,7 +163,137 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'category/{id}'
+    metadata:
+      groupName: '1. Category Management'
+      groupDescription: |-
+
+        API endpoints for managing categories
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update specified category.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      code:
+        name: code
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: consequatur
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success update category","data":{"id":1,"code":"ATK","name":"consequatur","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T13:21:32.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'category/{id}'
+    metadata:
+      groupName: '1. Category Management'
+      groupDescription: |-
+
+        API endpoints for managing categories
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete category by id.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success delete category"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
     controller: null
     method: null
     route: null

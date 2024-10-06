@@ -15,9 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->unsignedBigInteger('division_id');
+            $table->unsignedBigInteger('submission_session_id');
             $table->enum('status', ['diajukan', 'disetujui', 'ditolak', 'draf'])->default('diajukan');
-            $table->foreign('division_id')->references('id')->on('employees')->cascadeOnDelete();
             $table->text('note')->nullable();
+
+            $table->foreign('division_id')->references('id')->on('employees')->cascadeOnDelete();
+            $table->foreign('submission_session_id')->references('id')->on('submission_sessions')->cascadeOnDelete();
             $table->timestamps();
         });
     }
