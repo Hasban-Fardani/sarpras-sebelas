@@ -58,8 +58,14 @@ class SubmissionItemController extends Controller
         $userNIP = auth()->user()->id;
         $employeeID = Employee::where('id', $userNIP)->first()->id;
 
+        if (!array_key_exists('code', $validatedData)) {
+            $hashes = 'SUB-' . hash('sha256', now());
+            $validatedData['code'] = substr($hashes, 0, 10);
+        }
+
         // directly create a new array with only the needed keys
         $data = [
+            'code' => $validatedData['code'],
             'user_id' => $employeeID,
             'total_items' => count($validatedData['items']),
         ];

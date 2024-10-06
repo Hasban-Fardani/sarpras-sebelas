@@ -37,5 +37,9 @@ class AppServiceProvider extends ServiceProvider
         Gate::define('division', function ($user) {
             return $user->role === 'unit';
         });
+
+        Gate::define('dev', function ($user) {
+            return $user->role === 'developer';
+        });
     }
 }

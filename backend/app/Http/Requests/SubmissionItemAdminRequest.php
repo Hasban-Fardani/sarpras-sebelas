@@ -22,6 +22,7 @@ class SubmissionItemAdminRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'code' => 'string|nullable',
             'items' => 'required|array',
             'items.*.item_id' => 'required|integer',
             'items.*.qty' => 'required|integer',

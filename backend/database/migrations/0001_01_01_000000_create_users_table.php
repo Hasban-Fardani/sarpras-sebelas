@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nip')->unique();
             $table->string('username')->unique();
             $table->string('password');
-            $table->enum('role', ['admin', 'unit', 'pengawas'])->default('unit');
+            $table->enum('role', ['admin', 'unit', 'pengawas', 'developer'])->default('unit');
             
             $table->foreign('nip')->references('nip')->on('employees');
             $table->rememberToken();
