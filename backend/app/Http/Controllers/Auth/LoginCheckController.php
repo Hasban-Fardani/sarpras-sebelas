@@ -13,12 +13,22 @@ use Illuminate\Support\Facades\Auth;
  */
 class LoginCheckController extends Controller
 {
+    /**
+     * @response 200 {
+     *   "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
+     *   "user": {
+     *     "username": "admin",
+     *     "nip": "197832411574231883",
+     *     "role": "admin"
+     *   }
+     * }
+     */
     public function __invoke()
     {
         $user = Auth::user();
         return response()->json([
             'user' => $user,
-            'token' => $user->createToken($user->name)->plainTextToken
+            'token' => $user->createToken('accessToken')->plainTextToken
         ]);
     }
 }

@@ -111,7 +111,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''code'' doesn''t have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 06:12:11, 2024-10-06 06:12:11))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''code'' doesn''t have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 07:06:51, 2024-10-06 07:06:51))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

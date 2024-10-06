@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel Sarpras API Documentation",
-        "_postman_id": "9ad423a1-9dba-4f6c-a5c1-21daf4a43c5a",
+        "_postman_id": "b705052e-aa9d-4d4b-bab1-0e02a0a4f808",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -25,8 +25,15 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "auth\/login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/auth\/login"
+                            "query": [
+                                {
+                                    "key": "by",
+                                    "value": "nip",
+                                    "description": "string. nip, username, email. default nip.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/auth\/login?by=nip"
                         },
                         "method": "POST",
                         "header": [
@@ -41,7 +48,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"password123\",\"id\":\"2121021210\"}"
+                            "raw": "{\"password\":\"_y0urStrongPW#\",\"nip\":\"197806311574231883\"}"
                         },
                         "description": "",
                         "auth": {
@@ -50,23 +57,16 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 412,
-                            "body": "{\"message\":\"invalid fields\",\"errors\":{\"nip\":[\"validation.required\"]}}",
-                            "name": ""
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"message\": \"login success\",\n  \"token\": \"100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w\",\n  \"user\": \"admin\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n   \"message\": \"wrong username or password\",\n}",
+                            "name": "incorrect credentials"
                         }
                     ]
                 },
@@ -95,22 +95,9 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"App\\\\Models\\\\User::createToken(): Argument #1 ($name) must be of type string, null given, called in \\\/home\\\/hasban\\\/Code\\\/Github\\\/sarpras-sebelas\\\/backend\\\/app\\\/Http\\\/Controllers\\\/Auth\\\/LoginCheckController.php on line 21\"}",
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"token\": \"100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w\",\n  \"user\": {\n    \"username\": \"admin\",\n    \"nip\": \"197832411574231883\",\n    \"role\": \"admin\"\n  }\n}",
                             "name": ""
                         }
                     ]
@@ -254,7 +241,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T06:12:10.000000Z\",\"created_at\":\"2024-10-06T06:12:10.000000Z\",\"id\":32}}",
+                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T07:06:50.000000Z\",\"created_at\":\"2024-10-06T07:06:50.000000Z\",\"id\":41}}",
                             "name": ""
                         }
                     ]
@@ -363,7 +350,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T06:12:10.000000Z\"}}",
+                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T07:06:50.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -433,8 +420,63 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "item",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/item"
+                            "query": [
+                                {
+                                    "key": "page",
+                                    "value": "1",
+                                    "description": "The page number.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "per_page",
+                                    "value": "10",
+                                    "description": "The number of items per page.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "sort",
+                                    "value": "created_at",
+                                    "description": "The column to sort.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "sort_dir",
+                                    "value": "desc",
+                                    "description": "The direction to sort.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "category_id",
+                                    "value": "1",
+                                    "description": "The category id.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "search",
+                                    "value": "spidol",
+                                    "description": "Search by name.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "merk",
+                                    "value": "sidu",
+                                    "description": "Search by merk.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "type",
+                                    "value": "gel",
+                                    "description": "Search by type.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "size",
+                                    "value": "0.5mm",
+                                    "description": "Search by size.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/item?page=1&per_page=10&sort=created_at&sort_dir=desc&category_id=1&search=spidol&merk=sidu&type=gel&size=0.5mm"
                         },
                         "method": "GET",
                         "header": [
@@ -467,7 +509,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all items\",\"current_page\":1,\"data\":[{\"id\":10,\"code\":\"I-8711\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/378f1c2e887da8f8462a7c57842dcf11.png\",\"name\":\"ut\",\"unit\":\"hic\",\"merk\":\"pariatur\",\"type\":\"dolore\",\"size\":\"nostrum\",\"stock\":31,\"min_stock\":83,\"price\":9978,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":11,\"code\":\"I-5917\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/2f88312bb79fd02e94aed0bf9047e744.png\",\"name\":\"reiciendis\",\"unit\":\"dolores\",\"merk\":\"et\",\"type\":\"fuga\",\"size\":\"voluptatem\",\"stock\":91,\"min_stock\":37,\"price\":6476,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":12,\"code\":\"I-6864\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/61fae849913284a2da6f8644309283a1.png\",\"name\":\"inventore\",\"unit\":\"sit\",\"merk\":\"unde\",\"type\":\"distinctio\",\"size\":\"natus\",\"stock\":8,\"min_stock\":91,\"price\":6868,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":13,\"code\":\"I-8855\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/b7061d39528243a670c7efa619d998cf.png\",\"name\":\"non\",\"unit\":\"facere\",\"merk\":\"corrupti\",\"type\":\"aut\",\"size\":\"ducimus\",\"stock\":38,\"min_stock\":19,\"price\":4278,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":14,\"code\":\"I-3662\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/039ffb25395b5a2ff137a447058526df.png\",\"name\":\"et\",\"unit\":\"ipsam\",\"merk\":\"perspiciatis\",\"type\":\"id\",\"size\":\"beatae\",\"stock\":100,\"min_stock\":45,\"price\":2957,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":15,\"code\":\"I-8528\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/73a5bcbe9898a47f6c692aecca919295.png\",\"name\":\"sint\",\"unit\":\"repudiandae\",\"merk\":\"iusto\",\"type\":\"impedit\",\"size\":\"qui\",\"stock\":57,\"min_stock\":92,\"price\":5548,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":6,\"code\":\"I-3553\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/9d72edadc4148c87dbb8f3623a8af711.png\",\"name\":\"quo\",\"unit\":\"in\",\"merk\":\"commodi\",\"type\":\"sunt\",\"size\":\"inventore\",\"stock\":37,\"min_stock\":18,\"price\":8859,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:55.000000Z\",\"updated_at\":\"2024-10-06T04:04:55.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":7,\"code\":\"I-5799\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/e4bd7eb99d7fb460659a5499bec4f35d.png\",\"name\":\"et\",\"unit\":\"sed\",\"merk\":\"vero\",\"type\":\"voluptatibus\",\"size\":\"repellendus\",\"stock\":99,\"min_stock\":19,\"price\":6776,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:55.000000Z\",\"updated_at\":\"2024-10-06T04:04:55.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":8,\"code\":\"I-1611\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/e13c9d72938f2a5094e1f1a995d25fa4.png\",\"name\":\"maiores\",\"unit\":\"praesentium\",\"merk\":\"natus\",\"type\":\"quam\",\"size\":\"ipsam\",\"stock\":98,\"min_stock\":5,\"price\":1732,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:55.000000Z\",\"updated_at\":\"2024-10-06T04:04:55.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}},{\"id\":9,\"code\":\"I-6083\",\"image\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/d1092ad92edec60bfc722760daf46c92.png\",\"name\":\"eveniet\",\"unit\":\"voluptas\",\"merk\":\"minima\",\"type\":\"magni\",\"size\":\"non\",\"stock\":65,\"min_stock\":36,\"price\":8696,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:55.000000Z\",\"updated_at\":\"2024-10-06T04:04:55.000000Z\",\"category\":{\"id\":1,\"name\":\"Alat Tulis Kantor\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/item?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/item?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/item?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/item?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/item?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":15}",
+                            "body": "{\"message\":\"success get all items\",\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/item?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/item?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/item\",\"per_page\":10,\"prev_page_url\":null,\"to\":null,\"total\":0}",
                             "name": ""
                         }
                     ]
@@ -581,7 +623,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T06:12:10.000000Z\",\"created_at\":\"2024-10-06T06:12:10.000000Z\",\"id\":46}}",
+                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/2811157af59f66a63fa587edd5147bd78ab49f8369fc1e8aa58ce1a106a0cd50.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T07:06:50.000000Z\",\"created_at\":\"2024-10-06T07:06:50.000000Z\",\"id\":55}}",
                             "name": ""
                         }
                     ]
@@ -761,7 +803,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T06:12:10.000000Z\"}}",
+                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/2811157af59f66a63fa587edd5147bd78ab49f8369fc1e8aa58ce1a106a0cd50.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T07:06:50.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -913,7 +955,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-0ffcf6a\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T06:12:11.000000Z\",\"created_at\":\"2024-10-06T06:12:11.000000Z\",\"id\":32}}",
+                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-c8ca9ba\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T07:06:50.000000Z\",\"created_at\":\"2024-10-06T07:06:50.000000Z\",\"id\":41}}",
                             "name": ""
                         }
                     ]
@@ -1134,7 +1176,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":[{\"id\":4,\"incoming_item_id\":1,\"item_id\":4,\"qty\":25,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":12,\"incoming_item_id\":1,\"item_id\":7,\"qty\":70,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":21,\"incoming_item_id\":1,\"item_id\":6,\"qty\":97,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T06:12:11.000000Z\"},{\"id\":26,\"incoming_item_id\":1,\"item_id\":3,\"qty\":12,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":3,\"qty\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":53,\"incoming_item_id\":1,\"item_id\":5,\"qty\":59,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":55,\"incoming_item_id\":1,\"item_id\":2,\"qty\":85,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":56,\"incoming_item_id\":1,\"item_id\":5,\"qty\":42,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":83,\"incoming_item_id\":1,\"item_id\":5,\"qty\":73,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":10,\"qty\":17,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":88,\"incoming_item_id\":1,\"item_id\":6,\"qty\":32,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":6,\"qty\":14,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":99,\"incoming_item_id\":1,\"item_id\":6,\"qty\":96,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"}]}",
+                            "body": "{\"message\":\"success update incoming item detail\",\"data\":[{\"id\":4,\"incoming_item_id\":1,\"item_id\":4,\"qty\":25,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":12,\"incoming_item_id\":1,\"item_id\":7,\"qty\":70,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":21,\"incoming_item_id\":1,\"item_id\":6,\"qty\":97,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T07:06:51.000000Z\"},{\"id\":26,\"incoming_item_id\":1,\"item_id\":3,\"qty\":12,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":3,\"qty\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":53,\"incoming_item_id\":1,\"item_id\":5,\"qty\":59,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":55,\"incoming_item_id\":1,\"item_id\":2,\"qty\":85,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":56,\"incoming_item_id\":1,\"item_id\":5,\"qty\":42,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":83,\"incoming_item_id\":1,\"item_id\":5,\"qty\":73,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":10,\"qty\":17,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":88,\"incoming_item_id\":1,\"item_id\":6,\"qty\":32,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":6,\"qty\":14,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":99,\"incoming_item_id\":1,\"item_id\":6,\"qty\":96,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1196,7 +1238,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":7,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T06:12:11.000000Z\"}}",
+                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":7,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T07:06:51.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -1354,7 +1396,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
                             "name": ""
                         }
                     ]
@@ -1795,7 +1837,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
                             "name": ""
                         }
                     ]
@@ -2016,7 +2058,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
                             "name": ""
                         }
                     ]
@@ -2454,7 +2496,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
                             "name": ""
                         }
                     ]
@@ -2637,7 +2679,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$b0rlrxdDjWeuMZVeYvAcEOhISjECnohxtCaP39Y61k0\\\/eMi9uGaJu, unit, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$NxwqK7GIGPXXM6IXvSKGRuwxQD\\\/bkWkBwp7VYilN9O.MsVhzjUiFy, unit, consequatur, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
                             "name": ""
                         }
                     ]
@@ -2783,7 +2825,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
                             "name": ""
                         }
                     ]
@@ -2892,7 +2934,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T06:12:11.000000Z\"}}",
+                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T07:06:51.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -3132,7 +3174,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"id\":\"nssrciatkmatldznkaapj\",\"username\":\"ptdhyldmarwuvlvyfcejz\",\"email\":\"maude81@example.net\",\"password\":\"#L*qCceF0t7nA\",\"role\":\"pengawas\"}"
+                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"id\":\"nssrciatkmatldznkaapj\",\"username\":\"ptdhyldmarwuvlvyfcejz\",\"email\":\"maude81@example.net\",\"password\":\"#L*qCceF0t7nA\",\"role\":\"unit\"}"
                         },
                         "description": ""
                     },
@@ -3305,7 +3347,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 07:06:51, 2024-10-06 07:06:51))\"}",
                             "name": ""
                         }
                     ]
@@ -3767,7 +3809,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IjJSK01nMWVUSDFucmpleE51VEMySmc9PSIsInZhbHVlIjoiQUdEb1pRUmh6aTlTTXRSNkRvOFY4Qi83ZW1sWGV6dy9DRktySlRpOHJmVEhyZkloQk9UOVNSdUtTaXlKUFBBT0VyeGR6aTQrbHBSSis2MUJrQU4zcVA5dk1HVnF4aldMSEgzcGRDZDU1WThKdnovL0dNWkF1NnorV3I4QVprdnYiLCJtYWMiOiI5NWQyY2ZhY2Q5NGY2YTUyNDNiYTQwNDQxNTI5MGE2NGFhZmUwNmY2MzcxMDc5ZmYzMjM4YTFhNmUxY2U0N2Q5IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InBwK2lzaitwTzZ6bldTdjZsZ1ZwQUE9PSIsInZhbHVlIjoiTDdOZkVhU3MrT1gxM204V3lvSXVYMVNFbDdMamhLZ2U4QkdmUUZtQVZGbWZic1c0eDRicUNGQW1SWkc3ZUVoQzY3VTIvd0NuYUFxTG52SnluQXZ2VHY1ZGNndlpRb081bjZpcVlvb1oyQm1oSHdObGdSN1pxY3dic1QzanhKM3UiLCJtYWMiOiJlMjY0ZjQ2YjRhZDM2NWFhNDNmYzA5YjMyZjU5MTcwNzY0MTc2MTMyMzVkYjk5Zjg3M2M4NmI0YjI5Mjk2ZWI1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; PdvthjZVsd2yv9SLo0ojuzQYYeJAnXB7QbDmdL5M=eyJpdiI6Ijh6UTluWXp6c0U1UmRIQzZMaXduYlE9PSIsInZhbHVlIjoieWdaeHJaQU1FQzRLdVZreXlFaGd3Z1ROT3Y4QnlBZzdjSFZqK25aNEU4aWI5d1l0eUkvVDVjYStVRlRMWXZId1dhczdqb1p2Zlo4SjNZcDZuUWowdEJUOXllQytHSFlFR0tiVmhiajRUdmd6ODRWNTNPUVZPc2Nvb3hGUlVtc3NjWTdMVHlqZUZOT0tkQno5Tlo2elpoM3VrVWlGL3E3V0xxVG5KYWd3OG9iQ1d1andaNTJQb2g2VkkwenA3QjVSUHYyd3lwUFA1STRHWVlUdndETGZWTHF3OWNIditoNHEyZFNwWk5QQkZ0UTFSeE1lWVhVNmpRbFRDU1pJZnpZekc4UkdLcFhlS3IrNFhLK1RQd2s2RUpuRjZiN0sxMWVzU1ZDcHJxMVFLbmhoSGNpaWhNelVQWmFybVJ4SmRoMWl0VDdIMS9jSVBPOVhmOE5LVmRFQXNRanordHRRbHZSQU1lekdPYWFtZ1UwNys3RGZRUDZwRExoVlRoeDM1bW9ZUFZvZHJEcHl5c1hCcFRSU29MNlFMdz09IiwibWFjIjoiYjU2Mzc0M2ZmZWJlMzFlMWQ1MGZlNTcwZDY4MmI1MTFmZjRjODgxYzAxMzU1MmRhZDE4NTlmMmQ4NjU5YWJkNSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IklHVFhneGZodG9raE5CMkZvQ3ZmN2c9PSIsInZhbHVlIjoiVzZneEhjSGFmTHpMTWFVWjY4MFluV2g3RGVhcDF5ajVKbGJHeHNyWEU0cFFpYVBiMVdVMWNaN1JFWTgzMEpIak9KKzRHd09rc1kxdVE4c2FxRk5hL3pScXl4NHQ4S2FtcjFvb0hWc0lmY1FjRzZpMndEVmJTY2U0Qk1USmRxckgiLCJtYWMiOiIwNWU5OTcyY2YyNmFhZTNkZjUyMzE1YTI3YTg1ZjJjMzEwZDJjYmYyYmIwOTY5MGQ3YTAxZmJiY2Y4Y2MzYjdkIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IkVEVW5RWjM4S2tzcHRNR1NpeTdOb1E9PSIsInZhbHVlIjoiRVRwVmw3UkltZDZGQWQzVDYwMVFCS2lwSGpOUVFhUnJjc1dIVEhOZFptR1lLVko0UkFRZTRBR0svcTZ0UllyT3M4K3pYK0xkZThDRWkrRDJJUmtJRFpIUGEzOU9JOHhRTWZpWTc3Q1gxK0l2K0dyV1lUM2JYaHYxMGJYV2puM2oiLCJtYWMiOiIxZWFlMWUyYjY4MWI1Zjg0ZTM5ZGFmMjIyYjU4Njk0NDEwNWQzMDAyYWI0MDVlYzY5NmJmMjFjYmI0YmJkZjJjIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; EX3TBnsH9rPyV1IlhzA4ZT0x8GgntIXrogs6bZgv=eyJpdiI6IncyQmNOM3hhZ1hEcklYQ3JraGJkbGc9PSIsInZhbHVlIjoiQVZKaEI0Sm9IU0VIeEEvUHY3KzdDTXV5aHBCNWJLN2YvZm1sbDVyVGVnbzd1ODRKWXJoUDlWSElGZ05hTC9ucHh0SkYzMjlPRkJXN2hWQk5YNFo1K2F4V3VCQXM4V2RwRkZDVm5VUll4M0M0ZVlaVFlxNHRPZmZJRzRqQ0cwL01lVzFpVnI1aUlJeHJiS1JNSFpORC8yWHB5WXdyWlkzNStMUGRUQ0tUdldKVXI2QmtLdmFpQ1pYWm4wWS9odGo5UTAxM0l5ZVdpcXZFNHo2N1Y3V0hvRDRkN25OUFRuZDJGS0pVVVpTbHBYZ1pPc2lrbVFCaHkwQ2x0bnZ5ejJqWnMyNFZETXptZ1lOalFYY01UZkhvNFNuS2M1bEFSQ3NHUk01R2lmeGpsNnozSXN1V01peG9USVpteTRjbWUyR0c5M0NoTE1wcTJxZ0JHRksrU2ZndEJaVDZKZ3gvV1FVQ3k0bWVhN3JPWC9BVGpXbGtQZFZoVU1tUG1sRjl3VTNoTzh4UU9ud3RnV3p0ZGhNbnZIdHl0UT09IiwibWFjIjoiYjUzNjcyOGQ3OWVhZDk3YzE5NjAyM2M4MmU0NTY1MWNjYmU0ZTYyNWNmNzgzY2I3NmM2MzdlZjRlYWEzMjU1MSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,

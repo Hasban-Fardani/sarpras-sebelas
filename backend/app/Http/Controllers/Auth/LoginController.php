@@ -19,8 +19,19 @@ class LoginController extends Controller
     /**
      * Login endpoint
      * 
-     * @bodyParam id string required Example: 2121021210
-     * @bodyParam password string required Example: password123
+     * @queryParam by string. nip, username, email. default nip. Example: nip
+     * @bodyParam nip required string. Example: 197806311574231883
+     * @bodyParam password required string. Example: _y0urStrongPW#
+     * 
+     * @response 200 scenario="success" {
+     *   "message": "login success",
+     *   "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
+     *   "user": "admin"
+     * }
+     * 
+     * @response 401 scenario="incorrect credentials" {
+     *    "message": "wrong username or password",
+     * }
      */
     public function __invoke(Request $request)
     {
@@ -31,7 +42,7 @@ class LoginController extends Controller
                 'message' => 'invalid login type'
             ], 400);
         }
-        
+
         // validate request
         $validator = Validator::make($request->all(), [
             $type => 'required',
@@ -42,8 +53,8 @@ class LoginController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'message' => 'invalid fields',
-                'errors' => $validator->errors() 
-            ], 412);
+                'errors' => $validator->errors()
+            ], 422);
         }
 
         // login user
@@ -52,7 +63,7 @@ class LoginController extends Controller
             'password' => $request->input('password'),
         ];
         $login = Auth::attempt($data);
-        
+
         // check if login failed
         if (!$login) {
             return response()->json([
@@ -63,7 +74,7 @@ class LoginController extends Controller
         // create token
         $user = Auth::user();
         $token = $user->createToken('accessToken')->plainTextToken;
-        
+
         Log::info("logged in user: {$user}");
 
         // return token and user info

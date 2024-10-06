@@ -17,6 +17,16 @@ class ItemController extends Controller
 {
     /**
      * Display list item with pagination
+     * 
+     * @queryParam page int The page number. Example: 1
+     * @queryParam per_page int The number of items per page. Example: 10
+     * @queryParam sort string The column to sort. Example: created_at
+     * @queryParam sort_dir string The direction to sort. Example: desc
+     * @queryParam category_id int The category id. Example: 1
+     * @queryParam search string Search by name. Example: spidol
+     * @queryParam merk string Search by merk. Example: sidu
+     * @queryParam type string Search by type. Example: gel
+     * @queryParam size string Search by size. Example: 0.5mm
      */
     public function index(Request $request)
     {

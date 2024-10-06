@@ -26,15 +26,105 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'The page number.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      per_page:
+        name: per_page
+        description: 'The number of items per page.'
+        required: false
+        example: 10
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      sort:
+        name: sort
+        description: 'The column to sort.'
+        required: false
+        example: created_at
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      sort_dir:
+        name: sort_dir
+        description: 'The direction to sort.'
+        required: false
+        example: desc
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      category_id:
+        name: category_id
+        description: 'The category id.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      search:
+        name: search
+        description: 'Search by name.'
+        required: false
+        example: spidol
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      merk:
+        name: merk
+        description: 'Search by merk.'
+        required: false
+        example: sidu
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      type:
+        name: type
+        description: 'Search by type.'
+        required: false
+        example: gel
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      size:
+        name: size
+        description: 'Search by size.'
+        required: false
+        example: 0.5mm
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanQueryParameters:
+      page: 1
+      per_page: 10
+      sort: created_at
+      sort_dir: desc
+      category_id: 1
+      search: spidol
+      merk: sidu
+      type: gel
+      size: 0.5mm
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"message":"success get all items","current_page":1,"data":[{"id":10,"code":"I-8711","image":"http:\/\/localhost:8000\/storage\/378f1c2e887da8f8462a7c57842dcf11.png","name":"ut","unit":"hic","merk":"pariatur","type":"dolore","size":"nostrum","stock":31,"min_stock":83,"price":9978,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":11,"code":"I-5917","image":"http:\/\/localhost:8000\/storage\/2f88312bb79fd02e94aed0bf9047e744.png","name":"reiciendis","unit":"dolores","merk":"et","type":"fuga","size":"voluptatem","stock":91,"min_stock":37,"price":6476,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":12,"code":"I-6864","image":"http:\/\/localhost:8000\/storage\/61fae849913284a2da6f8644309283a1.png","name":"inventore","unit":"sit","merk":"unde","type":"distinctio","size":"natus","stock":8,"min_stock":91,"price":6868,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":13,"code":"I-8855","image":"http:\/\/localhost:8000\/storage\/b7061d39528243a670c7efa619d998cf.png","name":"non","unit":"facere","merk":"corrupti","type":"aut","size":"ducimus","stock":38,"min_stock":19,"price":4278,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":14,"code":"I-3662","image":"http:\/\/localhost:8000\/storage\/039ffb25395b5a2ff137a447058526df.png","name":"et","unit":"ipsam","merk":"perspiciatis","type":"id","size":"beatae","stock":100,"min_stock":45,"price":2957,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":15,"code":"I-8528","image":"http:\/\/localhost:8000\/storage\/73a5bcbe9898a47f6c692aecca919295.png","name":"sint","unit":"repudiandae","merk":"iusto","type":"impedit","size":"qui","stock":57,"min_stock":92,"price":5548,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":6,"code":"I-3553","image":"http:\/\/localhost:8000\/storage\/9d72edadc4148c87dbb8f3623a8af711.png","name":"quo","unit":"in","merk":"commodi","type":"sunt","size":"inventore","stock":37,"min_stock":18,"price":8859,"category_id":1,"created_at":"2024-10-06T04:04:55.000000Z","updated_at":"2024-10-06T04:04:55.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":7,"code":"I-5799","image":"http:\/\/localhost:8000\/storage\/e4bd7eb99d7fb460659a5499bec4f35d.png","name":"et","unit":"sed","merk":"vero","type":"voluptatibus","size":"repellendus","stock":99,"min_stock":19,"price":6776,"category_id":1,"created_at":"2024-10-06T04:04:55.000000Z","updated_at":"2024-10-06T04:04:55.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":8,"code":"I-1611","image":"http:\/\/localhost:8000\/storage\/e13c9d72938f2a5094e1f1a995d25fa4.png","name":"maiores","unit":"praesentium","merk":"natus","type":"quam","size":"ipsam","stock":98,"min_stock":5,"price":1732,"category_id":1,"created_at":"2024-10-06T04:04:55.000000Z","updated_at":"2024-10-06T04:04:55.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":9,"code":"I-6083","image":"http:\/\/localhost:8000\/storage\/d1092ad92edec60bfc722760daf46c92.png","name":"eveniet","unit":"voluptas","merk":"minima","type":"magni","size":"non","stock":65,"min_stock":36,"price":8696,"category_id":1,"created_at":"2024-10-06T04:04:55.000000Z","updated_at":"2024-10-06T04:04:55.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}}],"first_page_url":"http:\/\/localhost:8000\/item?page=1","from":1,"last_page":2,"last_page_url":"http:\/\/localhost:8000\/item?page=2","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/item?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/item?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/item?page=2","label":"pagination.next","active":false}],"next_page_url":"http:\/\/localhost:8000\/item?page=2","path":"http:\/\/localhost:8000\/item","per_page":10,"prev_page_url":null,"to":10,"total":15}'
+        content: '{"message":"success get all items","current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/item?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/item?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/item?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/item","per_page":10,"prev_page_url":null,"to":null,"total":0}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -189,7 +279,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success create item","data":{"code":"tjqotbhpzwonwlzospqcs","image":"images\/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg","name":"tjqotbhpzwonwlzospqcs","merk":"nssrciatkmatldznkaapj","type":"ptdhyldmarwuvlvyfcejz","size":"olbxnqyvzmcgyfpncfyst","unit":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"category_id":1,"price":6,"updated_at":"2024-10-06T06:12:10.000000Z","created_at":"2024-10-06T06:12:10.000000Z","id":46}}'
+        content: '{"message":"success create item","data":{"code":"tjqotbhpzwonwlzospqcs","image":"images\/2811157af59f66a63fa587edd5147bd78ab49f8369fc1e8aa58ce1a106a0cd50.jpg","name":"tjqotbhpzwonwlzospqcs","merk":"nssrciatkmatldznkaapj","type":"ptdhyldmarwuvlvyfcejz","size":"olbxnqyvzmcgyfpncfyst","unit":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"category_id":1,"price":6,"updated_at":"2024-10-06T07:06:50.000000Z","created_at":"2024-10-06T07:06:50.000000Z","id":55}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -410,7 +500,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success update item","data":{"id":1,"code":"tjqotbhpzwonwlzospqcs","image":"images\/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg","name":"nssrciatkmatldznkaapj","unit":"sewlxtdfjxskykaapbpdx","merk":"ptdhyldmarwuvlvyfcejz","type":"olbxnqyvzmcgyfpncfyst","size":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"price":6,"category_id":1,"created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T06:12:10.000000Z"}}'
+        content: '{"message":"success update item","data":{"id":1,"code":"tjqotbhpzwonwlzospqcs","image":"images\/2811157af59f66a63fa587edd5147bd78ab49f8369fc1e8aa58ce1a106a0cd50.jpg","name":"nssrciatkmatldznkaapj","unit":"sewlxtdfjxskykaapbpdx","merk":"ptdhyldmarwuvlvyfcejz","type":"olbxnqyvzmcgyfpncfyst","size":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"price":6,"category_id":1,"created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T07:06:50.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

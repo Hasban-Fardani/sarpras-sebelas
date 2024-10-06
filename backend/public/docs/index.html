@@ -468,12 +468,12 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/auth/login" \
+    "http://localhost:8000/auth/login?by=nip" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"password\": \"password123\",
-    \"id\": \"2121021210\"
+    \"password\": \"_y0urStrongPW#\",
+    \"nip\": \"197806311574231883\"
 }"
 </code></pre></div>
 
@@ -483,14 +483,20 @@ You can switch the language used with the tabs at the top right (or from the nav
     "http://localhost:8000/auth/login"
 );
 
+const params = {
+    "by": "nip",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "password": "password123",
-    "id": "2121021210"
+    "password": "_y0urStrongPW#",
+    "nip": "197806311574231883"
 };
 
 fetch(url, {
@@ -503,24 +509,23 @@ fetch(url, {
 
 <span id="example-responses-POSTauth-login">
             <blockquote>
-            <p>Example response (412):</p>
+            <p>Example response (200, success):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-vary: Origin
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;invalid fields&quot;,
-    &quot;errors&quot;: {
-        &quot;nip&quot;: [
-            &quot;validation.required&quot;
-        ]
-    }
+    &quot;message&quot;: &quot;login success&quot;,
+    &quot;token&quot;: &quot;100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w&quot;,
+    &quot;user&quot;: &quot;admin&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, incorrect credentials):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+   &quot;message&quot;: &quot;wrong username or password&quot;,
 }</code>
  </pre>
     </span>
@@ -593,28 +598,40 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>by</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="by"                data-endpoint="POSTauth-login"
+               value="nip"
+               data-component="query">
+    <br>
+<p>string. nip, username, email. default nip. Example: <code>nip</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
+<small>required</small>&nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTauth-login"
-               value="password123"
+               value="_y0urStrongPW#"
                data-component="body">
     <br>
-<p>Example: <code>password123</code></p>
+<p>string. Example: <code>_y0urStrongPW#</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
+            <b style="line-height: 2;"><code>nip</code></b>&nbsp;&nbsp;
+<small>required</small>&nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTauth-login"
-               value="2121021210"
+                              name="nip"                data-endpoint="POSTauth-login"
+               value="197806311574231883"
                data-component="body">
     <br>
-<p>Example: <code>2121021210</code></p>
+<p>string. Example: <code>197806311574231883</code></p>
         </div>
         </form>
 
@@ -658,19 +675,17 @@ fetch(url, {
 
 <span id="example-responses-GETauth-user">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-vary: Origin
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;App\\Models\\User::createToken(): Argument #1 ($name) must be of type string, null given, called in /home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Controllers/Auth/LoginCheckController.php on line 21&quot;
+    &quot;token&quot;: &quot;100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w&quot;,
+    &quot;user&quot;: {
+        &quot;username&quot;: &quot;admin&quot;,
+        &quot;nip&quot;: &quot;197832411574231883&quot;,
+        &quot;role&quot;: &quot;admin&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -1140,9 +1155,9 @@ vary: Origin
     &quot;data&quot;: {
         &quot;name&quot;: &quot;tjq-otb_h&quot;,
         &quot;code&quot;: &quot;consequatur&quot;,
-        &quot;updated_at&quot;: &quot;2024-10-06T06:12:10.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2024-10-06T06:12:10.000000Z&quot;,
-        &quot;id&quot;: 32
+        &quot;updated_at&quot;: &quot;2024-10-06T07:06:50.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2024-10-06T07:06:50.000000Z&quot;,
+        &quot;id&quot;: 41
     }
 }</code>
  </pre>
@@ -1476,7 +1491,7 @@ vary: Origin
         &quot;code&quot;: &quot;ATK&quot;,
         &quot;name&quot;: &quot;consequatur&quot;,
         &quot;created_at&quot;: &quot;2024-10-06T04:04:44.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2024-10-06T06:12:10.000000Z&quot;
+        &quot;updated_at&quot;: &quot;2024-10-06T07:06:50.000000Z&quot;
     }
 }</code>
  </pre>
@@ -1770,7 +1785,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/item" \
+    --get "http://localhost:8000/item?page=1&amp;per_page=10&amp;sort=created_at&amp;sort_dir=desc&amp;category_id=1&amp;search=spidol&amp;merk=sidu&amp;type=gel&amp;size=0.5mm" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1780,6 +1795,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-javascript">const url = new URL(
     "http://localhost:8000/item"
 );
+
+const params = {
+    "page": "1",
+    "per_page": "10",
+    "sort": "created_at",
+    "sort_dir": "desc",
+    "category_id": "1",
+    "search": "spidol",
+    "merk": "sidu",
+    "type": "gel",
+    "size": "0.5mm",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
     "Authorization": "Bearer {YOUR_AUTH_KEY}",
@@ -1810,212 +1839,11 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;message&quot;: &quot;success get all items&quot;,
     &quot;current_page&quot;: 1,
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 10,
-            &quot;code&quot;: &quot;I-8711&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/378f1c2e887da8f8462a7c57842dcf11.png&quot;,
-            &quot;name&quot;: &quot;ut&quot;,
-            &quot;unit&quot;: &quot;hic&quot;,
-            &quot;merk&quot;: &quot;pariatur&quot;,
-            &quot;type&quot;: &quot;dolore&quot;,
-            &quot;size&quot;: &quot;nostrum&quot;,
-            &quot;stock&quot;: 31,
-            &quot;min_stock&quot;: 83,
-            &quot;price&quot;: 9978,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 11,
-            &quot;code&quot;: &quot;I-5917&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/2f88312bb79fd02e94aed0bf9047e744.png&quot;,
-            &quot;name&quot;: &quot;reiciendis&quot;,
-            &quot;unit&quot;: &quot;dolores&quot;,
-            &quot;merk&quot;: &quot;et&quot;,
-            &quot;type&quot;: &quot;fuga&quot;,
-            &quot;size&quot;: &quot;voluptatem&quot;,
-            &quot;stock&quot;: 91,
-            &quot;min_stock&quot;: 37,
-            &quot;price&quot;: 6476,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 12,
-            &quot;code&quot;: &quot;I-6864&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/61fae849913284a2da6f8644309283a1.png&quot;,
-            &quot;name&quot;: &quot;inventore&quot;,
-            &quot;unit&quot;: &quot;sit&quot;,
-            &quot;merk&quot;: &quot;unde&quot;,
-            &quot;type&quot;: &quot;distinctio&quot;,
-            &quot;size&quot;: &quot;natus&quot;,
-            &quot;stock&quot;: 8,
-            &quot;min_stock&quot;: 91,
-            &quot;price&quot;: 6868,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 13,
-            &quot;code&quot;: &quot;I-8855&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/b7061d39528243a670c7efa619d998cf.png&quot;,
-            &quot;name&quot;: &quot;non&quot;,
-            &quot;unit&quot;: &quot;facere&quot;,
-            &quot;merk&quot;: &quot;corrupti&quot;,
-            &quot;type&quot;: &quot;aut&quot;,
-            &quot;size&quot;: &quot;ducimus&quot;,
-            &quot;stock&quot;: 38,
-            &quot;min_stock&quot;: 19,
-            &quot;price&quot;: 4278,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 14,
-            &quot;code&quot;: &quot;I-3662&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/039ffb25395b5a2ff137a447058526df.png&quot;,
-            &quot;name&quot;: &quot;et&quot;,
-            &quot;unit&quot;: &quot;ipsam&quot;,
-            &quot;merk&quot;: &quot;perspiciatis&quot;,
-            &quot;type&quot;: &quot;id&quot;,
-            &quot;size&quot;: &quot;beatae&quot;,
-            &quot;stock&quot;: 100,
-            &quot;min_stock&quot;: 45,
-            &quot;price&quot;: 2957,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 15,
-            &quot;code&quot;: &quot;I-8528&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/73a5bcbe9898a47f6c692aecca919295.png&quot;,
-            &quot;name&quot;: &quot;sint&quot;,
-            &quot;unit&quot;: &quot;repudiandae&quot;,
-            &quot;merk&quot;: &quot;iusto&quot;,
-            &quot;type&quot;: &quot;impedit&quot;,
-            &quot;size&quot;: &quot;qui&quot;,
-            &quot;stock&quot;: 57,
-            &quot;min_stock&quot;: 92,
-            &quot;price&quot;: 5548,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 6,
-            &quot;code&quot;: &quot;I-3553&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/9d72edadc4148c87dbb8f3623a8af711.png&quot;,
-            &quot;name&quot;: &quot;quo&quot;,
-            &quot;unit&quot;: &quot;in&quot;,
-            &quot;merk&quot;: &quot;commodi&quot;,
-            &quot;type&quot;: &quot;sunt&quot;,
-            &quot;size&quot;: &quot;inventore&quot;,
-            &quot;stock&quot;: 37,
-            &quot;min_stock&quot;: 18,
-            &quot;price&quot;: 8859,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:55.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:55.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;code&quot;: &quot;I-5799&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/e4bd7eb99d7fb460659a5499bec4f35d.png&quot;,
-            &quot;name&quot;: &quot;et&quot;,
-            &quot;unit&quot;: &quot;sed&quot;,
-            &quot;merk&quot;: &quot;vero&quot;,
-            &quot;type&quot;: &quot;voluptatibus&quot;,
-            &quot;size&quot;: &quot;repellendus&quot;,
-            &quot;stock&quot;: 99,
-            &quot;min_stock&quot;: 19,
-            &quot;price&quot;: 6776,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:55.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:55.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 8,
-            &quot;code&quot;: &quot;I-1611&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/e13c9d72938f2a5094e1f1a995d25fa4.png&quot;,
-            &quot;name&quot;: &quot;maiores&quot;,
-            &quot;unit&quot;: &quot;praesentium&quot;,
-            &quot;merk&quot;: &quot;natus&quot;,
-            &quot;type&quot;: &quot;quam&quot;,
-            &quot;size&quot;: &quot;ipsam&quot;,
-            &quot;stock&quot;: 98,
-            &quot;min_stock&quot;: 5,
-            &quot;price&quot;: 1732,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:55.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:55.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 9,
-            &quot;code&quot;: &quot;I-6083&quot;,
-            &quot;image&quot;: &quot;http://localhost:8000/storage/d1092ad92edec60bfc722760daf46c92.png&quot;,
-            &quot;name&quot;: &quot;eveniet&quot;,
-            &quot;unit&quot;: &quot;voluptas&quot;,
-            &quot;merk&quot;: &quot;minima&quot;,
-            &quot;type&quot;: &quot;magni&quot;,
-            &quot;size&quot;: &quot;non&quot;,
-            &quot;stock&quot;: 65,
-            &quot;min_stock&quot;: 36,
-            &quot;price&quot;: 8696,
-            &quot;category_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2024-10-06T04:04:55.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T04:04:55.000000Z&quot;,
-            &quot;category&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Alat Tulis Kantor&quot;
-            }
-        }
-    ],
+    &quot;data&quot;: [],
     &quot;first_page_url&quot;: &quot;http://localhost:8000/item?page=1&quot;,
-    &quot;from&quot;: 1,
-    &quot;last_page&quot;: 2,
-    &quot;last_page_url&quot;: &quot;http://localhost:8000/item?page=2&quot;,
+    &quot;from&quot;: null,
+    &quot;last_page&quot;: 1,
+    &quot;last_page_url&quot;: &quot;http://localhost:8000/item?page=1&quot;,
     &quot;links&quot;: [
         {
             &quot;url&quot;: null,
@@ -2028,22 +1856,17 @@ vary: Origin
             &quot;active&quot;: true
         },
         {
-            &quot;url&quot;: &quot;http://localhost:8000/item?page=2&quot;,
-            &quot;label&quot;: &quot;2&quot;,
-            &quot;active&quot;: false
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost:8000/item?page=2&quot;,
+            &quot;url&quot;: null,
             &quot;label&quot;: &quot;pagination.next&quot;,
             &quot;active&quot;: false
         }
     ],
-    &quot;next_page_url&quot;: &quot;http://localhost:8000/item?page=2&quot;,
+    &quot;next_page_url&quot;: null,
     &quot;path&quot;: &quot;http://localhost:8000/item&quot;,
     &quot;per_page&quot;: 10,
     &quot;prev_page_url&quot;: null,
-    &quot;to&quot;: 10,
-    &quot;total&quot;: 15
+    &quot;to&quot;: null,
+    &quot;total&quot;: 0
 }</code>
  </pre>
     </span>
@@ -2127,7 +1950,107 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETitem"
+               value="1"
+               data-component="query">
+    <br>
+<p>The page number. Example: <code>1</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETitem"
+               value="10"
+               data-component="query">
+    <br>
+<p>The number of items per page. Example: <code>10</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>sort</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="sort"                data-endpoint="GETitem"
+               value="created_at"
+               data-component="query">
+    <br>
+<p>The column to sort. Example: <code>created_at</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>sort_dir</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="sort_dir"                data-endpoint="GETitem"
+               value="desc"
+               data-component="query">
+    <br>
+<p>The direction to sort. Example: <code>desc</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>category_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="category_id"                data-endpoint="GETitem"
+               value="1"
+               data-component="query">
+    <br>
+<p>The category id. Example: <code>1</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>search</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="search"                data-endpoint="GETitem"
+               value="spidol"
+               data-component="query">
+    <br>
+<p>Search by name. Example: <code>spidol</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>merk</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="merk"                data-endpoint="GETitem"
+               value="sidu"
+               data-component="query">
+    <br>
+<p>Search by merk. Example: <code>sidu</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>type</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="type"                data-endpoint="GETitem"
+               value="gel"
+               data-component="query">
+    <br>
+<p>Search by type. Example: <code>gel</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>size</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="size"                data-endpoint="GETitem"
+               value="0.5mm"
+               data-component="query">
+    <br>
+<p>Search by size. Example: <code>0.5mm</code></p>
+            </div>
+                </form>
 
                     <h2 id="2-item-management-POSTitem">Store a newly item in storage.</h2>
 
@@ -2157,7 +2080,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "min_stock=6"\
     --form "category_id=1"\
     --form "price=6"\
-    --form "image=@/tmp/phpHWnIl3" </code></pre></div>
+    --form "image=@/tmp/phpmWNZNq" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2209,7 +2132,7 @@ vary: Origin
     &quot;message&quot;: &quot;success create item&quot;,
     &quot;data&quot;: {
         &quot;code&quot;: &quot;tjqotbhpzwonwlzospqcs&quot;,
-        &quot;image&quot;: &quot;images/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg&quot;,
+        &quot;image&quot;: &quot;images/2811157af59f66a63fa587edd5147bd78ab49f8369fc1e8aa58ce1a106a0cd50.jpg&quot;,
         &quot;name&quot;: &quot;tjqotbhpzwonwlzospqcs&quot;,
         &quot;merk&quot;: &quot;nssrciatkmatldznkaapj&quot;,
         &quot;type&quot;: &quot;ptdhyldmarwuvlvyfcejz&quot;,
@@ -2219,9 +2142,9 @@ vary: Origin
         &quot;min_stock&quot;: 6,
         &quot;category_id&quot;: 1,
         &quot;price&quot;: 6,
-        &quot;updated_at&quot;: &quot;2024-10-06T06:12:10.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2024-10-06T06:12:10.000000Z&quot;,
-        &quot;id&quot;: 46
+        &quot;updated_at&quot;: &quot;2024-10-06T07:06:50.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2024-10-06T07:06:50.000000Z&quot;,
+        &quot;id&quot;: 55
     }
 }</code>
  </pre>
@@ -2327,7 +2250,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Example: <code>/tmp/phpHWnIl3</code></p>
+<p>Must be a file. Example: <code>/tmp/phpmWNZNq</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -2624,7 +2547,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "min_stock=6"\
     --form "category_id=1"\
     --form "price=6"\
-    --form "image=@/tmp/phpETskm0" </code></pre></div>
+    --form "image=@/tmp/phpTCqfMx" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2677,7 +2600,7 @@ vary: Origin
     &quot;data&quot;: {
         &quot;id&quot;: 1,
         &quot;code&quot;: &quot;tjqotbhpzwonwlzospqcs&quot;,
-        &quot;image&quot;: &quot;images/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg&quot;,
+        &quot;image&quot;: &quot;images/2811157af59f66a63fa587edd5147bd78ab49f8369fc1e8aa58ce1a106a0cd50.jpg&quot;,
         &quot;name&quot;: &quot;nssrciatkmatldznkaapj&quot;,
         &quot;unit&quot;: &quot;sewlxtdfjxskykaapbpdx&quot;,
         &quot;merk&quot;: &quot;ptdhyldmarwuvlvyfcejz&quot;,
@@ -2688,7 +2611,7 @@ vary: Origin
         &quot;price&quot;: 6,
         &quot;category_id&quot;: 1,
         &quot;created_at&quot;: &quot;2024-10-06T04:04:44.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2024-10-06T06:12:10.000000Z&quot;
+        &quot;updated_at&quot;: &quot;2024-10-06T07:06:50.000000Z&quot;
     }
 }</code>
  </pre>
@@ -2799,7 +2722,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Example: <code>/tmp/phpETskm0</code></p>
+<p>Must be a file. Example: <code>/tmp/phpTCqfMx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>code</code></b>&nbsp;&nbsp;
@@ -3495,12 +3418,12 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;message&quot;: &quot;success create incoming item and updated stock&quot;,
     &quot;data&quot;: {
-        &quot;code&quot;: &quot;IN-0ffcf6a&quot;,
+        &quot;code&quot;: &quot;IN-c8ca9ba&quot;,
         &quot;employee_id&quot;: 3,
         &quot;supplier_id&quot;: 6,
-        &quot;updated_at&quot;: &quot;2024-10-06T06:12:11.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2024-10-06T06:12:11.000000Z&quot;,
-        &quot;id&quot;: 32
+        &quot;updated_at&quot;: &quot;2024-10-06T07:06:50.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2024-10-06T07:06:50.000000Z&quot;,
+        &quot;id&quot;: 41
     }
 }</code>
  </pre>
@@ -4452,7 +4375,7 @@ vary: Origin
             &quot;item_id&quot;: 6,
             &quot;qty&quot;: 97,
             &quot;created_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-10-06T06:12:11.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2024-10-06T07:06:51.000000Z&quot;
         },
         {
             &quot;id&quot;: 26,
@@ -4725,7 +4648,7 @@ vary: Origin
         &quot;item_id&quot;: 6,
         &quot;qty&quot;: 6,
         &quot;created_at&quot;: &quot;2024-10-06T04:04:56.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2024-10-06T06:12:11.000000Z&quot;
+        &quot;updated_at&quot;: &quot;2024-10-06T07:06:51.000000Z&quot;
     }
 }</code>
  </pre>
@@ -5544,7 +5467,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;code&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 06:12:11, 2024-10-06 06:12:11))&quot;
+    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;code&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 07:06:51, 2024-10-06 07:06:51))&quot;
 }</code>
  </pre>
     </span>
@@ -7051,7 +6974,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;code&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 06:12:11, 2024-10-06 06:12:11))&quot;
+    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;code&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 07:06:51, 2024-10-06 07:06:51))&quot;
 }</code>
  </pre>
     </span>
@@ -7731,7 +7654,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1366 Incorrect integer value: &#039;consequatur&#039; for column &#039;item_id&#039; at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 06:12:11, 2024-10-06 06:12:11))&quot;
+    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1366 Incorrect integer value: &#039;consequatur&#039; for column &#039;item_id&#039; at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 07:06:51, 2024-10-06 07:06:51))&quot;
 }</code>
  </pre>
     </span>
@@ -9211,7 +9134,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1366 Incorrect integer value: &#039;consequatur&#039; for column &#039;item_id&#039; at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))&quot;
+    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1366 Incorrect integer value: &#039;consequatur&#039; for column &#039;item_id&#039; at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 07:06:51, 2024-10-06 07:06:51))&quot;
 }</code>
  </pre>
     </span>
@@ -9774,7 +9697,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;nip&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$b0rlrxdDjWeuMZVeYvAcEOhISjECnohxtCaP39Y61k0/eMi9uGaJu, unit, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))&quot;
+    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;nip&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$NxwqK7GIGPXXM6IXvSKGRuwxQD/bkWkBwp7VYilN9O.MsVhzjUiFy, unit, consequatur, 2024-10-06 07:06:51, 2024-10-06 07:06:51))&quot;
 }</code>
  </pre>
     </span>
@@ -10350,7 +10273,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;nip&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 06:12:11, 2024-10-06 06:12:11))&quot;
+    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;nip&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 07:06:51, 2024-10-06 07:06:51))&quot;
 }</code>
  </pre>
     </span>
@@ -10732,7 +10655,7 @@ vary: Origin
         &quot;email&quot;: &quot;joy.schultz@example.org&quot;,
         &quot;email_verified_at&quot;: null,
         &quot;created_at&quot;: null,
-        &quot;updated_at&quot;: &quot;2024-10-06T06:12:11.000000Z&quot;
+        &quot;updated_at&quot;: &quot;2024-10-06T07:06:51.000000Z&quot;
     }
 }</code>
  </pre>
@@ -11697,7 +11620,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"username\": \"ptdhyldmarwuvlvyfcejz\",
     \"email\": \"maude81@example.net\",
     \"password\": \"#L*qCceF0t7nA\",
-    \"role\": \"pengawas\"
+    \"role\": \"unit\"
 }"
 </code></pre></div>
 
@@ -11719,7 +11642,7 @@ let body = {
     "username": "ptdhyldmarwuvlvyfcejz",
     "email": "maude81@example.net",
     "password": "#L*qCceF0t7nA",
-    "role": "pengawas"
+    "role": "unit"
 };
 
 fetch(url, {
@@ -11906,10 +11829,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="role"                data-endpoint="PUTadmin-users--username-"
-               value="pengawas"
+               value="unit"
                data-component="body">
     <br>
-<p>Example: <code>pengawas</code></p>
+<p>Example: <code>unit</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>admin</code></li> <li><code>unit</code></li> <li><code>pengawas</code></li></ul>
         </div>
@@ -12392,7 +12315,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;code&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 06:12:11, 2024-10-06 06:12:11))&quot;
+    &quot;message&quot;: &quot;SQLSTATE[HY000]: General error: 1364 Field &#039;code&#039; doesn&#039;t have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 07:06:51, 2024-10-06 07:06:51))&quot;
 }</code>
  </pre>
     </span>
@@ -13805,7 +13728,7 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 vary: Origin
-set-cookie: XSRF-TOKEN=eyJpdiI6IjJSK01nMWVUSDFucmpleE51VEMySmc9PSIsInZhbHVlIjoiQUdEb1pRUmh6aTlTTXRSNkRvOFY4Qi83ZW1sWGV6dy9DRktySlRpOHJmVEhyZkloQk9UOVNSdUtTaXlKUFBBT0VyeGR6aTQrbHBSSis2MUJrQU4zcVA5dk1HVnF4aldMSEgzcGRDZDU1WThKdnovL0dNWkF1NnorV3I4QVprdnYiLCJtYWMiOiI5NWQyY2ZhY2Q5NGY2YTUyNDNiYTQwNDQxNTI5MGE2NGFhZmUwNmY2MzcxMDc5ZmYzMjM4YTFhNmUxY2U0N2Q5IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InBwK2lzaitwTzZ6bldTdjZsZ1ZwQUE9PSIsInZhbHVlIjoiTDdOZkVhU3MrT1gxM204V3lvSXVYMVNFbDdMamhLZ2U4QkdmUUZtQVZGbWZic1c0eDRicUNGQW1SWkc3ZUVoQzY3VTIvd0NuYUFxTG52SnluQXZ2VHY1ZGNndlpRb081bjZpcVlvb1oyQm1oSHdObGdSN1pxY3dic1QzanhKM3UiLCJtYWMiOiJlMjY0ZjQ2YjRhZDM2NWFhNDNmYzA5YjMyZjU5MTcwNzY0MTc2MTMyMzVkYjk5Zjg3M2M4NmI0YjI5Mjk2ZWI1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; PdvthjZVsd2yv9SLo0ojuzQYYeJAnXB7QbDmdL5M=eyJpdiI6Ijh6UTluWXp6c0U1UmRIQzZMaXduYlE9PSIsInZhbHVlIjoieWdaeHJaQU1FQzRLdVZreXlFaGd3Z1ROT3Y4QnlBZzdjSFZqK25aNEU4aWI5d1l0eUkvVDVjYStVRlRMWXZId1dhczdqb1p2Zlo4SjNZcDZuUWowdEJUOXllQytHSFlFR0tiVmhiajRUdmd6ODRWNTNPUVZPc2Nvb3hGUlVtc3NjWTdMVHlqZUZOT0tkQno5Tlo2elpoM3VrVWlGL3E3V0xxVG5KYWd3OG9iQ1d1andaNTJQb2g2VkkwenA3QjVSUHYyd3lwUFA1STRHWVlUdndETGZWTHF3OWNIditoNHEyZFNwWk5QQkZ0UTFSeE1lWVhVNmpRbFRDU1pJZnpZekc4UkdLcFhlS3IrNFhLK1RQd2s2RUpuRjZiN0sxMWVzU1ZDcHJxMVFLbmhoSGNpaWhNelVQWmFybVJ4SmRoMWl0VDdIMS9jSVBPOVhmOE5LVmRFQXNRanordHRRbHZSQU1lekdPYWFtZ1UwNys3RGZRUDZwRExoVlRoeDM1bW9ZUFZvZHJEcHl5c1hCcFRSU29MNlFMdz09IiwibWFjIjoiYjU2Mzc0M2ZmZWJlMzFlMWQ1MGZlNTcwZDY4MmI1MTFmZjRjODgxYzAxMzU1MmRhZDE4NTlmMmQ4NjU5YWJkNSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax
+set-cookie: XSRF-TOKEN=eyJpdiI6IklHVFhneGZodG9raE5CMkZvQ3ZmN2c9PSIsInZhbHVlIjoiVzZneEhjSGFmTHpMTWFVWjY4MFluV2g3RGVhcDF5ajVKbGJHeHNyWEU0cFFpYVBiMVdVMWNaN1JFWTgzMEpIak9KKzRHd09rc1kxdVE4c2FxRk5hL3pScXl4NHQ4S2FtcjFvb0hWc0lmY1FjRzZpMndEVmJTY2U0Qk1USmRxckgiLCJtYWMiOiIwNWU5OTcyY2YyNmFhZTNkZjUyMzE1YTI3YTg1ZjJjMzEwZDJjYmYyYmIwOTY5MGQ3YTAxZmJiY2Y4Y2MzYjdkIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IkVEVW5RWjM4S2tzcHRNR1NpeTdOb1E9PSIsInZhbHVlIjoiRVRwVmw3UkltZDZGQWQzVDYwMVFCS2lwSGpOUVFhUnJjc1dIVEhOZFptR1lLVko0UkFRZTRBR0svcTZ0UllyT3M4K3pYK0xkZThDRWkrRDJJUmtJRFpIUGEzOU9JOHhRTWZpWTc3Q1gxK0l2K0dyV1lUM2JYaHYxMGJYV2puM2oiLCJtYWMiOiIxZWFlMWUyYjY4MWI1Zjg0ZTM5ZGFmMjIyYjU4Njk0NDEwNWQzMDAyYWI0MDVlYzY5NmJmMjFjYmI0YmJkZjJjIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; EX3TBnsH9rPyV1IlhzA4ZT0x8GgntIXrogs6bZgv=eyJpdiI6IncyQmNOM3hhZ1hEcklYQ3JraGJkbGc9PSIsInZhbHVlIjoiQVZKaEI0Sm9IU0VIeEEvUHY3KzdDTXV5aHBCNWJLN2YvZm1sbDVyVGVnbzd1ODRKWXJoUDlWSElGZ05hTC9ucHh0SkYzMjlPRkJXN2hWQk5YNFo1K2F4V3VCQXM4V2RwRkZDVm5VUll4M0M0ZVlaVFlxNHRPZmZJRzRqQ0cwL01lVzFpVnI1aUlJeHJiS1JNSFpORC8yWHB5WXdyWlkzNStMUGRUQ0tUdldKVXI2QmtLdmFpQ1pYWm4wWS9odGo5UTAxM0l5ZVdpcXZFNHo2N1Y3V0hvRDRkN25OUFRuZDJGS0pVVVpTbHBYZ1pPc2lrbVFCaHkwQ2x0bnZ5ejJqWnMyNFZETXptZ1lOalFYY01UZkhvNFNuS2M1bEFSQ3NHUk01R2lmeGpsNnozSXN1V01peG9USVpteTRjbWUyR0c5M0NoTE1wcTJxZ0JHRksrU2ZndEJaVDZKZ3gvV1FVQ3k0bWVhN3JPWC9BVGpXbGtQZFZoVU1tUG1sRjl3VTNoTzh4UU9ud3RnV3p0ZGhNbnZIdHl0UT09IiwibWFjIjoiYjUzNjcyOGQ3OWVhZDk3YzE5NjAyM2M4MmU0NTY1MWNjYmU0ZTYyNWNmNzgzY2I3NmM2MzdlZjRlYWEzMjU1MSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 09:06:50 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax
  </code></pre></details>         <pre>
 <code>Empty response</code>
  </pre>

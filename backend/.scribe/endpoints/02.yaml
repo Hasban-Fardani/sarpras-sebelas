@@ -21,40 +21,61 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      password:
-        name: password
-        description: ''
-        required: true
-        example: password123
+    queryParameters:
+      by:
+        name: by
+        description: 'string. nip, username, email. default nip.'
+        required: false
+        example: nip
         type: string
         enumValues: []
         exampleWasSpecified: true
         custom: []
-      id:
-        name: id
-        description: ''
-        required: true
-        example: '2121021210'
-        type: string
+    cleanQueryParameters:
+      by: nip
+    bodyParameters:
+      password:
+        name: password
+        description: string.
+        required: false
+        example: '_y0urStrongPW#'
+        type: required
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      nip:
+        name: nip
+        description: string.
+        required: false
+        example: '197806311574231883'
+        type: required
         enumValues: []
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      password: password123
-      id: '2121021210'
+      password: '_y0urStrongPW#'
+      nip: '197806311574231883'
     fileParameters: []
     responses:
       -
-        status: 412
-        content: '{"message":"invalid fields","errors":{"nip":["validation.required"]}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
+        status: 200
+        content: |-
+          {
+            "message": "login success",
+            "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
+            "user": "admin"
+          }
+        headers: []
+        description: success
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+             "message": "wrong username or password",
+          }
+        headers: []
+        description: 'incorrect credentials'
         custom: []
     responseFields: []
     auth: []
@@ -90,13 +111,18 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"App\\Models\\User::createToken(): Argument #1 ($name) must be of type string, null given, called in \/home\/hasban\/Code\/Github\/sarpras-sebelas\/backend\/app\/Http\/Controllers\/Auth\/LoginCheckController.php on line 21"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
+        status: 200
+        content: |-
+          {
+            "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
+            "user": {
+              "username": "admin",
+              "nip": "197832411574231883",
+              "role": "admin"
+            }
+          }
+        headers: []
+        description: ''
         custom: []
     responseFields: []
     auth:
