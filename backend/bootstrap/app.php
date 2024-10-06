@@ -26,7 +26,7 @@ return Application::configure(basePath: dirname(__DIR__))
         //     'verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,
         // ]);
 
-        $middleware->append(\App\Http\Middleware\ForceJsonRequestHeader::class);
+        $middleware->api(append: \App\Http\Middleware\ForceJsonRequestHeader::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (AuthenticationException $e, Request $request) {

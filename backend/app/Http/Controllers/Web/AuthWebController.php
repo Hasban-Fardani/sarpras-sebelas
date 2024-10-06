@@ -20,13 +20,14 @@ class AuthWebController extends Controller
 
         // if validation fails
         if ($validator->fails()) {
+            #dd('yahahah gagal');
             return redirect()->back()->withErrors($validator->errors())->withInput();
         }
 
         // dd(Hash::make($validator->validated()['password']), User::where('nip', $validator->validated()['nip'])->first());
         if (!Auth::attempt($validator->validated()))
         {
-            return redirect()->back()->withErrors(['message' => 'wrong username or password'])->withInput();
+            return redirect()->back()->with('errors', ['wrong username or password']);
         }
 
         return redirect()->route('telescope');
