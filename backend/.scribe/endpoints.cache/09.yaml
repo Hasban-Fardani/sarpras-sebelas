@@ -151,7 +151,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success create submission item","data":{"submission_session_id":3,"division_id":6,"code":"consequatur","note":"consequatur","status":"draf","updated_at":"2024-10-06T14:29:55.000000Z","created_at":"2024-10-06T14:29:55.000000Z","id":13}}'
+        content: '{"message":"success create submission item","data":{"submission_session_id":3,"division_id":6,"code":"consequatur","note":"consequatur","status":"draf","updated_at":"2024-10-06T14:50:08.000000Z","created_at":"2024-10-06T14:50:08.000000Z","id":14}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

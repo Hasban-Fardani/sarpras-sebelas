@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel Sarpras API Documentation",
-        "_postman_id": "75c36c5c-de3c-4620-bcfe-43c0c3a7f3c9",
+        "_postman_id": "e23cac6f-716e-4962-a05a-4382c0689792",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -241,7 +241,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T14:29:54.000000Z\",\"created_at\":\"2024-10-06T14:29:54.000000Z\",\"id\":13}}",
+                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\",\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"id\":14}}",
                             "name": ""
                         }
                     ]
@@ -350,7 +350,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T14:29:54.000000Z\"}}",
+                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -623,7 +623,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/29a245d554c8842b98f866527b304b7fed705fdd89328e78cf263b742ac2fcfb.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T14:29:54.000000Z\",\"created_at\":\"2024-10-06T14:29:54.000000Z\",\"id\":27}}",
+                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T14:50:07.000000Z\",\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"id\":28}}",
                             "name": ""
                         }
                     ]
@@ -803,7 +803,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/29a245d554c8842b98f866527b304b7fed705fdd89328e78cf263b742ac2fcfb.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T14:29:54.000000Z\"}}",
+                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -955,7 +955,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-8dd9142\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T14:29:54.000000Z\",\"created_at\":\"2024-10-06T14:29:54.000000Z\",\"id\":22}}",
+                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-c9b6ced\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T14:50:07.000000Z\",\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"id\":23}}",
                             "name": ""
                         }
                     ]
@@ -1176,7 +1176,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":124,\"incoming_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T14:29:54.000000Z\",\"updated_at\":\"2024-10-06T14:29:54.000000Z\"}]}",
+                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":126,\"incoming_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1238,7 +1238,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T14:29:54.000000Z\"}}",
+                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -1396,7 +1396,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add outgoing item and updated stock\",\"data\":{\"code\":\"consequatur\",\"operator_id\":1,\"division_id\":3,\"updated_at\":\"2024-10-06T14:29:55.000000Z\",\"created_at\":\"2024-10-06T14:29:55.000000Z\",\"id\":22}}",
+                            "body": "{\"message\":\"success add outgoing item and updated stock\",\"data\":{\"code\":\"consequatur\",\"operator_id\":1,\"division_id\":3,\"updated_at\":\"2024-10-06T14:50:07.000000Z\",\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"id\":23}}",
                             "name": ""
                         }
                     ]
@@ -1617,7 +1617,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add outgoing item detail\",\"data\":[{\"id\":15,\"outgoing_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T14:29:55.000000Z\",\"updated_at\":\"2024-10-06T14:29:55.000000Z\"}]}",
+                            "body": "{\"message\":\"success add outgoing item detail\",\"data\":[{\"id\":17,\"outgoing_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T14:50:08.000000Z\",\"updated_at\":\"2024-10-06T14:50:08.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1837,7 +1837,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create submission item\",\"data\":{\"submission_session_id\":3,\"division_id\":6,\"code\":\"consequatur\",\"note\":\"consequatur\",\"status\":\"draf\",\"updated_at\":\"2024-10-06T14:29:55.000000Z\",\"created_at\":\"2024-10-06T14:29:55.000000Z\",\"id\":13}}",
+                            "body": "{\"message\":\"success create submission item\",\"data\":{\"submission_session_id\":3,\"division_id\":6,\"code\":\"consequatur\",\"note\":\"consequatur\",\"status\":\"draf\",\"updated_at\":\"2024-10-06T14:50:08.000000Z\",\"created_at\":\"2024-10-06T14:50:08.000000Z\",\"id\":14}}",
                             "name": ""
                         }
                     ]
@@ -2058,7 +2058,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 14:29:55, 2024-10-06 14:29:55))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 14:50:08, 2024-10-06 14:50:08))\"}",
                             "name": ""
                         }
                     ]
@@ -2496,7 +2496,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:29:55, 2024-10-06 14:29:55))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:50:08, 2024-10-06 14:50:08))\"}",
                             "name": ""
                         }
                     ]
@@ -2679,7 +2679,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$t6aowwXgKY0IZA7OPCdpiO7zI0Fao.rfgdHiTjAVQVgbG6bjdqkAy, unit, consequatur, 2024-10-06 14:29:56, 2024-10-06 14:29:56))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$GCFYJe4VeuttjyU40BMQlOME.r\\\/NqMeODhkIOzw0jclKAOTnrgDNi, unit, consequatur, 2024-10-06 14:50:09, 2024-10-06 14:50:09))\"}",
                             "name": ""
                         }
                     ]
@@ -2825,7 +2825,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:29:56, 2024-10-06 14:29:56))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:50:09, 2024-10-06 14:50:09))\"}",
                             "name": ""
                         }
                     ]
@@ -2934,7 +2934,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T14:29:56.000000Z\"}}",
+                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T14:50:09.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -3347,7 +3347,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 14:29:55, 2024-10-06 14:29:55))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 14:50:08, 2024-10-06 14:50:08))\"}",
                             "name": ""
                         }
                     ]
@@ -3697,161 +3697,11 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IllMczN5bmpieHpEY0ZuMnEzcEhIdFE9PSIsInZhbHVlIjoieHc0NEl1eldRYTN2TVF1ZHRGNk5uT01hT1RTVFB3ZzU0QjhNeHl5TTBsODVaaTA2ZEl3MEZoM2RmOUQ5ZHVCTXArcVFmdjBPRlRBSGhFL2daUlorTm84cElFVXBRS2ZmQVVJSXd0ZEJqZEttSi81L3lkbTcySmttNmM5OUJiTW4iLCJtYWMiOiI4ZWNiYjgwODAwMjZjNDJjNmNhZGVkNWVkZGM1NDViMmM2NjYxMjZmMDhkZGYxY2Y3MWMxYmVkYjUyZTA3ODFjIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:29:54 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InJ5YXRkTU4zSEZaUHdneEZ2NEpMWmc9PSIsInZhbHVlIjoiYUlNT014QTl3WU9lRUdlckZKTE5oakIzT2M0eWVGbmZpSFdENTFTVUJvTlBPUTVnZGNhYkxRbVdrSzBjNkoyVStsVzZWWk54djcwZG1tK3pxM2pma0dqMC9ZSElvckRDL2JqYlQwcm9MVFk4R3lxTkhURkdUOS94dWlrZjFISWUiLCJtYWMiOiI2MzBlMzE3MjUxODk2MjdjNjVmZTVlZjdjNGE1MzVhNjAzY2Y0YTc0Mzk1Y2U0ZjY5MzZiMTM3MzRiYzM4NzhlIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:29:54 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; XHGH8dG9q2A7OHLPkGXyPcAIm4OKEhDFllOzFDsA=eyJpdiI6IlZvYitjTGJ1TDl0WmgydGZmWE1SbXc9PSIsInZhbHVlIjoiYjhCQTFYRjVXRG9OMktDM1dTZCtNUURmYVRUbmJnUWZqbnNxSFNnYUt2UUFESnVYbjZzbnl0L01mWTZJMndVbDZnOFIvOFNMK29Vb010aGRydm5vdWZ0UjBFQzJqMC9Wd081bS9wQWttWkRnQmwwSUdPbkZ6cStCRHFCTkJPNndXSSsydDRPeUtaMHRWQkc5MFdOeVZzdWlvbWlPelZrUlROZlhsMFpDY3IvdDdWR0dLWHZlVEkxRG1Za2kvNkMxVWxWSVVqaTN1enV5OUsyWXlRSndTRXNTZDVHZ3VkV1YrNEVKUXduVmhBTll5SVYzbU4xTDlDaFFtL3dTaWVyZkx0Zmk0cVppNjUzQXJnc29TVFdHTDl5T2ZkcDVhSklJcEhmclA3ckpNbkJhcGVsRmNpeUgxZ0MzRXVaK05QZXFiUGNXZHBUT2NQeDZIdFpEOWtISUVDdHBBTGNUdkFlSzR3dWcxSlZ2SVIzVFFpMVVBVXpBQ1EvdjA1MWlnUG11S2djOFZQSElBdWE3djNiN0tBWm9Tdz09IiwibWFjIjoiMTVkOTkxYTA4MTA5MDllMDVlNDdkMjk1YzNkZDg5YTlmYjc0NzYzMzA2OTEyZmRmYzRkMTljOTIzYjBmZWE4ZCIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:54 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IlEreWQrcVk5RjJ5b3dXbkh4NFlNL0E9PSIsInZhbHVlIjoiaUoyeXlCMkhlR1UxcUxGOEMrMkhrN0lIREtXS3dDRjcrcUN5Ny9GOU80Q05JaER3VUVJdFB5YUJ2cTVMRWh1M0ZCODJJOFpsMmxpVUJJZ25KTjBreWhJS1lYVXUvK1dlNDIrZnQ4bTNWdG45V214bWV4djRSSE5uZU1YYUQrU1MiLCJtYWMiOiI4ZWViNGJhYmQzN2U4Yjc4NDE1MThkMTk2YWY1Nzg5MDFkZTE5NjUyMGNiOTM5ZjI3ZmJhNjI2Zjk2ZTc4YTkwIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:50:07 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IlI4OUNPN3Vuc0lHZlVaRHo5WTBOd0E9PSIsInZhbHVlIjoic3FFU25heUFzNTFrdTZ2dElla3AxU05ZeFMxdTZhQUwyZmExOXU1VlVzUitBTHQ1ampzWHlWM0MzOVFlZXF6RXBxUlNKSmdtV1UrRVE0bzdPaHpPZ2hlWWhWTEVjRWZvbXFvOUg5VjYyWlRaNDRPcVVWaTVlZ3dNS0dHNGNKOE4iLCJtYWMiOiJhNGYyOGE1Y2NkMTAxZDQyMzE2ZjZlMWE0ZDMwOTA3YTdiMjZlNWQ1YzU4MDBjZTU4MmJjOTNlOTM3ZTc1NzkyIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:50:07 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; 41JyewJF3dstRlYegO82ZUIiIp8rH6as3JaVmM8Z=eyJpdiI6IlBxWFFsaDR6SFpKWHJWOHRQSkNpZ2c9PSIsInZhbHVlIjoiQkx6WEEwbDRHZXdIenFBbk5kQmh1aWVad1pVbHVZNnZLQmVtWk1zQnlid09DTXR1UmYyMEt6UUdkTDJTZnJSbHplTHNpYXA1bFhPY09xV2NqNFIxaHNSdDEvTStyOUZBYStuK2dObmpNN2I2cEJtcFdtUEx0Ti9vU2toaXJVb1cvdUJIZGxUbkVXazBnZGQySGZlbjZWMSs2enM4OWVaam9SUHlrdEkrOUhWN3pVRElqWlRpYUtBZmFmRjZBcFAyTkpJVjFITVNSMFE5bmFPcER0cGlReGo5d255Z0c3eFNOQUVhSFU4Z0tlVnBOSExVM0FOUmtQV0ZGUnFTWkZIZ0ZlcDlxL1g5UGh2cURBNUYvemdvb0tSanZ6MjJwVHVZY3Y0M3h5clVsVE51OUlsdVdwdkU1c1l6K0F4MFplb21zTXpGMldlZTZSK25SanNXNTlKSHdlOU1id3RFdTA0N0x6MUtybjc2NERUYlpZaVdDRUZ5a240SitueHQ1QW9ZSTlYUFRIWTU3eVNvRzdOOHprUSs1Zz09IiwibWFjIjoiYWYwMGI3ZmM3MDFlZjVmMjVkNTZjYTMyN2RhYmQwNmE1MzZjYjdlN2M5ZTM0Y2JjMzQ4NmU0M2EzYjU4Zjk4MCIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:50:07 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
                             "body": "",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET web-logeen",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "web-logeen",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/web-logeen"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                },
-                                {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6ImR5d1NUc3RIVzlORE5scEJuejhGMGc9PSIsInZhbHVlIjoiWENJWDY3TncxSVNnalpOdUVMSytocWxVT2FMRllMSXU0MGpqcHJaRDB2eXZDd2N2bHdrU1VXVEJiSXBBTTRVN1ZjeHJ5aEtvYXFOaDlKTTVXYy92anlSSDdRN3BtanJxeXI3SHZvcmkzdWphVHB3WnEwL0Q0bVhvUHhmVzJRQ2UiLCJtYWMiOiI4YmRjODZkMTY2ZTI1YmVjYjExZjBmMmIxNmU3NjA2ZDE5NjQ2OTgwOTM5OGQ0YTliOTNlNjJhZjIwNjM5OWU0IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InROYnpJT1ZxTTdlcEJ3SkVVbzlvbFE9PSIsInZhbHVlIjoiL0x0a3hFR24vcTg2UU84UDI2OEtWOEkwUDFjMm5jeHVnemYybFZFcVN3TVVFNDZxeU9qL2hhbFFuU05oUTNtY3c0R1phQ3BiL0Q4bDVBVUhYQWIycERmamgraU5HKzZORERtdVR0dW14TU5pTkJKNGhZb3VlVkZHdDdQaDFFY2kiLCJtYWMiOiI2NTkyODJmZDliOTc5Y2RiYzFiN2NjODg2ZDJiMTNhYjk0MTZmYmJlOWZkYzNlNjczN2E3YjY3MTlhM2Y5NTk5IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; XHGH8dG9q2A7OHLPkGXyPcAIm4OKEhDFllOzFDsA=eyJpdiI6InViTnY4Qk9ldzVDWGhxSllCbWdycWc9PSIsInZhbHVlIjoiUzJBWjhmckFBVkVqUCtXWi94WWJ1RzN1Vm1NNUNPaVlEdjYyT095STJ3MVMyL3BCajFDUEdQT3FxSDVYbkxDNEJFQ3JjWUM2bVY0OXZvdmNlZDk2Qm1zM1JHbGFicWFTc2VMTy9nV3c3Y0djUnV0Q25WVzF2SStKTVJMdzNlZGtSZzlaWWhxckF4RCtlOU1JRHRyWGNFQ3N4NEIvVXhKa2NxZ0pqM2hZMnVkVDN2bVJxdFpLeThIM2VGaTFJVTVYV0JyWEozOUNQeGVEMDZmQmMydWpMS0FOaXpIYlhhM1FZQXJJdU5BKzcwZmNLYjB3MTcvbUg2Q3JFbThoc0YyODZlb1pBTkZzZ3BaUUwyWHd2OFQ0ZXhwRkM2SjhYQzJCT2M1SGRNa2VjSnRDaU4vT0ZaTHRNT0x6eXdTcVBpM09XNHVYdk81VVhVYzhReURsM1ZHeEh6NTJ4b2NWSWdMcTlWYTVvUHRWUU8rdHRkanBubVFVK3pZQmpPSHJlTVdFU3F0aE40YUdFeFVSem95MnZzTk5TQT09IiwibWFjIjoiZjdhZmQ1NzRhZDFjMWY5NTgyNzYzYTRlZGM4ZGVkOWM5ZWVjMGM0ZWFkMWZhMzdkNWUyZjJkMTI2ZTE3MDI2YSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:54 GMT; Max-Age=7198; path=\/; domain=localhost; httponly; samesite=lax; EOyfsoHMOSA9IopCNbt5zXef1TR0oTwYOmyET97s=eyJpdiI6IjRTdWNEMkdqc1JqaVZqdHlUcWV4WWc9PSIsInZhbHVlIjoibzBidFZBUDdvcFB6RG5ULzZkUk9rckIxYXFRbG5WdGFyWVBQc0R5Q1VHdlIwNGFMSjBNSTdMTE1mSTFuejY1QXZCMk9TSzQrMEQrdkdtRXdHWmg0YjVVL2Y1UG9DMVFvQVJyTnl3NGRzMXJNVmpNSE02dWt2T0dzV1Q5dWRJUG9EMlM4MXFoeVV0UWlVV0c0QXNCa21lNjRycnZiMnhHSlJmZ0IzcGZDeTVNYmdKNi96SXFiRVpFbEFaZHlkaDM1cWNBaitCWXQrcnVGWnpDNGpZaVAvUzhxYVZEZnlYQm5iZ0ZRbndGYTZZV2haNXJqemlMS1dlMkI2MVBZUGwyZUs0Q2dmc0RsM0srbFVEeVBaOGVIdXNvdVZxYnd3Q3gzdVZrUkZWbElSRGVuQjhFYTlWbnh5Z2xFekJCaisyQjVKcXFtYml6WFpsQ3p5emFoUkRkUWlxS3oxaVhKb05KOWk1dktwK0JtRjQwN3k0ZkM4K291V00yemp3Z3poVGZQIiwibWFjIjoiZWM2NGI4ZTdiMDU4NTgxNTMyYmJmMjNhMzc5NWUzOTMzZWEzZWRhNGU1MTk3YmI3OGNiMzI1ODI2MGJkZjBiZiIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>none<\/title>\n<\/head>\n<body>\n                <h1>You are logged in<\/h1>\n        <form action=\"http:\/\/localhost:8000\/web-logout\" method=\"post\">\n            <input type=\"hidden\" name=\"_token\" value=\"4YAhx5KalMBw7BG9atv3nbyR9SRxHUqocKlgRvCk\" autocomplete=\"off\">            <input type=\"hidden\" name=\"_method\" value=\"DELETE\">            <button type=\"submit\">Logout<\/button>\n        <\/form>\n        <form action=\"http:\/\/localhost:8000\/do-web-login\" method=\"post\">\n        <input type=\"hidden\" name=\"_token\" value=\"4YAhx5KalMBw7BG9atv3nbyR9SRxHUqocKlgRvCk\" autocomplete=\"off\">        <label for=\"nip\">NIP<\/label>\n        <input type=\"text\" name=\"nip\">\n        <label for=\"password\">Password<\/label>\n        <input type=\"password\" name=\"password\">\n        <button type=\"submit\">Login<\/button>\n    <\/form>\n<\/body>\n<\/html>",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST do-web-login",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "do-web-login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/do-web-login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"nip\":\"consequatur\",\"password\":\"consequatur\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                },
-                                {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6Im9BZzhFQjNhSVpqMjlibTJsQUg3Umc9PSIsInZhbHVlIjoiUW05WU9JMzd6QTdLOEw0SElFWDVrR3NqMmRyNnNOc3lkdk9lSEFsL1ZEbi8zWmlpOXpueklYVDd6TTlMeG00NFlNdlZ0b2Fudm12MFNBYnZVUVY5V2VYQi8wblNoNmx6VDhWVzI5V0VnbjVoMzNhVGxSK3ovNys4OC83UlRINlMiLCJtYWMiOiI2NWM0NDBlNmVlMzAwYzhmZTg0MWI3ZTY2NzNlMjBkZTljMjYxZDI3ZGVmMjYwOGU5NzMwMDRlZDQwZTJhNWEzIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IjRaWmtsN2dmNjJIdE1Lay9IQmpieXc9PSIsInZhbHVlIjoiLzE2YWROUU4zNjk4dWtGcVo2ZjZBTjhpU1hpOHFSblZLek8yTXRnZEdIU0VTaEhBZFA4bjBkSlJhMHhOYUxQNTNoYkVYcDJhTGRtalVCTDhSMXQxU3ErWnZ3aGlvdnZUOEpBallEOGlHaXNNNFMwQlU5TGRHbzgvUllVN1RhR1AiLCJtYWMiOiI4Y2E3MmIyMTBkNTYxM2MxYjMxYzM1MmU3Y2QzNWYxNmYxODRiYTA1ZDUyMjdmZjVjYTkyZmEzYmRjZjE1NjgxIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; XHGH8dG9q2A7OHLPkGXyPcAIm4OKEhDFllOzFDsA=eyJpdiI6IjZFWTJYc3V4MmUrcEVuMWo0ZGpQMGc9PSIsInZhbHVlIjoiamJIQiszU3pDdmw4bFM3OEhuT1F5YWhRNnVSSnk3clo4QjlvZDJidFdEZmZlclRGay8zREZoVTNhWlJEL2pjUkZ6blNiVlBmY2p2OW04VkFHZTVvcnQ0ZGJtSHQ5ZnFWd0tPR0Z3aHdRTW1DSXRReCtlaDNOUVhBZVJ4MUVzaXFEbW5GVkpON0ZvQjc4QXlYMDVMYTFXVUpDUEMwcWUySUZySEczOWV1OEVZOFRHaVhKbUZJUzJFRnMxQStiTVZjZEZiM01xMHUwMDE4alAwRjU1UXdtZGlpYmhwUTlYcmwrUjg3elJleW1tcVZ5bGlGbEdTQ1Rlb1FCZ0R6azhsWlErS1dwTDRmdC9YTDVSS2R0YWJVRFVqb2NvZytDeUVBcExEV2FlUWlRR0RVUXU0d3AwcXdpZlU1YWFIZHZVRXNDcFA5TlpMbHdVMjFKUTRYRmliU01TZWMyM2h0WjJnemVxbGM2M0Y3cEdqRFowRUo0ejJRVnI2aUM5QkhMSmJud1QwR3RIaXVFQS80QzV0NjVVRVRyUT09IiwibWFjIjoiZTI5YWIxNzY0MmUwN2U4YjIyNTRmZDkxOWJmZTg0ZTg1OWUwNzgyZDVlZmMyYzRmYWYzZTBmZTMwMTUzMzkyYiIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:54 GMT; Max-Age=7198; path=\/; domain=localhost; httponly; samesite=lax; EOyfsoHMOSA9IopCNbt5zXef1TR0oTwYOmyET97s=eyJpdiI6Ik1ibTA2My9FamVkb2M2M00xNHRDemc9PSIsInZhbHVlIjoibWRJc3N5d204L0JmUTRoUHM1d0hrQWlCcm9LYnEvd0Q4ZFd4VExEelp4TXlUTGFiWTRFbFNaV09OYTJXUkhMV0NHQmxlSFR0ZWNwZGZTN1ZQL2VGS2hsVzh2bWxXMEVPZWZzS1c5aG8ycGtXUmppVTFlTjVOeHU2VWIvWTJESExUZldtY1hPbU1ETmFwckJDSjNrc3VWV0VZZmp4dGFVVDFZaTRlQWhtbHRVSHhnWUlDSHROKzhtbTI4V1FiK3JyckN0R2NoeVZkZU5SUTNOeTFaT2FmRXZNWnlvVWdUT0dyZGdkeFZLaVExNFNGZzBDdnBNODRuMjdXZHJrc2NDT1hkZForTGNTS2JDbnpPK3VIb1Q2bGFGd2xySkdZeURnZk1TT2VKU3FpZlBuR2VwamM1dHZ3N0w0eUZpc2s1bGk2cEpEVmViMFNWTTVBQjZ4K2V4Z2hDTTByT3YvQzRONVZCcGt0R2tjazhFdVJqRE5LZU1tT3krRm1obW9jT0t4IiwibWFjIjoiMzUwMGRjOGQzODRmYWEyYWJkMmRjOTU5ZDkzZDJlNjE3OTM1MzQ4MGYwODBiNWFiOWFlYTU1ZGFiNDE1M2EwYyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; u1qIo6K032izksTtRRqrL9DsstJLktOMbT2S6weq=eyJpdiI6IjhVbEpHSys5RU1BYVJ6L2xLMkxmMnc9PSIsInZhbHVlIjoiaUpENjBybG1qMW9FVWdVYiswWWdjWlk2ZGxNOVhzUFQxTWtVMVZRM2JuOWp0bVFnaDFQYW9ZTXRYZ3VTSGhKd3F4R3dWRGc1YmUwakNEeHowNDhVeE44OVgxRVpMK1ZkeUpQcWtzL3RQa1VrSjROZFdSTHpuY281Z2xub3hDdmtQYXJISVl0aFc2NDJ5dDk5dVdIZjlBcmN5S2hqZFFGWkpIeXhpQVNlVXhSSTBrckpoRm1GVE9IRlE5OExOR3g5N3BCS2Voa1dLWXRaYkRXSDFidDJ4QUZ2SktHek5kOTRneXVocXZhOW9WZWplZXp6RVBVWHRUQk9kcFRPNTNZWGZoQm53bXM5YmVwOWNidlZRdnZieUQrSzVqK3NjdUhkcjMvMGVTS2ZJMmVkNlpUenJHVmZmR2RFazk2dk9HUThHWDhTVndLNEJVVFY4MmNwQzhmTTU4RzJ3dnBsd3l6dzJjMDN3U1FhK2dpLzNzSmdBamZHQ2hUc01UeTJvTURmIiwibWFjIjoiNzlkZmE5MzUwYmZjNGVlODE3Zjc4ZjViODIyNjg3ZTgwZDQzMTIzOWY0MWY5Y2ZjYThiOGFmNGUyZjNiNWY5YSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"Method Illuminate\\\\Auth\\\\RequestGuard::attempt does not exist.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "DELETE web-logout",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "web-logout",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/web-logout"
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                },
-                                {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6ImRNZTkxRTY1NHNHZC83R0QzaGE0RUE9PSIsInZhbHVlIjoiK00zb0lWaEQ2aG9Ha1pSNlZpcG1lelNQZDJSTHQ3T2ErZ3d3bHMzV0FTd2E4TUJkS2ZDc3hzWk8vVzhrNWRhWTF2aGNENlJ6a2xWOXNJYWpRZkkrVGQ0bEFkNWVsUUdwdS9TZ2pQc3hKcEhFcTZGRXI2eUh0ZXBLWHdRYm9RK3giLCJtYWMiOiJlM2EwMTUyNDE4ZDg0Nzc1MjQ1MWZkYzU3YmRkNzU5YjRjYjg4NDhiYzFmMTkzMjNhOTk4NTA4NmNkYWUzZTJkIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InRrUWRoVE1Cekw5VFJqNkhvV0FKVEE9PSIsInZhbHVlIjoickFJNUhweVRtNFdZSnRac2lQQlhhVlVDYlRPb0tOR0FNcGg0cDRQQ1h6a3BRTjZwSENwUG9KcGphRys2ci9odkRrdkZSdGNPVkIyWkczV05XalFDRVRQNlNoajBmTVhvRVRuVVNnSmlYVS9OMlBSelJoTU9hVktmZnRxVTNXc0MiLCJtYWMiOiJiNmVkZmU2ODMxYWQ5NjJmNjY5NWY3ZDJmMTFmZmU3MDczZWVlZjgzNGVlOTZlNGJlYWQ2ZDNlODJiZmVmOWI1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; XHGH8dG9q2A7OHLPkGXyPcAIm4OKEhDFllOzFDsA=eyJpdiI6IkQ2aTltSmNGK3I3UExVQ0ZCeFhnRXc9PSIsInZhbHVlIjoiQUJZd2l3UVVNMzhmREpUaXdCZVhZVVZMQ1pySXVRNUk0TUNSRE9GNkZEYUpoSGZ3VmpMam1xOGtjc24yL1VVWTdYSk55OVdTVnpxT1lrNXgwVlJMMTlFcUFaY1ZlTWhCaUxhVU1YTVF2WTUyUFpOakovUU5KYmFWVHN4Y3FWSHRnekhUNU0vOE5LUmp3YWR4VE1ZWUhnK1dwQ2RUMHV4SndNSjFSRVZra1ExN2tPRkJNeUhncndxbHJ1eThMcmp0Ull3OVVBMGlTRWV5V1VYaUVxSWVqTVEvaU94aThMRkZpWC9OSFI5Z25Vb0M5NEsydUNyRmMvbXN2b2xmRkZSbnU1RXE3Q0FhaEpScnkydHk5Q0FiZHlWcFJuVWJ2MGhFOURTVjBlNUpQbmh2NWJEcmRzcnUyTVdOZGpwTUozaVRrVCt5bEhaUTcxOURQd3NzeFVZejNUdGhvLzIzN3RyUXRkd1dSLzUrSE1EZU9kclIrdnYzK0FpZElxRU5TNytDbjJjbzlWWEt5VUNiTExXL1M3d1dMdz09IiwibWFjIjoiOTE5M2QxZGE2YWE5MzNkMzE1YTk3NTVjNGU3ZDllZDQ3NTJlYTJlMzk3MzQ4NDJmOTVkOTg0ODk1MzQyNDY5NyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:54 GMT; Max-Age=7198; path=\/; domain=localhost; httponly; samesite=lax; EOyfsoHMOSA9IopCNbt5zXef1TR0oTwYOmyET97s=eyJpdiI6ImVqSFJUdUU0ZmRRd21hQ2JubXlMOVE9PSIsInZhbHVlIjoiSzg0ckI2N0dyVE5pMlFrcDQyN2d0TU1DZW9WZUkyaUJyYnlZaDFXcnpaTTJ5MWxxdlVSek1MTEJQRU95aG9PK0JyKzYrRVp0dW5NNTJuamljRG45Wm1jNkFUUmFyRVArZ1MzOEhzek5sWm1BUEtxNFQ5UVhxa0ZlOTZBcjRjZU10bWlGUjBIQ2FvWTcwcjlUaTZ2ZXN2YVlaOFpuajlZaksyaENIcTk3dE5UbFRNbSsvVG5LdXUvY3QvbXcyeVhQNVQ3YnUrcHVxWGtOKzJnNDU0YWdiTjNlNzNTN3lyTS9oMS9GNlMrTENnRTdPV05sMWd0VitzeDE0aVJnNHcyQUI3NEg0YmpBQjh2QzllQ1ltL01WTlRxR0hhdnNSWkplbE5PWXVOUHRReTM1N1BKK1ZzRXRVOHBqZC9nZ0pTTnJieGJMYnVYKzdWZzNoWmMrMXRsTEs1ampydWc1TjVMUE9mWk9xcFpMOVdHc0liRjNVYnZoZlR6My9KZ2ozWE9EIiwibWFjIjoiZWU2ZDVhZWZlMzRjNWU3NTJmYTAwZDdmYjJiYjAwMTIzYzdlN2I4NzIwZmZjNGU5YWYwMmQzNWU5NzczMmNjZiIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; u1qIo6K032izksTtRRqrL9DsstJLktOMbT2S6weq=eyJpdiI6Ino2ejExSjdkNWg1Y0o3dFlrRi9Ob1E9PSIsInZhbHVlIjoiZkxVZUZQUzFaY3NEQTNqbUdtSEdhakd5aWxmTDRmRnhLdEVEV3ZsYVBNYk1hTlBIbzF4MCt2bTlFbmRqZmZCMG5ZZTMyZUlKWFFDUWhQME14Y2UvY3M2OTQwVWlhU2Fnb25Oc3NKSlpQU0pob1RZZzloSjJvQ3dLd3FJZ3F2NlFtc2pmK2N4RlFOdHR2R3VyVlphelh1dExGSUxtQWlpcjI0a0J0cWVEcWRQU3RxdUg3Z3BhZ0MrYnJVZVlCVWQ3Z0xVN2ZqZWE5QVltUFdlN3VjTEdYMDZUekJ6Q0RJMVQyRlN2dkx2WWdEb0NaZXB4UHltcVpPRm1ULzlnVS9qeWN6RitrbXVoL212VUZibjh0N3cwT1dHcVkyQTE0RXdrR1JxUkpmU0VXMkU1ZjBsYmdXR0pWT3ZMbFpPUTQwOFVWSk1tZVpMcERnY3l0cElLOENkREZJdmZjejBBNGhKYVRCMFptdlpBYVBwQ1prQlpKRE5jZEpsb0VHelVkS25VIiwibWFjIjoiNzI3OTFmMzgxMzE1NjExM2MwOTYzZDE2ZjMxZjA4MzEzMmRlMGVhY2Y2NzUwMzQ3ODFlNDA1NWM3MDU0MDY4NCIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; knIOOULnXtLY3Ss1n0UZEOquxg5H0N8AcVsiY0lK=eyJpdiI6InhoRndLSGlCVlVLQW5SWEFRNEdxU0E9PSIsInZhbHVlIjoickgxQXJtdy9UUTJoYVFOZCsrOThybGJqVjV5Sy9JZEltTFYwWmdyYkpjdnhocmlteTN4WjF3WDFiTFkwWG1qNjFPR0hpU1FLQTE1QmsyQzVJWVZmTmlCLzBVNHhYNlp2NWVFNDg4bzdsUjdxekNjZUl4QWViQWM0N1VtSUVpZG5ubTFIUGRRNEFESjJIUEVlRk9nQWtuZVFTVGNhN0JUdHg1N294QkVDQTRCRmJjaUlnSkVLUVgrWWY3QVloa0NTN3pBcDRrSys0R1Myc3ZHYUZadlhyQWMyd29LNTNNVE8yTkRLcDdwcTBrbmRiRWprMmIxbTBKUzAyV0F4aldLUi9oQUpteFpWSEZ6dEZmclNFS1F5RHE5aG84Wk0vZ3FBY2E2dHdjUm5DMzhFQkNkTGFCQ3dpQUE3dk95cU43MDFXK2RKK2hOSmt2aGlBYTFpQ2ttOEo1dmJWWEovd3dISzArM1VwcWxCNjl4eUt0OWdKSUZlcWQzVllYMmpLdDQ4IiwibWFjIjoiMjU1M2ZjZjkyYWU1MjlkMzdkYjFjYjYzZTI4YTNkNjkwYWE0YTI5NjFmNTE1NzdlNzUyNjBkMDlkMGVlYWNhNiIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:29:56 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"Method Illuminate\\\\Auth\\\\RequestGuard::logout does not exist.\"}",
                             "name": ""
                         }
                     ]

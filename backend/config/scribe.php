@@ -36,7 +36,10 @@ return [
             'exclude' => [
                 '/_ignition/*',
                 '/up',
-                '/'
+                '/',
+                '/web-logeen',
+                '/do-web-login',
+                '/web-logout',
             ],
         ],
     ],

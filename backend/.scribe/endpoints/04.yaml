@@ -277,7 +277,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success create item","data":{"code":"tjqotbhpzwonwlzospqcs","image":"images\/29a245d554c8842b98f866527b304b7fed705fdd89328e78cf263b742ac2fcfb.jpg","name":"tjqotbhpzwonwlzospqcs","merk":"nssrciatkmatldznkaapj","type":"ptdhyldmarwuvlvyfcejz","size":"olbxnqyvzmcgyfpncfyst","unit":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"category_id":1,"price":6,"updated_at":"2024-10-06T14:29:54.000000Z","created_at":"2024-10-06T14:29:54.000000Z","id":27}}'
+        content: '{"message":"success create item","data":{"code":"tjqotbhpzwonwlzospqcs","image":"images\/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg","name":"tjqotbhpzwonwlzospqcs","merk":"nssrciatkmatldznkaapj","type":"ptdhyldmarwuvlvyfcejz","size":"olbxnqyvzmcgyfpncfyst","unit":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"category_id":1,"price":6,"updated_at":"2024-10-06T14:50:07.000000Z","created_at":"2024-10-06T14:50:07.000000Z","id":28}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -498,7 +498,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success update item","data":{"id":1,"code":"tjqotbhpzwonwlzospqcs","image":"images\/29a245d554c8842b98f866527b304b7fed705fdd89328e78cf263b742ac2fcfb.jpg","name":"nssrciatkmatldznkaapj","unit":"sewlxtdfjxskykaapbpdx","merk":"ptdhyldmarwuvlvyfcejz","type":"olbxnqyvzmcgyfpncfyst","size":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"price":6,"category_id":1,"created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T14:29:54.000000Z"}}'
+        content: '{"message":"success update item","data":{"id":1,"code":"tjqotbhpzwonwlzospqcs","image":"images\/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg","name":"nssrciatkmatldznkaapj","unit":"sewlxtdfjxskykaapbpdx","merk":"ptdhyldmarwuvlvyfcejz","type":"olbxnqyvzmcgyfpncfyst","size":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"price":6,"category_id":1,"created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T14:50:07.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

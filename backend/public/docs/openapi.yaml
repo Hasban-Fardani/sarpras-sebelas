@@ -283,9 +283,9 @@ paths:
                   data:
                     name: tjq-otb_h
                     code: consequatur
-                    updated_at: '2024-10-06T14:29:54.000000Z'
-                    created_at: '2024-10-06T14:29:54.000000Z'
-                    id: 13
+                    updated_at: '2024-10-06T14:50:07.000000Z'
+                    created_at: '2024-10-06T14:50:07.000000Z'
+                    id: 14
                 properties:
                   message:
                     type: string
@@ -301,13 +301,13 @@ paths:
                         example: consequatur
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
                       id:
                         type: integer
-                        example: 13
+                        example: 14
       tags:
         - '1. Category Management'
       requestBody:
@@ -392,7 +392,7 @@ paths:
                     code: ATK
                     name: consequatur
                     created_at: '2024-10-06T12:51:43.000000Z'
-                    updated_at: '2024-10-06T14:29:54.000000Z'
+                    updated_at: '2024-10-06T14:50:07.000000Z'
                 properties:
                   message:
                     type: string
@@ -414,7 +414,7 @@ paths:
                         example: '2024-10-06T12:51:43.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
       tags:
         - '1. Category Management'
       requestBody:
@@ -678,7 +678,7 @@ paths:
                   message: 'success create item'
                   data:
                     code: tjqotbhpzwonwlzospqcs
-                    image: images/29a245d554c8842b98f866527b304b7fed705fdd89328e78cf263b742ac2fcfb.jpg
+                    image: images/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg
                     name: tjqotbhpzwonwlzospqcs
                     merk: nssrciatkmatldznkaapj
                     type: ptdhyldmarwuvlvyfcejz
@@ -688,9 +688,9 @@ paths:
                     min_stock: 6
                     category_id: 1
                     price: 6
-                    updated_at: '2024-10-06T14:29:54.000000Z'
-                    created_at: '2024-10-06T14:29:54.000000Z'
-                    id: 27
+                    updated_at: '2024-10-06T14:50:07.000000Z'
+                    created_at: '2024-10-06T14:50:07.000000Z'
+                    id: 28
                 properties:
                   message:
                     type: string
@@ -703,7 +703,7 @@ paths:
                         example: tjqotbhpzwonwlzospqcs
                       image:
                         type: string
-                        example: images/29a245d554c8842b98f866527b304b7fed705fdd89328e78cf263b742ac2fcfb.jpg
+                        example: images/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg
                       name:
                         type: string
                         example: tjqotbhpzwonwlzospqcs
@@ -733,13 +733,13 @@ paths:
                         example: 6
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
                       id:
                         type: integer
-                        example: 27
+                        example: 28
       tags:
         - '2. Item Management'
       requestBody:
@@ -901,7 +901,7 @@ paths:
                   data:
                     id: 1
                     code: tjqotbhpzwonwlzospqcs
-                    image: images/29a245d554c8842b98f866527b304b7fed705fdd89328e78cf263b742ac2fcfb.jpg
+                    image: images/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg
                     name: nssrciatkmatldznkaapj
                     unit: sewlxtdfjxskykaapbpdx
                     merk: ptdhyldmarwuvlvyfcejz
@@ -912,7 +912,7 @@ paths:
                     price: 6
                     category_id: 1
                     created_at: '2024-10-06T12:51:43.000000Z'
-                    updated_at: '2024-10-06T14:29:54.000000Z'
+                    updated_at: '2024-10-06T14:50:07.000000Z'
                 properties:
                   message:
                     type: string
@@ -928,7 +928,7 @@ paths:
                         example: tjqotbhpzwonwlzospqcs
                       image:
                         type: string
-                        example: images/29a245d554c8842b98f866527b304b7fed705fdd89328e78cf263b742ac2fcfb.jpg
+                        example: images/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg
                       name:
                         type: string
                         example: nssrciatkmatldznkaapj
@@ -961,7 +961,7 @@ paths:
                         example: '2024-10-06T12:51:43.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
       tags:
         - '2. Item Management'
       requestBody:
@@ -1515,12 +1515,12 @@ paths:
                 example:
                   message: 'success create incoming item and updated stock'
                   data:
-                    code: IN-8dd9142
+                    code: IN-c9b6ced
                     employee_id: 3
                     supplier_id: 6
-                    updated_at: '2024-10-06T14:29:54.000000Z'
-                    created_at: '2024-10-06T14:29:54.000000Z'
-                    id: 22
+                    updated_at: '2024-10-06T14:50:07.000000Z'
+                    created_at: '2024-10-06T14:50:07.000000Z'
+                    id: 23
                 properties:
                   message:
                     type: string
@@ -1530,7 +1530,7 @@ paths:
                     properties:
                       code:
                         type: string
-                        example: IN-8dd9142
+                        example: IN-c9b6ced
                       employee_id:
                         type: integer
                         example: 3
@@ -1539,13 +1539,13 @@ paths:
                         example: 6
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
                       id:
                         type: integer
-                        example: 22
+                        example: 23
       tags:
         - '3. Incoming Item Management'
       requestBody:
@@ -2240,12 +2240,12 @@ paths:
                       created_at: '2024-10-06T12:51:55.000000Z'
                       updated_at: '2024-10-06T12:51:55.000000Z'
                     -
-                      id: 124
+                      id: 126
                       incoming_item_id: 1
                       item_id: 6
                       qty: 6
-                      created_at: '2024-10-06T14:29:54.000000Z'
-                      updated_at: '2024-10-06T14:29:54.000000Z'
+                      created_at: '2024-10-06T14:50:07.000000Z'
+                      updated_at: '2024-10-06T14:50:07.000000Z'
                 properties:
                   message:
                     type: string
@@ -2317,12 +2317,12 @@ paths:
                         created_at: '2024-10-06T12:51:55.000000Z'
                         updated_at: '2024-10-06T12:51:55.000000Z'
                       -
-                        id: 124
+                        id: 126
                         incoming_item_id: 1
                         item_id: 6
                         qty: 6
-                        created_at: '2024-10-06T14:29:54.000000Z'
-                        updated_at: '2024-10-06T14:29:54.000000Z'
+                        created_at: '2024-10-06T14:50:07.000000Z'
+                        updated_at: '2024-10-06T14:50:07.000000Z'
                     items:
                       type: object
                       properties:
@@ -2394,7 +2394,7 @@ paths:
                     item_id: 6
                     qty: 6
                     created_at: '2024-10-06T12:51:55.000000Z'
-                    updated_at: '2024-10-06T14:29:54.000000Z'
+                    updated_at: '2024-10-06T14:50:07.000000Z'
                 properties:
                   message:
                     type: string
@@ -2419,7 +2419,7 @@ paths:
                         example: '2024-10-06T12:51:55.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:54.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
       tags:
         - '4. Incoming Item Detail Management'
       requestBody:
@@ -3074,9 +3074,9 @@ paths:
                     code: consequatur
                     operator_id: 1
                     division_id: 3
-                    updated_at: '2024-10-06T14:29:55.000000Z'
-                    created_at: '2024-10-06T14:29:55.000000Z'
-                    id: 22
+                    updated_at: '2024-10-06T14:50:07.000000Z'
+                    created_at: '2024-10-06T14:50:07.000000Z'
+                    id: 23
                 properties:
                   message:
                     type: string
@@ -3095,13 +3095,13 @@ paths:
                         example: 3
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:55.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-06T14:29:55.000000Z'
+                        example: '2024-10-06T14:50:07.000000Z'
                       id:
                         type: integer
-                        example: 22
+                        example: 23
       tags:
         - '5. Outgoing Item Management'
       requestBody:
@@ -3331,12 +3331,12 @@ paths:
                   message: 'success add outgoing item detail'
                   data:
                     -
-                      id: 15
+                      id: 17
                       outgoing_item_id: 1
                       item_id: 6
                       qty: 6
-                      created_at: '2024-10-06T14:29:55.000000Z'
-                      updated_at: '2024-10-06T14:29:55.000000Z'
+                      created_at: '2024-10-06T14:50:08.000000Z'
+                      updated_at: '2024-10-06T14:50:08.000000Z'
                 properties:
                   message:
                     type: string
@@ -3345,18 +3345,18 @@ paths:
                     type: array
                     example:
                       -
-                        id: 15
+                        id: 17
                         outgoing_item_id: 1
                         item_id: 6
                         qty: 6
-                        created_at: '2024-10-06T14:29:55.000000Z'
-                        updated_at: '2024-10-06T14:29:55.000000Z'
+                        created_at: '2024-10-06T14:50:08.000000Z'
+                        updated_at: '2024-10-06T14:50:08.000000Z'
                     items:
                       type: object
                       properties:
                         id:
                           type: integer
-                          example: 15
+                          example: 17
                         outgoing_item_id:
                           type: integer
                           example: 1
@@ -3368,10 +3368,10 @@ paths:
                           example: 6
                         created_at:
                           type: string
-                          example: '2024-10-06T14:29:55.000000Z'
+                          example: '2024-10-06T14:50:08.000000Z'
                         updated_at:
                           type: string
-                          example: '2024-10-06T14:29:55.000000Z'
+                          example: '2024-10-06T14:50:08.000000Z'
       tags:
         - '6. Outgoing Item Detail'
       requestBody:
@@ -3887,9 +3887,9 @@ paths:
                     code: consequatur
                     note: consequatur
                     status: draf
-                    updated_at: '2024-10-06T14:29:55.000000Z'
-                    created_at: '2024-10-06T14:29:55.000000Z'
-                    id: 13
+                    updated_at: '2024-10-06T14:50:08.000000Z'
+                    created_at: '2024-10-06T14:50:08.000000Z'
+                    id: 14
                 properties:
                   message:
                     type: string
@@ -3914,13 +3914,13 @@ paths:
                         example: draf
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:55.000000Z'
+                        example: '2024-10-06T14:50:08.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-06T14:29:55.000000Z'
+                        example: '2024-10-06T14:50:08.000000Z'
                       id:
                         type: integer
-                        example: 13
+                        example: 14
       tags:
         - '7. Submission Item Management'
       requestBody:
@@ -4191,11 +4191,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 14:29:55, 2024-10-06 14:29:55))"
+                  message: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 14:50:08, 2024-10-06 14:50:08))"
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 14:29:55, 2024-10-06 14:29:55))"
+                    example: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 14:50:08, 2024-10-06 14:50:08))"
       tags:
         - '8. Submission Item Detail Management'
       requestBody:
@@ -4860,11 +4860,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:29:55, 2024-10-06 14:29:55))"
+                  message: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:50:08, 2024-10-06 14:50:08))"
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:29:55, 2024-10-06 14:29:55))"
+                    example: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:50:08, 2024-10-06 14:50:08))"
       tags:
         - '10. Request Item Detail Management'
       requestBody:
@@ -5007,11 +5007,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$t6aowwXgKY0IZA7OPCdpiO7zI0Fao.rfgdHiTjAVQVgbG6bjdqkAy, unit, consequatur, 2024-10-06 14:29:56, 2024-10-06 14:29:56))"
+                  message: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$GCFYJe4VeuttjyU40BMQlOME.r/NqMeODhkIOzw0jclKAOTnrgDNi, unit, consequatur, 2024-10-06 14:50:09, 2024-10-06 14:50:09))"
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$t6aowwXgKY0IZA7OPCdpiO7zI0Fao.rfgdHiTjAVQVgbG6bjdqkAy, unit, consequatur, 2024-10-06 14:29:56, 2024-10-06 14:29:56))"
+                    example: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$GCFYJe4VeuttjyU40BMQlOME.r/NqMeODhkIOzw0jclKAOTnrgDNi, unit, consequatur, 2024-10-06 14:50:09, 2024-10-06 14:50:09))"
       tags:
         - '11. Employee Management'
       requestBody:
@@ -5352,11 +5352,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:29:56, 2024-10-06 14:29:56))"
+                  message: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:50:09, 2024-10-06 14:50:09))"
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:29:56, 2024-10-06 14:29:56))"
+                    example: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:50:09, 2024-10-06 14:50:09))"
       tags:
         - '11. Employee Management'
       requestBody:
@@ -5476,7 +5476,7 @@ paths:
                     email: joy.schultz@example.org
                     email_verified_at: null
                     created_at: null
-                    updated_at: '2024-10-06T14:29:56.000000Z'
+                    updated_at: '2024-10-06T14:50:09.000000Z'
                 properties:
                   message:
                     type: string
@@ -5510,7 +5510,7 @@ paths:
                         example: null
                       updated_at:
                         type: string
-                        example: '2024-10-06T14:29:56.000000Z'
+                        example: '2024-10-06T14:50:09.000000Z'
       tags:
         - '11. Employee Management'
       requestBody:
@@ -6413,11 +6413,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 14:29:55, 2024-10-06 14:29:55))"
+                  message: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 14:50:08, 2024-10-06 14:50:08))"
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 14:29:55, 2024-10-06 14:29:55))"
+                    example: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 14:50:08, 2024-10-06 14:50:08))"
       tags:
         - '13. Supplier Management'
       requestBody:
@@ -6664,82 +6664,6 @@ paths:
       responses:
         204:
           description: ''
-      tags:
-        - 'Other Endpoints'
-  /web-logeen:
-    get:
-      summary: ''
-      operationId: getWebLogeen
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>none</title>\n</head>\n<body>\n                <h1>You are logged in</h1>\n        <form action=\"http://localhost:8000/web-logout\" method=\"post\">\n            <input type=\"hidden\" name=\"_token\" value=\"4YAhx5KalMBw7BG9atv3nbyR9SRxHUqocKlgRvCk\" autocomplete=\"off\">            <input type=\"hidden\" name=\"_method\" value=\"DELETE\">            <button type=\"submit\">Logout</button>\n        </form>\n        <form action=\"http://localhost:8000/do-web-login\" method=\"post\">\n        <input type=\"hidden\" name=\"_token\" value=\"4YAhx5KalMBw7BG9atv3nbyR9SRxHUqocKlgRvCk\" autocomplete=\"off\">        <label for=\"nip\">NIP</label>\n        <input type=\"text\" name=\"nip\">\n        <label for=\"password\">Password</label>\n        <input type=\"password\" name=\"password\">\n        <button type=\"submit\">Login</button>\n    </form>\n</body>\n</html>"
-      tags:
-        - 'Other Endpoints'
-  /do-web-login:
-    post:
-      summary: ''
-      operationId: postDoWebLogin
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Method Illuminate\Auth\RequestGuard::attempt does not exist.'
-                properties:
-                  message:
-                    type: string
-                    example: 'Method Illuminate\Auth\RequestGuard::attempt does not exist.'
-      tags:
-        - 'Other Endpoints'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                nip:
-                  type: string
-                  description: ''
-                  example: consequatur
-                password:
-                  type: string
-                  description: ''
-                  example: consequatur
-              required:
-                - nip
-                - password
-  /web-logout:
-    delete:
-      summary: ''
-      operationId: deleteWebLogout
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Method Illuminate\Auth\RequestGuard::logout does not exist.'
-                properties:
-                  message:
-                    type: string
-                    example: 'Method Illuminate\Auth\RequestGuard::logout does not exist.'
       tags:
         - 'Other Endpoints'
   '/submission/{submission_id}/accept':
