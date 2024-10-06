@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import UserLayout from '@/layouts/UserLayout.vue';
-import SubmissionPage from '@/components/SubmissionPage.vue';
+import SubmissionPage from '@/components/submissionItem/SubmissionPage.vue';
 
 </script>
 <template>
