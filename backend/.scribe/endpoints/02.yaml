@@ -32,7 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"items":15,"users":4,"requests":10,"submissions":11}'
+        content: '{"items":15,"users":5,"requests":10,"submissions":11}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

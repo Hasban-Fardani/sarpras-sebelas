@@ -61,7 +61,7 @@ endpoints:
         API endpoints for managing submission item
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: 'Store a new Submission item'
       description: ''
       authenticated: true
       custom: []
@@ -74,6 +74,42 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
+      submission_session_id:
+        name: submission_session_id
+        description: required.
+        required: false
+        example: 3
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      division_id:
+        name: division_id
+        description: ''
+        required: false
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      code:
+        name: code
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      note:
+        name: note
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       items:
         name: items
         description: ''
@@ -103,6 +139,10 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
+      submission_session_id: 3
+      division_id: 6
+      code: consequatur
+      note: consequatur
       items:
         -
           item_id: 6
@@ -110,8 +150,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''code'' doesn''t have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 13:21:32, 2024-10-06 13:21:32))"}'
+        status: 200
+        content: '{"message":"success create submission item","data":{"submission_session_id":3,"division_id":6,"code":"consequatur","note":"consequatur","status":"draf","updated_at":"2024-10-06T14:27:01.000000Z","created_at":"2024-10-06T14:27:01.000000Z","id":12}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

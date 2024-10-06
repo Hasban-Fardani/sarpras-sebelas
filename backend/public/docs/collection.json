@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel Sarpras API Documentation",
-        "_postman_id": "c8279c04-44d2-449d-aa96-e019e3e42ff2",
+        "_postman_id": "f24e13dd-e98c-4ce4-b1ba-28cf84504b4b",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -241,7 +241,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\",\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"id\":9}}",
+                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T14:27:01.000000Z\",\"created_at\":\"2024-10-06T14:27:01.000000Z\",\"id\":12}}",
                             "name": ""
                         }
                     ]
@@ -350,7 +350,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}}",
+                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T14:27:01.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -623,7 +623,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/4decd4c5fae9d9485329d5bf0aee27e5aa59efd843bd86a40210a05666cf44f2.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T13:21:32.000000Z\",\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"id\":23}}",
+                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/a21bfb0f471cee833bf26565809b0224b3d14453bb06d6e4a2fafff344086cf0.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T14:27:01.000000Z\",\"created_at\":\"2024-10-06T14:27:01.000000Z\",\"id\":26}}",
                             "name": ""
                         }
                     ]
@@ -803,7 +803,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/4decd4c5fae9d9485329d5bf0aee27e5aa59efd843bd86a40210a05666cf44f2.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}}",
+                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/a21bfb0f471cee833bf26565809b0224b3d14453bb06d6e4a2fafff344086cf0.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T14:27:01.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -955,7 +955,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-8d880f5\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T13:21:32.000000Z\",\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"id\":18}}",
+                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-4d50739\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T14:27:01.000000Z\",\"created_at\":\"2024-10-06T14:27:01.000000Z\",\"id\":21}}",
                             "name": ""
                         }
                     ]
@@ -1176,7 +1176,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":116,\"incoming_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}]}",
+                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":122,\"incoming_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T14:27:01.000000Z\",\"updated_at\":\"2024-10-06T14:27:01.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1238,7 +1238,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}}",
+                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T14:27:01.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -1396,7 +1396,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add outgoing item and updated stock\",\"data\":{\"code\":\"consequatur\",\"operator_id\":1,\"division_id\":3,\"updated_at\":\"2024-10-06T13:21:32.000000Z\",\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"id\":18}}",
+                            "body": "{\"message\":\"success add outgoing item and updated stock\",\"data\":{\"code\":\"consequatur\",\"operator_id\":1,\"division_id\":3,\"updated_at\":\"2024-10-06T14:27:01.000000Z\",\"created_at\":\"2024-10-06T14:27:01.000000Z\",\"id\":21}}",
                             "name": ""
                         }
                     ]
@@ -1617,7 +1617,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add outgoing item detail\",\"data\":[{\"id\":7,\"outgoing_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T13:21:32.000000Z\",\"updated_at\":\"2024-10-06T13:21:32.000000Z\"}]}",
+                            "body": "{\"message\":\"success add outgoing item detail\",\"data\":[{\"id\":13,\"outgoing_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T14:27:01.000000Z\",\"updated_at\":\"2024-10-06T14:27:01.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1795,7 +1795,7 @@
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Store a new Submission item",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1816,7 +1816,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"items\":[{\"item_id\":6,\"qty\":6}]}"
+                            "raw": "{\"submission_session_id\":3,\"division_id\":6,\"code\":\"consequatur\",\"note\":\"consequatur\",\"items\":[{\"item_id\":6,\"qty\":6}]}"
                         },
                         "description": ""
                     },
@@ -1836,8 +1836,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 13:21:32, 2024-10-06 13:21:32))\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success create submission item\",\"data\":{\"submission_session_id\":3,\"division_id\":6,\"code\":\"consequatur\",\"note\":\"consequatur\",\"status\":\"draf\",\"updated_at\":\"2024-10-06T14:27:01.000000Z\",\"created_at\":\"2024-10-06T14:27:01.000000Z\",\"id\":12}}",
                             "name": ""
                         }
                     ]
@@ -2058,7 +2058,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 13:21:32, 2024-10-06 13:21:32))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 14:27:02, 2024-10-06 14:27:02))\"}",
                             "name": ""
                         }
                     ]
@@ -2496,7 +2496,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 13:21:33, 2024-10-06 13:21:33))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:27:02, 2024-10-06 14:27:02))\"}",
                             "name": ""
                         }
                     ]
@@ -2658,7 +2658,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"consequatur\",\"role\":\"unit\",\"username\":\"consequatur\"}"
+                            "raw": "{\"password\":\"consequatur\",\"role\":\"admin\",\"username\":\"consequatur\"}"
                         },
                         "description": ""
                     },
@@ -2679,7 +2679,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$RNOcny7ePH\\\/xIYHm7tFZ\\\/OMSSj66IobbiRZw9cq5IMApDKZ4hVUv6, unit, consequatur, 2024-10-06 13:21:33, 2024-10-06 13:21:33))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$ubay.\\\/M6bLcKLZuk82ytHuX8VoTzbUi5UMijrD26RWXL3ADCqYg\\\/K, admin, consequatur, 2024-10-06 14:27:02, 2024-10-06 14:27:02))\"}",
                             "name": ""
                         }
                     ]
@@ -2777,7 +2777,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all employees\",\"current_page\":1,\"data\":[{\"id\":1,\"nip\":\"198012311994031002\",\"name\":\"Yani\",\"position\":\"Kepala Sekolah Bidang Kurikulum\",\"phone\":\"08123456792\",\"email\":\"yani@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":2,\"nip\":\"197412311994031001\",\"name\":\"Sutarsa\",\"position\":\"Wakil Kepala Sekolah Bidang Sarana Prasarana\",\"phone\":\"08123456789\",\"email\":\"sutarsa@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":3,\"nip\":\"197806311994031003\",\"name\":\"Toni Kusmara\",\"position\":\"Staff Sarana Prasarana\",\"phone\":\"08123456781\",\"email\":\"toni.kusmara@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":4,\"nip\":\"198212311994031004\",\"name\":\"Ani Nuraeni\",\"position\":\"Ketua Progam keahlian RPL\",\"phone\":\"08123456782\",\"email\":\"zim.zim@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":5,\"nip\":\"197412311994031005\",\"name\":\"Zim zim\",\"position\":\"Ketua Progam keahlian DKV\",\"phone\":\"08123456783\",\"email\":\"ani.nuraeni@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees\",\"per_page\":10,\"prev_page_url\":null,\"to\":5,\"total\":5}",
+                            "body": "{\"message\":\"success get all employees\",\"current_page\":1,\"data\":[{\"id\":1,\"nip\":\"198012311994031002\",\"name\":\"Yani\",\"position\":\"Kepala Sekolah Bidang Kurikulum\",\"phone\":\"08123456792\",\"email\":\"yani@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":2,\"nip\":\"197412311994031001\",\"name\":\"Sutarsa\",\"position\":\"Wakil Kepala Sekolah Bidang Sarana Prasarana\",\"phone\":\"08123456789\",\"email\":\"sutarsa@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":3,\"nip\":\"197806311994031003\",\"name\":\"Toni Kusmara\",\"position\":\"Staff Sarana Prasarana\",\"phone\":\"08123456781\",\"email\":\"toni.kusmara@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":4,\"nip\":\"198212311994031004\",\"name\":\"Ani Nuraeni\",\"position\":\"Ketua Progam keahlian RPL\",\"phone\":\"08123456782\",\"email\":\"zim.zim@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":5,\"nip\":\"197412311994031005\",\"name\":\"Zim zim\",\"position\":\"Ketua Progam keahlian DKV\",\"phone\":\"08123456783\",\"email\":\"ani.nuraeni@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":6,\"nip\":\"101\",\"name\":\"hasban\",\"position\":\"developer apps\",\"phone\":\"089876543123\",\"email\":\"hasbanfardani@gmail.com\",\"email_verified_at\":\"2024-10-06 20:56:28\",\"created_at\":null,\"updated_at\":null}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees\",\"per_page\":10,\"prev_page_url\":null,\"to\":6,\"total\":6}",
                             "name": ""
                         }
                     ]
@@ -2825,7 +2825,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 13:21:33, 2024-10-06 13:21:33))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:27:02, 2024-10-06 14:27:02))\"}",
                             "name": ""
                         }
                     ]
@@ -2934,7 +2934,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T13:21:33.000000Z\"}}",
+                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T14:27:02.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -3038,7 +3038,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get users\",\"current_page\":1,\"data\":[{\"id\":1,\"nip\":\"197806311994031003\",\"username\":\"admin\",\"role\":\"admin\",\"created_at\":\"2024-10-06T12:51:42.000000Z\",\"updated_at\":\"2024-10-06T12:51:42.000000Z\",\"employee\":{\"id\":3,\"nip\":\"197806311994031003\",\"name\":\"Toni Kusmara\",\"position\":\"Staff Sarana Prasarana\",\"phone\":\"08123456781\",\"email\":\"toni.kusmara@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":2,\"nip\":\"197412311994031001\",\"username\":\"pengawas\",\"role\":\"pengawas\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":2,\"nip\":\"197412311994031001\",\"name\":\"Sutarsa\",\"position\":\"Wakil Kepala Sekolah Bidang Sarana Prasarana\",\"phone\":\"08123456789\",\"email\":\"sutarsa@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":3,\"nip\":\"198212311994031004\",\"username\":\"ani_nuraeni\",\"role\":\"unit\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":4,\"nip\":\"198212311994031004\",\"name\":\"Ani Nuraeni\",\"position\":\"Ketua Progam keahlian RPL\",\"phone\":\"08123456782\",\"email\":\"zim.zim@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":4,\"nip\":\"197412311994031005\",\"username\":\"zim_zim\",\"role\":\"unit\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":5,\"nip\":\"197412311994031005\",\"name\":\"Zim zim\",\"position\":\"Ketua Progam keahlian DKV\",\"phone\":\"08123456783\",\"email\":\"ani.nuraeni@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users\",\"per_page\":10,\"prev_page_url\":null,\"to\":4,\"total\":4}",
+                            "body": "{\"message\":\"success get users\",\"current_page\":1,\"data\":[{\"id\":1,\"nip\":\"197806311994031003\",\"username\":\"admin\",\"role\":\"admin\",\"created_at\":\"2024-10-06T12:51:42.000000Z\",\"updated_at\":\"2024-10-06T12:51:42.000000Z\",\"employee\":{\"id\":3,\"nip\":\"197806311994031003\",\"name\":\"Toni Kusmara\",\"position\":\"Staff Sarana Prasarana\",\"phone\":\"08123456781\",\"email\":\"toni.kusmara@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":2,\"nip\":\"197412311994031001\",\"username\":\"pengawas\",\"role\":\"pengawas\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":2,\"nip\":\"197412311994031001\",\"name\":\"Sutarsa\",\"position\":\"Wakil Kepala Sekolah Bidang Sarana Prasarana\",\"phone\":\"08123456789\",\"email\":\"sutarsa@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":3,\"nip\":\"198212311994031004\",\"username\":\"ani_nuraeni\",\"role\":\"unit\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":4,\"nip\":\"198212311994031004\",\"name\":\"Ani Nuraeni\",\"position\":\"Ketua Progam keahlian RPL\",\"phone\":\"08123456782\",\"email\":\"zim.zim@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":4,\"nip\":\"197412311994031005\",\"username\":\"zim_zim\",\"role\":\"unit\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T12:51:43.000000Z\",\"employee\":{\"id\":5,\"nip\":\"197412311994031005\",\"name\":\"Zim zim\",\"position\":\"Ketua Progam keahlian DKV\",\"phone\":\"08123456783\",\"email\":\"ani.nuraeni@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}},{\"id\":5,\"nip\":\"101\",\"username\":\"hf.dev\",\"role\":\"developer\",\"created_at\":null,\"updated_at\":null,\"employee\":{\"id\":6,\"nip\":\"101\",\"name\":\"hasban\",\"position\":\"developer apps\",\"phone\":\"089876543123\",\"email\":\"hasbanfardani@gmail.com\",\"email_verified_at\":\"2024-10-06 20:56:28\",\"created_at\":null,\"updated_at\":null}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/users\",\"per_page\":10,\"prev_page_url\":null,\"to\":5,\"total\":5}",
                             "name": ""
                         }
                     ]
@@ -3065,7 +3065,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"id\":\"nssrciatkmatldznkaapj\",\"username\":\"ptdhyldmarwuvlvyfcejz\",\"email\":\"maude81@example.net\",\"password\":\"#L*qCceF0t7nA\",\"role\":\"pengawas\"}"
+                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"id\":\"nssrciatkmatldznkaapj\",\"username\":\"ptdhyldmarwuvlvyfcejz\",\"email\":\"maude81@example.net\",\"password\":\"#L*qCceF0t7nA\",\"role\":\"unit\"}"
                         },
                         "description": ""
                     },
@@ -3347,7 +3347,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 13:21:33, 2024-10-06 13:21:33))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 14:27:02, 2024-10-06 14:27:02))\"}",
                             "name": ""
                         }
                     ]
@@ -3560,7 +3560,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"items\":15,\"users\":4,\"requests\":10,\"submissions\":11}",
+                            "body": "{\"items\":15,\"users\":5,\"requests\":10,\"submissions\":11}",
                             "name": ""
                         }
                     ]
@@ -3697,11 +3697,161 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IlJVRW9zSytVOVN5VWUveHNLVm9VR3c9PSIsInZhbHVlIjoiZDIzYmtBLzFUK1FodFg5aUlRdmNDOU5FRzgwbnZQNHVwR2lvd2FLQVJMblVlNmZiSXZvYnY0V1pKSU9WR2YyVFFHbDYwakJ6K3JJQVAxK0h3NmNQaWV2K0kxY2Zsem5LdXJhcmZrbW5VQjg5eEJXcjhSTC9mbVBkdVhGTG1NSUYiLCJtYWMiOiI3M2ViMTg5MGFlNjVlMjgxN2QxODcxMjQ1YzgwNzM4MjljNDczMDgzZmVjOGQzZThjNDIwZDA2MzRjNWZjOGVlIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 15:21:32 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Im5YN0tOeng3RlR4UFZxTnNHVGJMcGc9PSIsInZhbHVlIjoiRlh6Z0hxRzFOYUR2T2Z3QVhGTStnc0ZNR04vbCtXQ3ZSSklOa0JYQjRZQzRNRUpocmx1cTlMTVZxSW03VkdWeU82L3hhVmVUZm81M0R0dFJwNUt4OXoxUlhOYnpNWlk0ZGo0VmJEV1gxMU5sak0vL1REb0RJdWt5WW92SWdla20iLCJtYWMiOiJiM2NkMzdiOGJhYjExNjNmOTQ2MGJkNWI5N2FmMzQ0Mjc0NjIxMWI2Mjk4OWY1ODI4OGVkNDE4ODI1ZGU3ODYxIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 15:21:32 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; 2uD2N4NAPTFmk2vvbNHpy0I9tfN5XNBh7rRbThmz=eyJpdiI6IlNnckFQQWVsRGh3c1RQRHNrZDVKanc9PSIsInZhbHVlIjoiZERocm05VTc5NHZmQXFuY0lTc3VaREVkbEhlVGpYUEE2Um5UcEVhTnJmRnkzenVyaWtnekpZMGlVWGJVa2t1OXVUYjNIaWVJb0h3Mm05ZUwxTUI5d1ZBU3ZsYkZweTFQNmxZSVk4OThvdlljT0NRZ2p0YVJJUUVNQ1hPaEw2ZUxsdTdvNXAvUk9PUEY5VXJJd0ZpZmgrNnUvZEE5T0lRMWF3NmNEM3loajMvblJNYkpGODc4RU5oRUtxM3VKWUMzWDFxOEIwdU90eHRpMWZOYUVuRTBrcXhXajU0NExpM3paYjlBNGZjOEpmQ3d5M0ZGejZsd2R4NS91QWFBbW9ReW1TbElvbUhvL01LdEZjdU9EVWJ2NHNwRGYyMnBsL29udiswa0pRZHdSdE5rNW8zYkx5YzBESEFHZ3haaFdQTlJhZmdMYzVkRERWcnhDdEdVR2p1cnNMU0lxK0lDNUJPY2xWdUk2TTZSa0puTVZDbHh4ZWpSNHA1N0Y4dzIvZGhmM3FIZmMzNU0ycUZidElUcWkyRitYdz09IiwibWFjIjoiZjcwNGU3OGFlYzRlNWI5MTQxNTU3YzlhOTZkY2ViNTM0YWQ4MGI1ZGZiOTk0MDU4M2EyNzU1NmVjNmUwMDhmMSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 15:21:32 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IkMxN2pucDNaajUwMHRMSDNCdHBqRUE9PSIsInZhbHVlIjoiVFE5aFlpajZjTVhXa2tNQytXOTZJenNoYmV5VEptbHB2NWxVdTYzTUZyNUpSV25SRWpuMUFLQXpBcmxtQ3Qya0NGQzNqcWhYcjhCRmFYTmdJRHNKUldkN1krWkh1WHJTNkFSWEZpNitBL2hXWm5NVjJTcjhJN1RIWHV1WlZuRkUiLCJtYWMiOiI3ZmM2MWQ5OWY1ZWQyNDg5NDNhZTRhYWZiNmEyNDBhMzliMGMzNmY2OWVlYmI1OTgxYjYwMDdmOTJhMjEzZGU3IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:27:01 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InYrUW5tMFZuV280MThKM1Uxaytoa0E9PSIsInZhbHVlIjoidzMyWG5hTmRxcEQ2dGVFRElyS25VNTdUWGoxK0VOQUZqcEd3eHV3cDVyTVNlamp6WVJONWgrYmEwUmR3emt3dDVpZjhPaDk1ZDFWakZFcGFBWUlOYkc1blhFRkFnUnNOUFlnbG1OcGJadWJWSkNVVXRIU1N0b2JybnpOYU96elgiLCJtYWMiOiJiMDM4YzNhYjVjOWI0MDQ5Nzg5YTI3ZGRlNTc2ZTgzNzVkNTUxYWFkZDEyZTQ2MTdkYjhlMWI4MGVkZjA3NGQ5IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:27:01 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; qJrMyWl45lBoSYPaVqp8hC2U1fwi220llb2P1xAr=eyJpdiI6IjlwWm1DUjBXWVUxMzdwRVNVcHpRcFE9PSIsInZhbHVlIjoiNmUxQzdMWUdjT3c4M0NodmN4ZWkyaGlXeXFUWkxaeUVWZk1xQ1NUUzNDWFlJSnlKak9yalhWVEQwLzE0a2IvUy83aGlBZDRTbHE4a2M4T2FVSExWNU9hS1I3UnIzL1d6REVsRy95L3JaWVJGcFJaVGxQbE02UWxxNHZRTEZ1dDF0RCs1S0ZUa2t0N1phU0ZGK2ZnNkJRaTc2Y0tqT2cwVEF0eHlEWCt3bUl5cm5jYUZueDA5TExKcTZXMjd4YXBIN1UrVmt5bmVsbm9kYmNUMTBkVE5uRlREMzhyT3EwZThrQkdnNC96T0I0SzN5U0dGSXZ4QXJIdDVFU3NkVmRqMzQ5QW8vaFRQMXhiN2xqbS84NUcybkVrbTMzOXhlSkRWZ0V3b0N0a3VnU3Y1L1NhNHlVQ1FxRjF6UFV6VGRoQS9nMU52cmRKbEpTVHVFRHMzNkNBTzlMekh1NzhoMjhXOXRnc0w0M2htb09uQWtlYUZVZlQyeFZiZ0tWMi9RaHJDNWljUFV0OVQyTXQyR1V3REw4UHcrQT09IiwibWFjIjoiMjA4OGJhYTY2ZGVlYzllZWJlYmQ3NjAxZmJlNDlhYmRiMTZmOTQ1NjE0N2EzZTIyZDE0OTAxNTgzMjAzNTlkZiIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:01 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
                             "body": "",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET web-logeen",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "web-logeen",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/web-logeen"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6IlRZZnU1NktEdlNNVzlRVGs3bmxlUEE9PSIsInZhbHVlIjoiSjdlbU9iOUdYc2VpdFVwZWRNZ2hmUTdyaUFZREI5anZUMmNJVWxhc2t1NGF3UlhWSjJISlRBUDRLcVVxYmVVcFdQTVhTcXpaZ2pQeDEwRXhvS1Iwb3NNZkZ6dDRwY3NPWFI1OU9xdjVoUjBuN3R2cGhWLzdybmluU3JKa2xOa1oiLCJtYWMiOiJhYjQ0MmY4ODdiZWM3ZjUxNWRlYzliZDAzMDBjMjM4MWNlODJhZjJjZDM4YjBlM2VhNDExMzg5NGM4ODk3ZDk1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Inl6b09uaThsZlFDTXZORElGMmUyQnc9PSIsInZhbHVlIjoidW5aS3RGZjhuL0Qrd2dTVHBtWTdGWWtGSldzeHI2VTBwbHdXQTl3bXZHVTcxdlJiM1BCSkVCV2pNUDdINVVzTXJpaDhFTUxZVkxHc09RdkM1N1lrbFAyWU5KZG1kV1RlRmpUc05mVmRvWUhFa2FDMTJiSG5QMlhPMVNKR2VZK2EiLCJtYWMiOiJlYmI5MWU0MDRkZmFiZTE3M2I2NmYxMDcyNWZiZWNiNTJiYzcyMzY4MjNjODYzZDhkMDBiMWMyNzQ0ZTg1NDlkIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; qJrMyWl45lBoSYPaVqp8hC2U1fwi220llb2P1xAr=eyJpdiI6InAvYis3dzEvUENkRE9mVHJjZU9qWXc9PSIsInZhbHVlIjoiWnFJVGYwUEh5OGRYZlZBdEZETHhwcDVjYm1hZzFRSHNqOG43cnVYMCtNcFA4UVFIY1hUbXFIaFNQcjVxOEJBQlQxeTg1dUlORWRVK0V6RDVyMW5rTlNySGI2OGlKQXJ5clBEUHZkUWZEbnJiNVFIOTUyZnpIMzFXVkZ4dXZLTU1kMDkza1dYTy9ZMXVUeVBOWFF2V3J3eVNLUUtINC9aK08wdXgrUWFicXp0SmFGeFVLZTBrSWVjUk8yRE1DYXM2RHcwZ3FzbVQ5M2RHT3pncjdUUzhFbmlEd21aMHc4ZG02WllXYm5SeXhUZHRjMjlDZWZGcDRwTm9YOEtzblkrOWFqOWl0SzYxRjJySDhMNmZzcTd2QVkwREZxd3p3UGtSU0h0bFdrV3lxSlVjVVBGdFNIdUVuRS9ad20wRmVhdXFXU1NEU1lUYnZjSG42bEJvZlFURHNLaHJuQ0lKN255bmRPRTErbU5JVHlJYlFKKzFuMFc4cUpUc0ZpVFh3d3NqT0JjRFdGemRKaklVSngyZzlwNHBrdz09IiwibWFjIjoiYWNhYzUwNDE3OTk3ODMwYmNiNTc4MDEwZDM3ZDEwMzg2NmNlNDcxYTY0ZTI1MWM0MmJjYThjMzU3NTdkOTdiMiIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:01 GMT; Max-Age=7198; path=\/; domain=localhost; httponly; samesite=lax; NGEXsEpguYWOc56M6mAb5qJEgGRbuhPZsA0wIR6l=eyJpdiI6IlRnTXI1Y3V0ejJqVkhPVnZBU0xPN1E9PSIsInZhbHVlIjoiS0xZRnNzb0xMN2c1dThSYS9NNmkwbnEzUTVGeW5xbS94K1VKOHY4NDNzR0dPQ3lYbUdlMTBVZFJqZnZTZXpaWTF0c01QeTl1ZytKRS84RDk2WVFScjcxeC9XZEtDZXZlSzQrcTcxbVlPbVFuU1J1RFNpbnA4UndYeERpWi9GbU5rSUtxUjFBN1FmREN6ZmZqdy9KcmhyaHRUT2JGK0dzVjhOVVlBc0RtZ2FTTnNmU25kd0U2VWZCT3AzQlJwVDJOcFlPenptTzNSODE3c2pudDQ2U2MxdHZSMk9hZzY4UmZlS1FLQmRpNllxOE5WY1BRM1hMdmJORWpMZ0RTNjJtWFRVekNObW1pa1c0OGpjOElabnFyNFlLVGhNQ0RHS0l4VGxhTjVlWlYvRS9IU3c4c0FMM2tJbUIzMUM2NE8zMzBGZ3dqYXY0YXA0aUZ4UjRramUxWUpsRytBYTBWTXdGOFRnMVpKcFdZeExSVlJzUjcvK0Y5UVlRUWc4K3QyNkY4IiwibWFjIjoiOTk3ODUzZmRmY2NjZWRjMWRhZWM0NWUzMDUzYzJhNjQxNzBlOThiZmVlMGJjMTUwN2IxYWIxNjVmMzkwMGQ5ZCIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>none<\/title>\n<\/head>\n<body>\n                <h1>You are logged in<\/h1>\n        <form action=\"http:\/\/localhost:8000\/web-logout\" method=\"post\">\n            <input type=\"hidden\" name=\"_token\" value=\"gnzC8pavLgebpFokFz4Fyaf0y55nx2oydo4ErlsT\" autocomplete=\"off\">            <input type=\"hidden\" name=\"_method\" value=\"DELETE\">            <button type=\"submit\">Logout<\/button>\n        <\/form>\n        <form action=\"http:\/\/localhost:8000\/do-web-login\" method=\"post\">\n        <input type=\"hidden\" name=\"_token\" value=\"gnzC8pavLgebpFokFz4Fyaf0y55nx2oydo4ErlsT\" autocomplete=\"off\">        <label for=\"nip\">NIP<\/label>\n        <input type=\"text\" name=\"nip\">\n        <label for=\"password\">Password<\/label>\n        <input type=\"password\" name=\"password\">\n        <button type=\"submit\">Login<\/button>\n    <\/form>\n<\/body>\n<\/html>",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST do-web-login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "do-web-login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/do-web-login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nip\":\"consequatur\",\"password\":\"consequatur\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6InR1ZHFQRmw3cEZ4a0FIaE1wQ3gycEE9PSIsInZhbHVlIjoiMHB2bVJkbzRKemlJakQydmljNmxXbmIza0Z6VEFKei9mUk5NaXF5cnFzb2ZDM3F6QURPRFFMc2IwWjRJWm9FZitDcGR0TEpNWGJkODdnVUhta2l4ZUVEaU9vNjZxam9mcFJmanY1TjU0NXpHQ1BNYVo1aSt0MGRqbXJNMzZzM1YiLCJtYWMiOiI3ZGE3YzgwYWM4MWQxYWJlZGI2Nzg3YjlkNWU5ODg2MDI2MzhlOTVlZmJlNDAwYzE1Nzk2MDg2MDBkYmRmZjlhIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6ImVsSjhYY2N5NFBLeDBiMC9CbmEwNHc9PSIsInZhbHVlIjoiUjN5RHdaRzBtN1Z0MmRqZW1qWXJ1K1RKYU5Ic2gzVUR0ZUJ3TnVLUkxVVEovcnA1OHpZWFlia2lTV0dLU29GRDFnaE1SMmdTb1Y3Y1czTVF2S2VtbGlYV2gvMTJvcHVqeEsrdTM0cWx6NGU5Q1JqWVF1TlpwS1RvNzJXamFjVXgiLCJtYWMiOiJiZTFkYzJlMWUyMGNlZGFmMDM5OWQ3MThhZjVhNTYzNDA4ZmVhZDc2NTY4ODRhZGI2NWI4NTVmMGM0Y2QyYTMyIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; qJrMyWl45lBoSYPaVqp8hC2U1fwi220llb2P1xAr=eyJpdiI6IlVCZG42b3VQM20zbHBRYVNJS1pmTlE9PSIsInZhbHVlIjoiMVlENkRteGlVeU1XTXFYUjB0S2duOTVLRld6blV0Z1NRbVZuaCsyS0tTOGxLN1Z0MmVUekl1L0hycDMzb1UxMzFoVVc0Ri9NVFNnaXhaamdtcC9xSDlYVXJnVlUzQlRUYXFVc2V5bUR6NGhuMWRNYmdLTTVOUEY1S2t4c0ZuWXNaZ1I1VWIvd3FTWFBaeC9JZHprTTZ5UXpFWEtGV0RHK3BOYVNhd0JXalRTVHVJcWF4d0NWRER6MW85MkpUMmcxMW9iendtZTA3U3B1YUg0OFVhcXd6NFd2MGE0L0NvdmxCK0lQdmFseUpJbVFncFc1Wk5na09rNVI2bzRYdjM0eUtDUGJjZ05yZHpVdnArTldNY1o3dnN5Q3E2UHVnTDhralI4VjN5Q2xFNU9TNXhIUXdKcHpMRUxvRDlPQkpBeWxxRlBnMmc2L1phY01mQjVWTVNTM2E2b1pJUFQ1MDMwSDVMQk5EVE1wUmxRMzMvaUtuajdZbWZzQ0Y5TCtFUUt4Y2d0aFV6TysrSVMxMU5hMXM3a3pEZz09IiwibWFjIjoiNDBlOWQ5NzAxMjBhODZhNjViY2YxMDBkZGFlNjc2NzhjYjk4MWI2OTlkZDQ2MTM3MTZkNGI4Y2E1YjQxMzMwNiIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:01 GMT; Max-Age=7198; path=\/; domain=localhost; httponly; samesite=lax; NGEXsEpguYWOc56M6mAb5qJEgGRbuhPZsA0wIR6l=eyJpdiI6InN4d29DbVVkVU4wNWROai9aN0VUU3c9PSIsInZhbHVlIjoiWkd4a3NaWTNETk04QlhxSnBhYUh4NU9BeGJPYlNFMDY5aHM4TGd5bVJsWlpBZ1U1ay9vbDVkRHBRNm1TdHpHWDlTL3BGeVY1SFczNVh1MlB4aE9wQ3dZMHRGVkFFQ0pIN2dBYTF1SlhTOG5mUGIzYnpGK3pxZCttMk10UENLcWhKMEZvQ0tLb3lURUEwNU5sWjJRU29STDEzcEFlYnZCNWlNcDVvWGdJMFlGL0Z4MnljMWFmUDV4Mmduemt3Z3AvMUs3NFZ6ZFZRdW9OajlVZXpBYmVBOEU4MDNLM20zVFF3MFE4WGZoT1hrdExvUEpzeG5Wb0llRUNZYXNTQTJaY1FEaFZENFlJL2M1QmZSSDgwRzFvY1hncGlmSmJGRGExbENhaWg3YUthdnR6ZTduMkNmbGN5bzFnR3h6ZEFBc3AwN2p6MG5XSVdyand4WGd4ci82Zk9PQWlGb042SXZaTFBJV3poZlVpQnc1SWVQMHhMSEsxQU9NSCtkS1M2VHkyIiwibWFjIjoiOWYxZDBmYjZjNTQ5M2FhMTgyZTUzZmFjNDk5ZmE3OWZiOTZmMDdiYzFmZTA3MmFhZGE4MjVmNmE2ZDI2NjhkMyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; rKEkP7agC9kemQkiQSCJHk0eRBnfW6rD2qDl7NM2=eyJpdiI6IkRLT2tJQ2liYzhXNDUvNDAyUXVTSlE9PSIsInZhbHVlIjoiSm4wUUN4RCtObXdDM3RaOTdZSERWaE12eUJaZjZjbGRPNkZlNWg5WXQzVTZ5dHROYmJkaFRHN3pqOXFGQVdVWldYVHJmZnFzOTBYZzFFNkF6d2NwMXJWaHZadXFYOEI0SndSaUhwaHlnL0RSRkFjOWVEdHNIUkh2dmZHVkNYa3g2a3dZM0VUM0RsTkxBVkNjVlBEYmFBWS9RTVpOekVFUFdpWkVEU3Z2eHN3bU1Hb2JSQ040aE50Zm10NlFhdlMzd1ltN0hNUlFMYUs2N0RzUWhqamZXWlpjNFB5dDdZUXVBT25pdnUzS29VOUZJeGVtYkVqd0pmaDA3R2FSRXZTVWQzUHE1aEswdThOL0NvNEpMMFZNVFZ1aFRmSmt6WXRFcFZwbEptYWppaUJCbldLRzExOVdsNVJQMzFQOGRtRDR0Wnk0NVNMUnF4VUF6VGJ5bjU0czhSeC9kUlVoM0tNc3RpVHBkNGhPM3VweFJYcVo0bEpDdjdyaXVNMGJXNmVrIiwibWFjIjoiMGEwMzM0NDNiMmE5MDgwNGYwZWE5ZGM1MTkwNDcwYzg0YTgzYjNlM2U0NWZlMDFiYTcxODBkZGMwODIyNmVlNyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\"message\":\"Method Illuminate\\\\Auth\\\\RequestGuard::attempt does not exist.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "DELETE web-logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "web-logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/web-logout"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6ImVPZEhVc0pMNkdZTmZYaE9ySXRuMUE9PSIsInZhbHVlIjoiU1BIN3hYaTA5WlkyOGNjR1gxT3g3eEppU1kzRFNjeDY4Qjd0M2diV2pEdXFzNlJFZTV6WWY5ME02dllnci9hdU03dTViNnVxRDhnSjdPUklXS1dqcDl3bFJ1b1BIMVBnSlNxSWgxdWlSblIzK1FPWWRNZVpxYTRwdVk0cUF6blYiLCJtYWMiOiJlYzk4YzhkNDg5ZWJmN2I5MmJlZjBmNmRiYmFlOTFkZTFkY2VhMmJiN2M4OWM1ZWFhNjVkYTY1MzJmMTkyMGNhIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Ik84akhQa2tTRjZXK3k0UUJHdkpqTVE9PSIsInZhbHVlIjoiRzhtWTkwMjc4ajhMU201SlNtWENQalRPcFRQUHZyNktzUzQvMTNBOUtobHc0WEI5V0pOWkNDUkhEenQ0c24vbGR4WThSOWpmSXd5NzN5amJ5aXZRNG1xeklOWTNWZnMvUnNVTXl1VTF2K0JpeGswTENaSTBtNnovMXhwaXJrTngiLCJtYWMiOiJlMjkxYzc0MTY5MzQ0ZWU5NTdkNzk4YWJmZWZjOWRmNDNjMTYzM2ViZGZlZThlZmY3OWVkZDQwM2ZjNzM1NGM1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; qJrMyWl45lBoSYPaVqp8hC2U1fwi220llb2P1xAr=eyJpdiI6IkR1Y2VwZ1hyblU3bXBBRzFpbTFhWlE9PSIsInZhbHVlIjoiV1NMM1VjQWJTQWtrMDVPMDdUQUlqcVhhNTVqWUFzc2llUVJUdEJ0NDU5Yk5Cb0pVQ3FaM2JRVGsrM0hBejJtVVF1RXM1RTl0aG9oSCt3alZqUXVGSFlUaHU4MTZvUkwxenoxT1dYQXhXRUJCU01JMi9CSVlpK3QvcmJJcmY0SDI5eGxiZGV5OEdwY25xR0dVYlBVZ1RmcEY0Zmx0MW9nMlJpZ0VtajZ1eFRjcEVmSjA4SEwrWUpPa0tkSFpLd1dxOVFmVnlxWmExYnZKSmZjMnkxcHNwdmFiK1RiNWQvaURlZnI2eXUzUlpaUXRROW9MaDV0Ymx5eE00U1J6cklHZGcwL21pZi9RR24razYrUEVyM3EwMVRwUnZTa3ZPaTFYRGphUm50T3NURzAvYUM1WUdGRklEQ1NIMUg3OTFQQ3VKY1F6NHh5aHJSa2RZQUpXaU1nWEJoZ2RzWDlEbkhjK3J1S21Za0hmdlIyVWErSGZNa2h5UUp3Vk01bE4zYnh2YnZPN1BJS1JqTjlTQ1dzTjhmamRDQT09IiwibWFjIjoiOGU1MTg3YjViMTU3ZTg3ZTEyNjI1ZWZhYTE1MDUzMjdmZDIzM2Q1YzdjYjJiOTMxNGM0NDA0Y2Y5NGRhZDhkYyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:01 GMT; Max-Age=7198; path=\/; domain=localhost; httponly; samesite=lax; NGEXsEpguYWOc56M6mAb5qJEgGRbuhPZsA0wIR6l=eyJpdiI6ImtibWhtZHJPNWdsL21DZ3JXTENxeGc9PSIsInZhbHVlIjoiZUJqMXI3WnhCdEF6TEU3MXNua2NsV2dZMlBqWkJHYmlaVm9vVi9XY3Z2bzZySlk4TE1ROEtiNWtVVEZNZGRvaVArNUVTQXViV2VKaTQxcnA5Q2hGZ2pwNXExNjExSENQV0NzellUMzhmYjl4SHZnWC9BZzVsTlcwQ3FvaGtMdFdjVUR6aithUlhiTUtVWkpBZFdLT2dRZkU5bit6YUVFVGp5L1NxQWI0WndreWFwRTNOY2MxQUFMUmNFaUZ4dDhkZFFOeFZJVjhkcmRCMVdTajdJcHYwMENGSHRLeFB5YVdBMWt5cS90MzlxbEU2S3ZLVGJ2andldmpFWmY3Si9rbEVYVjFmVXdhU1FWVVpwUExaQTErMm5DaVo5MGhmSlEyMUIxaTd3ZDFRUHhSVnZicHRDalF1S1ZKMjN1Q3AzVHdvcGs3NlpKcERPK0YxTlBZSStwUTcvWTFKbFNlQVcydVpDSC9xdHVrZVppSjc3TkpiQUdEZXZjZGd4MG5OSUc2IiwibWFjIjoiNDMzNTkxZDExNzM1Yzk2NGNmM2EwMTE1YzFjMWYzMWZlZGU3YWRlN2ZkNTA0ZDMwNTFhM2Y3YTFlYjIwM2I4MyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; rKEkP7agC9kemQkiQSCJHk0eRBnfW6rD2qDl7NM2=eyJpdiI6ImxMdy9IbzRVOTU1WVhsV2JVUFRraXc9PSIsInZhbHVlIjoiUHFuYWlIbzVGK1FHRzBJcnVOQjdXSFltZ1lhYURyYllHK3FFV3JSWWFkRENCQnd6aEgxc1lqS0xVZ2VlK21VRzZzVVpiZVRXNkhVclZYY0xLUzFIanZFY3h6aGl2dDBzUGhVTVNLWXBWN2x0Sy9VZXRPUXl3SGY3Zk01UFBWN3FxNUZTNXdHVTRQdFhFdXpLQ3NIWUtnY0lLekFFOEpsamlMWEYyMzgrYnJaVDhyR1c5R2VTdStRcEkwR3N1YWpoNmlvSk1MNEFSMjRFeDBkZ1ZaNC9POFlOVVB4Y0YyQUtjYklKZnk0NlVLVjhTazhaQmg2aU5Td28vZUFRRFJMMlVIbnVxazFXcEs2VytnbW5BL0JQWHdlVUNYdVBCMlNxZHBjRlI2SHBOVnh0c2E1NzRuUWhKVGxES25CMDA5dTA5ZXhTejh6Kzh5THJTZmtxTy9QcStSSVl0eDlsVHFJVkgwYXlXR2YxS3dDcTFUdWZPYVp4REhpdHlTZUZRMGtPIiwibWFjIjoiYWFkNmQ3NjMyYzJiZmRlZDhjN2Q5MmU2NjJhM2Y3OGVlYzczNzdlZGY3MWU5ZjBiZDBjMzU4NzVhNmNiODBjNSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; 08T0M00yPo50YU4cGwqWnCMg6Hp5I8T5j62CvzHx=eyJpdiI6ImZGaXU5ai9XaWtrNERkNVRFZDJHSnc9PSIsInZhbHVlIjoiajl3TXd4VzRNdXFoLy9JdDF0L092L3FSWjJ1WWxWdUE5ODVTeGRUVVZISGRoWERnVlp0eE02QXpRcTFYclFEenFoK3c3Z3JtdHVrSWw4QmRvNUw4dW1lMzM4YXcva2hhNnhEdVBFdkxyR0Z6Wm8rTWtuOXU4OFl1OHBLRnNHOVQ4MkFjc1V6Z0hiZ2dSbG9YUXRycUg1WHRPeVdSYWpOcjFlbzdjWXdDbk5QWDN1TzUrM0RqYm0rUDg2NUpiczViNEpOZHBSWEJMZmdsY01OeXNtZVBLNkkrTnhvVjdGaVBJZ3BmNnd2aGxVV2pBeDFadk41bDJRT3RsRUFMK3Z5ZE4rL1dLazE2OGJ5K3l0UGRtWkVicFVqOVBNZmE3bUZPN2RyQ3RPeEZ0aWhab3VxMnBnT2V2TWlGc3RYb3FGaytneXJuYVI3c1R4WTNaNXJpRVZZMllXZlBCTnNTWmVOSmd0M1hGUHlPdmk4N0FiUFFVYXlNeS9Fa0pyRDF6RXRyIiwibWFjIjoiOTE5MTY2ZjdmM2VkYTA1Nzc5NDE2Y2U0ODc5YWE2ZDMzNWQwZWFhZGUxNTRhNzQ1MmNhN2ZlNmFkNGVjMDhlNyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:27:03 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\"message\":\"Method Illuminate\\\\Auth\\\\RequestGuard::logout does not exist.\"}",
                             "name": ""
                         }
                     ]

@@ -121,7 +121,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success create incoming item and updated stock","data":{"code":"IN-8d880f5","employee_id":3,"supplier_id":6,"updated_at":"2024-10-06T13:21:32.000000Z","created_at":"2024-10-06T13:21:32.000000Z","id":18}}'
+        content: '{"message":"success create incoming item and updated stock","data":{"code":"IN-4d50739","employee_id":3,"supplier_id":6,"updated_at":"2024-10-06T14:27:01.000000Z","created_at":"2024-10-06T14:27:01.000000Z","id":21}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

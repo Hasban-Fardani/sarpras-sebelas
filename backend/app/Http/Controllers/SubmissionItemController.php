@@ -49,7 +49,9 @@ class SubmissionItemController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a new Submission item
+     * 
+     * @bodyParam submission_session_id integer required. Example: 3
      */
     public function store(SubmissionItemAdminRequest $request)
     {
@@ -65,10 +67,13 @@ class SubmissionItemController extends Controller
 
         // directly create a new array with only the needed keys
         $data = [
-            'code' => $validatedData['code'],
-            'user_id' => $employeeID,
-            'total_items' => count($validatedData['items']),
+            ...$validatedData,
+            'status' => 'draf',
         ];
+
+        if (!array_key_exists('division_id', $validatedData)) {
+            $data['division_id'] = $employeeID;
+        }
 
         // create submission item
         $submission_item = SubmissionItem::create($data);

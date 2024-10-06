@@ -52,7 +52,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: unit
+        example: admin
         type: string
         enumValues:
           - admin
@@ -71,13 +71,13 @@ endpoints:
         custom: []
     cleanBodyParameters:
       password: consequatur
-      role: unit
+      role: admin
       username: consequatur
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$RNOcny7ePH\/xIYHm7tFZ\/OMSSj66IobbiRZw9cq5IMApDKZ4hVUv6, unit, consequatur, 2024-10-06 13:21:33, 2024-10-06 13:21:33))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$ubay.\/M6bLcKLZuk82ytHuX8VoTzbUi5UMijrD26RWXL3ADCqYg\/K, admin, consequatur, 2024-10-06 14:27:02, 2024-10-06 14:27:02))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -177,7 +177,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get all employees","current_page":1,"data":[{"id":1,"nip":"198012311994031002","name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":2,"nip":"197412311994031001","name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":3,"nip":"197806311994031003","name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":4,"nip":"198212311994031004","name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":5,"nip":"197412311994031005","name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/admin\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/employees","per_page":10,"prev_page_url":null,"to":5,"total":5}'
+        content: '{"message":"success get all employees","current_page":1,"data":[{"id":1,"nip":"198012311994031002","name":"Yani","position":"Kepala Sekolah Bidang Kurikulum","phone":"08123456792","email":"yani@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":2,"nip":"197412311994031001","name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":3,"nip":"197806311994031003","name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":4,"nip":"198212311994031004","name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":5,"nip":"197412311994031005","name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null},{"id":6,"nip":"101","name":"hasban","position":"developer apps","phone":"089876543123","email":"hasbanfardani@gmail.com","email_verified_at":"2024-10-06 20:56:28","created_at":null,"updated_at":null}],"first_page_url":"http:\/\/localhost:8000\/admin\/employees?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/employees?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/employees?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/employees","per_page":10,"prev_page_url":null,"to":6,"total":6}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -272,7 +272,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 13:21:33, 2024-10-06 13:21:33))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:27:02, 2024-10-06 14:27:02))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -433,7 +433,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success update employee","data":{"id":1,"nip":"tjqotbhpzwonwlzospqcs","name":"consequatur","position":"consequatur","phone":"consequatur","email":"joy.schultz@example.org","email_verified_at":null,"created_at":null,"updated_at":"2024-10-06T13:21:33.000000Z"}}'
+        content: '{"message":"success update employee","data":{"id":1,"nip":"tjqotbhpzwonwlzospqcs","name":"consequatur","position":"consequatur","phone":"consequatur","email":"joy.schultz@example.org","email_verified_at":null,"created_at":null,"updated_at":"2024-10-06T14:27:02.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

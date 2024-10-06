@@ -22,7 +22,10 @@ class SubmissionItemAdminRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'submission_session_id' => 'integer|exists:submission_sessions,id',
+            'division_id' => 'integer|exists:employees,id',
             'code' => 'string|nullable',
+            'note' => 'string|nullable',
             'items' => 'required|array',
             'items.*.item_id' => 'required|integer',
             'items.*.qty' => 'required|integer',
