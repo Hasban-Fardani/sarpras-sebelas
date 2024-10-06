@@ -1,23 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\IncomingItemRequest;
 use App\Models\Employee;
 use App\Models\IncomingItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 /**
- * @group Incoming Item Management
+ * @group 3. Incoming Item Management
  *
  * API endpoints for managing incoming item
  */
 class IncomingItemController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display list of incoming item.
      */
     public function index(Request $request)
     {
@@ -45,26 +45,32 @@ class IncomingItemController extends Controller
         $data = $data->paginate($perPage, ['*'], 'page', $page);
 
         return response()->json([
-            'message' => 'success get all item-ins',
+            'message' => 'success get all incoming items',
             ...$data->toArray()
         ]);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store new incoming item and update the item stock.
      */
     public function store(IncomingItemRequest $request)
     {
         // get validated data
         $validatedData = $request->validated();
 
-        $userNIP = auth()->user()->id;
-        $employeeID = Employee::where('id', $userNIP)->first()->id;
+        $userNIP = Auth::user()->nip;
+        $employeeID = Employee::where('nip', $userNIP)->first()->id;
+        
+        if (!array_key_exists('code', $validatedData)) {
+            $hashes = 'IN-' . hash('sha256', now());
+            $validatedData['code'] = substr($hashes, 0, 10);
+        }
+
         // directly create a new array with only the needed keys
         $data = [
+            'code' => $validatedData['code'],
             'employee_id' => $employeeID,
             'supplier_id' => $validatedData['supplier_id'],
-            'total_items' => count($validatedData['items']),
         ];
 
         $incomingItem = IncomingItem::create($data);
@@ -82,13 +88,13 @@ class IncomingItemController extends Controller
         DB::statement($sql);
 
         return response()->json([
-            'message' => 'success create item-in and updated stock',
+            'message' => 'success create incoming item and updated stock',
             'data' => $incomingItem
         ]);
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified incoming item.
      */
     public function show(IncomingItem $incomingItem)
     {
@@ -99,7 +105,7 @@ class IncomingItemController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified incoming item.
      */
     public function destroy(IncomingItem $incomingItem)
     {
@@ -115,7 +121,7 @@ class IncomingItemController extends Controller
 
         $incomingItem->delete();
         return response()->json([
-            'message' => 'success delete item-in',
+            'message' => 'success delete incoming item',
         ]);
     }
 }

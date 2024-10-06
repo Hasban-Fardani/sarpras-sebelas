@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemStoreRequest;
 use App\Http\Requests\ItemUpdateRequest;
 use App\Models\Item;
@@ -10,7 +9,7 @@ use App\Services\FileService;
 use Illuminate\Http\Request;
 
 /**
- * @group Item Management
+ * @group 2. Item Management
  *
  * API endpoints for managing items
  */
@@ -23,30 +22,19 @@ class ItemController extends Controller
     {
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
+        $sort = $request->input('sort', 'created_at');
+        $sortDir = $request->input('sort_dir', 'desc');
 
         $data = Item::with('category:id,name');
 
-        // search by name
-        $data->when($request->search, function ($data) use ($request) {
-            $data->where(function ($query) use ($request) {
-                $query->where('name', 'like', '%' . $request->search . '%');
-            });
-        });
+        $data->filterRequest($request);
 
-        // filter by category
-        $data->when($request->category_id, function ($data) use ($request) {
-            $data->where('category_id', $request->category_id);
-        });
-
-        // sort
-        $data->when($request->sort, function ($data) use ($request) {
-            $data->orderBy($request->sort);
-        });
+        $data->orderby($sort, $sortDir);
 
         $data = $data->paginate($perPage, ['*'], 'page', $page);
         $data->getCollection()->transform(function ($item) {
-           $item->image = FileService::getUrl($item->image); 
-           return $item;
+            $item->image = FileService::getUrl($item->image);
+            return $item;
         });
 
         return response()->json([
@@ -57,13 +45,18 @@ class ItemController extends Controller
 
     /**
      * Store a newly item in storage.
+     * 
+     * @bodyParam category_id integer required The category id. Example: 1
      */
     public function store(ItemStoreRequest $request)
     {
         $data = $request->validated();
-        $hashes = 'I-'.hash('sha256', now() . $data['name']);
-        $data['id'] = substr($hashes, 0, 10);
-        
+
+        if ($data['code'] == null) {
+            $hashes = 'I-' . hash('sha256', now() . $data['name']);
+            $data['code'] = substr($hashes, 0, 10);
+        }
+
         $path = FileService::store($request->file('image'));
 
         $data['image'] = $path;
@@ -88,6 +81,8 @@ class ItemController extends Controller
 
     /**
      * Update the specified item in storage.
+     * 
+     * @bodyParam category_id integer required The category id. Example: 1
      */
     public function update(ItemUpdateRequest $request, Item $item)
     {
@@ -98,7 +93,7 @@ class ItemController extends Controller
             $path = FileService::store($request->file('image'));
             $data['image'] = $path;
         }
-        
+
         $item->update($data);
 
         return response()->json([

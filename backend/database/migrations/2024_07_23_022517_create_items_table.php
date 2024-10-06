@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('name');
             $table->string('unit');
+            $table->string('merk');
+            $table->string('type');
+            $table->string('size');
             $table->integer('stock')->default(0);
             $table->integer('min_stock')->default(0);
             $table->integer('price')->default(0);

@@ -25,12 +25,15 @@ class ItemUpdateRequest extends FormRequest
     {
         return [
             'image' => 'file',
+            'code' => 'string|max:255',
             'name' => 'string|max:255',
-            // 'merk' => 'string|max:255',
+            'merk' => 'string|max:255',
+            'type' => 'string|max:255',
+            'size' => 'string|max:255',
             'unit' => 'string|max:255',  // satuan
             'stock' => 'integer',
             'min_stock' => 'integer',
-            'category_id' => 'string',
+            'category_id' => 'integer',
             'price' => 'integer',
         ];
     }

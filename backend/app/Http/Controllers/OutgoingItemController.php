@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\OutgoingItemRequest;
 use App\Models\Employee;
 use App\Models\OutgoingItem;

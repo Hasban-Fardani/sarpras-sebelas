@@ -53,7 +53,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -82,13 +82,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: '18]GkE%F'
+        example: ''
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: '18]GkE%F'
+      path: ''
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -96,8 +96,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 404
+        content: '{"message":"Not Found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -108,7 +108,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null

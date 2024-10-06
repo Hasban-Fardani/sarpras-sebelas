@@ -1,17 +1,17 @@
-name: 'Outgoing Item Detail'
+name: 'Request Item Management'
 description: |-
 
-  Manage outgoing item detail
+  API endpoints for managing request item
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'admin/outgoing-item/{outgoing_item_id}/detail'
+    uri: request-item
     metadata:
-      groupName: 'Outgoing Item Detail'
+      groupName: 'Request Item Management'
       groupDescription: |-
 
-        Manage outgoing item detail
+        API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
@@ -22,18 +22,8 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      outgoing_item_id:
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      outgoing_item_id: 1
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -41,8 +31,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 200
+        content: '{"message":"success get all request items","current_page":1,"data":[{"id":1,"code":"RQ-001","employee_id":4,"status":"diajukan","note":null,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":2,"code":"RQ-002","employee_id":5,"status":"draf","note":null,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":3,"code":"RQ-003","employee_id":4,"status":"disetujui","note":null,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":4,"code":"RQ-004","employee_id":5,"status":"diajukan","note":null,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":5,"code":"RQ-005","employee_id":4,"status":"disetujui","note":null,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":6,"code":"RI6631","employee_id":4,"status":"diajukan","note":"Et veniam corrupti molestiae vero sit accusantium qui.","created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":7,"code":"RI3608","employee_id":4,"status":"ditolak","note":"Non est aut quaerat adipisci perferendis sit ab.","created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":8,"code":"RI7343","employee_id":5,"status":"diajukan","note":"Esse totam aut est facilis id cumque harum repellat.","created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":9,"code":"RI8247","employee_id":5,"status":"draf","note":"Quibusdam sed ut iure necessitatibus vel officia.","created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":10,"code":"RI6382","employee_id":1,"status":"disetujui","note":"Perspiciatis similique ut incidunt dolorem possimus saepe.","created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","employee":{"id":1,"name":"Yani"}}],"first_page_url":"http:\/\/localhost:8000\/request-item?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/request-item?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/request-item?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/request-item","per_page":10,"prev_page_url":null,"to":10,"total":10}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -53,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -61,12 +51,12 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'admin/outgoing-item/{outgoing_item_id}/detail'
+    uri: request-item
     metadata:
-      groupName: 'Outgoing Item Detail'
+      groupName: 'Request Item Management'
       groupDescription: |-
 
-        Manage outgoing item detail
+        API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
@@ -77,47 +67,17 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      outgoing_item_id:
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      outgoing_item_id: 1
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      item_id:
-        name: item_id
-        description: ''
-        required: true
-        example: 4
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      qty:
-        name: qty
-        description: ''
-        required: true
-        example: 17
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      item_id: 4
-      qty: 17
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"Internal Server Error"}'
+        content: '{"message":"Method Illuminate\\Http\\Request::validated does not exist."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -128,24 +88,23 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
     custom: []
   -
     httpMethods:
-      - PUT
-      - PATCH
-    uri: 'admin/outgoing-item/{outgoing_item_id}/detail/{id}'
+      - GET
+    uri: 'request-item/{id}'
     metadata:
-      groupName: 'Outgoing Item Detail'
+      groupName: 'Request Item Management'
       groupDescription: |-
 
-        Manage outgoing item detail
+        API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: true
       custom: []
@@ -154,56 +113,26 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      outgoing_item_id:
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
+      id:
+        name: id
+        description: 'The ID of the request item.'
         required: true
         example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      id:
-        name: id
-        description: 'The ID of the detail.'
-        required: true
-        example: maxime
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
     cleanUrlParameters:
-      outgoing_item_id: 1
-      id: maxime
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      item_id:
-        name: item_id
-        description: ''
-        required: false
-        example: 7
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      qty:
-        name: qty
-        description: ''
-        required: false
-        example: 8
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      item_id: 7
-      qty: 8
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"Internal Server Error"}'
+        content: '{"message":"Call to undefined relationship [user] on model [App\\Models\\RequestItem]."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -214,7 +143,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -222,12 +151,12 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'admin/outgoing-item/{outgoing_item_id}/detail/{id}'
+    uri: 'request-item/{id}'
     metadata:
-      groupName: 'Outgoing Item Detail'
+      groupName: 'Request Item Management'
       groupDescription: |-
 
-        Manage outgoing item detail
+        API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
@@ -239,18 +168,9 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      outgoing_item_id:
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
       id:
         name: id
-        description: 'The ID of the detail.'
+        description: 'The ID of the request item.'
         required: true
         example: 1
         type: integer
@@ -258,7 +178,6 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      outgoing_item_id: 1
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -267,8 +186,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 200
+        content: '{"message":"success delete request item"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -279,7 +198,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null

@@ -1,17 +1,17 @@
-name: 'Request Item Detail Management'
+name: 'User Management'
 description: |-
 
-  API endpoints for managing request item detail
+  API endpoints for managing users
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'admin/request-item/{request_item_id}/detail'
+    uri: admin/users
     metadata:
-      groupName: 'Request Item Detail Management'
+      groupName: 'User Management'
       groupDescription: |-
 
-        API endpoints for managing request item detail
+        API endpoints for managing users
       subgroup: ''
       subgroupDescription: ''
       title: 'Display a listing of the resource.'
@@ -22,18 +22,8 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      request_item_id:
-        name: request_item_id
-        description: 'The ID of the request item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      request_item_id: 1
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -42,7 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get all request item details","current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/admin\/request-item\/1\/detail?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/request-item\/1\/detail?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/request-item\/1\/detail?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/request-item\/1\/detail","per_page":10,"prev_page_url":null,"to":null,"total":0}'
+        content: '{"message":"success get users","current_page":1,"data":[{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-06T04:04:43.000000Z","updated_at":"2024-10-06T04:04:43.000000Z","employee":{"id":3,"nip":"197806311994031003","name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":2,"nip":"197412311994031001","username":"pengawas","role":"pengawas","created_at":"2024-10-06T04:04:43.000000Z","updated_at":"2024-10-06T04:04:43.000000Z","employee":{"id":2,"nip":"197412311994031001","name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":3,"nip":"198212311994031004","username":"ani_nuraeni","role":"unit","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z","employee":{"id":4,"nip":"198212311994031004","name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":4,"nip":"197412311994031005","username":"zim_zim","role":"unit","created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z","employee":{"id":5,"nip":"197412311994031005","name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}],"first_page_url":"http:\/\/localhost:8000\/admin\/users?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/users?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/users?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/users","per_page":10,"prev_page_url":null,"to":4,"total":4}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -53,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -61,12 +51,12 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'admin/request-item/{request_item_id}/detail'
+    uri: admin/users
     metadata:
-      groupName: 'Request Item Detail Management'
+      groupName: 'User Management'
       groupDescription: |-
 
-        API endpoints for managing request item detail
+        API endpoints for managing users
       subgroup: ''
       subgroupDescription: ''
       title: 'Store a newly created resource in storage.'
@@ -77,47 +67,80 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      request_item_id:
-        name: request_item_id
-        description: 'The ID of the request item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      request_item_id: 1
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
-        description: ''
+      name:
+        name: name
+        description: validation.max.
         required: true
-        example: ea
+        example: tjqotbhpzwonwlzospqcs
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      qty:
-        name: qty
-        description: ''
+      id:
+        name: id
+        description: validation.max.
         required: true
-        example: numquam
+        example: nssrciatkmatldznkaapj
         type: string
         enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      username:
+        name: username
+        description: validation.max.
+        required: true
+        example: ptdhyldmarwuvlvyfcejz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'validation.email validation.max.'
+        required: true
+        example: maude81@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: validation.min.
+        required: true
+        example: '#L*qCceF0t7nA'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      role:
+        name: role
+        description: ''
+        required: true
+        example: pengawas
+        type: string
+        enumValues:
+          - admin
+          - unit
+          - pengawas
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: ea
-      qty: numquam
+      name: tjqotbhpzwonwlzospqcs
+      id: nssrciatkmatldznkaapj
+      username: ptdhyldmarwuvlvyfcejz
+      email: maude81@example.net
+      password: '#L*qCceF0t7nA'
+      role: pengawas
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"Internal Server Error"}'
+        content: '{"message":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''email'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `users` where `email` = maude81@example.net)"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -128,7 +151,62 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'admin/users/{username}'
+    metadata:
+      groupName: 'User Management'
+      groupDescription: |-
+
+        API endpoints for managing users
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: admin
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      username: admin
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success get user","data":{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-06T04:04:43.000000Z","updated_at":"2024-10-06T04:04:43.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -137,12 +215,12 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'admin/request-item/{request_item_id}/detail/{requestItemDetail}'
+    uri: 'admin/users/{username}'
     metadata:
-      groupName: 'Request Item Detail Management'
+      groupName: 'User Management'
       groupDescription: |-
 
-        API endpoints for managing request item detail
+        API endpoints for managing users
       subgroup: ''
       subgroupDescription: ''
       title: 'Update the specified resource in storage.'
@@ -154,66 +232,89 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      request_item_id:
-        name: request_item_id
-        description: 'The ID of the request item.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      requestItemDetail:
-        name: requestItemDetail
+      username:
+        name: username
         description: ''
         required: true
-        example: nulla
+        example: admin
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request_item_id: 1
-      requestItemDetail: nulla
+      username: admin
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
-        description: ''
+      name:
+        name: name
+        description: validation.max.
         required: true
-        example: 2
-        type: integer
+        example: tjqotbhpzwonwlzospqcs
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      qty:
-        name: qty
-        description: ''
+      id:
+        name: id
+        description: validation.max.
         required: true
-        example: 2
-        type: integer
+        example: nssrciatkmatldznkaapj
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      qty_acc:
-        name: qty_acc
+      username:
+        name: username
+        description: validation.max.
+        required: true
+        example: ptdhyldmarwuvlvyfcejz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'validation.email validation.max.'
+        required: true
+        example: maude81@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: validation.min.
+        required: true
+        example: '#L*qCceF0t7nA'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      role:
+        name: role
         description: ''
         required: true
-        example: 10
-        type: integer
-        enumValues: []
+        example: pengawas
+        type: string
+        enumValues:
+          - admin
+          - unit
+          - pengawas
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 2
-      qty: 2
-      qty_acc: 10
+      name: tjqotbhpzwonwlzospqcs
+      id: nssrciatkmatldznkaapj
+      username: ptdhyldmarwuvlvyfcejz
+      email: maude81@example.net
+      password: '#L*qCceF0t7nA'
+      role: pengawas
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"Internal Server Error"}'
+        content: '{"message":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''email'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `users` where `email` = maude81@example.net)"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -224,7 +325,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -232,12 +333,12 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'admin/request-item/{request_item_id}/detail/{requestItemDetail_id}'
+    uri: 'admin/users/{username}'
     metadata:
-      groupName: 'Request Item Detail Management'
+      groupName: 'User Management'
       groupDescription: |-
 
-        API endpoints for managing request item detail
+        API endpoints for managing users
       subgroup: ''
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
@@ -249,27 +350,17 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      request_item_id:
-        name: request_item_id
-        description: 'The ID of the request item.'
+      username:
+        name: username
+        description: ''
         required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      requestItemDetail_id:
-        name: requestItemDetail_id
-        description: 'The ID of the requestItemDetail.'
-        required: true
-        example: 15
-        type: integer
+        example: admin
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request_item_id: 1
-      requestItemDetail_id: 15
+      username: admin
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -277,8 +368,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 404
-        content: '{"message":"Not Found"}'
+        status: 200
+        content: '{"message":"success delete user"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -289,7 +380,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null

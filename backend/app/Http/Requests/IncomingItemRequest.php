@@ -22,9 +22,9 @@ class IncomingItemRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'supplier_id' => 'required|string',
+            'supplier_id' => 'required|integer',
             'items' => 'required|array',
-            'items.*.item_id' => 'required|string',
+            'items.*.item_id' => 'required|integer',
             'items.*.qty' => 'required|integer',
         ];
     }

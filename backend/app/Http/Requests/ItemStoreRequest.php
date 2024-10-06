@@ -24,13 +24,16 @@ class ItemStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'code' => 'string|max:255',
             'image' => 'file',
             'name' => 'required|string|max:255',
-            // 'merk' => 'required|string|max:255',
+            'merk' => 'required|string|max:255',
+            'type' => 'required|string|max:255',
+            'size' => 'required|string|max:255',
             'unit' => 'required|string|max:255',  // satuan
             'stock' => 'required|integer',
             'min_stock' => 'required|integer',
-            'category_id' => 'required|string',
+            'category_id' => 'required|integer',
             'price' => 'required|integer',
         ];
     }

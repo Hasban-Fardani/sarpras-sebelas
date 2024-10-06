@@ -1,180 +1,20 @@
-name: 'Item Management'
+name: '4. Incoming Item Detail Management'
 description: |-
 
-  API endpoints for managing items
+  API endpoints for managing Incoming Item Detail
 endpoints:
   -
     httpMethods:
       - GET
-    uri: admin/item
+    uri: 'incoming-item/{incoming_item_id}/detail'
     metadata:
-      groupName: 'Item Management'
+      groupName: '4. Incoming Item Detail Management'
       groupDescription: |-
 
-        API endpoints for managing items
+        API endpoints for managing Incoming Item Detail
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display list item with pagination'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"message":"success get all items","current_page":1,"data":[{"id":1,"code":"I-001","image":"http:\/\/localhost:8000\/storage\/images\/pulpen-ae7.jpeg","name":"Pulpen AE7","unit":"pcs","stock":10,"min_stock":5,"price":2000,"category_id":1,"created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":2,"code":"I-002","image":"http:\/\/localhost:8000\/storage\/images\/buku-sidu-38.jpeg","name":"Buku Sidu 38 Lembar","unit":"pcs","stock":10,"min_stock":5,"price":4000,"category_id":1,"created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":3,"code":"I-003","image":"http:\/\/localhost:8000\/storage\/images\/kertas-sidu-a4.jpeg","name":"Kertas Sidu A4","unit":"rim","stock":10,"min_stock":5,"price":15000,"category_id":1,"created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":4,"code":"I-004","image":"http:\/\/localhost:8000\/storage\/images\/pulpen-joyko-gp-265.jpeg","name":"Pulpen Joyko GP 265","unit":"pcs","stock":10,"min_stock":5,"price":2000,"category_id":1,"created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":5,"code":"I-005","image":"http:\/\/localhost:8000\/storage\/images\/spidol-snowman-boardmarker.jpeg","name":"Spidol Snowman Boardmarker","unit":"pcs","stock":10,"min_stock":5,"price":8000,"category_id":1,"created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":6,"code":"I-3113","image":"http:\/\/localhost:8000\/storage\/827127f0c901d56d3f4f70f5edbcf80f.png","name":"aut","unit":"tenetur","stock":14,"min_stock":52,"price":9545,"category_id":1,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":7,"code":"I-9691","image":"http:\/\/localhost:8000\/storage\/8147ad588eb0b937f4c34291dcc11909.png","name":"est","unit":"ut","stock":20,"min_stock":90,"price":4827,"category_id":1,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":8,"code":"I-9475","image":"http:\/\/localhost:8000\/storage\/c720d03cc283465b6b4239c71d11bf2c.png","name":"unde","unit":"dolorem","stock":45,"min_stock":79,"price":8623,"category_id":1,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":9,"code":"I-5829","image":"http:\/\/localhost:8000\/storage\/6d581872984102cc1857fb02a85dd480.png","name":"nobis","unit":"non","stock":90,"min_stock":16,"price":4576,"category_id":1,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":10,"code":"I-7271","image":"http:\/\/localhost:8000\/storage\/def7858e1e96af33b88d656ff582695e.png","name":"veritatis","unit":"iure","stock":27,"min_stock":91,"price":2877,"category_id":1,"created_at":"2024-10-05T16:29:41.000000Z","updated_at":"2024-10-05T16:29:41.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}}],"first_page_url":"http:\/\/localhost:8000\/admin\/item?page=1","from":1,"last_page":2,"last_page_url":"http:\/\/localhost:8000\/admin\/item?page=2","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/item?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/admin\/item?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/admin\/item?page=2","label":"pagination.next","active":false}],"next_page_url":"http:\/\/localhost:8000\/admin\/item?page=2","path":"http:\/\/localhost:8000\/admin\/item","per_page":10,"prev_page_url":null,"to":10,"total":15}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: admin/item
-    metadata:
-      groupName: 'Item Management'
-      groupDescription: |-
-
-        API endpoints for managing items
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Store a newly item in storage.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: multipart/form-data
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      image:
-        name: image
-        description: 'Must be a file.'
-        required: false
-        example: null
-        type: file
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      name:
-        name: name
-        description: validation.max.
-        required: true
-        example: qdkeudgyqi
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      unit:
-        name: unit
-        description: validation.max.
-        required: true
-        example: liiwdte
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      stock:
-        name: stock
-        description: ''
-        required: true
-        example: 6
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      min_stock:
-        name: min_stock
-        description: ''
-        required: true
-        example: 8
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      category_id:
-        name: category_id
-        description: ''
-        required: true
-        example: aut
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      price:
-        name: price
-        description: ''
-        required: true
-        example: 17
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      name: qdkeudgyqi
-      unit: liiwdte
-      stock: 6
-      min_stock: 8
-      category_id: aut
-      price: 17
-    fileParameters:
-      image: null
-    responses:
-      -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'admin/item/{id}'
-    metadata:
-      groupName: 'Item Management'
-      groupDescription: |-
-
-        API endpoints for managing items
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified item.'
+      title: 'Display list of item detail from incoming item.'
       description: ''
       authenticated: true
       custom: []
@@ -183,9 +23,9 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      id:
-        name: id
-        description: 'The ID of the item.'
+      incoming_item_id:
+        name: incoming_item_id
+        description: 'The ID of the incoming item.'
         required: true
         example: 1
         type: integer
@@ -193,7 +33,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      incoming_item_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -202,7 +42,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get item","data":{"id":1,"code":"I-001","image":"\/images\/pulpen-ae7.jpeg","name":"Pulpen AE7","unit":"pcs","stock":10,"min_stock":5,"price":2000,"category_id":1,"created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z"}}'
+        content: '{"message":"success get incoming item detail","current_page":1,"data":[{"id":4,"incoming_item_id":1,"item_id":4,"qty":25,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":4,"name":"Pulpen Joyko GP 265"}},{"id":12,"incoming_item_id":1,"item_id":7,"qty":70,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":7,"name":"et"}},{"id":21,"incoming_item_id":1,"item_id":6,"qty":91,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":6,"name":"quo"}},{"id":26,"incoming_item_id":1,"item_id":3,"qty":12,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":3,"name":"Kertas Sidu A4"}},{"id":47,"incoming_item_id":1,"item_id":3,"qty":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":3,"name":"Kertas Sidu A4"}},{"id":53,"incoming_item_id":1,"item_id":5,"qty":59,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":5,"name":"Spidol Snowman Boardmarker"}},{"id":55,"incoming_item_id":1,"item_id":2,"qty":85,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":2,"name":"Buku Sidu 38 Lembar"}},{"id":56,"incoming_item_id":1,"item_id":5,"qty":42,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":5,"name":"Spidol Snowman Boardmarker"}},{"id":83,"incoming_item_id":1,"item_id":5,"qty":73,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":5,"name":"Spidol Snowman Boardmarker"}},{"id":86,"incoming_item_id":1,"item_id":10,"qty":17,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","item":{"id":10,"name":"ut"}}],"first_page_url":"http:\/\/localhost:8000\/incoming-item\/1\/detail?page=1","from":1,"last_page":2,"last_page_url":"http:\/\/localhost:8000\/incoming-item\/1\/detail?page=2","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/incoming-item\/1\/detail?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/incoming-item\/1\/detail?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/incoming-item\/1\/detail?page=2","label":"pagination.next","active":false}],"next_page_url":"http:\/\/localhost:8000\/incoming-item\/1\/detail?page=2","path":"http:\/\/localhost:8000\/incoming-item\/1\/detail","per_page":10,"prev_page_url":null,"to":10,"total":13}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -213,7 +53,82 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'incoming-item/{incoming_item_id}/detail'
+    metadata:
+      groupName: '4. Incoming Item Detail Management'
+      groupDescription: |-
+
+        API endpoints for managing Incoming Item Detail
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created item detail form incoming item.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      incoming_item_id:
+        name: incoming_item_id
+        description: 'The ID of the incoming item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      incoming_item_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: 6
+      qty: 6
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success update incoming item detail","data":[{"id":4,"incoming_item_id":1,"item_id":4,"qty":25,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":12,"incoming_item_id":1,"item_id":7,"qty":70,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":21,"incoming_item_id":1,"item_id":6,"qty":97,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:40:26.000000Z"},{"id":26,"incoming_item_id":1,"item_id":3,"qty":12,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":47,"incoming_item_id":1,"item_id":3,"qty":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":53,"incoming_item_id":1,"item_id":5,"qty":59,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":55,"incoming_item_id":1,"item_id":2,"qty":85,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":56,"incoming_item_id":1,"item_id":5,"qty":42,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":83,"incoming_item_id":1,"item_id":5,"qty":73,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":86,"incoming_item_id":1,"item_id":10,"qty":17,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":88,"incoming_item_id":1,"item_id":6,"qty":32,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":90,"incoming_item_id":1,"item_id":6,"qty":14,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":99,"incoming_item_id":1,"item_id":6,"qty":96,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -222,26 +137,35 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'admin/item/{id}'
+    uri: 'incoming-item/{incoming_item_id}/detail/{id}'
     metadata:
-      groupName: 'Item Management'
+      groupName: '4. Incoming Item Detail Management'
       groupDescription: |-
 
-        API endpoints for managing items
+        API endpoints for managing Incoming Item Detail
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified item in storage.'
+      title: 'Update the specified item detail.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: multipart/form-data
+      Content-Type: application/json
       Accept: application/json
     urlParameters:
+      incoming_item_id:
+        name: incoming_item_id
+        description: 'The ID of the incoming item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       id:
         name: id
-        description: 'The ID of the item.'
+        description: 'The ID of the detail.'
         required: true
         example: 1
         type: integer
@@ -249,86 +173,37 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
+      incoming_item_id: 1
       id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      image:
-        name: image
-        description: 'Must be a file.'
-        required: false
-        example: null
-        type: file
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      name:
-        name: name
-        description: validation.max.
-        required: false
-        example: uesjgqdqozjdjqjrm
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      unit:
-        name: unit
-        description: validation.max.
-        required: false
-        example: zfzcrtcsooxtntnn
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      stock:
-        name: stock
+      item_id:
+        name: item_id
         description: ''
         required: false
-        example: 1
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      min_stock:
-        name: min_stock
+      qty:
+        name: qty
         description: ''
         required: false
-        example: 19
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      category_id:
-        name: category_id
-        description: ''
-        required: false
-        example: velit
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      price:
-        name: price
-        description: ''
-        required: false
-        example: 10
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: uesjgqdqozjdjqjrm
-      unit: zfzcrtcsooxtntnn
-      stock: 1
-      min_stock: 19
-      category_id: velit
-      price: 10
-    fileParameters:
-      image: null
+      item_id: 6
+      qty: 6
+    fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 200
+        content: '{"message":"success update incoming item detail","data":{"id":1,"incoming_item_id":7,"item_id":6,"qty":6,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:40:26.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -339,7 +214,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -347,15 +222,15 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'admin/item/{id}'
+    uri: 'incoming-item/{incoming_item_id}/detail/{id}'
     metadata:
-      groupName: 'Item Management'
+      groupName: '4. Incoming Item Detail Management'
       groupDescription: |-
 
-        API endpoints for managing items
+        API endpoints for managing Incoming Item Detail
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified item from storage.'
+      title: 'Remove the specified item detail.'
       description: ''
       authenticated: true
       custom: []
@@ -364,9 +239,18 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
+      incoming_item_id:
+        name: incoming_item_id
+        description: 'The ID of the incoming item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       id:
         name: id
-        description: 'The ID of the item.'
+        description: 'The ID of the detail.'
         required: true
         example: 1
         type: integer
@@ -374,6 +258,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
+      incoming_item_id: 1
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -383,7 +268,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success delete item"}'
+        content: '{"message":"success delete incoming item detail","data":[{"id":4,"incoming_item_id":1,"item_id":4,"qty":25,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":12,"incoming_item_id":1,"item_id":7,"qty":70,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":21,"incoming_item_id":1,"item_id":6,"qty":91,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":26,"incoming_item_id":1,"item_id":3,"qty":12,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":47,"incoming_item_id":1,"item_id":3,"qty":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":53,"incoming_item_id":1,"item_id":5,"qty":59,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":55,"incoming_item_id":1,"item_id":2,"qty":85,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":56,"incoming_item_id":1,"item_id":5,"qty":42,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":83,"incoming_item_id":1,"item_id":5,"qty":73,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":86,"incoming_item_id":1,"item_id":10,"qty":17,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":88,"incoming_item_id":1,"item_id":6,"qty":32,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":90,"incoming_item_id":1,"item_id":6,"qty":14,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"},{"id":99,"incoming_item_id":1,"item_id":6,"qty":96,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -394,7 +279,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null

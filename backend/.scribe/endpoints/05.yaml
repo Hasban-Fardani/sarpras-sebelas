@@ -1,20 +1,20 @@
-name: 'User Management'
+name: '2. Item Management'
 description: |-
 
-  API endpoints for managing users
+  API endpoints for managing items
 endpoints:
   -
     httpMethods:
       - GET
-    uri: admin/users
+    uri: item
     metadata:
-      groupName: 'User Management'
+      groupName: '2. Item Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing items
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the resource.'
+      title: 'Display list item with pagination'
       description: ''
       authenticated: true
       custom: []
@@ -32,7 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get users","current_page":1,"data":[{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-05T16:29:13.000000Z","updated_at":"2024-10-05T16:29:13.000000Z","employee":{"id":3,"nip":"197806311994031003","name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":2,"nip":"197412311994031001","username":"pengawas","role":"pengawas","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z","employee":{"id":2,"nip":"197412311994031001","name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":3,"nip":"198212311994031004","username":"ani_nuraeni","role":"unit","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z","employee":{"id":4,"nip":"198212311994031004","name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":4,"nip":"197412311994031005","username":"zim_zim","role":"unit","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:29:14.000000Z","employee":{"id":5,"nip":"197412311994031005","name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}],"first_page_url":"http:\/\/localhost:8000\/admin\/users?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/users?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/users?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/users","per_page":10,"prev_page_url":null,"to":4,"total":4}'
+        content: '{"message":"success get all items","current_page":1,"data":[{"id":10,"code":"I-8711","image":"http:\/\/localhost:8000\/storage\/378f1c2e887da8f8462a7c57842dcf11.png","name":"ut","unit":"hic","merk":"pariatur","type":"dolore","size":"nostrum","stock":31,"min_stock":83,"price":9978,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":11,"code":"I-5917","image":"http:\/\/localhost:8000\/storage\/2f88312bb79fd02e94aed0bf9047e744.png","name":"reiciendis","unit":"dolores","merk":"et","type":"fuga","size":"voluptatem","stock":91,"min_stock":37,"price":6476,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":12,"code":"I-6864","image":"http:\/\/localhost:8000\/storage\/61fae849913284a2da6f8644309283a1.png","name":"inventore","unit":"sit","merk":"unde","type":"distinctio","size":"natus","stock":8,"min_stock":91,"price":6868,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":13,"code":"I-8855","image":"http:\/\/localhost:8000\/storage\/b7061d39528243a670c7efa619d998cf.png","name":"non","unit":"facere","merk":"corrupti","type":"aut","size":"ducimus","stock":38,"min_stock":19,"price":4278,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":14,"code":"I-3662","image":"http:\/\/localhost:8000\/storage\/039ffb25395b5a2ff137a447058526df.png","name":"et","unit":"ipsam","merk":"perspiciatis","type":"id","size":"beatae","stock":100,"min_stock":45,"price":2957,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":15,"code":"I-8528","image":"http:\/\/localhost:8000\/storage\/73a5bcbe9898a47f6c692aecca919295.png","name":"sint","unit":"repudiandae","merk":"iusto","type":"impedit","size":"qui","stock":57,"min_stock":92,"price":5548,"category_id":1,"created_at":"2024-10-06T04:04:56.000000Z","updated_at":"2024-10-06T04:04:56.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":6,"code":"I-3553","image":"http:\/\/localhost:8000\/storage\/9d72edadc4148c87dbb8f3623a8af711.png","name":"quo","unit":"in","merk":"commodi","type":"sunt","size":"inventore","stock":37,"min_stock":18,"price":8859,"category_id":1,"created_at":"2024-10-06T04:04:55.000000Z","updated_at":"2024-10-06T04:04:55.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":7,"code":"I-5799","image":"http:\/\/localhost:8000\/storage\/e4bd7eb99d7fb460659a5499bec4f35d.png","name":"et","unit":"sed","merk":"vero","type":"voluptatibus","size":"repellendus","stock":99,"min_stock":19,"price":6776,"category_id":1,"created_at":"2024-10-06T04:04:55.000000Z","updated_at":"2024-10-06T04:04:55.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":8,"code":"I-1611","image":"http:\/\/localhost:8000\/storage\/e13c9d72938f2a5094e1f1a995d25fa4.png","name":"maiores","unit":"praesentium","merk":"natus","type":"quam","size":"ipsam","stock":98,"min_stock":5,"price":1732,"category_id":1,"created_at":"2024-10-06T04:04:55.000000Z","updated_at":"2024-10-06T04:04:55.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}},{"id":9,"code":"I-6083","image":"http:\/\/localhost:8000\/storage\/d1092ad92edec60bfc722760daf46c92.png","name":"eveniet","unit":"voluptas","merk":"minima","type":"magni","size":"non","stock":65,"min_stock":36,"price":8696,"category_id":1,"created_at":"2024-10-06T04:04:55.000000Z","updated_at":"2024-10-06T04:04:55.000000Z","category":{"id":1,"name":"Alat Tulis Kantor"}}],"first_page_url":"http:\/\/localhost:8000\/item?page=1","from":1,"last_page":2,"last_page_url":"http:\/\/localhost:8000\/item?page=2","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/item?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/item?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/item?page=2","label":"pagination.next","active":false}],"next_page_url":"http:\/\/localhost:8000\/item?page=2","path":"http:\/\/localhost:8000\/item","per_page":10,"prev_page_url":null,"to":10,"total":15}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -51,96 +51,143 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: admin/users
+    uri: item
     metadata:
-      groupName: 'User Management'
+      groupName: '2. Item Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing items
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: 'Store a newly item in storage.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
+      code:
+        name: code
+        description: validation.max.
+        required: false
+        example: tjqotbhpzwonwlzospqcs
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      image:
+        name: image
+        description: 'Must be a file.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       name:
         name: name
         description: validation.max.
         required: true
-        example: zlpatopsded
+        example: tjqotbhpzwonwlzospqcs
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      id:
-        name: id
+      merk:
+        name: merk
         description: validation.max.
         required: true
-        example: rnqmtujmwh
+        example: nssrciatkmatldznkaapj
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      username:
-        name: username
+      type:
+        name: type
         description: validation.max.
         required: true
-        example: otzurrr
+        example: ptdhyldmarwuvlvyfcejz
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      email:
-        name: email
-        description: 'validation.email validation.max.'
+      size:
+        name: size
+        description: validation.max.
         required: true
-        example: virginie.kohler@example.com
+        example: olbxnqyvzmcgyfpncfyst
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      password:
-        name: password
-        description: validation.min.
+      unit:
+        name: unit
+        description: validation.max.
         required: true
-        example: 'NqAVN35H~VU,A'
+        example: nonjizoohlpabvwbfbzkw
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      role:
-        name: role
+      stock:
+        name: stock
         description: ''
         required: true
-        example: unit
-        type: string
-        enumValues:
-          - admin
-          - unit
-          - pengawas
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      min_stock:
+        name: min_stock
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      category_id:
+        name: category_id
+        description: 'The category id.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: zlpatopsded
-      id: rnqmtujmwh
-      username: otzurrr
-      email: virginie.kohler@example.com
-      password: 'NqAVN35H~VU,A'
-      role: unit
-    fileParameters: []
+      code: tjqotbhpzwonwlzospqcs
+      name: tjqotbhpzwonwlzospqcs
+      merk: nssrciatkmatldznkaapj
+      type: ptdhyldmarwuvlvyfcejz
+      size: olbxnqyvzmcgyfpncfyst
+      unit: nonjizoohlpabvwbfbzkw
+      stock: 6
+      min_stock: 6
+      category_id: 1
+      price: 6
+    fileParameters:
+      image: null
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 200
+        content: '{"message":"success create item","data":{"code":"tjqotbhpzwonwlzospqcs","image":"images\/e6a393139abf0505f9329ccfd5debec4dd981510e59fc987ffb68e2a4910896a.jpg","name":"tjqotbhpzwonwlzospqcs","merk":"nssrciatkmatldznkaapj","type":"ptdhyldmarwuvlvyfcejz","size":"olbxnqyvzmcgyfpncfyst","unit":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"category_id":1,"price":6,"updated_at":"2024-10-06T04:40:26.000000Z","created_at":"2024-10-06T04:40:26.000000Z","id":30}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -151,7 +198,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -159,15 +206,15 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'admin/users/{username}'
+    uri: 'item/{id}'
     metadata:
-      groupName: 'User Management'
+      groupName: '2. Item Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing items
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display the specified resource.'
+      title: 'Display the specified item.'
       description: ''
       authenticated: true
       custom: []
@@ -176,17 +223,17 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      username:
-        name: username
-        description: ''
+      id:
+        name: id
+        description: 'The ID of the item.'
         required: true
-        example: admin
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      username: admin
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -195,7 +242,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get user","data":{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-05T16:29:13.000000Z","updated_at":"2024-10-05T16:29:13.000000Z"}}'
+        content: '{"message":"success get item","data":{"id":1,"code":"I-001","image":"\/images\/pulpen-ae7.jpeg","name":"Pulpen AE7","unit":"pcs","merk":"ae7","type":"pulpen","size":"0.5mm","stock":17,"min_stock":5,"price":2000,"category_id":1,"created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:04:44.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -206,7 +253,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -215,106 +262,153 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'admin/users/{username}'
+    uri: 'item/{id}'
     metadata:
-      groupName: 'User Management'
+      groupName: '2. Item Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing items
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Update the specified item in storage.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
-      username:
-        name: username
-        description: ''
+      id:
+        name: id
+        description: 'The ID of the item.'
         required: true
-        example: admin
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      username: admin
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
+      image:
+        name: image
+        description: 'Must be a file.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      code:
+        name: code
+        description: validation.max.
+        required: false
+        example: tjqotbhpzwonwlzospqcs
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       name:
         name: name
         description: validation.max.
-        required: true
-        example: orixuvparhwexdazxoyichex
+        required: false
+        example: nssrciatkmatldznkaapj
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      id:
-        name: id
+      merk:
+        name: merk
         description: validation.max.
-        required: true
-        example: fdbyvsobshxkbzd
+        required: false
+        example: ptdhyldmarwuvlvyfcejz
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      username:
-        name: username
+      type:
+        name: type
         description: validation.max.
-        required: true
-        example: vozkalmztbjqevibytgodclbx
+        required: false
+        example: olbxnqyvzmcgyfpncfyst
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      email:
-        name: email
-        description: 'validation.email validation.max.'
-        required: true
-        example: rnader@example.net
+      size:
+        name: size
+        description: validation.max.
+        required: false
+        example: nonjizoohlpabvwbfbzkw
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      password:
-        name: password
-        description: validation.min.
-        required: true
-        example: 'il?04x>\'
+      unit:
+        name: unit
+        description: validation.max.
+        required: false
+        example: sewlxtdfjxskykaapbpdx
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      role:
-        name: role
+      stock:
+        name: stock
         description: ''
+        required: false
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      min_stock:
+        name: min_stock
+        description: ''
+        required: false
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      category_id:
+        name: category_id
+        description: 'The category id.'
         required: true
-        example: pengawas
-        type: string
-        enumValues:
-          - admin
-          - unit
-          - pengawas
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: false
+        example: 6
+        type: integer
+        enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: orixuvparhwexdazxoyichex
-      id: fdbyvsobshxkbzd
-      username: vozkalmztbjqevibytgodclbx
-      email: rnader@example.net
-      password: 'il?04x>\'
-      role: pengawas
-    fileParameters: []
+      code: tjqotbhpzwonwlzospqcs
+      name: nssrciatkmatldznkaapj
+      merk: ptdhyldmarwuvlvyfcejz
+      type: olbxnqyvzmcgyfpncfyst
+      size: nonjizoohlpabvwbfbzkw
+      unit: sewlxtdfjxskykaapbpdx
+      stock: 6
+      min_stock: 6
+      category_id: 1
+      price: 6
+    fileParameters:
+      image: null
     responses:
       -
-        status: 500
-        content: '{"message":"Internal Server Error"}'
+        status: 200
+        content: '{"message":"success update item","data":{"id":1,"code":"tjqotbhpzwonwlzospqcs","image":"images\/e6a393139abf0505f9329ccfd5debec4dd981510e59fc987ffb68e2a4910896a.jpg","name":"nssrciatkmatldznkaapj","unit":"sewlxtdfjxskykaapbpdx","merk":"ptdhyldmarwuvlvyfcejz","type":"olbxnqyvzmcgyfpncfyst","size":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"price":6,"category_id":1,"created_at":"2024-10-06T04:04:44.000000Z","updated_at":"2024-10-06T04:40:26.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -325,7 +419,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -333,15 +427,15 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'admin/users/{username}'
+    uri: 'item/{id}'
     metadata:
-      groupName: 'User Management'
+      groupName: '2. Item Management'
       groupDescription: |-
 
-        API endpoints for managing users
+        API endpoints for managing items
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
+      title: 'Remove the specified item from storage.'
       description: ''
       authenticated: true
       custom: []
@@ -350,17 +444,17 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      username:
-        name: username
-        description: ''
+      id:
+        name: id
+        description: 'The ID of the item.'
         required: true
-        example: admin
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      username: admin
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -369,7 +463,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success delete user"}'
+        content: '{"message":"success delete item"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -380,7 +474,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null

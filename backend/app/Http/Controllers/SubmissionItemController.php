@@ -1,32 +1,32 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Http\Requests\SubmissionItemAdminRequest;
 use App\Models\Employee;
-use App\Models\RequestItem;
+use App\Models\SubmissionItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @group Request Item Management
+ * @group Submission Item Management
  *
- * API endpoints for managing request item
+ * API endpoints for managing submission item
  */
-class RequestItemController extends Controller
+class SubmissionItemController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
     {
-        $data = RequestItem::with('employee:id,name');
+        $data = SubmissionItem::with('division:id,name');
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
         $data->when($request->search, function ($data) use ($request) {
             $data->where(function ($query) use ($request) {
-                $query->whereHas('employee', function ($query) use ($request) {
+                $query->whereHas('division', function ($query) use ($request) {
                     $query->where('name', 'like', '%' . $request->search . '%');
                 });
             });
@@ -43,7 +43,7 @@ class RequestItemController extends Controller
         $data = $data->paginate($perPage, ['*'], 'page', $page);
 
         return response()->json([
-            'message' => 'success get all request items',
+            'message' => 'success get all submission items',
             ...$data->toArray()
         ]);
     }
@@ -51,21 +51,21 @@ class RequestItemController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(SubmissionItemAdminRequest $request)
     {
         $validatedData = $request->validated();
 
         $userNIP = auth()->user()->id;
         $employeeID = Employee::where('id', $userNIP)->first()->id;
-        
+
         // directly create a new array with only the needed keys
         $data = [
             'user_id' => $employeeID,
             'total_items' => count($validatedData['items']),
         ];
 
-        // create request item
-        $request_item = RequestItem::create($data);
+        // create submission item
+        $submission_item = SubmissionItem::create($data);
 
         // get items
         $items = $validatedData['items'];
@@ -74,31 +74,31 @@ class RequestItemController extends Controller
             $items[$key]['qty_acc'] = $item['qty'];
         }
 
-        // create request item details
-        $request_item->details()->createMany($items);
+        // create submission item details
+        $submission_item->details()->createMany($items);
 
         // return response
         return response()->json([
-            'message' => 'success create request item',
-            'data' => $request_item
+            'message' => 'success create submission item',
+            'data' => $submission_item
         ]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(RequestItem $request)
+    public function show(SubmissionItem $submission)
     {
         return response()->json([
             'message' => 'success get submission item',
-            'data' => $request->load(['user:id,name', 'details'])
+            'data' => $submission->load(['division:id,name', 'details'])
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $requestHttp, RequestItem $request)
+    public function update(Request $request, SubmissionItem $submission)
     {
         //
     }
@@ -106,11 +106,11 @@ class RequestItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RequestItem $request)
+    public function destroy(SubmissionItem $submission)
     {
-        $request->delete();
+        $submission->delete();
         return response()->json([
-            'message' => 'success delete request item'
+            'message' => 'success delete submission item'
         ]);
     }
 }

@@ -8,7 +8,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: admin/dashboard/counts
+    uri: dashboard/counts
     metadata:
       groupName: 'Admin Dashboard'
       groupDescription: |-
@@ -45,7 +45,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -53,7 +53,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: admin/dashboard/stats/request
+    uri: dashboard/stats/request
     metadata:
       groupName: 'Admin Dashboard'
       groupDescription: |-
@@ -79,7 +79,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"Internal Server Error"}'
+        content: '{"message":"SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column ''laravel_sarpras_sebelas.request_items.created_at'' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -90,7 +90,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -98,7 +98,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: admin/dashboard/stats/item
+    uri: dashboard/stats/item
     metadata:
       groupName: 'Admin Dashboard'
       groupDescription: |-
@@ -135,7 +135,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null

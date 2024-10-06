@@ -4,7 +4,7 @@ use Knuckles\Scribe\Extracting\Strategies;
 
 return [
     // The HTML <title> for the generated documentation. If this is empty, Scribe will infer it from config('app.name').
-    'title' => null,
+    'title' => 'Laravel Sarpras API Documentation',
 
     // A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
     'description' => '',
@@ -34,7 +34,8 @@ return [
 
             // Exclude these routes even if they matched the rules above.
             'exclude' => [
-                '/_ignition/*', '/up'
+                '/_ignition/*',
+                '/up'
             ],
         ],
     ],
@@ -127,8 +128,7 @@ This documentation aims to provide all the information you need to work with our
 
 <aside>As you scroll, you'll see id examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
-INTRO
-    ,
+INTRO,
 
     // Example requests for each endpoint will be shown in each of these languages.
     // Supported options are: bash, javascript, php, python
@@ -190,12 +190,12 @@ INTRO
 
     'examples' => [
         // Set this to any number (eg. 1234) to generate the same example values for parameters on each run,
-        'faker_seed' => null,
+        'faker_seed' => 1,
 
         // With API resources and transformers, Scribe tries to generate example models to use in your API responses.
         // By default, Scribe will try the model's factory, and if that fails, try fetching the first from the database.
         // You can reorder or remove strategies here.
-        'models_source' => ['databaseFirst', 'factoryCreate', 'factoryMake'],
+        'models_source' => ['factoryCreate', 'factoryMake', 'databaseFirst'],
     ],
 
     // The strategies Scribe will use to extract information about your routes at each stage.

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Storage;
 
 class FileService
 {
-    public static function store(UploadedFile $file)
+    public static function store(UploadedFile $file, $disk = 'public')
     {
         $filename =  hash('sha256', now() . $file->getClientOriginalName()) . '.' . $file->getClientOriginalExtension();
         
@@ -29,10 +29,10 @@ class FileService
         }
     }
 
-    public static function getUrl($path)
+    public static function getUrl($path, $disk='public')
     {
         if (env('APP_ENV') == 'local') {
-            return Storage::disk('public')->url($path);
+            return Storage::disk($disk)->url($path);
         } elseif (env('APP_ENV') == 'production') {
             return Storage::disk('r2')->url($path);
         }

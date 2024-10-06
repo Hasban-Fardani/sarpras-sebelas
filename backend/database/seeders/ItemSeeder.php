@@ -18,8 +18,11 @@ class ItemSeeder extends Seeder
             "name" => "Pulpen AE7",
             "category_id" => 1,
             "unit" => "pcs",
+            "merk" => "ae7",
+            "type" => "pulpen",
+            "size" => "0.5mm", 
             "price" => 2000,
-            "stock" => 10,  
+            "stock" => 10, 
             "min_stock" => 5
         ]);
 
@@ -29,6 +32,9 @@ class ItemSeeder extends Seeder
             "name" => "Buku Sidu 38 Lembar",
             "category_id" => 1,
             "unit" => "pcs",
+            "merk" => "sidu",
+            "type" => "buku catatan",
+            "size" => "38",
             "price" => 4000,
             "stock" => 10,  
             "min_stock" => 5
@@ -40,6 +46,9 @@ class ItemSeeder extends Seeder
             "name" => "Kertas Sidu A4",
             "category_id" => 1,
             "unit" => "rim",
+            "merk" => "sidu",
+            "type" => "kertas",
+            "size" => "A4",
             "price" => 15000,
             "stock" => 10,  
             "min_stock" => 5
@@ -51,6 +60,9 @@ class ItemSeeder extends Seeder
             "name" => "Pulpen Joyko GP 265",
             "category_id" => 1,
             "unit" => "pcs",
+            "merk" => "joyko",
+            "type" => "gel",
+            "size" => "0.5mm",
             "price" => 2000,
             "stock" => 10,
             "min_stock" => 5
@@ -62,6 +74,9 @@ class ItemSeeder extends Seeder
             "name" => "Spidol Snowman Boardmarker",
             "category_id" => 1,
             "unit" => "pcs",
+            "merk" => "snowman",
+            "type" => "spidol",
+            "size" => "0.8mm",
             "price" => 8000,
             "stock" => 10,
             "min_stock" => 5

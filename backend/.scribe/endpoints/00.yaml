@@ -32,14 +32,14 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IllJYjIzdlZXUFFhektCZlh3c3RVNUE9PSIsInZhbHVlIjoiQTROdHY3cWJzbndFYkhTNEJCeHc3bFNocmZWVTJmQ0tXUWhjOFBudk5reWdrWlJBWUdLb3ZBSWpscmpPUXpUd3RVUjV4YktTSmQ1eXlBc0pyTTQ4V1dVWG5kQTROUnhHd0NIVFhYV3BLUnE2L1lzZnFsTU11ejE1Rmd5V0s5WkUiLCJtYWMiOiIzNzJkMmFmZDQ0MjI5YTM1NDcwMzM1MzI3ZTdmYzFkODBjODJjOWVlNTFkNWNiNjY4YTJmZWQ5NDhhYzNkNTM1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 02:43:17 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6ImRMZTUxYkFuS0xhSyt4aFVOb1YvU2c9PSIsInZhbHVlIjoicm0xZWUxcHhudW96UW15dmdORVBWY0FudTMzY21iU3Q2NzE4Y2FKRWkvVTdqc1NZTDNvR0NZbVk0TkV5YlFQL1IxeVJvdTk2aGlNY01FdmMyaGdWNlRSdjJBbm8yZUdiemVBRTF5ZVVBMVdyeHVaTEZTMjVUc0w1YUd1cDZDVmEiLCJtYWMiOiIzNWM0MzgxMGRlNzU2NjI2ZTg3Y2M2MjkxYjdiMTgwMDg2ZjRjYmU4YTdkMTlkNzFhZWJjZjc3ZTYzZmVjODI3IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 02:43:17 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; XEv2TYM9WQCzTVlLrFL3HbiMSUeE9iIbZatENBVG=eyJpdiI6IjNqTEdSVTNKVVVMeTFoalhMTjBJTkE9PSIsInZhbHVlIjoiTmsvZnZUeTBMaDhvTm52ZHVFUG9rWnJEL3hTa21LVzZaUHdRZVhGVmdOTWp6Qkd4dXVTSjNzRjFpWmtWdjVVdzN6TmNlVG1RNnVTSmtBeENsNk12aUVWY3Y5MGNXK0YwWFJNU21BR01wSk81RkpyNlBWUFlOYjk0b0NRaXgrKzZhUVZCWnp2U2l5UXQwTXNzTDlJeTBPWUVTNnJWTCtUZ3NDNlZLM2lPb0w1b2cvNUdWUDhmbWdpdjN3Z2hCTDVMbGxWaERPVktFaGs4NEFNbVRibWNXOElxWC9EaGdhMFY3dDhrc2NsTXd5NEx3SWYxY09takFpb0VvdU0zQUc3c0pmYkdyMFZNSElEWCszT2FMTDZTZkhMT2JXeGtSRGI4Q1g4dnduZ2x4NXJ4Kys4bitIM1RVVWlEWTc2QktEM1gwSG1GRzhnNUFhUXhlbnAxRUNQYm95OWNveXNxT0VmTjViVXZUaGtsM2xqVHVEUEt3V1BpWFhzdU1OWDBsUlBsN3BwQWhTeCswRkQxQXpaVkIvbStIQT09IiwibWFjIjoiNGU3MWU5NDQ4ODQ1ZDYyMGUxNjczYTViMGU1OWJlNjJkZmJkNDA3ZjU2MWYzMGZmZTc3MTI5MWFkOTA0MjdlYyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 02:43:17 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IktZWXJSUU9aUGVraGlZMnhVdXRXQ0E9PSIsInZhbHVlIjoiRTN6UTQzZk94ZXc4SjNMaU9FakxKbEFaUzZZd1BPRy9FQ3JQcDF5Nzd1YVRFQWFBMjdhVkVDMmtjZEtkVHFFZk5meUI4b004b0Q0bm5MbVhYM0JlVXJIbEppM1VhTnZlc1VJZmdvVER3TlpNMDdBZHE5N2V6VERuc1JiUjZEZDgiLCJtYWMiOiIwZWE1NDllNmY2NTZjZGVhODg4MTE0YTkxODBlYjEyZDE2ZDhjYjY2ZmE4ZDJhMGU1MWMzODlhZDc4NDY2NGVhIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 06:40:26 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InRwcXFLY3FQUUFkTjlVU1daOHR5WGc9PSIsInZhbHVlIjoicVJlQzVYMTkwNmlkeWd3aXNIeWwwcGk0eXZERUpTKzVXRXVqR1JmSm5aZ0MwcjM2MUUxRU1rOGFqTjE5eHh2d0ZMVDJlM29GTHowTTRUWmVSSmhrNElDTEZpUmR4ZkRSSWUwNGhRY2EyRXNLVWRGalV0YUpyMFNNdUljd2VCNXEiLCJtYWMiOiI5MmM5YTI1NWNmZWQ4ZWI3MWM5NjE5NmQ4NTFlZjMxMzVmZjMyMTcwZGYxNGRlMmViZTE4N2Q0Y2MwMmRkNTQ1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 06:40:26 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; X1kFBcEZ4HnVJ5cJgD09zQkCUXBt7zVZKYnwlBGz=eyJpdiI6IjR1YWsxZEI4aUxBd0w1TDZDRXMwYVE9PSIsInZhbHVlIjoiR3U2UGdkRUg4U05iTThRK21lcmZFS3hxYktJdytsUkN3cmZ5ZVFFYlp6QWFkTFBuY3BzMHBFQWRhKzlOK3V4a1FkSUFLejU3NTRQcmZaUWxSN0p0WFo2MkRRSkFKTmxoRjlxVGFsT2VoWVVZSWNxV0FsK2p6b05jcEYybnBQenlkNVovZ1FjdTBNL2N1Vk1BM1ZzaitkNk00bHRxZkw1WmsxSkU4akpFa0xqQTQxK0thdDhnZVZNVXZnZmxKY3JVMUJRQm8xbVkyT25nY05uSE0yUXhLWmdhUFBSRWkxemcybkVWMFBIUjBtNUExNmNWTldBWG5VaU5oR1cwRURWQllNMHNkUTVpZFY5YUZqR005WEZIVXkwQVU2ajlUN0k2Q0paUGFpSXViVGpLSmlDSDR1elRPam4xdFNmMFNNN2VyREcyNHFEWHhLRDU0RDMyNnlicUVMWkpENEJLTXN3bS9kNkhqckQveGtsRDA4VEJDa1NyUUovVUFTZytKSUVwZVBuU2U1cGpMN2djSS9ieVpVWjViQT09IiwibWFjIjoiZWFlYTEwMWVmZjRmMTNkYTk4ZDMyZmQzZGI5NGU0ODMzNDU0OWIwM2Y2MDYwMjgwOWRlNGY4N2Q4NDEyMWUwYSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 06:40:26 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -82,7 +82,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -114,7 +114,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-05T16:29:13.000000Z","updated_at":"2024-10-05T16:29:13.000000Z"}'
+        content: '{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-06T04:04:43.000000Z","updated_at":"2024-10-06T04:04:43.000000Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -125,7 +125,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -168,7 +168,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null

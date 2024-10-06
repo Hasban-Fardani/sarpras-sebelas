@@ -8,7 +8,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'supervisor/request/{request}/accept'
+    uri: 'request/{request}/accept'
     metadata:
       groupName: 'Supervisor - Request Check'
       groupDescription: |-
@@ -29,13 +29,13 @@ endpoints:
         name: request
         description: 'The request.'
         required: true
-        example: deserunt
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: deserunt
+      request: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -44,7 +44,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"Internal Server Error"}'
+        content: '{"message":"This action is unauthorized."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -55,7 +55,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
@@ -63,7 +63,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'supervisor/request/{request}/decline'
+    uri: 'request/{request}/decline'
     metadata:
       groupName: 'Supervisor - Request Check'
       groupDescription: |-
@@ -84,13 +84,13 @@ endpoints:
         name: request
         description: 'The request.'
         required: true
-        example: nostrum
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: nostrum
+      request: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -99,7 +99,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"Internal Server Error"}'
+        content: '{"message":"This action is unauthorized."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -110,7 +110,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|zcx06Do0hzemMAVJ52orTfUnivW18h4lGk251CLF70df0955'
+      - 'Bearer 1|7MqxJ9338cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e3476f3'
     controller: null
     method: null
     route: null
