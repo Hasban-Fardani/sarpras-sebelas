@@ -297,7 +297,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: unit
+        example: pengawas
         type: string
         enumValues:
           - admin
@@ -311,7 +311,7 @@ endpoints:
       username: ptdhyldmarwuvlvyfcejz
       email: maude81@example.net
       password: '#L*qCceF0t7nA'
-      role: unit
+      role: pengawas
     fileParameters: []
     responses:
       -

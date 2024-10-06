@@ -117,7 +117,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: ''consequatur'' for column ''item_id'' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:27:02, 2024-10-06 14:27:02))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: ''consequatur'' for column ''item_id'' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:29:55, 2024-10-06 14:29:55))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
