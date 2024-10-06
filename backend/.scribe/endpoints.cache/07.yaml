@@ -87,7 +87,7 @@ endpoints:
         name: name
         description: validation.max.
         required: true
-        example: z
+        example: qdkeudgyqi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +96,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: true
-        example: pwpqg
+        example: liiwdte
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -105,7 +105,7 @@ endpoints:
         name: stock
         description: ''
         required: true
-        example: 7
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -114,7 +114,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 11
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -123,7 +123,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: nihil
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -132,18 +132,18 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 1
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: z
-      unit: pwpqg
-      stock: 7
-      min_stock: 11
-      category_id: nihil
-      price: 1
+      name: qdkeudgyqi
+      unit: liiwdte
+      stock: 6
+      min_stock: 8
+      category_id: aut
+      price: 17
     fileParameters:
       image: null
     responses:
@@ -268,7 +268,7 @@ endpoints:
         name: name
         description: validation.max.
         required: false
-        example: zmupconpn
+        example: uesjgqdqozjdjqjrm
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -277,7 +277,7 @@ endpoints:
         name: unit
         description: validation.max.
         required: false
-        example: oqftaesojwtflgzbegiy
+        example: zfzcrtcsooxtntnn
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -295,7 +295,7 @@ endpoints:
         name: min_stock
         description: ''
         required: false
-        example: 4
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -304,7 +304,7 @@ endpoints:
         name: category_id
         description: ''
         required: false
-        example: omnis
+        example: velit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -313,18 +313,18 @@ endpoints:
         name: price
         description: ''
         required: false
-        example: 5
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: zmupconpn
-      unit: oqftaesojwtflgzbegiy
+      name: uesjgqdqozjdjqjrm
+      unit: zfzcrtcsooxtntnn
       stock: 1
-      min_stock: 4
-      category_id: omnis
-      price: 5
+      min_stock: 19
+      category_id: velit
+      price: 10
     fileParameters:
       image: null
     responses:

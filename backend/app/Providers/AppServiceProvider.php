@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Gate::define('division', function ($user) {
-            return $user->role === 'division';
+            return $user->role === 'unit';
         });
     }
 }

@@ -14,7 +14,7 @@ endpoints:
         API endpoints for managing categories
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the resource.'
+      title: 'Display list of categories.'
       description: ''
       authenticated: true
       custom: []
@@ -59,7 +59,7 @@ endpoints:
         API endpoints for managing categories
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: 'Store a new category in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -76,7 +76,7 @@ endpoints:
         name: name
         description: 'Must contain only letters, numbers, dashes and underscores.'
         required: true
-        example: ysc-fjy_g
+        example: ocf-smr_a
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -85,19 +85,19 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: velit
+        example: nobis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: ysc-fjy_g
-      code: velit
+      name: ocf-smr_a
+      code: nobis
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"message":"success create new category","data":{"name":"ysc-fjy_g","code":"velit","updated_at":"2024-10-05T16:55:50.000000Z","created_at":"2024-10-05T16:55:50.000000Z","id":3}}'
+        content: '{"message":"success create new category","data":{"name":"ocf-smr_a","code":"nobis","updated_at":"2024-10-06T00:43:18.000000Z","created_at":"2024-10-06T00:43:18.000000Z","id":4}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -124,7 +124,7 @@ endpoints:
         API endpoints for managing categories
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display the specified resource.'
+      title: 'Display specific category.'
       description: ''
       authenticated: true
       custom: []
@@ -180,7 +180,7 @@ endpoints:
         API endpoints for managing categories
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Update specified category.'
       description: ''
       authenticated: true
       custom: []
@@ -207,7 +207,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: nihil
+        example: voluptatibus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -222,12 +222,12 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: nihil
+      name: voluptatibus
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"message":"success update category","data":{"id":1,"code":"ATK","name":"nihil","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-05T16:55:50.000000Z"}}'
+        content: '{"message":"success update category","data":{"id":1,"code":"ATK","name":"voluptatibus","created_at":"2024-10-05T16:29:14.000000Z","updated_at":"2024-10-06T00:43:18.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -254,7 +254,7 @@ endpoints:
         API endpoints for managing categories
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
+      title: 'Delete category by id.'
       description: ''
       authenticated: true
       custom: []

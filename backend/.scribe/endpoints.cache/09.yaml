@@ -78,7 +78,7 @@ endpoints:
         name: supplier_id
         description: ''
         required: true
-        example: molestiae
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -97,7 +97,7 @@ endpoints:
         name: 'items[].item_id'
         description: ''
         required: true
-        example: explicabo
+        example: quisquam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,17 +106,17 @@ endpoints:
         name: 'items[].qty'
         description: ''
         required: true
-        example: 13
+        example: 18
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      supplier_id: molestiae
+      supplier_id: quia
       items:
         -
-          item_id: explicabo
-          qty: 13
+          item_id: quisquam
+          qty: 18
     fileParameters: []
     responses:
       -

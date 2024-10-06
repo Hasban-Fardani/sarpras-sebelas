@@ -84,13 +84,13 @@ endpoints:
         name: path
         description: ''
         required: true
-        example: 6@
+        example: '18]GkE%F'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      path: 6@
+      path: '18]GkE%F'
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

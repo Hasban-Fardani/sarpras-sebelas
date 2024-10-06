@@ -168,8 +168,8 @@ paths:
         - Auth
   /admin/category:
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Display list of categories.'
+      operationId: displayListOfCategories
       description: ''
       parameters: []
       responses:
@@ -306,8 +306,8 @@ paths:
       tags:
         - 'Category Management'
     post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
+      summary: 'Store a new category in storage.'
+      operationId: storeANewCategoryInStorage
       description: ''
       parameters: []
       responses:
@@ -320,11 +320,11 @@ paths:
                 example:
                   message: 'success create new category'
                   data:
-                    name: ysc-fjy_g
-                    code: velit
-                    updated_at: '2024-10-05T16:55:50.000000Z'
-                    created_at: '2024-10-05T16:55:50.000000Z'
-                    id: 3
+                    name: ocf-smr_a
+                    code: nobis
+                    updated_at: '2024-10-06T00:43:18.000000Z'
+                    created_at: '2024-10-06T00:43:18.000000Z'
+                    id: 4
                 properties:
                   message:
                     type: string
@@ -334,19 +334,19 @@ paths:
                     properties:
                       name:
                         type: string
-                        example: ysc-fjy_g
+                        example: ocf-smr_a
                       code:
                         type: string
-                        example: velit
+                        example: nobis
                       updated_at:
                         type: string
-                        example: '2024-10-05T16:55:50.000000Z'
+                        example: '2024-10-06T00:43:18.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-05T16:55:50.000000Z'
+                        example: '2024-10-06T00:43:18.000000Z'
                       id:
                         type: integer
-                        example: 3
+                        example: 4
       tags:
         - 'Category Management'
       requestBody:
@@ -359,18 +359,18 @@ paths:
                 name:
                   type: string
                   description: 'Must contain only letters, numbers, dashes and underscores.'
-                  example: ysc-fjy_g
+                  example: ocf-smr_a
                 code:
                   type: string
                   description: ''
-                  example: velit
+                  example: nobis
               required:
                 - name
                 - code
   '/admin/category/{id}':
     get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
+      summary: 'Display specific category.'
+      operationId: displaySpecificCategory
       description: ''
       parameters: []
       responses:
@@ -413,8 +413,8 @@ paths:
       tags:
         - 'Category Management'
     put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
+      summary: 'Update specified category.'
+      operationId: updateSpecifiedCategory
       description: ''
       parameters: []
       responses:
@@ -429,9 +429,9 @@ paths:
                   data:
                     id: 1
                     code: ATK
-                    name: nihil
+                    name: voluptatibus
                     created_at: '2024-10-05T16:29:14.000000Z'
-                    updated_at: '2024-10-05T16:55:50.000000Z'
+                    updated_at: '2024-10-06T00:43:18.000000Z'
                 properties:
                   message:
                     type: string
@@ -447,13 +447,13 @@ paths:
                         example: ATK
                       name:
                         type: string
-                        example: nihil
+                        example: voluptatibus
                       created_at:
                         type: string
                         example: '2024-10-05T16:29:14.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-10-05T16:55:50.000000Z'
+                        example: '2024-10-06T00:43:18.000000Z'
       tags:
         - 'Category Management'
       requestBody:
@@ -466,7 +466,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: nihil
+                  example: voluptatibus
                 code:
                   type: string
                   description: ''
@@ -474,8 +474,8 @@ paths:
               required:
                 - name
     delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
+      summary: 'Delete category by id.'
+      operationId: deleteCategoryById
       description: ''
       parameters: []
       responses:
@@ -533,11 +533,11 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: suscipit
+                  example: hic
                 role:
                   type: string
                   description: ''
-                  example: pengawas
+                  example: unit
                   enum:
                     - admin
                     - pengawas
@@ -545,7 +545,7 @@ paths:
                 username:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: accusantium
               required:
                 - password
                 - role
@@ -858,23 +858,23 @@ paths:
                 nip:
                   type: string
                   description: validation.max.
-                  example: xmykt
+                  example: hxnx
                 name:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: atque
                 position:
                   type: string
                   description: ''
-                  example: temporibus
+                  example: cum
                 phone:
                   type: string
                   description: ''
-                  example: non
+                  example: consequatur
                 email:
                   type: string
                   description: ''
-                  example: jeromy72@example.org
+                  example: fdaniel@example.org
               required:
                 - nip
                 - name
@@ -958,14 +958,14 @@ paths:
                   message: 'success update employee'
                   data:
                     id: 1
-                    nip: yg
-                    name: magni
-                    position: doloremque
-                    phone: fugit
-                    email: wilhelm65@example.com
+                    nip: kd
+                    name: velit
+                    position: atque
+                    phone: voluptas
+                    email: fermin19@example.com
                     email_verified_at: null
                     created_at: null
-                    updated_at: '2024-10-05T16:55:49.000000Z'
+                    updated_at: '2024-10-06T00:43:18.000000Z'
                 properties:
                   message:
                     type: string
@@ -978,19 +978,19 @@ paths:
                         example: 1
                       nip:
                         type: string
-                        example: yg
+                        example: kd
                       name:
                         type: string
-                        example: magni
+                        example: velit
                       position:
                         type: string
-                        example: doloremque
+                        example: atque
                       phone:
                         type: string
-                        example: fugit
+                        example: voluptas
                       email:
                         type: string
-                        example: wilhelm65@example.com
+                        example: fermin19@example.com
                       email_verified_at:
                         type: string
                         example: null
@@ -999,7 +999,7 @@ paths:
                         example: null
                       updated_at:
                         type: string
-                        example: '2024-10-05T16:55:49.000000Z'
+                        example: '2024-10-06T00:43:18.000000Z'
       tags:
         - 'Employee Management'
       requestBody:
@@ -1012,23 +1012,23 @@ paths:
                 nip:
                   type: string
                   description: validation.max.
-                  example: yg
+                  example: kd
                 name:
                   type: string
                   description: ''
-                  example: magni
+                  example: velit
                 position:
                   type: string
                   description: ''
-                  example: doloremque
+                  example: atque
                 phone:
                   type: string
                   description: ''
-                  example: fugit
+                  example: voluptas
                 email:
                   type: string
                   description: ''
-                  example: wilhelm65@example.com
+                  example: fermin19@example.com
               required:
                 - nip
                 - name
@@ -1120,7 +1120,7 @@ paths:
         in: path
         name: path
         description: ''
-        example: 6@
+        example: '18]GkE%F'
         required: true
         schema:
           type: string
@@ -1549,12 +1549,12 @@ paths:
                       created_at: '2024-10-05T16:29:41.000000Z'
                       updated_at: '2024-10-05T16:29:41.000000Z'
                     -
-                      id: 103
+                      id: 104
                       incoming_item_id: 1
                       item_id: 11
-                      qty: 10
-                      created_at: '2024-10-05T16:55:50.000000Z'
-                      updated_at: '2024-10-05T16:55:50.000000Z'
+                      qty: 2
+                      created_at: '2024-10-06T00:43:18.000000Z'
+                      updated_at: '2024-10-06T00:43:18.000000Z'
                 properties:
                   message:
                     type: string
@@ -1633,12 +1633,12 @@ paths:
                         created_at: '2024-10-05T16:29:41.000000Z'
                         updated_at: '2024-10-05T16:29:41.000000Z'
                       -
-                        id: 103
+                        id: 104
                         incoming_item_id: 1
                         item_id: 11
-                        qty: 10
-                        created_at: '2024-10-05T16:55:50.000000Z'
-                        updated_at: '2024-10-05T16:55:50.000000Z'
+                        qty: 2
+                        created_at: '2024-10-06T00:43:18.000000Z'
+                        updated_at: '2024-10-06T00:43:18.000000Z'
                     items:
                       type: object
                       properties:
@@ -1676,7 +1676,7 @@ paths:
                 qty:
                   type: integer
                   description: ''
-                  example: 10
+                  example: 2
               required:
                 - item_id
                 - qty
@@ -1696,18 +1696,46 @@ paths:
       description: ''
       parameters: []
       responses:
-        500:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Internal Server Error'
+                  message: 'success update item in detail'
+                  data:
+                    id: 1
+                    incoming_item_id: 4
+                    item_id: 6
+                    qty: 12
+                    created_at: '2024-10-05T16:29:41.000000Z'
+                    updated_at: '2024-10-06T00:43:18.000000Z'
                 properties:
                   message:
                     type: string
-                    example: 'Internal Server Error'
+                    example: 'success update item in detail'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      incoming_item_id:
+                        type: integer
+                        example: 4
+                      item_id:
+                        type: integer
+                        example: 6
+                      qty:
+                        type: integer
+                        example: 12
+                      created_at:
+                        type: string
+                        example: '2024-10-05T16:29:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-10-06T00:43:18.000000Z'
       tags:
         - 'Incoming Item Detail Management'
       requestBody:
@@ -1720,11 +1748,11 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 19
+                  example: 6
                 qty:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 12
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -2411,7 +2439,7 @@ paths:
                 supplier_id:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: quia
                 items:
                   type: array
                   description: ''
@@ -2423,11 +2451,11 @@ paths:
                       item_id:
                         type: string
                         description: ''
-                        example: explicabo
+                        example: quisquam
                       qty:
                         type: integer
                         description: ''
-                        example: 13
+                        example: 18
                     required:
                       - item_id
                       - qty
@@ -3205,27 +3233,27 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: z
+                  example: qdkeudgyqi
                 unit:
                   type: string
                   description: validation.max.
-                  example: pwpqg
+                  example: liiwdte
                 stock:
                   type: integer
                   description: ''
-                  example: 7
+                  example: 6
                 min_stock:
                   type: integer
                   description: ''
-                  example: 11
+                  example: 8
                 category_id:
                   type: string
                   description: ''
-                  example: nihil
+                  example: aut
                 price:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 17
               required:
                 - name
                 - unit
@@ -3336,11 +3364,11 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: zmupconpn
+                  example: uesjgqdqozjdjqjrm
                 unit:
                   type: string
                   description: validation.max.
-                  example: oqftaesojwtflgzbegiy
+                  example: zfzcrtcsooxtntnn
                 stock:
                   type: integer
                   description: ''
@@ -3348,15 +3376,15 @@ paths:
                 min_stock:
                   type: integer
                   description: ''
-                  example: 4
+                  example: 19
                 category_id:
                   type: string
                   description: ''
-                  example: omnis
+                  example: velit
                 price:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 10
     delete:
       summary: 'Remove the specified item from storage.'
       operationId: removeTheSpecifiedItemFromStorage
@@ -3521,11 +3549,11 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 8
+                  example: 4
                 qty:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 17
               required:
                 - item_id
                 - qty
@@ -3569,11 +3597,11 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 7
                 qty:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 8
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -3607,7 +3635,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the detail.'
-        example: odit
+        example: maxime
         required: true
         schema:
           type: string
@@ -4084,11 +4112,11 @@ paths:
                       item_id:
                         type: integer
                         description: ''
-                        example: 19
+                        example: 17
                       qty:
                         type: integer
                         description: ''
-                        example: 19
+                        example: 17
                     required:
                       - item_id
                       - qty
@@ -4284,11 +4312,11 @@ paths:
                 item_id:
                   type: string
                   description: ''
-                  example: voluptatum
+                  example: ea
                 qty:
                   type: string
                   description: ''
-                  example: ratione
+                  example: numquam
               required:
                 - item_id
                 - qty
@@ -4332,15 +4360,15 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 6
+                  example: 2
                 qty:
                   type: integer
                   description: ''
-                  example: 11
+                  example: 2
                 qty_acc:
                   type: integer
                   description: ''
-                  example: 8
+                  example: 10
               required:
                 - item_id
                 - qty
@@ -4358,7 +4386,7 @@ paths:
         in: path
         name: requestItemDetail
         description: ''
-        example: eveniet
+        example: nulla
         required: true
         schema:
           type: string
@@ -4396,7 +4424,7 @@ paths:
         in: path
         name: requestItemDetail_id
         description: 'The ID of the requestItemDetail.'
-        example: 20
+        example: 15
         required: true
         schema:
           type: integer
@@ -4971,11 +4999,11 @@ paths:
                 item_id:
                   type: string
                   description: ''
-                  example: est
+                  example: quas
                 qty:
                   type: string
                   description: ''
-                  example: et
+                  example: tempora
               required:
                 - item_id
                 - qty
@@ -5019,15 +5047,15 @@ paths:
                 item_id:
                   type: integer
                   description: ''
-                  example: 2
+                  example: 3
                 qty:
                   type: integer
                   description: ''
-                  example: 10
+                  example: 15
                 qty_acc:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 9
               required:
                 - item_id
                 - qty
@@ -5065,7 +5093,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the detail.'
-        example: nostrum
+        example: sequi
         required: true
         schema:
           type: string
@@ -5477,7 +5505,7 @@ paths:
                       item_id:
                         type: integer
                         description: ''
-                        example: 12
+                        example: 11
                       qty:
                         type: integer
                         description: ''
@@ -5611,7 +5639,7 @@ paths:
         in: path
         name: request
         description: 'The request.'
-        example: perspiciatis
+        example: deserunt
         required: true
         schema:
           type: string
@@ -5641,7 +5669,7 @@ paths:
         in: path
         name: request
         description: 'The request.'
-        example: perferendis
+        example: nostrum
         required: true
         schema:
           type: string
@@ -6028,15 +6056,15 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: gpsouqpegftkfdhgobifo
+                  example: vwnbj
                 address:
                   type: string
                   description: validation.max.
-                  example: dcocbvmkmsodhimkqsgnnklo
+                  example: qzbcoxgwiu
                 phone:
                   type: string
                   description: validation.max.
-                  example: wkdvvfyktrhuzetdqd
+                  example: cvsqddaojrzqxhfrutpv
               required:
                 - name
   '/admin/supplier/{id}':
@@ -6126,15 +6154,15 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: rsxcjdepo
+                  example: kuljmpubjvbtljyc
                 address:
                   type: string
                   description: validation.max.
-                  example: zznxfrnhplachzwonxtp
+                  example: gagszgjmhfshre
                 phone:
                   type: string
                   description: validation.max.
-                  example: bvlikm
+                  example: peahlerkasxcf
               required:
                 - name
     delete:
@@ -6492,27 +6520,27 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: ubyqz
+                  example: zlpatopsded
                 id:
                   type: string
                   description: validation.max.
-                  example: p
+                  example: rnqmtujmwh
                 username:
                   type: string
                   description: validation.max.
-                  example: bfyejiwuggfgspqtjdwbkuft
+                  example: otzurrr
                 email:
                   type: string
                   description: 'validation.email validation.max.'
-                  example: glehner@example.com
+                  example: virginie.kohler@example.com
                 password:
                   type: string
                   description: validation.min.
-                  example: ',AV+8NbLa'
+                  example: 'NqAVN35H~VU,A'
                 role:
                   type: string
                   description: ''
-                  example: admin
+                  example: unit
                   enum:
                     - admin
                     - unit
@@ -6603,27 +6631,27 @@ paths:
                 name:
                   type: string
                   description: validation.max.
-                  example: iexyoqelclabqitezwemnzarb
+                  example: orixuvparhwexdazxoyichex
                 id:
                   type: string
                   description: validation.max.
-                  example: uw
+                  example: fdbyvsobshxkbzd
                 username:
                   type: string
                   description: validation.max.
-                  example: mpzaodsujan
+                  example: vozkalmztbjqevibytgodclbx
                 email:
                   type: string
                   description: 'validation.email validation.max.'
-                  example: keeley.upton@example.com
+                  example: rnader@example.net
                 password:
                   type: string
                   description: validation.min.
-                  example: "T|4ECaeRj6}V'j?$"
+                  example: 'il?04x>\'
                 role:
                   type: string
                   description: ''
-                  example: unit
+                  example: pengawas
                   enum:
                     - admin
                     - unit

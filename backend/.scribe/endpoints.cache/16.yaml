@@ -98,7 +98,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: voluptatum
+        example: ea
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -107,14 +107,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: ratione
+        example: numquam
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: voluptatum
-      qty: ratione
+      item_id: ea
+      qty: numquam
     fileParameters: []
     responses:
       -
@@ -169,14 +169,14 @@ endpoints:
         name: requestItemDetail
         description: ''
         required: true
-        example: eveniet
+        example: nulla
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       request_item_id: 1
-      requestItemDetail: eveniet
+      requestItemDetail: nulla
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -184,7 +184,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 6
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -193,7 +193,7 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 11
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -202,15 +202,15 @@ endpoints:
         name: qty_acc
         description: ''
         required: true
-        example: 8
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 6
-      qty: 11
-      qty_acc: 8
+      item_id: 2
+      qty: 2
+      qty_acc: 10
     fileParameters: []
     responses:
       -
@@ -264,14 +264,14 @@ endpoints:
         name: requestItemDetail_id
         description: 'The ID of the requestItemDetail.'
         required: true
-        example: 20
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       request_item_id: 1
-      requestItemDetail_id: 20
+      requestItemDetail_id: 15
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

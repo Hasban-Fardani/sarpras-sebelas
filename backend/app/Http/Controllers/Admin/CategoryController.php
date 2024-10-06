@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Validator;
 class CategoryController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display list of categories.
      */
     public function index(Request $request)
     {
@@ -46,7 +46,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a new category in storage.
      */
     public function store(Request $request)
     {
@@ -74,7 +74,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display specific category.
      */
     public function show(Category $category)
     {
@@ -85,7 +85,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update specified category.
      */
     public function update(Request $request, Category $category)
     {
@@ -113,7 +113,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Delete category by id.
      */
     public function destroy(Category $category)
     {

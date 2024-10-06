@@ -98,7 +98,7 @@ endpoints:
         name: item_id
         description: ''
         required: true
-        example: 8
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -107,14 +107,14 @@ endpoints:
         name: qty
         description: ''
         required: true
-        example: 15
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 8
-      qty: 15
+      item_id: 4
+      qty: 17
     fileParameters: []
     responses:
       -
@@ -169,14 +169,14 @@ endpoints:
         name: id
         description: 'The ID of the detail.'
         required: true
-        example: odit
+        example: maxime
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
       outgoing_item_id: 1
-      id: odit
+      id: maxime
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -184,7 +184,7 @@ endpoints:
         name: item_id
         description: ''
         required: false
-        example: 18
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -193,14 +193,14 @@ endpoints:
         name: qty
         description: ''
         required: false
-        example: 5
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 18
-      qty: 5
+      item_id: 7
+      qty: 8
     fileParameters: []
     responses:
       -

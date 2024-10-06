@@ -29,13 +29,13 @@ endpoints:
         name: request
         description: 'The request.'
         required: true
-        example: perspiciatis
+        example: deserunt
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: perspiciatis
+      request: deserunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -84,13 +84,13 @@ endpoints:
         name: request
         description: 'The request.'
         required: true
-        example: perferendis
+        example: nostrum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: perferendis
+      request: nostrum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "13a20617-1142-4a09-a876-13ede4bcb013",
+        "_postman_id": "a71b82c5-0fcf-4acd-b146-d5d871fecd55",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -260,7 +260,7 @@
             "description": "\nAPI endpoints for managing categories",
             "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Display list of categories.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -305,7 +305,7 @@
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Store a new category in storage.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -326,7 +326,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ysc-fjy_g\",\"code\":\"velit\"}"
+                            "raw": "{\"name\":\"ocf-smr_a\",\"code\":\"nobis\"}"
                         },
                         "description": ""
                     },
@@ -347,13 +347,13 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"ysc-fjy_g\",\"code\":\"velit\",\"updated_at\":\"2024-10-05T16:55:50.000000Z\",\"created_at\":\"2024-10-05T16:55:50.000000Z\",\"id\":3}}",
+                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"ocf-smr_a\",\"code\":\"nobis\",\"updated_at\":\"2024-10-06T00:43:18.000000Z\",\"created_at\":\"2024-10-06T00:43:18.000000Z\",\"id\":4}}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Display specific category.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -406,7 +406,7 @@
                     ]
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Update specified category.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -435,7 +435,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"nihil\"}"
+                            "raw": "{\"name\":\"voluptatibus\"}"
                         },
                         "description": ""
                     },
@@ -456,13 +456,13 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"nihil\",\"created_at\":\"2024-10-05T16:29:14.000000Z\",\"updated_at\":\"2024-10-05T16:55:50.000000Z\"}}",
+                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"voluptatibus\",\"created_at\":\"2024-10-05T16:29:14.000000Z\",\"updated_at\":\"2024-10-06T00:43:18.000000Z\"}}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "Delete category by id.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -550,7 +550,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"suscipit\",\"role\":\"pengawas\",\"username\":\"consequatur\"}"
+                            "raw": "{\"password\":\"hic\",\"role\":\"unit\",\"username\":\"accusantium\"}"
                         },
                         "description": ""
                     },
@@ -696,7 +696,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nip\":\"xmykt\",\"name\":\"ducimus\",\"position\":\"temporibus\",\"phone\":\"non\",\"email\":\"jeromy72@example.org\"}"
+                            "raw": "{\"nip\":\"hxnx\",\"name\":\"atque\",\"position\":\"cum\",\"phone\":\"consequatur\",\"email\":\"fdaniel@example.org\"}"
                         },
                         "description": ""
                     },
@@ -805,7 +805,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nip\":\"yg\",\"name\":\"magni\",\"position\":\"doloremque\",\"phone\":\"fugit\",\"email\":\"wilhelm65@example.com\"}"
+                            "raw": "{\"nip\":\"kd\",\"name\":\"velit\",\"position\":\"atque\",\"phone\":\"voluptas\",\"email\":\"fermin19@example.com\"}"
                         },
                         "description": ""
                     },
@@ -826,7 +826,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"yg\",\"name\":\"magni\",\"position\":\"doloremque\",\"phone\":\"fugit\",\"email\":\"wilhelm65@example.com\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-05T16:55:49.000000Z\"}}",
+                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"kd\",\"name\":\"velit\",\"position\":\"atque\",\"phone\":\"voluptas\",\"email\":\"fermin19@example.com\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T00:43:18.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -955,7 +955,7 @@
                                 {
                                     "id": "path",
                                     "key": "path",
-                                    "value": "6%40",
+                                    "value": "18%5DGkE%25F",
                                     "description": ""
                                 }
                             ]
@@ -1085,7 +1085,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":11,\"qty\":10}"
+                            "raw": "{\"item_id\":11,\"qty\":2}"
                         },
                         "description": ""
                     },
@@ -1106,7 +1106,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":14,\"incoming_item_id\":1,\"item_id\":7,\"qty\":76,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":23,\"incoming_item_id\":1,\"item_id\":10,\"qty\":49,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":25,\"incoming_item_id\":1,\"item_id\":5,\"qty\":78,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":38,\"incoming_item_id\":1,\"item_id\":1,\"qty\":38,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":40,\"incoming_item_id\":1,\"item_id\":8,\"qty\":72,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":8,\"qty\":47,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":59,\"incoming_item_id\":1,\"item_id\":5,\"qty\":74,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":3,\"qty\":100,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":87,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":7,\"qty\":82,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":103,\"incoming_item_id\":1,\"item_id\":11,\"qty\":10,\"created_at\":\"2024-10-05T16:55:50.000000Z\",\"updated_at\":\"2024-10-05T16:55:50.000000Z\"}]}",
+                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":14,\"incoming_item_id\":1,\"item_id\":7,\"qty\":76,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":23,\"incoming_item_id\":1,\"item_id\":10,\"qty\":49,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":25,\"incoming_item_id\":1,\"item_id\":5,\"qty\":78,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":38,\"incoming_item_id\":1,\"item_id\":1,\"qty\":38,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":40,\"incoming_item_id\":1,\"item_id\":8,\"qty\":72,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":8,\"qty\":47,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":59,\"incoming_item_id\":1,\"item_id\":5,\"qty\":74,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":3,\"qty\":100,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":87,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":7,\"qty\":82,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-05T16:29:41.000000Z\"},{\"id\":104,\"incoming_item_id\":1,\"item_id\":11,\"qty\":2,\"created_at\":\"2024-10-06T00:43:18.000000Z\",\"updated_at\":\"2024-10-06T00:43:18.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1147,7 +1147,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":19,\"qty\":9}"
+                            "raw": "{\"item_id\":6,\"qty\":12}"
                         },
                         "description": ""
                     },
@@ -1167,8 +1167,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Internal Server Error\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success update item in detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":6,\"qty\":12,\"created_at\":\"2024-10-05T16:29:41.000000Z\",\"updated_at\":\"2024-10-06T00:43:18.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -1305,7 +1305,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"supplier_id\":\"molestiae\",\"items\":[{\"item_id\":\"explicabo\",\"qty\":13}]}"
+                            "raw": "{\"supplier_id\":\"quia\",\"items\":[{\"item_id\":\"quisquam\",\"qty\":18}]}"
                         },
                         "description": ""
                     },
@@ -1513,37 +1513,37 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "z",
+                                    "value": "qdkeudgyqi",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "unit",
-                                    "value": "pwpqg",
+                                    "value": "liiwdte",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "stock",
-                                    "value": 7,
+                                    "value": 6,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "min_stock",
-                                    "value": 11,
+                                    "value": 8,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "nihil",
+                                    "value": "aut",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "price",
-                                    "value": 1,
+                                    "value": 17,
                                     "type": "text",
                                     "description": ""
                                 },
@@ -1664,13 +1664,13 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "zmupconpn",
+                                    "value": "uesjgqdqozjdjqjrm",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
                                 {
                                     "key": "unit",
-                                    "value": "oqftaesojwtflgzbegiy",
+                                    "value": "zfzcrtcsooxtntnn",
                                     "type": "text",
                                     "description": "validation.max."
                                 },
@@ -1682,19 +1682,19 @@
                                 },
                                 {
                                     "key": "min_stock",
-                                    "value": 4,
+                                    "value": 19,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "omnis",
+                                    "value": "velit",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "price",
-                                    "value": 5,
+                                    "value": 10,
                                     "type": "text",
                                     "description": ""
                                 },
@@ -1829,7 +1829,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IndEKzNxam1xK25uTFdLekRnbWY0Vmc9PSIsInZhbHVlIjoiaU40eUc0QnEzOXk5dzZnb3NGdCthZG1jejZVM1BKbGdJeTlhcnNjaS8xZ1FBSmxrdnRhWTNWczFXSlkxSEt0S0kzcUJ1ME5qQkFXamY3Ly92WEg3aXRJWUZaM3VWNzJwd3lGcFE4cCtxVEFxNklvbzFyUjRFTGpPc090dXV3a3MiLCJtYWMiOiI4Y2MxZDlmYzRiM2I0YjMxYmYxNmU2NTExYTNlZTRmYTE5Y2Q5NWRkM2YyMWYyNzhiYTAyYjZlMDc4ZGNiYTEwIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IkJVbTlxQlFJRW8vdFZDZVI0dUNHQXc9PSIsInZhbHVlIjoiNG8ySmhRLzBZczlFTTZMR3B6SmtXZ1RDZVNNVlVCNXc2N2wwMElMdGllS0hLMURXcFVKYnpEeC9BQU11SFgvM01FMURFb3pSN0lVYkwwRmRUT2xVNXo2WERoUFVEdUVWSUVQdE9tMXJUVjdtLzFoOUtzUUlFR3ZpcklyY3ZQd0UiLCJtYWMiOiI2ZjQ4M2MwMTc0MjNhZjUzZGQ1ZTk5ODUwMzA0YTk4MzQ5OTIyMGE3MDg4MzY3ODlkNGZhMTA1NmJjMDVkNjRkIiwidGFnIjoiIn0%3D; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; GgWY62EPBmodfwg2DioNNkXJ8fpNi1retUflLSCZ=eyJpdiI6Ii9vKzhySW5WNlphTU90WDM1dVptN2c9PSIsInZhbHVlIjoiNjRBdEFHSFlCR05pUVc1Q0RIUDRKUThscndOaW8vcWlmWHNrWThJUkpXZTJ6VzB6SGR2dDREaUU5b095MVhHRkN4SWFUcDl1bUxwTndLVTNtOTl2S1pSaWx1SnoyWU1lSDZUZ3ovVnlLblNNU0U4ZXgzYUZHb1c2WVUrQm0zNDBEMjF6aFJGMXZQc3pKcFlLc0ZTeXNDOVh6V09iYlRJM0VPQy8xeFRJYkV3cnpWcVFsZWEvSGgrenh4T3lKcjZyazdudEZTdUNuVlVvc2hmbW4vK1lwSVRYT05PRUIxYmRDZVNjK3BucnZoWHFHbDRhT1k0Qitac3ZkUkJRdGJFd0NTakd4RVFMUHBhcU9JVVRrYkdON3VHZzJpbml5dllybkQzR296c3dLTVNNem8zSVhTc3Y1L2ZsSzlEanJna0ZEMFcxSDFvcmVHS21qUFBKZDFPa1Vsa2tGYmkzUURwYU5ySGF6SkxUeFpXMG5UUy8rVC9RUzh2VmhONmkySjREVXNNZmVzS0hIaFh2Ly9rbFhXMHBWdz09IiwibWFjIjoiZDgyYjFjOWVhYTdiZjQ1ZTFhMWIzZDgwMzhlNTU4NWY0OTQzNDE2OTc4YmE1NTAzNDI1OTE5OWY1MGZjZTc0YiIsInRhZyI6IiJ9; expires=Sat, 05 Oct 2024 18:55:49 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IllJYjIzdlZXUFFhektCZlh3c3RVNUE9PSIsInZhbHVlIjoiQTROdHY3cWJzbndFYkhTNEJCeHc3bFNocmZWVTJmQ0tXUWhjOFBudk5reWdrWlJBWUdLb3ZBSWpscmpPUXpUd3RVUjV4YktTSmQ1eXlBc0pyTTQ4V1dVWG5kQTROUnhHd0NIVFhYV3BLUnE2L1lzZnFsTU11ejE1Rmd5V0s5WkUiLCJtYWMiOiIzNzJkMmFmZDQ0MjI5YTM1NDcwMzM1MzI3ZTdmYzFkODBjODJjOWVlNTFkNWNiNjY4YTJmZWQ5NDhhYzNkNTM1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 02:43:17 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6ImRMZTUxYkFuS0xhSyt4aFVOb1YvU2c9PSIsInZhbHVlIjoicm0xZWUxcHhudW96UW15dmdORVBWY0FudTMzY21iU3Q2NzE4Y2FKRWkvVTdqc1NZTDNvR0NZbVk0TkV5YlFQL1IxeVJvdTk2aGlNY01FdmMyaGdWNlRSdjJBbm8yZUdiemVBRTF5ZVVBMVdyeHVaTEZTMjVUc0w1YUd1cDZDVmEiLCJtYWMiOiIzNWM0MzgxMGRlNzU2NjI2ZTg3Y2M2MjkxYjdiMTgwMDg2ZjRjYmU4YTdkMTlkNzFhZWJjZjc3ZTYzZmVjODI3IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 02:43:17 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; XEv2TYM9WQCzTVlLrFL3HbiMSUeE9iIbZatENBVG=eyJpdiI6IjNqTEdSVTNKVVVMeTFoalhMTjBJTkE9PSIsInZhbHVlIjoiTmsvZnZUeTBMaDhvTm52ZHVFUG9rWnJEL3hTa21LVzZaUHdRZVhGVmdOTWp6Qkd4dXVTSjNzRjFpWmtWdjVVdzN6TmNlVG1RNnVTSmtBeENsNk12aUVWY3Y5MGNXK0YwWFJNU21BR01wSk81RkpyNlBWUFlOYjk0b0NRaXgrKzZhUVZCWnp2U2l5UXQwTXNzTDlJeTBPWUVTNnJWTCtUZ3NDNlZLM2lPb0w1b2cvNUdWUDhmbWdpdjN3Z2hCTDVMbGxWaERPVktFaGs4NEFNbVRibWNXOElxWC9EaGdhMFY3dDhrc2NsTXd5NEx3SWYxY09takFpb0VvdU0zQUc3c0pmYkdyMFZNSElEWCszT2FMTDZTZkhMT2JXeGtSRGI4Q1g4dnduZ2x4NXJ4Kys4bitIM1RVVWlEWTc2QktEM1gwSG1GRzhnNUFhUXhlbnAxRUNQYm95OWNveXNxT0VmTjViVXZUaGtsM2xqVHVEUEt3V1BpWFhzdU1OWDBsUlBsN3BwQWhTeCswRkQxQXpaVkIvbStIQT09IiwibWFjIjoiNGU3MWU5NDQ4ODQ1ZDYyMGUxNjczYTViMGU1OWJlNjJkZmJkNDA3ZjU2MWYzMGZmZTc3MTI5MWFkOTA0MjdlYyIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 02:43:17 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -2062,7 +2062,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":8,\"qty\":15}"
+                            "raw": "{\"item_id\":4,\"qty\":17}"
                         },
                         "description": ""
                     },
@@ -2106,7 +2106,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "odit",
+                                    "value": "maxime",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -2124,7 +2124,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":18,\"qty\":5}"
+                            "raw": "{\"item_id\":7,\"qty\":8}"
                         },
                         "description": ""
                     },
@@ -2282,7 +2282,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"division_id\":7,\"items\":[{\"item_id\":19,\"qty\":19}]}"
+                            "raw": "{\"division_id\":7,\"items\":[{\"item_id\":17,\"qty\":17}]}"
                         },
                         "description": ""
                     },
@@ -2503,7 +2503,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"voluptatum\",\"qty\":\"ratione\"}"
+                            "raw": "{\"item_id\":\"ea\",\"qty\":\"numquam\"}"
                         },
                         "description": ""
                     },
@@ -2547,7 +2547,7 @@
                                 {
                                     "id": "requestItemDetail",
                                     "key": "requestItemDetail",
-                                    "value": "eveniet",
+                                    "value": "nulla",
                                     "description": ""
                                 }
                             ]
@@ -2565,7 +2565,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":6,\"qty\":11,\"qty_acc\":8}"
+                            "raw": "{\"item_id\":2,\"qty\":2,\"qty_acc\":10}"
                         },
                         "description": ""
                     },
@@ -2609,7 +2609,7 @@
                                 {
                                     "id": "requestItemDetail_id",
                                     "key": "requestItemDetail_id",
-                                    "value": "20",
+                                    "value": "15",
                                     "description": "The ID of the requestItemDetail."
                                 }
                             ]
@@ -2941,7 +2941,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"est\",\"qty\":\"et\"}"
+                            "raw": "{\"item_id\":\"quas\",\"qty\":\"tempora\"}"
                         },
                         "description": ""
                     },
@@ -2985,7 +2985,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nostrum",
+                                    "value": "sequi",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -3003,7 +3003,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":2,\"qty\":10,\"qty_acc\":5}"
+                            "raw": "{\"item_id\":3,\"qty\":15,\"qty_acc\":9}"
                         },
                         "description": ""
                     },
@@ -3047,7 +3047,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "8",
+                                    "value": "14",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -3161,7 +3161,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"items\":[{\"item_id\":12,\"qty\":9}]}"
+                            "raw": "{\"items\":[{\"item_id\":11,\"qty\":9}]}"
                         },
                         "description": ""
                     },
@@ -3311,7 +3311,7 @@
                                 {
                                     "id": "request",
                                     "key": "request",
-                                    "value": "perspiciatis",
+                                    "value": "deserunt",
                                     "description": "The request."
                                 }
                             ]
@@ -3364,7 +3364,7 @@
                                 {
                                     "id": "request",
                                     "key": "request",
-                                    "value": "perferendis",
+                                    "value": "nostrum",
                                     "description": "The request."
                                 }
                             ]
@@ -3590,7 +3590,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"gpsouqpegftkfdhgobifo\",\"address\":\"dcocbvmkmsodhimkqsgnnklo\",\"phone\":\"wkdvvfyktrhuzetdqd\"}"
+                            "raw": "{\"name\":\"vwnbj\",\"address\":\"qzbcoxgwiu\",\"phone\":\"cvsqddaojrzqxhfrutpv\"}"
                         },
                         "description": ""
                     },
@@ -3699,7 +3699,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"rsxcjdepo\",\"address\":\"zznxfrnhplachzwonxtp\",\"phone\":\"bvlikm\"}"
+                            "raw": "{\"name\":\"kuljmpubjvbtljyc\",\"address\":\"gagszgjmhfshre\",\"phone\":\"peahlerkasxcf\"}"
                         },
                         "description": ""
                     },
@@ -3851,7 +3851,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ubyqz\",\"id\":\"p\",\"username\":\"bfyejiwuggfgspqtjdwbkuft\",\"email\":\"glehner@example.com\",\"password\":\",AV+8NbLa\",\"role\":\"admin\"}"
+                            "raw": "{\"name\":\"zlpatopsded\",\"id\":\"rnqmtujmwh\",\"username\":\"otzurrr\",\"email\":\"virginie.kohler@example.com\",\"password\":\"NqAVN35H~VU,A\",\"role\":\"unit\"}"
                         },
                         "description": ""
                     },
@@ -3960,7 +3960,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"iexyoqelclabqitezwemnzarb\",\"id\":\"uw\",\"username\":\"mpzaodsujan\",\"email\":\"keeley.upton@example.com\",\"password\":\"T|4ECaeRj6}V'j?$\",\"role\":\"unit\"}"
+                            "raw": "{\"name\":\"orixuvparhwexdazxoyichex\",\"id\":\"fdbyvsobshxkbzd\",\"username\":\"vozkalmztbjqevibytgodclbx\",\"email\":\"rnader@example.net\",\"password\":\"il?04x>\\\\\",\"role\":\"pengawas\"}"
                         },
                         "description": ""
                     },
