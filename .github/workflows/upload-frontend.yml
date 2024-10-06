@@ -23,7 +23,7 @@ jobs:
     - run: cd frontend && bun install
 
     # Step 3: Build project
-    - run: cd frontend && bun run generate
+    - run: cd frontend && bun run build
 
     # Step 4: Upload build hasil ke aaPanel menggunakan FTP
     - name: Deploy to aaPanel via FTP
