@@ -1,4 +1,4 @@
-name: 'Submission Item Management'
+name: '7. Submission Item Management'
 description: |-
 
   API endpoints for managing submission item
@@ -8,7 +8,7 @@ endpoints:
       - GET
     uri: submission
     metadata:
-      groupName: 'Submission Item Management'
+      groupName: '7. Submission Item Management'
       groupDescription: |-
 
         API endpoints for managing submission item
@@ -53,7 +53,7 @@ endpoints:
       - POST
     uri: submission
     metadata:
-      groupName: 'Submission Item Management'
+      groupName: '7. Submission Item Management'
       groupDescription: |-
 
         API endpoints for managing submission item
@@ -109,7 +109,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''code'' doesn''t have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 04:40:27, 2024-10-06 04:40:27))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''code'' doesn''t have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 06:12:11, 2024-10-06 06:12:11))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -130,7 +130,7 @@ endpoints:
       - GET
     uri: 'submission/{id}'
     metadata:
-      groupName: 'Submission Item Management'
+      groupName: '7. Submission Item Management'
       groupDescription: |-
 
         API endpoints for managing submission item
@@ -185,7 +185,7 @@ endpoints:
       - DELETE
     uri: 'submission/{id}'
     metadata:
-      groupName: 'Submission Item Management'
+      groupName: '7. Submission Item Management'
       groupDescription: |-
 
         API endpoints for managing submission item

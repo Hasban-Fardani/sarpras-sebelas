@@ -11,23 +11,29 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 /**
- * @group Admin Dashboard
- *
+ * @group Dashboard Info
+ * 
  * API endpoints for admin dashboard
  */
 class DashboardController extends Controller
 {
+    /**
+     * Get counts of items, users and requests + submssions
+     */
     public function getCounts()
     {
         return response()->json([
             'items' => Item::count(),
             'users' => User::count(),
             'requests' => RequestItem::count(),
-            'submissions' => SubmissionItem::count(), 
+            'submissions' => SubmissionItem::count(),
         ]);
     }
 
-    public function getStatsRequest() 
+    /**
+     * Get stats of requests item
+     */
+    public function getStatsRequest()
     {
         $data = RequestItem::select(
             DB::raw('MONTHNAME(created_at) as month'),
@@ -37,7 +43,7 @@ class DashboardController extends Controller
             ->groupBy('month')
             ->orderBy(DB::raw('MONTH(created_at)'))
             ->get();
-        
+
         $labels = $data->pluck('month')->toArray();
         $values = $data->pluck('count')->toArray();
         return response()->json([
@@ -46,6 +52,9 @@ class DashboardController extends Controller
         ]);
     }
 
+    /**
+     * Get stats of items
+     */
     public function getStatsItem()
     {
         // get all categories and count their items

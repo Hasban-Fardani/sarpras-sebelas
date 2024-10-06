@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @group Employee Management
+ * @group 11. Employee Management
  *
  * API endpoints for managing employees
  */

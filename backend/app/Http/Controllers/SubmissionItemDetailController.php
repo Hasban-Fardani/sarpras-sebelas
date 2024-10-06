@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @group Submission Item Detail Management
+ * @group 8. Submission Item Detail Management
  *
  * API endpoints for managing submission item detail
  */

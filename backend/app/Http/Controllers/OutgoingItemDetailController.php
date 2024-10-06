@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @group Outgoing Item Detail
+ * @group 6. Outgoing Item Detail
  *
  * Manage outgoing item detail
  */

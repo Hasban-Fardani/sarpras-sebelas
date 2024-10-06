@@ -7,8 +7,9 @@ use App\Models\RequestItem;
 use Illuminate\Http\Request;
 
 /**
- * @group Supervisor - Request Check
- *
+ * @group Supervisor
+ * @subgroup Request
+ * 
  * API endpoints for request check
  */
 class RequestCheckController extends Controller

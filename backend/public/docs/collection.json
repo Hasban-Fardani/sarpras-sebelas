@@ -10,11 +10,158 @@
     ],
     "info": {
         "name": "Laravel Sarpras API Documentation",
-        "_postman_id": "31c33b56-5583-403a-8edf-82f0c6c788dc",
+        "_postman_id": "9ad423a1-9dba-4f6c-a5c1-21daf4a43c5a",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "0. Authentication",
+            "description": "\nAPI for check if user loged in",
+            "item": [
+                {
+                    "name": "Login endpoint",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "auth\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/auth\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"password\":\"password123\",\"id\":\"2121021210\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 412,
+                            "body": "{\"message\":\"invalid fields\",\"errors\":{\"nip\":[\"validation.required\"]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET auth\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "auth\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/auth\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\"message\":\"App\\\\Models\\\\User::createToken(): Argument #1 ($name) must be of type string, null given, called in \\\/home\\\/hasban\\\/Code\\\/Github\\\/sarpras-sebelas\\\/backend\\\/app\\\/Http\\\/Controllers\\\/Auth\\\/LoginCheckController.php on line 21\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST auth\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "auth\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/auth\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"logged out\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "1. Category Management",
             "description": "\nAPI endpoints for managing categories",
@@ -107,7 +254,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T04:40:26.000000Z\",\"created_at\":\"2024-10-06T04:40:26.000000Z\",\"id\":16}}",
+                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T06:12:10.000000Z\",\"created_at\":\"2024-10-06T06:12:10.000000Z\",\"id\":32}}",
                             "name": ""
                         }
                     ]
@@ -216,7 +363,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:40:26.000000Z\"}}",
+                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T06:12:10.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -434,7 +581,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/e6a393139abf0505f9329ccfd5debec4dd981510e59fc987ffb68e2a4910896a.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T04:40:26.000000Z\",\"created_at\":\"2024-10-06T04:40:26.000000Z\",\"id\":30}}",
+                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T06:12:10.000000Z\",\"created_at\":\"2024-10-06T06:12:10.000000Z\",\"id\":46}}",
                             "name": ""
                         }
                     ]
@@ -487,7 +634,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get item\",\"data\":{\"id\":1,\"code\":\"I-001\",\"image\":\"\\\/images\\\/pulpen-ae7.jpeg\",\"name\":\"Pulpen AE7\",\"unit\":\"pcs\",\"merk\":\"ae7\",\"type\":\"pulpen\",\"size\":\"0.5mm\",\"stock\":17,\"min_stock\":5,\"price\":2000,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}}",
+                            "body": "{\"message\":\"success get item\",\"data\":{\"id\":1,\"code\":\"I-001\",\"image\":\"\\\/images\\\/pulpen-ae7.jpeg\",\"name\":\"Pulpen AE7\",\"unit\":\"pcs\",\"merk\":\"ae7\",\"type\":\"pulpen\",\"size\":\"0.5mm\",\"stock\":24,\"min_stock\":5,\"price\":2000,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -614,7 +761,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/e6a393139abf0505f9329ccfd5debec4dd981510e59fc987ffb68e2a4910896a.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:40:26.000000Z\"}}",
+                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T06:12:10.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -718,7 +865,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all incoming items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"INV-001\",\"employee_id\":1,\"supplier_id\":1,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"}},{\"id\":2,\"code\":\"INV-002\",\"employee_id\":1,\"supplier_id\":2,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":3,\"code\":\"INV-003\",\"employee_id\":1,\"supplier_id\":3,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":3,\"name\":\"Supplier 3\"}},{\"id\":4,\"code\":\"INV-004\",\"employee_id\":1,\"supplier_id\":4,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":4,\"name\":\"Supplier 4\"}},{\"id\":5,\"code\":\"INV-005\",\"employee_id\":1,\"supplier_id\":5,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":5,\"name\":\"Supplier 5\"}},{\"id\":6,\"code\":\"INV-9152\",\"employee_id\":1,\"supplier_id\":2,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":7,\"code\":\"INV-5627\",\"employee_id\":1,\"supplier_id\":1,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"}},{\"id\":8,\"code\":\"INV-6536\",\"employee_id\":1,\"supplier_id\":5,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":5,\"name\":\"Supplier 5\"}},{\"id\":9,\"code\":\"INV-6369\",\"employee_id\":1,\"supplier_id\":2,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":10,\"code\":\"INV-4558\",\"employee_id\":1,\"supplier_id\":9,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":9,\"name\":\"Perum Lestari Tbk\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":11}",
+                            "body": "{\"message\":\"success get all incoming items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"INV-001\",\"employee_id\":1,\"supplier_id\":1,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"}},{\"id\":2,\"code\":\"INV-002\",\"employee_id\":1,\"supplier_id\":2,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":3,\"code\":\"INV-003\",\"employee_id\":1,\"supplier_id\":3,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":3,\"name\":\"Supplier 3\"}},{\"id\":4,\"code\":\"INV-004\",\"employee_id\":1,\"supplier_id\":4,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":4,\"name\":\"Supplier 4\"}},{\"id\":5,\"code\":\"INV-005\",\"employee_id\":1,\"supplier_id\":5,\"note\":\"Barang masuk untuk keperluan testing\",\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":5,\"name\":\"Supplier 5\"}},{\"id\":6,\"code\":\"INV-9152\",\"employee_id\":1,\"supplier_id\":2,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":7,\"code\":\"INV-5627\",\"employee_id\":1,\"supplier_id\":1,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":1,\"name\":\"Supplier 1\"}},{\"id\":8,\"code\":\"INV-6536\",\"employee_id\":1,\"supplier_id\":5,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":5,\"name\":\"Supplier 5\"}},{\"id\":9,\"code\":\"INV-6369\",\"employee_id\":1,\"supplier_id\":2,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":2,\"name\":\"Supplier 2\"}},{\"id\":10,\"code\":\"INV-4558\",\"employee_id\":1,\"supplier_id\":9,\"note\":null,\"total_items\":0,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"employee\":{\"id\":1,\"name\":\"Yani\"},\"supplier\":{\"id\":9,\"name\":\"Perum Lestari Tbk\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/incoming-item?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/incoming-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":12}",
                             "name": ""
                         }
                     ]
@@ -766,7 +913,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-b0e9102\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T04:40:26.000000Z\",\"created_at\":\"2024-10-06T04:40:26.000000Z\",\"id\":15}}",
+                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-0ffcf6a\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T06:12:11.000000Z\",\"created_at\":\"2024-10-06T06:12:11.000000Z\",\"id\":32}}",
                             "name": ""
                         }
                     ]
@@ -987,7 +1134,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":[{\"id\":4,\"incoming_item_id\":1,\"item_id\":4,\"qty\":25,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":12,\"incoming_item_id\":1,\"item_id\":7,\"qty\":70,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":21,\"incoming_item_id\":1,\"item_id\":6,\"qty\":97,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:40:26.000000Z\"},{\"id\":26,\"incoming_item_id\":1,\"item_id\":3,\"qty\":12,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":3,\"qty\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":53,\"incoming_item_id\":1,\"item_id\":5,\"qty\":59,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":55,\"incoming_item_id\":1,\"item_id\":2,\"qty\":85,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":56,\"incoming_item_id\":1,\"item_id\":5,\"qty\":42,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":83,\"incoming_item_id\":1,\"item_id\":5,\"qty\":73,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":10,\"qty\":17,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":88,\"incoming_item_id\":1,\"item_id\":6,\"qty\":32,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":6,\"qty\":14,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":99,\"incoming_item_id\":1,\"item_id\":6,\"qty\":96,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"}]}",
+                            "body": "{\"message\":\"success update incoming item detail\",\"data\":[{\"id\":4,\"incoming_item_id\":1,\"item_id\":4,\"qty\":25,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":12,\"incoming_item_id\":1,\"item_id\":7,\"qty\":70,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":21,\"incoming_item_id\":1,\"item_id\":6,\"qty\":97,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T06:12:11.000000Z\"},{\"id\":26,\"incoming_item_id\":1,\"item_id\":3,\"qty\":12,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":47,\"incoming_item_id\":1,\"item_id\":3,\"qty\":1,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":53,\"incoming_item_id\":1,\"item_id\":5,\"qty\":59,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":55,\"incoming_item_id\":1,\"item_id\":2,\"qty\":85,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":56,\"incoming_item_id\":1,\"item_id\":5,\"qty\":42,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":83,\"incoming_item_id\":1,\"item_id\":5,\"qty\":73,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":86,\"incoming_item_id\":1,\"item_id\":10,\"qty\":17,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":88,\"incoming_item_id\":1,\"item_id\":6,\"qty\":32,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":90,\"incoming_item_id\":1,\"item_id\":6,\"qty\":14,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"},{\"id\":99,\"incoming_item_id\":1,\"item_id\":6,\"qty\":96,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1049,7 +1196,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":7,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:40:26.000000Z\"}}",
+                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":7,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T06:12:11.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -1116,366 +1263,17 @@
             ]
         },
         {
-            "name": "Admin Dashboard",
-            "description": "\nAPI endpoints for admin dashboard",
+            "name": "5. Outgoing Item Management",
+            "description": "\nAPI endpoints for managing outgoing item",
             "item": [
-                {
-                    "name": "GET dashboard\/counts",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "dashboard\/counts",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/dashboard\/counts"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"items\":15,\"users\":4,\"requests\":10,\"submissions\":11}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET dashboard\/stats\/request",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "dashboard\/stats\/request",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/dashboard\/stats\/request"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'laravel_sarpras_sebelas.request_items.created_at' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET dashboard\/stats\/item",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "dashboard\/stats\/item",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/dashboard\/stats\/item"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"labels\":[\"Alat Tulis Kantor\"],\"values\":[15]}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Auth",
-            "description": "\nAPI endpoints for login",
-            "item": [
-                {
-                    "name": "Login endpoint",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "auth\/login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/auth\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"password\":\"password123\",\"id\":\"2121021210\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 412,
-                            "body": "{\"message\":\"invalid fields\",\"errors\":{\"nip\":[\"validation.required\"]}}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST auth\/logout",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "auth\/logout",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/auth\/logout"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"message\":\"logged out\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Employee Management",
-            "description": "\nAPI endpoints for managing employees",
-            "item": [
-                {
-                    "name": "Make user account from employee",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "admin\/employee\/:employee_id\/assign",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/admin\/employee\/:employee_id\/assign",
-                            "variable": [
-                                {
-                                    "id": "employee_id",
-                                    "key": "employee_id",
-                                    "value": "1",
-                                    "description": "The ID of the employee."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"password\":\"consequatur\",\"role\":\"admin\",\"username\":\"consequatur\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$q9Xfay\\\/bD5PzAJ95I..QE.MhFAoZVBCbKdd2Tmg\\\/i92qdBl6SzKeS, admin, consequatur, 2024-10-06 04:40:27, 2024-10-06 04:40:27))\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Delete user account",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "admin\/employee\/:employee_id\/unassign",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/admin\/employee\/:employee_id\/unassign",
-                            "variable": [
-                                {
-                                    "id": "employee_id",
-                                    "key": "employee_id",
-                                    "value": "1",
-                                    "description": "The ID of the employee."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"message\":\"succes delete account\"}",
-                            "name": ""
-                        }
-                    ]
-                },
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/employees",
+                            "path": "outgoing-item",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/employees"
+                            "raw": "{{baseUrl}}\/outgoing-item"
                         },
                         "method": "GET",
                         "header": [
@@ -1508,7 +1306,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all employees\",\"current_page\":1,\"data\":[{\"id\":1,\"nip\":\"198012311994031002\",\"name\":\"Yani\",\"position\":\"Kepala Sekolah Bidang Kurikulum\",\"phone\":\"08123456792\",\"email\":\"yani@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":2,\"nip\":\"197412311994031001\",\"name\":\"Sutarsa\",\"position\":\"Wakil Kepala Sekolah Bidang Sarana Prasarana\",\"phone\":\"08123456789\",\"email\":\"sutarsa@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":3,\"nip\":\"197806311994031003\",\"name\":\"Toni Kusmara\",\"position\":\"Staff Sarana Prasarana\",\"phone\":\"08123456781\",\"email\":\"toni.kusmara@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":4,\"nip\":\"198212311994031004\",\"name\":\"Ani Nuraeni\",\"position\":\"Ketua Progam keahlian RPL\",\"phone\":\"08123456782\",\"email\":\"zim.zim@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":5,\"nip\":\"197412311994031005\",\"name\":\"Zim zim\",\"position\":\"Ketua Progam keahlian DKV\",\"phone\":\"08123456783\",\"email\":\"ani.nuraeni@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees\",\"per_page\":10,\"prev_page_url\":null,\"to\":5,\"total\":5}",
+                            "body": "{\"message\":\"success get all item-outs\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"OUT-001\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk keperluan testing\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"OUT-002\",\"operator_id\":1,\"division_id\":5,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"OUT-003\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"OUT-004\",\"operator_id\":1,\"division_id\":5,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"OUT-005\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":6,\"code\":\"OUT-3011\",\"operator_id\":1,\"division_id\":2,\"note\":\"Maiores ex dolor dolorem maxime ipsam.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":2,\"name\":\"Sutarsa\"}},{\"id\":7,\"code\":\"OUT-1621\",\"operator_id\":1,\"division_id\":3,\"note\":\"Dignissimos amet aut blanditiis nam autem expedita suscipit.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":8,\"code\":\"OUT-2063\",\"operator_id\":1,\"division_id\":3,\"note\":\"Deserunt at eius ut rerum eum cupiditate ipsum.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":9,\"code\":\"OUT-1652\",\"operator_id\":1,\"division_id\":5,\"note\":\"Nostrum architecto harum exercitationem in nemo.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":10,\"code\":\"OUT-2174\",\"operator_id\":1,\"division_id\":4,\"note\":\"Pariatur nam occaecati distinctio odio placeat exercitationem itaque est.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
                             "name": ""
                         }
                     ]
@@ -1518,9 +1316,9 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/employees",
+                            "path": "outgoing-item",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/employees"
+                            "raw": "{{baseUrl}}\/outgoing-item"
                         },
                         "method": "POST",
                         "header": [
@@ -1535,7 +1333,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\"}"
+                            "raw": "{\"division_id\":6,\"items\":[{\"item_id\":6,\"qty\":6}]}"
                         },
                         "description": ""
                     },
@@ -1556,7 +1354,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 04:40:27, 2024-10-06 04:40:27))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
                             "name": ""
                         }
                     ]
@@ -1566,15 +1364,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/employees\/:id",
+                            "path": "outgoing-item\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/employees\/:id",
+                            "raw": "{{baseUrl}}\/outgoing-item\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the employee."
+                                    "description": "The ID of the outgoing item."
                                 }
                             ]
                         },
@@ -1608,64 +1406,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"message\":\"success get employee\",\"data\":{\"id\":1,\"nip\":\"198012311994031002\",\"name\":\"Yani\",\"position\":\"Kepala Sekolah Bidang Kurikulum\",\"phone\":\"08123456792\",\"email\":\"yani@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "admin\/employees\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/admin\/employees\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the employee."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T04:40:27.000000Z\"}}",
+                            "code": 500,
+                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
                             "name": ""
                         }
                     ]
@@ -1675,15 +1417,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/employees\/:id",
+                            "path": "outgoing-item\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/employees\/:id",
+                            "raw": "{{baseUrl}}\/outgoing-item\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the employee."
+                                    "description": "The ID of the outgoing item."
                                 }
                             ]
                         },
@@ -1718,7 +1460,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`)) (Connection: mysql, SQL: delete from `employees` where `id` = 1)\"}",
+                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
                             "name": ""
                         }
                     ]
@@ -1726,305 +1468,7 @@
             ]
         },
         {
-            "name": "File Management",
-            "description": "\nAPI endpoints for get files from R2",
-            "item": [
-                {
-                    "name": "GET public\/{path}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "public\/:path",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/public\/:path",
-                            "variable": [
-                                {
-                                    "id": "path",
-                                    "key": "path",
-                                    "value": "",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"Not Found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET private\/{path}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "private\/:path",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/private\/:path",
-                            "variable": [
-                                {
-                                    "id": "path",
-                                    "key": "path",
-                                    "value": "",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"Not Found\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Other Endpoints",
-            "description": "",
-            "item": [
-                {
-                    "name": "Return an empty response simply to trigger the storage of the CSRF cookie in the browser.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "sanctum\/csrf-cookie",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/sanctum\/csrf-cookie"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                },
-                                {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IktZWXJSUU9aUGVraGlZMnhVdXRXQ0E9PSIsInZhbHVlIjoiRTN6UTQzZk94ZXc4SjNMaU9FakxKbEFaUzZZd1BPRy9FQ3JQcDF5Nzd1YVRFQWFBMjdhVkVDMmtjZEtkVHFFZk5meUI4b004b0Q0bm5MbVhYM0JlVXJIbEppM1VhTnZlc1VJZmdvVER3TlpNMDdBZHE5N2V6VERuc1JiUjZEZDgiLCJtYWMiOiIwZWE1NDllNmY2NTZjZGVhODg4MTE0YTkxODBlYjEyZDE2ZDhjYjY2ZmE4ZDJhMGU1MWMzODlhZDc4NDY2NGVhIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 06:40:26 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InRwcXFLY3FQUUFkTjlVU1daOHR5WGc9PSIsInZhbHVlIjoicVJlQzVYMTkwNmlkeWd3aXNIeWwwcGk0eXZERUpTKzVXRXVqR1JmSm5aZ0MwcjM2MUUxRU1rOGFqTjE5eHh2d0ZMVDJlM29GTHowTTRUWmVSSmhrNElDTEZpUmR4ZkRSSWUwNGhRY2EyRXNLVWRGalV0YUpyMFNNdUljd2VCNXEiLCJtYWMiOiI5MmM5YTI1NWNmZWQ4ZWI3MWM5NjE5NmQ4NTFlZjMxMzVmZjMyMTcwZGYxNGRlMmViZTE4N2Q0Y2MwMmRkNTQ1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 06:40:26 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; X1kFBcEZ4HnVJ5cJgD09zQkCUXBt7zVZKYnwlBGz=eyJpdiI6IjR1YWsxZEI4aUxBd0w1TDZDRXMwYVE9PSIsInZhbHVlIjoiR3U2UGdkRUg4U05iTThRK21lcmZFS3hxYktJdytsUkN3cmZ5ZVFFYlp6QWFkTFBuY3BzMHBFQWRhKzlOK3V4a1FkSUFLejU3NTRQcmZaUWxSN0p0WFo2MkRRSkFKTmxoRjlxVGFsT2VoWVVZSWNxV0FsK2p6b05jcEYybnBQenlkNVovZ1FjdTBNL2N1Vk1BM1ZzaitkNk00bHRxZkw1WmsxSkU4akpFa0xqQTQxK0thdDhnZVZNVXZnZmxKY3JVMUJRQm8xbVkyT25nY05uSE0yUXhLWmdhUFBSRWkxemcybkVWMFBIUjBtNUExNmNWTldBWG5VaU5oR1cwRURWQllNMHNkUTVpZFY5YUZqR005WEZIVXkwQVU2ajlUN0k2Q0paUGFpSXViVGpLSmlDSDR1elRPam4xdFNmMFNNN2VyREcyNHFEWHhLRDU0RDMyNnlicUVMWkpENEJLTXN3bS9kNkhqckQveGtsRDA4VEJDa1NyUUovVUFTZytKSUVwZVBuU2U1cGpMN2djSS9ieVpVWjViQT09IiwibWFjIjoiZWFlYTEwMWVmZjRmMTNkYTk4ZDMyZmQzZGI5NGU0ODMzNDU0OWIwM2Y2MDYwMjgwOWRlNGY4N2Q4NDEyMWUwYSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 06:40:26 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
-                                }
-                            ],
-                            "code": 204,
-                            "body": "",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET \/",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "\/",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/\/"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "Hi, please visit <a href='http:\/\/localhost:8000\/docs'>http:\/\/localhost:8000\/docs <\/a> for documentation",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET auth\/user",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "auth\/user",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/auth\/user"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"id\":1,\"nip\":\"197806311994031003\",\"username\":\"admin\",\"role\":\"admin\",\"created_at\":\"2024-10-06T04:04:43.000000Z\",\"updated_at\":\"2024-10-06T04:04:43.000000Z\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET auth\/check",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "auth\/check",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/auth\/check"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "1",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Outgoing Item Detail",
+            "name": "6. Outgoing Item Detail",
             "description": "\nManage outgoing item detail",
             "item": [
                 {
@@ -2260,17 +1704,17 @@
             ]
         },
         {
-            "name": "Outgoing Item Management",
-            "description": "\nAPI endpoints for managing outgoing item",
+            "name": "7. Submission Item Management",
+            "description": "\nAPI endpoints for managing submission item",
             "item": [
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "outgoing-item",
+                            "path": "submission",
                             "query": [],
-                            "raw": "{{baseUrl}}\/outgoing-item"
+                            "raw": "{{baseUrl}}\/submission"
                         },
                         "method": "GET",
                         "header": [
@@ -2303,7 +1747,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all item-outs\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"OUT-001\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk keperluan testing\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"OUT-002\",\"operator_id\":1,\"division_id\":5,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"OUT-003\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"OUT-004\",\"operator_id\":1,\"division_id\":5,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"OUT-005\",\"operator_id\":1,\"division_id\":4,\"note\":\"Barang keluar untuk\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":6,\"code\":\"OUT-3011\",\"operator_id\":1,\"division_id\":2,\"note\":\"Maiores ex dolor dolorem maxime ipsam.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":2,\"name\":\"Sutarsa\"}},{\"id\":7,\"code\":\"OUT-1621\",\"operator_id\":1,\"division_id\":3,\"note\":\"Dignissimos amet aut blanditiis nam autem expedita suscipit.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":8,\"code\":\"OUT-2063\",\"operator_id\":1,\"division_id\":3,\"note\":\"Deserunt at eius ut rerum eum cupiditate ipsum.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":3,\"name\":\"Toni Kusmara\"}},{\"id\":9,\"code\":\"OUT-1652\",\"operator_id\":1,\"division_id\":5,\"note\":\"Nostrum architecto harum exercitationem in nemo.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":10,\"code\":\"OUT-2174\",\"operator_id\":1,\"division_id\":4,\"note\":\"Pariatur nam occaecati distinctio odio placeat exercitationem itaque est.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"operator\":{\"id\":1,\"name\":\"Yani\"},\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/outgoing-item\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
+                            "body": "{\"message\":\"success get all submission items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"IN-001\",\"division_id\":4,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"IN-002\",\"division_id\":5,\"status\":\"draf\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"IN-003\",\"division_id\":4,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"IN-004\",\"division_id\":5,\"status\":\"ditolak\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"IN-005\",\"division_id\":5,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":6,\"code\":\"IN-006\",\"division_id\":5,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":7,\"code\":\"SI1911\",\"division_id\":1,\"status\":\"diajukan\",\"note\":\"Officia animi aut minima amet veritatis quia enim.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}},{\"id\":8,\"code\":\"SI6446\",\"division_id\":1,\"status\":\"diajukan\",\"note\":\"Eum tempore id nisi dolorem est.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}},{\"id\":9,\"code\":\"SI4833\",\"division_id\":5,\"status\":\"ditolak\",\"note\":\"Iste qui sit id ut.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":10,\"code\":\"SI3940\",\"division_id\":1,\"status\":\"ditolak\",\"note\":\"Eius qui aut aut at aut consequatur.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/submission\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":11}",
                             "name": ""
                         }
                     ]
@@ -2313,9 +1757,9 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "outgoing-item",
+                            "path": "submission",
                             "query": [],
-                            "raw": "{{baseUrl}}\/outgoing-item"
+                            "raw": "{{baseUrl}}\/submission"
                         },
                         "method": "POST",
                         "header": [
@@ -2330,7 +1774,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"division_id\":6,\"items\":[{\"item_id\":6,\"qty\":6}]}"
+                            "raw": "{\"items\":[{\"item_id\":6,\"qty\":6}]}"
                         },
                         "description": ""
                     },
@@ -2351,7 +1795,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 04:40:26, 2024-10-06 04:40:26))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
                             "name": ""
                         }
                     ]
@@ -2361,15 +1805,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "outgoing-item\/:id",
+                            "path": "submission\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/outgoing-item\/:id",
+                            "raw": "{{baseUrl}}\/submission\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the outgoing item."
+                                    "description": "The ID of the submission."
                                 }
                             ]
                         },
@@ -2403,8 +1847,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success get submission item\",\"data\":{\"id\":1,\"code\":\"IN-001\",\"division_id\":4,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"},\"details\":[]}}",
                             "name": ""
                         }
                     ]
@@ -2414,15 +1858,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "outgoing-item\/:id",
+                            "path": "submission\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/outgoing-item\/:id",
+                            "raw": "{{baseUrl}}\/submission\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the outgoing item."
+                                    "description": "The ID of the submission."
                                 }
                             ]
                         },
@@ -2456,8 +1900,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Class \\\"App\\\\Models\\\\ItemOutDetail\\\" not found\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success delete submission item\"}",
                             "name": ""
                         }
                     ]
@@ -2465,23 +1909,23 @@
             ]
         },
         {
-            "name": "Request Item Detail Management",
-            "description": "\nAPI endpoints for managing request item detail",
+            "name": "8. Submission Item Detail Management",
+            "description": "\nAPI endpoints for managing submission item detail",
             "item": [
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "request-item\/:request_item_id\/detail",
+                            "path": "submission\/:submission_id\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail",
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail",
                             "variable": [
                                 {
-                                    "id": "request_item_id",
-                                    "key": "request_item_id",
+                                    "id": "submission_id",
+                                    "key": "submission_id",
                                     "value": "1",
-                                    "description": "The ID of the request item."
+                                    "description": "The ID of the submission."
                                 }
                             ]
                         },
@@ -2516,7 +1960,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all request item details\",\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/request-item\\\/1\\\/detail?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/request-item\\\/1\\\/detail?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/request-item\\\/1\\\/detail?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/request-item\\\/1\\\/detail\",\"per_page\":10,\"prev_page_url\":null,\"to\":null,\"total\":0}",
+                            "body": "{\"message\":\"success get all submission item details\",\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission\\\/1\\\/detail?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission\\\/1\\\/detail?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission\\\/1\\\/detail?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/submission\\\/1\\\/detail\",\"per_page\":10,\"prev_page_url\":null,\"to\":null,\"total\":0}",
                             "name": ""
                         }
                     ]
@@ -2526,15 +1970,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "request-item\/:request_item_id\/detail",
+                            "path": "submission\/:submission_id\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail",
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail",
                             "variable": [
                                 {
-                                    "id": "request_item_id",
-                                    "key": "request_item_id",
+                                    "id": "submission_id",
+                                    "key": "submission_id",
                                     "value": "1",
-                                    "description": "The ID of the request item."
+                                    "description": "The ID of the submission."
                                 }
                             ]
                         },
@@ -2572,7 +2016,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 04:40:27, 2024-10-06 04:40:27))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
                             "name": ""
                         }
                     ]
@@ -2582,21 +2026,21 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "request-item\/:request_item_id\/detail\/:requestItemDetail",
+                            "path": "submission\/:submission_id\/detail\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail\/:requestItemDetail",
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail\/:id",
                             "variable": [
                                 {
-                                    "id": "request_item_id",
-                                    "key": "request_item_id",
+                                    "id": "submission_id",
+                                    "key": "submission_id",
                                     "value": "1",
-                                    "description": "The ID of the request item."
+                                    "description": "The ID of the submission."
                                 },
                                 {
-                                    "id": "requestItemDetail",
-                                    "key": "requestItemDetail",
+                                    "id": "id",
+                                    "key": "id",
                                     "value": "consequatur",
-                                    "description": ""
+                                    "description": "The ID of the detail."
                                 }
                             ]
                         },
@@ -2644,21 +2088,21 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "request-item\/:request_item_id\/detail\/:requestItemDetail_id",
+                            "path": "submission\/:submission_id\/detail\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail\/:requestItemDetail_id",
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail\/:id",
                             "variable": [
                                 {
-                                    "id": "request_item_id",
-                                    "key": "request_item_id",
+                                    "id": "submission_id",
+                                    "key": "submission_id",
                                     "value": "1",
-                                    "description": "The ID of the request item."
+                                    "description": "The ID of the submission."
                                 },
                                 {
-                                    "id": "requestItemDetail_id",
-                                    "key": "requestItemDetail_id",
+                                    "id": "id",
+                                    "key": "id",
                                     "value": "6",
-                                    "description": "The ID of the requestItemDetail."
+                                    "description": "The ID of the detail."
                                 }
                             ]
                         },
@@ -2701,7 +2145,7 @@
             ]
         },
         {
-            "name": "Request Item Management",
+            "name": "9. Request Item Management",
             "description": "\nAPI endpoints for managing request item",
             "item": [
                 {
@@ -2903,23 +2347,23 @@
             ]
         },
         {
-            "name": "Submission Item Detail Management",
-            "description": "\nAPI endpoints for managing submission item detail",
+            "name": "10. Request Item Detail Management",
+            "description": "\nAPI endpoints for managing request item detail",
             "item": [
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/detail",
+                            "path": "request-item\/:request_item_id\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail",
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "request_item_id",
+                                    "key": "request_item_id",
                                     "value": "1",
-                                    "description": "The ID of the submission."
+                                    "description": "The ID of the request item."
                                 }
                             ]
                         },
@@ -2954,7 +2398,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get all submission item details\",\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission\\\/1\\\/detail?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission\\\/1\\\/detail?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission\\\/1\\\/detail?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/submission\\\/1\\\/detail\",\"per_page\":10,\"prev_page_url\":null,\"to\":null,\"total\":0}",
+                            "body": "{\"message\":\"success get all request item details\",\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/request-item\\\/1\\\/detail?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/request-item\\\/1\\\/detail?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/request-item\\\/1\\\/detail?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/request-item\\\/1\\\/detail\",\"per_page\":10,\"prev_page_url\":null,\"to\":null,\"total\":0}",
                             "name": ""
                         }
                     ]
@@ -2964,15 +2408,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/detail",
+                            "path": "request-item\/:request_item_id\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail",
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "request_item_id",
+                                    "key": "request_item_id",
                                     "value": "1",
-                                    "description": "The ID of the submission."
+                                    "description": "The ID of the request item."
                                 }
                             ]
                         },
@@ -3010,7 +2454,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 04:40:27, 2024-10-06 04:40:27))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
                             "name": ""
                         }
                     ]
@@ -3020,21 +2464,21 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/detail\/:id",
+                            "path": "request-item\/:request_item_id\/detail\/:requestItemDetail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail\/:id",
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail\/:requestItemDetail",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "request_item_id",
+                                    "key": "request_item_id",
                                     "value": "1",
-                                    "description": "The ID of the submission."
+                                    "description": "The ID of the request item."
                                 },
                                 {
-                                    "id": "id",
-                                    "key": "id",
+                                    "id": "requestItemDetail",
+                                    "key": "requestItemDetail",
                                     "value": "consequatur",
-                                    "description": "The ID of the detail."
+                                    "description": ""
                                 }
                             ]
                         },
@@ -3082,21 +2526,21 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/detail\/:id",
+                            "path": "request-item\/:request_item_id\/detail\/:requestItemDetail_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail\/:id",
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail\/:requestItemDetail_id",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "request_item_id",
+                                    "key": "request_item_id",
                                     "value": "1",
-                                    "description": "The ID of the submission."
+                                    "description": "The ID of the request item."
                                 },
                                 {
-                                    "id": "id",
-                                    "key": "id",
+                                    "id": "requestItemDetail_id",
+                                    "key": "requestItemDetail_id",
                                     "value": "6",
-                                    "description": "The ID of the detail."
+                                    "description": "The ID of the requestItemDetail."
                                 }
                             ]
                         },
@@ -3139,62 +2583,25 @@
             ]
         },
         {
-            "name": "Submission Item Management",
-            "description": "\nAPI endpoints for managing submission item",
+            "name": "11. Employee Management",
+            "description": "\nAPI endpoints for managing employees",
             "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Make user account from employee",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission",
+                            "path": "admin\/employee\/:employee_id\/assign",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
+                            "raw": "{{baseUrl}}\/admin\/employee\/:employee_id\/assign",
+                            "variable": [
                                 {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "id": "employee_id",
+                                    "key": "employee_id",
+                                    "value": "1",
+                                    "description": "The ID of the employee."
                                 }
-                            ],
-                            "code": 200,
-                            "body": "{\"message\":\"success get all submission items\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"IN-001\",\"division_id\":4,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":2,\"code\":\"IN-002\",\"division_id\":5,\"status\":\"draf\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":3,\"code\":\"IN-003\",\"division_id\":4,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"}},{\"id\":4,\"code\":\"IN-004\",\"division_id\":5,\"status\":\"ditolak\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":5,\"code\":\"IN-005\",\"division_id\":5,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":6,\"code\":\"IN-006\",\"division_id\":5,\"status\":\"disetujui\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":7,\"code\":\"SI1911\",\"division_id\":1,\"status\":\"diajukan\",\"note\":\"Officia animi aut minima amet veritatis quia enim.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}},{\"id\":8,\"code\":\"SI6446\",\"division_id\":1,\"status\":\"diajukan\",\"note\":\"Eum tempore id nisi dolorem est.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}},{\"id\":9,\"code\":\"SI4833\",\"division_id\":5,\"status\":\"ditolak\",\"note\":\"Iste qui sit id ut.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":5,\"name\":\"Zim zim\"}},{\"id\":10,\"code\":\"SI3940\",\"division_id\":1,\"status\":\"ditolak\",\"note\":\"Eius qui aut aut at aut consequatur.\",\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":1,\"name\":\"Yani\"}}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost:8000\\\/submission?page=2\",\"path\":\"http:\\\/\\\/localhost:8000\\\/submission\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":11}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "submission",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/submission"
+                            ]
                         },
                         "method": "POST",
                         "header": [
@@ -3209,7 +2616,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"items\":[{\"item_id\":6,\"qty\":6}]}"
+                            "raw": "{\"password\":\"consequatur\",\"role\":\"unit\",\"username\":\"consequatur\"}"
                         },
                         "description": ""
                     },
@@ -3230,29 +2637,29 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 04:40:27, 2024-10-06 04:40:27))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$b0rlrxdDjWeuMZVeYvAcEOhISjECnohxtCaP39Y61k0\\\/eMi9uGaJu, unit, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Delete user account",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:id",
+                            "path": "admin\/employee\/:employee_id\/unassign",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:id",
+                            "raw": "{{baseUrl}}\/admin\/employee\/:employee_id\/unassign",
                             "variable": [
                                 {
-                                    "id": "id",
-                                    "key": "id",
+                                    "id": "employee_id",
+                                    "key": "employee_id",
                                     "value": "1",
-                                    "description": "The ID of the submission."
+                                    "description": "The ID of the employee."
                                 }
                             ]
                         },
-                        "method": "GET",
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -3283,302 +2690,19 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get submission item\",\"data\":{\"id\":1,\"code\":\"IN-001\",\"division_id\":4,\"status\":\"diajukan\",\"note\":null,\"created_at\":\"2024-10-06T04:04:56.000000Z\",\"updated_at\":\"2024-10-06T04:04:56.000000Z\",\"division\":{\"id\":4,\"name\":\"Ani Nuraeni\"},\"details\":[]}}",
+                            "body": "{\"message\":\"succes delete account\"}",
                             "name": ""
                         }
                     ]
                 },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "submission\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the submission."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"message\":\"success delete submission item\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Supervisor - Request Check",
-            "description": "\nAPI endpoints for request check",
-            "item": [
-                {
-                    "name": "POST request\/{request}\/accept",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "request\/:request\/accept",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/request\/:request\/accept",
-                            "variable": [
-                                {
-                                    "id": "request",
-                                    "key": "request",
-                                    "value": "consequatur",
-                                    "description": "The request."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"This action is unauthorized.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST request\/{request}\/decline",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "request\/:request\/decline",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/request\/:request\/decline",
-                            "variable": [
-                                {
-                                    "id": "request",
-                                    "key": "request",
-                                    "value": "consequatur",
-                                    "description": "The request."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"This action is unauthorized.\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Supervisor - Submission Check",
-            "description": "\nAPI endpoints for submission check",
-            "item": [
-                {
-                    "name": "POST submission\/{submission_id}\/accept",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/accept",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/accept",
-                            "variable": [
-                                {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
-                                    "value": "1",
-                                    "description": "The ID of the submission."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"This action is unauthorized.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST submission\/{submission_id}\/decline",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/decline",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/decline",
-                            "variable": [
-                                {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
-                                    "value": "1",
-                                    "description": "The ID of the submission."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\"message\":\"This action is unauthorized.\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Supplier Management",
-            "description": "\nAPI endpoints for managing suppliers",
-            "item": [
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/supplier",
+                            "path": "admin\/employees",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/supplier"
+                            "raw": "{{baseUrl}}\/admin\/employees"
                         },
                         "method": "GET",
                         "header": [
@@ -3611,7 +2735,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get suppliers\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"S0001\",\"name\":\"Supplier 1\",\"address\":\"Address 1\",\"phone\":\"08123456789\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":2,\"code\":\"S0002\",\"name\":\"Supplier 2\",\"address\":\"Address 2\",\"phone\":\"08123456790\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":3,\"code\":\"S0003\",\"name\":\"Supplier 3\",\"address\":\"Address 3\",\"phone\":\"08123456791\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":4,\"code\":\"S0004\",\"name\":\"Supplier 4\",\"address\":\"Address 4\",\"phone\":\"08123456792\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":5,\"code\":\"S0005\",\"name\":\"Supplier 5\",\"address\":\"Address 5\",\"phone\":\"08123456793\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":6,\"code\":\"SP-6228\",\"name\":\"Fa Hutagalung\",\"address\":\"Dk. Bayan No. 198, Surakarta 32363, Kaltim\",\"phone\":\"(+62) 357 6329 5408\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":7,\"code\":\"SP-5258\",\"name\":\"Fa Maryadi Tbk\",\"address\":\"Ds. Achmad Yani No. 10, Bengkulu 62814, NTT\",\"phone\":\"0448 4227 6230\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":8,\"code\":\"SP-5536\",\"name\":\"PD Pradana Mandasari\",\"address\":\"Kpg. K.H. Maskur No. 815, Bima 73177, Maluku\",\"phone\":\"0483 8145 071\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":9,\"code\":\"SP-9740\",\"name\":\"Perum Lestari Tbk\",\"address\":\"Jr. Muwardi No. 189, Pangkal Pinang 57253, Riau\",\"phone\":\"0264 4636 3891\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":10,\"code\":\"SP-9793\",\"name\":\"Perum Namaga Pratiwi\",\"address\":\"Ds. Pelajar Pejuang 45 No. 884, Pekanbaru 58262, Aceh\",\"phone\":\"0881 798 483\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
+                            "body": "{\"message\":\"success get all employees\",\"current_page\":1,\"data\":[{\"id\":1,\"nip\":\"198012311994031002\",\"name\":\"Yani\",\"position\":\"Kepala Sekolah Bidang Kurikulum\",\"phone\":\"08123456792\",\"email\":\"yani@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":2,\"nip\":\"197412311994031001\",\"name\":\"Sutarsa\",\"position\":\"Wakil Kepala Sekolah Bidang Sarana Prasarana\",\"phone\":\"08123456789\",\"email\":\"sutarsa@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":3,\"nip\":\"197806311994031003\",\"name\":\"Toni Kusmara\",\"position\":\"Staff Sarana Prasarana\",\"phone\":\"08123456781\",\"email\":\"toni.kusmara@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":4,\"nip\":\"198212311994031004\",\"name\":\"Ani Nuraeni\",\"position\":\"Ketua Progam keahlian RPL\",\"phone\":\"08123456782\",\"email\":\"zim.zim@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null},{\"id\":5,\"nip\":\"197412311994031005\",\"name\":\"Zim zim\",\"position\":\"Ketua Progam keahlian DKV\",\"phone\":\"08123456783\",\"email\":\"ani.nuraeni@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/employees\",\"per_page\":10,\"prev_page_url\":null,\"to\":5,\"total\":5}",
                             "name": ""
                         }
                     ]
@@ -3621,9 +2745,9 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/supplier",
+                            "path": "admin\/employees",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/supplier"
+                            "raw": "{{baseUrl}}\/admin\/employees"
                         },
                         "method": "POST",
                         "header": [
@@ -3638,7 +2762,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"address\":\"nssrciatkmatldznkaapj\",\"phone\":\"ptdhyldmarwuvlvyfcejz\"}"
+                            "raw": "{\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\"}"
                         },
                         "description": ""
                     },
@@ -3659,7 +2783,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 04:40:27, 2024-10-06 04:40:27))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
                             "name": ""
                         }
                     ]
@@ -3669,15 +2793,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/supplier\/:id",
+                            "path": "admin\/employees\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/supplier\/:id",
+                            "raw": "{{baseUrl}}\/admin\/employees\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the supplier."
+                                    "description": "The ID of the employee."
                                 }
                             ]
                         },
@@ -3712,7 +2836,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success get supplier\",\"data\":{\"id\":1,\"code\":\"S0001\",\"name\":\"Supplier 1\",\"address\":\"Address 1\",\"phone\":\"08123456789\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}}",
+                            "body": "{\"message\":\"success get employee\",\"data\":{\"id\":1,\"nip\":\"198012311994031002\",\"name\":\"Yani\",\"position\":\"Kepala Sekolah Bidang Kurikulum\",\"phone\":\"08123456792\",\"email\":\"yani@smkn11bdg.sch.id\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":null}}",
                             "name": ""
                         }
                     ]
@@ -3722,15 +2846,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/supplier\/:id",
+                            "path": "admin\/employees\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/supplier\/:id",
+                            "raw": "{{baseUrl}}\/admin\/employees\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the supplier."
+                                    "description": "The ID of the employee."
                                 }
                             ]
                         },
@@ -3747,7 +2871,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"address\":\"nssrciatkmatldznkaapj\",\"phone\":\"ptdhyldmarwuvlvyfcejz\"}"
+                            "raw": "{\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\"}"
                         },
                         "description": ""
                     },
@@ -3768,7 +2892,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create supplier\",\"data\":true}",
+                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T06:12:11.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -3778,15 +2902,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "admin\/supplier\/:id",
+                            "path": "admin\/employees\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/admin\/supplier\/:id",
+                            "raw": "{{baseUrl}}\/admin\/employees\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the supplier."
+                                    "description": "The ID of the employee."
                                 }
                             ]
                         },
@@ -3821,7 +2945,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_supplier_id_foreign` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`id`)) (Connection: mysql, SQL: delete from `suppliers` where `id` = 1)\"}",
+                            "body": "{\"message\":\"SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`)) (Connection: mysql, SQL: delete from `employees` where `id` = 1)\"}",
                             "name": ""
                         }
                     ]
@@ -3829,7 +2953,7 @@
             ]
         },
         {
-            "name": "User Management",
+            "name": "12. User Management",
             "description": "\nAPI endpoints for managing users",
             "item": [
                 {
@@ -4084,6 +3208,801 @@
                             "code": 200,
                             "body": "{\"message\":\"success delete user\"}",
                             "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "13. Supplier Management",
+            "description": "\nAPI endpoints for managing suppliers",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/supplier",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/admin\/supplier"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"success get suppliers\",\"current_page\":1,\"data\":[{\"id\":1,\"code\":\"S0001\",\"name\":\"Supplier 1\",\"address\":\"Address 1\",\"phone\":\"08123456789\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":2,\"code\":\"S0002\",\"name\":\"Supplier 2\",\"address\":\"Address 2\",\"phone\":\"08123456790\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":3,\"code\":\"S0003\",\"name\":\"Supplier 3\",\"address\":\"Address 3\",\"phone\":\"08123456791\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":4,\"code\":\"S0004\",\"name\":\"Supplier 4\",\"address\":\"Address 4\",\"phone\":\"08123456792\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":5,\"code\":\"S0005\",\"name\":\"Supplier 5\",\"address\":\"Address 5\",\"phone\":\"08123456793\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":6,\"code\":\"SP-6228\",\"name\":\"Fa Hutagalung\",\"address\":\"Dk. Bayan No. 198, Surakarta 32363, Kaltim\",\"phone\":\"(+62) 357 6329 5408\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":7,\"code\":\"SP-5258\",\"name\":\"Fa Maryadi Tbk\",\"address\":\"Ds. Achmad Yani No. 10, Bengkulu 62814, NTT\",\"phone\":\"0448 4227 6230\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":8,\"code\":\"SP-5536\",\"name\":\"PD Pradana Mandasari\",\"address\":\"Kpg. K.H. Maskur No. 815, Bima 73177, Maluku\",\"phone\":\"0483 8145 071\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":9,\"code\":\"SP-9740\",\"name\":\"Perum Lestari Tbk\",\"address\":\"Jr. Muwardi No. 189, Pangkal Pinang 57253, Riau\",\"phone\":\"0264 4636 3891\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"},{\"id\":10,\"code\":\"SP-9793\",\"name\":\"Perum Namaga Pratiwi\",\"address\":\"Ds. Pelajar Pejuang 45 No. 884, Pekanbaru 58262, Aceh\",\"phone\":\"0881 798 483\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"links\":[{\"url\":null,\"label\":\"pagination.previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"pagination.next\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/admin\\\/supplier\",\"per_page\":10,\"prev_page_url\":null,\"to\":10,\"total\":10}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/supplier",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/admin\/supplier"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"address\":\"nssrciatkmatldznkaapj\",\"phone\":\"ptdhyldmarwuvlvyfcejz\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 06:12:11, 2024-10-06 06:12:11))\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/supplier\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/admin\/supplier\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the supplier."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"success get supplier\",\"data\":{\"id\":1,\"code\":\"S0001\",\"name\":\"Supplier 1\",\"address\":\"Address 1\",\"phone\":\"08123456789\",\"created_at\":\"2024-10-06T04:04:44.000000Z\",\"updated_at\":\"2024-10-06T04:04:44.000000Z\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/supplier\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/admin\/supplier\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the supplier."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"address\":\"nssrciatkmatldznkaapj\",\"phone\":\"ptdhyldmarwuvlvyfcejz\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"success create supplier\",\"data\":true}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/supplier\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/admin\/supplier\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the supplier."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\"message\":\"SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_supplier_id_foreign` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`id`)) (Connection: mysql, SQL: delete from `suppliers` where `id` = 1)\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Dashboard Info",
+            "description": "\nAPI endpoints for admin dashboard",
+            "item": [
+                {
+                    "name": "Get counts of items, users and requests + submssions",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "dashboard\/counts",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/dashboard\/counts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"items\":15,\"users\":4,\"requests\":10,\"submissions\":11}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get stats of requests item",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "dashboard\/stats\/request",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/dashboard\/stats\/request"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\"message\":\"SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'laravel_sarpras_sebelas.request_items.created_at' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get stats of items",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "dashboard\/stats\/item",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/dashboard\/stats\/item"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"labels\":[\"Alat Tulis Kantor\"],\"values\":[15]}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "File Management",
+            "description": "\nAPI endpoints for get files from R2",
+            "item": [
+                {
+                    "name": "GET public\/{path}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "public\/:path",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/public\/:path",
+                            "variable": [
+                                {
+                                    "id": "path",
+                                    "key": "path",
+                                    "value": "",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"Not Found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET private\/{path}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "private\/:path",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/private\/:path",
+                            "variable": [
+                                {
+                                    "id": "path",
+                                    "key": "path",
+                                    "value": "",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"Not Found\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Other Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Return an empty response simply to trigger the storage of the CSRF cookie in the browser.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "sanctum\/csrf-cookie",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/sanctum\/csrf-cookie"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6IjJSK01nMWVUSDFucmpleE51VEMySmc9PSIsInZhbHVlIjoiQUdEb1pRUmh6aTlTTXRSNkRvOFY4Qi83ZW1sWGV6dy9DRktySlRpOHJmVEhyZkloQk9UOVNSdUtTaXlKUFBBT0VyeGR6aTQrbHBSSis2MUJrQU4zcVA5dk1HVnF4aldMSEgzcGRDZDU1WThKdnovL0dNWkF1NnorV3I4QVprdnYiLCJtYWMiOiI5NWQyY2ZhY2Q5NGY2YTUyNDNiYTQwNDQxNTI5MGE2NGFhZmUwNmY2MzcxMDc5ZmYzMjM4YTFhNmUxY2U0N2Q5IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InBwK2lzaitwTzZ6bldTdjZsZ1ZwQUE9PSIsInZhbHVlIjoiTDdOZkVhU3MrT1gxM204V3lvSXVYMVNFbDdMamhLZ2U4QkdmUUZtQVZGbWZic1c0eDRicUNGQW1SWkc3ZUVoQzY3VTIvd0NuYUFxTG52SnluQXZ2VHY1ZGNndlpRb081bjZpcVlvb1oyQm1oSHdObGdSN1pxY3dic1QzanhKM3UiLCJtYWMiOiJlMjY0ZjQ2YjRhZDM2NWFhNDNmYzA5YjMyZjU5MTcwNzY0MTc2MTMyMzVkYjk5Zjg3M2M4NmI0YjI5Mjk2ZWI1IiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; PdvthjZVsd2yv9SLo0ojuzQYYeJAnXB7QbDmdL5M=eyJpdiI6Ijh6UTluWXp6c0U1UmRIQzZMaXduYlE9PSIsInZhbHVlIjoieWdaeHJaQU1FQzRLdVZreXlFaGd3Z1ROT3Y4QnlBZzdjSFZqK25aNEU4aWI5d1l0eUkvVDVjYStVRlRMWXZId1dhczdqb1p2Zlo4SjNZcDZuUWowdEJUOXllQytHSFlFR0tiVmhiajRUdmd6ODRWNTNPUVZPc2Nvb3hGUlVtc3NjWTdMVHlqZUZOT0tkQno5Tlo2elpoM3VrVWlGL3E3V0xxVG5KYWd3OG9iQ1d1andaNTJQb2g2VkkwenA3QjVSUHYyd3lwUFA1STRHWVlUdndETGZWTHF3OWNIditoNHEyZFNwWk5QQkZ0UTFSeE1lWVhVNmpRbFRDU1pJZnpZekc4UkdLcFhlS3IrNFhLK1RQd2s2RUpuRjZiN0sxMWVzU1ZDcHJxMVFLbmhoSGNpaWhNelVQWmFybVJ4SmRoMWl0VDdIMS9jSVBPOVhmOE5LVmRFQXNRanordHRRbHZSQU1lekdPYWFtZ1UwNys3RGZRUDZwRExoVlRoeDM1bW9ZUFZvZHJEcHl5c1hCcFRSU29MNlFMdz09IiwibWFjIjoiYjU2Mzc0M2ZmZWJlMzFlMWQ1MGZlNTcwZDY4MmI1MTFmZjRjODgxYzAxMzU1MmRhZDE4NTlmMmQ4NjU5YWJkNSIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 08:12:10 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 204,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Supervisor",
+            "description": "",
+            "item": [
+                {
+                    "name": "Submission\n\nAPI endpoints for submission check",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST submission\/{submission_id}\/accept",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "submission\/:submission_id\/accept",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/submission\/:submission_id\/accept",
+                                    "variable": [
+                                        {
+                                            "id": "submission_id",
+                                            "key": "submission_id",
+                                            "value": "1",
+                                            "description": "The ID of the submission."
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 500,
+                                    "body": "{\"message\":\"This action is unauthorized.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "POST submission\/{submission_id}\/decline",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "submission\/:submission_id\/decline",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/submission\/:submission_id\/decline",
+                                    "variable": [
+                                        {
+                                            "id": "submission_id",
+                                            "key": "submission_id",
+                                            "value": "1",
+                                            "description": "The ID of the submission."
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 500,
+                                    "body": "{\"message\":\"This action is unauthorized.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Request\n\nAPI endpoints for request check",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST request\/{request}\/accept",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "request\/:request\/accept",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/request\/:request\/accept",
+                                    "variable": [
+                                        {
+                                            "id": "request",
+                                            "key": "request",
+                                            "value": "consequatur",
+                                            "description": "The request."
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 500,
+                                    "body": "{\"message\":\"This action is unauthorized.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "POST request\/{request}\/decline",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "request\/:request\/decline",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/request\/:request\/decline",
+                                    "variable": [
+                                        {
+                                            "id": "request",
+                                            "key": "request",
+                                            "value": "consequatur",
+                                            "description": "The request."
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 500,
+                                    "body": "{\"message\":\"This action is unauthorized.\"}",
+                                    "name": ""
+                                }
+                            ]
                         }
                     ]
                 }

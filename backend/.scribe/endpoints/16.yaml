@@ -1,4 +1,4 @@
-name: 'User Management'
+name: '12. User Management'
 description: |-
 
   API endpoints for managing users
@@ -8,7 +8,7 @@ endpoints:
       - GET
     uri: admin/users
     metadata:
-      groupName: 'User Management'
+      groupName: '12. User Management'
       groupDescription: |-
 
         API endpoints for managing users
@@ -53,7 +53,7 @@ endpoints:
       - POST
     uri: admin/users
     metadata:
-      groupName: 'User Management'
+      groupName: '12. User Management'
       groupDescription: |-
 
         API endpoints for managing users
@@ -161,7 +161,7 @@ endpoints:
       - GET
     uri: 'admin/users/{username}'
     metadata:
-      groupName: 'User Management'
+      groupName: '12. User Management'
       groupDescription: |-
 
         API endpoints for managing users
@@ -217,7 +217,7 @@ endpoints:
       - PATCH
     uri: 'admin/users/{username}'
     metadata:
-      groupName: 'User Management'
+      groupName: '12. User Management'
       groupDescription: |-
 
         API endpoints for managing users
@@ -335,7 +335,7 @@ endpoints:
       - DELETE
     uri: 'admin/users/{username}'
     metadata:
-      groupName: 'User Management'
+      groupName: '12. User Management'
       groupDescription: |-
 
         API endpoints for managing users

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 /**
- * @group Outgoing Item Management
+ * @group 5. Outgoing Item Management
  *
  * API endpoints for managing outgoing item
  */

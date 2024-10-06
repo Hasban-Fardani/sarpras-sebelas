@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @group User Management
+ * @group 12. User Management
  *
  * API endpoints for managing users
  */

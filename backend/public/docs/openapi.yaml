@@ -7,6 +7,100 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /auth/login:
+    post:
+      summary: 'Login endpoint'
+      operationId: loginEndpoint
+      description: ''
+      parameters: []
+      responses:
+        412:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'invalid fields'
+                  errors:
+                    nip:
+                      - validation.required
+                properties:
+                  message:
+                    type: string
+                    example: 'invalid fields'
+                  errors:
+                    type: object
+                    properties:
+                      nip:
+                        type: array
+                        example:
+                          - validation.required
+                        items:
+                          type: string
+      tags:
+        - '0. Authentication'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: ''
+                  example: password123
+                id:
+                  type: string
+                  description: ''
+                  example: '2121021210'
+              required:
+                - password
+                - id
+      security: []
+  /auth/user:
+    get:
+      summary: ''
+      operationId: getAuthUser
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'App\Models\User::createToken(): Argument #1 ($name) must be of type string, null given, called in /home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Controllers/Auth/LoginCheckController.php on line 21'
+                properties:
+                  message:
+                    type: string
+                    example: 'App\Models\User::createToken(): Argument #1 ($name) must be of type string, null given, called in /home/hasban/Code/Github/sarpras-sebelas/backend/app/Http/Controllers/Auth/LoginCheckController.php on line 21'
+      tags:
+        - '0. Authentication'
+  /auth/logout:
+    post:
+      summary: ''
+      operationId: postAuthLogout
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'logged out'
+                properties:
+                  message:
+                    type: string
+                    example: 'logged out'
+      tags:
+        - '0. Authentication'
   /category:
     get:
       summary: 'Display list of categories.'
@@ -163,9 +257,9 @@ paths:
                   data:
                     name: tjq-otb_h
                     code: consequatur
-                    updated_at: '2024-10-06T04:40:26.000000Z'
-                    created_at: '2024-10-06T04:40:26.000000Z'
-                    id: 16
+                    updated_at: '2024-10-06T06:12:10.000000Z'
+                    created_at: '2024-10-06T06:12:10.000000Z'
+                    id: 32
                 properties:
                   message:
                     type: string
@@ -181,13 +275,13 @@ paths:
                         example: consequatur
                       updated_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:10.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:10.000000Z'
                       id:
                         type: integer
-                        example: 16
+                        example: 32
       tags:
         - '1. Category Management'
       requestBody:
@@ -272,7 +366,7 @@ paths:
                     code: ATK
                     name: consequatur
                     created_at: '2024-10-06T04:04:44.000000Z'
-                    updated_at: '2024-10-06T04:40:26.000000Z'
+                    updated_at: '2024-10-06T06:12:10.000000Z'
                 properties:
                   message:
                     type: string
@@ -294,7 +388,7 @@ paths:
                         example: '2024-10-06T04:04:44.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:10.000000Z'
       tags:
         - '1. Category Management'
       requestBody:
@@ -890,7 +984,7 @@ paths:
                   message: 'success create item'
                   data:
                     code: tjqotbhpzwonwlzospqcs
-                    image: images/e6a393139abf0505f9329ccfd5debec4dd981510e59fc987ffb68e2a4910896a.jpg
+                    image: images/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg
                     name: tjqotbhpzwonwlzospqcs
                     merk: nssrciatkmatldznkaapj
                     type: ptdhyldmarwuvlvyfcejz
@@ -900,9 +994,9 @@ paths:
                     min_stock: 6
                     category_id: 1
                     price: 6
-                    updated_at: '2024-10-06T04:40:26.000000Z'
-                    created_at: '2024-10-06T04:40:26.000000Z'
-                    id: 30
+                    updated_at: '2024-10-06T06:12:10.000000Z'
+                    created_at: '2024-10-06T06:12:10.000000Z'
+                    id: 46
                 properties:
                   message:
                     type: string
@@ -915,7 +1009,7 @@ paths:
                         example: tjqotbhpzwonwlzospqcs
                       image:
                         type: string
-                        example: images/e6a393139abf0505f9329ccfd5debec4dd981510e59fc987ffb68e2a4910896a.jpg
+                        example: images/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg
                       name:
                         type: string
                         example: tjqotbhpzwonwlzospqcs
@@ -945,13 +1039,13 @@ paths:
                         example: 6
                       updated_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:10.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:10.000000Z'
                       id:
                         type: integer
-                        example: 30
+                        example: 46
       tags:
         - '2. Item Management'
       requestBody:
@@ -1039,7 +1133,7 @@ paths:
                     merk: ae7
                     type: pulpen
                     size: 0.5mm
-                    stock: 17
+                    stock: 24
                     min_stock: 5
                     price: 2000
                     category_id: 1
@@ -1078,7 +1172,7 @@ paths:
                         example: 0.5mm
                       stock:
                         type: integer
-                        example: 17
+                        example: 24
                       min_stock:
                         type: integer
                         example: 5
@@ -1113,7 +1207,7 @@ paths:
                   data:
                     id: 1
                     code: tjqotbhpzwonwlzospqcs
-                    image: images/e6a393139abf0505f9329ccfd5debec4dd981510e59fc987ffb68e2a4910896a.jpg
+                    image: images/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg
                     name: nssrciatkmatldznkaapj
                     unit: sewlxtdfjxskykaapbpdx
                     merk: ptdhyldmarwuvlvyfcejz
@@ -1124,7 +1218,7 @@ paths:
                     price: 6
                     category_id: 1
                     created_at: '2024-10-06T04:04:44.000000Z'
-                    updated_at: '2024-10-06T04:40:26.000000Z'
+                    updated_at: '2024-10-06T06:12:10.000000Z'
                 properties:
                   message:
                     type: string
@@ -1140,7 +1234,7 @@ paths:
                         example: tjqotbhpzwonwlzospqcs
                       image:
                         type: string
-                        example: images/e6a393139abf0505f9329ccfd5debec4dd981510e59fc987ffb68e2a4910896a.jpg
+                        example: images/14d2a19e033e9a83b3435643a4fbeb98dfdedaeea9e47a49f7c49308b6244fe9.jpg
                       name:
                         type: string
                         example: nssrciatkmatldznkaapj
@@ -1173,7 +1267,7 @@ paths:
                         example: '2024-10-06T04:04:44.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:10.000000Z'
       tags:
         - '2. Item Management'
       requestBody:
@@ -1451,7 +1545,7 @@ paths:
                   per_page: 10
                   prev_page_url: null
                   to: 10
-                  total: 11
+                  total: 12
                 properties:
                   message:
                     type: string
@@ -1717,7 +1811,7 @@ paths:
                     example: 10
                   total:
                     type: integer
-                    example: 11
+                    example: 12
       tags:
         - '3. Incoming Item Management'
     post:
@@ -1735,12 +1829,12 @@ paths:
                 example:
                   message: 'success create incoming item and updated stock'
                   data:
-                    code: IN-b0e9102
+                    code: IN-0ffcf6a
                     employee_id: 3
                     supplier_id: 6
-                    updated_at: '2024-10-06T04:40:26.000000Z'
-                    created_at: '2024-10-06T04:40:26.000000Z'
-                    id: 15
+                    updated_at: '2024-10-06T06:12:11.000000Z'
+                    created_at: '2024-10-06T06:12:11.000000Z'
+                    id: 32
                 properties:
                   message:
                     type: string
@@ -1750,7 +1844,7 @@ paths:
                     properties:
                       code:
                         type: string
-                        example: IN-b0e9102
+                        example: IN-0ffcf6a
                       employee_id:
                         type: integer
                         example: 3
@@ -1759,13 +1853,13 @@ paths:
                         example: 6
                       updated_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:11.000000Z'
                       created_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:11.000000Z'
                       id:
                         type: integer
-                        example: 15
+                        example: 32
       tags:
         - '3. Incoming Item Management'
       requestBody:
@@ -2500,7 +2594,7 @@ paths:
                       item_id: 6
                       qty: 97
                       created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:40:26.000000Z'
+                      updated_at: '2024-10-06T06:12:11.000000Z'
                     -
                       id: 26
                       incoming_item_id: 1
@@ -2598,7 +2692,7 @@ paths:
                         item_id: 6
                         qty: 97
                         created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:40:26.000000Z'
+                        updated_at: '2024-10-06T06:12:11.000000Z'
                       -
                         id: 26
                         incoming_item_id: 1
@@ -2740,7 +2834,7 @@ paths:
                     item_id: 6
                     qty: 6
                     created_at: '2024-10-06T04:04:56.000000Z'
-                    updated_at: '2024-10-06T04:40:26.000000Z'
+                    updated_at: '2024-10-06T06:12:11.000000Z'
                 properties:
                   message:
                     type: string
@@ -2765,7 +2859,7 @@ paths:
                         example: '2024-10-06T04:04:56.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-10-06T04:40:26.000000Z'
+                        example: '2024-10-06T06:12:11.000000Z'
       tags:
         - '4. Incoming Item Detail Management'
       requestBody:
@@ -3027,1012 +3121,6 @@ paths:
         required: true
         schema:
           type: integer
-  /dashboard/counts:
-    get:
-      summary: ''
-      operationId: getDashboardCounts
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  items: 15
-                  users: 4
-                  requests: 10
-                  submissions: 11
-                properties:
-                  items:
-                    type: integer
-                    example: 15
-                  users:
-                    type: integer
-                    example: 4
-                  requests:
-                    type: integer
-                    example: 10
-                  submissions:
-                    type: integer
-                    example: 11
-      tags:
-        - 'Admin Dashboard'
-  /dashboard/stats/request:
-    get:
-      summary: ''
-      operationId: getDashboardStatsRequest
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: "SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'laravel_sarpras_sebelas.request_items.created_at' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)"
-                properties:
-                  message:
-                    type: string
-                    example: "SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'laravel_sarpras_sebelas.request_items.created_at' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)"
-      tags:
-        - 'Admin Dashboard'
-  /dashboard/stats/item:
-    get:
-      summary: ''
-      operationId: getDashboardStatsItem
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  labels:
-                    - 'Alat Tulis Kantor'
-                  values:
-                    - 15
-                properties:
-                  labels:
-                    type: array
-                    example:
-                      - 'Alat Tulis Kantor'
-                    items:
-                      type: string
-                  values:
-                    type: array
-                    example:
-                      - 15
-                    items:
-                      type: integer
-      tags:
-        - 'Admin Dashboard'
-  /auth/login:
-    post:
-      summary: 'Login endpoint'
-      operationId: loginEndpoint
-      description: ''
-      parameters: []
-      responses:
-        412:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'invalid fields'
-                  errors:
-                    nip:
-                      - validation.required
-                properties:
-                  message:
-                    type: string
-                    example: 'invalid fields'
-                  errors:
-                    type: object
-                    properties:
-                      nip:
-                        type: array
-                        example:
-                          - validation.required
-                        items:
-                          type: string
-      tags:
-        - Auth
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                password:
-                  type: string
-                  description: ''
-                  example: password123
-                id:
-                  type: string
-                  description: ''
-                  example: '2121021210'
-              required:
-                - password
-                - id
-  /auth/logout:
-    post:
-      summary: ''
-      operationId: postAuthLogout
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'logged out'
-                properties:
-                  message:
-                    type: string
-                    example: 'logged out'
-      tags:
-        - Auth
-  '/admin/employee/{employee_id}/assign':
-    post:
-      summary: 'Make user account from employee'
-      operationId: makeUserAccountFromEmployee
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$q9Xfay/bD5PzAJ95I..QE.MhFAoZVBCbKdd2Tmg/i92qdBl6SzKeS, admin, consequatur, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
-                properties:
-                  message:
-                    type: string
-                    example: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$q9Xfay/bD5PzAJ95I..QE.MhFAoZVBCbKdd2Tmg/i92qdBl6SzKeS, admin, consequatur, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
-      tags:
-        - 'Employee Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                password:
-                  type: string
-                  description: ''
-                  example: consequatur
-                role:
-                  type: string
-                  description: ''
-                  example: admin
-                  enum:
-                    - admin
-                    - pengawas
-                    - unit
-                username:
-                  type: string
-                  description: ''
-                  example: consequatur
-              required:
-                - password
-                - role
-                - username
-    parameters:
-      -
-        in: path
-        name: employee_id
-        description: 'The ID of the employee.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/admin/employee/{employee_id}/unassign':
-    post:
-      summary: 'Delete user account'
-      operationId: deleteUserAccount
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'succes delete account'
-                properties:
-                  message:
-                    type: string
-                    example: 'succes delete account'
-      tags:
-        - 'Employee Management'
-    parameters:
-      -
-        in: path
-        name: employee_id
-        description: 'The ID of the employee.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  /admin/employees:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'success get all employees'
-                  current_page: 1
-                  data:
-                    -
-                      id: 1
-                      nip: '198012311994031002'
-                      name: Yani
-                      position: 'Kepala Sekolah Bidang Kurikulum'
-                      phone: '08123456792'
-                      email: yani@smkn11bdg.sch.id
-                      email_verified_at: null
-                      created_at: null
-                      updated_at: null
-                    -
-                      id: 2
-                      nip: '197412311994031001'
-                      name: Sutarsa
-                      position: 'Wakil Kepala Sekolah Bidang Sarana Prasarana'
-                      phone: '08123456789'
-                      email: sutarsa@smkn11bdg.sch.id
-                      email_verified_at: null
-                      created_at: null
-                      updated_at: null
-                    -
-                      id: 3
-                      nip: '197806311994031003'
-                      name: 'Toni Kusmara'
-                      position: 'Staff Sarana Prasarana'
-                      phone: '08123456781'
-                      email: toni.kusmara@smkn11bdg.sch.id
-                      email_verified_at: null
-                      created_at: null
-                      updated_at: null
-                    -
-                      id: 4
-                      nip: '198212311994031004'
-                      name: 'Ani Nuraeni'
-                      position: 'Ketua Progam keahlian RPL'
-                      phone: '08123456782'
-                      email: zim.zim@smkn11bdg.sch.id
-                      email_verified_at: null
-                      created_at: null
-                      updated_at: null
-                    -
-                      id: 5
-                      nip: '197412311994031005'
-                      name: 'Zim zim'
-                      position: 'Ketua Progam keahlian DKV'
-                      phone: '08123456783'
-                      email: ani.nuraeni@smkn11bdg.sch.id
-                      email_verified_at: null
-                      created_at: null
-                      updated_at: null
-                  first_page_url: 'http://localhost:8000/admin/employees?page=1'
-                  from: 1
-                  last_page: 1
-                  last_page_url: 'http://localhost:8000/admin/employees?page=1'
-                  links:
-                    -
-                      url: null
-                      label: pagination.previous
-                      active: false
-                    -
-                      url: 'http://localhost:8000/admin/employees?page=1'
-                      label: '1'
-                      active: true
-                    -
-                      url: null
-                      label: pagination.next
-                      active: false
-                  next_page_url: null
-                  path: 'http://localhost:8000/admin/employees'
-                  per_page: 10
-                  prev_page_url: null
-                  to: 5
-                  total: 5
-                properties:
-                  message:
-                    type: string
-                    example: 'success get all employees'
-                  current_page:
-                    type: integer
-                    example: 1
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        nip: '198012311994031002'
-                        name: Yani
-                        position: 'Kepala Sekolah Bidang Kurikulum'
-                        phone: '08123456792'
-                        email: yani@smkn11bdg.sch.id
-                        email_verified_at: null
-                        created_at: null
-                        updated_at: null
-                      -
-                        id: 2
-                        nip: '197412311994031001'
-                        name: Sutarsa
-                        position: 'Wakil Kepala Sekolah Bidang Sarana Prasarana'
-                        phone: '08123456789'
-                        email: sutarsa@smkn11bdg.sch.id
-                        email_verified_at: null
-                        created_at: null
-                        updated_at: null
-                      -
-                        id: 3
-                        nip: '197806311994031003'
-                        name: 'Toni Kusmara'
-                        position: 'Staff Sarana Prasarana'
-                        phone: '08123456781'
-                        email: toni.kusmara@smkn11bdg.sch.id
-                        email_verified_at: null
-                        created_at: null
-                        updated_at: null
-                      -
-                        id: 4
-                        nip: '198212311994031004'
-                        name: 'Ani Nuraeni'
-                        position: 'Ketua Progam keahlian RPL'
-                        phone: '08123456782'
-                        email: zim.zim@smkn11bdg.sch.id
-                        email_verified_at: null
-                        created_at: null
-                        updated_at: null
-                      -
-                        id: 5
-                        nip: '197412311994031005'
-                        name: 'Zim zim'
-                        position: 'Ketua Progam keahlian DKV'
-                        phone: '08123456783'
-                        email: ani.nuraeni@smkn11bdg.sch.id
-                        email_verified_at: null
-                        created_at: null
-                        updated_at: null
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        nip:
-                          type: string
-                          example: '198012311994031002'
-                        name:
-                          type: string
-                          example: Yani
-                        position:
-                          type: string
-                          example: 'Kepala Sekolah Bidang Kurikulum'
-                        phone:
-                          type: string
-                          example: '08123456792'
-                        email:
-                          type: string
-                          example: yani@smkn11bdg.sch.id
-                        email_verified_at:
-                          type: string
-                          example: null
-                        created_at:
-                          type: string
-                          example: null
-                        updated_at:
-                          type: string
-                          example: null
-                  first_page_url:
-                    type: string
-                    example: 'http://localhost:8000/admin/employees?page=1'
-                  from:
-                    type: integer
-                    example: 1
-                  last_page:
-                    type: integer
-                    example: 1
-                  last_page_url:
-                    type: string
-                    example: 'http://localhost:8000/admin/employees?page=1'
-                  links:
-                    type: array
-                    example:
-                      -
-                        url: null
-                        label: pagination.previous
-                        active: false
-                      -
-                        url: 'http://localhost:8000/admin/employees?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: pagination.next
-                        active: false
-                    items:
-                      type: object
-                      properties:
-                        url:
-                          type: string
-                          example: null
-                        label:
-                          type: string
-                          example: pagination.previous
-                        active:
-                          type: boolean
-                          example: false
-                  next_page_url:
-                    type: string
-                    example: null
-                  path:
-                    type: string
-                    example: 'http://localhost:8000/admin/employees'
-                  per_page:
-                    type: integer
-                    example: 10
-                  prev_page_url:
-                    type: string
-                    example: null
-                  to:
-                    type: integer
-                    example: 5
-                  total:
-                    type: integer
-                    example: 5
-      tags:
-        - 'Employee Management'
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
-                properties:
-                  message:
-                    type: string
-                    example: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
-      tags:
-        - 'Employee Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                nip:
-                  type: string
-                  description: validation.max.
-                  example: tjqotbhpzwonwlzospqcs
-                name:
-                  type: string
-                  description: ''
-                  example: consequatur
-                position:
-                  type: string
-                  description: ''
-                  example: consequatur
-                phone:
-                  type: string
-                  description: ''
-                  example: consequatur
-                email:
-                  type: string
-                  description: ''
-                  example: joy.schultz@example.org
-              required:
-                - nip
-                - name
-                - position
-                - phone
-                - email
-  '/admin/employees/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'success get employee'
-                  data:
-                    id: 1
-                    nip: '198012311994031002'
-                    name: Yani
-                    position: 'Kepala Sekolah Bidang Kurikulum'
-                    phone: '08123456792'
-                    email: yani@smkn11bdg.sch.id
-                    email_verified_at: null
-                    created_at: null
-                    updated_at: null
-                properties:
-                  message:
-                    type: string
-                    example: 'success get employee'
-                  data:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        example: 1
-                      nip:
-                        type: string
-                        example: '198012311994031002'
-                      name:
-                        type: string
-                        example: Yani
-                      position:
-                        type: string
-                        example: 'Kepala Sekolah Bidang Kurikulum'
-                      phone:
-                        type: string
-                        example: '08123456792'
-                      email:
-                        type: string
-                        example: yani@smkn11bdg.sch.id
-                      email_verified_at:
-                        type: string
-                        example: null
-                      created_at:
-                        type: string
-                        example: null
-                      updated_at:
-                        type: string
-                        example: null
-      tags:
-        - 'Employee Management'
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'success update employee'
-                  data:
-                    id: 1
-                    nip: tjqotbhpzwonwlzospqcs
-                    name: consequatur
-                    position: consequatur
-                    phone: consequatur
-                    email: joy.schultz@example.org
-                    email_verified_at: null
-                    created_at: null
-                    updated_at: '2024-10-06T04:40:27.000000Z'
-                properties:
-                  message:
-                    type: string
-                    example: 'success update employee'
-                  data:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        example: 1
-                      nip:
-                        type: string
-                        example: tjqotbhpzwonwlzospqcs
-                      name:
-                        type: string
-                        example: consequatur
-                      position:
-                        type: string
-                        example: consequatur
-                      phone:
-                        type: string
-                        example: consequatur
-                      email:
-                        type: string
-                        example: joy.schultz@example.org
-                      email_verified_at:
-                        type: string
-                        example: null
-                      created_at:
-                        type: string
-                        example: null
-                      updated_at:
-                        type: string
-                        example: '2024-10-06T04:40:27.000000Z'
-      tags:
-        - 'Employee Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                nip:
-                  type: string
-                  description: validation.max.
-                  example: tjqotbhpzwonwlzospqcs
-                name:
-                  type: string
-                  description: ''
-                  example: consequatur
-                position:
-                  type: string
-                  description: ''
-                  example: consequatur
-                phone:
-                  type: string
-                  description: ''
-                  example: consequatur
-                email:
-                  type: string
-                  description: ''
-                  example: joy.schultz@example.org
-              required:
-                - nip
-                - name
-                - position
-                - phone
-                - email
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`)) (Connection: mysql, SQL: delete from `employees` where `id` = 1)'
-                properties:
-                  message:
-                    type: string
-                    example: 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`)) (Connection: mysql, SQL: delete from `employees` where `id` = 1)'
-      tags:
-        - 'Employee Management'
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the employee.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/public/{path}':
-    get:
-      summary: ''
-      operationId: getPublicPath
-      description: ''
-      parameters: []
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Found'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Found'
-      tags:
-        - 'File Management'
-    parameters:
-      -
-        in: path
-        name: path
-        description: ''
-        example: ''
-        required: true
-        schema:
-          type: string
-  '/private/{path}':
-    get:
-      summary: ''
-      operationId: getPrivatePath
-      description: ''
-      parameters: []
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Found'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Found'
-      tags:
-        - 'File Management'
-    parameters:
-      -
-        in: path
-        name: path
-        description: ''
-        example: ''
-        required: true
-        schema:
-          type: string
-  /sanctum/csrf-cookie:
-    get:
-      summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
-      operationId: returnAnEmptyResponseSimplyToTriggerTheStorageOfTheCSRFCookieInTheBrowser
-      description: ''
-      parameters: []
-      responses:
-        204:
-          description: ''
-      tags:
-        - 'Other Endpoints'
-  /:
-    get:
-      summary: ''
-      operationId: get
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "Hi, please visit <a href='http://localhost:8000/docs'>http://localhost:8000/docs </a> for documentation"
-      tags:
-        - 'Other Endpoints'
-  /auth/user:
-    get:
-      summary: ''
-      operationId: getAuthUser
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  id: 1
-                  nip: '197806311994031003'
-                  username: admin
-                  role: admin
-                  created_at: '2024-10-06T04:04:43.000000Z'
-                  updated_at: '2024-10-06T04:04:43.000000Z'
-                properties:
-                  id:
-                    type: integer
-                    example: 1
-                  nip:
-                    type: string
-                    example: '197806311994031003'
-                  username:
-                    type: string
-                    example: admin
-                  role:
-                    type: string
-                    example: admin
-                  created_at:
-                    type: string
-                    example: '2024-10-06T04:04:43.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2024-10-06T04:04:43.000000Z'
-      tags:
-        - 'Other Endpoints'
-  /auth/check:
-    get:
-      summary: ''
-      operationId: getAuthCheck
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: integer
-                example: 1
-      tags:
-        - 'Other Endpoints'
-  '/outgoing-item/{outgoing_item_id}/detail':
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Class "App\Models\ItemOutDetail" not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'Class "App\Models\ItemOutDetail" not found'
-      tags:
-        - 'Outgoing Item Detail'
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Class "App\Models\ItemOutDetail" not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'Class "App\Models\ItemOutDetail" not found'
-      tags:
-        - 'Outgoing Item Detail'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_id:
-                  type: integer
-                  description: ''
-                  example: 6
-                qty:
-                  type: integer
-                  description: ''
-                  example: 6
-              required:
-                - item_id
-                - qty
-    parameters:
-      -
-        in: path
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/outgoing-item/{outgoing_item_id}/detail/{id}':
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Class "App\Models\ItemOutDetail" not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'Class "App\Models\ItemOutDetail" not found'
-      tags:
-        - 'Outgoing Item Detail'
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_id:
-                  type: integer
-                  description: ''
-                  example: 6
-                qty:
-                  type: integer
-                  description: ''
-                  example: 6
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Class "App\Models\ItemOutDetail" not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'Class "App\Models\ItemOutDetail" not found'
-      tags:
-        - 'Outgoing Item Detail'
-    parameters:
-      -
-        in: path
-        name: outgoing_item_id
-        description: 'The ID of the outgoing item.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: id
-        description: 'The ID of the detail.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
   /outgoing-item:
     get:
       summary: 'Display a listing of the resource.'
@@ -4463,7 +3551,7 @@ paths:
                     type: integer
                     example: 10
       tags:
-        - 'Outgoing Item Management'
+        - '5. Outgoing Item Management'
     post:
       summary: 'Store a newly created resource in storage.'
       operationId: storeANewlyCreatedResourceInStorage
@@ -4477,13 +3565,13 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 04:40:26, 2024-10-06 04:40:26))"
+                  message: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 04:40:26, 2024-10-06 04:40:26))"
+                    example: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `outgoing_items` (`operator_id`, `division_id`, `updated_at`, `created_at`) values (1, 6, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
       tags:
-        - 'Outgoing Item Management'
+        - '5. Outgoing Item Management'
       requestBody:
         required: true
         content:
@@ -4537,7 +3625,7 @@ paths:
                     type: string
                     example: 'Class "App\Models\ItemOutDetail" not found'
       tags:
-        - 'Outgoing Item Management'
+        - '5. Outgoing Item Management'
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -4557,7 +3645,7 @@ paths:
                     type: string
                     example: 'Class "App\Models\ItemOutDetail" not found'
       tags:
-        - 'Outgoing Item Management'
+        - '5. Outgoing Item Management'
     parameters:
       -
         in: path
@@ -4567,115 +3655,27 @@ paths:
         required: true
         schema:
           type: integer
-  '/request-item/{request_item_id}/detail':
+  '/outgoing-item/{outgoing_item_id}/detail':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
       description: ''
       parameters: []
       responses:
-        200:
+        500:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'success get all request item details'
-                  current_page: 1
-                  data: []
-                  first_page_url: 'http://localhost:8000/request-item/1/detail?page=1'
-                  from: null
-                  last_page: 1
-                  last_page_url: 'http://localhost:8000/request-item/1/detail?page=1'
-                  links:
-                    -
-                      url: null
-                      label: pagination.previous
-                      active: false
-                    -
-                      url: 'http://localhost:8000/request-item/1/detail?page=1'
-                      label: '1'
-                      active: true
-                    -
-                      url: null
-                      label: pagination.next
-                      active: false
-                  next_page_url: null
-                  path: 'http://localhost:8000/request-item/1/detail'
-                  per_page: 10
-                  prev_page_url: null
-                  to: null
-                  total: 0
+                  message: 'Class "App\Models\ItemOutDetail" not found'
                 properties:
                   message:
                     type: string
-                    example: 'success get all request item details'
-                  current_page:
-                    type: integer
-                    example: 1
-                  data:
-                    type: array
-                    example: []
-                  first_page_url:
-                    type: string
-                    example: 'http://localhost:8000/request-item/1/detail?page=1'
-                  from:
-                    type: string
-                    example: null
-                  last_page:
-                    type: integer
-                    example: 1
-                  last_page_url:
-                    type: string
-                    example: 'http://localhost:8000/request-item/1/detail?page=1'
-                  links:
-                    type: array
-                    example:
-                      -
-                        url: null
-                        label: pagination.previous
-                        active: false
-                      -
-                        url: 'http://localhost:8000/request-item/1/detail?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: pagination.next
-                        active: false
-                    items:
-                      type: object
-                      properties:
-                        url:
-                          type: string
-                          example: null
-                        label:
-                          type: string
-                          example: pagination.previous
-                        active:
-                          type: boolean
-                          example: false
-                  next_page_url:
-                    type: string
-                    example: null
-                  path:
-                    type: string
-                    example: 'http://localhost:8000/request-item/1/detail'
-                  per_page:
-                    type: integer
-                    example: 10
-                  prev_page_url:
-                    type: string
-                    example: null
-                  to:
-                    type: string
-                    example: null
-                  total:
-                    type: integer
-                    example: 0
+                    example: 'Class "App\Models\ItemOutDetail" not found'
       tags:
-        - 'Request Item Detail Management'
+        - '6. Outgoing Item Detail'
     post:
       summary: 'Store a newly created resource in storage.'
       operationId: storeANewlyCreatedResourceInStorage
@@ -4689,13 +3689,13 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
+                  message: 'Class "App\Models\ItemOutDetail" not found'
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
+                    example: 'Class "App\Models\ItemOutDetail" not found'
       tags:
-        - 'Request Item Detail Management'
+        - '6. Outgoing Item Detail'
       requestBody:
         required: true
         content:
@@ -4704,26 +3704,26 @@ paths:
               type: object
               properties:
                 item_id:
-                  type: string
+                  type: integer
                   description: ''
-                  example: consequatur
+                  example: 6
                 qty:
-                  type: string
+                  type: integer
                   description: ''
-                  example: consequatur
+                  example: 6
               required:
                 - item_id
                 - qty
     parameters:
       -
         in: path
-        name: request_item_id
-        description: 'The ID of the request item.'
+        name: outgoing_item_id
+        description: 'The ID of the outgoing item.'
         example: 1
         required: true
         schema:
           type: integer
-  '/request-item/{request_item_id}/detail/{requestItemDetail}':
+  '/outgoing-item/{outgoing_item_id}/detail/{id}':
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -4737,15 +3737,15 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'Call to a member function update() on null'
+                  message: 'Class "App\Models\ItemOutDetail" not found'
                 properties:
                   message:
                     type: string
-                    example: 'Call to a member function update() on null'
+                    example: 'Class "App\Models\ItemOutDetail" not found'
       tags:
-        - 'Request Item Detail Management'
+        - '6. Outgoing Item Detail'
       requestBody:
-        required: true
+        required: false
         content:
           application/json:
             schema:
@@ -4759,437 +3759,12 @@ paths:
                   type: integer
                   description: ''
                   example: 6
-                qty_acc:
-                  type: integer
-                  description: ''
-                  example: 6
-              required:
-                - item_id
-                - qty
-                - qty_acc
-    parameters:
-      -
-        in: path
-        name: request_item_id
-        description: 'The ID of the request item.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: requestItemDetail
-        description: ''
-        example: consequatur
-        required: true
-        schema:
-          type: string
-  '/request-item/{request_item_id}/detail/{requestItemDetail_id}':
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
       description: ''
       parameters: []
       responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Found'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Found'
-      tags:
-        - 'Request Item Detail Management'
-    parameters:
-      -
-        in: path
-        name: request_item_id
-        description: 'The ID of the request item.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: requestItemDetail_id
-        description: 'The ID of the requestItemDetail.'
-        example: 6
-        required: true
-        schema:
-          type: integer
-  /request-item:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'success get all request items'
-                  current_page: 1
-                  data:
-                    -
-                      id: 1
-                      code: RQ-001
-                      employee_id: 4
-                      status: diajukan
-                      note: null
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 4
-                        name: 'Ani Nuraeni'
-                    -
-                      id: 2
-                      code: RQ-002
-                      employee_id: 5
-                      status: draf
-                      note: null
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 5
-                        name: 'Zim zim'
-                    -
-                      id: 3
-                      code: RQ-003
-                      employee_id: 4
-                      status: disetujui
-                      note: null
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 4
-                        name: 'Ani Nuraeni'
-                    -
-                      id: 4
-                      code: RQ-004
-                      employee_id: 5
-                      status: diajukan
-                      note: null
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 5
-                        name: 'Zim zim'
-                    -
-                      id: 5
-                      code: RQ-005
-                      employee_id: 4
-                      status: disetujui
-                      note: null
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 4
-                        name: 'Ani Nuraeni'
-                    -
-                      id: 6
-                      code: RI6631
-                      employee_id: 4
-                      status: diajukan
-                      note: 'Et veniam corrupti molestiae vero sit accusantium qui.'
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 4
-                        name: 'Ani Nuraeni'
-                    -
-                      id: 7
-                      code: RI3608
-                      employee_id: 4
-                      status: ditolak
-                      note: 'Non est aut quaerat adipisci perferendis sit ab.'
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 4
-                        name: 'Ani Nuraeni'
-                    -
-                      id: 8
-                      code: RI7343
-                      employee_id: 5
-                      status: diajukan
-                      note: 'Esse totam aut est facilis id cumque harum repellat.'
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 5
-                        name: 'Zim zim'
-                    -
-                      id: 9
-                      code: RI8247
-                      employee_id: 5
-                      status: draf
-                      note: 'Quibusdam sed ut iure necessitatibus vel officia.'
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 5
-                        name: 'Zim zim'
-                    -
-                      id: 10
-                      code: RI6382
-                      employee_id: 1
-                      status: disetujui
-                      note: 'Perspiciatis similique ut incidunt dolorem possimus saepe.'
-                      created_at: '2024-10-06T04:04:56.000000Z'
-                      updated_at: '2024-10-06T04:04:56.000000Z'
-                      employee:
-                        id: 1
-                        name: Yani
-                  first_page_url: 'http://localhost:8000/request-item?page=1'
-                  from: 1
-                  last_page: 1
-                  last_page_url: 'http://localhost:8000/request-item?page=1'
-                  links:
-                    -
-                      url: null
-                      label: pagination.previous
-                      active: false
-                    -
-                      url: 'http://localhost:8000/request-item?page=1'
-                      label: '1'
-                      active: true
-                    -
-                      url: null
-                      label: pagination.next
-                      active: false
-                  next_page_url: null
-                  path: 'http://localhost:8000/request-item'
-                  per_page: 10
-                  prev_page_url: null
-                  to: 10
-                  total: 10
-                properties:
-                  message:
-                    type: string
-                    example: 'success get all request items'
-                  current_page:
-                    type: integer
-                    example: 1
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        code: RQ-001
-                        employee_id: 4
-                        status: diajukan
-                        note: null
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 4
-                          name: 'Ani Nuraeni'
-                      -
-                        id: 2
-                        code: RQ-002
-                        employee_id: 5
-                        status: draf
-                        note: null
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 5
-                          name: 'Zim zim'
-                      -
-                        id: 3
-                        code: RQ-003
-                        employee_id: 4
-                        status: disetujui
-                        note: null
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 4
-                          name: 'Ani Nuraeni'
-                      -
-                        id: 4
-                        code: RQ-004
-                        employee_id: 5
-                        status: diajukan
-                        note: null
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 5
-                          name: 'Zim zim'
-                      -
-                        id: 5
-                        code: RQ-005
-                        employee_id: 4
-                        status: disetujui
-                        note: null
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 4
-                          name: 'Ani Nuraeni'
-                      -
-                        id: 6
-                        code: RI6631
-                        employee_id: 4
-                        status: diajukan
-                        note: 'Et veniam corrupti molestiae vero sit accusantium qui.'
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 4
-                          name: 'Ani Nuraeni'
-                      -
-                        id: 7
-                        code: RI3608
-                        employee_id: 4
-                        status: ditolak
-                        note: 'Non est aut quaerat adipisci perferendis sit ab.'
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 4
-                          name: 'Ani Nuraeni'
-                      -
-                        id: 8
-                        code: RI7343
-                        employee_id: 5
-                        status: diajukan
-                        note: 'Esse totam aut est facilis id cumque harum repellat.'
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 5
-                          name: 'Zim zim'
-                      -
-                        id: 9
-                        code: RI8247
-                        employee_id: 5
-                        status: draf
-                        note: 'Quibusdam sed ut iure necessitatibus vel officia.'
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 5
-                          name: 'Zim zim'
-                      -
-                        id: 10
-                        code: RI6382
-                        employee_id: 1
-                        status: disetujui
-                        note: 'Perspiciatis similique ut incidunt dolorem possimus saepe.'
-                        created_at: '2024-10-06T04:04:56.000000Z'
-                        updated_at: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          id: 1
-                          name: Yani
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        code:
-                          type: string
-                          example: RQ-001
-                        employee_id:
-                          type: integer
-                          example: 4
-                        status:
-                          type: string
-                          example: diajukan
-                        note:
-                          type: string
-                          example: null
-                        created_at:
-                          type: string
-                          example: '2024-10-06T04:04:56.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2024-10-06T04:04:56.000000Z'
-                        employee:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                              example: 4
-                            name:
-                              type: string
-                              example: 'Ani Nuraeni'
-                  first_page_url:
-                    type: string
-                    example: 'http://localhost:8000/request-item?page=1'
-                  from:
-                    type: integer
-                    example: 1
-                  last_page:
-                    type: integer
-                    example: 1
-                  last_page_url:
-                    type: string
-                    example: 'http://localhost:8000/request-item?page=1'
-                  links:
-                    type: array
-                    example:
-                      -
-                        url: null
-                        label: pagination.previous
-                        active: false
-                      -
-                        url: 'http://localhost:8000/request-item?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: pagination.next
-                        active: false
-                    items:
-                      type: object
-                      properties:
-                        url:
-                          type: string
-                          example: null
-                        label:
-                          type: string
-                          example: pagination.previous
-                        active:
-                          type: boolean
-                          example: false
-                  next_page_url:
-                    type: string
-                    example: null
-                  path:
-                    type: string
-                    example: 'http://localhost:8000/request-item'
-                  per_page:
-                    type: integer
-                    example: 10
-                  prev_page_url:
-                    type: string
-                    example: null
-                  to:
-                    type: integer
-                    example: 10
-                  total:
-                    type: integer
-                    example: 10
-      tags:
-        - 'Request Item Management'
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses:
         500:
           description: ''
           content:
@@ -5197,288 +3772,18 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'Method Illuminate\Http\Request::validated does not exist.'
+                  message: 'Class "App\Models\ItemOutDetail" not found'
                 properties:
                   message:
                     type: string
-                    example: 'Method Illuminate\Http\Request::validated does not exist.'
+                    example: 'Class "App\Models\ItemOutDetail" not found'
       tags:
-        - 'Request Item Management'
-  '/request-item/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Call to undefined relationship [user] on model [App\Models\RequestItem].'
-                properties:
-                  message:
-                    type: string
-                    example: 'Call to undefined relationship [user] on model [App\Models\RequestItem].'
-      tags:
-        - 'Request Item Management'
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'success delete request item'
-                properties:
-                  message:
-                    type: string
-                    example: 'success delete request item'
-      tags:
-        - 'Request Item Management'
+        - '6. Outgoing Item Detail'
     parameters:
       -
         in: path
-        name: id
-        description: 'The ID of the request item.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/submission/{submission_id}/detail':
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'success get all submission item details'
-                  current_page: 1
-                  data: []
-                  first_page_url: 'http://localhost:8000/submission/1/detail?page=1'
-                  from: null
-                  last_page: 1
-                  last_page_url: 'http://localhost:8000/submission/1/detail?page=1'
-                  links:
-                    -
-                      url: null
-                      label: pagination.previous
-                      active: false
-                    -
-                      url: 'http://localhost:8000/submission/1/detail?page=1'
-                      label: '1'
-                      active: true
-                    -
-                      url: null
-                      label: pagination.next
-                      active: false
-                  next_page_url: null
-                  path: 'http://localhost:8000/submission/1/detail'
-                  per_page: 10
-                  prev_page_url: null
-                  to: null
-                  total: 0
-                properties:
-                  message:
-                    type: string
-                    example: 'success get all submission item details'
-                  current_page:
-                    type: integer
-                    example: 1
-                  data:
-                    type: array
-                    example: []
-                  first_page_url:
-                    type: string
-                    example: 'http://localhost:8000/submission/1/detail?page=1'
-                  from:
-                    type: string
-                    example: null
-                  last_page:
-                    type: integer
-                    example: 1
-                  last_page_url:
-                    type: string
-                    example: 'http://localhost:8000/submission/1/detail?page=1'
-                  links:
-                    type: array
-                    example:
-                      -
-                        url: null
-                        label: pagination.previous
-                        active: false
-                      -
-                        url: 'http://localhost:8000/submission/1/detail?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: pagination.next
-                        active: false
-                    items:
-                      type: object
-                      properties:
-                        url:
-                          type: string
-                          example: null
-                        label:
-                          type: string
-                          example: pagination.previous
-                        active:
-                          type: boolean
-                          example: false
-                  next_page_url:
-                    type: string
-                    example: null
-                  path:
-                    type: string
-                    example: 'http://localhost:8000/submission/1/detail'
-                  per_page:
-                    type: integer
-                    example: 10
-                  prev_page_url:
-                    type: string
-                    example: null
-                  to:
-                    type: string
-                    example: null
-                  total:
-                    type: integer
-                    example: 0
-      tags:
-        - 'Submission Item Detail Management'
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
-                properties:
-                  message:
-                    type: string
-                    example: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
-      tags:
-        - 'Submission Item Detail Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_id:
-                  type: string
-                  description: ''
-                  example: consequatur
-                qty:
-                  type: string
-                  description: ''
-                  example: consequatur
-              required:
-                - item_id
-                - qty
-    parameters:
-      -
-        in: path
-        name: submission_id
-        description: 'The ID of the submission.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/submission/{submission_id}/detail/{id}':
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Call to a member function update() on null'
-                properties:
-                  message:
-                    type: string
-                    example: 'Call to a member function update() on null'
-      tags:
-        - 'Submission Item Detail Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                item_id:
-                  type: integer
-                  description: ''
-                  example: 6
-                qty:
-                  type: integer
-                  description: ''
-                  example: 6
-                qty_acc:
-                  type: integer
-                  description: ''
-                  example: 6
-              required:
-                - item_id
-                - qty
-                - qty_acc
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Not Found'
-                properties:
-                  message:
-                    type: string
-                    example: 'Not Found'
-      tags:
-        - 'Submission Item Detail Management'
-    parameters:
-      -
-        in: path
-        name: submission_id
-        description: 'The ID of the submission.'
+        name: outgoing_item_id
+        description: 'The ID of the outgoing item.'
         example: 1
         required: true
         schema:
@@ -5860,7 +4165,7 @@ paths:
                     type: integer
                     example: 11
       tags:
-        - 'Submission Item Management'
+        - '7. Submission Item Management'
     post:
       summary: 'Store a newly created resource in storage.'
       operationId: storeANewlyCreatedResourceInStorage
@@ -5874,13 +4179,13 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 04:40:27, 2024-10-06 04:40:27))"
+                  message: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 06:12:11, 2024-10-06 06:12:11))"
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 04:40:27, 2024-10-06 04:40:27))"
+                    example: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `submission_items` (`updated_at`, `created_at`) values (2024-10-06 06:12:11, 2024-10-06 06:12:11))"
       tags:
-        - 'Submission Item Management'
+        - '7. Submission Item Management'
       requestBody:
         required: true
         content:
@@ -5977,7 +4282,7 @@ paths:
                         type: array
                         example: []
       tags:
-        - 'Submission Item Management'
+        - '7. Submission Item Management'
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -5997,7 +4302,7 @@ paths:
                     type: string
                     example: 'success delete submission item'
       tags:
-        - 'Submission Item Management'
+        - '7. Submission Item Management'
     parameters:
       -
         in: path
@@ -6007,127 +4312,7 @@ paths:
         required: true
         schema:
           type: integer
-  '/request/{request}/accept':
-    post:
-      summary: ''
-      operationId: postRequestRequestAccept
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'This action is unauthorized.'
-                properties:
-                  message:
-                    type: string
-                    example: 'This action is unauthorized.'
-      tags:
-        - 'Supervisor - Request Check'
-    parameters:
-      -
-        in: path
-        name: request
-        description: 'The request.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
-  '/request/{request}/decline':
-    post:
-      summary: ''
-      operationId: postRequestRequestDecline
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'This action is unauthorized.'
-                properties:
-                  message:
-                    type: string
-                    example: 'This action is unauthorized.'
-      tags:
-        - 'Supervisor - Request Check'
-    parameters:
-      -
-        in: path
-        name: request
-        description: 'The request.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
-  '/submission/{submission_id}/accept':
-    post:
-      summary: ''
-      operationId: postSubmissionSubmission_idAccept
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'This action is unauthorized.'
-                properties:
-                  message:
-                    type: string
-                    example: 'This action is unauthorized.'
-      tags:
-        - 'Supervisor - Submission Check'
-    parameters:
-      -
-        in: path
-        name: submission_id
-        description: 'The ID of the submission.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/submission/{submission_id}/decline':
-    post:
-      summary: ''
-      operationId: postSubmissionSubmission_idDecline
-      description: ''
-      parameters: []
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'This action is unauthorized.'
-                properties:
-                  message:
-                    type: string
-                    example: 'This action is unauthorized.'
-      tags:
-        - 'Supervisor - Submission Check'
-    parameters:
-      -
-        in: path
-        name: submission_id
-        description: 'The ID of the submission.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  /admin/supplier:
+  '/submission/{submission_id}/detail':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -6141,100 +4326,20 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'success get suppliers'
+                  message: 'success get all submission item details'
                   current_page: 1
-                  data:
-                    -
-                      id: 1
-                      code: S0001
-                      name: 'Supplier 1'
-                      address: 'Address 1'
-                      phone: '08123456789'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 2
-                      code: S0002
-                      name: 'Supplier 2'
-                      address: 'Address 2'
-                      phone: '08123456790'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 3
-                      code: S0003
-                      name: 'Supplier 3'
-                      address: 'Address 3'
-                      phone: '08123456791'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 4
-                      code: S0004
-                      name: 'Supplier 4'
-                      address: 'Address 4'
-                      phone: '08123456792'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 5
-                      code: S0005
-                      name: 'Supplier 5'
-                      address: 'Address 5'
-                      phone: '08123456793'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 6
-                      code: SP-6228
-                      name: 'Fa Hutagalung'
-                      address: 'Dk. Bayan No. 198, Surakarta 32363, Kaltim'
-                      phone: '(+62) 357 6329 5408'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 7
-                      code: SP-5258
-                      name: 'Fa Maryadi Tbk'
-                      address: 'Ds. Achmad Yani No. 10, Bengkulu 62814, NTT'
-                      phone: '0448 4227 6230'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 8
-                      code: SP-5536
-                      name: 'PD Pradana Mandasari'
-                      address: 'Kpg. K.H. Maskur No. 815, Bima 73177, Maluku'
-                      phone: '0483 8145 071'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 9
-                      code: SP-9740
-                      name: 'Perum Lestari Tbk'
-                      address: 'Jr. Muwardi No. 189, Pangkal Pinang 57253, Riau'
-                      phone: '0264 4636 3891'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                    -
-                      id: 10
-                      code: SP-9793
-                      name: 'Perum Namaga Pratiwi'
-                      address: 'Ds. Pelajar Pejuang 45 No. 884, Pekanbaru 58262, Aceh'
-                      phone: '0881 798 483'
-                      created_at: '2024-10-06T04:04:44.000000Z'
-                      updated_at: '2024-10-06T04:04:44.000000Z'
-                  first_page_url: 'http://localhost:8000/admin/supplier?page=1'
-                  from: 1
+                  data: []
+                  first_page_url: 'http://localhost:8000/submission/1/detail?page=1'
+                  from: null
                   last_page: 1
-                  last_page_url: 'http://localhost:8000/admin/supplier?page=1'
+                  last_page_url: 'http://localhost:8000/submission/1/detail?page=1'
                   links:
                     -
                       url: null
                       label: pagination.previous
                       active: false
                     -
-                      url: 'http://localhost:8000/admin/supplier?page=1'
+                      url: 'http://localhost:8000/submission/1/detail?page=1'
                       label: '1'
                       active: true
                     -
@@ -6242,137 +4347,33 @@ paths:
                       label: pagination.next
                       active: false
                   next_page_url: null
-                  path: 'http://localhost:8000/admin/supplier'
+                  path: 'http://localhost:8000/submission/1/detail'
                   per_page: 10
                   prev_page_url: null
-                  to: 10
-                  total: 10
+                  to: null
+                  total: 0
                 properties:
                   message:
                     type: string
-                    example: 'success get suppliers'
+                    example: 'success get all submission item details'
                   current_page:
                     type: integer
                     example: 1
                   data:
                     type: array
-                    example:
-                      -
-                        id: 1
-                        code: S0001
-                        name: 'Supplier 1'
-                        address: 'Address 1'
-                        phone: '08123456789'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 2
-                        code: S0002
-                        name: 'Supplier 2'
-                        address: 'Address 2'
-                        phone: '08123456790'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 3
-                        code: S0003
-                        name: 'Supplier 3'
-                        address: 'Address 3'
-                        phone: '08123456791'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 4
-                        code: S0004
-                        name: 'Supplier 4'
-                        address: 'Address 4'
-                        phone: '08123456792'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 5
-                        code: S0005
-                        name: 'Supplier 5'
-                        address: 'Address 5'
-                        phone: '08123456793'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 6
-                        code: SP-6228
-                        name: 'Fa Hutagalung'
-                        address: 'Dk. Bayan No. 198, Surakarta 32363, Kaltim'
-                        phone: '(+62) 357 6329 5408'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 7
-                        code: SP-5258
-                        name: 'Fa Maryadi Tbk'
-                        address: 'Ds. Achmad Yani No. 10, Bengkulu 62814, NTT'
-                        phone: '0448 4227 6230'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 8
-                        code: SP-5536
-                        name: 'PD Pradana Mandasari'
-                        address: 'Kpg. K.H. Maskur No. 815, Bima 73177, Maluku'
-                        phone: '0483 8145 071'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 9
-                        code: SP-9740
-                        name: 'Perum Lestari Tbk'
-                        address: 'Jr. Muwardi No. 189, Pangkal Pinang 57253, Riau'
-                        phone: '0264 4636 3891'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                      -
-                        id: 10
-                        code: SP-9793
-                        name: 'Perum Namaga Pratiwi'
-                        address: 'Ds. Pelajar Pejuang 45 No. 884, Pekanbaru 58262, Aceh'
-                        phone: '0881 798 483'
-                        created_at: '2024-10-06T04:04:44.000000Z'
-                        updated_at: '2024-10-06T04:04:44.000000Z'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        code:
-                          type: string
-                          example: S0001
-                        name:
-                          type: string
-                          example: 'Supplier 1'
-                        address:
-                          type: string
-                          example: 'Address 1'
-                        phone:
-                          type: string
-                          example: '08123456789'
-                        created_at:
-                          type: string
-                          example: '2024-10-06T04:04:44.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2024-10-06T04:04:44.000000Z'
+                    example: []
                   first_page_url:
                     type: string
-                    example: 'http://localhost:8000/admin/supplier?page=1'
+                    example: 'http://localhost:8000/submission/1/detail?page=1'
                   from:
-                    type: integer
-                    example: 1
+                    type: string
+                    example: null
                   last_page:
                     type: integer
                     example: 1
                   last_page_url:
                     type: string
-                    example: 'http://localhost:8000/admin/supplier?page=1'
+                    example: 'http://localhost:8000/submission/1/detail?page=1'
                   links:
                     type: array
                     example:
@@ -6381,7 +4382,7 @@ paths:
                         label: pagination.previous
                         active: false
                       -
-                        url: 'http://localhost:8000/admin/supplier?page=1'
+                        url: 'http://localhost:8000/submission/1/detail?page=1'
                         label: '1'
                         active: true
                       -
@@ -6405,7 +4406,7 @@ paths:
                     example: null
                   path:
                     type: string
-                    example: 'http://localhost:8000/admin/supplier'
+                    example: 'http://localhost:8000/submission/1/detail'
                   per_page:
                     type: integer
                     example: 10
@@ -6413,13 +4414,13 @@ paths:
                     type: string
                     example: null
                   to:
-                    type: integer
-                    example: 10
+                    type: string
+                    example: null
                   total:
                     type: integer
-                    example: 10
+                    example: 0
       tags:
-        - 'Supplier Management'
+        - '8. Submission Item Detail Management'
     post:
       summary: 'Store a newly created resource in storage.'
       operationId: storeANewlyCreatedResourceInStorage
@@ -6433,13 +4434,13 @@ paths:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
+                  message: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"
+                    example: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
       tags:
-        - 'Supplier Management'
+        - '8. Submission Item Detail Management'
       requestBody:
         required: true
         content:
@@ -6447,21 +4448,1174 @@ paths:
             schema:
               type: object
               properties:
-                name:
+                item_id:
+                  type: string
+                  description: ''
+                  example: consequatur
+                qty:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - item_id
+                - qty
+    parameters:
+      -
+        in: path
+        name: submission_id
+        description: 'The ID of the submission.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/submission/{submission_id}/detail/{id}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Call to a member function update() on null'
+                properties:
+                  message:
+                    type: string
+                    example: 'Call to a member function update() on null'
+      tags:
+        - '8. Submission Item Detail Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: integer
+                  description: ''
+                  example: 6
+                qty:
+                  type: integer
+                  description: ''
+                  example: 6
+                qty_acc:
+                  type: integer
+                  description: ''
+                  example: 6
+              required:
+                - item_id
+                - qty
+                - qty_acc
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Found'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Found'
+      tags:
+        - '8. Submission Item Detail Management'
+    parameters:
+      -
+        in: path
+        name: submission_id
+        description: 'The ID of the submission.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: id
+        description: 'The ID of the detail.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  /request-item:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'success get all request items'
+                  current_page: 1
+                  data:
+                    -
+                      id: 1
+                      code: RQ-001
+                      employee_id: 4
+                      status: diajukan
+                      note: null
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 4
+                        name: 'Ani Nuraeni'
+                    -
+                      id: 2
+                      code: RQ-002
+                      employee_id: 5
+                      status: draf
+                      note: null
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 5
+                        name: 'Zim zim'
+                    -
+                      id: 3
+                      code: RQ-003
+                      employee_id: 4
+                      status: disetujui
+                      note: null
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 4
+                        name: 'Ani Nuraeni'
+                    -
+                      id: 4
+                      code: RQ-004
+                      employee_id: 5
+                      status: diajukan
+                      note: null
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 5
+                        name: 'Zim zim'
+                    -
+                      id: 5
+                      code: RQ-005
+                      employee_id: 4
+                      status: disetujui
+                      note: null
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 4
+                        name: 'Ani Nuraeni'
+                    -
+                      id: 6
+                      code: RI6631
+                      employee_id: 4
+                      status: diajukan
+                      note: 'Et veniam corrupti molestiae vero sit accusantium qui.'
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 4
+                        name: 'Ani Nuraeni'
+                    -
+                      id: 7
+                      code: RI3608
+                      employee_id: 4
+                      status: ditolak
+                      note: 'Non est aut quaerat adipisci perferendis sit ab.'
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 4
+                        name: 'Ani Nuraeni'
+                    -
+                      id: 8
+                      code: RI7343
+                      employee_id: 5
+                      status: diajukan
+                      note: 'Esse totam aut est facilis id cumque harum repellat.'
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 5
+                        name: 'Zim zim'
+                    -
+                      id: 9
+                      code: RI8247
+                      employee_id: 5
+                      status: draf
+                      note: 'Quibusdam sed ut iure necessitatibus vel officia.'
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 5
+                        name: 'Zim zim'
+                    -
+                      id: 10
+                      code: RI6382
+                      employee_id: 1
+                      status: disetujui
+                      note: 'Perspiciatis similique ut incidunt dolorem possimus saepe.'
+                      created_at: '2024-10-06T04:04:56.000000Z'
+                      updated_at: '2024-10-06T04:04:56.000000Z'
+                      employee:
+                        id: 1
+                        name: Yani
+                  first_page_url: 'http://localhost:8000/request-item?page=1'
+                  from: 1
+                  last_page: 1
+                  last_page_url: 'http://localhost:8000/request-item?page=1'
+                  links:
+                    -
+                      url: null
+                      label: pagination.previous
+                      active: false
+                    -
+                      url: 'http://localhost:8000/request-item?page=1'
+                      label: '1'
+                      active: true
+                    -
+                      url: null
+                      label: pagination.next
+                      active: false
+                  next_page_url: null
+                  path: 'http://localhost:8000/request-item'
+                  per_page: 10
+                  prev_page_url: null
+                  to: 10
+                  total: 10
+                properties:
+                  message:
+                    type: string
+                    example: 'success get all request items'
+                  current_page:
+                    type: integer
+                    example: 1
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        code: RQ-001
+                        employee_id: 4
+                        status: diajukan
+                        note: null
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 4
+                          name: 'Ani Nuraeni'
+                      -
+                        id: 2
+                        code: RQ-002
+                        employee_id: 5
+                        status: draf
+                        note: null
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 5
+                          name: 'Zim zim'
+                      -
+                        id: 3
+                        code: RQ-003
+                        employee_id: 4
+                        status: disetujui
+                        note: null
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 4
+                          name: 'Ani Nuraeni'
+                      -
+                        id: 4
+                        code: RQ-004
+                        employee_id: 5
+                        status: diajukan
+                        note: null
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 5
+                          name: 'Zim zim'
+                      -
+                        id: 5
+                        code: RQ-005
+                        employee_id: 4
+                        status: disetujui
+                        note: null
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 4
+                          name: 'Ani Nuraeni'
+                      -
+                        id: 6
+                        code: RI6631
+                        employee_id: 4
+                        status: diajukan
+                        note: 'Et veniam corrupti molestiae vero sit accusantium qui.'
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 4
+                          name: 'Ani Nuraeni'
+                      -
+                        id: 7
+                        code: RI3608
+                        employee_id: 4
+                        status: ditolak
+                        note: 'Non est aut quaerat adipisci perferendis sit ab.'
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 4
+                          name: 'Ani Nuraeni'
+                      -
+                        id: 8
+                        code: RI7343
+                        employee_id: 5
+                        status: diajukan
+                        note: 'Esse totam aut est facilis id cumque harum repellat.'
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 5
+                          name: 'Zim zim'
+                      -
+                        id: 9
+                        code: RI8247
+                        employee_id: 5
+                        status: draf
+                        note: 'Quibusdam sed ut iure necessitatibus vel officia.'
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 5
+                          name: 'Zim zim'
+                      -
+                        id: 10
+                        code: RI6382
+                        employee_id: 1
+                        status: disetujui
+                        note: 'Perspiciatis similique ut incidunt dolorem possimus saepe.'
+                        created_at: '2024-10-06T04:04:56.000000Z'
+                        updated_at: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          id: 1
+                          name: Yani
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        code:
+                          type: string
+                          example: RQ-001
+                        employee_id:
+                          type: integer
+                          example: 4
+                        status:
+                          type: string
+                          example: diajukan
+                        note:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: '2024-10-06T04:04:56.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-10-06T04:04:56.000000Z'
+                        employee:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 4
+                            name:
+                              type: string
+                              example: 'Ani Nuraeni'
+                  first_page_url:
+                    type: string
+                    example: 'http://localhost:8000/request-item?page=1'
+                  from:
+                    type: integer
+                    example: 1
+                  last_page:
+                    type: integer
+                    example: 1
+                  last_page_url:
+                    type: string
+                    example: 'http://localhost:8000/request-item?page=1'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: null
+                        label: pagination.previous
+                        active: false
+                      -
+                        url: 'http://localhost:8000/request-item?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: pagination.next
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: null
+                        label:
+                          type: string
+                          example: pagination.previous
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: null
+                  path:
+                    type: string
+                    example: 'http://localhost:8000/request-item'
+                  per_page:
+                    type: integer
+                    example: 10
+                  prev_page_url:
+                    type: string
+                    example: null
+                  to:
+                    type: integer
+                    example: 10
+                  total:
+                    type: integer
+                    example: 10
+      tags:
+        - '9. Request Item Management'
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Method Illuminate\Http\Request::validated does not exist.'
+                properties:
+                  message:
+                    type: string
+                    example: 'Method Illuminate\Http\Request::validated does not exist.'
+      tags:
+        - '9. Request Item Management'
+  '/request-item/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Call to undefined relationship [user] on model [App\Models\RequestItem].'
+                properties:
+                  message:
+                    type: string
+                    example: 'Call to undefined relationship [user] on model [App\Models\RequestItem].'
+      tags:
+        - '9. Request Item Management'
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'success delete request item'
+                properties:
+                  message:
+                    type: string
+                    example: 'success delete request item'
+      tags:
+        - '9. Request Item Management'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the request item.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/request-item/{request_item_id}/detail':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'success get all request item details'
+                  current_page: 1
+                  data: []
+                  first_page_url: 'http://localhost:8000/request-item/1/detail?page=1'
+                  from: null
+                  last_page: 1
+                  last_page_url: 'http://localhost:8000/request-item/1/detail?page=1'
+                  links:
+                    -
+                      url: null
+                      label: pagination.previous
+                      active: false
+                    -
+                      url: 'http://localhost:8000/request-item/1/detail?page=1'
+                      label: '1'
+                      active: true
+                    -
+                      url: null
+                      label: pagination.next
+                      active: false
+                  next_page_url: null
+                  path: 'http://localhost:8000/request-item/1/detail'
+                  per_page: 10
+                  prev_page_url: null
+                  to: null
+                  total: 0
+                properties:
+                  message:
+                    type: string
+                    example: 'success get all request item details'
+                  current_page:
+                    type: integer
+                    example: 1
+                  data:
+                    type: array
+                    example: []
+                  first_page_url:
+                    type: string
+                    example: 'http://localhost:8000/request-item/1/detail?page=1'
+                  from:
+                    type: string
+                    example: null
+                  last_page:
+                    type: integer
+                    example: 1
+                  last_page_url:
+                    type: string
+                    example: 'http://localhost:8000/request-item/1/detail?page=1'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: null
+                        label: pagination.previous
+                        active: false
+                      -
+                        url: 'http://localhost:8000/request-item/1/detail?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: pagination.next
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: null
+                        label:
+                          type: string
+                          example: pagination.previous
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: null
+                  path:
+                    type: string
+                    example: 'http://localhost:8000/request-item/1/detail'
+                  per_page:
+                    type: integer
+                    example: 10
+                  prev_page_url:
+                    type: string
+                    example: null
+                  to:
+                    type: string
+                    example: null
+                  total:
+                    type: integer
+                    example: 0
+      tags:
+        - '10. Request Item Detail Management'
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
+                properties:
+                  message:
+                    type: string
+                    example: "SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
+      tags:
+        - '10. Request Item Detail Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: string
+                  description: ''
+                  example: consequatur
+                qty:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - item_id
+                - qty
+    parameters:
+      -
+        in: path
+        name: request_item_id
+        description: 'The ID of the request item.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/request-item/{request_item_id}/detail/{requestItemDetail}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Call to a member function update() on null'
+                properties:
+                  message:
+                    type: string
+                    example: 'Call to a member function update() on null'
+      tags:
+        - '10. Request Item Detail Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item_id:
+                  type: integer
+                  description: ''
+                  example: 6
+                qty:
+                  type: integer
+                  description: ''
+                  example: 6
+                qty_acc:
+                  type: integer
+                  description: ''
+                  example: 6
+              required:
+                - item_id
+                - qty
+                - qty_acc
+    parameters:
+      -
+        in: path
+        name: request_item_id
+        description: 'The ID of the request item.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: requestItemDetail
+        description: ''
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/request-item/{request_item_id}/detail/{requestItemDetail_id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Found'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Found'
+      tags:
+        - '10. Request Item Detail Management'
+    parameters:
+      -
+        in: path
+        name: request_item_id
+        description: 'The ID of the request item.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: requestItemDetail_id
+        description: 'The ID of the requestItemDetail.'
+        example: 6
+        required: true
+        schema:
+          type: integer
+  '/admin/employee/{employee_id}/assign':
+    post:
+      summary: 'Make user account from employee'
+      operationId: makeUserAccountFromEmployee
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$b0rlrxdDjWeuMZVeYvAcEOhISjECnohxtCaP39Y61k0/eMi9uGaJu, unit, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
+                properties:
+                  message:
+                    type: string
+                    example: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$b0rlrxdDjWeuMZVeYvAcEOhISjECnohxtCaP39Y61k0/eMi9uGaJu, unit, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
+      tags:
+        - '11. Employee Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: ''
+                  example: consequatur
+                role:
+                  type: string
+                  description: ''
+                  example: unit
+                  enum:
+                    - admin
+                    - pengawas
+                    - unit
+                username:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - password
+                - role
+                - username
+    parameters:
+      -
+        in: path
+        name: employee_id
+        description: 'The ID of the employee.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/admin/employee/{employee_id}/unassign':
+    post:
+      summary: 'Delete user account'
+      operationId: deleteUserAccount
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'succes delete account'
+                properties:
+                  message:
+                    type: string
+                    example: 'succes delete account'
+      tags:
+        - '11. Employee Management'
+    parameters:
+      -
+        in: path
+        name: employee_id
+        description: 'The ID of the employee.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /admin/employees:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'success get all employees'
+                  current_page: 1
+                  data:
+                    -
+                      id: 1
+                      nip: '198012311994031002'
+                      name: Yani
+                      position: 'Kepala Sekolah Bidang Kurikulum'
+                      phone: '08123456792'
+                      email: yani@smkn11bdg.sch.id
+                      email_verified_at: null
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 2
+                      nip: '197412311994031001'
+                      name: Sutarsa
+                      position: 'Wakil Kepala Sekolah Bidang Sarana Prasarana'
+                      phone: '08123456789'
+                      email: sutarsa@smkn11bdg.sch.id
+                      email_verified_at: null
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 3
+                      nip: '197806311994031003'
+                      name: 'Toni Kusmara'
+                      position: 'Staff Sarana Prasarana'
+                      phone: '08123456781'
+                      email: toni.kusmara@smkn11bdg.sch.id
+                      email_verified_at: null
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 4
+                      nip: '198212311994031004'
+                      name: 'Ani Nuraeni'
+                      position: 'Ketua Progam keahlian RPL'
+                      phone: '08123456782'
+                      email: zim.zim@smkn11bdg.sch.id
+                      email_verified_at: null
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 5
+                      nip: '197412311994031005'
+                      name: 'Zim zim'
+                      position: 'Ketua Progam keahlian DKV'
+                      phone: '08123456783'
+                      email: ani.nuraeni@smkn11bdg.sch.id
+                      email_verified_at: null
+                      created_at: null
+                      updated_at: null
+                  first_page_url: 'http://localhost:8000/admin/employees?page=1'
+                  from: 1
+                  last_page: 1
+                  last_page_url: 'http://localhost:8000/admin/employees?page=1'
+                  links:
+                    -
+                      url: null
+                      label: pagination.previous
+                      active: false
+                    -
+                      url: 'http://localhost:8000/admin/employees?page=1'
+                      label: '1'
+                      active: true
+                    -
+                      url: null
+                      label: pagination.next
+                      active: false
+                  next_page_url: null
+                  path: 'http://localhost:8000/admin/employees'
+                  per_page: 10
+                  prev_page_url: null
+                  to: 5
+                  total: 5
+                properties:
+                  message:
+                    type: string
+                    example: 'success get all employees'
+                  current_page:
+                    type: integer
+                    example: 1
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        nip: '198012311994031002'
+                        name: Yani
+                        position: 'Kepala Sekolah Bidang Kurikulum'
+                        phone: '08123456792'
+                        email: yani@smkn11bdg.sch.id
+                        email_verified_at: null
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 2
+                        nip: '197412311994031001'
+                        name: Sutarsa
+                        position: 'Wakil Kepala Sekolah Bidang Sarana Prasarana'
+                        phone: '08123456789'
+                        email: sutarsa@smkn11bdg.sch.id
+                        email_verified_at: null
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 3
+                        nip: '197806311994031003'
+                        name: 'Toni Kusmara'
+                        position: 'Staff Sarana Prasarana'
+                        phone: '08123456781'
+                        email: toni.kusmara@smkn11bdg.sch.id
+                        email_verified_at: null
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 4
+                        nip: '198212311994031004'
+                        name: 'Ani Nuraeni'
+                        position: 'Ketua Progam keahlian RPL'
+                        phone: '08123456782'
+                        email: zim.zim@smkn11bdg.sch.id
+                        email_verified_at: null
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 5
+                        nip: '197412311994031005'
+                        name: 'Zim zim'
+                        position: 'Ketua Progam keahlian DKV'
+                        phone: '08123456783'
+                        email: ani.nuraeni@smkn11bdg.sch.id
+                        email_verified_at: null
+                        created_at: null
+                        updated_at: null
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        nip:
+                          type: string
+                          example: '198012311994031002'
+                        name:
+                          type: string
+                          example: Yani
+                        position:
+                          type: string
+                          example: 'Kepala Sekolah Bidang Kurikulum'
+                        phone:
+                          type: string
+                          example: '08123456792'
+                        email:
+                          type: string
+                          example: yani@smkn11bdg.sch.id
+                        email_verified_at:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: null
+                        updated_at:
+                          type: string
+                          example: null
+                  first_page_url:
+                    type: string
+                    example: 'http://localhost:8000/admin/employees?page=1'
+                  from:
+                    type: integer
+                    example: 1
+                  last_page:
+                    type: integer
+                    example: 1
+                  last_page_url:
+                    type: string
+                    example: 'http://localhost:8000/admin/employees?page=1'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: null
+                        label: pagination.previous
+                        active: false
+                      -
+                        url: 'http://localhost:8000/admin/employees?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: pagination.next
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: null
+                        label:
+                          type: string
+                          example: pagination.previous
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: null
+                  path:
+                    type: string
+                    example: 'http://localhost:8000/admin/employees'
+                  per_page:
+                    type: integer
+                    example: 10
+                  prev_page_url:
+                    type: string
+                    example: null
+                  to:
+                    type: integer
+                    example: 5
+                  total:
+                    type: integer
+                    example: 5
+      tags:
+        - '11. Employee Management'
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
+                properties:
+                  message:
+                    type: string
+                    example: "SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
+      tags:
+        - '11. Employee Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nip:
                   type: string
                   description: validation.max.
                   example: tjqotbhpzwonwlzospqcs
-                address:
+                name:
                   type: string
-                  description: validation.max.
-                  example: nssrciatkmatldznkaapj
+                  description: ''
+                  example: consequatur
+                position:
+                  type: string
+                  description: ''
+                  example: consequatur
                 phone:
                   type: string
-                  description: validation.max.
-                  example: ptdhyldmarwuvlvyfcejz
+                  description: ''
+                  example: consequatur
+                email:
+                  type: string
+                  description: ''
+                  example: joy.schultz@example.org
               required:
+                - nip
                 - name
-  '/admin/supplier/{id}':
+                - position
+                - phone
+                - email
+  '/admin/employees/{id}':
     get:
       summary: 'Display the specified resource.'
       operationId: displayTheSpecifiedResource
@@ -6475,45 +5629,53 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'success get supplier'
+                  message: 'success get employee'
                   data:
                     id: 1
-                    code: S0001
-                    name: 'Supplier 1'
-                    address: 'Address 1'
-                    phone: '08123456789'
-                    created_at: '2024-10-06T04:04:44.000000Z'
-                    updated_at: '2024-10-06T04:04:44.000000Z'
+                    nip: '198012311994031002'
+                    name: Yani
+                    position: 'Kepala Sekolah Bidang Kurikulum'
+                    phone: '08123456792'
+                    email: yani@smkn11bdg.sch.id
+                    email_verified_at: null
+                    created_at: null
+                    updated_at: null
                 properties:
                   message:
                     type: string
-                    example: 'success get supplier'
+                    example: 'success get employee'
                   data:
                     type: object
                     properties:
                       id:
                         type: integer
                         example: 1
-                      code:
+                      nip:
                         type: string
-                        example: S0001
+                        example: '198012311994031002'
                       name:
                         type: string
-                        example: 'Supplier 1'
-                      address:
+                        example: Yani
+                      position:
                         type: string
-                        example: 'Address 1'
+                        example: 'Kepala Sekolah Bidang Kurikulum'
                       phone:
                         type: string
-                        example: '08123456789'
+                        example: '08123456792'
+                      email:
+                        type: string
+                        example: yani@smkn11bdg.sch.id
+                      email_verified_at:
+                        type: string
+                        example: null
                       created_at:
                         type: string
-                        example: '2024-10-06T04:04:44.000000Z'
+                        example: null
                       updated_at:
                         type: string
-                        example: '2024-10-06T04:04:44.000000Z'
+                        example: null
       tags:
-        - 'Supplier Management'
+        - '11. Employee Management'
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -6527,17 +5689,53 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'success create supplier'
-                  data: true
+                  message: 'success update employee'
+                  data:
+                    id: 1
+                    nip: tjqotbhpzwonwlzospqcs
+                    name: consequatur
+                    position: consequatur
+                    phone: consequatur
+                    email: joy.schultz@example.org
+                    email_verified_at: null
+                    created_at: null
+                    updated_at: '2024-10-06T06:12:11.000000Z'
                 properties:
                   message:
                     type: string
-                    example: 'success create supplier'
+                    example: 'success update employee'
                   data:
-                    type: boolean
-                    example: true
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      nip:
+                        type: string
+                        example: tjqotbhpzwonwlzospqcs
+                      name:
+                        type: string
+                        example: consequatur
+                      position:
+                        type: string
+                        example: consequatur
+                      phone:
+                        type: string
+                        example: consequatur
+                      email:
+                        type: string
+                        example: joy.schultz@example.org
+                      email_verified_at:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: null
+                      updated_at:
+                        type: string
+                        example: '2024-10-06T06:12:11.000000Z'
       tags:
-        - 'Supplier Management'
+        - '11. Employee Management'
       requestBody:
         required: true
         content:
@@ -6545,20 +5743,32 @@ paths:
             schema:
               type: object
               properties:
-                name:
+                nip:
                   type: string
                   description: validation.max.
                   example: tjqotbhpzwonwlzospqcs
-                address:
+                name:
                   type: string
-                  description: validation.max.
-                  example: nssrciatkmatldznkaapj
+                  description: ''
+                  example: consequatur
+                position:
+                  type: string
+                  description: ''
+                  example: consequatur
                 phone:
                   type: string
-                  description: validation.max.
-                  example: ptdhyldmarwuvlvyfcejz
+                  description: ''
+                  example: consequatur
+                email:
+                  type: string
+                  description: ''
+                  example: joy.schultz@example.org
               required:
+                - nip
                 - name
+                - position
+                - phone
+                - email
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -6572,18 +5782,18 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_supplier_id_foreign` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`id`)) (Connection: mysql, SQL: delete from `suppliers` where `id` = 1)'
+                  message: 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`)) (Connection: mysql, SQL: delete from `employees` where `id` = 1)'
                 properties:
                   message:
                     type: string
-                    example: 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_supplier_id_foreign` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`id`)) (Connection: mysql, SQL: delete from `suppliers` where `id` = 1)'
+                    example: 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`)) (Connection: mysql, SQL: delete from `employees` where `id` = 1)'
       tags:
-        - 'Supplier Management'
+        - '11. Employee Management'
     parameters:
       -
         in: path
         name: id
-        description: 'The ID of the supplier.'
+        description: 'The ID of the employee.'
         example: 1
         required: true
         schema:
@@ -6883,7 +6093,7 @@ paths:
                     type: integer
                     example: 4
       tags:
-        - 'User Management'
+        - '12. User Management'
     post:
       summary: 'Store a newly created resource in storage.'
       operationId: storeANewlyCreatedResourceInStorage
@@ -6903,7 +6113,7 @@ paths:
                     type: string
                     example: "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'where clause' (Connection: mysql, SQL: select count(*) as aggregate from `users` where `email` = maude81@example.net)"
       tags:
-        - 'User Management'
+        - '12. User Management'
       requestBody:
         required: true
         content:
@@ -6994,7 +6204,7 @@ paths:
                         type: string
                         example: '2024-10-06T04:04:43.000000Z'
       tags:
-        - 'User Management'
+        - '12. User Management'
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -7014,7 +6224,7 @@ paths:
                     type: string
                     example: "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'where clause' (Connection: mysql, SQL: select count(*) as aggregate from `users` where `email` = maude81@example.net)"
       tags:
-        - 'User Management'
+        - '12. User Management'
       requestBody:
         required: true
         content:
@@ -7076,7 +6286,7 @@ paths:
                     type: string
                     example: 'success delete user'
       tags:
-        - 'User Management'
+        - '12. User Management'
     parameters:
       -
         in: path
@@ -7086,7 +6296,749 @@ paths:
         required: true
         schema:
           type: string
+  /admin/supplier:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'success get suppliers'
+                  current_page: 1
+                  data:
+                    -
+                      id: 1
+                      code: S0001
+                      name: 'Supplier 1'
+                      address: 'Address 1'
+                      phone: '08123456789'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 2
+                      code: S0002
+                      name: 'Supplier 2'
+                      address: 'Address 2'
+                      phone: '08123456790'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 3
+                      code: S0003
+                      name: 'Supplier 3'
+                      address: 'Address 3'
+                      phone: '08123456791'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 4
+                      code: S0004
+                      name: 'Supplier 4'
+                      address: 'Address 4'
+                      phone: '08123456792'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 5
+                      code: S0005
+                      name: 'Supplier 5'
+                      address: 'Address 5'
+                      phone: '08123456793'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 6
+                      code: SP-6228
+                      name: 'Fa Hutagalung'
+                      address: 'Dk. Bayan No. 198, Surakarta 32363, Kaltim'
+                      phone: '(+62) 357 6329 5408'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 7
+                      code: SP-5258
+                      name: 'Fa Maryadi Tbk'
+                      address: 'Ds. Achmad Yani No. 10, Bengkulu 62814, NTT'
+                      phone: '0448 4227 6230'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 8
+                      code: SP-5536
+                      name: 'PD Pradana Mandasari'
+                      address: 'Kpg. K.H. Maskur No. 815, Bima 73177, Maluku'
+                      phone: '0483 8145 071'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 9
+                      code: SP-9740
+                      name: 'Perum Lestari Tbk'
+                      address: 'Jr. Muwardi No. 189, Pangkal Pinang 57253, Riau'
+                      phone: '0264 4636 3891'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                    -
+                      id: 10
+                      code: SP-9793
+                      name: 'Perum Namaga Pratiwi'
+                      address: 'Ds. Pelajar Pejuang 45 No. 884, Pekanbaru 58262, Aceh'
+                      phone: '0881 798 483'
+                      created_at: '2024-10-06T04:04:44.000000Z'
+                      updated_at: '2024-10-06T04:04:44.000000Z'
+                  first_page_url: 'http://localhost:8000/admin/supplier?page=1'
+                  from: 1
+                  last_page: 1
+                  last_page_url: 'http://localhost:8000/admin/supplier?page=1'
+                  links:
+                    -
+                      url: null
+                      label: pagination.previous
+                      active: false
+                    -
+                      url: 'http://localhost:8000/admin/supplier?page=1'
+                      label: '1'
+                      active: true
+                    -
+                      url: null
+                      label: pagination.next
+                      active: false
+                  next_page_url: null
+                  path: 'http://localhost:8000/admin/supplier'
+                  per_page: 10
+                  prev_page_url: null
+                  to: 10
+                  total: 10
+                properties:
+                  message:
+                    type: string
+                    example: 'success get suppliers'
+                  current_page:
+                    type: integer
+                    example: 1
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        code: S0001
+                        name: 'Supplier 1'
+                        address: 'Address 1'
+                        phone: '08123456789'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 2
+                        code: S0002
+                        name: 'Supplier 2'
+                        address: 'Address 2'
+                        phone: '08123456790'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 3
+                        code: S0003
+                        name: 'Supplier 3'
+                        address: 'Address 3'
+                        phone: '08123456791'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 4
+                        code: S0004
+                        name: 'Supplier 4'
+                        address: 'Address 4'
+                        phone: '08123456792'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 5
+                        code: S0005
+                        name: 'Supplier 5'
+                        address: 'Address 5'
+                        phone: '08123456793'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 6
+                        code: SP-6228
+                        name: 'Fa Hutagalung'
+                        address: 'Dk. Bayan No. 198, Surakarta 32363, Kaltim'
+                        phone: '(+62) 357 6329 5408'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 7
+                        code: SP-5258
+                        name: 'Fa Maryadi Tbk'
+                        address: 'Ds. Achmad Yani No. 10, Bengkulu 62814, NTT'
+                        phone: '0448 4227 6230'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 8
+                        code: SP-5536
+                        name: 'PD Pradana Mandasari'
+                        address: 'Kpg. K.H. Maskur No. 815, Bima 73177, Maluku'
+                        phone: '0483 8145 071'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 9
+                        code: SP-9740
+                        name: 'Perum Lestari Tbk'
+                        address: 'Jr. Muwardi No. 189, Pangkal Pinang 57253, Riau'
+                        phone: '0264 4636 3891'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                      -
+                        id: 10
+                        code: SP-9793
+                        name: 'Perum Namaga Pratiwi'
+                        address: 'Ds. Pelajar Pejuang 45 No. 884, Pekanbaru 58262, Aceh'
+                        phone: '0881 798 483'
+                        created_at: '2024-10-06T04:04:44.000000Z'
+                        updated_at: '2024-10-06T04:04:44.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        code:
+                          type: string
+                          example: S0001
+                        name:
+                          type: string
+                          example: 'Supplier 1'
+                        address:
+                          type: string
+                          example: 'Address 1'
+                        phone:
+                          type: string
+                          example: '08123456789'
+                        created_at:
+                          type: string
+                          example: '2024-10-06T04:04:44.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-10-06T04:04:44.000000Z'
+                  first_page_url:
+                    type: string
+                    example: 'http://localhost:8000/admin/supplier?page=1'
+                  from:
+                    type: integer
+                    example: 1
+                  last_page:
+                    type: integer
+                    example: 1
+                  last_page_url:
+                    type: string
+                    example: 'http://localhost:8000/admin/supplier?page=1'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: null
+                        label: pagination.previous
+                        active: false
+                      -
+                        url: 'http://localhost:8000/admin/supplier?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: pagination.next
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: null
+                        label:
+                          type: string
+                          example: pagination.previous
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: null
+                  path:
+                    type: string
+                    example: 'http://localhost:8000/admin/supplier'
+                  per_page:
+                    type: integer
+                    example: 10
+                  prev_page_url:
+                    type: string
+                    example: null
+                  to:
+                    type: integer
+                    example: 10
+                  total:
+                    type: integer
+                    example: 10
+      tags:
+        - '13. Supplier Management'
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
+                properties:
+                  message:
+                    type: string
+                    example: "SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"
+      tags:
+        - '13. Supplier Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: validation.max.
+                  example: tjqotbhpzwonwlzospqcs
+                address:
+                  type: string
+                  description: validation.max.
+                  example: nssrciatkmatldznkaapj
+                phone:
+                  type: string
+                  description: validation.max.
+                  example: ptdhyldmarwuvlvyfcejz
+              required:
+                - name
+  '/admin/supplier/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'success get supplier'
+                  data:
+                    id: 1
+                    code: S0001
+                    name: 'Supplier 1'
+                    address: 'Address 1'
+                    phone: '08123456789'
+                    created_at: '2024-10-06T04:04:44.000000Z'
+                    updated_at: '2024-10-06T04:04:44.000000Z'
+                properties:
+                  message:
+                    type: string
+                    example: 'success get supplier'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      code:
+                        type: string
+                        example: S0001
+                      name:
+                        type: string
+                        example: 'Supplier 1'
+                      address:
+                        type: string
+                        example: 'Address 1'
+                      phone:
+                        type: string
+                        example: '08123456789'
+                      created_at:
+                        type: string
+                        example: '2024-10-06T04:04:44.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-10-06T04:04:44.000000Z'
+      tags:
+        - '13. Supplier Management'
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'success create supplier'
+                  data: true
+                properties:
+                  message:
+                    type: string
+                    example: 'success create supplier'
+                  data:
+                    type: boolean
+                    example: true
+      tags:
+        - '13. Supplier Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: validation.max.
+                  example: tjqotbhpzwonwlzospqcs
+                address:
+                  type: string
+                  description: validation.max.
+                  example: nssrciatkmatldznkaapj
+                phone:
+                  type: string
+                  description: validation.max.
+                  example: ptdhyldmarwuvlvyfcejz
+              required:
+                - name
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_supplier_id_foreign` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`id`)) (Connection: mysql, SQL: delete from `suppliers` where `id` = 1)'
+                properties:
+                  message:
+                    type: string
+                    example: 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`laravel_sarpras_sebelas`.`incoming_items`, CONSTRAINT `incoming_items_supplier_id_foreign` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`id`)) (Connection: mysql, SQL: delete from `suppliers` where `id` = 1)'
+      tags:
+        - '13. Supplier Management'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the supplier.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /dashboard/counts:
+    get:
+      summary: 'Get counts of items, users and requests + submssions'
+      operationId: getCountsOfItemsUsersAndRequests+Submssions
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  items: 15
+                  users: 4
+                  requests: 10
+                  submissions: 11
+                properties:
+                  items:
+                    type: integer
+                    example: 15
+                  users:
+                    type: integer
+                    example: 4
+                  requests:
+                    type: integer
+                    example: 10
+                  submissions:
+                    type: integer
+                    example: 11
+      tags:
+        - 'Dashboard Info'
+  /dashboard/stats/request:
+    get:
+      summary: 'Get stats of requests item'
+      operationId: getStatsOfRequestsItem
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: "SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'laravel_sarpras_sebelas.request_items.created_at' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)"
+                properties:
+                  message:
+                    type: string
+                    example: "SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'laravel_sarpras_sebelas.request_items.created_at' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)"
+      tags:
+        - 'Dashboard Info'
+  /dashboard/stats/item:
+    get:
+      summary: 'Get stats of items'
+      operationId: getStatsOfItems
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  labels:
+                    - 'Alat Tulis Kantor'
+                  values:
+                    - 15
+                properties:
+                  labels:
+                    type: array
+                    example:
+                      - 'Alat Tulis Kantor'
+                    items:
+                      type: string
+                  values:
+                    type: array
+                    example:
+                      - 15
+                    items:
+                      type: integer
+      tags:
+        - 'Dashboard Info'
+  '/public/{path}':
+    get:
+      summary: ''
+      operationId: getPublicPath
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Found'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Found'
+      tags:
+        - 'File Management'
+    parameters:
+      -
+        in: path
+        name: path
+        description: ''
+        example: ''
+        required: true
+        schema:
+          type: string
+  '/private/{path}':
+    get:
+      summary: ''
+      operationId: getPrivatePath
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Found'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Found'
+      tags:
+        - 'File Management'
+    parameters:
+      -
+        in: path
+        name: path
+        description: ''
+        example: ''
+        required: true
+        schema:
+          type: string
+  /sanctum/csrf-cookie:
+    get:
+      summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+      operationId: returnAnEmptyResponseSimplyToTriggerTheStorageOfTheCSRFCookieInTheBrowser
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - 'Other Endpoints'
+  '/submission/{submission_id}/accept':
+    post:
+      summary: ''
+      operationId: postSubmissionSubmission_idAccept
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'This action is unauthorized.'
+                properties:
+                  message:
+                    type: string
+                    example: 'This action is unauthorized.'
+      tags:
+        - Supervisor
+    parameters:
+      -
+        in: path
+        name: submission_id
+        description: 'The ID of the submission.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/submission/{submission_id}/decline':
+    post:
+      summary: ''
+      operationId: postSubmissionSubmission_idDecline
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'This action is unauthorized.'
+                properties:
+                  message:
+                    type: string
+                    example: 'This action is unauthorized.'
+      tags:
+        - Supervisor
+    parameters:
+      -
+        in: path
+        name: submission_id
+        description: 'The ID of the submission.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/request/{request}/accept':
+    post:
+      summary: ''
+      operationId: postRequestRequestAccept
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'This action is unauthorized.'
+                properties:
+                  message:
+                    type: string
+                    example: 'This action is unauthorized.'
+      tags:
+        - Supervisor
+    parameters:
+      -
+        in: path
+        name: request
+        description: 'The request.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/request/{request}/decline':
+    post:
+      summary: ''
+      operationId: postRequestRequestDecline
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'This action is unauthorized.'
+                properties:
+                  message:
+                    type: string
+                    example: 'This action is unauthorized.'
+      tags:
+        - Supervisor
+    parameters:
+      -
+        in: path
+        name: request
+        description: 'The request.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
 tags:
+  -
+    name: '0. Authentication'
+    description: "\nAPI for check if user loged in"
   -
     name: '1. Category Management'
     description: "\nAPI endpoints for managing categories"
@@ -7100,14 +7052,35 @@ tags:
     name: '4. Incoming Item Detail Management'
     description: "\nAPI endpoints for managing Incoming Item Detail"
   -
-    name: 'Admin Dashboard'
-    description: "\nAPI endpoints for admin dashboard"
+    name: '5. Outgoing Item Management'
+    description: "\nAPI endpoints for managing outgoing item"
   -
-    name: Auth
-    description: "\nAPI endpoints for login"
+    name: '6. Outgoing Item Detail'
+    description: "\nManage outgoing item detail"
   -
-    name: 'Employee Management'
+    name: '7. Submission Item Management'
+    description: "\nAPI endpoints for managing submission item"
+  -
+    name: '8. Submission Item Detail Management'
+    description: "\nAPI endpoints for managing submission item detail"
+  -
+    name: '9. Request Item Management'
+    description: "\nAPI endpoints for managing request item"
+  -
+    name: '10. Request Item Detail Management'
+    description: "\nAPI endpoints for managing request item detail"
+  -
+    name: '11. Employee Management'
     description: "\nAPI endpoints for managing employees"
+  -
+    name: '12. User Management'
+    description: "\nAPI endpoints for managing users"
+  -
+    name: '13. Supplier Management'
+    description: "\nAPI endpoints for managing suppliers"
+  -
+    name: 'Dashboard Info'
+    description: "\nAPI endpoints for admin dashboard"
   -
     name: 'File Management'
     description: "\nAPI endpoints for get files from R2"
@@ -7115,35 +7088,8 @@ tags:
     name: 'Other Endpoints'
     description: ''
   -
-    name: 'Outgoing Item Detail'
-    description: "\nManage outgoing item detail"
-  -
-    name: 'Outgoing Item Management'
-    description: "\nAPI endpoints for managing outgoing item"
-  -
-    name: 'Request Item Detail Management'
-    description: "\nAPI endpoints for managing request item detail"
-  -
-    name: 'Request Item Management'
-    description: "\nAPI endpoints for managing request item"
-  -
-    name: 'Submission Item Detail Management'
-    description: "\nAPI endpoints for managing submission item detail"
-  -
-    name: 'Submission Item Management'
-    description: "\nAPI endpoints for managing submission item"
-  -
-    name: 'Supervisor - Request Check'
-    description: "\nAPI endpoints for request check"
-  -
-    name: 'Supervisor - Submission Check'
-    description: "\nAPI endpoints for submission check"
-  -
-    name: 'Supplier Management'
-    description: "\nAPI endpoints for managing suppliers"
-  -
-    name: 'User Management'
-    description: "\nAPI endpoints for managing users"
+    name: Supervisor
+    description: ''
 components:
   securitySchemes:
     default:

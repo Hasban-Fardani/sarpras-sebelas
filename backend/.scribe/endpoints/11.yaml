@@ -1,4 +1,4 @@
-name: 'Submission Item Detail Management'
+name: '8. Submission Item Detail Management'
 description: |-
 
   API endpoints for managing submission item detail
@@ -8,7 +8,7 @@ endpoints:
       - GET
     uri: 'submission/{submission_id}/detail'
     metadata:
-      groupName: 'Submission Item Detail Management'
+      groupName: '8. Submission Item Detail Management'
       groupDescription: |-
 
         API endpoints for managing submission item detail
@@ -63,7 +63,7 @@ endpoints:
       - POST
     uri: 'submission/{submission_id}/detail'
     metadata:
-      groupName: 'Submission Item Detail Management'
+      groupName: '8. Submission Item Detail Management'
       groupDescription: |-
 
         API endpoints for managing submission item detail
@@ -117,7 +117,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: ''consequatur'' for column ''item_id'' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: ''consequatur'' for column ''item_id'' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -139,7 +139,7 @@ endpoints:
       - PATCH
     uri: 'submission/{submission_id}/detail/{id}'
     metadata:
-      groupName: 'Submission Item Detail Management'
+      groupName: '8. Submission Item Detail Management'
       groupDescription: |-
 
         API endpoints for managing submission item detail
@@ -234,7 +234,7 @@ endpoints:
       - DELETE
     uri: 'submission/{submission_id}/detail/{id}'
     metadata:
-      groupName: 'Submission Item Detail Management'
+      groupName: '8. Submission Item Detail Management'
       groupDescription: |-
 
         API endpoints for managing submission item detail

@@ -1,4 +1,4 @@
-name: 'Request Item Detail Management'
+name: '10. Request Item Detail Management'
 description: |-
 
   API endpoints for managing request item detail
@@ -8,7 +8,7 @@ endpoints:
       - GET
     uri: 'request-item/{request_item_id}/detail'
     metadata:
-      groupName: 'Request Item Detail Management'
+      groupName: '10. Request Item Detail Management'
       groupDescription: |-
 
         API endpoints for managing request item detail
@@ -63,7 +63,7 @@ endpoints:
       - POST
     uri: 'request-item/{request_item_id}/detail'
     metadata:
-      groupName: 'Request Item Detail Management'
+      groupName: '10. Request Item Detail Management'
       groupDescription: |-
 
         API endpoints for managing request item detail
@@ -117,7 +117,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: ''consequatur'' for column ''item_id'' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: ''consequatur'' for column ''item_id'' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -139,7 +139,7 @@ endpoints:
       - PATCH
     uri: 'request-item/{request_item_id}/detail/{requestItemDetail}'
     metadata:
-      groupName: 'Request Item Detail Management'
+      groupName: '10. Request Item Detail Management'
       groupDescription: |-
 
         API endpoints for managing request item detail
@@ -234,7 +234,7 @@ endpoints:
       - DELETE
     uri: 'request-item/{request_item_id}/detail/{requestItemDetail_id}'
     metadata:
-      groupName: 'Request Item Detail Management'
+      groupName: '10. Request Item Detail Management'
       groupDescription: |-
 
         API endpoints for managing request item detail

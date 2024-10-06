@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @group Supplier Management
+ * @group 13. Supplier Management
  *
  * API endpoints for managing suppliers
  */

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @group Request Item Management
+ * @group 9. Request Item Management
  *
  * API endpoints for managing request item
  */

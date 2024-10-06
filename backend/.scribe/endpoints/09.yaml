@@ -1,4 +1,4 @@
-name: 'Outgoing Item Detail'
+name: '6. Outgoing Item Detail'
 description: |-
 
   Manage outgoing item detail
@@ -8,7 +8,7 @@ endpoints:
       - GET
     uri: 'outgoing-item/{outgoing_item_id}/detail'
     metadata:
-      groupName: 'Outgoing Item Detail'
+      groupName: '6. Outgoing Item Detail'
       groupDescription: |-
 
         Manage outgoing item detail
@@ -63,7 +63,7 @@ endpoints:
       - POST
     uri: 'outgoing-item/{outgoing_item_id}/detail'
     metadata:
-      groupName: 'Outgoing Item Detail'
+      groupName: '6. Outgoing Item Detail'
       groupDescription: |-
 
         Manage outgoing item detail
@@ -139,7 +139,7 @@ endpoints:
       - PATCH
     uri: 'outgoing-item/{outgoing_item_id}/detail/{id}'
     metadata:
-      groupName: 'Outgoing Item Detail'
+      groupName: '6. Outgoing Item Detail'
       groupDescription: |-
 
         Manage outgoing item detail
@@ -224,7 +224,7 @@ endpoints:
       - DELETE
     uri: 'outgoing-item/{outgoing_item_id}/detail/{id}'
     metadata:
-      groupName: 'Outgoing Item Detail'
+      groupName: '6. Outgoing Item Detail'
       groupDescription: |-
 
         Manage outgoing item detail

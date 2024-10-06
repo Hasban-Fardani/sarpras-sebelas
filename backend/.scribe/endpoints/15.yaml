@@ -1,4 +1,4 @@
-name: 'Employee Management'
+name: '11. Employee Management'
 description: |-
 
   API endpoints for managing employees
@@ -8,7 +8,7 @@ endpoints:
       - POST
     uri: 'admin/employee/{employee_id}/assign'
     metadata:
-      groupName: 'Employee Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
         API endpoints for managing employees
@@ -50,7 +50,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: admin
+        example: unit
         type: string
         enumValues:
           - admin
@@ -69,13 +69,13 @@ endpoints:
         custom: []
     cleanBodyParameters:
       password: consequatur
-      role: admin
+      role: unit
       username: consequatur
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$q9Xfay\/bD5PzAJ95I..QE.MhFAoZVBCbKdd2Tmg\/i92qdBl6SzKeS, admin, consequatur, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$b0rlrxdDjWeuMZVeYvAcEOhISjECnohxtCaP39Y61k0\/eMi9uGaJu, unit, consequatur, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -96,7 +96,7 @@ endpoints:
       - POST
     uri: 'admin/employee/{employee_id}/unassign'
     metadata:
-      groupName: 'Employee Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
         API endpoints for managing employees
@@ -151,7 +151,7 @@ endpoints:
       - GET
     uri: admin/employees
     metadata:
-      groupName: 'Employee Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
         API endpoints for managing employees
@@ -196,7 +196,7 @@ endpoints:
       - POST
     uri: admin/employees
     metadata:
-      groupName: 'Employee Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
         API endpoints for managing employees
@@ -270,7 +270,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 04:40:27, 2024-10-06 04:40:27))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 06:12:11, 2024-10-06 06:12:11))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -291,7 +291,7 @@ endpoints:
       - GET
     uri: 'admin/employees/{id}'
     metadata:
-      groupName: 'Employee Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
         API endpoints for managing employees
@@ -347,7 +347,7 @@ endpoints:
       - PATCH
     uri: 'admin/employees/{id}'
     metadata:
-      groupName: 'Employee Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
         API endpoints for managing employees
@@ -431,7 +431,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success update employee","data":{"id":1,"nip":"tjqotbhpzwonwlzospqcs","name":"consequatur","position":"consequatur","phone":"consequatur","email":"joy.schultz@example.org","email_verified_at":null,"created_at":null,"updated_at":"2024-10-06T04:40:27.000000Z"}}'
+        content: '{"message":"success update employee","data":{"id":1,"nip":"tjqotbhpzwonwlzospqcs","name":"consequatur","position":"consequatur","phone":"consequatur","email":"joy.schultz@example.org","email_verified_at":null,"created_at":null,"updated_at":"2024-10-06T06:12:11.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -452,7 +452,7 @@ endpoints:
       - DELETE
     uri: 'admin/employees/{id}'
     metadata:
-      groupName: 'Employee Management'
+      groupName: '11. Employee Management'
       groupDescription: |-
 
         API endpoints for managing employees

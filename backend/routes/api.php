@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\Auth\LoginCheckController;
 use App\Http\Controllers\Supervisor;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
@@ -27,12 +28,9 @@ Route::get('/public/{path}', FileController::class)->where('path', '.*');
 
 Route::prefix('/auth')->group(function () {
     Route::post('/login', LoginController::class);
-    Route::middleware('auth:sanctum')->post('/logout', LogoutController::class);
-    Route::get('/user', function () {
-        return Auth::user();
-    })->middleware('auth:sanctum');
-    Route::get('/check', function () {
-        return Auth::check();
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::get('/user', LoginCheckController::class);
+        Route::post('/logout', LogoutController::class);
     });
 });
 

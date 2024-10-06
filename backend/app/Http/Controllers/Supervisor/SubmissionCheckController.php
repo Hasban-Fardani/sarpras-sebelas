@@ -7,8 +7,9 @@ use App\Models\SubmissionItem;
 use Illuminate\Http\Request;
 
 /**
- * @group Supervisor - Submission Check
- *
+ * @group Supervisor
+ * @subgroup Submission
+ * 
  * API endpoints for submission check
  */
 class SubmissionCheckController extends Controller

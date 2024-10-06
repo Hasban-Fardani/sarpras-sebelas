@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @group Auth
- *
+ * @group 0. Authentication
+ * @unauthenticated
+ * 
  * API endpoints for login
  */
 class LoginController extends Controller

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 /**
- * @group Auth
+ * @group 0. Authentication
  *
  * API endpoints for logout
  */

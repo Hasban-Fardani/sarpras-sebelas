@@ -1,4 +1,4 @@
-name: 'Admin Dashboard'
+name: 'Dashboard Info'
 description: |-
 
   API endpoints for admin dashboard
@@ -8,13 +8,13 @@ endpoints:
       - GET
     uri: dashboard/counts
     metadata:
-      groupName: 'Admin Dashboard'
+      groupName: 'Dashboard Info'
       groupDescription: |-
 
         API endpoints for admin dashboard
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get counts of items, users and requests + submssions'
       description: ''
       authenticated: true
       custom: []
@@ -53,13 +53,13 @@ endpoints:
       - GET
     uri: dashboard/stats/request
     metadata:
-      groupName: 'Admin Dashboard'
+      groupName: 'Dashboard Info'
       groupDescription: |-
 
         API endpoints for admin dashboard
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get stats of requests item'
       description: ''
       authenticated: true
       custom: []
@@ -98,13 +98,13 @@ endpoints:
       - GET
     uri: dashboard/stats/item
     metadata:
-      groupName: 'Admin Dashboard'
+      groupName: 'Dashboard Info'
       groupDescription: |-
 
         API endpoints for admin dashboard
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get stats of items'
       description: ''
       authenticated: true
       custom: []
