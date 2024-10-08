@@ -119,7 +119,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''employee_id'' doesn''t have a default value (Connection: mysql, SQL: insert into `request_items` (`code`, `status`, `updated_at`, `created_at`) values (consequatur, draf, 2024-10-08 00:40:30, 2024-10-08 00:40:30))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''employee_id'' doesn''t have a default value (Connection: mysql, SQL: insert into `request_items` (`code`, `status`, `updated_at`, `created_at`) values (consequatur, draf, 2024-10-08 00:43:48, 2024-10-08 00:43:48))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

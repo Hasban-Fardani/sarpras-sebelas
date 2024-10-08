@@ -73,6 +73,7 @@ class LoginController extends Controller
 
         // create token
         $user = Auth::user();
+        $user['name'] = $user->name;
         $token = $user->createToken('accessToken')->plainTextToken;
 
         Log::info("logged in user: {$user}");

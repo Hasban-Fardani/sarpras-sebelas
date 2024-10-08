@@ -75,7 +75,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$EzVwTG8qHSfhCq4Bij3GB.HUUne.Bl.aNmJVKAoD.6YqVVu2AQIQe, unit, consequatur, 2024-10-08 00:40:31, 2024-10-08 00:40:31))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$.RT2baHvdcGnsN19TcRD3O6SsEhLHnR3tfudjscWmtvy4flW2Qdea, unit, consequatur, 2024-10-08 00:43:48, 2024-10-08 00:43:48))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -270,7 +270,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-08 00:40:31, 2024-10-08 00:40:31))"}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''nip'' doesn''t have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-08 00:43:48, 2024-10-08 00:43:48))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -431,7 +431,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success update employee","data":{"id":1,"nip":"tjqotbhpzwonwlzospqcs","name":"consequatur","position":"consequatur","phone":"consequatur","email":"joy.schultz@example.org","email_verified_at":null,"created_at":null,"updated_at":"2024-10-08T00:40:31.000000Z"}}'
+        content: '{"message":"success update employee","data":{"id":1,"nip":"tjqotbhpzwonwlzospqcs","name":"consequatur","position":"consequatur","phone":"consequatur","email":"joy.schultz@example.org","email_verified_at":null,"created_at":null,"updated_at":"2024-10-08T00:43:48.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

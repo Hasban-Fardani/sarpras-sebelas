@@ -26,6 +26,7 @@ class LoginCheckController extends Controller
     public function __invoke()
     {
         $user = Auth::user();
+        $user['name'] = $user->name;
         return response()->json([
             'user' => $user,
             'token' => $user->createToken('accessToken')->plainTextToken
