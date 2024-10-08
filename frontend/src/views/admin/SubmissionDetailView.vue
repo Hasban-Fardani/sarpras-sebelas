@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ConfirmDialog from '@/components/dialogs/ConfirmDialog.vue';
 import AdminLayout from '@/layouts/AdminLayout.vue';
-import { itemSubmissionDetail } from '@/stores/fake/item_submission';
 import { useItemSubmissionStore } from '@/stores/item_submission';
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
@@ -10,10 +9,9 @@ const route = useRoute()
 const { id } = route.params
 
 const itemSubmissionStore = useItemSubmissionStore()
-itemSubmissionStore.tmpData()
 
-const item = itemSubmissionStore.get(parseInt(id.toString()))
-const detailRequest = itemSubmissionDetail.filter((i) => i.id_pengajuan === parseInt(id.toString()))
+const item = itemSubmissionStore.get(Number.parseInt(id.toString()))
+const detailRequest = []
 
 const headers = [
     {

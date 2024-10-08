@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { items as fakeItem } from '@/stores/fake/item';
+import { useItemStore } from '@/stores/item';
 import { useUserStore } from '@/stores/user';
 import type { Item } from '@/types/item';
 import { ref } from 'vue'
@@ -8,7 +8,7 @@ import { ref } from 'vue'
 const user = useUserStore()
 const selected = ref(null)
 const selectedItems = ref<Item[]>([])
-const items = ref(fakeItem)
+const items = useItemStore().items
 const unit = ref(user.data.unit)
 const name = ref(user.data.name)
 const pesan = ref('')

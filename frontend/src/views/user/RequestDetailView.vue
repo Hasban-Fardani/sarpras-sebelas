@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ConfirmDialog from '@/components/dialogs/ConfirmDialog.vue';
 import UserLayout from '@/layouts/UserLayout.vue';
-import { itemRequestDetail } from '@/stores/fake/item_request';
 import { useItemRequestStore } from '@/stores/item_request';
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
@@ -10,10 +9,8 @@ const route = useRoute()
 const { id } = route.params
 
 const itemRequestStore = useItemRequestStore()
-itemRequestStore.tmpData()
-
-const item = itemRequestStore.get(parseInt(id.toString()))
-const detailRequest = itemRequestDetail.filter((i) => i.id_permintaan === parseInt(id.toString()))
+const item = itemRequestStore.get(Number.parseInt(id.toString()))
+const detailRequest = []
 
 const headers = [
     {

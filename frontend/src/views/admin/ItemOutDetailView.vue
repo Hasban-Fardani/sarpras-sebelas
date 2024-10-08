@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import AdminLayout from '@/layouts/AdminLayout.vue';
-import { itemOut, itemOutDetail } from '@/stores/fake/item_out';
+import { useItemOutStore } from '@/stores/item_out';
 import { useRoute } from 'vue-router';
 
 const route = useRoute()
 const { id } = route.params
-const item = itemOut.find((i) => i.id === Number.parseInt(id.toString()))
-const detailItemOut = itemOutDetail.filter((i) => i.id_barang_keluar === Number.parseInt(id.toString()))
+const item = useItemOutStore().itemsOut.find((i) => i.id === Number.parseInt(id.toString()))
+const detailItemOut = []
 const headers = [
     {
         title: 'Gambar',
