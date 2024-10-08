@@ -109,9 +109,9 @@ onMounted(() => {
         item-value="name"
         @update:options="item.updateTable"
     >
-        <template v-slot:item.gambar="{ item }">
+        <template v-slot:item.image="{ item }">
             <div class="d-flex justify-center w-100">
-                <img :src="item.gambar?.toString() ?? 'https://picsum.photos/200'" alt="gambar" width="50">
+                <img :src="item.image?.toString() ?? 'https://picsum.photos/200'" alt="image" width="50">
             </div>
         </template>
         <template v-slot:item.stock="{item}">

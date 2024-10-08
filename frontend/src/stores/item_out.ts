@@ -6,7 +6,7 @@ import { useUserStore } from './user'
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
-export const useItemOutStore = defineStore('item-out', () => {
+export const useItemOutStore = defineStore('outgoing-item', () => {
   const itemsOut = ref<ItemOut[]>([])
   const total = ref(0)
   const perPage = ref(5)
@@ -14,7 +14,7 @@ export const useItemOutStore = defineStore('item-out', () => {
 
   async function getAll() {
     const user = useUserStore()
-    const { data } = await axios.get(`${BACKEND_URL}/item-out?page=${page.value}&per_page=${perPage.value}`, {
+    const { data } = await axios.get(`${BACKEND_URL}/outgoing-item?page=${page.value}&per_page=${perPage.value}`, {
       headers: {
         Authorization: `Bearer ${user.data.token}`
       }

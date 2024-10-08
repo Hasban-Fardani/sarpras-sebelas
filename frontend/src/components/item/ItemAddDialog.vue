@@ -20,6 +20,8 @@ const data = ref<CreateItem>({
     price: 0,
     category_id: 1,
     merk: '',
+    size: '',
+    type: '',
 })
 
 const uploadImage = (event: Event) => {
@@ -119,6 +121,16 @@ onMounted(() => {
                             v-model="data.merk" 
                             label="merk" 
                             class="mt-3"
+                        />
+                    </div>
+                    <div class="d-flex ga-3">
+                        <v-text-field 
+                            v-model="data.type" 
+                            label="Tipe"
+                        />
+                        <v-text-field 
+                            v-model="data.size" 
+                            label="Ukuran"
                         />
                     </div>
                     <v-text-field 

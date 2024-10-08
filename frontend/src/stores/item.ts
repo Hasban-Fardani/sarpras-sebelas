@@ -17,28 +17,28 @@ export const useItemStore = defineStore('item', () => {
   const headers = [
     {
       title: 'Gambar',
-      key: 'gambar',
+      key: 'image',
       sortable: false
     },
     {
-      title: 'name',
+      title: 'Nama',
       key: 'name'
     },
     {
-      title: 'category',
+      title: 'Kategori',
       key: 'category.name'
     },
     {
-      title: 'price',
+      title: 'Harga',
       key: 'price'
     },
     {
-      title: 'stock/Minimal',
+      title: 'stok/min.stok',
       key: 'stock'
     },
     {
-      title: 'update',
-      key: 'updated_at'
+      title: 'Dibuat',
+      key: 'created_at'
     },
     {
       title: 'Action',
@@ -93,6 +93,8 @@ export const useItemStore = defineStore('item', () => {
     data.append('price', item.price.toString())
     data.append('unit', item.unit)
     data.append('merk', item.merk)
+    data.append('type', item.type)
+    data.append('size', item.size)
 
     const config: AxiosRequestConfig = {
       headers: {

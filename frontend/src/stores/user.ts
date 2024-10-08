@@ -52,17 +52,8 @@ export const useUserStore = defineStore('user', () => {
       await load()
     }
 
-    try {
-      await axios.get(`${BACKEND_URL}/auth/user`, {
-        headers: {
-          Authorization: `Bearer ${data.value.token}`
-        }
-      })
-      
-      return true
-    } catch (error) {
-      return false
-    }
+    if (!data.value.token) return false;
+    return true      
   }
 
   async function clear() {

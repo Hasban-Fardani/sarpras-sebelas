@@ -37,7 +37,7 @@ export const useSupplierStore = defineStore('supplierStore', () => {
   ]
 
   async function getAll() {
-    const {data} = await axios.get(`${BACKEND_URL}/supplier?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
+    const {data} = await axios.get(`${BACKEND_URL}/admin/upplier?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
       headers: {
         Authorization: `Bearer ${useUserStore().data.token}`
       }

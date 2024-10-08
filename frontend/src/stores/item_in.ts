@@ -47,7 +47,7 @@ export const useItemInStore = defineStore('item_in', () => {
       }
     }
 
-    const url = `${BACKEND_URL}/item-in?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`;
+    const url = `${BACKEND_URL}/incoming-item?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`;
     const {data} = await axios.get(url, config)
 
     items.value = data.data
@@ -60,7 +60,7 @@ export const useItemInStore = defineStore('item_in', () => {
       }
     }
 
-    const url = `${BACKEND_URL}/item-in/${id}/detail`;
+    const url = `${BACKEND_URL}/incoming-item/${id}/detail`;
     const {data} = await axios.get(url, config)
 
     item_details.value = data.data
@@ -108,7 +108,7 @@ export const useItemInStore = defineStore('item_in', () => {
       }
     }
 
-    await axios.post(`${BACKEND_URL}/item-in`, data, config)
+    await axios.post(`${BACKEND_URL}/incoming-item`, data, config)
 
     onUpdate.value = false
     refresh()

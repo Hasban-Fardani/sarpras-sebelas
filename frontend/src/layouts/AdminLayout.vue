@@ -59,7 +59,7 @@ const links: Link[] = [
 	},
 	{
 		type: "group",
-		title: "Manage Barang",
+		title: "Pengelolaan Barang",
 		icon: "mdi-view-list",
 		sublinks: [
 			{
@@ -78,7 +78,7 @@ const links: Link[] = [
 				type: "item",
 				title: "Barang",
 				icon: "mdi-view-list",
-				to: "/admin/item",
+				to: "/admin/items",
 			},
 			{
 				type: "item",
@@ -113,6 +113,19 @@ const links: Link[] = [
 			},
 		],
 	},
+  {
+    type: "group",
+    title: "Manage User",
+    icon: "mdi-account-group-outline",
+    sublinks: [
+      {
+        title: "User",
+        value: "user",
+        icon: "mdi-account-group-outline",
+        to: "/admin/users",
+      }
+    ]
+  }
 ];
 </script>
 
@@ -139,76 +152,36 @@ const links: Link[] = [
             alt="Logo sarpras"
           />
         </v-list-item>
+        <div v-for="link in links" :key="link.title">
+          <v-list-item
+            v-if="link.type === 'item'"
+            :prepend-icon="link.icon"
+            :title="link.title"
+            :value="link.value"
+            :to="link.to"
+          />
+          
+          <v-divider v-else-if="link.type === 'divider'"/>
 
-        <v-list-item
-          prepend-icon="mdi-view-dashboard"
-          title="Dashboard"
-          value="dashboard"
-          to="/admin/dashboard"
-        />
+          <v-list-group v-else-if="link.type === 'group'" :value="link.value">
+            <template v-slot:activator="{ props }">
+              <v-list-item
+                v-bind="props"
+                :prepend-icon="link.icon ?? 'mdi-view-list'"
+                :title="link.title"
+              />
+            </template>
 
-        <v-divider />
-        <v-list-group value="Pengelolaan Barang">
-          <template v-slot:activator="{ props }">
             <v-list-item
-              v-bind="props"
-              prepend-icon="mdi-view-list"
-              title="Pengelolaan Barang"
+              v-for="sublink in link.sublinks"
+              :prepend-icon="sublink.icon"
+              :title="sublink.title"
+              :value="sublink.value"
+              :to="sublink.to"
             />
-          </template>
-
-          <v-list-item
-            prepend-icon="mdi-tag-multiple"
-            title="Kategori"
-            value="Kategori"
-            to="/admin/category"
-          />
-
-          <v-list-item
-            prepend-icon="mdi-truck-delivery"
-            title="Supplier"
-            value="Supplier"
-            to="/admin/supplier"
-          />
-          <v-list-item
-            to="/admin/items"
-            prepend-icon="mdi-view-list"
-            title="Barang"
-            value="items"
-          />
-          <v-list-item
-            to="/admin/barang-masuk"
-            prepend-icon="mdi-arrow-down-bold-hexagon-outline"
-            title="Barang Masuk"
-            value="incoming-item"
-          />
-          <v-list-item
-            to="/admin/barang-keluar"
-            prepend-icon="mdi-logout"
-            title="Barang Keluar"
-            value="outgoing-item"
-          />
-        </v-list-group>
-
-        <v-list-item
-          prepend-icon="mdi-file-document-edit-outline"
-          title="Pengadaan"
-          value="pengadaan"
-          to="/admin/pengadaan"
-        />
-        <v-list-item
-          prepend-icon="mdi-clipboard-text-outline"
-          title="Permintaan"
-          value="permintaan"
-          to="/admin/permintaan"
-        />
-        <v-list-item
-          prepend-icon="mdi-account-group-outline"
-          title="User"
-          value="users"
-          to="/admin/users"
-        />
-      </v-list>
+          </v-list-group>
+        </div>
+      </v-list> 
       <template v-slot:append> </template>
     </v-navigation-drawer>
 
