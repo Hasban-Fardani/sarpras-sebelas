@@ -3,7 +3,7 @@ import type { User } from '@/types/user'
 import { Preferences } from '@capacitor/preferences'
 import axios from 'axios'
 import { defineStore } from 'pinia'
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 export const useUserStore = defineStore('user', () => {
@@ -53,7 +53,7 @@ export const useUserStore = defineStore('user', () => {
     }
 
     try {
-      await axios.get(`${BACKEND_URL}/auth/check`, {
+      await axios.get(`${BACKEND_URL}/auth/user`, {
         headers: {
           Authorization: `Bearer ${data.value.token}`
         }

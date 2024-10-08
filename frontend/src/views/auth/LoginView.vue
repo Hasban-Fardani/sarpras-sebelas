@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { useUserStore } from '@/stores/user';
-import { ref } from 'vue';
-import type { Credentials } from '@/types/credential';
 import router from '@/router';
+import { useUserStore } from '@/stores/user';
+import type { Credentials } from '@/types/credential';
+import { ref } from 'vue';
 
 const alertMessage = ref('')
 const showAlert = ref(false)
@@ -14,14 +14,13 @@ const data = ref<Credentials>({
 const rules = {
     nip: [
         (v: string) => {
-            if (!(v.length < 4)) return true
-
+            if (v.length >= 4) return true
             return 'NIP minimal 4 karakter'
         }
     ],
     password: [
         (v: string) => {
-            if (!(v.length < 6)) return true
+            if (v.length >= 6) return true
 
             return 'Password minimal 6 karakter'
         },

@@ -1,30 +1,34 @@
+import type { Category } from './category'
+
 type Item = {
   id: number
+  code: string
   image?: string | File
   name: string
-  category_id?: number
-  category?: {
-    id: number
-    name: string
-  }
-  stock?: number
-  min_stock?: number
-  unit?: string
-  price?: number
-  jumlah?: number
-  merk?: string
+  unit: string
+  merk: string
+  type: string
+  size: string
+  stock: number
+  min_stock: number
+  price: number
+  category_id: number
+  category?: Category
   updated_at?: Date | string
 }
 
 type CreateItem = {
+  code: string
   name: string
-  category_id: number
+  unit: string
+  merk: string
+  type: string
+  size: string
   stock: number
   min_stock: number
-  unit: string
   price: number
+  category_id: number
   image: File
-  merk: string
 }
 
 export type { Item, CreateItem }

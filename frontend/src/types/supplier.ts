@@ -1,6 +1,7 @@
 export type Supplier = {
   id?: number
+  code: string
   name: string
-  phone: string
-  address: string
+  address?: string
+  phone?: string
 }

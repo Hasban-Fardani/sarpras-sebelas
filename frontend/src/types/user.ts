@@ -4,7 +4,7 @@ type User = {
   token?: string
   unit?: string
   role?: 'admin' | 'unit' | 'pengawas'
-  nip?: number
+  nip?: string
   password?: string
 }
 
