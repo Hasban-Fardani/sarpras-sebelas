@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { items as fakeItem } from '@/stores/fake/item'
+import { useItemOutStore } from '@/stores/item_out';
 import type { Item } from '@/types/item';
 import { ref } from 'vue';
 
-const items = ref(fakeItem)
+const items = useItemOutStore().itemsOut
 const suppliers = ['BK', 'RPL', 'MPLB', 'Matematika']
 const selected = ref(null)
 const selectedItems = ref<Item[]>([])
