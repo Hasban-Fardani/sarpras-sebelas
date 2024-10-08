@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import CustomSelect from '@/components/CustomSelect.vue';
 import ItemAddDialog from '@/components/item/ItemAddDialog.vue';
+import { useIncomingItemStore } from '@/stores/incoming_item';
 import { useItemStore } from '@/stores/item';
-import { useItemInStore } from '@/stores/item_in';
 import { useSupplierStore } from '@/stores/supplier';
 import type { Item } from '@/types/item';
 import { onMounted, ref, watch } from 'vue';
 
-const itemIn = useItemInStore()
+const incomingItem = useIncomingItemStore()
 const item = useItemStore()
 const supplierStore = useSupplierStore()
 
@@ -32,8 +32,8 @@ const headers = [
     }
 ]
 const step = ref(1)
-const saveItemIn = () => {
-    // itemIn.addItem()
+const saveIncomingItem = () => {
+    // incomingItem.addItem()
 }
 
 const addItem = () => {

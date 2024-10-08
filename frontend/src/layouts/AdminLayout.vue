@@ -29,10 +29,11 @@ const toggle = () => {
 };
 
 const logout = async () => {
-	await user.logout();
+	router.push("/auth/login");
+
+  await user.logout();
 	await user.clear();
 
-	router.push("/auth/login");
 	location.reload();
 };
 
@@ -80,6 +81,13 @@ const links: Link[] = [
 				icon: "mdi-view-list",
 				to: "/admin/items",
 			},
+		],
+	},
+	{
+		type: "group",
+		title: "Barang keluar/masuk",
+		icon: "mdi-view-list-outline",
+		sublinks: [
 			{
 				type: "item",
 				title: "Barang Masuk",
@@ -113,20 +121,20 @@ const links: Link[] = [
 			},
 		],
 	},
-  {
-    type: "group",
-    title: "Manage User",
-    icon: "mdi-account-group-outline",
-    sublinks: [
-      {
-        type: "item",
-        title: "User",
-        value: "user",
-        icon: "mdi-account-group-outline",
-        to: "/admin/users",
-      }
-    ]
-  }
+	{
+		type: "group",
+		title: "Manage User",
+		icon: "mdi-account-group-outline",
+		sublinks: [
+			{
+				type: "item",
+				title: "User",
+				value: "user",
+				icon: "mdi-account-group-outline",
+				to: "/admin/users",
+			},
+		],
+	},
 ];
 </script>
 

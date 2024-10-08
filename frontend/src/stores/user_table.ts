@@ -39,7 +39,7 @@ export const useUserTableStore = defineStore('userTable', () => {
 
   async function getAll() {
     const user = useUserStore()
-    const { data } = await axios.get(`${BACKEND_URL}/users?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
+    const { data } = await axios.get(`${BACKEND_URL}/admin/users?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
       headers: {
         Authorization: `Bearer ${user.data.token}`
       }

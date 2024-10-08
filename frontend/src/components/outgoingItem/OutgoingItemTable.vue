@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import DeleteDialog from '@/components/dialogs/DeleteDialog.vue';
-import { useItemOutStore } from '@/stores/item_out';
+import { useOutgoingItemStore } from '@/stores/outgoing-item';
 import { ref } from 'vue';
 import DateRangePicker from '../DateRangePicker.vue';
 
-const itemOut = useItemOutStore()
+const outgoingItem = useOutgoingItemStore()
 
 const confirmDeleteDialog = ref(false)
 const selectedDeleteName = ref('')
@@ -15,16 +15,16 @@ const confirmDelete = (id: number, name: string) => {
     selectedDeleteId.value = id
 }
 
-const deleteItemOut = () => {
+const deleteOutgoingItem = () => {
 
 }
 </script>
 <template>
     <delete-dialog type="Barang keluar" :id="selectedDeleteId" :name="selectedDeleteName" :is-active="confirmDeleteDialog"
-        @close-dialog="confirmDeleteDialog = false" @delete="deleteItemOut" />
+        @close-dialog="confirmDeleteDialog = false" @delete="deleteOutgoingItem" />
     <div class="d-flex flex-wrap w-100 justify-space-between align-center">
         <div class="w-50 w-md-25">
-            <v-text-field v-model="itemOut.searchName" class="ma-2" label="cari" variant="outlined" density="comfortable"
+            <v-text-field v-model="outgoingItem.searchName" class="ma-2" label="cari" variant="outlined" density="comfortable"
                 placeholder="Cari deskripsi..." append-inner-icon="mdi-magnify" hide-details />
         </div>
         <div class="d-flex ga-2">
@@ -35,14 +35,14 @@ const deleteItemOut = () => {
         </div>
     </div>
     <v-data-table-server 
-        v-model:items-per-page="itemOut.perPage" 
-        :headers="itemOut.headers" 
-        :items="itemOut.items"
-        :items-length="itemOut.total" 
-        :loading="itemOut.onUpdate" 
-        :search="itemOut.searchName" 
+        v-model:items-per-page="outgoingItem.perPage" 
+        :headers="outgoingItem.headers" 
+        :items="outgoingItem.items"
+        :items-length="outgoingItem.total" 
+        :loading="outgoingItem.onUpdate" 
+        :search="outgoingItem.searchName" 
         item-value="name"
-        @update:options="itemOut.updateTable"
+        @update:options="outgoingItem.updateTable"
     >
         <template v-slot:item.id="{ item }">
             <div class="d-flex ga-2">

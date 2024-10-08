@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ItemOutTable from '@/components/itemOut/ItemOutTable.vue'
-import ItemOutAddDialog from '@/components/itemOut/itemOutAddDialog.vue';
+import OutgoingItemAddDialog from '@/components/outgoingItem/OutgoingItemAddDialog.vue';
+import OutgoingItemTable from '@/components/outgoingItem/OutgoingItemTable.vue';
 import AdminLayout from '@/layouts/AdminLayout.vue';
 
 </script>
@@ -10,9 +10,9 @@ import AdminLayout from '@/layouts/AdminLayout.vue';
             <h2>Barang Keluar</h2>
             <VChip color="primary" append-icon="mdi-plus" variant="flat" @click="null">
                 Tambah
-                <ItemOutAddDialog/> 
+                <OutgoingItemAddDialog/> 
             </VChip>
         </div>
-        <ItemOutTable />
+        <OutgoingItemTable />
     </AdminLayout>
 </template>

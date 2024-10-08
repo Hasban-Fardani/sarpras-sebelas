@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import AdminLayout from '@/layouts/AdminLayout.vue';
-import { useItemOutStore } from '@/stores/item_out';
+import { useOutgoingItemStore } from '@/stores/outgoing-item';
 import { useRoute } from 'vue-router';
 
 const route = useRoute()
 const { id } = route.params
-const item = useItemOutStore().itemsOut.find((i) => i.id === Number.parseInt(id.toString()))
-const detailItemOut = []
+const item = useOutgoingItemStore().itemsOut.find((i) => i.id === Number.parseInt(id.toString()))
+const detailOutgoingItem = []
 const headers = [
     {
         title: 'Gambar',
@@ -43,7 +43,7 @@ const headers = [
         </div>
         <VCard class="w-100">
             <VCardText>
-                <VDataTable :items="detailItemOut" :headers="headers">
+                <VDataTable :items="detailOutgoingItem" :headers="headers">
                     <template v-slot:item.barang.gambar="{ item }">
                         <img :src="item.barang.gambar ?? 'https://picsum.photos/200/200'" :alt="item.barang.name" width="100px" height="100px">
                     </template>

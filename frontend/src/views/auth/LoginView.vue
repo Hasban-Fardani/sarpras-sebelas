@@ -7,6 +7,7 @@ import { ref } from 'vue';
 const alertMessage = ref('')
 const showAlert = ref(false)
 const valid = ref(false)
+const onLoading = ref(false)
 const data = ref<Credentials>({
     nip: '',
     password: '',
@@ -29,7 +30,9 @@ const rules = {
 
 const user = useUserStore()
 const login = async () => {
+    onLoading.value = true
     const message = await user.login(data.value)
+    onLoading.value = false
     if (message === 'login success') {
         console.log('sini', user.data);
 
@@ -43,7 +46,7 @@ const login = async () => {
                 location.reload()
                 return
             case 'pengawas':
-                router.push('/admin/dashboard')
+                router.push('/pengawas/dashboard')
                 location.reload()
                 return
             default:
@@ -57,7 +60,6 @@ const login = async () => {
         alertMessage.value = ''
         showAlert.value = false
     }, 3000)
-    return
 }
 </script>
 <template>
@@ -73,7 +75,8 @@ const login = async () => {
                         <v-text-field label="NIP" v-model="data.nip" :rules="rules.nip" />
                         <v-text-field label="Password" v-model="data.password" :rules="rules.password"
                             type="password" />
-                        <v-btn type="submit" color="primary" class="mt-2">Login</v-btn>
+                        <v-btn type="submit" color="primary" class="mt-2" v-if="!onLoading">Login</v-btn>
+                        <v-btn color="primary" class="mt-2" v-if="onLoading" disabled><v-progress-circular indeterminate></v-progress-circular></v-btn>
                     </v-form>
                 </v-card-item>
             </v-card>

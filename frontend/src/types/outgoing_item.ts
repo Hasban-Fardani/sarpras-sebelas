@@ -1,6 +1,6 @@
 import type { Item } from "./item"
 
-type ItemOut = {
+type OutgoingItem = {
   id: number
   operator_id: number
   operator: {
@@ -13,11 +13,11 @@ type ItemOut = {
   updated_at: Date | string
 }
 
-type ItemOutDetail = {
+type OutgoingItemDetail = {
   item_out_id: number
   item_id: number
   item: Item
   qty: number
 }
 
-export type { ItemOut, ItemOutDetail }
+export type { OutgoingItem, OutgoingItemDetail }

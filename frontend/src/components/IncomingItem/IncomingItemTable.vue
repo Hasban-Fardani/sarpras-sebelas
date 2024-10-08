@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import DeleteDialog from '@/components/dialogs/DeleteDialog.vue';
-import { useItemInStore } from '@/stores/item_in';
+import { useIncomingItemStore } from '@/stores/incoming_item';
 import { onMounted, ref } from 'vue';
 import DateRangePicker from '../DateRangePicker.vue';
 
-const itemIn = useItemInStore()
+const incomingItem = useIncomingItemStore()
 
 const confirmDeleteDialog = ref(false)
 const selectedDeleteName = ref('')
@@ -16,7 +16,7 @@ const confirmDelete = (id: number, name: string) => {
     selectedDeleteId.value = id
 }
 
-const deleteItemIn = () => {
+const deleteIncomingItem = () => {
 
 }
 
@@ -31,13 +31,13 @@ onMounted(() => {
         :name="selectedDeleteName" 
         :is-active="confirmDeleteDialog"
         @close-dialog="confirmDeleteDialog = false" 
-        @delete="deleteItemIn" 
+        @delete="deleteIncomingItem" 
     />
     
     <div class="d-flex flex-wrap w-100 justify-space-between align-center">
         <div class="w-50 w-md-25">
             <v-text-field 
-                v-model="itemIn.searchName" 
+                v-model="incomingItem.searchName" 
                 class="ma-2" 
                 label="cari" 
                 variant="outlined" 
@@ -63,14 +63,14 @@ onMounted(() => {
         </div>
     </div>
     <v-data-table-server 
-        v-model:items-per-page="itemIn.perPage" 
-        :headers="itemIn.headers" 
-        :items="itemIn.items"
-        :items-length="itemIn.total" 
-        :loading="itemIn.onUpdate" 
-        :search="itemIn.searchName" 
+        v-model:items-per-page="incomingItem.perPage" 
+        :headers="incomingItem.headers" 
+        :items="incomingItem.items"
+        :items-length="incomingItem.total" 
+        :loading="incomingItem.onUpdate" 
+        :search="incomingItem.searchName" 
         item-value="name"
-        @update:options="itemIn.updateTable"
+        @update:options="incomingItem.updateTable"
     >
         <template v-slot:item.id="{ item }">
             <div class="d-flex ga-2">

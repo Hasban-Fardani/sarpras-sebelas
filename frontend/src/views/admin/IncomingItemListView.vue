@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ItemInAddDialog from '@/components/itemIn/ItemInAddDialog.vue'
-import ItemInTable from '@/components/itemIn/ItemInTable.vue';
+import IncomingItemAddDialog from '@/components/incomingItem/IncomingItemAddDialog.vue'
+import IncomingItemTable from '@/components/incomingItem/IncomingItemTable.vue';
 import AdminLayout from '@/layouts/AdminLayout.vue';
 
 </script>
@@ -15,9 +15,9 @@ import AdminLayout from '@/layouts/AdminLayout.vue';
                 @click="null"
             >
                 Tambah
-                <ItemInAddDialog/>
+                <IncomingItemAddDialog/>
             </VChip>
         </div>
-        <ItemInTable />
+        <IncomingItemTable />
     </AdminLayout>
 </template>

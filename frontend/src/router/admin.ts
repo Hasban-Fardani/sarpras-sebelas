@@ -54,8 +54,8 @@ export const adminRoutes: RouteRecordRaw[] = [
     },
     {
         path: '/admin/barang-masuk',
-        name: 'admin-item-in',
-        component: () => import('../views/admin/ItemInListView.vue'),
+        name: 'admin-incoming-item',
+        component: () => import('../views/admin/IncomingItemListView.vue'),
         meta: {
             auth: true,
             role: 'admin'
@@ -64,7 +64,7 @@ export const adminRoutes: RouteRecordRaw[] = [
     {
         path: '/admin/barang-masuk/:id',
         name: 'admin-item-in-detail',
-        component: () => import('../views/admin/ItemInDetailView.vue'),
+        component: () => import('../views/admin/IncomingItemDetailView.vue'),
         meta: {
             auth: true,
             role: 'admin'
@@ -73,7 +73,7 @@ export const adminRoutes: RouteRecordRaw[] = [
     {
         path: '/admin/barang-keluar',
         name: 'admin-item-out',
-        component: () => import('../views/admin/ItemOutListView.vue'),
+        component: () => import('../views/admin/OutgoingItemListView.vue'),
         meta: {
             auth: true,
             role: 'admin'
@@ -82,7 +82,7 @@ export const adminRoutes: RouteRecordRaw[] = [
     {
         path: '/admin/barang-keluar/:id',
         name: 'admin-item-out-detail',
-        component: () => import('../views/admin/ItemOutDetailView.vue'),
+        component: () => import('../views/admin/OutgoingItemDetailView.vue'),
         meta: {
             auth: true,
             role: 'admin'

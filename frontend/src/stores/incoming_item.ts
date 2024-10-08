@@ -1,4 +1,4 @@
-import type { CreateItemInDetail, ItemIn, ItemInDetail } from '@/types/item_in'
+import type { CreateIncomingItemDetail, IncomingItem, IncomingItemDetail } from '@/types/incoming_item'
 import type { UpdateTableArgs } from '@/types/table'
 import axios, { type AxiosRequestConfig } from 'axios'
 import { defineStore } from 'pinia'
@@ -7,9 +7,9 @@ import { useUserStore } from './user'
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
-export const useItemInStore = defineStore('item_in', () => {
-  const items = ref<ItemIn[]>([])
-  const item_details = ref<ItemInDetail[]>([])
+export const useIncomingItemStore = defineStore('incoming-item', () => {
+  const items = ref<IncomingItem[]>([])
+  const item_details = ref<IncomingItemDetail[]>([])
   const total = computed(() => items.value?.length)
   const perPage = ref(5)
   const page = ref(1)
@@ -34,7 +34,7 @@ export const useItemInStore = defineStore('item_in', () => {
       key: 'created_at'
     },
     {
-      title: 'Action',
+      title: 'Aksi',
       key: 'id',
       sortable: false
     }
@@ -89,7 +89,7 @@ export const useItemInStore = defineStore('item_in', () => {
     updateTable(args)
   }
 
-  async function addItem(supplier_id: number | string, note: string, items: CreateItemInDetail[]) {
+  async function addItem(supplier_id: number | string, note: string, items: CreateIncomingItemDetail[]) {
     onUpdate.value = true
     const data = new FormData()
     

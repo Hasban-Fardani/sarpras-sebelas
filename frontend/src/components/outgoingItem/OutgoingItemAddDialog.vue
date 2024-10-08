@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useItemOutStore } from '@/stores/item_out';
+import { useOutgoingItemStore } from '@/stores/outgoing-item';
 import type { Item } from '@/types/item';
 import { ref } from 'vue';
 
-const items = useItemOutStore().itemsOut
+const items = useOutgoingItemStore().itemsOut
 const suppliers = ['BK', 'RPL', 'MPLB', 'Matematika']
 const selected = ref(null)
 const selectedItems = ref<Item[]>([])
@@ -22,7 +22,7 @@ const headers = [
     }
 ]
 const step = ref(1)
-const saveItemOut = () => {
+const saveOutgoingItem = () => {
     // Todo: save item out
 }
 

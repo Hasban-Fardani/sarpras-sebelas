@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import AdminLayout from '@/layouts/AdminLayout.vue';
-import { useItemInStore } from '@/stores/item_in';
+import { useIncomingItemStore } from '@/stores/incoming_item';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
 
-const itemIn = useItemInStore()
+const incomingItem = useIncomingItemStore()
 const route = useRoute()
 const { id } = route.params
 
-const item = itemIn.items.find((i) => i.id === Number.parseInt(id.toString()))
-const detailItemIn = ref(itemIn.item_details)
+const item = incomingItem.items.find((i) => i.id === Number.parseInt(id.toString()))
+const detailIncomingItem = ref(incomingItem.item_details)
 const headers = [
     {
         title: 'Gambar',
@@ -27,8 +27,8 @@ const headers = [
 ]
 
 onMounted(async () => { 
-    await itemIn.getDetails(id.toString())
-    detailItemIn.value = itemIn.item_details
+    await incomingItem.getDetails(id.toString())
+    detailIncomingItem.value = incomingItem.item_details
 })
 </script>
 <template>
@@ -47,7 +47,7 @@ onMounted(async () => {
         </div>
         <VCard class="w-100">
             <VCardText>
-                <VDataTable :items="detailItemIn" :headers="headers">
+                <VDataTable :items="detailIncomingItem" :headers="headers">
                     <template v-slot:item.item.image="{ item }">
                         <img :src="item.item.image ?? 'https://picsum.photos/200/200'" :alt="'TODO'" width="100px" height="100px">
                     </template>

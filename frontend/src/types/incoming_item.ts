@@ -1,6 +1,6 @@
 import type { Item } from "./item"
 
-type ItemIn = {
+type IncomingItem = {
   id: number
   user_id: number
   user?: {
@@ -17,12 +17,12 @@ type ItemIn = {
   updated_at: string | Date
 }
 
-type CreateItemInDetail = {
+type CreateIncomingItemDetail = {
   item_id: number
   qty: number
 }
 
-type ItemInDetail = {
+type IncomingItemDetail = {
   item_in_id: number
   item_id: number
   item: Item
@@ -30,4 +30,4 @@ type ItemInDetail = {
   qty: number
 }
 
-export type { ItemIn, ItemInDetail, CreateItemInDetail }
+export type { IncomingItem, IncomingItemDetail, CreateIncomingItemDetail }
