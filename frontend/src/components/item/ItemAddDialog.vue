@@ -13,7 +13,8 @@ const image = ref<File | null>(null)
 const imageUrl = ref<string | null>(null)
 const data = ref<CreateItem>({
     name: '',
-    gambar: new File([], ''),
+    code: '',
+    image: new File([], ''),
     stock: 1,
     min_stock: 1,
     unit: '',

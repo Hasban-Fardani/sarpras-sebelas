@@ -119,6 +119,7 @@ const links: Link[] = [
     icon: "mdi-account-group-outline",
     sublinks: [
       {
+        type: "item",
         title: "User",
         value: "user",
         icon: "mdi-account-group-outline",

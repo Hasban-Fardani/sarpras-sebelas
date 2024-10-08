@@ -5,9 +5,10 @@ import { ref } from 'vue';
 const name = ref('')
 const phone = ref('')
 const address = ref('')
+const code = ref('')
 const saveSupplier = () => {
     const supplier = useSupplierStore();
-    supplier.addSupplier({ name: name.value, phone: phone.value, address: address.value });
+    supplier.addSupplier({ name: name.value, phone: phone.value, address: address.value, code: code.value });
 }
 </script>
 <template>

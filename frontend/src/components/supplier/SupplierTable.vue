@@ -19,6 +19,7 @@ const editSupplier = (supplier: Supplier) => {
 const deleteDialogShow = ref(false);
 const selectedDeleteName = ref("");
 const selectedDeleteId = ref(0);
+
 const showDeleteDialog = async (id: number, name: string) => {
 	deleteDialogShow.value = true;
 	selectedDeleteName.value = name;
@@ -74,7 +75,7 @@ const showDeleteDialog = async (id: number, name: string) => {
                 <v-btn 
                   icon="mdi-delete" 
                   color="red" 
-                  @click="showDeleteDialog(item.id, item.name)" 
+                  @click="showDeleteDialog(item.id! , item.name)" 
                 />
             </div>
         </template>

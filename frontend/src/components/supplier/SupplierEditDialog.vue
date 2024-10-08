@@ -10,6 +10,7 @@ const props = defineProps<{
 }>();
 
 const data = ref<Supplier>({
+    code: props.supplierProp?.code || "",
 	id: props.supplierProp?.id || 0,
 	name: props.supplierProp?.name || "",
 	phone: props.supplierProp?.phone || "",
