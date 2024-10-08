@@ -18,6 +18,8 @@ return new class extends Migration
             $table->enum('status', ['diajukan', 'disetujui', 'ditolak', 'draf'])->default('diajukan');
             $table->foreign('employee_id')->references('id')->on('employees')->cascadeOnDelete();
             $table->text('note')->nullable();
+            $table->string('regarding');
+            $table->string('characteristic');
             $table->timestamps();
         });
     }

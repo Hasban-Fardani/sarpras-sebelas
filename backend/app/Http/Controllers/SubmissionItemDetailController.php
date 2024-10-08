@@ -37,8 +37,8 @@ class SubmissionItemDetailController extends Controller
         $this->checkStatus($submission);
 
         $validator = Validator::make($request->all(), [
-            'item_id' => 'required',
-            'qty' => 'required',
+            'item_id' => 'required|integer',
+            'qty' => 'required|integer',
         ]);
 
         if ($validator->fails()) {
@@ -62,10 +62,13 @@ class SubmissionItemDetailController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, SubmissionItem $submission)
+    public function update(Request $request, SubmissionItem $submission, SubmissionItemDetail $detail)
     {
         $this->checkStatus($submission);
 
+        if (!$detail) {
+            abort(404);
+        }
         $validator = Validator::make($request->all(), [
             'item_id' => 'required|integer',
             'qty' => 'required|integer',
@@ -80,7 +83,6 @@ class SubmissionItemDetailController extends Controller
         }
 
         $data = $validator->validated();
-        $detail = $submission->details()->where('item_id', $data['item_id'])->first();
         $detail->update($data);
 
         return response()->json([

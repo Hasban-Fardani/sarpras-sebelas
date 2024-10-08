@@ -67,7 +67,11 @@ class SubmissionItemController extends Controller
 
         // directly create a new array with only the needed keys
         $data = [
-            ...$validatedData,
+            'submission_session_id' => $validatedData['submission_session_id'],
+            'division_id' => $validatedData['division_id'],
+            'code' => $validatedData['code'],
+            'note' => $validatedData['note'],
+            'code' => $validatedData['code'],
             'status' => 'draf',
         ];
 

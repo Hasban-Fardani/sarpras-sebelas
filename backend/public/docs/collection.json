@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel Sarpras API Documentation",
-        "_postman_id": "e23cac6f-716e-4962-a05a-4382c0689792",
+        "_postman_id": "d10f261a-ebc1-459b-aa5f-671205e88fcc",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -241,7 +241,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\",\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"id\":14}}",
+                            "body": "{\"message\":\"success create new category\",\"data\":{\"name\":\"tjq-otb_h\",\"code\":\"consequatur\",\"updated_at\":\"2024-10-08T00:40:29.000000Z\",\"created_at\":\"2024-10-08T00:40:29.000000Z\",\"id\":21}}",
                             "name": ""
                         }
                     ]
@@ -350,7 +350,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\"}}",
+                            "body": "{\"message\":\"success update category\",\"data\":{\"id\":1,\"code\":\"ATK\",\"name\":\"consequatur\",\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-08T00:40:29.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -623,7 +623,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-06T14:50:07.000000Z\",\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"id\":28}}",
+                            "body": "{\"message\":\"success create item\",\"data\":{\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/ef0549e3fc144b928d96f7c84110a62b504cb52bb76b0d3baf726b05cf48d9ab.jpg\",\"name\":\"tjqotbhpzwonwlzospqcs\",\"merk\":\"nssrciatkmatldznkaapj\",\"type\":\"ptdhyldmarwuvlvyfcejz\",\"size\":\"olbxnqyvzmcgyfpncfyst\",\"unit\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"category_id\":1,\"price\":6,\"updated_at\":\"2024-10-08T00:40:29.000000Z\",\"created_at\":\"2024-10-08T00:40:29.000000Z\",\"id\":35}}",
                             "name": ""
                         }
                     ]
@@ -803,7 +803,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/213dd32841c4a01d453e103c090ab67aa0491092bb49befa37821e72256347e6.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\"}}",
+                            "body": "{\"message\":\"success update item\",\"data\":{\"id\":1,\"code\":\"tjqotbhpzwonwlzospqcs\",\"image\":\"images\\\/ef0549e3fc144b928d96f7c84110a62b504cb52bb76b0d3baf726b05cf48d9ab.jpg\",\"name\":\"nssrciatkmatldznkaapj\",\"unit\":\"sewlxtdfjxskykaapbpdx\",\"merk\":\"ptdhyldmarwuvlvyfcejz\",\"type\":\"olbxnqyvzmcgyfpncfyst\",\"size\":\"nonjizoohlpabvwbfbzkw\",\"stock\":6,\"min_stock\":6,\"price\":6,\"category_id\":1,\"created_at\":\"2024-10-06T12:51:43.000000Z\",\"updated_at\":\"2024-10-08T00:40:29.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -955,7 +955,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-c9b6ced\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-06T14:50:07.000000Z\",\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"id\":23}}",
+                            "body": "{\"message\":\"success create incoming item and updated stock\",\"data\":{\"code\":\"IN-f0b52bb\",\"employee_id\":3,\"supplier_id\":6,\"updated_at\":\"2024-10-08T00:40:29.000000Z\",\"created_at\":\"2024-10-08T00:40:29.000000Z\",\"id\":30}}",
                             "name": ""
                         }
                     ]
@@ -1176,7 +1176,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":126,\"incoming_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\"}]}",
+                            "body": "{\"message\":\"success add item in detail\",\"data\":[{\"id\":2,\"incoming_item_id\":1,\"item_id\":4,\"qty\":75,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":15,\"incoming_item_id\":1,\"item_id\":4,\"qty\":72,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":17,\"incoming_item_id\":1,\"item_id\":9,\"qty\":98,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":18,\"incoming_item_id\":1,\"item_id\":4,\"qty\":8,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":29,\"incoming_item_id\":1,\"item_id\":8,\"qty\":76,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":32,\"incoming_item_id\":1,\"item_id\":10,\"qty\":23,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":62,\"incoming_item_id\":1,\"item_id\":8,\"qty\":89,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":72,\"incoming_item_id\":1,\"item_id\":2,\"qty\":66,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":78,\"incoming_item_id\":1,\"item_id\":4,\"qty\":28,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T12:51:55.000000Z\"},{\"id\":140,\"incoming_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-08T00:40:30.000000Z\",\"updated_at\":\"2024-10-08T00:40:30.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1238,7 +1238,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-06T14:50:07.000000Z\"}}",
+                            "body": "{\"message\":\"success update incoming item detail\",\"data\":{\"id\":1,\"incoming_item_id\":4,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T12:51:55.000000Z\",\"updated_at\":\"2024-10-08T00:40:30.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -1396,7 +1396,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add outgoing item and updated stock\",\"data\":{\"code\":\"consequatur\",\"operator_id\":1,\"division_id\":3,\"updated_at\":\"2024-10-06T14:50:07.000000Z\",\"created_at\":\"2024-10-06T14:50:07.000000Z\",\"id\":23}}",
+                            "body": "{\"message\":\"success add outgoing item and updated stock\",\"data\":{\"code\":\"consequatur\",\"operator_id\":1,\"division_id\":3,\"updated_at\":\"2024-10-08T00:40:30.000000Z\",\"created_at\":\"2024-10-08T00:40:30.000000Z\",\"id\":30}}",
                             "name": ""
                         }
                     ]
@@ -1617,7 +1617,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success add outgoing item detail\",\"data\":[{\"id\":17,\"outgoing_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-06T14:50:08.000000Z\",\"updated_at\":\"2024-10-06T14:50:08.000000Z\"}]}",
+                            "body": "{\"message\":\"success add outgoing item detail\",\"data\":[{\"id\":31,\"outgoing_item_id\":1,\"item_id\":6,\"qty\":6,\"created_at\":\"2024-10-08T00:40:30.000000Z\",\"updated_at\":\"2024-10-08T00:40:30.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -1837,7 +1837,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success create submission item\",\"data\":{\"submission_session_id\":3,\"division_id\":6,\"code\":\"consequatur\",\"note\":\"consequatur\",\"status\":\"draf\",\"updated_at\":\"2024-10-06T14:50:08.000000Z\",\"created_at\":\"2024-10-06T14:50:08.000000Z\",\"id\":14}}",
+                            "body": "{\"message\":\"success create submission item\",\"data\":{\"submission_session_id\":3,\"division_id\":6,\"code\":\"consequatur\",\"note\":\"consequatur\",\"status\":\"draf\",\"updated_at\":\"2024-10-08T00:40:30.000000Z\",\"created_at\":\"2024-10-08T00:40:30.000000Z\",\"id\":21}}",
                             "name": ""
                         }
                     ]
@@ -2037,7 +2037,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"consequatur\",\"qty\":\"consequatur\"}"
+                            "raw": "{\"item_id\":6,\"qty\":6}"
                         },
                         "description": ""
                     },
@@ -2057,8 +2057,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `submission_item_details` (`item_id`, `qty`, `qty_acc`, `submission_id`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, 1, 2024-10-06 14:50:08, 2024-10-06 14:50:08))\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success add submission item detail\",\"data\":[{\"id\":17,\"submission_id\":1,\"item_id\":6,\"qty\":6,\"qty_acc\":6,\"created_at\":\"2024-10-08T00:40:30.000000Z\",\"updated_at\":\"2024-10-08T00:40:30.000000Z\"}]}",
                             "name": ""
                         }
                     ]
@@ -2081,7 +2081,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "consequatur",
+                                    "value": "6",
                                     "description": "The ID of the detail."
                                 }
                             ]
@@ -2119,8 +2119,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Call to a member function update() on null\"}",
+                            "code": 404,
+                            "body": "{\"message\":\"Not Found\"}",
                             "name": ""
                         }
                     ]
@@ -2191,7 +2191,7 @@
             "description": "\nAPI endpoints for managing request item",
             "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Display a list of request item.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -2236,7 +2236,7 @@
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Store a new request item.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -2255,7 +2255,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"code\":\"consequatur\",\"items\":[{\"item_id\":6,\"qty\":6}]}"
+                        },
                         "description": ""
                     },
                     "response": [
@@ -2275,7 +2278,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"Method Illuminate\\\\Http\\\\Request::validated does not exist.\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'employee_id' doesn't have a default value (Connection: mysql, SQL: insert into `request_items` (`code`, `status`, `updated_at`, `created_at`) values (consequatur, draf, 2024-10-08 00:40:30, 2024-10-08 00:40:30))\"}",
                             "name": ""
                         }
                     ]
@@ -2327,8 +2330,8 @@
                                     "value": "Origin"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\"message\":\"Call to undefined relationship [user] on model [App\\\\Models\\\\RequestItem].\"}",
+                            "code": 200,
+                            "body": "{\"message\":\"success get submission item\",\"data\":{\"employee\":null,\"details\":[]}}",
                             "name": ""
                         }
                     ]
@@ -2496,7 +2499,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-06 14:50:08, 2024-10-06 14:50:08))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'consequatur' for column 'item_id' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-08 00:40:31, 2024-10-08 00:40:31))\"}",
                             "name": ""
                         }
                     ]
@@ -2679,7 +2682,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$GCFYJe4VeuttjyU40BMQlOME.r\\\/NqMeODhkIOzw0jclKAOTnrgDNi, unit, consequatur, 2024-10-06 14:50:09, 2024-10-06 14:50:09))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`password`, `role`, `username`, `updated_at`, `created_at`) values ($2y$12$EzVwTG8qHSfhCq4Bij3GB.HUUne.Bl.aNmJVKAoD.6YqVVu2AQIQe, unit, consequatur, 2024-10-08 00:40:31, 2024-10-08 00:40:31))\"}",
                             "name": ""
                         }
                     ]
@@ -2825,7 +2828,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-06 14:50:09, 2024-10-06 14:50:09))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'nip' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`name`, `position`, `phone`, `email`, `updated_at`, `created_at`) values (consequatur, consequatur, consequatur, joy.schultz@example.org, 2024-10-08 00:40:31, 2024-10-08 00:40:31))\"}",
                             "name": ""
                         }
                     ]
@@ -2934,7 +2937,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-06T14:50:09.000000Z\"}}",
+                            "body": "{\"message\":\"success update employee\",\"data\":{\"id\":1,\"nip\":\"tjqotbhpzwonwlzospqcs\",\"name\":\"consequatur\",\"position\":\"consequatur\",\"phone\":\"consequatur\",\"email\":\"joy.schultz@example.org\",\"email_verified_at\":null,\"created_at\":null,\"updated_at\":\"2024-10-08T00:40:31.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -3065,7 +3068,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"id\":\"nssrciatkmatldznkaapj\",\"username\":\"ptdhyldmarwuvlvyfcejz\",\"email\":\"maude81@example.net\",\"password\":\"#L*qCceF0t7nA\",\"role\":\"unit\"}"
+                            "raw": "{\"name\":\"tjqotbhpzwonwlzospqcs\",\"id\":\"nssrciatkmatldznkaapj\",\"username\":\"ptdhyldmarwuvlvyfcejz\",\"email\":\"maude81@example.net\",\"password\":\"#L*qCceF0t7nA\",\"role\":\"pengawas\"}"
                         },
                         "description": ""
                     },
@@ -3347,7 +3350,7 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-06 14:50:08, 2024-10-06 14:50:08))\"}",
+                            "body": "{\"message\":\"SQLSTATE[HY000]: General error: 1364 Field 'code' doesn't have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-08 00:40:31, 2024-10-08 00:40:31))\"}",
                             "name": ""
                         }
                     ]
@@ -3697,7 +3700,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IlEreWQrcVk5RjJ5b3dXbkh4NFlNL0E9PSIsInZhbHVlIjoiaUoyeXlCMkhlR1UxcUxGOEMrMkhrN0lIREtXS3dDRjcrcUN5Ny9GOU80Q05JaER3VUVJdFB5YUJ2cTVMRWh1M0ZCODJJOFpsMmxpVUJJZ25KTjBreWhJS1lYVXUvK1dlNDIrZnQ4bTNWdG45V214bWV4djRSSE5uZU1YYUQrU1MiLCJtYWMiOiI4ZWViNGJhYmQzN2U4Yjc4NDE1MThkMTk2YWY1Nzg5MDFkZTE5NjUyMGNiOTM5ZjI3ZmJhNjI2Zjk2ZTc4YTkwIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:50:07 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IlI4OUNPN3Vuc0lHZlVaRHo5WTBOd0E9PSIsInZhbHVlIjoic3FFU25heUFzNTFrdTZ2dElla3AxU05ZeFMxdTZhQUwyZmExOXU1VlVzUitBTHQ1ampzWHlWM0MzOVFlZXF6RXBxUlNKSmdtV1UrRVE0bzdPaHpPZ2hlWWhWTEVjRWZvbXFvOUg5VjYyWlRaNDRPcVVWaTVlZ3dNS0dHNGNKOE4iLCJtYWMiOiJhNGYyOGE1Y2NkMTAxZDQyMzE2ZjZlMWE0ZDMwOTA3YTdiMjZlNWQ1YzU4MDBjZTU4MmJjOTNlOTM3ZTc1NzkyIiwidGFnIjoiIn0%3D; expires=Sun, 06 Oct 2024 16:50:07 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; 41JyewJF3dstRlYegO82ZUIiIp8rH6as3JaVmM8Z=eyJpdiI6IlBxWFFsaDR6SFpKWHJWOHRQSkNpZ2c9PSIsInZhbHVlIjoiQkx6WEEwbDRHZXdIenFBbk5kQmh1aWVad1pVbHVZNnZLQmVtWk1zQnlid09DTXR1UmYyMEt6UUdkTDJTZnJSbHplTHNpYXA1bFhPY09xV2NqNFIxaHNSdDEvTStyOUZBYStuK2dObmpNN2I2cEJtcFdtUEx0Ti9vU2toaXJVb1cvdUJIZGxUbkVXazBnZGQySGZlbjZWMSs2enM4OWVaam9SUHlrdEkrOUhWN3pVRElqWlRpYUtBZmFmRjZBcFAyTkpJVjFITVNSMFE5bmFPcER0cGlReGo5d255Z0c3eFNOQUVhSFU4Z0tlVnBOSExVM0FOUmtQV0ZGUnFTWkZIZ0ZlcDlxL1g5UGh2cURBNUYvemdvb0tSanZ6MjJwVHVZY3Y0M3h5clVsVE51OUlsdVdwdkU1c1l6K0F4MFplb21zTXpGMldlZTZSK25SanNXNTlKSHdlOU1id3RFdTA0N0x6MUtybjc2NERUYlpZaVdDRUZ5a240SitueHQ1QW9ZSTlYUFRIWTU3eVNvRzdOOHprUSs1Zz09IiwibWFjIjoiYWYwMGI3ZmM3MDFlZjVmMjVkNTZjYTMyN2RhYmQwNmE1MzZjYjdlN2M5ZTM0Y2JjMzQ4NmU0M2EzYjU4Zjk4MCIsInRhZyI6IiJ9; expires=Sun, 06 Oct 2024 16:50:07 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6ImNGN1JsQ201dFdPSnlXUFhkNWhYZmc9PSIsInZhbHVlIjoiUDE2SnBnTU45T2tFN0Irb1Y5ZkJ5N0o3YUg3ZUExeFJUaUNObzQvdFBQRURnZ3dBSE1OMDB2d1dsM1lHSWNSNVBRa1d3ZDFPWmwwTXkxVkx1blo0d0c4RUVzb08weUJsK2hiMXhZME5oc3pBUVhpSExUYXR4YjVYaDBFTzFZOTYiLCJtYWMiOiJhZmNhNjhkOTA0N2UyZmViMTUzMTNmNjJhMWY2NmVhMDU4ZjdmNjgxMDNjNzdmN2QxMTA1ZTE4Njc5NjViMGVhIiwidGFnIjoiIn0%3D; expires=Tue, 08 Oct 2024 02:40:29 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InNkOVMraHAwYW5HVVg0WDdHMklZVFE9PSIsInZhbHVlIjoidHlSRzdibzIwRE0wY2h3dmI4dEVvY1RKcVZoVHk4a3RzQWs3Z2xMQXhZUjJIQW10UUViakxKQmM5NkVRVWFOZEZ5R0pWbDhOUWtySHVISERJQXBxb1NPZTMwaFZkWjBheDhHZnZMMUt3ZXNyNks4c1pFTmdZS215OWNURWxSUmIiLCJtYWMiOiJkZmE4ZTMxMWUzNzkwZDY5MTI4ZTIwOGNiMTI2NjQ5NzhlZjdmOTVlZWZiZGI2ZGZmYmI4ZjRiMjU2NmQxMDgyIiwidGFnIjoiIn0%3D; expires=Tue, 08 Oct 2024 02:40:29 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; xb59v1OFcos4goQUCR3D3uuAcHofST8gYpKFgr8W=eyJpdiI6Iko2QW02T1VxRldPNVZDZmovNzdwU2c9PSIsInZhbHVlIjoiOHk0RHUxc3diM2RNTkZLL1NqU09DZkVKMm14NHFtOHBreVErcnpuejJZaHBqMU93Z0tKOGM5S2NwOGRxY0hhSXBFWlRVdUE2eFpuVk1CR042ZUNUSzNzaEcwSTBwKzlKVkJBSTRDQ3lyZ2tJeHp3T1JiTmpwUmFvK1gyendaRWRhVERVNjd2OHFOVTkzcENaU3U5c0RLTDFWU1praTVpMk0rRFpITjhMR0k5REl3Zi9iNzBpQWhpZGRYeUJxekROTmtmNzN2MVFOaTBCTVBFZ253VFRKVDlqRlpKVk1SSlFBVS9UYkZTaURaWXJzVjlUSnJ1VDQ0MzQ3dFpxT2txTlFBcUxoSFFKVlN5TTI0S3dLQmI3UFFsT0dRUUhzdlN4QUtSNXNqQmIyZHdhZmZ3SUExbC9UMGt3Y3VIVkVHUGJCZ3JPNUZ2dzR1eFlIRWNTU29LMlk5QmduZFkvZ1BXZWQ5QWczaTFSUHVreC9iQ01nNEd1VXQ4c0tiMEtsUVpIVVdtcTZwS0x6K1dTdkVFY1lGN3JNdz09IiwibWFjIjoiY2YxOGQ4NWE0MzRjMDUzMDg1YjJhMWFkZmEwMDRkODlmYzY5Njg3YzE4ODQ2ZmMzZjJlNGM1M2JjNmY5OWMyYSIsInRhZyI6IiJ9; expires=Tue, 08 Oct 2024 02:40:29 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,

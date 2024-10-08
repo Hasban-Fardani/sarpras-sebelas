@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RequestItemRequest;
 use App\Models\Employee;
 use App\Models\RequestItem;
 use Illuminate\Http\Request;
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Validator;
 class RequestItemController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a list of request item.
      */
     public function index(Request $request)
     {
@@ -48,19 +49,25 @@ class RequestItemController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a new request item.
      */
-    public function store(Request $request)
+    public function store(RequestItemRequest $request)
     {
         $validatedData = $request->validated();
 
         $userNIP = auth()->user()->id;
         $employeeID = Employee::where('id', $userNIP)->first()->id;
         
+        if (!array_key_exists('code', $validatedData)) {
+            $hashes = 'REQ-' . hash('sha256', now());
+            $validatedData['code'] = substr($hashes, 0, 10);
+        }
+
         // directly create a new array with only the needed keys
         $data = [
             'user_id' => $employeeID,
-            'total_items' => count($validatedData['items']),
+            'code' => $validatedData['code'],
+            'status' => 'draf',
         ];
 
         // create request item
@@ -90,7 +97,7 @@ class RequestItemController extends Controller
     {
         return response()->json([
             'message' => 'success get submission item',
-            'data' => $request->load(['user:id,name', 'details'])
+            'data' => $request->load(['employee:id,name', 'details'])
         ]);
     }
 

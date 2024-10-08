@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Employee::class, 'nip', 'nip');
     }
+
+    public function getNameAttribute()
+    {
+        return $this->employee->name;
+    }
 }

@@ -13,6 +13,11 @@
             @endforeach
         </ul>
     @endif
+
+    @if (session()->has('error'))
+        <p>{{ session('error') }}</p>
+    @endif
+
     @auth
         <h1>You are logged in</h1>
         <form action="{{ route('web.logout')}}" method="post">

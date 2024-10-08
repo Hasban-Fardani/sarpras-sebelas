@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('division_id');
             $table->unsignedBigInteger('submission_session_id');
             $table->enum('status', ['diajukan', 'disetujui', 'ditolak', 'draf'])->default('diajukan');
+            $table->string('regarding');
             $table->text('note')->nullable();
 
             $table->foreign('division_id')->references('id')->on('employees')->cascadeOnDelete();

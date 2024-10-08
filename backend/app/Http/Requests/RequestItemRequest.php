@@ -22,6 +22,7 @@ class RequestItemRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'code' => 'nullable|string',
             'items' => 'required|array',
             'items.*.item_id' => 'required|integer',
             'items.*.qty' => 'required|integer',

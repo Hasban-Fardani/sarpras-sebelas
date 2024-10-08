@@ -24,10 +24,9 @@ class AuthWebController extends Controller
             return redirect()->back()->withErrors($validator->errors())->withInput();
         }
 
-        // dd(Hash::make($validator->validated()['password']), User::where('nip', $validator->validated()['nip'])->first());
         if (!Auth::attempt($validator->validated()))
         {
-            return redirect()->back()->with('errors', ['wrong username or password']);
+            return redirect()->back()->with('error', 'wrong username or password');
         }
 
         return redirect()->route('telescope');

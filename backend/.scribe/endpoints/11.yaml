@@ -14,7 +14,7 @@ endpoints:
         API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the resource.'
+      title: 'Display a list of request item.'
       description: ''
       authenticated: true
       custom: []
@@ -59,7 +59,7 @@ endpoints:
         API endpoints for managing request item
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: 'Store a new request item.'
       description: ''
       authenticated: true
       custom: []
@@ -71,13 +71,55 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      code:
+        name: code
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      items:
+        name: items
+        description: ''
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].item_id':
+        name: 'items[].item_id'
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].qty':
+        name: 'items[].qty'
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      code: consequatur
+      items:
+        -
+          item_id: 6
+          qty: 6
     fileParameters: []
     responses:
       -
         status: 500
-        content: '{"message":"Method Illuminate\\Http\\Request::validated does not exist."}'
+        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''employee_id'' doesn''t have a default value (Connection: mysql, SQL: insert into `request_items` (`code`, `status`, `updated_at`, `created_at`) values (consequatur, draf, 2024-10-08 00:40:30, 2024-10-08 00:40:30))"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -131,8 +173,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"Call to undefined relationship [user] on model [App\\Models\\RequestItem]."}'
+        status: 200
+        content: '{"message":"success get submission item","data":{"employee":null,"details":[]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

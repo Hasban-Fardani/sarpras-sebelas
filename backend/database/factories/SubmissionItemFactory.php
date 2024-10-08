@@ -20,6 +20,7 @@ class SubmissionItemFactory extends Factory
             'code' => 'SI' . $this->faker->unique()->numberBetween(1000, 9999),
             'division_id' => $this->faker->numberBetween(1, 5),
             'status' => $this->faker->randomElement(['diajukan', 'disetujui', 'ditolak', 'draf']),
+            'regarding' => $this->faker->sentence(),
             'note' => $this->faker->sentence(),
             'submission_session_id' => $this->faker->numberBetween(1, 3)
         ];
