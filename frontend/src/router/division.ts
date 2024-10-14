@@ -1,5 +1,5 @@
 
-// Admin routes
+// Division
 
 import type { RouteRecordRaw } from "vue-router";
 

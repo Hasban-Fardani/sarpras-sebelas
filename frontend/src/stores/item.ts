@@ -55,6 +55,7 @@ export const useItemStore = defineStore('item', () => {
       }
     })
 
+    console.log(data.data)
     items.value = data.data
     total.value = data.total
   }

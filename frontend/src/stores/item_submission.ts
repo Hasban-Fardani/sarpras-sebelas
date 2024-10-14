@@ -20,7 +20,7 @@ export const useItemSubmissionStore = defineStore('item-submission', () => {
   const headers = [
     {
       title: 'Unit Kerja',
-      key: 'employee.name'
+      key: 'division.name'
     },
     {
       title: 'Jumlah',

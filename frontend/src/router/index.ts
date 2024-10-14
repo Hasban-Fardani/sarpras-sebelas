@@ -1,7 +1,8 @@
-import { useUserStore } from '@/stores/user'
 import { createRouter, createWebHistory } from 'vue-router'
 import { adminRoutes } from './admin'
 import { divisionRoutes } from './division'
+import { defineMiddleware } from './middleware'
+import { supervisorRoutes } from './supervisor'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,7 @@ const router = createRouter({
 
     ...adminRoutes,
     ...divisionRoutes,
+    ...supervisorRoutes,
 
     // === Exceptions ===
     {
@@ -56,35 +58,7 @@ const router = createRouter({
   ]
 })
 
-// Login middleware
-router.beforeEach(async (to, _, next) => {
-  const user = useUserStore()
-  await user.load()
-
-  const isLogin = await user.checkLogin();
-
-  if (to.meta.auth && !isLogin) {
-    return next({ path: '/auth/login' })
-  }
-
-  // if already logged in, redirect to dashboard/home
-  if (to.name === 'login' && isLogin) {
-    switch (user.data.role) {
-      case 'admin':
-          return next({ path: '/admin/dashboard' })
-      case 'unit':
-          return next({ path: '/user/home' })
-      case 'pengawas':
-          return next({ path: '/admin/dashboard' })
-      }
-  }
-
-  if (to.meta.role && to.meta.role !== user.data.role) {
-    return next({ name: 'forbidden' })
-  }
-
-  return next()
-})
+defineMiddleware(router)
 
 router.onError((err) => {
   console.log(err)

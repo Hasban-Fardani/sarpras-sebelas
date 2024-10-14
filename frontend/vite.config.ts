@@ -7,7 +7,10 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   server: {
-    cors: false
+    watch: {
+      usePolling: true,
+      interval: 100
+    }
   },
   resolve: {
     alias: {

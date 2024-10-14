@@ -3,6 +3,7 @@ import router from '@/router';
 import { useUserStore } from '@/stores/user';
 import type { Credentials } from '@/types/credential';
 import { ref } from 'vue';
+import { VSonner, toast } from 'vuetify-sonner';
 
 const alertMessage = ref('')
 const showAlert = ref(false)
@@ -15,8 +16,8 @@ const data = ref<Credentials>({
 const rules = {
     nip: [
         (v: string) => {
-            if (v.length >= 4) return true
-            return 'NIP minimal 4 karakter'
+            if (v.length >= 12) return true
+            return 'NIP minimal 12 karakter'
         }
     ],
     password: [
@@ -33,6 +34,7 @@ const login = async () => {
     onLoading.value = true
     const message = await user.login(data.value)
     onLoading.value = false
+    toast(message, {duration: 2000})
     if (message === 'login success') {
         console.log('sini', user.data);
 
@@ -53,17 +55,10 @@ const login = async () => {
                 return;
         }
     }
-    // show and hide alert
-    showAlert.value = true
-    alertMessage.value = message
-    setTimeout(() => {
-        alertMessage.value = ''
-        showAlert.value = false
-    }, 3000)
 }
 </script>
 <template>
-    <v-alert :text="alertMessage" v-model="showAlert" transition="slide-y-transition" type="error" closable ></v-alert>
+    <v-sonner expand position="top-center"/>
     <div class="w-100 d-flex justify-center align-center h-screen base">
         <div class="w-100 w-md-50 d-flex flex-column justify-center align-center">
             <img src="/logo/icon.svg" width="100" alt="logo sarpras">

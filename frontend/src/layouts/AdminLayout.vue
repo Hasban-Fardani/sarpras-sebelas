@@ -4,6 +4,7 @@ import { useUserStore } from "@/stores/user";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { useDisplay } from "vuetify";
+import { VSonner } from "vuetify-sonner";
 
 const display = useDisplay();
 const drawer = ref(!display.mobile.value);
@@ -31,7 +32,7 @@ const toggle = () => {
 const logout = async () => {
 	router.push("/auth/login");
 
-  await user.logout();
+	await user.logout();
 	await user.clear();
 
 	location.reload();
@@ -54,13 +55,20 @@ const links: Link[] = [
 		to: "/admin/dashboard",
 	},
 	{
+		type: "group",
+		title: "Laporan",
+		icon: "mdi-home-analytics",
+		sublinks: [
+		],
+	},
+	{
 		type: "divider",
 		title: "",
 		icon: "",
 	},
 	{
 		type: "group",
-		title: "Pengelolaan Barang",
+		title: "Kelola Barang",
 		icon: "mdi-view-list",
 		sublinks: [
 			{
@@ -71,23 +79,10 @@ const links: Link[] = [
 			},
 			{
 				type: "item",
-				title: "Supplier",
-				icon: "mdi-truck-delivery",
-				to: "/admin/supplier",
-			},
-			{
-				type: "item",
 				title: "Barang",
 				icon: "mdi-view-list",
 				to: "/admin/items",
 			},
-		],
-	},
-	{
-		type: "group",
-		title: "Barang keluar/masuk",
-		icon: "mdi-view-list-outline",
-		sublinks: [
 			{
 				type: "item",
 				title: "Barang Masuk",
@@ -97,34 +92,34 @@ const links: Link[] = [
 			{
 				type: "item",
 				title: "Barang Keluar",
-				icon: "mdi-logout",
+				icon: "mdi-arrow-up-bold-outline",
 				to: "/admin/barang-keluar",
 			},
 		],
 	},
 	{
 		type: "group",
-		title: "Pengajuan",
+		title: "Kelola Pegajuan",
 		icon: "mdi-file-document-edit-outline",
 		sublinks: [
 			{
 				type: "item",
 				title: "Permintaan",
-				icon: "mdi-clipboard-text-outline",
+				icon: "mdi-format-list-checks",
 				to: "/admin/permintaan",
 			},
 			{
 				type: "item",
 				title: "Pengadaan",
-				icon: "mdi-file-document-edit-outline",
+				icon: "mdi-basket-plus-outline",
 				to: "/admin/pengadaan",
 			},
 		],
 	},
 	{
 		type: "group",
-		title: "Manage User",
-		icon: "mdi-account-group-outline",
+		title: "Kelola Akun",
+		icon: "mdi-account-box-multiple",
 		sublinks: [
 			{
 				type: "item",
@@ -132,6 +127,12 @@ const links: Link[] = [
 				value: "user",
 				icon: "mdi-account-group-outline",
 				to: "/admin/users",
+			},
+			{
+				type: "item",
+				title: "Supplier",
+				icon: "mdi-truck-delivery",
+				to: "/admin/supplier",
 			},
 		],
 	},
@@ -227,6 +228,7 @@ const links: Link[] = [
         </template>
       </v-breadcrumbs>
       <div class="px-4 bg-base h-100">
+				<v-sonner expand position="top-center"/>
         <slot />
       </div>
     </v-main>

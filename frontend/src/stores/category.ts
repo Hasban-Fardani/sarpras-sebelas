@@ -6,6 +6,7 @@ import { ref } from 'vue'
 import { useUserStore } from './user'
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+const PAUSE_BEFORE_LOAD = import.meta.env.VITE_PAUSE_BEFORE_LOAD ?? 500
 
 export const useCategoryStore = defineStore('category', () => {
   const onUpdate = ref(false)
@@ -50,7 +51,7 @@ export const useCategoryStore = defineStore('category', () => {
       setTimeout(async () => {
         await getAll()
         onUpdate.value = false
-      }, 1000)
+      }, PAUSE_BEFORE_LOAD)
     }
   }
 

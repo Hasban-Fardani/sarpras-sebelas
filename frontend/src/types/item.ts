@@ -3,7 +3,7 @@ import type { Category } from './category'
 type Item = {
   id: number
   code: string
-  image?: string | File
+  image?: string
   name: string
   unit: string
   merk: string

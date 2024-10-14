@@ -2,7 +2,7 @@
 import DeleteDialog from '@/components/dialogs/DeleteDialog.vue';
 import { useItemSubmissionStore } from '@/stores/item_submission';
 import { useUserStore } from '@/stores/user';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import DateRangePicker from '../DateRangePicker.vue';
 
 
