@@ -29,6 +29,7 @@ class ItemImport implements ToModel, WithHeadingRow, WithChunkReading, ShouldQue
      */
     public function model(array $row)
     {
+        // akan create category baru jika belum ada di database dan mengambil id atau codeya
         $category_id = null;
         $category = Category::where('name', strtolower($row['kategori']))->first();
         if (!$category) {
@@ -37,6 +38,7 @@ class ItemImport implements ToModel, WithHeadingRow, WithChunkReading, ShouldQue
             $category_id = $category->id;
         }
 
+        // Note: sesuaikan dengan kolom masing masing
         return new Item([
             'name' => $row['nama'],
             'merk' => $row['merek'],
