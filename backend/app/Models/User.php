@@ -56,4 +56,22 @@ class User extends Authenticatable
     {
         return $this->employee->name;
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($user) {
+            if (!isset($user->username))
+            {
+                $user->username = trim($user->name);
+            }
+
+            if ($user->role == 'admin')
+            {
+                // decline when creating admin
+                abort(403);
+            }
+        });
+    }
 }

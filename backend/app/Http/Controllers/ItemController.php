@@ -86,7 +86,7 @@ class ItemController extends Controller
 
     /**
      * Update the specified item in storage.
-     * 
+     *
      * @bodyParam category_id integer required The category id. Example: 1
      */
     public function update(ItemUpdateRequest $request, Item $item)
