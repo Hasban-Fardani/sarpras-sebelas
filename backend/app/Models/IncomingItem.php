@@ -20,7 +20,7 @@ class IncomingItem extends Model
         return $this->hasMany(IncomingItemDetail::class);
     }
 
-    public function employee()
+    public function operator()
     {
         return $this->belongsTo(Employee::class);
     }

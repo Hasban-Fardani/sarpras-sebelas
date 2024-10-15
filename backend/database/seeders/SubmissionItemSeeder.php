@@ -17,6 +17,7 @@ class SubmissionItemSeeder extends Seeder
             'code' => 'IN-001',
             'division_id' => 4,
             'status' => 'diajukan',
+            'regarding' => 'biasa',
             'submission_session_id' => 1
         ]);
 
@@ -24,6 +25,7 @@ class SubmissionItemSeeder extends Seeder
             'code' => 'IN-002',
             'division_id' => 5,
             'status' => 'draf',
+            'regarding' => 'biasa',
             'submission_session_id' => 1
         ]);
 
@@ -31,6 +33,7 @@ class SubmissionItemSeeder extends Seeder
             'code' => 'IN-003',
             'division_id' => 4,
             'status' => 'disetujui',
+            'regarding' => 'biasa',
             'submission_session_id' => 1
         ]);
         
@@ -38,6 +41,7 @@ class SubmissionItemSeeder extends Seeder
             'code' => 'IN-004',
             'division_id' => 5,
             'status' => 'ditolak',
+            'regarding' => 'biasa',
             'submission_session_id' => 2
         ]);
         
@@ -45,6 +49,7 @@ class SubmissionItemSeeder extends Seeder
             'code' => 'IN-005',
             'division_id' => 5,
             'status' => 'diajukan',
+            'regarding' => 'biasa',
             'submission_session_id' => 2
         ]);
         
@@ -52,6 +57,7 @@ class SubmissionItemSeeder extends Seeder
             'code' => 'IN-006',
             'division_id' => 5,
             'status' => 'disetujui',
+            'regarding' => 'biasa',
             'submission_session_id' => 2
         ]);
 

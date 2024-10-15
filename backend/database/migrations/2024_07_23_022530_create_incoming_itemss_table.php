@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('incoming_items', function (Blueprint $table) {
             $table->id();
             $table->string('code')->unique();
-            $table->unsignedBigInteger('employee_id');
+            $table->unsignedBigInteger('operator_id');
             $table->unsignedBigInteger('supplier_id');
             $table->text('note')->nullable();
             $table->integer('total_items')->default(0);
 
-            $table->foreign('employee_id')->references('id')->on('employees');
+            $table->foreign('operator_id')->references('id')->on('employees');
             $table->foreign('supplier_id')->references('id')->on('suppliers');
             $table->timestamps();
         });

@@ -15,4 +15,17 @@ class Category extends Model
     {
         return $this->hasMany(Item::class);
     }
+
+    protected static function boot()
+    {
+        static::creating(function ($category) {
+            if (!isset($category->code)) {
+                $category->code = 'C-' . hash('sha256', now() . $category->name);
+            }
+            
+            return $category;
+        });
+
+        parent::boot();
+    }
 }

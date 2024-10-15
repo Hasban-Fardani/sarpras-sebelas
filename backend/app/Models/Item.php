@@ -21,7 +21,7 @@ class Item extends Model
     {
         return $this->stock >= $amount;
     }
-    
+
     public function getRouteKeyName()
     {
         return 'id';
@@ -53,5 +53,22 @@ class Item extends Model
         $query->when($request->category_id, function ($query) use ($request) {
             $query->where('category_id', $request->category_id);
         });
+    }
+
+    protected static function boot()
+    {
+        static::creating(function ($item) {
+            if (!isset($item->code)) {
+                $item->code = 'I-' . substr(hash('sha256', now() . $item->name), 0, 7);
+            }
+
+            if (!isset($item->image)) {
+                $item->image = 'images/default.png';
+            }
+
+            return $item;
+        });
+
+        parent::boot();
     }
 }

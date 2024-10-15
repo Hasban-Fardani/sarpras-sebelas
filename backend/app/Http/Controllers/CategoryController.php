@@ -51,8 +51,7 @@ class CategoryController extends Controller
     {
         // validate name, ensure its unique
         $validator = Validator::make($request->all(), [
-            'name' => 'required|unique:categories,name|alpha_dash',
-            'code' => 'required|unique:categories,code',
+            'name' => 'required|unique:categories,name',
         ]);
 
         // check if validation fails

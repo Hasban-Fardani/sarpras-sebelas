@@ -55,17 +55,12 @@ class ItemController extends Controller
 
     /**
      * Store a newly item in storage.
-     * 
+     *
      * @bodyParam category_id integer required The category id. Example: 1
      */
     public function store(ItemStoreRequest $request)
     {
         $data = $request->validated();
-
-        if ($data['code'] == null) {
-            $hashes = 'I-' . hash('sha256', now() . $data['name']);
-            $data['code'] = substr($hashes, 0, 10);
-        }
 
         $path = FileService::store($request->file('image'));
 

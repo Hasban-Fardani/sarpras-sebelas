@@ -25,14 +25,12 @@ class IncomingItemController extends Controller
         $perPage = $request->input('per_page', 10);
 
         // get all item-ins
-        $data = IncomingItem::with(['employee:id,name', 'supplier:id,name']);
+        $data = IncomingItem::with(['operator:id,name', 'supplier:id,name']);
 
-        // search by employee name
+        // search by operator name
         $data->when($request->search, function ($data) use ($request) {
-            $data->where(function ($query) use ($request) {
-                $query->whereHas('employee', function ($query) use ($request) {
-                    $query->where('name', 'like', '%' . $request->search . '%');
-                });
+            $data->whereHas('operator', function ($query) use ($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
             });
         });
 
@@ -60,7 +58,7 @@ class IncomingItemController extends Controller
 
         $userNIP = Auth::user()->nip;
         $employeeID = Employee::where('nip', $userNIP)->first()->id;
-        
+
         if (!array_key_exists('code', $validatedData)) {
             $hashes = 'IN-' . hash('sha256', now());
             $validatedData['code'] = substr($hashes, 0, 10);
@@ -69,7 +67,7 @@ class IncomingItemController extends Controller
         // directly create a new array with only the needed keys
         $data = [
             'code' => $validatedData['code'],
-            'employee_id' => $employeeID,
+            'operator_id' => $employeeID,
             'supplier_id' => $validatedData['supplier_id'],
         ];
 
@@ -80,7 +78,7 @@ class IncomingItemController extends Controller
         $item_ids = array_column($validatedData['items'], 'item_id');
         $qtys = array_column($validatedData['items'], 'qty');
         // get last item stock
-        
+
         // Create the SQL query dynamically
         $sql = "UPDATE items SET stock = stock + ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
 
@@ -112,7 +110,7 @@ class IncomingItemController extends Controller
         // update stock
         $item_ids = array_column($incomingItem->details->toArray(), 'item_id');
         $qtys = array_column($incomingItem->details->toArray(), 'qty');
-        
+
         // Create the SQL query dynamically
         $sql = "UPDATE items SET stock = stock - ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
 

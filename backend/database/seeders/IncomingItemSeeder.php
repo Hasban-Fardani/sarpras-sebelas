@@ -15,35 +15,35 @@ class IncomingItemSeeder extends Seeder
     {
         IncomingItem::create([
             'code' => 'INV-001',
-            'employee_id' => 1,
+            'operator_id' => 3,
             'supplier_id' => 1,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
 
         IncomingItem::create([
             'code' => 'INV-002',
-            'employee_id' => 1,
+            'operator_id' => 3,
             'supplier_id' => 2,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
 
         IncomingItem::create([
             'code' => 'INV-003',
-            'employee_id' => 1,
+            'operator_id' => 3,
             'supplier_id' => 3,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
 
         IncomingItem::create([
             'code' => 'INV-004',
-            'employee_id' => 1,
+            'operator_id' => 3,
             'supplier_id' => 4,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);
 
         IncomingItem::create([
             'code' => 'INV-005',
-            'employee_id' => 1,
+            'operator_id' => 3,
             'supplier_id' => 5,
             'note' => 'Barang masuk untuk keperluan testing'
         ]);

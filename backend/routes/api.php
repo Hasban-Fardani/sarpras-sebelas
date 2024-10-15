@@ -16,6 +16,8 @@ use App\Http\Controllers\SubmissionItemController;
 use App\Http\Controllers\SubmissionItemDetailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\ImportItemController;
+use App\Http\Controllers\SubmissionCartController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,7 +25,8 @@ Route::get('/', function () {
 });
 
 Route::prefix('/auth')->group(function () {
-    Route::post('/login', LoginController::class);
+    Route::post('/login', LoginController::class)
+        ->middleware('throttle:5,5');  # 5 attempts in 5 minute
     Route::middleware('auth:sanctum')->group(function () {
         Route::get('/user', LoginCheckController::class);
         Route::post('/logout', LogoutController::class);
@@ -39,7 +42,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Item Management
     Route::apiResource('category', CategoryController::class);
-
+    Route::post('item/import', ImportItemController::class);
     Route::apiResource('item', ItemController::class);
 
 
@@ -64,6 +67,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('request-item.detail', RequestItemDetailController::class)
         ->except('show')
         ->parameter('detail', 'requestItemDetail');
+    
+    Route::apiResource('submission-cart', SubmissionCartController::class);
 
     Route::prefix('admin')->middleware('can:admin')->group(function () {
         Route::apiResource('supplier', Admin\SupplierController::class);

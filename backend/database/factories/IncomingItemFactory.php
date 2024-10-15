@@ -18,7 +18,7 @@ class IncomingItemFactory extends Factory
     {
         return [
             'code' => 'INV-' . $this->faker->unique()->numberBetween(1000, 9999),
-            'employee_id' => 1,
+            'operator_id' => 3,
             'supplier_id' => $this->faker->numberBetween(1, 10),
         ];
     }

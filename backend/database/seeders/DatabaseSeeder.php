@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             SubmissionSessionSeeder::class,
             SubmissionItemSeeder::class,
             RequestItemSeeder::class,
+            SubmissionCartSeeder::class,
         ]);
     }
 }

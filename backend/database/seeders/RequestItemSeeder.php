@@ -16,30 +16,40 @@ class RequestItemSeeder extends Seeder
         RequestItem::create([
             'code' => 'RQ-001',
             'employee_id' => 4,
+            'regarding' => 'test',
+            'characteristic' => 'tesssss',
             'status' => 'diajukan',
         ]);
 
         RequestItem::create([
             'code' => 'RQ-002',
             'employee_id' => 5,
+            'regarding' => 'test',
+            'characteristic' => 'tesssss',
             'status' => 'draf',
         ]);
 
         RequestItem::create([
             'code' => 'RQ-003',
             'employee_id' => 4,
+            'regarding' => 'test',
+            'characteristic' => 'tesssss',
             'status' => 'disetujui',
         ]);
 
         RequestItem::create([
             'code' => 'RQ-004',
             'employee_id' => 5,
+            'regarding' => 'test',
+            'characteristic' => 'tesssss',
             'status' => 'diajukan',
         ]);
 
         RequestItem::create([
             'code' => 'RQ-005',
             'employee_id' => 4,
+            'regarding' => 'test',
+            'characteristic' => 'tesssss',
             'status' => 'disetujui',
         ]);
 
