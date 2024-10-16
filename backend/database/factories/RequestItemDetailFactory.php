@@ -19,6 +19,7 @@ class RequestItemDetailFactory extends Factory
         return [
             'qty' => $this->faker->numberBetween(1, 100),
             'qty_acc' => $this->faker->numberBetween(1, 100),
+            'item_id' => $this->faker->numberBetween(1, 5),
             'request_id' => $this->faker->numberBetween(1, 20),
         ];
     }

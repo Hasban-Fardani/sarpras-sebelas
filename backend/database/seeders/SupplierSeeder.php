@@ -49,5 +49,12 @@ class SupplierSeeder extends Seeder
         ]);
 
         Supplier::factory(5)->create();
+
+        Supplier::create([
+            'code' => 'S666',
+            'name' => 'Supplier sengaja buat dihapus',
+            'address' => 'Address',
+            'phone' => '0812345672389',
+        ]);
     }
 }

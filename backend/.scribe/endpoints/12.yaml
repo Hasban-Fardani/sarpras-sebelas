@@ -53,7 +53,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -94,30 +94,30 @@ endpoints:
     bodyParameters:
       item_id:
         name: item_id
-        description: ''
-        required: true
-        example: consequatur
-        type: string
+        description: required.
+        required: false
+        example: 1
+        type: integer
         enumValues: []
-        exampleWasSpecified: false
+        exampleWasSpecified: true
         custom: []
       qty:
         name: qty
         description: ''
         required: true
-        example: consequatur
-        type: string
+        example: 6
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: consequatur
-      qty: consequatur
+      item_id: 1
+      qty: 6
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1366 Incorrect integer value: ''consequatur'' for column ''item_id'' at row 1 (Connection: mysql, SQL: insert into `request_item_details` (`item_id`, `qty`, `request_item_id`, `qty_acc`, `updated_at`, `created_at`) values (consequatur, consequatur, 1, consequatur, 2024-10-08 00:43:48, 2024-10-08 00:43:48))"}'
+        status: 200
+        content: '{"message":"success add request item detail","data":[{"id":2,"item_id":1,"request_item_id":1,"qty":6,"qty_acc":6,"created_at":"2024-10-16T07:02:33.000000Z","updated_at":"2024-10-16T07:02:33.000000Z"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -128,7 +128,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -145,7 +145,7 @@ endpoints:
         API endpoints for managing request item detail
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Update the specified request item detail in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -180,12 +180,12 @@ endpoints:
     bodyParameters:
       item_id:
         name: item_id
-        description: ''
-        required: true
-        example: 6
+        description: required.
+        required: false
+        example: 2
         type: integer
         enumValues: []
-        exampleWasSpecified: false
+        exampleWasSpecified: true
         custom: []
       qty:
         name: qty
@@ -206,7 +206,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 6
+      item_id: 2
       qty: 6
       qty_acc: 6
     fileParameters: []
@@ -224,7 +224,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -289,7 +289,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null

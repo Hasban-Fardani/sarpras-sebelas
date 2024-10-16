@@ -133,7 +133,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -277,7 +277,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success create item","data":{"code":"tjqotbhpzwonwlzospqcs","image":"images\/93ad832ecdc95e4d743a7eda902bf9b84dc82f0b4a56fd6b519579087d629f80.jpg","name":"tjqotbhpzwonwlzospqcs","merk":"nssrciatkmatldznkaapj","type":"ptdhyldmarwuvlvyfcejz","size":"olbxnqyvzmcgyfpncfyst","unit":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"category_id":1,"price":6,"updated_at":"2024-10-08T00:43:47.000000Z","created_at":"2024-10-08T00:43:47.000000Z","id":36}}'
+        content: '{"message":"success create item","data":{"code":"tjqotbhpzwonwlzospqcs","image":"images\/218d385a6666b394492511273b269c2cf8b14b7739516e787a0e88280e9f7031.jpg","name":"tjqotbhpzwonwlzospqcs","merk":"nssrciatkmatldznkaapj","type":"ptdhyldmarwuvlvyfcejz","size":"olbxnqyvzmcgyfpncfyst","unit":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"category_id":1,"price":6,"updated_at":"2024-10-16T07:02:31.000000Z","created_at":"2024-10-16T07:02:31.000000Z","id":14}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -288,7 +288,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -332,7 +332,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get item","data":{"id":1,"code":"I-001","image":"\/images\/pulpen-ae7.jpeg","name":"Pulpen AE7","unit":"pcs","merk":"ae7","type":"pulpen","size":"0.5mm","stock":10,"min_stock":5,"price":2000,"category_id":1,"created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"}}'
+        content: '{"message":"success get item","data":{"id":1,"code":"I-001","image":"\/images\/pulpen-ae7.jpeg","name":"Pulpen AE7","unit":"pcs","merk":"ae7","type":"pulpen","size":"0.5mm","stock":10,"min_stock":5,"price":2000,"category_id":1,"created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -343,7 +343,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -498,7 +498,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success update item","data":{"id":1,"code":"tjqotbhpzwonwlzospqcs","image":"images\/93ad832ecdc95e4d743a7eda902bf9b84dc82f0b4a56fd6b519579087d629f80.jpg","name":"nssrciatkmatldznkaapj","unit":"sewlxtdfjxskykaapbpdx","merk":"ptdhyldmarwuvlvyfcejz","type":"olbxnqyvzmcgyfpncfyst","size":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"price":6,"category_id":1,"created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-08T00:43:47.000000Z"}}'
+        content: '{"message":"success update item","data":{"id":1,"code":"tjqotbhpzwonwlzospqcs","image":"images\/218d385a6666b394492511273b269c2cf8b14b7739516e787a0e88280e9f7031.jpg","name":"nssrciatkmatldznkaapj","unit":"sewlxtdfjxskykaapbpdx","merk":"ptdhyldmarwuvlvyfcejz","type":"olbxnqyvzmcgyfpncfyst","size":"nonjizoohlpabvwbfbzkw","stock":6,"min_stock":6,"price":6,"category_id":1,"created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T07:02:31.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -509,7 +509,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -564,7 +564,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null

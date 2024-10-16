@@ -34,7 +34,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get suppliers","current_page":1,"data":[{"id":1,"code":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":2,"code":"S0002","name":"Supplier 2","address":"Address 2","phone":"08123456790","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":3,"code":"S0003","name":"Supplier 3","address":"Address 3","phone":"08123456791","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":4,"code":"S0004","name":"Supplier 4","address":"Address 4","phone":"08123456792","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":5,"code":"S0005","name":"Supplier 5","address":"Address 5","phone":"08123456793","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":6,"code":"SP-2879","name":"PD Sihombing","address":"Jln. Wahid No. 522, Tasikmalaya 12786, Pabar","phone":"(+62) 491 4765 878","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":7,"code":"SP-6397","name":"Yayasan Firgantoro","address":"Ki. Kiaracondong No. 703, Bau-Bau 63643, Sumsel","phone":"0579 4860 706","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":8,"code":"SP-9343","name":"PT Dongoran Prabowo Tbk","address":"Jr. Bara Tambar No. 827, Madiun 52215, Babel","phone":"0593 9748 558","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":9,"code":"SP-4301","name":"Perum Gunawan (Persero) Tbk","address":"Gg. Flora No. 687, Kupang 40913, Maluku","phone":"(+62) 268 3351 266","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"},{"id":10,"code":"SP-7494","name":"UD Farida Mayasari","address":"Jln. Raden Saleh No. 687, Sorong 69161, NTT","phone":"0289 8113 186","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/admin\/supplier?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/supplier?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/supplier?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/supplier","per_page":10,"prev_page_url":null,"to":10,"total":10}'
+        content: '{"message":"success get suppliers","current_page":1,"data":[{"id":1,"code":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":2,"code":"S0002","name":"Supplier 2","address":"Address 2","phone":"08123456790","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":3,"code":"S0003","name":"Supplier 3","address":"Address 3","phone":"08123456791","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":4,"code":"S0004","name":"Supplier 4","address":"Address 4","phone":"08123456792","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":5,"code":"S0005","name":"Supplier 5","address":"Address 5","phone":"08123456793","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":6,"code":"SP-1021","name":"Fa Mayasari Suartini Tbk","address":"Gg. Pattimura No. 621, Tebing Tinggi 58834, Papua","phone":"(+62) 656 0523 4213","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":7,"code":"SP-5591","name":"CV Andriani Natsir","address":"Jr. Sutarto No. 888, Bontang 29868, Maluku","phone":"(+62) 642 2576 439","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":8,"code":"SP-7640","name":"Perum Suwarno","address":"Jln. Padang No. 395, Tegal 49676, Gorontalo","phone":"0361 1729 3225","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":9,"code":"SP-8641","name":"CV Habibi","address":"Psr. S. Parman No. 740, Depok 88382, DIY","phone":"0911 4566 8509","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"},{"id":10,"code":"SP-3747","name":"Yayasan Prayoga Tbk","address":"Psr. Pacuan Kuda No. 180, Lhokseumawe 40189, Jambi","phone":"0228 6227 4243","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/admin\/supplier?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/supplier?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/supplier?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/supplier","per_page":10,"prev_page_url":null,"to":10,"total":10}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -45,7 +45,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -108,8 +108,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''code'' doesn''t have a default value (Connection: mysql, SQL: insert into `suppliers` (`name`, `address`, `phone`, `updated_at`, `created_at`) values (tjqotbhpzwonwlzospqcs, nssrciatkmatldznkaapj, ptdhyldmarwuvlvyfcejz, 2024-10-08 00:43:48, 2024-10-08 00:43:48))"}'
+        status: 200
+        content: '{"message":"success create supplier","data":{"name":"tjqotbhpzwonwlzospqcs","address":"nssrciatkmatldznkaapj","phone":"ptdhyldmarwuvlvyfcejz","code":"SUB-036de1","updated_at":"2024-10-16T07:02:33.000000Z","created_at":"2024-10-16T07:02:33.000000Z","id":13}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -120,7 +120,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -164,7 +164,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get supplier","data":{"id":1,"code":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z"}}'
+        content: '{"message":"success get supplier","data":{"id":1,"code":"S0001","name":"Supplier 1","address":"Address 1","phone":"08123456789","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -175,7 +175,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -261,7 +261,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -295,8 +295,18 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      supplier:
+        name: supplier
+        description: 'The ID of the supplier.'
+        required: true
+        example: '10'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
     cleanUrlParameters:
       id: 1
+      supplier: '10'
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -316,7 +326,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null

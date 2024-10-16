@@ -20,6 +20,7 @@ class SubmissionItemDetailFactory extends Factory
             'submission_item_id' => $this->faker->numberBetween(1, 10),
             'item_id' => $this->faker->numberBetween(1, 10),
             'qty' => $this->faker->numberBetween(1, 100),
+            'qty_acc' => $this->faker->numberBetween(1, 100),
         ];
     }
 }

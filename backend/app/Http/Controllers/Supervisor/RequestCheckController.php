@@ -25,11 +25,11 @@ class RequestCheckController extends Controller
     /**
      * 
      */
-    public function accept(RequestItem $requestItem)
+    public function accept(RequestItem $request_item)
     {
-        $this->checkStatus($requestItem);
+        $this->checkStatus($request_item);
 
-        $requestItem->update([
+        $request_item->update([
             'status' => 'disetujui'
         ]);
 
@@ -41,11 +41,11 @@ class RequestCheckController extends Controller
     /**
      * 
      */
-    public function decline(RequestItem $requestItem)
+    public function decline(RequestItem $request_item)
     {
-        $this->checkStatus($requestItem);
+        $this->checkStatus($request_item);
 
-        $requestItem->update([
+        $request_item->update([
             'status' => 'ditolak'
         ]);
 
@@ -53,11 +53,11 @@ class RequestCheckController extends Controller
             'message' => 'success decline submission item'
         ]);
     }
-    public function checkStatus(RequestItem $requestItem)
+    public function checkStatus(RequestItem $request_item)
     {
-        if ($requestItem->status == 'ditolak' || $requestItem->status == 'disetujui') {
+        if ($request_item->status == 'ditolak' || $request_item->status == 'disetujui') {
             abort(response()->json([
-                'message' => 'failed accept request item, request item already ' . $requestItem->status
+                'message' => 'failed accept request item, request item already ' . $request_item->status
             ], 422));
         }
     }

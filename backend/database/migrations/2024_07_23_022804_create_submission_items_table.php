@@ -15,12 +15,16 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->unsignedBigInteger('division_id');
+            $table->unsignedBigInteger('operator_id')->nullable();
+            $table->unsignedBigInteger('supervisor_id')->nullable();
             $table->unsignedBigInteger('submission_session_id')->nullable();
-            $table->enum('status', ['diajukan', 'disetujui', 'ditolak', 'draf'])->default('diajukan');
+            $table->enum('status', ['diajukan', 'disetujui', 'ditolak', 'draf'])->default('draf');
             $table->string('regarding');
             $table->text('note')->nullable();
 
             $table->foreign('division_id')->references('id')->on('employees')->cascadeOnDelete();
+            $table->foreign('operator_id')->references('id')->on('employees')->cascadeOnDelete();
+            $table->foreign('supervisor_id')->references('id')->on('employees')->cascadeOnDelete();
             $table->foreign('submission_session_id')->references('id')->on('submission_sessions')->cascadeOnDelete();
             $table->timestamps();
         });

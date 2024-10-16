@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SubmissionItemAdminRequest extends FormRequest
+class SubmissionItemRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,6 +24,8 @@ class SubmissionItemAdminRequest extends FormRequest
         return [
             'submission_session_id' => 'integer|exists:submission_sessions,id',
             'division_id' => 'integer|exists:employees,id',
+            'regarding' => 'required|string',
+            'status' => 'required|string|in:draf,diajukan',
             'code' => 'string|nullable',
             'note' => 'string|nullable',
             'items' => 'required|array',

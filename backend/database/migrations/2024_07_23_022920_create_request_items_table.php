@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('request_items', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('division_id');
+            $table->unsignedBigInteger('operator_id')->nullable();
             $table->string('code')->unique();
-            $table->unsignedBigInteger('employee_id');
-            $table->enum('status', ['diajukan', 'disetujui', 'ditolak', 'draf'])->default('diajukan');
-            $table->foreign('employee_id')->references('id')->on('employees')->cascadeOnDelete();
+            $table->enum('status', ['diajukan', 'disetujui', 'ditolak', 'draf'])->default('draf');
             $table->text('note')->nullable();
             $table->string('regarding');
             $table->string('characteristic');
+            $table->foreign('operator_id')->references('id')->on('employees')->cascadeOnDelete();
+            $table->foreign('division_id')->references('id')->on('employees')->cascadeOnDelete();
             $table->timestamps();
         });
     }

@@ -30,14 +30,12 @@ class OutgoingItemController extends Controller
         $data->when($request->search, function ($data) use ($request) {
             $searchTerm = '%' . $request->search . '%';
 
-            $data->where(function ($query) use ($searchTerm) {
-                $query->whereHas('operator', function ($query) use ($searchTerm) {
+            $data->whereHas('operator', function ($query) use ($searchTerm) {
+                $query->where('name', 'like', $searchTerm);
+            })
+                ->orWhereHas('division', function ($query) use ($searchTerm) {
                     $query->where('name', 'like', $searchTerm);
-                })
-                    ->orWhereHas('division', function ($query) use ($searchTerm) {
-                        $query->where('name', 'like', $searchTerm);
-                    });
-            });
+                });
         });
 
         // filter by division
@@ -66,7 +64,7 @@ class OutgoingItemController extends Controller
 
         $userNIP = auth()->user()->id;
         $employeeID = Employee::where('id', $userNIP)->first()->id;
-        
+
         if (!array_key_exists('code', $validatedData)) {
             $hashes = 'OUT-' . hash('sha256', now());
             $validatedData['code'] = substr($hashes, 0, 10);
@@ -80,8 +78,8 @@ class OutgoingItemController extends Controller
             'total_items' => count($validatedData['items']),
         ];
 
-        $itemOut = OutgoingItem::create($data);
-        $itemOut->details()->createMany($validatedData['items']);
+        $outgoing_item = OutgoingItem::create($data);
+        $outgoing_item->details()->createMany($validatedData['items']);
 
         // update stock
         $item_ids = array_column($validatedData['items'], 'item_id');
@@ -91,7 +89,7 @@ class OutgoingItemController extends Controller
             // Handle the case when there are no items
             return response()->json([
                 'message' => 'success add outgoing item',
-                'data' => $itemOut
+                'data' => $outgoing_item
             ]);
         }
 
@@ -107,34 +105,34 @@ class OutgoingItemController extends Controller
 
         return response()->json([
             'message' => 'success add outgoing item and updated stock',
-            'data' => $itemOut
+            'data' => $outgoing_item
         ]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(OutgoingItem $itemOut)
+    public function show(OutgoingItem $outgoing_item)
     {
         return response()->json([
             'message' => 'success get item-out',
-            'data' => $itemOut->load(['operator:id,name', 'division:id,name', 'details'])
+            'data' => $outgoing_item->load(['operator:id,name', 'division:id,name', 'details'])
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OutgoingItem $itemOut)
+    public function destroy(OutgoingItem $outgoing_item)
     {
         // update stock
-        $details = $itemOut->details->toArray();
+        $details = $outgoing_item->details->toArray();
         $item_ids = array_column($details, 'item_id');
         $qtys = array_column($details, 'qty');
 
         if (empty($item_ids)) {
             // Handle the case when there are no items
-            $itemOut->delete();
+            $outgoing_item->delete();
             return response()->json([
                 'message' => 'success delete item-out',
             ]);
@@ -150,7 +148,7 @@ class OutgoingItemController extends Controller
         // Execute the SQL query using prepared statement
         DB::update($sql, $params);
 
-        $itemOut->delete();
+        $outgoing_item->delete();
         return response()->json([
             'message' => 'success delete outgoing item and rollback the stock',
         ]);

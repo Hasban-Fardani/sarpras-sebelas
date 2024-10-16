@@ -26,11 +26,11 @@ class SubmissionCheckController extends Controller
     /**
      * 
      */
-    public function accept(SubmissionItem $submission)
+    public function accept(SubmissionItem $submission_item)
     {
-        $this->checkStatus($submission);
+        $this->checkStatus($submission_item);
 
-        $submission->update([
+        $submission_item->update([
             'status' => 'disetujui'
         ]);
 
@@ -42,11 +42,11 @@ class SubmissionCheckController extends Controller
     /**
      * 
      */
-    public function decline(SubmissionItem $submission)
+    public function decline(SubmissionItem $submission_item)
     {
-        $this->checkStatus($submission);
+        $this->checkStatus($submission_item);
 
-        $submission->update([
+        $submission_item->update([
             'status' => 'ditolak'
         ]);
 
@@ -55,11 +55,11 @@ class SubmissionCheckController extends Controller
         ]);
     }
 
-    public function checkStatus(SubmissionItem $submission)
+    public function checkStatus(SubmissionItem $submission_item)
     {
-        if ($submission->status == 'ditolak' || $submission->status == 'disetujui') {
+        if ($submission_item->status == 'ditolak' || $submission_item->status == 'disetujui') {
             abort(response()->json([
-                'message' => 'failed accept submission item, submission already ' . $submission->status
+                'message' => 'failed accept submission item, submission already ' . $submission_item->status
             ], 422));
         }
     }

@@ -65,8 +65,12 @@ class RequestItemController extends Controller
 
         // directly create a new array with only the needed keys
         $data = [
-            'user_id' => $employeeID,
+            'division' => $employeeID,
             'code' => $validatedData['code'],
+            'regarding' => $validatedData['regarding'],
+            'characteristic' => $validatedData['characteristic'],
+            'note' => $validatedData['note'],
+            'operator' => 3,
             'status' => 'draf',
         ];
 
@@ -93,28 +97,44 @@ class RequestItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RequestItem $request)
+    public function show(RequestItem $request_item)
     {
         return response()->json([
             'message' => 'success get submission item',
-            'data' => $request->load(['employee:id,name', 'details'])
+            'data' => $request_item->load(['employee:id,name', 'details'])
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $requestHttp, RequestItem $request)
+    public function update(Request $request, RequestItem $request_item)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'status' => 'required|string|in:draf,diajukan',
+            'regarding' => 'required|string',
+            'characteristic' => 'required|string',
+            'note' => 'nullable|string',
+            'employee_id' => 'nullable|exists:employees,id',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        $request_item->update($validator->validated());
+        return response()->json([
+            'message' => 'success update request item',
+            'data' => $request_item
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RequestItem $request)
+    public function destroy(RequestItem $request_item)
     {
-        $request->delete();
+        $request_item->delete();
         return response()->json([
             'message' => 'success delete request item'
         ]);

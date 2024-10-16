@@ -31,21 +31,18 @@ class DashboardController extends Controller
     }
 
     /**
-     * Get stats of requests item
+     * Get stats of requests item, group by month
      */
     public function getStatsRequest()
     {
-        $data = RequestItem::select(
-            DB::raw('MONTHNAME(created_at) as month'),
-            DB::raw('COUNT(*) as count')
-        )
-            ->whereYear('created_at', date('Y'))  // Optional: limit to current year
-            ->groupBy('month')
-            ->orderBy(DB::raw('MONTH(created_at)'))
+        $data = DB::table('request_items')
+            ->select(DB::raw("DATE_FORMAT(created_at, '%Y-%m') as month"), DB::raw('count(*) as total'))
+            ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
+            ->orderBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"), 'asc')
             ->get();
 
         $labels = $data->pluck('month')->toArray();
-        $values = $data->pluck('count')->toArray();
+        $values = $data->pluck('total')->toArray();
         return response()->json([
             'labels' => $labels,
             'values' => $values,

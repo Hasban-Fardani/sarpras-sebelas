@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SubmissionItemAdminRequest;
+use App\Http\Requests\SubmissionItemRequest;
 use App\Models\Employee;
 use App\Models\SubmissionItem;
 use Illuminate\Http\Request;
@@ -25,10 +25,8 @@ class SubmissionItemController extends Controller
         $perPage = $request->input('per_page', 10);
 
         $data->when($request->search, function ($data) use ($request) {
-            $data->where(function ($query) use ($request) {
-                $query->whereHas('division', function ($query) use ($request) {
-                    $query->where('name', 'like', '%' . $request->search . '%');
-                });
+            $data->whereHas('division', function ($query) use ($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
             });
         });
 
@@ -50,10 +48,11 @@ class SubmissionItemController extends Controller
 
     /**
      * Store a new Submission item
-     * 
+     *
+     * @bodyParam division_id integer required. Example: 3
      * @bodyParam submission_session_id integer required. Example: 3
      */
-    public function store(SubmissionItemAdminRequest $request)
+    public function store(SubmissionItemRequest $request)
     {
         $validatedData = $request->validated();
 
@@ -72,7 +71,8 @@ class SubmissionItemController extends Controller
             'code' => $validatedData['code'],
             'note' => $validatedData['note'],
             'code' => $validatedData['code'],
-            'status' => 'draf',
+            'status' => $validatedData['status'],
+            'regarding' => $validatedData['regarding'],
         ];
 
         if (!array_key_exists('division_id', $validatedData)) {
@@ -115,7 +115,23 @@ class SubmissionItemController extends Controller
      */
     public function update(Request $request, SubmissionItem $submission)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'status' => 'required|string|in:draf,diajukan',
+            'regarding' => 'required|string',
+            'note' => 'nullable|string',
+            'division_id' => 'nullable|exists:employees,id',
+            'status' => 'required|string|in:draf,diajukan',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        $submission->update($validator->validated());
+        return response()->json([
+            'message' => 'success update submission item',
+            'data' => $submission
+        ]);
     }
 
     /**

@@ -34,7 +34,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get users","current_page":1,"data":[{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-06T12:51:42.000000Z","updated_at":"2024-10-06T12:51:42.000000Z","employee":{"id":3,"nip":"197806311994031003","name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":2,"nip":"197412311994031001","username":"pengawas","role":"pengawas","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z","employee":{"id":2,"nip":"197412311994031001","name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":3,"nip":"198212311994031004","username":"ani_nuraeni","role":"unit","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z","employee":{"id":4,"nip":"198212311994031004","name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":4,"nip":"197412311994031005","username":"zim_zim","role":"unit","created_at":"2024-10-06T12:51:43.000000Z","updated_at":"2024-10-06T12:51:43.000000Z","employee":{"id":5,"nip":"197412311994031005","name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":5,"nip":"101","username":"hf.dev","role":"developer","created_at":null,"updated_at":null,"employee":{"id":6,"nip":"101","name":"hasban","position":"developer apps","phone":"089876543123","email":"hasbanfardani@gmail.com","email_verified_at":"2024-10-06 20:56:28","created_at":null,"updated_at":null}}],"first_page_url":"http:\/\/localhost:8000\/admin\/users?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/users?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/users?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/users","per_page":10,"prev_page_url":null,"to":5,"total":5}'
+        content: '{"message":"success get users","current_page":1,"data":[{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-16T06:00:54.000000Z","updated_at":"2024-10-16T06:00:54.000000Z","employee":{"id":3,"nip":"197806311994031003","name":"Toni Kusmara","position":"Staff Sarana Prasarana","phone":"08123456781","email":"toni.kusmara@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":2,"nip":"197412311994031001","username":"pengawas","role":"pengawas","created_at":"2024-10-16T06:00:54.000000Z","updated_at":"2024-10-16T06:00:54.000000Z","employee":{"id":2,"nip":"197412311994031001","name":"Sutarsa","position":"Wakil Kepala Sekolah Bidang Sarana Prasarana","phone":"08123456789","email":"sutarsa@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":3,"nip":"198212311994031004","username":"ani_nuraeni","role":"unit","created_at":"2024-10-16T06:00:54.000000Z","updated_at":"2024-10-16T06:00:54.000000Z","employee":{"id":4,"nip":"198212311994031004","name":"Ani Nuraeni","position":"Ketua Progam keahlian RPL","phone":"08123456782","email":"zim.zim@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}},{"id":4,"nip":"197412311994031005","username":"zim_zim","role":"unit","created_at":"2024-10-16T06:00:55.000000Z","updated_at":"2024-10-16T06:00:55.000000Z","employee":{"id":5,"nip":"197412311994031005","name":"Zim zim","position":"Ketua Progam keahlian DKV","phone":"08123456783","email":"ani.nuraeni@smkn11bdg.sch.id","email_verified_at":null,"created_at":null,"updated_at":null}}],"first_page_url":"http:\/\/localhost:8000\/admin\/users?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/admin\/users?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/admin\/users?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/admin\/users","per_page":10,"prev_page_url":null,"to":4,"total":4}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -45,7 +45,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -83,8 +83,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      id:
-        name: id
+      nip:
+        name: nip
         description: validation.max.
         required: true
         example: nssrciatkmatldznkaapj
@@ -101,20 +101,11 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      email:
-        name: email
-        description: 'validation.email validation.max.'
-        required: true
-        example: maude81@example.net
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
       password:
         name: password
         description: validation.min.
         required: true
-        example: '#L*qCceF0t7nA'
+        example: '*6^n##L*qCceF0'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -133,16 +124,15 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: tjqotbhpzwonwlzospqcs
-      id: nssrciatkmatldznkaapj
+      nip: nssrciatkmatldznkaapj
       username: ptdhyldmarwuvlvyfcejz
-      email: maude81@example.net
-      password: '#L*qCceF0t7nA'
+      password: '*6^n##L*qCceF0'
       role: unit
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''email'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `users` where `email` = maude81@example.net)"}'
+        status: 422
+        content: '{"message":"Validation Failed","errors":{"nip":["validation.exists"]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -153,7 +143,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -197,7 +187,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get user","data":{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-06T12:51:42.000000Z","updated_at":"2024-10-06T12:51:42.000000Z"}}'
+        content: '{"message":"success get user","data":{"id":1,"nip":"197806311994031003","username":"admin","role":"admin","created_at":"2024-10-16T06:00:54.000000Z","updated_at":"2024-10-16T06:00:54.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -208,7 +198,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -257,8 +247,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      id:
-        name: id
+      nip:
+        name: nip
         description: validation.max.
         required: true
         example: nssrciatkmatldznkaapj
@@ -275,20 +265,11 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      email:
-        name: email
-        description: 'validation.email validation.max.'
-        required: true
-        example: maude81@example.net
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
       password:
         name: password
         description: validation.min.
         required: true
-        example: '#L*qCceF0t7nA'
+        example: '*6^n##L*qCceF0'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -307,16 +288,15 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: tjqotbhpzwonwlzospqcs
-      id: nssrciatkmatldznkaapj
+      nip: nssrciatkmatldznkaapj
       username: ptdhyldmarwuvlvyfcejz
-      email: maude81@example.net
-      password: '#L*qCceF0t7nA'
+      password: '*6^n##L*qCceF0'
       role: admin
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''email'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `users` where `email` = maude81@example.net)"}'
+        status: 422
+        content: '{"message":"Validation Failed","errors":{"nip":["validation.exists"]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -327,7 +307,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -382,7 +362,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null

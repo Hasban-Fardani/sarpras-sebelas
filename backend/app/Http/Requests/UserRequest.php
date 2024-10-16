@@ -23,9 +23,8 @@ class UserRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'id' => 'required|string|max:255|unique:users',
+            'nip' => 'required|string|max:255|exists:employees,nip',
             'username' => 'required|string|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
             'role' => 'required|in:admin,unit,pengawas',
         ];

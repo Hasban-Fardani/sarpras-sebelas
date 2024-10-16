@@ -34,7 +34,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"items":15,"users":5,"requests":10,"submissions":11}'
+        content: '{"items":10,"users":4,"requests":10,"submissions":11}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -45,7 +45,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -61,7 +61,7 @@ endpoints:
         API endpoints for admin dashboard
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get stats of requests item'
+      title: 'Get stats of requests item, group by month'
       description: ''
       authenticated: true
       custom: []
@@ -78,8 +78,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column ''laravel_sarpras_sebelas.request_items.created_at'' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by (Connection: mysql, SQL: select MONTHNAME(created_at) as month, COUNT(*) as count from `request_items` where year(`created_at`) = 2024 group by `month` order by MONTH(created_at) asc)"}'
+        status: 200
+        content: '{"labels":["2024-10"],"values":[10]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -90,7 +90,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -124,7 +124,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"labels":["Alat Tulis Kantor"],"values":[15]}'
+        content: '{"labels":["Alat Tulis Kantor"],"values":[10]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -135,7 +135,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null

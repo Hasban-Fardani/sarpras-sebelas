@@ -32,7 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get all request items","current_page":1,"data":[{"id":1,"code":"RQ-001","employee_id":4,"status":"diajukan","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":2,"code":"RQ-002","employee_id":5,"status":"draf","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":3,"code":"RQ-003","employee_id":4,"status":"disetujui","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":4,"code":"RQ-004","employee_id":5,"status":"diajukan","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":5,"code":"RQ-005","employee_id":4,"status":"disetujui","note":null,"created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}},{"id":6,"code":"RI8839","employee_id":2,"status":"disetujui","note":"Quasi fugiat provident doloribus sed explicabo.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","employee":{"id":2,"name":"Sutarsa"}},{"id":7,"code":"RI6951","employee_id":3,"status":"ditolak","note":"Quae atque vel itaque vero est.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","employee":{"id":3,"name":"Toni Kusmara"}},{"id":8,"code":"RI1385","employee_id":5,"status":"diajukan","note":"Occaecati aut non ut consequatur.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","employee":{"id":5,"name":"Zim zim"}},{"id":9,"code":"RI2355","employee_id":2,"status":"draf","note":"Qui optio provident reprehenderit sunt fugit delectus natus beatae.","created_at":"2024-10-06T12:51:56.000000Z","updated_at":"2024-10-06T12:51:56.000000Z","employee":{"id":2,"name":"Sutarsa"}},{"id":10,"code":"RI9728","employee_id":4,"status":"disetujui","note":"Assumenda molestias aut ab accusamus.","created_at":"2024-10-06T12:51:56.000000Z","updated_at":"2024-10-06T12:51:56.000000Z","employee":{"id":4,"name":"Ani Nuraeni"}}],"first_page_url":"http:\/\/localhost:8000\/request-item?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/request-item?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/request-item?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/request-item","per_page":10,"prev_page_url":null,"to":10,"total":10}'
+        content: '{"message":"success get all request items","current_page":1,"data":[{"id":1,"division_id":4,"operator_id":3,"code":"RQ-001","status":"diajukan","note":null,"regarding":"test","characteristic":"tesssss","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":2,"division_id":5,"operator_id":3,"code":"RQ-002","status":"draf","note":null,"regarding":"test","characteristic":"tesssss","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":3,"division_id":4,"operator_id":3,"code":"RQ-003","status":"disetujui","note":null,"regarding":"test","characteristic":"tesssss","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":4,"division_id":5,"operator_id":3,"code":"RQ-004","status":"diajukan","note":null,"regarding":"test","characteristic":"tesssss","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":5,"division_id":4,"operator_id":3,"code":"RQ-005","status":"disetujui","note":null,"regarding":"test","characteristic":"tesssss","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":6,"division_id":4,"operator_id":3,"code":"RI8488","status":"draf","note":"Aut veritatis magnam fugiat reprehenderit accusantium.","regarding":"Ut molestias quisquam voluptas quidem excepturi non nemo excepturi.","characteristic":"penting","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":7,"division_id":3,"operator_id":3,"code":"RI2575","status":"diajukan","note":"Culpa quia omnis sequi dolorem quaerat perferendis.","regarding":"Nulla molestiae velit deserunt est sint.","characteristic":"penting","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":8,"division_id":2,"operator_id":3,"code":"RI3946","status":"diajukan","note":"Aperiam necessitatibus ut magni enim ab aut.","regarding":"Tempora accusantium aspernatur tempore reprehenderit.","characteristic":"biasa","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":9,"division_id":3,"operator_id":3,"code":"RI3481","status":"disetujui","note":"Sequi eum similique facere eos occaecati enim sit.","regarding":"Et maxime hic voluptatem ut deserunt voluptas id.","characteristic":"biasa","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null},{"id":10,"division_id":4,"operator_id":3,"code":"RI6248","status":"ditolak","note":"Rerum et quis est.","regarding":"Dolores fugit id libero aspernatur.","characteristic":"biasa","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null}],"first_page_url":"http:\/\/localhost:8000\/request-item?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/request-item?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/request-item?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/request-item","per_page":10,"prev_page_url":null,"to":10,"total":10}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -91,6 +91,44 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      status:
+        name: status
+        description: ''
+        required: true
+        example: draf
+        type: string
+        enumValues:
+          - draf
+          - diajukan
+        exampleWasSpecified: false
+        custom: []
+      division_id:
+        name: division_id
+        description: ''
+        required: false
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      regarding:
+        name: regarding
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      characteristic:
+        name: characteristic
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       'items[].item_id':
         name: 'items[].item_id'
         description: ''
@@ -115,11 +153,15 @@ endpoints:
         -
           item_id: 6
           qty: 6
+      status: draf
+      division_id: 6
+      regarding: consequatur
+      characteristic: consequatur
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"message":"SQLSTATE[HY000]: General error: 1364 Field ''employee_id'' doesn''t have a default value (Connection: mysql, SQL: insert into `request_items` (`code`, `status`, `updated_at`, `created_at`) values (consequatur, draf, 2024-10-08 00:43:48, 2024-10-08 00:43:48))"}'
+        status: 422
+        content: '{"message":"Validation Failed","errors":{"division_id":["validation.exists"]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -130,7 +172,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -174,7 +216,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get submission item","data":{"employee":null,"details":[]}}'
+        content: '{"message":"success get submission item","data":{"id":1,"division_id":4,"operator_id":3,"code":"RQ-001","status":"diajukan","note":null,"regarding":"test","characteristic":"tesssss","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","employee":null,"details":[]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -185,7 +227,114 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'request-item/{id}'
+    metadata:
+      groupName: '9. Request Item Management'
+      groupDescription: |-
+
+        API endpoints for managing request item
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the request item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      status:
+        name: status
+        description: ''
+        required: true
+        example: diajukan
+        type: string
+        enumValues:
+          - draf
+          - diajukan
+        exampleWasSpecified: false
+        custom: []
+      regarding:
+        name: regarding
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      characteristic:
+        name: characteristic
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      note:
+        name: note
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      employee_id:
+        name: employee_id
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      status: diajukan
+      regarding: consequatur
+      characteristic: consequatur
+      note: consequatur
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"success update request item","data":{"id":1,"division_id":4,"operator_id":3,"code":"RQ-001","status":"diajukan","note":"consequatur","regarding":"consequatur","characteristic":"consequatur","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T07:02:33.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -240,7 +389,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null

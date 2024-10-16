@@ -6,7 +6,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'submission/{submission_id}/accept'
+    uri: 'submission/{submission_item}/accept'
     metadata:
       groupName: Supervisor
       groupDescription: ''
@@ -24,9 +24,9 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
-        description: 'The ID of the submission.'
+      submission_item:
+        name: submission_item
+        description: ''
         required: true
         example: 1
         type: integer
@@ -34,7 +34,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: 1
+      submission_item: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -54,7 +54,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -62,7 +62,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'submission/{submission_id}/decline'
+    uri: 'submission/{submission_item}/decline'
     metadata:
       groupName: Supervisor
       groupDescription: ''
@@ -80,9 +80,9 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
-        description: 'The ID of the submission.'
+      submission_item:
+        name: submission_item
+        description: ''
         required: true
         example: 1
         type: integer
@@ -90,7 +90,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: 1
+      submission_item: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -110,7 +110,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -118,7 +118,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'request/{request}/accept'
+    uri: 'request/{request_item}/accept'
     metadata:
       groupName: Supervisor
       groupDescription: ''
@@ -136,17 +136,17 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      request:
-        name: request
-        description: 'The request.'
+      request_item:
+        name: request_item
+        description: ''
         required: true
-        example: consequatur
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: consequatur
+      request_item: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -166,7 +166,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -174,7 +174,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'request/{request}/decline'
+    uri: 'request/{request_item}/decline'
     metadata:
       groupName: Supervisor
       groupDescription: ''
@@ -192,17 +192,17 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      request:
-        name: request
-        description: 'The request.'
+      request_item:
+        name: request_item
+        description: ''
         required: true
-        example: consequatur
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request: consequatur
+      request_item: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -222,7 +222,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null

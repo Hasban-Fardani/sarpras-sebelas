@@ -24,6 +24,10 @@ class RequestItemRequest extends FormRequest
         return [
             'code' => 'nullable|string',
             'items' => 'required|array',
+            'status' => 'required|string|in:draf,diajukan',
+            'division_id' => 'integer|exists:employees,id',
+            'regarding' => 'required|string',
+            'characteristic' => 'required|string',
             'items.*.item_id' => 'required|integer',
             'items.*.qty' => 'required|integer',
         ];

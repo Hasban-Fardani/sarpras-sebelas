@@ -55,8 +55,6 @@ class EmployeeController extends Controller
     public function store(EmployeeRequest $request)
     {
         $data = $request->validated();
-        $data['id'] = $data['nip'];
-        unset($data['nip']);
         $employee = Employee::create($data);
 
         return response()->json([
@@ -110,6 +108,7 @@ class EmployeeController extends Controller
             'password' => 'required',
             'role' => 'required|in:admin,pengawas,unit',
             'username' => 'required|unique:users,username',
+            'nip' => 'required|exists:employees,nip',
         ]);
 
         if ($validator->fails()) {

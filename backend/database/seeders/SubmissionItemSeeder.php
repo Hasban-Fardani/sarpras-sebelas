@@ -16,6 +16,8 @@ class SubmissionItemSeeder extends Seeder
         SubmissionItem::create([
             'code' => 'IN-001',
             'division_id' => 4,
+            'operator_id' => 3,
+            'supervisor_id' => 1,
             'status' => 'diajukan',
             'regarding' => 'biasa',
             'submission_session_id' => 1
@@ -24,6 +26,8 @@ class SubmissionItemSeeder extends Seeder
         SubmissionItem::create([
             'code' => 'IN-002',
             'division_id' => 5,
+            'operator_id' => 3,
+            'supervisor_id' => 1,
             'status' => 'draf',
             'regarding' => 'biasa',
             'submission_session_id' => 1
@@ -32,6 +36,8 @@ class SubmissionItemSeeder extends Seeder
         SubmissionItem::create([
             'code' => 'IN-003',
             'division_id' => 4,
+            'operator_id' => 3,
+            'supervisor_id' => 1,
             'status' => 'disetujui',
             'regarding' => 'biasa',
             'submission_session_id' => 1
@@ -40,6 +46,8 @@ class SubmissionItemSeeder extends Seeder
         SubmissionItem::create([
             'code' => 'IN-004',
             'division_id' => 5,
+            'operator_id' => 3,
+            'supervisor_id' => 1,
             'status' => 'ditolak',
             'regarding' => 'biasa',
             'submission_session_id' => 2
@@ -48,6 +56,8 @@ class SubmissionItemSeeder extends Seeder
         SubmissionItem::create([
             'code' => 'IN-005',
             'division_id' => 5,
+            'operator_id' => 3,
+            'supervisor_id' => 1,
             'status' => 'diajukan',
             'regarding' => 'biasa',
             'submission_session_id' => 2
@@ -56,6 +66,8 @@ class SubmissionItemSeeder extends Seeder
         SubmissionItem::create([
             'code' => 'IN-006',
             'division_id' => 5,
+            'operator_id' => 3,
+            'supervisor_id' => 1,
             'status' => 'disetujui',
             'regarding' => 'biasa',
             'submission_session_id' => 2

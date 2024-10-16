@@ -18,7 +18,8 @@ class RequestItemFactory extends Factory
     {
         return [
             'code' => 'RI' . $this->faker->unique()->numberBetween(1000, 9999),
-            'employee_id' => $this->faker->numberBetween(1, 5),
+            'division_id' => $this->faker->numberBetween(1, 5),
+            'operator_id' => 3,
             'status' => $this->faker->randomElement(['diajukan', 'disetujui', 'ditolak', 'draf']),
             'regarding' => $this->faker->sentence(),
             'characteristic' => $this->faker->randomElement(['biasa', 'penting', 'sangat penting']),

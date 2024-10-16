@@ -34,7 +34,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get all outgoing item","current_page":1,"data":[{"id":1,"code":"OUT-001","operator_id":1,"division_id":4,"note":"Barang keluar untuk keperluan testing","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":4,"name":"Ani Nuraeni"}},{"id":2,"code":"OUT-002","operator_id":1,"division_id":5,"note":"Barang keluar untuk","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":5,"name":"Zim zim"}},{"id":3,"code":"OUT-003","operator_id":1,"division_id":4,"note":"Barang keluar untuk","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":4,"name":"Ani Nuraeni"}},{"id":4,"code":"OUT-004","operator_id":1,"division_id":5,"note":"Barang keluar untuk","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":5,"name":"Zim zim"}},{"id":5,"code":"OUT-005","operator_id":1,"division_id":4,"note":"Barang keluar untuk","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":4,"name":"Ani Nuraeni"}},{"id":6,"code":"OUT-9749","operator_id":1,"division_id":3,"note":"Enim impedit voluptatem explicabo est porro.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":3,"name":"Toni Kusmara"}},{"id":7,"code":"OUT-2407","operator_id":1,"division_id":3,"note":"Non recusandae ullam dolor voluptas.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":3,"name":"Toni Kusmara"}},{"id":8,"code":"OUT-8241","operator_id":1,"division_id":5,"note":"Id officiis vel et consectetur.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":5,"name":"Zim zim"}},{"id":9,"code":"OUT-2907","operator_id":1,"division_id":1,"note":"Et quia dolore eos ab nulla reiciendis quasi.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":1,"name":"Yani"}},{"id":10,"code":"OUT-4903","operator_id":1,"division_id":3,"note":"Sed aliquam officiis quia.","created_at":"2024-10-06T12:51:55.000000Z","updated_at":"2024-10-06T12:51:55.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":3,"name":"Toni Kusmara"}}],"first_page_url":"http:\/\/localhost:8000\/outgoing-item?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/outgoing-item?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/outgoing-item?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/outgoing-item","per_page":10,"prev_page_url":null,"to":10,"total":10}'
+        content: '{"message":"success get all outgoing item","current_page":1,"data":[{"id":1,"code":"OUT-001","operator_id":1,"division_id":4,"note":"Barang keluar untuk keperluan testing","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":4,"name":"Ani Nuraeni"}},{"id":2,"code":"OUT-002","operator_id":1,"division_id":5,"note":"Barang keluar untuk","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":5,"name":"Zim zim"}},{"id":3,"code":"OUT-003","operator_id":1,"division_id":4,"note":"Barang keluar untuk","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":4,"name":"Ani Nuraeni"}},{"id":4,"code":"OUT-004","operator_id":1,"division_id":5,"note":"Barang keluar untuk","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":5,"name":"Zim zim"}},{"id":5,"code":"OUT-005","operator_id":1,"division_id":4,"note":"Barang keluar untuk","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":4,"name":"Ani Nuraeni"}},{"id":6,"code":"OUT-8095","operator_id":1,"division_id":2,"note":"Praesentium in autem consequuntur libero aliquid nobis.","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":2,"name":"Sutarsa"}},{"id":7,"code":"OUT-2517","operator_id":1,"division_id":2,"note":"Maiores dolore dolorem veniam quia eos dolor fugiat.","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":2,"name":"Sutarsa"}},{"id":8,"code":"OUT-2526","operator_id":1,"division_id":1,"note":"Temporibus nesciunt dolorum earum officiis saepe tempora.","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":1,"name":"Yani"}},{"id":9,"code":"OUT-4975","operator_id":1,"division_id":3,"note":"Quam laborum deserunt illum voluptatem inventore quisquam possimus architecto.","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":3,"name":"Toni Kusmara"}},{"id":10,"code":"OUT-8138","operator_id":1,"division_id":4,"note":"Ut ut eos molestiae non omnis.","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":4,"name":"Ani Nuraeni"}}],"first_page_url":"http:\/\/localhost:8000\/outgoing-item?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/outgoing-item?page=1","links":[{"url":null,"label":"pagination.previous","active":false},{"url":"http:\/\/localhost:8000\/outgoing-item?page=1","label":"1","active":true},{"url":null,"label":"pagination.next","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/outgoing-item","per_page":10,"prev_page_url":null,"to":10,"total":10}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -45,7 +45,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -131,7 +131,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success add outgoing item and updated stock","data":{"code":"consequatur","operator_id":1,"division_id":3,"updated_at":"2024-10-08T00:43:47.000000Z","created_at":"2024-10-08T00:43:47.000000Z","id":31}}'
+        content: '{"message":"success add outgoing item and updated stock","data":{"code":"consequatur","operator_id":1,"division_id":3,"updated_at":"2024-10-16T07:02:32.000000Z","created_at":"2024-10-16T07:02:32.000000Z","id":14}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -142,7 +142,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -186,7 +186,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"success get item-out","data":{"operator":null,"division":null,"details":[]}}'
+        content: '{"message":"success get item-out","data":{"id":1,"code":"OUT-001","operator_id":1,"division_id":4,"note":"Barang keluar untuk keperluan testing","created_at":"2024-10-16T06:02:48.000000Z","updated_at":"2024-10-16T06:02:48.000000Z","operator":{"id":1,"name":"Yani"},"division":{"id":4,"name":"Ani Nuraeni"},"details":[]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -197,7 +197,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null
@@ -252,7 +252,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|dF7dzWDKKEQEFy69KvmuNi1kuaRtAFrUoIAudfeA5a443a20'
+      - 'Bearer 1|5EpJKIU9HvY030Mcvut4avi1Kz2rW5X2IFe4EV9Q3fc49d39'
     controller: null
     method: null
     route: null

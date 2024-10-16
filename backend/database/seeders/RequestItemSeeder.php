@@ -15,7 +15,8 @@ class RequestItemSeeder extends Seeder
     {
         RequestItem::create([
             'code' => 'RQ-001',
-            'employee_id' => 4,
+            'division_id' => 4,
+            'operator_id' => 3,
             'regarding' => 'test',
             'characteristic' => 'tesssss',
             'status' => 'diajukan',
@@ -23,7 +24,8 @@ class RequestItemSeeder extends Seeder
 
         RequestItem::create([
             'code' => 'RQ-002',
-            'employee_id' => 5,
+            'division_id' => 5,
+            'operator_id' => 3,
             'regarding' => 'test',
             'characteristic' => 'tesssss',
             'status' => 'draf',
@@ -31,7 +33,8 @@ class RequestItemSeeder extends Seeder
 
         RequestItem::create([
             'code' => 'RQ-003',
-            'employee_id' => 4,
+            'division_id' => 4,
+            'operator_id' => 3,
             'regarding' => 'test',
             'characteristic' => 'tesssss',
             'status' => 'disetujui',
@@ -39,7 +42,8 @@ class RequestItemSeeder extends Seeder
 
         RequestItem::create([
             'code' => 'RQ-004',
-            'employee_id' => 5,
+            'division_id' => 5,
+            'operator_id' => 3,
             'regarding' => 'test',
             'characteristic' => 'tesssss',
             'status' => 'diajukan',
@@ -47,7 +51,8 @@ class RequestItemSeeder extends Seeder
 
         RequestItem::create([
             'code' => 'RQ-005',
-            'employee_id' => 4,
+            'division_id' => 4,
+            'operator_id' => 3,
             'regarding' => 'test',
             'characteristic' => 'tesssss',
             'status' => 'disetujui',

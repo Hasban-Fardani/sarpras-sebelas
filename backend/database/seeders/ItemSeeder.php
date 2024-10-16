@@ -82,6 +82,6 @@ class ItemSeeder extends Seeder
             "min_stock" => 5
         ]);
 
-        Item::factory(10)->create();
+        Item::factory(5)->create();
     }
 }

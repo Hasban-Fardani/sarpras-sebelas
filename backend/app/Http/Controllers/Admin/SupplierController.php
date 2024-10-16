@@ -41,7 +41,12 @@ class SupplierController extends Controller
      */
     public function store(SupplierRequest $request)
     {
-        $supplier = Supplier::create($request->validated());
+        $validatedData = $request->validated();
+        if (!array_key_exists('code', $validatedData)) {
+            $hashes = 'SUB-' . hash('sha256', now() . $validatedData['name']);
+            $validatedData['code'] = substr($hashes, 0, 10);
+        }
+        $supplier = Supplier::create($validatedData);
         return response()->json([
             'message' => 'success create supplier',
             'data' => $supplier
@@ -73,6 +78,8 @@ class SupplierController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     *
+     * @urlParam supplier required The ID of the supplier. Example: 10
      */
     public function destroy(Supplier $supplier)
     {

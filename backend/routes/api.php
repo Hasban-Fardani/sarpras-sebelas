@@ -57,13 +57,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('outgoing-item.detail', OutgoingItemDetailController::class)
         ->except('show');
 
-    Route::apiResource('submission', SubmissionItemController::class)
-        ->except('update');
+    Route::apiResource('submission', SubmissionItemController::class);
     Route::apiResource('submission.detail', SubmissionItemDetailController::class)
         ->except('show');
 
-    Route::apiResource('request-item', RequestItemController::class)
-        ->except('update');
+    Route::apiResource('request-item', RequestItemController::class);
     Route::apiResource('request-item.detail', RequestItemDetailController::class)
         ->except('show')
         ->parameter('detail', 'requestItemDetail');
@@ -80,9 +78,9 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 
     Route::middleware('can:supervisor')->group(function () {
-        Route::post('/submission/{submission}/accept', [Supervisor\SubmissionCheckController::class, 'accept']);
-        Route::post('/submission/{submission}/decline', [Supervisor\SubmissionCheckController::class, 'decline']);
-        Route::post('/request/{request}/accept', [Supervisor\RequestCheckController::class, 'accept']);
-        Route::post('/request/{request}/decline', [Supervisor\RequestCheckController::class, 'decline']);
+        Route::post('/submission/{submission_item}/accept', [Supervisor\SubmissionCheckController::class, 'accept']);
+        Route::post('/submission/{submission_item}/decline', [Supervisor\SubmissionCheckController::class, 'decline']);
+        Route::post('/request/{request_item}/accept', [Supervisor\RequestCheckController::class, 'accept']);
+        Route::post('/request/{request_item}/decline', [Supervisor\RequestCheckController::class, 'decline']);
     });
 });

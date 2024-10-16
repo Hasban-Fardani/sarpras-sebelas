@@ -31,14 +31,16 @@ class RequestItemDetailController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     *
+     * @bodyParam item_id integer required. Example: 1
      */
     public function store(Request $request, RequestItem $requestItem)
     {
         $this->checkStatus($requestItem);
 
         $validator = Validator::make($request->all(), [
-            'item_id' => 'required',
-            'qty' => 'required',
+            'item_id' => 'required|integer',
+            'qty' => 'required|integer',
         ]);
 
         if ($validator->fails()) {
@@ -68,11 +70,13 @@ class RequestItemDetailController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified request item detail in storage.
+     *
+     * @bodyParam item_id integer required. Example: 2
      */
-    public function update(Request $request, RequestItem $requestItem)
+    public function update(Request $request, RequestItem $request_item)
     {
-        $this->checkStatus($requestItem);
+        $this->checkStatus($request_item);
 
         $validator = Validator::make($request->all(), [
             'item_id' => 'required|integer',
@@ -88,12 +92,12 @@ class RequestItemDetailController extends Controller
         }
 
         $data = $validator->validated();
-        $detail = $requestItem->details()->where('item_id', $data['item_id'])->first();
+        $detail = $request_item->details()->where('item_id', $data['item_id'])->first();
         $detail->update($data);
 
         return response()->json([
             'message' => 'success update submission item detail',
-            'data' => $requestItem->details
+            'data' => $request_item->details
         ]);
     }
 
