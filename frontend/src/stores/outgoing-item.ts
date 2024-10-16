@@ -1,4 +1,5 @@
 import type { OutgoingItem, OutgoingItemDetail } from "@/types/outgoing_item";
+import type { UpdateTableArgs } from "@/types/table";
 import axios, { type AxiosRequestConfig } from "axios";
 import { defineStore } from "pinia";
 import { computed, ref } from "vue";
@@ -46,10 +47,14 @@ export const useOutgoingItemStore = defineStore("outgoing-item", () => {
 			},
 		};
 
-		const url = `${BACKEND_URL}/outgoing-item?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`;
-		const { data } = await axios.get(url, config);
-
-		items.value = data.data;
+		try {
+			const url = `${BACKEND_URL}/outgoing-item?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`;
+			const { data } = await axios.get(url, config);
+	
+			items.value = data.data;
+		} catch (error) {
+      await useUserStore().logout()
+		}
 	}
 
 	async function getDetails(id: number | string) {

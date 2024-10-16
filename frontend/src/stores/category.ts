@@ -32,14 +32,19 @@ export const useCategoryStore = defineStore('category', () => {
   async function getAll() {
     const user = useUserStore()
     await user.load()
-    const {data} = await axios.get(`${BACKEND_URL}/category?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
-      headers: {
-        Authorization: `Bearer ${user.data.token}`
-      }
-    })
 
-    categories.value = data.data
-    total.value = data.total
+    try {
+      const {data} = await axios.get(`${BACKEND_URL}/category?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
+        headers: {
+          Authorization: `Bearer ${user.data.token}`
+        }
+      })
+      categories.value = data.data
+      total.value = data.total
+    } catch (error) {
+      await useUserStore().logout()
+    }
+
   }
 
   async function updateTable(args: UpdateTableArgs) {

@@ -47,10 +47,14 @@ export const useIncomingItemStore = defineStore('incoming-item', () => {
       }
     }
 
-    const url = `${BACKEND_URL}/incoming-item?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`;
-    const {data} = await axios.get(url, config)
-
-    items.value = data.data
+    try {
+      const url = `${BACKEND_URL}/incoming-item?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`;
+      const {data} = await axios.get(url, config)
+  
+      items.value = data.data
+    } catch (error) {
+      await useUserStore().logout()
+    }
   }
 
   async function getDetails(id: number | string) {

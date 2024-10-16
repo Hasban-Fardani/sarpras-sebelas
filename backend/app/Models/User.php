@@ -67,7 +67,7 @@ class User extends Authenticatable
                 $user->username = trim($user->name);
             }
 
-            if ($user->role == 'admin')
+            if ($user->role == 'admin' && env('APP_ENV') === 'production')
             {
                 // decline when creating admin
                 abort(403);

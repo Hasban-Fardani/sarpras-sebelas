@@ -37,13 +37,17 @@ export const useSupplierStore = defineStore('supplierStore', () => {
   ]
 
   async function getAll() {
-    const {data} = await axios.get(`${BACKEND_URL}/admin/supplier?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
-      headers: {
-        Authorization: `Bearer ${useUserStore().data.token}`
-      }
-    })
-
-    suppliers.value = data.data
+    try {
+      const {data} = await axios.get(`${BACKEND_URL}/admin/supplier?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
+        headers: {
+          Authorization: `Bearer ${useUserStore().data.token}`
+        }
+      })
+  
+      suppliers.value = data.data
+    } catch (error) {
+      await useUserStore().logout()
+    }
   }
 
   function updateTable(args: UpdateTableArgs) {

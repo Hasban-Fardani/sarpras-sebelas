@@ -8,7 +8,7 @@ import { useUserStore } from './user'
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
-export const useUserTableStore = defineStore('userTable', () => {
+export const useUserTableStore = defineStore('user-table', () => {
   const users = ref<User[]>([])
   const total = ref(0)
   const perPage = ref(5)
@@ -38,17 +38,22 @@ export const useUserTableStore = defineStore('userTable', () => {
   ]
 
   async function getAll() {
-    const user = useUserStore()
-    const { data } = await axios.get(`${BACKEND_URL}/admin/users?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
-      headers: {
-        Authorization: `Bearer ${user.data.token}`
-      }
-    })
+    
+    try {
+      const user = useUserStore()
+      const { data } = await axios.get(`${BACKEND_URL}/admin/users?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
+        headers: {
+          Authorization: `Bearer ${user.data.token}`
+        }
+      })
+      console.log(data.data)
+  
+      users.value = data.data
+      total.value = data.total
+    } catch (error) {
+      await useUserStore().logout()
+    }
 
-    console.log(data.data)
-
-    users.value = data.data
-    total.value = data.total
   }
 
   async function updateTable(args: UpdateTableArgs) {

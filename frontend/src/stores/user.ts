@@ -71,7 +71,7 @@ export const useUserStore = defineStore('user', () => {
 
   async function logout() {
     if (!data.value || !data.value.token) {
-      return
+      await load()
     }
 
     try {

@@ -43,16 +43,21 @@ export const useItemSubmissionStore = defineStore('item-submission', () => {
 
   async function getAll() {
     const user = useUserStore()
-    const { data } = await axios.get(`${BACKEND_URL}/submission?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
-      headers: {
-        Authorization: `Bearer ${user.data.token}`
-      }
-    })
 
-    console.log(data.data)
-
-    items.value = data.data
-    total.value = data.total
+    try {
+      const { data } = await axios.get(`${BACKEND_URL}/submission?page=${page.value}&per_page=${perPage.value}&search=${searchName.value}`, {
+        headers: {
+          Authorization: `Bearer ${user.data.token}`
+        }
+      })
+  
+      console.log(data.data)
+  
+      items.value = data.data
+      total.value = data.total
+    } catch (error) {
+      await useUserStore().logout()
+    }
   }
 
   function get(id: number) {
