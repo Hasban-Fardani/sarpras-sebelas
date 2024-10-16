@@ -78,12 +78,11 @@ Route::post('item/import', ImportItemController::class);
 ## Catatan
 - berikut contoh file excel yang saya miliki
 [contoh file.xlsx](./contoh%20spreadsheet%20import%20data%20barang%20sarpras.xlsx)
-- jika mendapatkan error seperti demikian
-
-maka anda harus menjalankan perintah berikut
+- jika mendapatkan error seperti dibawah ini
 ```
 class \"league\\flysystem\\awss3v3\\portablevisibilityconverter\" not found
 ```
+maka anda harus menjalankan perintah berikut
 ```bash
 composer require league/flysystem-aws-s3-v3
 ```

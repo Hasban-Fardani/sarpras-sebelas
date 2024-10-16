@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->unsignedBigInteger('division_id');
-            $table->unsignedBigInteger('submission_session_id');
+            $table->unsignedBigInteger('submission_session_id')->nullable();
             $table->enum('status', ['diajukan', 'disetujui', 'ditolak', 'draf'])->default('diajukan');
             $table->string('regarding');
             $table->text('note')->nullable();
