@@ -64,7 +64,6 @@ class ItemImport implements ToModel, WithHeadingRow, WithChunkReading, ShouldQue
 $file = $request->file('file');
 $filename = $file->getClientOriginalName();
 $path = $file->storeAs('files', $filename, 'public');
-```
 
 // menggunakan queue agar tidak lemot
 Excel::queueImport(new ItemImport, $path, 'public');
