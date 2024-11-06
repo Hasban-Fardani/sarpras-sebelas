@@ -6,6 +6,7 @@ use App\Http\Requests\SubmissionItemRequest;
 use App\Models\Employee;
 use App\Models\SubmissionItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -20,7 +21,9 @@ class SubmissionItemController extends Controller
      */
     public function index(Request $request)
     {
-        $data = SubmissionItem::with('division:id,name');
+        $data = SubmissionItem::with('division:id,name')
+            ->withSum('details', 'qty');
+            
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
@@ -39,6 +42,12 @@ class SubmissionItemController extends Controller
         });
 
         $data = $data->paginate($perPage, ['*'], 'page', $page);
+
+        $data->getCollection()->transform(function ($submission) {
+            // $submission->total_items = $submission->details_count;
+            // Log::info($submission);
+            return $submission;
+        });
 
         return response()->json([
             'message' => 'success get all submission items',

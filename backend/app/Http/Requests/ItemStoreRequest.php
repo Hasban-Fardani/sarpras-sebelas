@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Log;
 
 class ItemStoreRequest extends FormRequest
 {
@@ -23,9 +24,10 @@ class ItemStoreRequest extends FormRequest
      */
     public function rules(): array
     {
+        Log::info($this->all());
         return [
             'code' => 'string|max:255',
-            'image' => 'file',
+            'image' => 'required|file',
             'name' => 'required|string|max:255',
             'merk' => 'required|string|max:255',
             'type' => 'required|string|max:255',

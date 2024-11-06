@@ -20,13 +20,17 @@ class RequestItemController extends Controller
      */
     public function index(Request $request)
     {
-        $data = RequestItem::with('employee:id,name');
+        $data = RequestItem::with(['division:id,name', 'operator:id,name']);
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
         $data->when($request->search, function ($data) use ($request) {
             $data->where(function ($query) use ($request) {
-                $query->whereHas('employee', function ($query) use ($request) {
+                $query->whereHas('division', function ($query) use ($request) {
+                    $query->where('name', 'like', '%' . $request->search . '%');
+                });
+
+                $query->orWhereHas('operator', function ($query) use ($request) {
                     $query->where('name', 'like', '%' . $request->search . '%');
                 });
             });

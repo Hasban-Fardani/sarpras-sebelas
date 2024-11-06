@@ -23,7 +23,7 @@ class CategoryController extends Controller
         $perPage = $request->input('per_page', 10);
 
         // get all categories
-        $data = Category::query();
+        $data = Category::withCount('items');
 
         // search by name
         $data->when($request->search, function ($data) use ($request) {

@@ -3,12 +3,14 @@
 namespace App\Services;
 
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class FileService
 {
     public static function store(UploadedFile $file, $disk = 'public')
     {
+        Log::info('store new file ' . $file->getClientOriginalName());
         $filename =  hash('sha256', now() . $file->getClientOriginalName()) . '.' . $file->getClientOriginalExtension();
 
         return  Storage::disk($disk)->putFileAs('/images', $file, $filename);

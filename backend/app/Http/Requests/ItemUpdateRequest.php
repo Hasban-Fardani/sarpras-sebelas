@@ -24,7 +24,7 @@ class ItemUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'image' => 'file',
+            'image' => 'file|image',
             'code' => 'string|max:255',
             'name' => 'string|max:255',
             'merk' => 'string|max:255',

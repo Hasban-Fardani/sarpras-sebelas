@@ -7,6 +7,7 @@ use App\Http\Requests\ItemUpdateRequest;
 use App\Models\Item;
 use App\Services\FileService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 /**
  * @group 2. Item Management
@@ -60,6 +61,7 @@ class ItemController extends Controller
      */
     public function store(ItemStoreRequest $request)
     {
+        Log::info('store new item with request ' . json_encode($request->all()));
         $data = $request->validated();
 
         $path = FileService::store($request->file('image'));
