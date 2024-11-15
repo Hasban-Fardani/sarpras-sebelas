@@ -5,8 +5,6 @@ import type { Credentials } from '@/types/credential';
 import { ref } from 'vue';
 import { VSonner, toast } from 'vuetify-sonner';
 
-const alertMessage = ref('')
-const showAlert = ref(false)
 const valid = ref(false)
 const onLoading = ref(false)
 const data = ref<Credentials>({
@@ -32,12 +30,10 @@ const rules = {
 const user = useUserStore()
 const login = async () => {
     onLoading.value = true
-    const message = await user.login(data.value)
+    const response = await user.login(data.value)
     onLoading.value = false
-    toast(message, {duration: 2000})
-    if (message === 'login success') {
-        console.log('sini', user.data);
-
+    if (response.type === 'success') {
+        toast.success(response.message, {duration: 2000})
         switch (user.data.role) {
             case 'admin':
                 router.push('/admin/dashboard')
@@ -54,6 +50,8 @@ const login = async () => {
             default:
                 return;
         }
+    } else {
+        toast.error(response.message, {duration: 2000})
     }
 }
 </script>

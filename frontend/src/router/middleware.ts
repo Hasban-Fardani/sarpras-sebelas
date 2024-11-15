@@ -1,4 +1,4 @@
-import { useUserStore } from "@/stores/user";
+import { useUserStore } from "../stores/user";
 import type { Router } from "vue-router";
 
 export const defineMiddleware = (router: Router) => {

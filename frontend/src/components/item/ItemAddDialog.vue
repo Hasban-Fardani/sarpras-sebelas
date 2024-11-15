@@ -1,66 +1,59 @@
 <script setup lang="ts">
-import type { CreateItem } from '@/types/item';
+import type { CreateItem } from "@/types/item";
 
-import { useCategoryStore } from '@/stores/category';
-import { useItemStore } from '@/stores/item';
-import { onMounted, ref } from 'vue';
+import { useCategoryStore } from "@/stores/category";
+import { useItemStore } from "@/stores/item";
+import { onMounted, ref } from "vue";
 
-import Swal from 'sweetalert2'
+import { toast } from "vuetify-sonner";
 
-const isOpen = ref(false)
-const categories = useCategoryStore()
-const image = ref<File | null>(null)
-const imageUrl = ref<string | null>(null)
+const isOpen = ref(false);
+const categories = useCategoryStore();
+const imageUrl = ref<string | null>(null);
 const data = ref<CreateItem>({
-    name: '',
-    code: '',
-    image: new File([], ''),
-    stock: 1,
-    min_stock: 1,
-    unit: '',
-    price: 0,
-    category_id: 1,
-    merk: '',
-    size: '',
-    type: '',
-})
+	name: "",
+	code: "",
+	image: new File([], ""),
+	stock: 1,
+	min_stock: 1,
+	unit: "",
+	price: 0,
+	category_id: 1,
+	merk: "",
+	size: "",
+	type: "",
+});
 
 const uploadImage = (event: Event) => {
-    const target = event.target as HTMLInputElement;
-    if (target.files && target.files.length > 0) {
-        image.value = target.files[0];
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            imageUrl.value = e.target?.result as string;
-        };
-        reader.readAsDataURL(image.value);
-    }
-}
+	const target = event.target as HTMLInputElement;
+	if (target.files && target.files.length > 0) {
+		data.value.image = target.files[0];
+		const reader = new FileReader();
+		reader.onload = (e) => {
+			imageUrl.value = e.target?.result as string;
+		};
+		reader.readAsDataURL(data.value.image);
+	}
+};
 
 const storeItem = async () => {
-    const item = useItemStore()
-    try {
-        await item.addItem(data.value)
-        isOpen.value = false
-        Swal.fire({
-            icon: 'success',
-            title: 'Success',
-            text: 'Item has been added',
-        })
-    } catch (error) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Failed to add item',
-        })
-    }
-}
+	const item = useItemStore();
+	try {
+        console.log("data: ", data.value)
+		const response = await item.addItem(data.value);
+		console.log(response);
+		isOpen.value = false;
+		toast.success("Item has been added");
+	} catch (error) {
+		toast.error("Failed to add item. " + error);
+	}
+};
 
 onMounted(() => {
-    if (categories.categories.length === 0) {
-        categories.getAll()
-    }
-})
+	if (categories.categories.length === 0) {
+		categories.getAll();
+	}
+});
 </script>
 <template>
     <v-dialog activator="parent" max-width="400" v-model="isOpen">
@@ -76,7 +69,6 @@ onMounted(() => {
                     />
                     <v-file-input 
                         label="input gambar" 
-                        ref="image" 
                         @change="uploadImage"
                     />
                     <v-text-field 

@@ -1,3 +1,4 @@
+import router from '@/router'
 import type { Credentials } from '@/types/credential'
 import type { User } from '@/types/user'
 import { Preferences } from '@capacitor/preferences'
@@ -41,9 +42,20 @@ export const useUserStore = defineStore('user', () => {
         value: JSON.stringify(data.value)
       })
   
-      return 'login success'
-    } catch (error) {
-      return 'login failed'
+      return {message: 'login success', type:'success'}
+    } catch (error: unknown) {
+      let msg = 'unknow error';
+      if (typeof error === 'string') {
+        msg = error
+      } else if (error instanceof Error) {
+        msg = error.message
+      }
+
+      if (msg.includes('Network')) {
+        msg = 'Internal Server Error'
+      }
+      
+      return {message: msg, type: 'error'}
     }
   }
 
@@ -83,6 +95,7 @@ export const useUserStore = defineStore('user', () => {
       console.log(responseData)
     } finally {
       clear()
+      router.push('/')
     }
   }
 

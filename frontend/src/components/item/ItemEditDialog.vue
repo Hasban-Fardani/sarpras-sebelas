@@ -29,12 +29,12 @@ watch(() => props.isActive, (newVal) => {
 const uploadImage = (event: Event) => {
     const target = event.target as HTMLInputElement;
     if (target.files && target.files.length > 0) {
-        image.value = target.files[0];
+        data.value.image = target.files[0];
         const reader = new FileReader();
         reader.onload = (e) => {
             imageUrl.value = e.target?.result as string;
         };
-        reader.readAsDataURL(image.value);
+        reader.readAsDataURL(data.value.image);
     }
 };
 

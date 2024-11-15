@@ -19,7 +19,7 @@ export const useIncomingItemStore = defineStore('incoming-item', () => {
   const headers = [
     {
       title: 'Operator',
-      key: 'employee.name'
+      key: 'operator.name'
     },
     {
       title: 'Supplier',

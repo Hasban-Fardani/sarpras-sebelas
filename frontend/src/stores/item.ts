@@ -90,26 +90,34 @@ export const useItemStore = defineStore('item', () => {
   }
 
   async function addItem(item: CreateItem) {
-    const data = new FormData()
-    data.append('name', item.name)
-    // data.append('gambar', item.gambar)
-    data.append('category_id', item.category_id.toString())
-    data.append('stock', item.stock.toString())
-    data.append('min_stock', item.min_stock.toString())
-    data.append('price', item.price.toString())
-    data.append('unit', item.unit)
-    data.append('merk', item.merk)
-    data.append('type', item.type)
-    data.append('size', item.size)
-
-    const config: AxiosRequestConfig = {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-        Authorization: `Bearer ${useUserStore().data.token}`
-      }
+    if (!item.image) {
+      throw new Error('Input tidak boleh kosong!');
     }
-
-    await axios.post(`${BACKEND_URL}/item`, data, config)
+    
+    try {
+      const data = new FormData()
+      data.append('name', item.name)
+      data.append('image', item.image)
+      data.append('category_id', item.category_id.toString())
+      data.append('stock', item.stock.toString())
+      data.append('min_stock', item.min_stock.toString())
+      data.append('price', item.price.toString())
+      data.append('unit', item.unit)
+      data.append('merk', item.merk)
+      data.append('type', item.type)
+      data.append('size', item.size)
+  
+      const config: AxiosRequestConfig = {
+        headers: {
+          Authorization: `Bearer ${useUserStore().data.token}`
+        }
+      }
+  
+      const res = await axios.post(`${BACKEND_URL}/item`, data, config)
+      return res.data
+    } catch (error) {
+      return error
+    }
   }
 
   async function updateItem(itemToUpdate: Item) {
@@ -125,6 +133,7 @@ export const useItemStore = defineStore('item', () => {
 
     // Check if properties exist before appending
     if (itemToUpdate.name) data.append('name', itemToUpdate.name)
+    if (itemToUpdate.image && itemToUpdate.image instanceof Blob) data.append('image', itemToUpdate.image)
     if (itemToUpdate.category_id) data.append('category_id', itemToUpdate.category_id.toString())
     if (itemToUpdate.merk) data.append('merk', itemToUpdate.merk)
     if (itemToUpdate.price) data.append('price', itemToUpdate.price.toString())
@@ -141,7 +150,8 @@ export const useItemStore = defineStore('item', () => {
       }
     }
 
-    await axios.post(`${BACKEND_URL}/item/${itemToUpdate.id}`, data, config)
+    const res = await axios.post(`${BACKEND_URL}/item/${itemToUpdate.id}`, data, config)
+    console.log(res.data.message)
     onUpdate.value = false
 
     refresh()

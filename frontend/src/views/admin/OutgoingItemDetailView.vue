@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import AdminLayout from '@/layouts/AdminLayout.vue';
 import { useOutgoingItemStore } from '@/stores/outgoing-item';
+import type { OutgoingItemDetail } from '@/types/outgoing_item';
 import { useRoute } from 'vue-router';
 
 const route = useRoute()
 const { id } = route.params
-const item = useOutgoingItemStore().itemsOut.find((i) => i.id === Number.parseInt(id.toString()))
-const detailOutgoingItem = []
+const detailOutgoingItem: OutgoingItemDetail[] = []
 const headers = [
     {
         title: 'Gambar',

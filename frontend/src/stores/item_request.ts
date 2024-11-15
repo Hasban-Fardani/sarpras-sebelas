@@ -19,8 +19,12 @@ export const useItemRequestStore = defineStore("item_request", () => {
   const shortBy = ref(null);
   const headers = [
     {
-      title: "name",
-      key: "employee.name",
+      title: "Divisi",
+      key: "division.name",
+    },
+    {
+      title: "Petugas",
+      key: "operator.name",
     },
     {
       title: "Jumlah",

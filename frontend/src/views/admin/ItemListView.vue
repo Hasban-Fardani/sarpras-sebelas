@@ -4,16 +4,11 @@ import ItemImportDialog from '@/components/item/ItemImportDialog.vue'
 import ItemTable from '@/components/item/ItemTable.vue'
 import AdminLayout from '@/layouts/AdminLayout.vue';
 import { useItemStore } from '@/stores/item';
-import { onMounted } from 'vue';
 
-const item = useItemStore()
-onMounted(() => {
-    item.getAll()
-})
 </script>
 <template>
     <AdminLayout>
-        <div class="d-flex ga-2 mb-2">
+        <div class="d-flex align-center ga-2 mb-2">
             <h2>Daftar Barang</h2>
             <v-menu>
                 <template v-slot:activator="{ props }">
@@ -29,9 +24,6 @@ onMounted(() => {
                     <v-list-item append-icon="mdi-import" @click="null">
                         <ItemImportDialog />
                         import
-                    </v-list-item>
-                    <v-list-item append-icon="mdi-export">
-                        export
                     </v-list-item>
                 </v-list>
             </v-menu>

@@ -23,6 +23,10 @@ export const useCategoryStore = defineStore('category', () => {
       key: 'name'
     },
     {
+      title: 'jumlah barang',
+      key: 'items_count'
+    },
+    {
       title: 'Action',
       key: 'id',
       sortable: false
@@ -39,9 +43,11 @@ export const useCategoryStore = defineStore('category', () => {
           Authorization: `Bearer ${user.data.token}`
         }
       })
+
       categories.value = data.data
       total.value = data.total
     } catch (error) {
+      console.log("error while fetching data")
       await useUserStore().logout()
     }
 

@@ -6,11 +6,12 @@ import DeleteDialog from '@/components/dialogs/DeleteDialog.vue';
 import ItemEditDialog from '@/components/item/ItemEditDialog.vue';
 import { useCategoryStore } from '@/stores/category';
 import { useItemStore } from '@/stores/item';
+import { toIDR } from '@/utils/convert_to_idr';
+import { formatDate } from '@/utils/format_date';
 import { onMounted, ref } from 'vue';
 
 const item = useItemStore()
 const categories = useCategoryStore()
-const toIDR = (num: number) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(num)
 
 const editItemDialog = ref(false)
 const selectedEditItem = ref<Item>({} as Item)
@@ -22,6 +23,7 @@ const editItem = (itemEdite: Item) => {
     editItemDialog.value = true
     selectedEditItem.value = itemEdite
 }
+
 const closeEditDialog = () => {
   editItemDialog.value = false;
   selectedEditItem.value = {} as Item;
@@ -56,7 +58,7 @@ onMounted(() => {
         @delete="item.deleteItem" 
     />
 
-    <div class="d-flex flex-wrap w-100 justify-space-between">
+    <div class="d-flex flex-wrap w-100 justify-space-between bg-white px-2 pt-3">
         <div class="w-50 w-md-25">
             <v-text-field 
                 v-model="item.searchName" 
@@ -111,7 +113,7 @@ onMounted(() => {
     >
         <template v-slot:item.image="{ item }">
             <div class="d-flex justify-center w-100">
-                <img :src="item.image" :alt="item.name" width="50">
+                <img :src="`${item.image}`" :alt="item.name" width="50">
             </div>
         </template>
         <template v-slot:item.stock="{item}">
@@ -128,8 +130,8 @@ onMounted(() => {
         <template v-slot:item.price="{ item }">
             <p>{{ toIDR(parseInt(item.price!.toString())) }}</p>
         </template>
-        <template v-slot:item.updated_at="{ item }">
-            {{ (new Date(item.updated_at as string)).toLocaleDateString() }}
+        <template v-slot:item.created_at="{ item }">
+            {{ formatDate(item.created_at as string) }}
         </template>
         <template v-slot:item.id="{ item }">
             <div class="d-flex ga-2">
