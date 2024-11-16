@@ -16,7 +16,7 @@ class LoginCheckController extends Controller
     /**
      * @response 200 {
      *   "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
-     *   "user": {
+     *   "data": {
      *     "username": "admin",
      *     "nip": "197832411574231883",
      *     "role": "admin"
@@ -28,7 +28,7 @@ class LoginCheckController extends Controller
         $user = Auth::user();
         $user['name'] = $user->name;
         return response()->json([
-            'user' => $user,
+            'data' => $user,
             'token' => $user->createToken('accessToken')->plainTextToken
         ]);
     }

@@ -26,7 +26,11 @@ class LoginController extends Controller
      * @response 200 scenario="success" {
      *   "message": "login success",
      *   "token": "100|7MqxJ938cIzHmyZpPxzWNH6SF9qc2DIShTzaZFD1e34787w",
-     *   "user": "admin"
+     *   "user": {
+     *     "username": "admin",
+     *     "nip": "197832411574231883",
+     *     "role": "admin"
+     *   }
      * }
      * 
      * @response 401 scenario="incorrect credentials" {
