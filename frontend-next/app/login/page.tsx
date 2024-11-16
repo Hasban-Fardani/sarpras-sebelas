@@ -36,6 +36,9 @@ const LoginPage = () => {
 
       if (response.ok) {
         const data = await response.json();
+        toast({
+          title: "login berhasil"
+        });
         router.push("/");
       } else {
         toast({
